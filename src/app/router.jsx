@@ -7,7 +7,7 @@ import BuildsPage from "../pages/BuildsPage";
 import TierListPage from "../pages/TierListPage";
 import GuidesPage from "../pages/GuidesPage";
 
-export const routes= createBrowserRouter([
+export const router= createBrowserRouter([
     {
         path: "/",
         element: <MainLayout/>,

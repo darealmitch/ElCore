@@ -1,0 +1,13 @@
+.page {
+    padding: 4rem 5%;
+}
+.page h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+}
+.page p {
+    color: var(--text-soft);
+    line-height: 1.8;
+}

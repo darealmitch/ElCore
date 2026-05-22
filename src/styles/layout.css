@@ -1,0 +1,98 @@
+.app{
+    min-height: 100vh;
+}
+.site-header{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem 5%;
+    background: rgba(5, 8, 22, 0.84);
+    border-bottom: 1px solid var(--border-soft);
+    backdrop-filter: blur(18px);
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+.logo mark{
+    color: var(--accent-blue);
+    text-shadow: 0 0 18px rgba(96, 165, 250, 0.85);;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: var(--text-soft);
+    font-size: 0.95rem;
+}
+.nav-link {
+    position: relative;
+    color: var(--text-soft);
+    font-weight: 700;
+}
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+}
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.45rem;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+}
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.header-actions input {
+    width: 13rem;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.88);
+    color: white;
+    outline: none;
+}
+.header-actions button {
+    border: none;
+    border-radius: 999px;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+.site-footer {
+    margin-top: 4rem;
+    padding: 2rem 5%;
+    border-top: 1px solid var(--border-soft);
+    color: var(--text-muted);
+}
+@media (max-width: 1050px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+    }
+    .header-actions {
+        width: 100%;
+    }
+    .header-actions input {
+        flex: 1;
+        width: 100%;
+    }
+}
