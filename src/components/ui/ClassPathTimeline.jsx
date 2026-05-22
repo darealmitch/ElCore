@@ -1,5 +1,6 @@
 import { classImages } from "/src/data/classImages.js";
 import { characterThemes } from "/src/data/characterThemes";
+import { Link } from "react-router-dom";
 
 const stageLabels = {
     job1: "1re évolution",
@@ -9,7 +10,9 @@ const stageLabels = {
 };
 
 const stageOrder = ["job1", "job2", "job3", "master"];
-
+function toClassSlug(className) {
+    return className.toLowerCase().replaceAll(":", "").replaceAll(" ", "-");
+}
 function groupClassImagesByPath(characterId) {
     const characterClasses = classImages.filter((item) => item.characterId === characterId);
 
@@ -54,7 +57,7 @@ function ClassPathTimeline({ characterId }) {
                         </div>
                         <div className="class-stage-grid">
                             {sortedStages.map((stage) => (
-                                <div className="class-stage-card" key={`${stage.pathName}-${stage.jobStage}`}>
+                                <Link to={`/classes/${stage.characterId}/${toClassSlug(stage.className)}`} className="class-stage-card" key={`${stage.pathName}-${stage.jobStage}`}>
                                     <div className="class-stage-image-wrap">
                                         <img className="class-stage-image" src={stage.localPath} alt={stage.alt}/>
                                     </div>
@@ -64,7 +67,7 @@ function ClassPathTimeline({ characterId }) {
                     </span>
                                     <strong>{stage.className}</strong>
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </article>
