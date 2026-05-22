@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { characters } from "../data/characters";
 import { characterThemes } from "../data/characterThemes";
-import ClassPathTimeline from "../components/ui/ClassPathTimeline";
+import ClassPathTimeline from "/src/components/ui/ClassPathTimeline";
 
 function CharacterDetailPage() {
     const { id } = useParams();

@@ -1,5 +1,5 @@
-import { classImages } from "../../data/classImages";
-import { characterThemes } from "../../data/characterThemes";
+import { classImages } from "/src/data/classImages.js";
+import { characterThemes } from "/src/data/characterThemes";
 
 const stageLabels = {
     job1: "1re évolution",
