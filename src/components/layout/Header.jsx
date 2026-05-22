@@ -13,7 +13,7 @@ function Header() {
     return (
         <header className="site-header">
             <NavLink to="/" className="logo">
-                <span className="logo-mark">◆</span>
+                <img src={"/images/stone.png"} alt="logo" className={"logo-image"}/>
                 <span>ElCore</span>
             </NavLink>
             <nav className="nav-links">

@@ -21,9 +21,10 @@
     font-size: 1.3rem;
     font-weight: 900;
 }
-.logo mark{
-    color: var(--accent-blue);
-    text-shadow: 0 0 18px rgba(96, 165, 250, 0.85);;
+.logo-image {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
 }
 .nav-links {
     display: flex;
