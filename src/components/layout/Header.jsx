@@ -5,7 +5,8 @@ const navLinks = [
     { label: "Personnages", path: "/personnages" },
     { label: "Builds", path: "/builds" },
     { label: "Tier List", path: "/tier-list" },
-    { label: "Guides", path: "/guides" }
+    { label: "Guides", path: "/guides" },
+    { label: "Classes", path: "/classes" },
 ];
 
 function Header() {

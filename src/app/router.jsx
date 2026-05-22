@@ -7,6 +7,7 @@ import BuildsPage from "../pages/BuildsPage";
 import TierListPage from "../pages/TierListPage";
 import GuidesPage from "../pages/GuidesPage";
 import BuildDetailPage from "../pages/BuildDetailPage";
+import ClassesPage from "../pages/ClassesPage";
 
 export const router= createBrowserRouter([
     {
@@ -40,6 +41,10 @@ export const router= createBrowserRouter([
             {
                 path: "builds/:id",
                 element: <BuildDetailPage />
+            },
+            {
+                path: "classes",
+                element: <ClassesPage />
             },
         ]
     }
