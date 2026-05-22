@@ -1,0 +1,101 @@
+import { Link, useParams } from "react-router-dom";
+import { classImages } from "../data/classImages";
+import { characterThemes } from "../data/characterThemes";
+
+const stageLabels = {
+    job1: "1re évolution",
+    job2: "2e évolution",
+    job3: "3e évolution",
+    master: "Master Class"
+};
+
+function ClassDetailPage() {
+    const { characterId, classId } = useParams();
+
+    const classItem = classImages.find(
+        (item) =>
+            item.characterId === characterId &&
+            item.className.toLowerCase().replaceAll(":", "").replaceAll(" ", "-") === classId
+    );
+
+    if (!classItem) {
+        return (
+            <main className="page">
+                <section className="page-hero">
+                    <span>Erreur</span>
+                    <h1>Classe introuvable</h1>
+                    <p>La spécialisation demandée n’existe pas encore dans la base ElCore.</p>
+                    <Link className="btn-primary" to="/classes">
+                        Retour aux classes
+                    </Link>
+                </section>
+            </main>
+        );
+    }
+    const theme = characterThemes[classItem.characterId];
+    return (
+        <main className="page">
+            <section className="class-detail-hero" style={{borderColor: theme.primary, boxShadow: `0 0 38px ${theme.glow}`}}>
+                <div className="class-detail-content">
+                    <Link className="back-link" to="/classes">
+                        ← Retour aux classes
+                    </Link>
+                    <span className="class-stage-label" style={{backgroundColor: theme.glow, color: theme.primary}}>
+                        {stageLabels[classItem.jobStage] || classItem.jobStage}
+                    </span>
+                    <h1 style={{ color: theme.primary }}>{classItem.className}</h1>
+                    <p className="class-detail-subtitle">
+                        {classItem.character} — {classItem.pathName}
+                    </p>
+                    <p>
+                        Cette fiche servira à détailler le rôle, les compétences, les builds,
+                        les rotations et les conseils de progression de cette spécialisation.
+                    </p>
+                </div>
+                <div className="class-detail-visual">
+                    <img className="class-detail-image" src={classItem.localPath} alt={classItem.alt}/>
+                </div>
+            </section>
+            <section className="detail-grid">
+                <article className="detail-card">
+                    <h2>Identité</h2>
+                    <div className="detail-stats">
+                        <div>
+                            <span>Personnage</span>
+                            <strong>{classItem.character}</strong>
+                        </div>
+                        <div>
+                            <span>Chemin</span>
+                            <strong>{classItem.pathName}</strong>
+                        </div>
+                        <div>
+                            <span>Étape</span>
+                            <strong>{stageLabels[classItem.jobStage] || classItem.jobStage}</strong>
+                        </div>
+                        <div>
+                            <span>Classe</span>
+                            <strong>{classItem.className}</strong>
+                        </div>
+                    </div>
+                </article>
+                <article className="detail-card">
+                    <h2>Builds liés</h2>
+                    <p>Les builds liés à cette spécialisation seront connectés ensuite.</p>
+                </article>
+                <article className="detail-card">
+                    <h2>Compétences</h2>
+                    <p>Les compétences principales seront ajoutées quand les données seront prêtes.</p>
+                </article>
+                <article className="detail-card">
+                    <h2>Progression</h2>
+                    <p>
+                        Cette fiche appartient au chemin <strong>{classItem.pathName}</strong>.
+                        Elle sera utilisée pour afficher l’évolution complète du personnage.
+                    </p>
+                </article>
+            </section>
+        </main>
+    );
+}
+
+export default ClassDetailPage;

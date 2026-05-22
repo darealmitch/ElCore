@@ -2,6 +2,7 @@ import {useMemo, useState} from "react";
 import {classImages} from "../data/classImages";
 import {characters} from "../data/characters";
 import {characterThemes} from "../data/characterThemes";
+import { Link } from "react-router-dom";
 
 const stageLabels = {
     job1: "1re évolution",
@@ -10,6 +11,9 @@ const stageLabels = {
     master: "Master Class"
 };
 
+function toClassSlug(className) {
+    return className.toLowerCase().replaceAll(":", "").replaceAll(" ", "-");
+}
 function ClassesPage() {
     const [activeCharacter, setActiveCharacter] = useState("all");
 
@@ -45,7 +49,7 @@ function ClassesPage() {
                 {filteredClasses.map((classItem) => {
                     const theme = characterThemes[classItem.characterId];
                     return (
-                        <article className="class-card" key={`${classItem.characterId}-${classItem.pathName}-${classItem.jobStage}`} style={{borderColor: theme.primary, boxShadow: `0 0 20px ${theme.glow}`}}>
+                        <Link to={`/classes/${classItem.characterId}/${toClassSlug(classItem.className)}`} className="class-card" key={`${classItem.characterId}-${classItem.pathName}-${classItem.jobStage}`} style={{borderColor: theme.primary, boxShadow: `0 0 20px ${theme.glow}`}}>
                             <div className="class-card-image-wrap">
                                 <img className="class-card-image" src={classItem.localPath} alt={classItem.alt}/>
                             </div>
@@ -56,7 +60,7 @@ function ClassesPage() {
                                 <h2 style={{color: theme.primary}}>{classItem.className}</h2>
                                 <p>{classItem.character} — {classItem.pathName}</p>
                             </div>
-                        </article>
+                        </Link>
                     );
                 })}
             </section>

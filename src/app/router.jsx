@@ -8,6 +8,7 @@ import TierListPage from "../pages/TierListPage";
 import GuidesPage from "../pages/GuidesPage";
 import BuildDetailPage from "../pages/BuildDetailPage";
 import ClassesPage from "../pages/ClassesPage";
+import ClassDetailPage from "../pages/ClassDetailPage";
 
 export const router= createBrowserRouter([
     {
@@ -46,6 +47,10 @@ export const router= createBrowserRouter([
                 path: "classes",
                 element: <ClassesPage />
             },
+            {
+                path: "classes/:characterId/:classId",
+                element: <ClassDetailPage />
+            }
         ]
     }
 ]);
