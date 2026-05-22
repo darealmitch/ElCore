@@ -88,3 +88,16 @@
     color: white;
     font-weight: 900;
 }
+/*Cartes personnages compactes*/
+.character-card.compact {
+    min-height: 31rem;
+}
+.character-card.compact .character-card-visual {
+    height: 12rem;
+}
+.character-card.compact .character-card h2 {
+    font-size: 1.35rem;
+}
+.character-card.compact h2 {
+    font-size: 1.35rem;
+}

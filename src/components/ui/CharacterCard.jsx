@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import { characterThemes } from "../../data/characterThemes";
 
-function CharacterCard({ character }) {
+function CharacterCard({ character, compact = false })  {
     const theme = characterThemes[character.id];
 
     return (
-        <article
-            className="character-card" style={{borderColor: theme.primary, boxShadow: `0 0 24px ${theme.glow}`}}>
+        <article className={compact ? "character-card compact" : "character-card"} style={{borderColor: theme.primary, boxShadow: `0 0 24px ${theme.glow}`}}>
             <div className="character-card-visual">
                 <img className="character-card-image" src={character.image} alt={character.name}/>
             </div>
