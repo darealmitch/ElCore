@@ -1,0 +1,62 @@
+export const characters = [
+    {
+        id: "elsword",
+        name: "Elsword",
+        fullName: "Elsword",
+        age: "13 ans",
+        gender: "M",
+        type: "Épéiste",
+        weapon: "Épée",
+        role: "DPS / Combat rapproché",
+        featuredClass: "Genesis",
+        image: "/images/personnages/elsword.png",
+        description: "Un épéiste offensif, simple à prendre en main et efficace en combat rapproché.",
+        lore: "Petit frère d'Elesis, la Première Capitaine des Chevaliers Rouges de Velder, Elsword s'est entraîné dès son plus jeune âge pour être aussi fort que sa sœur.",
+        classes: ["Knight Emperor", "Rune Master", "Immortal", "Genesis"]
+    },
+    {
+        id: "aisha",
+        name: "Aisha",
+        fullName: "Aisha",
+        age: "15 ans",
+        gender: "F",
+        type: "Grande Magicienne",
+        weapon: "Bâton",
+        role: "Magie / DPS",
+        featuredClass: "Aether Sage",
+        image: "/images/personnages/aisha.png",
+        description: "Une magicienne puissante, spécialisée dans les sorts à distance et le contrôle magique.",
+        lore: "Magicienne accomplie devenue Grande Magicienne dès son plus jeune âge, Aisha perd une grande partie de ses pouvoirs à cause d’un anneau antique.",
+        classes: ["Aether Sage", "Oz Sorcerer", "Metamorphy", "Lord Azoth"]
+    },
+    {
+        id: "rena",
+        name: "Rena",
+        fullName: "Rena",
+        age: "Inconnue",
+        gender: "F",
+        type: "Elfe Archère",
+        weapon: "Arc",
+        role: "Distance / Mobilité",
+        featuredClass: "Daybreaker",
+        image: "/images/personnages/rena.png",
+        description: "Une archère agile qui combine attaques à distance, mobilité et lien avec les esprits.",
+        lore: "Alors que le lien avec le monde des esprits s’affaiblit, Rena part restaurer le pouvoir de l’El.",
+        classes: ["Anemos", "Daybreaker", "Twilight", "Prophetess"]
+    },
+    {
+        id: "raven",
+        name: "Raven",
+        fullName: "Raven",
+        age: "24 ans",
+        gender: "M",
+        type: "Mercenaire",
+        weapon: "Main Nasod / Lame",
+        role: "DPS / Corps à corps",
+        featuredClass: "Furious Blade",
+        image: "/images/personnages/raven.png",
+        description: "Un mercenaire agressif utilisant sa lame et son bras Nasod pour maintenir la pression.",
+        lore: "Victime d’une machination, Raven perd tout avant d’être réanimé par les Nasods et de chercher la rédemption.",
+        classes: ["Furious Blade", "Rage Hearts", "Nova Imperator", "Revenant"]
+    }
+];
