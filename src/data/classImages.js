@@ -173,7 +173,7 @@ export const classImages = [
         pathName: "Root Knight",
         jobStage: "master",
         className: "Genesis",
-        fileName: "elsword-genesis.png",
+        fileName: "elsword-genesis-master.png",
         localPath: "/images/classes/elsword-genesis-master.png",
         alt: "Elsword en spécialisation Genesis",
         dimensions: ""
@@ -577,7 +577,7 @@ export const classImages = [
         pathName: "Sword Taker",
         jobStage: "master",
         className: "Furious Blade",
-        fileName: "raven-furious-blade-master-master.png",
+        fileName: "raven-furious-blade-master.png",
         localPath: "/images/classes/raven-furious-blade-master.png",
         alt: "Raven en spécialisation Furious Blade",
         dimensions: ""

@@ -159,3 +159,84 @@
     font-weight: 900;
     cursor: pointer;
 }
+/*Timeline des spécialisations*/
+.detail-section {
+    margin-top: 1.5rem;
+}
+.class-paths-section {
+    display: grid;
+    gap: 1rem;
+}
+.class-path-card {
+    padding: 1.2rem;
+    border: 1px solid;
+    border-radius: 1.5rem;
+    background: var(--bg-card);
+}
+.class-path-header {
+    margin-bottom: 1rem;
+}
+.class-path-header span {
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+.class-path-header h3 {
+    margin: 0.35rem 0 0;
+    font-size: 1.5rem;
+}
+.class-stage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+}
+.class-stage-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 18rem;
+    overflow: hidden;
+    border: 1px solid var(--border-soft);
+    border-radius: 1.2rem;
+    background: rgba(2, 6, 23, 0.42);
+}
+.class-stage-image-wrap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 12rem;
+    padding: 0.8rem;
+}
+.class-stage-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.5));
+}
+.class-stage-content {
+    display: grid;
+    gap: 0.6rem;
+    padding: 0.9rem;
+}
+.class-stage-label {
+    width: fit-content;
+    padding: 0.3rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 900;
+}
+.class-stage-content strong {
+    color: #fff;
+    font-size: 1rem;
+}
+@media (max-width: 1100px) {
+    .class-stage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 620px) {
+    .class-stage-grid {
+        grid-template-columns: 1fr;
+    }
+}

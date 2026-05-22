@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { characters } from "../data/characters";
 import { characterThemes } from "../data/characterThemes";
+import ClassPathTimeline from "../components/ui/ClassPathTimeline";
 
 function CharacterDetailPage() {
     const { id } = useParams();
@@ -18,7 +19,6 @@ function CharacterDetailPage() {
             </main>
         );
     }
-
     const theme = characterThemes[character.id];
 
     return (
@@ -26,10 +26,9 @@ function CharacterDetailPage() {
             <section className="character-detail-hero" style={{borderColor: theme.primary, boxShadow: `0 0 40px ${theme.glow}`}}>
                 <div className="character-detail-content">
                     <Link className="back-link" to="/personnages">← Retour aux personnages</Link>
-
                     <span className="character-role" style={{backgroundColor: theme.glow, color: theme.primary}}>
-            {character.role}
-          </span>
+                        {character.role}
+                    </span>
                     <h1 style={{ color: theme.primary }}>{character.name}</h1>
                     <p className="full-name">{character.fullName}</p>
                     <p className="character-lore">{character.lore}</p>
@@ -37,6 +36,13 @@ function CharacterDetailPage() {
                 <div className="character-detail-visual">
                     <img className="character-detail-image" src={character.image} alt={character.name}/>
                 </div>
+            </section>
+            <section className="detail-section">
+                <div className="section-header">
+                    <span>Classes</span>
+                    <h2>Chemins de spécialisation</h2>
+                </div>
+                <ClassPathTimeline characterId={character.id} />
             </section>
             <section className="detail-grid">
                 <article className="detail-card">
