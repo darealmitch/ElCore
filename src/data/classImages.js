@@ -263,7 +263,7 @@ export const classImages = [
         pathName: "Dark Magician",
         jobStage: "master",
         className: "Oz Sorcerer",
-        fileName: "aisha-oz-sorcerer.png",
+        fileName: "aisha-oz-sorcerer-master.png",
         localPath: "/images/classes/aisha-oz-sorcerer-master.png",
         alt: "Aisha en spécialisation Oz Sorcerer",
         dimensions: ""
