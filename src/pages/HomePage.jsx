@@ -1,8 +1,9 @@
+import HeroSection from "../components/sections/HeroSection";
+
 function HomePage() {
     return (
-        <main className="page">
-            <h1>ElCore</h1>
-            <p>Accueil en construction.</p>
+        <main>
+            <HeroSection />
         </main>
     );
 }
