@@ -103,6 +103,9 @@
 }
 /*Cartes builds*/
 .build-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 21rem;
     padding: 1.2rem;
     border: 1px solid;
     border-radius: 1.5rem;
@@ -118,12 +121,14 @@
 .build-card h3 {
     margin: 1rem 0 0;
     font-size: 1.25rem;
+    line-height: 1.15;
 }
 .build-card p {
     color: var(--text-muted);
-    line-height: 1.7;
+    line-height: 1.55;
 }
 .build-character {
+    margin-bottom: 0.4rem;
     color: var(--text-soft) !important;
     font-weight: 900;
 }
@@ -132,6 +137,7 @@
     flex-wrap: wrap;
     gap: 0.45rem;
     margin-top: 1rem;
+    margin-bottom: 1.2rem;
 }
 .stat-list span {
     padding: 0.35rem 0.6rem;
@@ -142,8 +148,10 @@
     font-weight: 800;
 }
 .build-card-button {
+    display: inline-flex;
+    justify-content: center;
     width: 100%;
-    margin-top: 1.2rem;
+    margin-top: auto;
     padding: 0.8rem 1rem;
     border: none;
     border-radius: 999px;

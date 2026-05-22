@@ -6,6 +6,7 @@ import CharacterDetailPage from "../pages/CharacterDetailPage";
 import BuildsPage from "../pages/BuildsPage";
 import TierListPage from "../pages/TierListPage";
 import GuidesPage from "../pages/GuidesPage";
+import BuildDetailPage from "../pages/BuildDetailPage";
 
 export const router= createBrowserRouter([
     {
@@ -35,6 +36,10 @@ export const router= createBrowserRouter([
             {
                 path: "guides",
                 element: <GuidesPage/>,
+            },
+            {
+                path: "builds/:id",
+                element: <BuildDetailPage />
             },
         ]
     }

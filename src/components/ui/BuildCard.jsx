@@ -1,4 +1,5 @@
 import { characterThemes } from "../../data/characterThemes";
+import { Link } from "react-router-dom";
 
 function BuildCard({ build }) {
     const theme = characterThemes[build.characterId];
@@ -17,14 +18,9 @@ function BuildCard({ build }) {
                     <span key={stat}>{stat}</span>
                 ))}
             </div>
-            <button
-                className="build-card-button"
-                style={{
-                    background: `linear-gradient(135deg, ${theme.primary}, ${theme.secondary})`
-                }}
-            >
+            <Link to={`/builds/${build.id}`} className="build-card-button" style={{background: `linear-gradient(135deg, ${theme.primary}, ${theme.secondary})`}}>
                 Voir le build
-            </button>
+            </Link>
         </article>
     );
 }
