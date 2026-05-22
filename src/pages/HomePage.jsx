@@ -1,6 +1,7 @@
 import HeroSection from "../components/sections/HeroSection";
 import QuickAccessSection from "../components/sections/QuickAccessSection";
 import PopularCharactersSection from "../components/sections/PopularCharactersSection";
+import RecommendedBuildsSection from "../components/sections/RecommendedBuildsSection";
 
 function HomePage() {
     return (
@@ -8,6 +9,7 @@ function HomePage() {
             <HeroSection />
             <QuickAccessSection />
             <PopularCharactersSection />
+            <RecommendedBuildsSection />
         </main>
     );
 }

@@ -101,3 +101,53 @@
 .character-card.compact h2 {
     font-size: 1.35rem;
 }
+/*Cartes builds*/
+.build-card {
+    padding: 1.2rem;
+    border: 1px solid;
+    border-radius: 1.5rem;
+    background: var(--bg-card);
+}
+.build-card-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+.build-card h3 {
+    margin: 1rem 0 0;
+    font-size: 1.25rem;
+}
+.build-card p {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+.build-character {
+    color: var(--text-soft) !important;
+    font-weight: 900;
+}
+.stat-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 1rem;
+}
+.stat-list span {
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(96, 165, 250, 0.12);
+    color: #bfdbfe;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+.build-card-button {
+    width: 100%;
+    margin-top: 1.2rem;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 999px;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
