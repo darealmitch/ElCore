@@ -18,7 +18,7 @@ export const characters = [
     {
         id: "aisha",
         name: "Aisha",
-        fullName: "Aisha",
+        fullName: "Aisha Landar",
         age: "15 ans",
         gender: "Female",
         type: "Grande Magicienne",
@@ -34,7 +34,7 @@ export const characters = [
     {
         id: "rena",
         name: "Rena",
-        fullName: "Rena",
+        fullName: "Rena Erindel",
         age: "Inconnue",
         gender: "Female",
         type: "Elfe Archère",
@@ -50,11 +50,11 @@ export const characters = [
     {
         id: "raven",
         name: "Raven",
-        fullName: "Raven",
+        fullName: "Raven Cronwell",
         age: "24 ans",
         gender: "Mâle",
         type: "Mercenaire",
-        weapon: "Main Nasod / Lame",
+        weapon: "Bras Nasod / Lame",
         role: "DPS / Corps à corps",
         featuredClass: "Furious Blade",
         image: "/images/personnages/raven.png",
