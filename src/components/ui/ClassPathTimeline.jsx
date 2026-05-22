@@ -3,10 +3,10 @@ import { characterThemes } from "/src/data/characterThemes";
 import { Link } from "react-router-dom";
 
 const stageLabels = {
-    job1: "1re évolution",
-    job2: "2e évolution",
-    job3: "3e évolution",
-    master: "Master Class"
+    job1: "1re Spécialisation",
+    job2: "2e Spécialisation",
+    job3: "3e Spécialisation",
+    master: "Classe de Maître",
 };
 
 const stageOrder = ["job1", "job2", "job3", "master"];

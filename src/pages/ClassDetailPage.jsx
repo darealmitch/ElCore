@@ -3,10 +3,10 @@ import { classImages } from "../data/classImages";
 import { characterThemes } from "../data/characterThemes";
 
 const stageLabels = {
-    job1: "1re évolution",
-    job2: "2e évolution",
-    job3: "3e évolution",
-    master: "Master Class"
+    job1: "1re Spécialisation",
+    job2: "2e Spécialisation",
+    job3: "3e Spécialisation",
+    master: "Classe de Maître",
 };
 
 function ClassDetailPage() {
@@ -45,7 +45,7 @@ function ClassDetailPage() {
                     </span>
                     <h1 style={{ color: theme.primary }}>{classItem.className}</h1>
                     <p className="class-detail-subtitle">
-                        {classItem.character} — {classItem.pathName}
+                        {classItem.character}
                     </p>
                     <p>
                         Cette fiche servira à détailler le rôle, les compétences, les builds,
