@@ -1,6 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import { classImages } from "../data/classImages";
 import { characterThemes } from "../data/characterThemes";
+import BuildCard from "../components/ui/BuildCard";
+import { builds } from "../data/builds";
 
 const stageLabels = {
     job1: "1re Spécialisation",
@@ -33,6 +35,11 @@ function ClassDetailPage() {
         );
     }
     const theme = characterThemes[classItem.characterId];
+    const relatedBuilds = builds.filter(
+        (build) =>
+            build.characterId === classItem.characterId &&
+            build.className === classItem.className
+    );
     return (
         <main className="page">
             <section className="class-detail-hero" style={{borderColor: theme.primary, boxShadow: `0 0 38px ${theme.glow}`}}>
@@ -78,9 +85,18 @@ function ClassDetailPage() {
                         </div>
                     </div>
                 </article>
-                <article className="detail-card">
+                <article className="detail-card wide">
                     <h2>Builds liés</h2>
-                    <p>Les builds liés à cette spécialisation seront connectés ensuite.</p>
+                    {relatedBuilds.length > 0 ? (
+                        <div className="related-builds-grid">
+                                {relatedBuilds.map((build) => (
+                                    <BuildCard key={build.id} build={build} />
+
+                                ))}
+                            </div>
+                        ) : (
+                            <p>Aucun build n’a encore été ajouté pour cette spécialisation.</p>
+                        )}
                 </article>
                 <article className="detail-card">
                     <h2>Compétences</h2>
