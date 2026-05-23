@@ -1,5 +1,5 @@
-import { characterThemes } from "../../data/characterThemes";
 import { Link } from "react-router-dom";
+import { characterThemes } from "../../data/characterThemes";
 
 function BuildCard({ build }) {
     const theme = characterThemes[build.characterId];
@@ -11,10 +11,12 @@ function BuildCard({ build }) {
                 <strong>{build.difficulty}</strong>
             </div>
             <h3 style={{ color: theme.primary }}>{build.title}</h3>
-            <p className="build-character">{build.character} — {build.className}</p>
-            <p>{build.description}</p>
+            <p className="build-character">
+                {build.character} — {build.classNameFr || build.className}
+            </p>
+            <p>{build.description || build.notes}</p>
             <div className="stat-list">
-                {build.stats.map((stat) => (
+                {(build.statsFr || build.stats).map((stat) => (
                     <span key={stat}>{stat}</span>
                 ))}
             </div>

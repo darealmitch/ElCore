@@ -1,6 +1,6 @@
-import { classImages } from "/src/data/classImages.js";
-import { characterThemes } from "/src/data/characterThemes";
 import { Link } from "react-router-dom";
+import { classImages } from "../../data/classImages";
+import { characterThemes } from "../../data/characterThemes";
 
 const stageLabels = {
     job1: "1re Spécialisation",
@@ -26,6 +26,7 @@ function groupClassImagesByPath(characterId) {
             ...groups,
             {
                 pathName: item.pathName,
+                pathNameFr: item.pathNameFr,
                 stages: [item]
             }
         ];
@@ -34,6 +35,7 @@ function groupClassImagesByPath(characterId) {
 function ClassPathTimeline({ characterId }) {
     const theme = characterThemes[characterId];
     const paths = groupClassImagesByPath(characterId);
+
     if (paths.length === 0) {
         return (
             <article className="detail-card">
@@ -49,11 +51,13 @@ function ClassPathTimeline({ characterId }) {
                     (a, b) => stageOrder.indexOf(a.jobStage) - stageOrder.indexOf(b.jobStage)
                 );
                 return (
-                    <article className="class-path-card" key={path.pathName}
+                    <article
+                        className="class-path-card"
+                        key={path.pathName}
                         style={{borderColor: theme.primary, boxShadow: `0 0 24px ${theme.glow}`}}>
                         <div className="class-path-header">
-                            <span style={{color: theme.primary}}>Chemin</span>
-                            <h3>{path.pathName}</h3>
+                            <span style={{ color: theme.primary }}>Chemin</span>
+                            <h3>{path.pathNameFr || path.pathName}</h3>
                         </div>
                         <div className="class-stage-grid">
                             {sortedStages.map((stage) => (
@@ -61,11 +65,13 @@ function ClassPathTimeline({ characterId }) {
                                     <div className="class-stage-image-wrap">
                                         <img className="class-stage-image" src={stage.localPath} alt={stage.alt}/>
                                     </div>
-                                <div className="class-stage-content">
-                    <span className="class-stage-label" style={{backgroundColor: theme.glow, color: theme.primary}}>
-                      {stageLabels[stage.jobStage] || stage.jobStage}
-                    </span>
-                                    <strong>{stage.className}</strong>
+
+                                    <div className="class-stage-content">
+                                        <span className="class-stage-label" style={{backgroundColor: theme.glow, color: theme.primary}}>
+                                            {stageLabels[stage.jobStage] || stage.jobStage}
+                                        </span>
+                                        <strong>{stage.classNameFr || stage.className}</strong>
+                                        <small>{stage.className}</small>
                                     </div>
                                 </Link>
                             ))}
@@ -77,4 +83,4 @@ function ClassPathTimeline({ characterId }) {
     );
 }
 
-export default ClassPathTimeline
+export default ClassPathTimeline;
