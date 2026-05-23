@@ -26,6 +26,15 @@ function getMasterLogo(classItem) {
         alt: "Logo de Master Class Solace"
     };
 }
+function getClassUrl(classItem) {
+    const baseUrl = `/classes/${classItem.characterId}/${toClassSlug(classItem.className)}`;
+
+    if (classItem.jobStage === "master") {
+        return `${baseUrl}/master`;
+    }
+
+    return baseUrl;
+}
 function ClassesPage() {
     const [activeCharacter, setActiveCharacter] = useState("all");
 
@@ -66,7 +75,7 @@ function ClassesPage() {
                     const theme = characterThemes[classItem.characterId];
 
                     return (
-                        <Link to={`/classes/${classItem.characterId}/${toClassSlug(classItem.className)}`} className="class-card" key={`${classItem.characterId}-${classItem.pathName}-${classItem.jobStage}`} style={{
+                        <Link to={getClassUrl(classItem)} className="class-card" key={`${classItem.characterId}-${classItem.pathName}-${classItem.jobStage}`} style={{
                             borderColor: theme.primary, boxShadow: `0 0 20px ${theme.glow}`}}>
                             <div className="class-card-image-wrap">
                                 {getMasterLogo(classItem) && (

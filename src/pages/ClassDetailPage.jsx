@@ -3,6 +3,7 @@ import BuildCard from "../components/ui/BuildCard";
 import { builds } from "../data/builds";
 import { classImages } from "../data/classImages";
 import { characterThemes } from "../data/characterThemes";
+import { masterSymbols } from "../data/masterSymbols";
 
 const stageLabels = {
     job1: "1re Spécialisation",
@@ -11,27 +12,32 @@ const stageLabels = {
     master: "Classe de Maître",
 };
 
-function getMasterLogo(classItem) {
-    const hasSolaceMasterLogo =
-        classItem.jobStage === "master" &&
-        ["elsword", "raven"].includes(classItem.characterId);
-    if (!hasSolaceMasterLogo) return null;
-    return {
-        src: "/images/master/solace-logo.png",
-        alt: "Logo de Master Class Solace"
-    };
-}
 function toClassSlug(className) {
     return className.toLowerCase().replaceAll(":", "").replaceAll(" ", "-");
 }
-function ClassDetailPage() {
-    const { characterId, classId } = useParams();
 
-    const classItem = classImages.find(
-        (item) =>
-            item.characterId === characterId &&
-            toClassSlug(item.className) === classId
-    );
+function getMasterLogo(classItem) {
+    if (classItem.jobStage !== "master") return null;
+
+    return masterSymbols[classItem.characterId] || null;
+}
+
+function ClassDetailPage() {
+    const { characterId, classId, stage } = useParams();
+
+    const classItem = classImages.find((item) => {
+        const sameCharacter = item.characterId === characterId;
+        const sameClass = toClassSlug(item.className) === classId;
+        const requestedMaster = stage === "master";
+
+        if (!sameCharacter || !sameClass) return false;
+
+        if (requestedMaster) {
+            return item.jobStage === "master";
+        }
+
+        return item.jobStage !== "master";
+    });
 
     if (!classItem) {
         return (
@@ -50,6 +56,7 @@ function ClassDetailPage() {
 
     const theme = characterThemes[classItem.characterId];
     const masterLogo = getMasterLogo(classItem);
+
     const relatedBuilds = builds.filter(
         (build) =>
             build.characterId === classItem.characterId &&
@@ -58,12 +65,18 @@ function ClassDetailPage() {
 
     return (
         <main className="page">
-            <section className="class-detail-hero" style={{borderColor: theme.primary, boxShadow: `0 0 38px ${theme.glow}`}}>
+            <section
+                className="class-detail-hero"
+                style={{
+                    borderColor: theme.primary,
+                    boxShadow: `0 0 38px ${theme.glow}`,
+                }}
+            >
                 <div className="class-detail-content">
                     <Link className="back-link" to="/classes">
                         ← Retour aux classes
                     </Link>
-                    <span className="class-stage-label" style={{backgroundColor: theme.glow, color: theme.primary}}>
+                    <span className="class-stage-label" style={{backgroundColor: theme.glow, color: theme.primary,}}>
                         {stageLabels[classItem.jobStage] || classItem.jobStage}
                     </span>
                     <h1 style={{ color: theme.primary }}>
@@ -80,13 +93,14 @@ function ClassDetailPage() {
                         les rotations et les conseils de progression de cette spécialisation.
                     </p>
                 </div>
-                    <div className="class-detail-visual">
-                        {masterLogo && (
-                            <img className="master-class-logo large" src={masterLogo.src} alt={masterLogo.alt}/>
-                        )}
-                        <img className="class-detail-image" src={classItem.localPath} alt={classItem.alt}/>
-                    </div>
+                <div className="class-detail-visual">
+                    {masterLogo && (
+                        <img className="master-class-logo large" src={masterLogo.image} alt={masterLogo.alt}/>
+                    )}
+                    <img className="class-detail-image" src={classItem.localPath} alt={classItem.alt}/>
+                </div>
             </section>
+
             <section className="detail-grid">
                 <article className="detail-card">
                     <h2>Identité</h2>
@@ -109,8 +123,10 @@ function ClassDetailPage() {
                         </div>
                     </div>
                 </article>
+
                 <article className="detail-card wide">
                     <h2>Builds liés</h2>
+
                     {relatedBuilds.length > 0 ? (
                         <div className="related-builds-grid">
                             {relatedBuilds.map((build) => (
@@ -121,14 +137,17 @@ function ClassDetailPage() {
                         <p>Aucun build n’a encore été ajouté pour cette spécialisation.</p>
                     )}
                 </article>
+
                 <article className="detail-card">
                     <h2>Compétences</h2>
                     <p>Les compétences principales seront ajoutées quand les données seront prêtes.</p>
                 </article>
+
                 <article className="detail-card">
                     <h2>Progression</h2>
                     <p>
-                        Cette fiche appartient au chemin <strong>{classItem.pathNameFr || classItem.pathName}</strong>.
+                        Cette fiche appartient au chemin{" "}
+                        <strong>{classItem.pathNameFr || classItem.pathName}</strong>.
                         Elle sera utilisée pour afficher l’évolution complète du personnage.
                     </p>
                 </article>
