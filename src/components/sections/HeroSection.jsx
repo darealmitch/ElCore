@@ -4,14 +4,16 @@ function HeroSection() {
     const canvasRef = useRef(null);
     useEffect(() => {
         const canvas = canvasRef.current;
-        if (!canvas) return;
+        if (!canvas) return undefined;
         const heroSection = canvas.closest(".hero-premium");
         const ctx = canvas.getContext("2d");
-        if (!ctx || !heroSection) return;
-    })
+        if (!ctx || !heroSection) return undefined;
+        return undefined;
+    }, []);
+
     return (
-        <section className="hero-section hero-premium" id="hero-section">
-            <canvas ref={canvasRef} className="hero-particles-canvas" id="particle-canvas" />
+        <section className="hero-premium" id="hero-section">
+            <canvas ref={canvasRef} className="hero-particles-canvas" />
             <div className="hero-premium-inner">
                 <div className="hero-content">
                     <span className="hero-badge">
