@@ -391,3 +391,69 @@
         grid-template-columns: 1fr;
     }
 }
+/*Page tier list*/
+.tier-list-wrapper {
+    display: grid;
+    gap: 1rem;
+}
+.tier-row {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--border-soft);
+    border-radius: 1.5rem;
+    background: var(--bg-card);
+}
+.tier-rank {
+    display: grid;
+    place-items: center;
+    min-height: 7rem;
+    border-radius: 1.2rem;
+    background: linear-gradient(135deg, #facc15, #f97316);
+    color: #111827;
+    font-size: 1.8rem;
+    font-weight: 1000;
+}
+.tier-entries {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+}
+.tier-entry-card {
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 1.2rem;
+    background: rgba(2, 6, 23, 0.42);
+}
+.tier-entry-card span {
+    display: inline-flex;
+    padding: 0.3rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 900;
+}
+.tier-entry-card h2 {
+    margin: 0.8rem 0 0;
+    font-size: 1.2rem;
+}
+.tier-entry-card strong {
+    display: block;
+    margin-top: 0.2rem;
+    color: #fff;
+}
+.tier-entry-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+@media (max-width: 1050px) {
+    .tier-entries {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 760px) {
+    .tier-row,
+    .tier-entries {
+        grid-template-columns: 1fr;
+    }
+}
