@@ -4,6 +4,7 @@ import { builds } from "../data/builds";
 import { classImages } from "../data/classImages";
 import { characterThemes } from "../data/characterThemes";
 import { masterSymbols } from "../data/masterSymbols";
+import { toClassSlug } from "../utils/classRoutes";
 
 const stageLabels = {
     job1: "1re Spécialisation",
@@ -11,10 +12,6 @@ const stageLabels = {
     job3: "3e Spécialisation",
     master: "Classe de Maître",
 };
-
-function toClassSlug(className) {
-    return className.toLowerCase().replaceAll(":", "").replaceAll(" ", "-");
-}
 
 function getMasterLogo(classItem) {
     if (classItem.jobStage !== "master") return null;

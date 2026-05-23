@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { classImages } from "../../data/classImages";
 import { characterThemes } from "../../data/characterThemes";
 import { masterSymbols } from "../../data/masterSymbols";
+import { getClassUrl } from "../../utils/classRoutes";
 
 const stageLabels = {
     job1: "1re Spécialisation",
@@ -11,9 +12,6 @@ const stageLabels = {
 };
 const stageOrder = ["job1", "job2", "job3", "master"];
 
-function toClassSlug(className) {
-    return className.toLowerCase().replaceAll(":", "").replaceAll(" ", "-");
-}
 function getMasterLogo(stage) {
     if (stage.jobStage !== "master") return null;
     return masterSymbols[stage.characterId] || null;
@@ -42,15 +40,6 @@ function groupClassImagesByPath(characterId) {
             }
         ];
     }, []);
-}
-function getClassUrl(classItem) {
-    const baseUrl = `/classes/${classItem.characterId}/${toClassSlug(classItem.className)}`;
-
-    if (classItem.jobStage === "master") {
-        return `${baseUrl}/master`;
-    }
-
-    return baseUrl;
 }
 function ClassPathTimeline({ characterId }) {
     const theme = characterThemes[characterId];

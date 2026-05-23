@@ -4,6 +4,8 @@ import { classImages } from "../data/classImages";
 import { characters } from "../data/characters";
 import { characterThemes } from "../data/characterThemes";
 import { masterSymbols } from "../data/masterSymbols";
+import { getClassUrl } from "../utils/classRoutes";
+
 
 const stageLabels = {
     job1: "1re Spécialisation",
@@ -12,26 +14,11 @@ const stageLabels = {
     master: "Classe de Maître",
 };
 
-function toClassSlug(className) {
-    return className.toLowerCase().replaceAll(":", "").replaceAll(" ", "-");
-}
-
 function getMasterLogo(classItem) {
     if (classItem.jobStage !== "master") return null;
 
     return masterSymbols[classItem.characterId] || null;
 }
-
-function getClassUrl(classItem) {
-    const baseUrl = `/classes/${classItem.characterId}/${toClassSlug(classItem.className)}`;
-
-    if (classItem.jobStage === "master") {
-        return `${baseUrl}/master`;
-    }
-
-    return baseUrl;
-}
-
 function ClassesPage() {
     const [activeCharacter, setActiveCharacter] = useState("all");
 
