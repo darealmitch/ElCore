@@ -122,3 +122,40 @@
         width: 100%;
     }
 }
+/*Recherche globale*/
+.search-box {
+    position: relative;
+}
+.search-results {
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    right: 0;
+    width: min(24rem, 84vw);
+    padding: 0.5rem;
+    border: 1px solid var(--border-soft);
+    border-radius: 1rem;
+    background: rgba(15, 23, 42, 0.96);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(18px);
+}
+.search-result {
+    display: grid;
+    gap: 0.2rem;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+}
+.search-result:hover {
+    background: rgba(96, 165, 250, 0.12);
+}
+.search-result span {
+    color: #93c5fd;
+    font-size: 0.72rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.search-result strong {
+    color: #fff;
+}
+.search-result small {
+    color: var(--text-muted);
+}
