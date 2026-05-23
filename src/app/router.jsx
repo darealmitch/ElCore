@@ -49,8 +49,13 @@ export const router= createBrowserRouter([
             },
             {
                 path: "classes/:characterId/:classId",
-                element: <ClassDetailPage />
-            }
+                element: <ClassDetailPage />,
+            },
+            {
+                path: "classes/:characterId/:classId/:stage",
+                element: <ClassDetailPage />,
+            },
+
         ]
     }
 ]);
