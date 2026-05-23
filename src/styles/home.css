@@ -282,20 +282,65 @@
 }
 .quick-access-card:hover {
     transform: translateY(-8px) scale(1.015);
-    border-color: rgba(147, 125, 255, 0.5);
     background: rgba(46, 51, 78, 0.52);
-    box-shadow: 0 0 24px rgba(147, 125, 255, 0.2);
 }
 .quick-access-icon {
     display: inline-grid;
     place-items: center;
-    width: 2.6rem;
-    height: 2.6rem;
+    width: 2.8rem;
+    height: 2.8rem;
     margin-bottom: 1rem;
-    border-radius: 0.9rem;
-    background: rgba(96, 165, 250, 0.12);
-    color: #93c5fd;
+    border-radius: 0.95rem;
+    background: rgba(255, 255, 255, 0.06);
     font-size: 1.3rem;
+}
+.quick-access-purple {
+    border-color: rgba(147, 125, 255, 0.28);
+}
+.quick-access-purple .quick-access-icon {
+    color: #937dff;
+    background: rgba(147, 125, 255, 0.14);
+    box-shadow: 0 0 18px rgba(147, 125, 255, 0.18);
+}
+.quick-access-purple:hover {
+    border-color: rgba(147, 125, 255, 0.62);
+    box-shadow: 0 0 28px rgba(147, 125, 255, 0.24);
+}
+.quick-access-cyan {
+    border-color: rgba(0, 209, 255, 0.28);
+}
+.quick-access-cyan .quick-access-icon {
+    color: #00d1ff;
+    background: rgba(0, 209, 255, 0.13);
+    box-shadow: 0 0 18px rgba(0, 209, 255, 0.18);
+}
+.quick-access-cyan:hover {
+    border-color: rgba(0, 209, 255, 0.62);
+    box-shadow: 0 0 28px rgba(0, 209, 255, 0.24);
+}
+.quick-access-pink {
+    border-color: rgba(255, 93, 143, 0.28);
+}
+.quick-access-pink .quick-access-icon {
+    color: #ff5d8f;
+    background: rgba(255, 93, 143, 0.13);
+    box-shadow: 0 0 18px rgba(255, 93, 143, 0.18);
+}
+.quick-access-pink:hover {
+    border-color: rgba(255, 93, 143, 0.62);
+    box-shadow: 0 0 28px rgba(255, 93, 143, 0.24);
+}
+.quick-access-lavender {
+    border-color: rgba(202, 190, 255, 0.28);
+}
+.quick-access-lavender .quick-access-icon {
+    color: #cabeff;
+    background: rgba(202, 190, 255, 0.13);
+    box-shadow: 0 0 18px rgba(202, 190, 255, 0.18);
+}
+.quick-access-lavender:hover {
+    border-color: rgba(202, 190, 255, 0.62);
+    box-shadow: 0 0 28px rgba(202, 190, 255, 0.24);
 }
 .quick-access-card h3 {
     margin: 0;

@@ -1,47 +1,56 @@
-import SectionHeader from "../ui/SectionHeader";
+import { User, Wrench, BarChart3, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const quickLinks = [
+const quickAccessItems = [
     {
-        icon: "⚔",
-        title: "Personnages",
-        description: "Consulte les fiches, rôles, classes et forces de chaque personnage.",
-        path: "/personnages"
+        title: "Classes",
+        description: "Fiches personnages et voies d’évolution.",
+        to: "/classes",
+        icon: User,
+        colorClass: "quick-access-purple",
     },
     {
-        icon: "✦",
         title: "Builds",
-        description: "Trouve des builds PvE, raid ou débutant adaptés à ton style.",
-        path: "/builds"
+        description: "Optimisation des équipements et compétences.",
+        to: "/builds",
+        icon: Wrench,
+        colorClass: "quick-access-cyan",
     },
     {
-        icon: "▣",
         title: "Tier List",
-        description: "Compare les classes selon les modes de jeu et leur utilité.",
-        path: "/tier-list"
+        description: "Classement de la meta actuelle.",
+        to: "/tier-list",
+        icon: BarChart3,
+        colorClass: "quick-access-pink",
     },
     {
-        icon: "☰",
         title: "Guides",
-        description: "Apprends les bases, optimise ta progression et évite les erreurs.",
-        path: "/guides"
-    }
+        description: "Tutoriels de donjons, raids et mécaniques.",
+        to: "/guides",
+        icon: BookOpen,
+        colorClass: "quick-access-lavender",
+    },
 ];
 function QuickAccessSection() {
     return (
         <section className="home-section">
-            <SectionHeader
-                eyebrow="Accès rapide"
-                title="Tout ce qu’il te faut pour progresser"
-            />
-
+            <div className="section-header">
+                <span>Navigation</span>
+                <h2>Accès rapide</h2>
+            </div>
             <div className="quick-access-grid">
-                {quickLinks.map((link) => (
-                    <a className="quick-access-card" href={link.path} key={link.title}>
-                        <span className="quick-access-icon">{link.icon}</span>
-                        <h3>{link.title}</h3>
-                        <p>{link.description}</p>
-                    </a>
-                ))}
+                {quickAccessItems.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                        <Link key={item.title} to={item.to} className={`quick-access-card ${item.colorClass}` }>
+                            <div className="quick-access-icon">
+                                <Icon size={26} strokeWidth={2.4} />
+                            </div>
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p>
+                        </Link>
+                    );
+                })}
             </div>
         </section>
     );
