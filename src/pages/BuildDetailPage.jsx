@@ -81,7 +81,7 @@ function BuildDetailPage() {
                 <article className="detail-card">
                     <h2>Traits</h2>
                     <ul className="clean-list">
-                        {build.traits.map((item) => (
+                        {(build.traitsFr || build.traits).map((item) => (
                             <li key={item}>{item}</li>
                         ))}
                     </ul>
@@ -89,7 +89,7 @@ function BuildDetailPage() {
                 <article className="detail-card">
                     <h2>Équipement</h2>
                     <ul className="clean-list">
-                        {build.equipment.map((item) => (
+                        {(build.equipmentFr || build.equipment).map((item) => (
                             <li key={item}>{item}</li>
                         ))}
                     </ul>
