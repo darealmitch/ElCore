@@ -137,9 +137,9 @@ export const classImages = [
     {
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Bénitier",
+        pathName: "Root Knight",
         jobStage: "job1",
-        className: "Root Knight",
+        className: "Bénitier",
         fileName: "elsword-root-knight.png",
         localPath: "/images/classes/elsword-root-knight.png",
         alt: "Elsword en spécialisation Root Knight",

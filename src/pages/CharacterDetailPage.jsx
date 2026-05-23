@@ -2,6 +2,8 @@ import { Link, useParams } from "react-router-dom";
 import { characters } from "../data/characters";
 import { characterThemes } from "../data/characterThemes";
 import ClassPathTimeline from "/src/components/ui/ClassPathTimeline";
+import BuildCard from "../components/ui/BuildCard";
+import { builds } from "../data/builds";
 
 function CharacterDetailPage() {
     const { id } = useParams();
@@ -20,6 +22,9 @@ function CharacterDetailPage() {
         );
     }
     const theme = characterThemes[character.id];
+    const characterBuilds = builds.filter(
+        (build) => build.characterId === character.id
+    );
 
     return (
         <main className="page">
@@ -43,6 +48,23 @@ function CharacterDetailPage() {
                     <h2>Chemins de spécialisation</h2>
                 </div>
                 <ClassPathTimeline characterId={character.id} />
+            </section>
+            <section className="detail-section">
+                <div className="section-header">
+                    <span>Builds</span>
+                    <h2>Builds disponibles</h2>
+                </div>
+                {characterBuilds.length > 0 ? (
+                    <div className="related-builds-grid">
+                        {characterBuilds.map((build) => (
+                            <BuildCard key={build.id} build={build} />
+                        ))}
+                    </div>
+                ) : (
+                    <article className="detail-card">
+                        <p>Aucun build n’a encore été ajouté pour ce personnage.</p>
+                    </article>
+                )}
             </section>
             <section className="detail-grid">
                 <article className="detail-card">
