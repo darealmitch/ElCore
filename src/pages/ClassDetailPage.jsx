@@ -11,10 +11,19 @@ const stageLabels = {
     master: "Classe de Maître",
 };
 
+function getMasterLogo(classItem) {
+    const hasSolaceMasterLogo =
+        classItem.jobStage === "master" &&
+        ["elsword", "raven"].includes(classItem.characterId);
+    if (!hasSolaceMasterLogo) return null;
+    return {
+        src: "/images/master/solace-logo.png",
+        alt: "Logo de Master Class Solace"
+    };
+}
 function toClassSlug(className) {
     return className.toLowerCase().replaceAll(":", "").replaceAll(" ", "-");
 }
-
 function ClassDetailPage() {
     const { characterId, classId } = useParams();
 
@@ -40,7 +49,7 @@ function ClassDetailPage() {
     }
 
     const theme = characterThemes[classItem.characterId];
-
+    const masterLogo = getMasterLogo(classItem);
     const relatedBuilds = builds.filter(
         (build) =>
             build.characterId === classItem.characterId &&
@@ -49,55 +58,35 @@ function ClassDetailPage() {
 
     return (
         <main className="page">
-            <section
-                className="class-detail-hero"
-                style={{
-                    borderColor: theme.primary,
-                    boxShadow: `0 0 38px ${theme.glow}`
-                }}
-            >
+            <section className="class-detail-hero" style={{borderColor: theme.primary, boxShadow: `0 0 38px ${theme.glow}`}}>
                 <div className="class-detail-content">
                     <Link className="back-link" to="/classes">
                         ← Retour aux classes
                     </Link>
-
-                    <span
-                        className="class-stage-label"
-                        style={{
-                            backgroundColor: theme.glow,
-                            color: theme.primary
-                        }}
-                    >
-            {stageLabels[classItem.jobStage] || classItem.jobStage}
-          </span>
-
+                    <span className="class-stage-label" style={{backgroundColor: theme.glow, color: theme.primary}}>
+                        {stageLabels[classItem.jobStage] || classItem.jobStage}
+                    </span>
                     <h1 style={{ color: theme.primary }}>
                         {classItem.classNameFr || classItem.className}
                     </h1>
-
                     <p className="class-detail-subtitle">
                         {classItem.character} — {classItem.pathNameFr || classItem.pathName}
                     </p>
-
                     <p>
                         Nom international : <strong>{classItem.className}</strong>
                     </p>
-
                     <p>
                         Cette fiche sert à détailler le rôle, les compétences, les builds,
                         les rotations et les conseils de progression de cette spécialisation.
                     </p>
                 </div>
-
-                <div className="class-detail-visual">
-                    <img
-                        className="class-detail-image"
-                        src={classItem.localPath}
-                        alt={classItem.alt}
-                    />
-                </div>
+                    <div className="class-detail-visual">
+                        {masterLogo && (
+                            <img className="master-class-logo large" src={masterLogo.src} alt={masterLogo.alt}/>
+                        )}
+                        <img className="class-detail-image" src={classItem.localPath} alt={classItem.alt}/>
+                    </div>
             </section>
-
             <section className="detail-grid">
                 <article className="detail-card">
                     <h2>Identité</h2>
@@ -120,10 +109,8 @@ function ClassDetailPage() {
                         </div>
                     </div>
                 </article>
-
                 <article className="detail-card wide">
                     <h2>Builds liés</h2>
-
                     {relatedBuilds.length > 0 ? (
                         <div className="related-builds-grid">
                             {relatedBuilds.map((build) => (
@@ -134,12 +121,10 @@ function ClassDetailPage() {
                         <p>Aucun build n’a encore été ajouté pour cette spécialisation.</p>
                     )}
                 </article>
-
                 <article className="detail-card">
                     <h2>Compétences</h2>
                     <p>Les compétences principales seront ajoutées quand les données seront prêtes.</p>
                 </article>
-
                 <article className="detail-card">
                     <h2>Progression</h2>
                     <p>

@@ -13,6 +13,16 @@ const stageOrder = ["job1", "job2", "job3", "master"];
 function toClassSlug(className) {
     return className.toLowerCase().replaceAll(":", "").replaceAll(" ", "-");
 }
+function getMasterLogo(stage) {
+    const hasSolaceMasterLogo =
+        stage.jobStage === "master" &&
+        ["elsword", "raven"].includes(stage.characterId);
+    if (!hasSolaceMasterLogo) return null;
+    return {
+        src: "/images/master/solace-logo.png",
+        alt: "Logo de Master Class Solace"
+    };
+}
 function groupClassImagesByPath(characterId) {
     const characterClasses = classImages.filter((item) => item.characterId === characterId);
 
@@ -63,9 +73,11 @@ function ClassPathTimeline({ characterId }) {
                             {sortedStages.map((stage) => (
                                 <Link to={`/classes/${stage.characterId}/${toClassSlug(stage.className)}`} className="class-stage-card" key={`${stage.pathName}-${stage.jobStage}`}>
                                     <div className="class-stage-image-wrap">
+                                        {getMasterLogo(stage) && (
+                                            <img className="master-class-logo" src={getMasterLogo(stage).src} alt={getMasterLogo(stage).alt}/>
+                                        )}
                                         <img className="class-stage-image" src={stage.localPath} alt={stage.alt}/>
                                     </div>
-
                                     <div className="class-stage-content">
                                         <span className="class-stage-label" style={{backgroundColor: theme.glow, color: theme.primary}}>
                                             {stageLabels[stage.jobStage] || stage.jobStage}

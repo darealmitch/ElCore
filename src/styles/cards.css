@@ -239,6 +239,27 @@
     color: #fff;
     font-size: 1rem;
 }
+.class-stage-image-wrap,
+.class-card-image-wrap,
+.class-detail-visual {
+    position: relative;
+}
+.master-class-logo {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    z-index: 2;
+    width: 2.8rem;
+    height: 2.8rem;
+    object-fit: contain;
+    filter: drop-shadow(0 0 14px rgba(250, 204, 21, 0.55));
+}
+.master-class-logo.large {
+    top: 1.2rem;
+    right: 1.2rem;
+    width: 4.2rem;
+    height: 4.2rem;
+}
 @media (max-width: 1100px) {
     .class-stage-grid {
         grid-template-columns: repeat(2, 1fr);
