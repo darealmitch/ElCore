@@ -1,1611 +1,1502 @@
+function createClassImage({
+                              characterId,
+                              character,
+                              pathName,
+                              pathNameFr,
+                              jobStage,
+                              className,
+                              classNameFr,
+                              fileName
+                          }) {
+    return {
+        characterId,
+        character,
+        pathName,
+        pathNameFr,
+        jobStage,
+        className,
+        classNameFr,
+        fileName,
+        localPath: `/images/classes/${fileName}`,
+        alt: `${character} en spécialisation ${classNameFr}`,
+        dimensions: ""
+    };
+}
+
 export const classImages = [
-    {
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Chevalier Royal",
+        pathName: "Sword Knight",
+        pathNameFr: "Chevalier Royal",
         jobStage: "job1",
-        className: "Chevalier de l'épée",
-        fileName: "elsword-sword-knight.png",
-        localPath: "/images/classes/elsword-sword-knight.png",
-        alt: "Elsword en spécialisation Sword Knight",
-        dimensions: ""
-    },
-    {
+        className: "Sword Knight",
+        classNameFr: "Chevalier de l'épée",
+        fileName: "elsword-sword-knight.png"
+    }),
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Chevalier Royal",
+        pathName: "Sword Knight",
+        pathNameFr: "Chevalier Royal",
         jobStage: "job2",
-        className: "Haut Chevalier",
-        fileName: "elsword-lord-knight.png",
-        localPath: "/images/classes/elsword-lord-knight.png",
-        alt: "Elsword en spécialisation Lord Knight",
-        dimensions: ""
-    },
-    {
+        className: "Lord Knight",
+        classNameFr: "Haut Chevalier",
+        fileName: "elsword-lord-knight.png"
+    }),
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Chevalier Royal",
+        pathName: "Sword Knight",
+        pathNameFr: "Chevalier Royal",
         jobStage: "job3",
-        className: "Chevalier Royal",
-        fileName: "elsword-knight-emperor.png",
-        localPath: "/images/classes/elsword-knight-emperor.png",
-        alt: "Elsword en spécialisation Knight Emperor",
-        dimensions: ""
-    },
-    {
+        className: "Knight Emperor",
+        classNameFr: "Chevalier Royal",
+        fileName: "elsword-knight-emperor.png"
+    }),
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Chevalier Royal",
+        pathName: "Sword Knight",
+        pathNameFr: "Chevalier Royal",
         jobStage: "master",
         className: "Knight Emperor",
-        fileName: "elsword-knight-emperor-master.png",
-        localPath: "/images/classes/elsword-knight-emperor-master.png",
-        alt: "Elsword en spécialisation Knight Emperor",
-        dimensions: ""
-    },
+        classNameFr: "Chevalier Royal",
+        fileName: "elsword-knight-emperor-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
         pathName: "Magic Knight",
+        pathNameFr: "Maître des runes",
         jobStage: "job1",
-        className: "Chevalier Mage",
-        fileName: "elsword-magic-knight.png",
-        localPath: "/images/classes/elsword-magic-knight.png",
-        alt: "Elsword en spécialisation Magic Knight",
-        dimensions: ""
-    },
-    {
+        className: "Magic Knight",
+        classNameFr: "Chevalier Mage",
+        fileName: "elsword-magic-knight.png"
+    }),
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
         pathName: "Magic Knight",
+        pathNameFr: "Maître des runes",
         jobStage: "job2",
-        className: "Chevalier Runique",
-        fileName: "elsword-rune-knight.png",
-        localPath: "/images/classes/elsword-rune-knight.png",
-        alt: "Elsword en spécialisation Rune Knight",
-        dimensions: ""
-    },
-    {
+        className: "Rune Knight",
+        classNameFr: "Chevalier Runique",
+        fileName: "elsword-rune-knight.png"
+    }),
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
         pathName: "Magic Knight",
+        pathNameFr: "Maître des runes",
         jobStage: "job3",
-        className: "Maître des runes",
-        fileName: "elsword-rune-master.png",
-        localPath: "/images/classes/elsword-rune-master.png",
-        alt: "Elsword en spécialisation Rune Master",
-        dimensions: ""
-    },
-    {
+        className: "Rune Master",
+        classNameFr: "Maître des runes",
+        fileName: "elsword-rune-master.png"
+    }),
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
         pathName: "Magic Knight",
+        pathNameFr: "Maître des runes",
         jobStage: "master",
-        className: "Maître des runes",
-        fileName: "elsword-rune-master-master.png",
-        localPath: "/images/classes/elsword-rune-master-master.png",
-        alt: "Elsword en spécialisation Rune Master",
-        dimensions: ""
-    },
+        className: "Rune Master",
+        classNameFr: "Maître des runes",
+        fileName: "elsword-rune-master-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
         pathName: "Sheath Knight",
+        pathNameFr: "Immortel",
         jobStage: "job1",
-        className: "Chevalier de Cornwell",
-        fileName: "elsword-sheath-knight.png",
-        localPath: "/images/classes/elsword-sheath-knight.png",
-        alt: "Elsword en spécialisation Sheath Knight",
-        dimensions: ""
-    },
-    {
+        className: "Sheath Knight",
+        classNameFr: "Chevalier de Cornwell",
+        fileName: "elsword-sheath-knight.png"
+    }),
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
         pathName: "Sheath Knight",
+        pathNameFr: "Immortel",
         jobStage: "job2",
-        className: "Invocateur d'épées",
-        fileName: "elsword-infinity-sword.png",
-        localPath: "/images/classes/elsword-infinity-sword.png",
-        alt: "Elsword en spécialisation Infinity Sword",
-        dimensions: ""
-    },
-    {
+        className: "Infinity Sword",
+        classNameFr: "Invocateur d'épées",
+        fileName: "elsword-infinity-sword.png"
+    }),
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
         pathName: "Sheath Knight",
+        pathNameFr: "Immortel",
         jobStage: "job3",
-        className: "Immortel",
-        fileName: "elsword-immortal.png",
-        localPath: "/images/classes/elsword-immortal.png",
-        alt: "Elsword en spécialisation Immortal",
-        dimensions: ""
-    },
-    {
+        className: "Immortal",
+        classNameFr: "Immortel",
+        fileName: "elsword-immortal.png"
+    }),
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
         pathName: "Sheath Knight",
+        pathNameFr: "Immortel",
         jobStage: "master",
-        className: "Immortel",
-        fileName: "elsword-immortal-master.png",
-        localPath: "/images/classes/elsword-immortal-master.png",
-        alt: "Elsword en spécialisation Immortal",
-        dimensions: ""
-    },
+        className: "Immortal",
+        classNameFr: "Immortel",
+        fileName: "elsword-immortal-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
         pathName: "Root Knight",
+        pathNameFr: "Séphiroth",
         jobStage: "job1",
-        className: "Bénitier",
-        fileName: "elsword-root-knight.png",
-        localPath: "/images/classes/elsword-root-knight.png",
-        alt: "Elsword en spécialisation Root Knight",
-        dimensions: ""
-    },
-    {
+        className: "Root Knight",
+        classNameFr: "Bénitier",
+        fileName: "elsword-root-knight.png"
+    }),
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
         pathName: "Root Knight",
+        pathNameFr: "Séphiroth",
         jobStage: "job2",
-        className: "Templier",
-        fileName: "elsword-sacred-templar.png",
-        localPath: "/images/classes/elsword-sacred-templar.png",
-        alt: "Elsword en spécialisation Sacred Templar",
-        dimensions: ""
-    },
-    {
+        className: "Sacred Templar",
+        classNameFr: "Templier",
+        fileName: "elsword-sacred-templar.png"
+    }),
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
         pathName: "Root Knight",
+        pathNameFr: "Séphiroth",
         jobStage: "job3",
-        className: "Séphiroth",
-        fileName: "elsword-genesis.png",
-        localPath: "/images/classes/elsword-genesis.png",
-        alt: "Elsword en spécialisation Genesis",
-        dimensions: ""
-    },
-    {
+        className: "Genesis",
+        classNameFr: "Séphiroth",
+        fileName: "elsword-genesis.png"
+    }),
+    createClassImage({
         characterId: "elsword",
         character: "Elsword",
         pathName: "Root Knight",
+        pathNameFr: "Séphiroth",
         jobStage: "master",
-        className: "Séphiroth",
-        fileName: "elsword-genesis-master.png",
-        localPath: "/images/classes/elsword-genesis-master.png",
-        alt: "Elsword en spécialisation Genesis",
-        dimensions: ""
-    },
+        className: "Genesis",
+        classNameFr: "Séphiroth",
+        fileName: "elsword-genesis-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "High Magician",
+        pathNameFr: "Étheriste",
         jobStage: "job1",
-        className: "Archimage",
-        fileName: "aisha-high-magician.png",
-        localPath: "/images/classes/aisha-high-magician.png",
-        alt: "Aisha en spécialisation High Magician",
-        dimensions: ""
-    },
-    {
+        className: "High Magician",
+        classNameFr: "Archimage",
+        fileName: "aisha-high-magician.png"
+    }),
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "High Magician",
+        pathNameFr: "Étheriste",
         jobStage: "job2",
-        className: "Maîtresse des éléments",
-        fileName: "aisha-elemental-master.png",
-        localPath: "/images/classes/aisha-elemental-master.png",
-        alt: "Aisha en spécialisation Elemental Master",
-        dimensions: ""
-    },
-    {
+        className: "Elemental Master",
+        classNameFr: "Maîtresse des éléments",
+        fileName: "aisha-elemental-master.png"
+    }),
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "High Magician",
+        pathNameFr: "Étheriste",
         jobStage: "job3",
-        className: "Étheriste",
-        fileName: "aisha-aether-sage.png",
-        localPath: "/images/classes/aisha-aether-sage.png",
-        alt: "Aisha en spécialisation Aether Sage",
-        dimensions: ""
-    },
-    {
+        className: "Aether Sage",
+        classNameFr: "Étheriste",
+        fileName: "aisha-aether-sage.png"
+    }),
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "High Magician",
+        pathNameFr: "Étheriste",
         jobStage: "master",
-        className: "Étheriste",
-        fileName: "aisha-aether-sage.png",
-        localPath: "/images/classes/aisha-aether-sage-master.png",
-        alt: "Aisha en spécialisation Aether Sage",
-        dimensions: ""
-    },
+        className: "Aether Sage",
+        classNameFr: "Étheriste",
+        fileName: "aisha-aether-sage-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "Dark Magician",
+        pathNameFr: "Magicienne d'Oz",
         jobStage: "job1",
-        className: "Magicienne de l'occulte",
-        fileName: "aisha-dark-magician.png",
-        localPath: "/images/classes/aisha-dark-magician.png",
-        alt: "Aisha en spécialisation Dark Magician",
-        dimensions: ""
-    },
-    {
+        className: "Dark Magician",
+        classNameFr: "Magicienne de l'occulte",
+        fileName: "aisha-dark-magician.png"
+    }),
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "Dark Magician",
+        pathNameFr: "Magicienne d'Oz",
         jobStage: "job2",
-        className: "Princesse des âmes",
-        fileName: "aisha-void-princess.png",
-        localPath: "/images/classes/aisha-void-princess.png",
-        alt: "Aisha en spécialisation Void Princess",
-        dimensions: ""
-    },
-    {
+        className: "Void Princess",
+        classNameFr: "Princesse des âmes",
+        fileName: "aisha-void-princess.png"
+    }),
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "Dark Magician",
+        pathNameFr: "Magicienne d'Oz",
         jobStage: "job3",
-        className: "Magicienne d'Oz",
-        fileName: "aisha-oz-sorcerer.png",
-        localPath: "/images/classes/aisha-oz-sorcerer.png",
-        alt: "Aisha en spécialisation Oz Sorcerer",
-        dimensions: ""
-    },
-    {
+        className: "Oz Sorcerer",
+        classNameFr: "Magicienne d'Oz",
+        fileName: "aisha-oz-sorcerer.png"
+    }),
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "Dark Magician",
+        pathNameFr: "Magicienne d'Oz",
         jobStage: "master",
-        className: "Magicienne d'Oz",
-        fileName: "aisha-oz-sorcerer-master.png",
-        localPath: "/images/classes/aisha-oz-sorcerer-master.png",
-        alt: "Aisha en spécialisation Oz Sorcerer",
-        dimensions: ""
-    },
+        className: "Oz Sorcerer",
+        classNameFr: "Magicienne d'Oz",
+        fileName: "aisha-oz-sorcerer-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "Battle Magician",
+        pathNameFr: "Métamorphia",
         jobStage: "job1",
-        className: "Mage de bataille",
-        fileName: "aisha-battle-magician.png",
-        localPath: "/images/classes/aisha-battle-magician.png",
-        alt: "Aisha en spécialisation Battle Magician",
-        dimensions: ""
-    },
-    {
+        className: "Battle Magician",
+        classNameFr: "Mage de bataille",
+        fileName: "aisha-battle-magician.png"
+    }),
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "Battle Magician",
+        pathNameFr: "Métamorphia",
         jobStage: "job2",
-        className: "Sorcière dimensionnelle",
-        fileName: "aisha-dimension-witch.png",
-        localPath: "/images/classes/aisha-dimension-witch.png",
-        alt: "Aisha en spécialisation Dimension Witch",
-        dimensions: ""
-    },
-    {
+        className: "Dimension Witch",
+        classNameFr: "Sorcière dimensionnelle",
+        fileName: "aisha-dimension-witch.png"
+    }),
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "Battle Magician",
+        pathNameFr: "Métamorphia",
         jobStage: "job3",
-        className: "Métamorphia",
-        fileName: "aisha-metamorphy.png",
-        localPath: "/images/classes/aisha-metamorphy.png",
-        alt: "Aisha en spécialisation Metamorphy",
-        dimensions: ""
-    },
-    {
+        className: "Metamorphy",
+        classNameFr: "Métamorphia",
+        fileName: "aisha-metamorphy.png"
+    }),
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "Battle Magician",
+        pathNameFr: "Métamorphia",
         jobStage: "master",
-        className: "Métamorphia",
-        fileName: "aisha-metamorphy.png",
-        localPath: "/images/classes/aisha-metamorphy-master.png",
-        alt: "Aisha en spécialisation Metamorphy",
-        dimensions: ""
-    },
+        className: "Metamorphy",
+        classNameFr: "Métamorphia",
+        fileName: "aisha-metamorphy-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "Wiz Magician",
+        pathNameFr: "Lord Azoth",
         jobStage: "job1",
         className: "Wiz Magician",
-        fileName: "aisha-wiz-magician.png",
-        localPath: "/images/classes/aisha-wiz-magician.png",
-        alt: "Aisha en spécialisation Wiz Magician",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Wiz Magician",
+        fileName: "aisha-wiz-magician.png"
+    }),
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "Wiz Magician",
+        pathNameFr: "Lord Azoth",
         jobStage: "job2",
         className: "Mystic Alchemist",
-        fileName: "aisha-mystic-alchemist.png",
-        localPath: "/images/classes/aisha-mystic-alchemist.png",
-        alt: "Aisha en spécialisation Mystic Alchemist",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Mystic Alchemist",
+        fileName: "aisha-mystic-alchemist.png"
+    }),
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "Wiz Magician",
+        pathNameFr: "Lord Azoth",
         jobStage: "job3",
         className: "Lord Azoth",
-        fileName: "aisha-lord-azoth.png",
-        localPath: "/images/classes/aisha-lord-azoth.png",
-        alt: "Aisha en spécialisation Lord Azoth",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Lord Azoth",
+        fileName: "aisha-lord-azoth.png"
+    }),
+    createClassImage({
         characterId: "aisha",
         character: "Aisha",
         pathName: "Wiz Magician",
+        pathNameFr: "Lord Azoth",
         jobStage: "master",
         className: "Lord Azoth",
-        fileName: "aisha-lord-azoth.png",
-        localPath: "/images/classes/aisha-lord-azoth-master.png",
-        alt: "Aisha en spécialisation Lord Azoth",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Lord Azoth",
+        fileName: "aisha-lord-azoth-master.png"
+    }),
+
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Combat Ranger",
+        pathNameFr: "Anemos",
         jobStage: "job1",
-        className: "Guerrière archère",
-        fileName: "rena-combat-ranger.png",
-        localPath: "/images/classes/rena-combat-ranger.png",
-        alt: "Rena en spécialisation Combat Ranger",
-        dimensions: ""
-    },
-    {
+        className: "Combat Ranger",
+        classNameFr: "Guerrière archère",
+        fileName: "rena-combat-ranger.png"
+    }),
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Combat Ranger",
+        pathNameFr: "Anemos",
         jobStage: "job2",
-        className: "Voyageuse du vent",
-        fileName: "rena-wind-sneaker.png",
-        localPath: "/images/classes/rena-wind-sneaker.png",
-        alt: "Rena en spécialisation Wind Sneaker",
-        dimensions: ""
-    },
-    {
+        className: "Wind Sneaker",
+        classNameFr: "Voyageuse du vent",
+        fileName: "rena-wind-sneaker.png"
+    }),
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Combat Ranger",
+        pathNameFr: "Anemos",
         jobStage: "job3",
         className: "Anemos",
-        fileName: "rena-anemos.png",
-        localPath: "/images/classes/rena-anemos.png",
-        alt: "Rena en spécialisation Anemos",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Anemos",
+        fileName: "rena-anemos.png"
+    }),
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Combat Ranger",
+        pathNameFr: "Anemos",
         jobStage: "master",
         className: "Anemos",
-        fileName: "rena-anemos.png",
-        localPath: "/images/classes/rena-anemos-master.png",
-        alt: "Rena en spécialisation Anemos",
-        dimensions: ""
-    },
+        classNameFr: "Anemos",
+        fileName: "rena-anemos-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Sniping Ranger",
+        pathNameFr: "Aube",
         jobStage: "job1",
-        className: "Chasseresse",
-        fileName: "rena-sniping-ranger.png",
-        localPath: "/images/classes/rena-sniping-ranger.png",
-        alt: "Rena en spécialisation Sniping Ranger",
-        dimensions: ""
-    },
-    {
+        className: "Sniping Ranger",
+        classNameFr: "Chasseresse",
+        fileName: "rena-sniping-ranger.png"
+    }),
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Sniping Ranger",
+        pathNameFr: "Aube",
         jobStage: "job2",
-        className: "Maîtresse-archère",
-        fileName: "rena-grand-archer.png",
-        localPath: "/images/classes/rena-grand-archer.png",
-        alt: "Rena en spécialisation Grand Archer",
-        dimensions: ""
-    },
-    {
+        className: "Grand Archer",
+        classNameFr: "Maîtresse-archère",
+        fileName: "rena-grand-archer.png"
+    }),
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Sniping Ranger",
+        pathNameFr: "Aube",
         jobStage: "job3",
-        className: "Aube",
-        fileName: "rena-daybreaker.png",
-        localPath: "/images/classes/rena-daybreaker.png",
-        alt: "Rena en spécialisation Daybreaker",
-        dimensions: ""
-    },
-    {
+        className: "Daybreaker",
+        classNameFr: "Aube",
+        fileName: "rena-daybreaker.png"
+    }),
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Sniping Ranger",
+        pathNameFr: "Aube",
         jobStage: "master",
-        className: "Aube",
-        fileName: "rena-daybreaker.png",
-        localPath: "/images/classes/rena-daybreaker-master.png",
-        alt: "Rena en spécialisation Daybreaker",
-        dimensions: ""
-    },
+        className: "Daybreaker",
+        classNameFr: "Aube",
+        fileName: "rena-daybreaker-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Trapping Ranger",
+        pathNameFr: "Crépuscule",
         jobStage: "job1",
-        className: "Guerrière d'Erendil",
-        fileName: "rena-trapping-ranger.png",
-        localPath: "/images/classes/rena-trapping-ranger.png",
-        alt: "Rena en spécialisation Trapping Ranger",
-        dimensions: ""
-    },
-    {
+        className: "Trapping Ranger",
+        classNameFr: "Guerrière d'Erendil",
+        fileName: "rena-trapping-ranger.png"
+    }),
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Trapping Ranger",
+        pathNameFr: "Crépuscule",
         jobStage: "job2",
-        className: "Ombre sylvestre",
-        fileName: "rena-night-watcher.png",
-        localPath: "/images/classes/rena-night-watcher.png",
-        alt: "Rena en spécialisation Night Watcher",
-        dimensions: ""
-    },
-    {
+        className: "Night Watcher",
+        classNameFr: "Ombre sylvestre",
+        fileName: "rena-night-watcher.png"
+    }),
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Trapping Ranger",
+        pathNameFr: "Crépuscule",
         jobStage: "job3",
-        className: "Crépuscule",
-        fileName: "rena-twilight.png",
-        localPath: "/images/classes/rena-twilight.png",
-        alt: "Rena en spécialisation Twilight",
-        dimensions: ""
-    },
-    {
+        className: "Twilight",
+        classNameFr: "Crépuscule",
+        fileName: "rena-twilight.png"
+    }),
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Trapping Ranger",
+        pathNameFr: "Crépuscule",
         jobStage: "master",
-        className: "Crépuscule",
-        fileName: "rena-twilight.png",
-        localPath: "/images/classes/rena-twilight-master.png",
-        alt: "Rena en spécialisation Twilight",
-        dimensions: ""
-    },
+        className: "Twilight",
+        classNameFr: "Crépuscule",
+        fileName: "rena-twilight-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Poetic Ranger",
+        pathNameFr: "Prophetess",
         jobStage: "job1",
         className: "Poetic Ranger",
-        fileName: "rena-poetic-ranger.png",
-        localPath: "/images/classes/rena-poetic-ranger.png",
-        alt: "Rena en spécialisation Poetic Ranger",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Poetic Ranger",
+        fileName: "rena-poetic-ranger.png"
+    }),
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Poetic Ranger",
+        pathNameFr: "Prophetess",
         jobStage: "job2",
         className: "Tale Spinner",
-        fileName: "rena-tale-spinner.png",
-        localPath: "/images/classes/rena-tale-spinner.png",
-        alt: "Rena en spécialisation Tale Spinner",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Tale Spinner",
+        fileName: "rena-tale-spinner.png"
+    }),
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Poetic Ranger",
+        pathNameFr: "Prophetess",
         jobStage: "job3",
         className: "Prophetess",
-        fileName: "rena-prophetess.png",
-        localPath: "/images/classes/rena-prophetess.png",
-        alt: "Rena en spécialisation Prophetess",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Prophetess",
+        fileName: "rena-prophetess.png"
+    }),
+    createClassImage({
         characterId: "rena",
         character: "Rena",
         pathName: "Poetic Ranger",
+        pathNameFr: "Prophetess",
         jobStage: "master",
         className: "Prophetess",
-        fileName: "rena-prophetess.png",
-        localPath: "/images/classes/rena-prophetess-master.png",
-        alt: "Rena en spécialisation Prophetess",
-        dimensions: ""
-    },
+        classNameFr: "Prophetess",
+        fileName: "rena-prophetess-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Porteur d'épée",
+        pathName: "Sword Taker",
+        pathNameFr: "Lame furieuse",
         jobStage: "job1",
         className: "Sword Taker",
-        fileName: "raven-sword-taker.png",
-        localPath: "/images/classes/raven-sword-taker.png",
-        alt: "Raven en spécialisation Sword Taker",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Porteur d'épée",
+        fileName: "raven-sword-taker.png"
+    }),
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Sword Taker",
+        pathNameFr: "Lame furieuse",
         jobStage: "job2",
-        className: "Maître de l'épée",
-        fileName: "raven-blade-master.png",
-        localPath: "/images/classes/raven-blade-master.png",
-        alt: "Raven en spécialisation Blade Master",
-        dimensions: ""
-    },
-    {
+        className: "Blade Master",
+        classNameFr: "Maître de l'épée",
+        fileName: "raven-blade-master.png"
+    }),
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Sword Taker",
+        pathNameFr: "Lame furieuse",
         jobStage: "job3",
-        className: "Lame furieuse",
-        fileName: "raven-furious-blade.png",
-        localPath: "/images/classes/raven-furious-blade.png",
-        alt: "Raven en spécialisation Furious Blade",
-        dimensions: ""
-    },
-    {
+        className: "Furious Blade",
+        classNameFr: "Lame furieuse",
+        fileName: "raven-furious-blade.png"
+    }),
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Sword Taker",
+        pathNameFr: "Lame furieuse",
         jobStage: "master",
-        className: "Lame furieuse",
-        fileName: "raven-furious-blade-master.png",
-        localPath: "/images/classes/raven-furious-blade-master.png",
-        alt: "Raven en spécialisation Furious Blade",
-        dimensions: ""
-    },
+        className: "Furious Blade",
+        classNameFr: "Lame furieuse",
+        fileName: "raven-furious-blade-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Over Taker",
+        pathNameFr: "Cœur enragé",
         jobStage: "job1",
-        className: "Porteur de lame",
-        fileName: "raven-over-taker.png",
-        localPath: "/images/classes/raven-over-taker.png",
-        alt: "Raven en spécialisation Over Taker",
-        dimensions: ""
-    },
-    {
+        className: "Over Taker",
+        classNameFr: "Porteur de lame",
+        fileName: "raven-over-taker.png"
+    }),
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Over Taker",
+        pathNameFr: "Cœur enragé",
         jobStage: "job2",
-        className: "Poing de feu",
-        fileName: "raven-reckless-fist.png",
-        localPath: "/images/classes/raven-reckless-fist.png",
-        alt: "Raven en spécialisation Reckless Fist",
-        dimensions: ""
-    },
-    {
+        className: "Reckless Fist",
+        classNameFr: "Poing de feu",
+        fileName: "raven-reckless-fist.png"
+    }),
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Over Taker",
+        pathNameFr: "Cœur enragé",
         jobStage: "job3",
-        className: "Cœur enragé",
-        fileName: "raven-rage-hearts.png",
-        localPath: "/images/classes/raven-rage-hearts.png",
-        alt: "Raven en spécialisation Rage Hearts",
-        dimensions: ""
-    },
-    {
+        className: "Rage Hearts",
+        classNameFr: "Cœur enragé",
+        fileName: "raven-rage-hearts.png"
+    }),
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Over Taker",
+        pathNameFr: "Cœur enragé",
         jobStage: "master",
-        className: "Cœur enragé",
-        fileName: "raven-rage-hearts-master.png",
-        localPath: "/images/classes/raven-rage-hearts-master.png",
-        alt: "Raven en spécialisation Rage Hearts",
-        dimensions: ""
-    },
+        className: "Rage Hearts",
+        classNameFr: "Cœur enragé",
+        fileName: "raven-rage-hearts-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Weapon Taker",
+        pathNameFr: "Nova Imperator",
         jobStage: "job1",
-        className: "Maître de la destinée",
-        fileName: "raven-weapon-taker.png",
-        localPath: "/images/classes/raven-weapon-taker.png",
-        alt: "Raven en spécialisation Weapon Taker",
-        dimensions: ""
-    },
-    {
+        className: "Weapon Taker",
+        classNameFr: "Maître de la destinée",
+        fileName: "raven-weapon-taker.png"
+    }),
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Weapon Taker",
+        pathNameFr: "Nova Imperator",
         jobStage: "job2",
-        className: "Vétéran Commando",
-        fileName: "raven-veteran-commander.png",
-        localPath: "/images/classes/raven-veteran-commander.png",
-        alt: "Raven en spécialisation Veteran Commander",
-        dimensions: ""
-    },
-    {
+        className: "Veteran Commander",
+        classNameFr: "Vétéran Commando",
+        fileName: "raven-veteran-commander.png"
+    }),
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Weapon Taker",
+        pathNameFr: "Nova Imperator",
         jobStage: "job3",
         className: "Nova Imperator",
-        fileName: "raven-nova-imperator.png",
-        localPath: "/images/classes/raven-nova-imperator.png",
-        alt: "Raven en spécialisation Nova Imperator",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Nova Imperator",
+        fileName: "raven-nova-imperator.png"
+    }),
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Weapon Taker",
+        pathNameFr: "Nova Imperator",
         jobStage: "master",
         className: "Nova Imperator",
-        fileName: "raven-nova-imperator-master.png",
-        localPath: "/images/classes/raven-nova-imperator-master.png",
-        alt: "Raven en spécialisation Nova Imperator",
-        dimensions: ""
-    },
+        classNameFr: "Nova Imperator",
+        fileName: "raven-nova-imperator-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Venom Taker",
+        pathNameFr: "Revenant",
         jobStage: "job1",
         className: "Venom Taker",
-        fileName: "raven-venom-taker.png",
-        localPath: "/images/classes/raven-venom-taker.png",
-        alt: "Raven en spécialisation Venom Taker",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Venom Taker",
+        fileName: "raven-venom-taker.png"
+    }),
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Venom Taker",
+        pathNameFr: "Revenant",
         jobStage: "job2",
         className: "Mutant Reaper",
-        fileName: "raven-mutant-reaper.png",
-        localPath: "/images/classes/raven-mutant-reaper.png",
-        alt: "Raven en spécialisation Mutant Reaper",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Mutant Reaper",
+        fileName: "raven-mutant-reaper.png"
+    }),
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Venom Taker",
+        pathNameFr: "Revenant",
         jobStage: "job3",
         className: "Revenant",
-        fileName: "raven-revenant.png",
-        localPath: "/images/classes/raven-revenant.png",
-        alt: "Raven en spécialisation Revenant",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Revenant",
+        fileName: "raven-revenant.png"
+    }),
+    createClassImage({
         characterId: "raven",
         character: "Raven",
         pathName: "Venom Taker",
+        pathNameFr: "Revenant",
         jobStage: "master",
         className: "Revenant",
-        fileName: "raven-revenant-master.png",
-        localPath: "/images/classes/raven-revenant-master.png",
-        alt: "Raven en spécialisation Revenant",
-        dimensions: ""
-    },
+        classNameFr: "Revenant",
+        fileName: "raven-revenant-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Exotic",
+        pathNameFr: "Nasod ultime",
         jobStage: "job1",
-        className: "Vengeresse nasod",
-        fileName: "eve-code-exotic.png",
-        localPath: "/images/classes/eve-code-exotic.png",
-        alt: "Eve en spécialisation Code: Exotic",
-        dimensions: ""
-    },
-    {
+        className: "Code: Exotic",
+        classNameFr: "Vengeresse nasod",
+        fileName: "eve-code-exotic.png"
+    }),
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Exotic",
+        pathNameFr: "Nasod ultime",
         jobStage: "job2",
-        className: "Némésis nasod",
-        fileName: "eve-code-nemesis.png",
-        localPath: "/images/classes/eve-code-nemesis.png",
-        alt: "Eve en spécialisation Code: Nemesis",
-        dimensions: ""
-    },
-    {
+        className: "Code: Nemesis",
+        classNameFr: "Némésis nasod",
+        fileName: "eve-code-nemesis.png"
+    }),
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Exotic",
+        pathNameFr: "Nasod ultime",
         jobStage: "job3",
-        className: "Nasod ultime",
-        fileName: "eve-code-ultimate.png",
-        localPath: "/images/classes/eve-code-ultimate.png",
-        alt: "Eve en spécialisation Code: Ultimate",
-        dimensions: ""
-    },
-    {
+        className: "Code: Ultimate",
+        classNameFr: "Nasod ultime",
+        fileName: "eve-code-ultimate.png"
+    }),
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Exotic",
+        pathNameFr: "Nasod ultime",
         jobStage: "master",
-        className: "Nasod ultime",
-        fileName: "eve-code-ultimate-master.png",
-        localPath: "/images/classes/eve-code-ultimate-master.png",
-        alt: "Eve en spécialisation Code: Ultimate",
-        dimensions: ""
-    },
+        className: "Code: Ultimate",
+        classNameFr: "Nasod ultime",
+        fileName: "eve-code-ultimate-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Architecture",
+        pathNameFr: "Nasod essentielle",
         jobStage: "job1",
-        className: "Espérance nasod",
-        fileName: "eve-code-architecture.png",
-        localPath: "/images/classes/eve-code-architecture.png",
-        alt: "Eve en spécialisation Code: Architecture",
-        dimensions: ""
-    },
-    {
+        className: "Code: Architecture",
+        classNameFr: "Espérance nasod",
+        fileName: "eve-code-architecture.png"
+    }),
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Architecture",
+        pathNameFr: "Nasod essentielle",
         jobStage: "job2",
-        className: "Impératrice Nasod",
-        fileName: "eve-code-empress.png",
-        localPath: "/images/classes/eve-code-empress.png",
-        alt: "Eve en spécialisation Code: Empress",
-        dimensions: ""
-    },
-    {
+        className: "Code: Empress",
+        classNameFr: "Impératrice Nasod",
+        fileName: "eve-code-empress.png"
+    }),
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Architecture",
+        pathNameFr: "Nasod essentielle",
         jobStage: "job3",
-        className: "Nasod essentielle",
-        fileName: "eve-code-esencia.png",
-        localPath: "/images/classes/eve-code-esencia.png",
-        alt: "Eve en spécialisation Code: Esencia",
-        dimensions: ""
-    },
-    {
+        className: "Code: Esencia",
+        classNameFr: "Nasod essentielle",
+        fileName: "eve-code-esencia.png"
+    }),
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Architecture",
+        pathNameFr: "Nasod essentielle",
         jobStage: "master",
-        className: "Nasod essentielle",
-        fileName: "eve-code-esencia-master.png",
-        localPath: "/images/classes/eve-code-esencia-master.png",
-        alt: "Eve en spécialisation Code: Esencia",
-        dimensions: ""
-    },
+        className: "Code: Esencia",
+        classNameFr: "Nasod essentielle",
+        fileName: "eve-code-esencia-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Electra",
+        pathNameFr: "Code: Sariel",
         jobStage: "job1",
         className: "Code: Electra",
-        fileName: "eve-code-electra.png",
-        localPath: "/images/classes/eve-code-electra.png",
-        alt: "Eve en spécialisation Code: Electra",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Code: Electra",
+        fileName: "eve-code-electra.png"
+    }),
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Electra",
+        pathNameFr: "Code: Sariel",
         jobStage: "job2",
         className: "Code: Battle Seraph",
-        fileName: "eve-code-battle-seraph.png",
-        localPath: "/images/classes/eve-code-battle-seraph.png",
-        alt: "Eve en spécialisation Code: Battle Seraph",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Code: Battle Seraph",
+        fileName: "eve-code-battle-seraph.png"
+    }),
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Electra",
+        pathNameFr: "Code: Sariel",
         jobStage: "job3",
         className: "Code: Sariel",
-        fileName: "eve-code-sariel.png",
-        localPath: "/images/classes/eve-code-sariel.png",
-        alt: "Eve en spécialisation Code: Sariel",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Code: Sariel",
+        fileName: "eve-code-sariel.png"
+    }),
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Electra",
+        pathNameFr: "Code: Sariel",
         jobStage: "master",
         className: "Code: Sariel",
-        fileName: "eve-code-sariel-master.png",
-        localPath: "/images/classes/eve-code-sariel-master.png",
-        alt: "Eve en spécialisation Code: Sariel",
-        dimensions: ""
-    },
+        classNameFr: "Code: Sariel",
+        fileName: "eve-code-sariel-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Unknown",
+        pathNameFr: "Code: Antithese",
         jobStage: "job1",
         className: "Code: Unknown",
-        fileName: "eve-code-unknown.png",
-        localPath: "/images/classes/eve-code-unknown.png",
-        alt: "Eve en spécialisation Code: Unknown",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Code: Unknown",
+        fileName: "eve-code-unknown.png"
+    }),
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Unknown",
+        pathNameFr: "Code: Antithese",
         jobStage: "job2",
         className: "Code: Failess",
-        fileName: "eve-code-failess.png",
-        localPath: "/images/classes/eve-code-failess.png",
-        alt: "Eve en spécialisation Code: Failess",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Code: Failess",
+        fileName: "eve-code-failess.png"
+    }),
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Unknown",
+        pathNameFr: "Code: Antithese",
         jobStage: "job3",
         className: "Code: Antithese",
-        fileName: "eve-code-antithese.png",
-        localPath: "/images/classes/eve-code-antithese.png",
-        alt: "Eve en spécialisation Code: Antithese",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Code: Antithese",
+        fileName: "eve-code-antithese.png"
+    }),
+    createClassImage({
         characterId: "eve",
         character: "Eve",
         pathName: "Code: Unknown",
+        pathNameFr: "Code: Antithese",
         jobStage: "master",
         className: "Code: Antithese",
-        fileName: "eve-code-antithese-master.png",
-        localPath: "/images/classes/eve-code-antithese-master.png",
-        alt: "Eve en spécialisation Code: Antithese",
-        dimensions: ""
-    },
+        classNameFr: "Code: Antithese",
+        fileName: "eve-code-antithese-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Fury Guardian",
+        pathNameFr: "Chevalier croisé cométaire",
         jobStage: "job1",
-        className: "Gardien colérique",
-        fileName: "chung-fury-guardian.png",
-        localPath: "/images/classes/chung-fury-guardian.png",
-        alt: "Chung en spécialisation Fury Guardian",
-        dimensions: ""
-    },
-    {
+        className: "Fury Guardian",
+        classNameFr: "Gardien colérique",
+        fileName: "chung-fury-guardian.png"
+    }),
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Fury Guardian",
+        pathNameFr: "Chevalier croisé cométaire",
         jobStage: "job2",
-        className: "Paladin adamantium",
-        fileName: "chung-iron-paladin.png",
-        localPath: "/images/classes/chung-iron-paladin.png",
-        alt: "Chung en spécialisation Iron Paladin",
-        dimensions: ""
-    },
-    {
+        className: "Iron Paladin",
+        classNameFr: "Paladin adamantium",
+        fileName: "chung-iron-paladin.png"
+    }),
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Fury Guardian",
+        pathNameFr: "Chevalier croisé cométaire",
         jobStage: "job3",
-        className: "Chevalier croisé cométaire",
-        fileName: "chung-comet-crusader.png",
-        localPath: "/images/classes/chung-comet-crusader.png",
-        alt: "Chung en spécialisation Comet Crusader",
-        dimensions: ""
-    },
-    {
+        className: "Comet Crusader",
+        classNameFr: "Chevalier croisé cométaire",
+        fileName: "chung-comet-crusader.png"
+    }),
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Fury Guardian",
+        pathNameFr: "Chevalier croisé cométaire",
         jobStage: "master",
-        className: "Chevalier croisé cométaire",
-        fileName: "chung-comet-crusader-master.png",
-        localPath: "/images/classes/chung-comet-crusader-master.png",
-        alt: "Chung en spécialisation Comet Crusader",
-        dimensions: ""
-    },
+        className: "Comet Crusader",
+        classNameFr: "Chevalier croisé cométaire",
+        fileName: "chung-comet-crusader-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Shooting Guardian",
+        pathNameFr: "Fantôme Fatal",
         jobStage: "job1",
-        className: "Gardien tireur",
-        fileName: "chung-shooting-guardian.png",
-        localPath: "/images/classes/chung-shooting-guardian.png",
-        alt: "Chung en spécialisation Shooting Guardian",
-        dimensions: ""
-    },
-    {
+        className: "Shooting Guardian",
+        classNameFr: "Gardien tireur",
+        fileName: "chung-shooting-guardian.png"
+    }),
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Shooting Guardian",
+        pathNameFr: "Fantôme Fatal",
         jobStage: "job2",
-        className: "Flingeur",
-        fileName: "chung-deadly-chaser.png",
-        localPath: "/images/classes/chung-deadly-chaser.png",
-        alt: "Chung en spécialisation Deadly Chaser",
-        dimensions: ""
-    },
-    {
+        className: "Deadly Chaser",
+        classNameFr: "Flingeur",
+        fileName: "chung-deadly-chaser.png"
+    }),
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Shooting Guardian",
+        pathNameFr: "Fantôme Fatal",
         jobStage: "job3",
-        className: "Fantôme Fatal",
-        fileName: "chung-fatal-phantom.png",
-        localPath: "/images/classes/chung-fatal-phantom.png",
-        alt: "Chung en spécialisation Fatal Phantom",
-        dimensions: ""
-    },
-    {
+        className: "Fatal Phantom",
+        classNameFr: "Fantôme Fatal",
+        fileName: "chung-fatal-phantom.png"
+    }),
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Shooting Guardian",
+        pathNameFr: "Fantôme Fatal",
         jobStage: "master",
-        className: "Fantôme Fatal",
-        fileName: "chung-fatal-phantom-master.png",
-        localPath: "/images/classes/chung-fatal-phantom-master.png",
-        alt: "Chung en spécialisation Fatal Phantom",
-        dimensions: ""
-    },
+        className: "Fatal Phantom",
+        classNameFr: "Fantôme Fatal",
+        fileName: "chung-fatal-phantom-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Shelling Guardian",
+        pathNameFr: "Centurion",
         jobStage: "job1",
-        className: "Gardien artilleur",
-        fileName: "chung-shelling-guardian.png",
-        localPath: "/images/classes/chung-shelling-guardian.png",
-        alt: "Chung en spécialisation Shelling Guardian",
-        dimensions: ""
-    },
-    {
+        className: "Shelling Guardian",
+        classNameFr: "Gardien artilleur",
+        fileName: "chung-shelling-guardian.png"
+    }),
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Shelling Guardian",
+        pathNameFr: "Centurion",
         jobStage: "job2",
-        className: "Canonnier de commando",
-        fileName: "chung-tactical-trooper.png",
-        localPath: "/images/classes/chung-tactical-trooper.png",
-        alt: "Chung en spécialisation Tactical Trooper",
-        dimensions: ""
-    },
-    {
+        className: "Tactical Trooper",
+        classNameFr: "Canonnier de commando",
+        fileName: "chung-tactical-trooper.png"
+    }),
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Shelling Guardian",
+        pathNameFr: "Centurion",
         jobStage: "job3",
         className: "Centurion",
-        fileName: "chung-centurion.png",
-        localPath: "/images/classes/chung-centurion.png",
-        alt: "Chung en spécialisation Centurion",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Centurion",
+        fileName: "chung-centurion.png"
+    }),
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Shelling Guardian",
+        pathNameFr: "Centurion",
         jobStage: "master",
         className: "Centurion",
-        fileName: "chung-centurion-master.png",
-        localPath: "/images/classes/chung-centurion-master.png",
-        alt: "Chung en spécialisation Centurion",
-        dimensions: ""
-    },
+        classNameFr: "Centurion",
+        fileName: "chung-centurion-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Core Guardian",
+        pathNameFr: "Dius Aer",
         jobStage: "job1",
         className: "Core Guardian",
-        fileName: "chung-core-guardian.png",
-        localPath: "/images/classes/chung-core-guardian.png",
-        alt: "Chung en spécialisation Core Guardian",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Core Guardian",
+        fileName: "chung-core-guardian.png"
+    }),
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Core Guardian",
+        pathNameFr: "Dius Aer",
         jobStage: "job2",
         className: "Divine Phanes",
-        fileName: "chung-divine-phanes.png",
-        localPath: "/images/classes/chung-divine-phanes.png",
-        alt: "Chung en spécialisation Divine Phanes",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Divine Phanes",
+        fileName: "chung-divine-phanes.png"
+    }),
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Core Guardian",
+        pathNameFr: "Dius Aer",
         jobStage: "job3",
         className: "Dius Aer",
-        fileName: "chung-dius-aer.png",
-        localPath: "/images/classes/chung-dius-aer.png",
-        alt: "Chung en spécialisation Dius Aer",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Dius Aer",
+        fileName: "chung-dius-aer.png"
+    }),
+    createClassImage({
         characterId: "chung",
         character: "Chung",
         pathName: "Core Guardian",
+        pathNameFr: "Dius Aer",
         jobStage: "master",
         className: "Dius Aer",
-        fileName: "chung-dius-aer-master.png",
-        localPath: "/images/classes/chung-dius-aer-master.png",
-        alt: "Chung en spécialisation Dius Aer",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Dius Aer",
+        fileName: "chung-dius-aer-master.png"
+    }),
+
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Hsien",
+        pathNameFr: "Apsara",
         jobStage: "job1",
-        className: "Petite Hsien",
-        fileName: "ara-little-hsien.png",
-        localPath: "/images/classes/ara-little-hsien.png",
-        alt: "Ara en spécialisation Little Hsien",
-        dimensions: ""
-    },
-    {
+        className: "Little Hsien",
+        classNameFr: "Petite Hsien",
+        fileName: "ara-little-hsien.png"
+    }),
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Hsien",
+        pathNameFr: "Apsara",
         jobStage: "job2",
         className: "Sakra Devanam",
-        fileName: "ara-sakra-devanam.png",
-        localPath: "/images/classes/ara-sakra-devanam.png",
-        alt: "Ara en spécialisation Sakra Devanam",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Sakra Devanam",
+        fileName: "ara-sakra-devanam.png"
+    }),
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Hsien",
+        pathNameFr: "Apsara",
         jobStage: "job3",
         className: "Apsara",
-        fileName: "ara-apsara.png",
-        localPath: "/images/classes/ara-apsara.png",
-        alt: "Ara en spécialisation Apsara",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Apsara",
+        fileName: "ara-apsara.png"
+    }),
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Hsien",
+        pathNameFr: "Apsara",
         jobStage: "master",
         className: "Apsara",
-        fileName: "ara-apsara-master.png",
-        localPath: "/images/classes/ara-apsara-master.png",
-        alt: "Ara en spécialisation Apsara",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Apsara",
+        fileName: "ara-apsara-master.png"
+    }),
+
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Devil",
+        pathNameFr: "Devi",
         jobStage: "job1",
-        className: "Petit Devil",
-        fileName: "ara-little-devil.png",
-        localPath: "/images/classes/ara-little-devil.png",
-        alt: "Ara en spécialisation Little Devil",
-        dimensions: ""
-    },
-    {
+        className: "Little Devil",
+        classNameFr: "Petit Devil",
+        fileName: "ara-little-devil.png"
+    }),
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Devil",
+        pathNameFr: "Devi",
         jobStage: "job2",
         className: "Yama Raja",
-        fileName: "ara-yama-raja.png",
-        localPath: "/images/classes/ara-yama-raja.png",
-        alt: "Ara en spécialisation Yama Raja",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Yama Raja",
+        fileName: "ara-yama-raja.png"
+    }),
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Devil",
+        pathNameFr: "Devi",
         jobStage: "job3",
         className: "Devi",
-        fileName: "ara-devi.png",
-        localPath: "/images/classes/ara-devi.png",
-        alt: "Ara en spécialisation Devi",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Devi",
+        fileName: "ara-devi.png"
+    }),
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Devil",
+        pathNameFr: "Devi",
         jobStage: "master",
         className: "Devi",
-        fileName: "ara-devi-master.png",
-        localPath: "/images/classes/ara-devi-master.png",
-        alt: "Ara en spécialisation Devi",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Devi",
+        fileName: "ara-devi-master.png"
+    }),
+
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Specter",
+        pathNameFr: "Shakti",
         jobStage: "job1",
         className: "Little Specter",
-        fileName: "ara-little-specter.png",
-        localPath: "/images/classes/ara-little-specter.png",
-        alt: "Ara en spécialisation Little Specter",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Little Specter",
+        fileName: "ara-little-specter.png"
+    }),
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Specter",
+        pathNameFr: "Shakti",
         jobStage: "job2",
         className: "Asura",
-        fileName: "ara-asura.png",
-        localPath: "/images/classes/ara-asura.png",
-        alt: "Ara en spécialisation Asura",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Asura",
+        fileName: "ara-asura.png"
+    }),
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Specter",
+        pathNameFr: "Shakti",
         jobStage: "job3",
         className: "Shakti",
-        fileName: "ara-shakti.png",
-        localPath: "/images/classes/ara-shakti.png",
-        alt: "Ara en spécialisation Shakti",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Shakti",
+        fileName: "ara-shakti.png"
+    }),
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Specter",
+        pathNameFr: "Shakti",
         jobStage: "master",
         className: "Shakti",
-        fileName: "ara-shakti-master.png",
-        localPath: "/images/classes/ara-shakti-master.png",
-        alt: "Ara en spécialisation Shakti",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Shakti",
+        fileName: "ara-shakti-master.png"
+    }),
+
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Helper",
+        pathNameFr: "Surya",
         jobStage: "job1",
         className: "Little Helper",
-        fileName: "ara-little-helper.png",
-        localPath: "/images/classes/ara-little-helper.png",
-        alt: "Ara en spécialisation Little Helper",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Little Helper",
+        fileName: "ara-little-helper.png"
+    }),
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Helper",
+        pathNameFr: "Surya",
         jobStage: "job2",
         className: "Marici",
-        fileName: "ara-marici.png",
-        localPath: "/images/classes/ara-marici.png",
-        alt: "Ara en spécialisation Marici",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Marici",
+        fileName: "ara-marici.png"
+    }),
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Helper",
+        pathNameFr: "Surya",
         jobStage: "job3",
         className: "Surya",
-        fileName: "ara-surya.png",
-        localPath: "/images/classes/ara-surya.png",
-        alt: "Ara en spécialisation Surya",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Surya",
+        fileName: "ara-surya.png"
+    }),
+    createClassImage({
         characterId: "ara",
         character: "Ara",
         pathName: "Little Helper",
+        pathNameFr: "Surya",
         jobStage: "master",
         className: "Surya",
-        fileName: "ara-surya-master.png",
-        localPath: "/images/classes/ara-surya-master.png",
-        alt: "Ara en spécialisation Surya",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Surya",
+        fileName: "ara-surya-master.png"
+    }),
+
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Saber Knight",
+        pathNameFr: "Épée de l'empire",
         jobStage: "job1",
-        className: "Maître-escrimeur",
-        fileName: "elesis-saber-knight.png",
-        localPath: "/images/classes/elesis-saber-knight.png",
-        alt: "Elesis en spécialisation Saber Knight",
-        dimensions: ""
-    },
-    {
+        className: "Saber Knight",
+        classNameFr: "Maître-escrimeur",
+        fileName: "elesis-saber-knight.png"
+    }),
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Saber Knight",
+        pathNameFr: "Épée de l'empire",
         jobStage: "job2",
-        className: "Grand Maître",
-        fileName: "elesis-grand-master.png",
-        localPath: "/images/classes/elesis-grand-master.png",
-        alt: "Elesis en spécialisation Grand Master",
-        dimensions: ""
-    },
-    {
+        className: "Grand Master",
+        classNameFr: "Grand Maître",
+        fileName: "elesis-grand-master.png"
+    }),
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Saber Knight",
+        pathNameFr: "Épée de l'empire",
         jobStage: "job3",
-        className: "Épée de l'empire",
-        fileName: "elesis-empire-sword.png",
-        localPath: "/images/classes/elesis-empire-sword.png",
-        alt: "Elesis en spécialisation Empire Sword",
-        dimensions: ""
-    },
-    {
+        className: "Empire Sword",
+        classNameFr: "Épée de l'empire",
+        fileName: "elesis-empire-sword.png"
+    }),
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Saber Knight",
+        pathNameFr: "Épée de l'empire",
         jobStage: "master",
-        className: "Épée de l'empire",
-        fileName: "elesis-empire-sword-master.png",
-        localPath: "/images/classes/elesis-empire-sword-master.png",
-        alt: "Elesis en spécialisation Empire Sword",
-        dimensions: ""
-    },
-    {
+        className: "Empire Sword",
+        classNameFr: "Épée de l'empire",
+        fileName: "elesis-empire-sword-master.png"
+    }),
+
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Pyro Knight",
+        pathNameFr: "Maîtresse des flammes",
         jobStage: "job1",
-        className: "Chevalier Pyromane",
-        fileName: "elesis-pyro-knight.png",
-        localPath: "/images/classes/elesis-pyro-knight.png",
-        alt: "Elesis en spécialisation Pyro Knight",
-        dimensions: ""
-    },
-    {
+        className: "Pyro Knight",
+        classNameFr: "Chevalier Pyromane",
+        fileName: "elesis-pyro-knight.png"
+    }),
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Pyro Knight",
+        pathNameFr: "Maîtresse des flammes",
         jobStage: "job2",
-        className: "Cœur de Flammes",
-        fileName: "elesis-blazing-heart.png",
-        localPath: "/images/classes/elesis-blazing-heart.png",
-        alt: "Elesis en spécialisation Blazing Heart",
-        dimensions: ""
-    },
-    {
+        className: "Blazing Heart",
+        classNameFr: "Cœur de Flammes",
+        fileName: "elesis-blazing-heart.png"
+    }),
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Pyro Knight",
+        pathNameFr: "Maîtresse des flammes",
         jobStage: "job3",
-        className: "Maîtresse des flammes",
-        fileName: "elesis-flame-lord.png",
-        localPath: "/images/classes/elesis-flame-lord.png",
-        alt: "Elesis en spécialisation Flame Lord",
-        dimensions: ""
-    },
-    {
+        className: "Flame Lord",
+        classNameFr: "Maîtresse des flammes",
+        fileName: "elesis-flame-lord.png"
+    }),
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Pyro Knight",
+        pathNameFr: "Maîtresse des flammes",
         jobStage: "master",
-        className: "Maîtresse des flammes",
-        fileName: "elesis-flame-lord-master.png",
-        localPath: "/images/classes/elesis-flame-lord-master.png",
-        alt: "Elesis en spécialisation Flame Lord",
-        dimensions: ""
-    },
-    {
+        className: "Flame Lord",
+        classNameFr: "Maîtresse des flammes",
+        fileName: "elesis-flame-lord-master.png"
+    }),
+
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Dark Knight",
+        pathNameFr: "Reine sanglante",
         jobStage: "job1",
-        className: "Chevalier ténébreux",
-        fileName: "elesis-dark-knight.png",
-        localPath: "/images/classes/elesis-dark-knight.png",
-        alt: "Elesis en spécialisation Dark Knight",
-        dimensions: ""
-    },
-    {
+        className: "Dark Knight",
+        classNameFr: "Chevalier ténébreux",
+        fileName: "elesis-dark-knight.png"
+    }),
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Dark Knight",
+        pathNameFr: "Reine sanglante",
         jobStage: "job2",
-        className: "Vengeresse pourpre",
-        fileName: "elesis-crimson-avenger.png",
-        localPath: "/images/classes/elesis-crimson-avenger.png",
-        alt: "Elesis en spécialisation Crimson Avenger",
-        dimensions: ""
-    },
-    {
+        className: "Crimson Avenger",
+        classNameFr: "Vengeresse pourpre",
+        fileName: "elesis-crimson-avenger.png"
+    }),
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Dark Knight",
+        pathNameFr: "Reine sanglante",
         jobStage: "job3",
-        className: "Reine sanglante",
-        fileName: "elesis-bloody-queen.png",
-        localPath: "/images/classes/elesis-bloody-queen.png",
-        alt: "Elesis en spécialisation Bloody Queen",
-        dimensions: ""
-    },
-    {
+        className: "Bloody Queen",
+        classNameFr: "Reine sanglante",
+        fileName: "elesis-bloody-queen.png"
+    }),
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Dark Knight",
+        pathNameFr: "Reine sanglante",
         jobStage: "master",
-        className: "Reine sanglante",
-        fileName: "elesis-bloody-queen-master.png",
-        localPath: "/images/classes/elesis-bloody-queen-master.png",
-        alt: "Elesis en spécialisation Bloody Queen",
-        dimensions: ""
-    },
-    {
+        className: "Bloody Queen",
+        classNameFr: "Reine sanglante",
+        fileName: "elesis-bloody-queen-master.png"
+    }),
+
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Soar Knight",
+        pathNameFr: "Adrestia",
         jobStage: "job1",
         className: "Soar Knight",
-        fileName: "elesis-soar-knight.png",
-        localPath: "/images/classes/elesis-soar-knight.png",
-        alt: "Elesis en spécialisation Soar Knight",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Soar Knight",
+        fileName: "elesis-soar-knight.png"
+    }),
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Soar Knight",
+        pathNameFr: "Adrestia",
         jobStage: "job2",
         className: "Patrona",
-        fileName: "elesis-patrona.png",
-        localPath: "/images/classes/elesis-patrona.png",
-        alt: "Elesis en spécialisation Patrona",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Patrona",
+        fileName: "elesis-patrona.png"
+    }),
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Soar Knight",
+        pathNameFr: "Adrestia",
         jobStage: "job3",
         className: "Adrestia",
-        fileName: "elesis-adrestia.png",
-        localPath: "/images/classes/elesis-adrestia.png",
-        alt: "Elesis en spécialisation Adrestia",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Adrestia",
+        fileName: "elesis-adrestia.png"
+    }),
+    createClassImage({
         characterId: "elesis",
         character: "Elesis",
         pathName: "Soar Knight",
+        pathNameFr: "Adrestia",
         jobStage: "master",
         className: "Adrestia",
-        fileName: "elesis-adrestia-master.png",
-        localPath: "/images/classes/elesis-adrestia-master.png",
-        alt: "Elesis en spécialisation Adrestia",
-        dimensions: ""
-    },
-    {
-        characterId: "add",
-        character: "Add",
-        pathName: "Psychic Tracer",
-        jobStage: "job1",
-        className: "Traqueur psychique",
-        fileName: "add-psychic-tracer.png",
-        localPath: "/images/classes/add-psychic-tracer.png",
-        alt: "Add en spécialisation Psychic Tracer",
-        dimensions: ""
-    },
-    {
-        characterId: "add",
-        character: "Add",
-        pathName: "Psychic Tracer",
-        jobStage: "job2",
-        className: "Psychopathe",
-        fileName: "add-lunatic-psyker.png",
-        localPath: "/images/classes/add-lunatic-psyker.png",
-        alt: "Add en spécialisation Lunatic Psyker",
-        dimensions: ""
-    },
-    {
-        characterId: "add",
-        character: "Add",
-        pathName: "Psychic Tracer",
-        jobStage: "job3",
-        className: "Calamité",
-        fileName: "add-doom-bringer.png",
-        localPath: "/images/classes/add-doom-bringer.png",
-        alt: "Add en spécialisation Doom Bringer",
-        dimensions: ""
-    },
-    {
-        characterId: "add",
-        character: "Add",
-        pathName: "Psychic Tracer",
-        jobStage: "master",
-        className: "Calamité",
-        fileName: "add-doom-bringer-master.png",
-        localPath: "/images/classes/add-doom-bringer-master.png",
-        alt: "Add en spécialisation Doom Bringer",
-        dimensions: ""
-    },
+        classNameFr: "Adrestia",
+        fileName: "elesis-adrestia-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Arc Tracer",
+        pathName: "Psychic Tracer",
+        pathNameFr: "Calamité",
         jobStage: "job1",
-        className: "Maître de l'IA",
-        fileName: "add-arc-tracer.png",
-        localPath: "/images/classes/add-arc-tracer.png",
-        alt: "Add en spécialisation Arc Tracer",
-        dimensions: ""
-    },
-    {
+        className: "Psychic Tracer",
+        classNameFr: "Traqueur psychique",
+        fileName: "add-psychic-tracer.png"
+    }),
+    createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Arc Tracer",
+        pathName: "Psychic Tracer",
+        pathNameFr: "Calamité",
         jobStage: "job2",
-        className: "Machiavel",
-        fileName: "add-mastermind.png",
-        localPath: "/images/classes/add-mastermind.png",
-        alt: "Add en spécialisation Mastermind",
-        dimensions: ""
-    },
-    {
+        className: "Lunatic Psyker",
+        classNameFr: "Psychopathe",
+        fileName: "add-lunatic-psyker.png"
+    }),
+    createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Arc Tracer",
+        pathName: "Psychic Tracer",
+        pathNameFr: "Calamité",
         jobStage: "job3",
-        className: "Dominateur",
-        fileName: "add-dominator.png",
-        localPath: "/images/classes/add-dominator.png",
-        alt: "Add en spécialisation Dominator",
-        dimensions: ""
-    },
-    {
+        className: "Doom Bringer",
+        classNameFr: "Calamité",
+        fileName: "add-doom-bringer.png"
+    }),
+    createClassImage({
+        characterId: "add",
+        character: "Add",
+        pathName: "Psychic Tracer",
+        pathNameFr: "Calamité",
+        jobStage: "master",
+        className: "Doom Bringer",
+        classNameFr: "Calamité",
+        fileName: "add-doom-bringer-master.png"
+    }),
+
+    createClassImage({
         characterId: "add",
         character: "Add",
         pathName: "Arc Tracer",
-        jobStage: "master",
-        className: "Dominateur",
-        fileName: "add-dominator-master.png",
-        localPath: "/images/classes/add-dominator-master.png",
-        alt: "Add en spécialisation Dominator",
-        dimensions: ""
-    },
-
-    {
-        characterId: "add",
-        character: "Add",
-        pathName: "Time Tracer",
+        pathNameFr: "Dominateur",
         jobStage: "job1",
-        className: "Voyageur Temporel",
-        fileName: "add-time-tracer.png",
-        localPath: "/images/classes/add-time-tracer.png",
-        alt: "Add en spécialisation Time Tracer",
-        dimensions: ""
-    },
-    {
+        className: "Arc Tracer",
+        classNameFr: "Maître de l'IA",
+        fileName: "add-arc-tracer.png"
+    }),
+    createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Time Tracer",
+        pathName: "Arc Tracer",
+        pathNameFr: "Dominateur",
         jobStage: "job2",
-        className: "Seigneur du Temps",
-        fileName: "add-diabolic-esper.png",
-        localPath: "/images/classes/add-diabolic-esper.png",
-        alt: "Add en spécialisation Diabolic Esper",
-        dimensions: ""
-    },
-    {
+        className: "Mastermind",
+        classNameFr: "Machiavel",
+        fileName: "add-mastermind.png"
+    }),
+    createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Time Tracer",
+        pathName: "Arc Tracer",
+        pathNameFr: "Dominateur",
         jobStage: "job3",
-        className: "Paradoxe",
-        fileName: "add-mad-paradox.png",
-        localPath: "/images/classes/add-mad-paradox.png",
-        alt: "Add en spécialisation Mad Paradox",
-        dimensions: ""
-    },
-    {
+        className: "Dominator",
+        classNameFr: "Dominateur",
+        fileName: "add-dominator.png"
+    }),
+    createClassImage({
+        characterId: "add",
+        character: "Add",
+        pathName: "Arc Tracer",
+        pathNameFr: "Dominateur",
+        jobStage: "master",
+        className: "Dominator",
+        classNameFr: "Dominateur",
+        fileName: "add-dominator-master.png"
+    }),
+
+    createClassImage({
         characterId: "add",
         character: "Add",
         pathName: "Time Tracer",
+        pathNameFr: "Paradoxe",
+        jobStage: "job1",
+        className: "Time Tracer",
+        classNameFr: "Voyageur Temporel",
+        fileName: "add-time-tracer.png"
+    }),
+    createClassImage({
+        characterId: "add",
+        character: "Add",
+        pathName: "Time Tracer",
+        pathNameFr: "Paradoxe",
+        jobStage: "job2",
+        className: "Diabolic Esper",
+        classNameFr: "Seigneur du Temps",
+        fileName: "add-diabolic-esper.png"
+    }),
+    createClassImage({
+        characterId: "add",
+        character: "Add",
+        pathName: "Time Tracer",
+        pathNameFr: "Paradoxe",
+        jobStage: "job3",
+        className: "Mad Paradox",
+        classNameFr: "Paradoxe",
+        fileName: "add-mad-paradox.png"
+    }),
+    createClassImage({
+        characterId: "add",
+        character: "Add",
+        pathName: "Time Tracer",
+        pathNameFr: "Paradoxe",
         jobStage: "master",
-        className: "Paradoxe",
-        fileName: "add-mad-paradox-master.png",
-        localPath: "/images/classes/add-mad-paradox-master.png",
-        alt: "Add en spécialisation Mad Paradox",
-        dimensions: ""
-    },
+        className: "Mad Paradox",
+        classNameFr: "Paradoxe",
+        fileName: "add-mad-paradox-master.png"
+    }),
 
-    {
+    createClassImage({
         characterId: "add",
         character: "Add",
         pathName: "Affect Tracer",
+        pathNameFr: "Overmind",
         jobStage: "job1",
         className: "Affect Tracer",
-        fileName: "add-affect-tracer.png",
-        localPath: "/images/classes/add-affect-tracer.png",
-        alt: "Add en spécialisation Affect Tracer",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Affect Tracer",
+        fileName: "add-affect-tracer.png"
+    }),
+    createClassImage({
         characterId: "add",
         character: "Add",
         pathName: "Affect Tracer",
+        pathNameFr: "Overmind",
         jobStage: "job2",
         className: "Dissembler",
-        fileName: "add-dissembler.png",
-        localPath: "/images/classes/add-dissembler.png",
-        alt: "Add en spécialisation Dissembler",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Dissembler",
+        fileName: "add-dissembler.png"
+    }),
+    createClassImage({
         characterId: "add",
         character: "Add",
         pathName: "Affect Tracer",
+        pathNameFr: "Overmind",
         jobStage: "job3",
         className: "Overmind",
-        fileName: "add-overmind.png",
-        localPath: "/images/classes/add-overmind.png",
-        alt: "Add en spécialisation Overmind",
-        dimensions: ""
-    },
-    {
+        classNameFr: "Overmind",
+        fileName: "add-overmind.png"
+    }),
+    createClassImage({
         characterId: "add",
         character: "Add",
         pathName: "Affect Tracer",
+        pathNameFr: "Overmind",
         jobStage: "master",
         className: "Overmind",
-        fileName: "add-overmind-master.png",
-        localPath: "/images/classes/add-overmind-master.png",
-        alt: "Add en spécialisation Overmind",
-        dimensions: ""
-    }
-]
+        classNameFr: "Overmind",
+        fileName: "add-overmind-master.png"
+    })
+];
