@@ -57,9 +57,10 @@
     margin: 1.4rem 0 0;
     font-size: clamp(3.4rem, 7vw, 6.6rem);
     line-height: 0.92;
-    letter-spacing: -0.08em;
+    letter-spacing: -0.003em;
 }
 .hero-content h1 span {
+    padding-right: 0.08rem;
     color: transparent;
     background: linear-gradient(135deg, #cabeff, #00dbe9);
     background-clip: text;
