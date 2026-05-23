@@ -91,16 +91,16 @@ export const masterSymbols = {
     },
 
     noah: {
-        name: "Ebalon",
-        nameFr: "Ebalon",
-        image: "/images/master/ebalon-logo.png",
-        alt: "Logo de Classe de Maître Ebalon",
+        name: "Hernia",
+        nameFr: "Harnie",
+        image: "/images/master/harnie-logo.png",
+        alt: "Logo de Classe de Maître Harnie",
     },
 
     lithia: {
-        name: "Beryl",
-        nameFr: "Beryl",
-        image: "/images/master/beryl-logo.png",
-        alt: "Logo de Classe de Maître Beryl",
+        name: "Gaia",
+        nameFr: "Gajar",
+        image: "/images/master/gajar-logo.png",
+        alt: "Logo de Classe de Maître Gajar"
     },
 };
