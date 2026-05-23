@@ -380,22 +380,6 @@
         grid-template-columns: 1fr;
     }
 }
-/*Accueil — Personnages populaires*/
-.home-character-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-}
-@media (max-width: 1150px) {
-    .home-character-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 680px) {
-    .home-character-grid {
-        grid-template-columns: 1fr;
-    }
-}
 /*Accueil — Builds recommandés*/
 .home-build-grid {
     display: grid;
@@ -417,4 +401,162 @@
 .hero-premium {
     min-height: auto !important;
     padding-top: 2.2rem !important;
+}
+/*Accueil — Personnages populaires*/
+.popular-characters-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.popular-character-grid {
+    gap: 1.25rem;
+}
+
+.popular-character-grid .character-card.compact {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 30rem;
+    border-radius: 1.7rem;
+    background:
+            radial-gradient(circle at 50% 14%, rgba(255, 255, 255, 0.08), transparent 34%),
+            linear-gradient(180deg, rgba(20, 26, 52, 0.96), rgba(7, 12, 38, 0.98));
+    transform: translateY(0);
+    transition:
+            transform 0.28s ease,
+            box-shadow 0.28s ease,
+            border-color 0.28s ease;
+}
+
+.popular-character-grid .character-card.compact::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    z-index: -2;
+    border-radius: inherit;
+    background: conic-gradient(
+            from 0deg,
+            transparent 0%,
+            transparent 24%,
+            currentColor 48%,
+            transparent 72%,
+            transparent 100%
+    );
+    opacity: 0;
+    animation: popularCharacterBorderRotate 5.2s linear infinite;
+    transition: opacity 0.25s ease;
+}
+
+.popular-character-grid .character-card.compact::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    z-index: -1;
+    border-radius: calc(1.7rem - 1px);
+    background:
+            radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.06), transparent 38%),
+            linear-gradient(180deg, rgba(20, 26, 52, 0.98), rgba(7, 12, 38, 0.98));
+}
+
+.popular-character-grid .character-card.compact:hover {
+    transform: translateY(-10px) scale(1.015);
+}
+
+.popular-character-grid .character-card.compact:hover::before {
+    opacity: 0.9;
+}
+
+.popular-character-grid .character-card.compact .character-card-visual {
+    position: relative;
+    z-index: 2;
+    height: 17rem;
+    display: grid;
+    place-items: end center;
+    margin-bottom: 1rem;
+}
+
+.popular-character-grid .character-card.compact .character-card-visual::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 999px;
+    background: currentColor;
+    opacity: 0.14;
+    filter: blur(30px);
+    transform: translate(-50%, -50%);
+    animation: popularCharacterAuraPulse 3.8s ease-in-out infinite;
+}
+
+.popular-character-grid .character-card.compact .character-card-image {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    transition:
+            transform 0.28s ease,
+            filter 0.28s ease;
+}
+
+.popular-character-grid .character-card.compact:hover .character-card-image {
+    transform: translateY(-8px) scale(1.045);
+}
+
+.popular-character-grid .character-card.compact .character-card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.popular-character-grid .character-card.compact .character-role {
+    border: 1px solid currentColor;
+}
+
+.popular-character-grid .character-card.compact .character-card-link {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition:
+            transform 0.22s ease,
+            box-shadow 0.22s ease,
+            filter 0.22s ease;
+}
+
+.popular-character-grid .character-card.compact .character-card-link:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+    box-shadow:
+            0 0 20px rgba(255, 255, 255, 0.1),
+            0 0 24px currentColor;
+}
+
+@keyframes popularCharacterBorderRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes popularCharacterAuraPulse {
+    0%, 100% {
+        opacity: 0.12;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 0.24;
+        transform: translate(-50%, -50%) scale(1.12);
+    }
+}
+
+@media (max-width: 680px) {
+    .popular-character-grid .character-card.compact {
+        min-height: auto;
+    }
+
+    .popular-character-grid .character-card.compact .character-card-visual {
+        height: 14rem;
+    }
 }

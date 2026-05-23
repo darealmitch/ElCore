@@ -24,7 +24,8 @@ function HeroSection() {
                             Le cœur <br /><span>stratégique</span> <br />d’Elsword
                         </h1>
                             <p>
-                                Fiches personnages, builds optimisés, tier-lists, guides PvE/PvP et compositions d’équipe pour progresser plus vite.
+                                Optimisez votre gameplay avec nos guides détaillés,
+                                nos builds optimisés par les meilleurs joueurs et nos tier-lists actualisées à chaque patch.
                             </p>
                         <div className="hero-actions">
                             <a href="/personnages" className="hero-button primary">
