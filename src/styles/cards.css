@@ -1,72 +1,61 @@
-/*Cartes personnages */
+/* Cartes personnages */
 .character-card {
     position: relative;
     isolation: isolate;
     display: flex;
     flex-direction: column;
-    min-height: 30rem;
+    min-height: 29rem;
     overflow: hidden;
     padding: 1rem;
     border: 1px solid;
     border-radius: 1.55rem;
     background:
-            radial-gradient(circle at 50% 8%, rgba(255, 255, 255, 0.055), transparent 32%),
+            radial-gradient(circle at 50% 8%, rgba(255, 255, 255, 0.045), transparent 32%),
             linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.96));
     transition:
-            transform 0.28s ease,
-            border-color 0.28s ease,
-            box-shadow 0.28s ease,
-            background 0.28s ease;
+            transform 0.25s ease,
+            border-color 0.25s ease,
+            box-shadow 0.25s ease,
+            background 0.25s ease;
 }
+
 .character-card::before {
     content: "";
     position: absolute;
-    inset: -2px;
-    z-index: -2;
-    border-radius: inherit;
-    background: conic-gradient(
-            from 0deg,
-            transparent 0%,
-            transparent 28%,
-            currentColor 50%,
-            transparent 72%,
-            transparent 100%
-    );
+    inset: 0;
+    z-index: 0;
+    background:
+            radial-gradient(circle at 50% 18%, currentColor, transparent 34%);
     opacity: 0;
-    animation: characterCardBorderRotate 5.2s linear infinite;
+    pointer-events: none;
     transition: opacity 0.25s ease;
 }
+
 .character-card::after {
     content: "";
     position: absolute;
     inset: 1px;
-    z-index: -1;
-    border-radius: calc(1.55rem - 1px);
-    background:
-            radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.05), transparent 34%),
-            linear-gradient(180deg, rgba(15, 23, 42, 0.97), rgba(2, 6, 23, 0.98));
-}
-.character-card:hover {
-    transform: translateY(-7px) scale(1.01);
-}
-.character-card:hover::before {
-    opacity: 0.65;
-}
-.character-card-aura {
-    position: absolute;
-    left: 50%;
-    top: 22%;
     z-index: 0;
-    width: 13rem;
-    height: 13rem;
-    border-radius: 999px;
-    background: currentColor;
-    opacity: 0.11;
-    filter: blur(32px);
-    transform: translate(-50%, -50%);
+    border-radius: calc(1.55rem - 1px);
+    border: 1px solid rgba(255, 255, 255, 0.035);
     pointer-events: none;
-    animation: characterCardAuraPulse 4s ease-in-out infinite;
 }
+
+.character-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+            0 18px 42px rgba(0, 0, 0, 0.34),
+            0 0 20px color-mix(in srgb, currentColor 24%, transparent);
+}
+
+.character-card:hover::before {
+    opacity: 0.08;
+}
+
+.character-card-aura {
+    display: none;
+}
+
 .character-card-visual {
     position: relative;
     z-index: 2;
@@ -76,6 +65,7 @@
     height: 12.5rem;
     margin-bottom: 0.9rem;
 }
+
 .character-card-image {
     position: relative;
     z-index: 2;
@@ -83,16 +73,19 @@
     height: 100%;
     object-fit: contain;
     object-position: center bottom;
-    filter:
-            drop-shadow(0 16px 22px rgba(0, 0, 0, 0.5))
-            drop-shadow(0 0 15px currentColor);
+    filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.5));
     transition:
-            transform 0.28s ease,
-            filter 0.28s ease;
+            transform 0.25s ease,
+            filter 0.25s ease;
 }
+
 .character-card:hover .character-card-image {
-    transform: translateY(-6px) scale(1.035);
+    transform: translateY(-5px) scale(1.025);
+    filter:
+            drop-shadow(0 16px 22px rgba(0, 0, 0, 0.52))
+            drop-shadow(0 0 12px color-mix(in srgb, currentColor 24%, transparent));
 }
+
 .character-card-content {
     position: relative;
     z-index: 2;
@@ -100,43 +93,51 @@
     flex: 1;
     flex-direction: column;
 }
+
 .character-card-heading {
     display: grid;
     gap: 0.32rem;
 }
+
 .character-role {
     width: fit-content;
     padding: 0.32rem 0.68rem;
     border: 1px solid currentColor;
     border-radius: 999px;
+    background: rgba(255, 255, 255, 0.045) !important;
     font-size: 0.72rem;
     font-weight: 900;
 }
+
 .character-card h2 {
     margin: 0.5rem 0 0;
-    font-size: 1.55rem;
+    font-size: 1.5rem;
     line-height: 1.05;
 }
+
 .character-full-name {
     color: var(--text-muted);
     font-size: 0.76rem;
     font-weight: 800;
 }
+
 .character-card p {
     display: -webkit-box;
     margin: 0.8rem 0 0;
+    overflow: hidden;
     color: var(--text-muted);
     line-height: 1.55;
-    overflow: hidden;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
+
 .character-info {
     display: flex;
     flex-wrap: wrap;
     gap: 0.45rem;
     margin-top: 0.9rem;
 }
+
 .character-info span {
     padding: 0.32rem 0.58rem;
     border-radius: 999px;
@@ -145,6 +146,7 @@
     font-size: 0.72rem;
     font-weight: 800;
 }
+
 .character-featured-block {
     margin-top: 0.9rem;
     padding: 0.75rem;
@@ -152,6 +154,7 @@
     border-radius: 0.9rem;
     background: rgba(2, 6, 23, 0.28);
 }
+
 .character-featured-block span {
     display: block;
     color: var(--text-muted);
@@ -160,18 +163,28 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
+
 .character-featured-block strong {
     display: block;
     margin-top: 0.3rem;
     color: #fff;
     font-size: 0.95rem;
 }
+
+.character-international-name {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
 .character-featured-class {
     display: block;
     margin-top: 1rem;
     color: #fff;
     font-weight: 900;
 }
+
 .class-list {
     display: flex;
     flex-wrap: wrap;
@@ -179,6 +192,7 @@
     margin-top: 0.9rem;
     margin-bottom: 1.1rem;
 }
+
 .class-badge {
     padding: 0.28rem 0.5rem;
     border: 1px solid;
@@ -187,6 +201,7 @@
     font-size: 0.7rem;
     font-weight: 800;
 }
+
 .character-card-link {
     display: inline-flex;
     align-items: center;
@@ -203,45 +218,78 @@
             filter 0.22s ease,
             box-shadow 0.22s ease;
 }
+
 .character-card-link:hover {
     transform: translateY(-2px);
-    filter: brightness(1.08);
-    box-shadow:
-            0 0 18px rgba(255, 255, 255, 0.12),
-            0 0 24px currentColor;
+    filter: brightness(1.06);
+    box-shadow: 0 0 18px color-mix(in srgb, currentColor 26%, transparent);
 }
-/*Cartes personnages compactes — accueil */
+
+/* Cartes personnages compactes — accueil */
 .character-card.compact {
     min-height: 27rem;
 }
+
 .character-card.compact .character-card-visual {
     height: 10.8rem;
 }
+
 .character-card.compact h2 {
     font-size: 1.35rem;
 }
+
 .character-card.compact .character-featured-block {
     display: none;
 }
+
 .character-card.compact .character-card-link {
     width: 100%;
 }
-@keyframes characterCardBorderRotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
+
+/* Page personnages */
+.characters-page-grid,
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+    align-items: stretch;
+}
+
+.characters-page-grid .character-card,
+.characters-grid .character-card {
+    min-height: 29rem;
+}
+
+.characters-page-grid .character-card-link,
+.characters-grid .character-card-link {
+    width: fit-content;
+    min-width: 11rem;
+}
+
+/* Section accueil — cartes compactes */
+.popular-character-grid .character-card.compact {
+    min-height: 27rem;
+}
+
+.popular-character-grid .character-card.compact .character-card-visual {
+    height: 11rem;
+}
+
+.popular-character-grid .character-card.compact .character-card-link {
+    width: 100%;
+}
+
+@media (max-width: 1180px) {
+    .characters-page-grid,
+    .characters-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
-@keyframes characterCardAuraPulse {
-    0%, 100% {
-        opacity: 0.1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-        opacity: 0.19;
-        transform: translate(-50%, -50%) scale(1.12);
+
+@media (max-width: 720px) {
+    .characters-page-grid,
+    .characters-grid {
+        grid-template-columns: 1fr;
     }
 }
 /*Cartes builds*/
@@ -413,39 +461,6 @@
         grid-template-columns: 1fr;
     }
 }
-/* Correctif cartes personnages — page personnages */
-.characters-page-grid,
-.characters-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.4rem;
-    align-items: stretch;
-}
-
-.characters-page-grid .character-card,
-.characters-grid .character-card {
-    min-height: 29rem;
-}
-
-.characters-page-grid .character-card-visual,
-.characters-grid .character-card-visual {
-    height: 12.5rem;
-}
-
-.characters-page-grid .character-card-link,
-.characters-grid .character-card-link {
-    width: fit-content;
-    min-width: 11rem;
-}
-
-.characters-page-grid .character-card p,
-.characters-grid .character-card p {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
 /* Section accueil — cartes compactes */
 .popular-character-grid .character-card.compact {
     min-height: 27rem;
