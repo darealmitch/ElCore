@@ -4,7 +4,7 @@ import { builds } from "../data/builds";
 import { classImages } from "../data/classImages";
 import { characterThemes } from "../data/characterThemes";
 import { masterSymbols } from "../data/masterSymbols";
-import { toClassSlug } from "../utils/classRoutes";
+import { toClassSlug, getClassUrl } from "../utils/classRoutes";
 import { classLore } from "../data/classLore";
 
 const stageLabels = {
@@ -22,7 +22,6 @@ function getMasterLogo(classItem) {
 
 function ClassDetailPage() {
     const { characterId, classId, stage } = useParams();
-
     const classItem = classImages.find((item) => {
         const sameCharacter = item.characterId === characterId;
         const sameClass = toClassSlug(item.className) === classId;
@@ -51,36 +50,41 @@ function ClassDetailPage() {
             </main>
         );
     }
-
     const theme = characterThemes[classItem.characterId];
     const masterLogo = getMasterLogo(classItem);
-
     const relatedBuilds = builds.filter(
         (build) =>
             build.characterId === classItem.characterId &&
             build.className === classItem.className
     );
-
     const lore = classLore.find(
         (item) =>
             item.characterId === classItem.characterId &&
             item.className === classItem.className &&
             item.jobStage === classItem.jobStage
     );
+    const sameStageClasses = classImages.filter(
+        (item) => item.jobStage === classItem.jobStage
+    );
+    const currentClassIndex = sameStageClasses.findIndex(
+        (item) =>
+            item.characterId === classItem.characterId &&
+            item.className === classItem.className &&
+            item.jobStage === classItem.jobStage
+    );
+    const previousClass =
+        currentClassIndex > 0 ? sameStageClasses[currentClassIndex - 1] : null;
+    const nextClass =
+        currentClassIndex < sameStageClasses.length - 1
+            ? sameStageClasses[currentClassIndex + 1]
+            : null;
 
     return (
         <main className="page">
-            <section
-                className="class-detail-hero"
-                style={{
-                    borderColor: theme.primary,
-                    boxShadow: `0 0 38px ${theme.glow}`,
-                }}
-            >
+            <section className="class-detail-hero" style={{borderColor: theme.primary, boxShadow: `0 0 38px ${theme.glow}`,}}>
                 <Link className="back-link class-detail-back-link" to="/classes">
                     ← Retour aux classes
                 </Link>
-
                 <div className="class-detail-content">
                         <span className="class-stage-label class-detail-stage-label" style={{backgroundColor: theme.glow, color: theme.primary,}}>
                             {stageLabels[classItem.jobStage] || classItem.jobStage}
@@ -111,6 +115,38 @@ function ClassDetailPage() {
                 </div>
             </section>
             <section className="detail-grid class-detail-layout">
+                <section className="class-detail-navigation">
+                    {previousClass ? (
+                        <Link className="class-nav-card" to={getClassUrl(previousClass)} style={{borderColor: theme.primary,}}>
+                            <span>Classe précédente</span>
+                            <strong>{previousClass.classNameFr || previousClass.className}</strong>
+                            <small>
+                                {previousClass.character} — {previousClass.pathNameFr || previousClass.pathName}
+                            </small>
+                        </Link>
+                    ) : (
+                        <div className="class-nav-card disabled">
+                            <span>Classe précédente</span>
+                            <strong>Début du catalogue</strong>
+                            <small>Aucune classe avant celle-ci</small>
+                        </div>
+                    )}
+                    {nextClass ? (
+                        <Link className="class-nav-card" to={getClassUrl(nextClass)} style={{borderColor: theme.primary,}}>
+                            <span>Classe suivante</span>
+                            <strong>{nextClass.classNameFr || nextClass.className}</strong>
+                            <small>
+                                {nextClass.character} — {nextClass.pathNameFr || nextClass.pathName}
+                            </small>
+                        </Link>
+                    ) : (
+                        <div className="class-nav-card disabled">
+                            <span>Classe suivante</span>
+                            <strong>Fin du catalogue</strong>
+                            <small>Aucune classe après celle-ci</small>
+                        </div>
+                    )}
+                </section>
                 <article className="detail-card identity-card">
                     <h2>Identité</h2>
                     <div className="detail-stats">

@@ -553,6 +553,70 @@
         font-size: 0.95rem;
     }
 }
+.class-detail-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.class-nav-card {
+    display: grid;
+    gap: 0.25rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid;
+    border-radius: 1.2rem;
+    background: rgba(15, 23, 42, 0.72);
+    text-decoration: none;
+    transition:
+            transform 0.22s ease,
+            background 0.22s ease,
+            box-shadow 0.22s ease;
+}
+.class-nav-card.disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    border-color: var(--border-soft) !important;
+}
+.class-nav-card.disabled:hover {
+    transform: none;
+    background: rgba(15, 23, 42, 0.72);
+    box-shadow: none;
+}
+.class-nav-card:hover {
+    transform: translateY(-3px);
+    background: rgba(15, 23, 42, 0.9);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.06);
+}
+.class-nav-card span {
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.class-nav-card strong {
+    color: #fff;
+    font-size: 1.1rem;
+}
+.class-nav-card small {
+    color: var(--text-soft);
+    font-weight: 800;
+}
+.class-nav-card:first-child {
+    text-align: left;
+}
+.class-nav-card:last-child {
+    text-align: right;
+}
+@media (max-width: 680px) {
+    .class-detail-navigation {
+        grid-template-columns: 1fr;
+    }
+
+    .class-nav-card:last-child {
+        text-align: left;
+    }
+}
 /*Builds liés*/
 .related-builds-grid {
     display: grid;
