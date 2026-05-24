@@ -18,13 +18,22 @@ function getMasterLogo(classItem) {
 
     return masterSymbols[classItem.characterId] || null;
 }
+
 function ClassesPage() {
     const [activeCharacter, setActiveCharacter] = useState("all");
-    const filteredClasses = useMemo(() => {
-        if (activeCharacter === "all") return classImages;
+    const [activeStage, setActiveStage] = useState("all");
 
-        return classImages.filter((item) => item.characterId === activeCharacter);
-    }, [activeCharacter]);
+    const filteredClasses = useMemo(() => {
+        return classImages.filter((item) => {
+            const matchesCharacter =
+                activeCharacter === "all" || item.characterId === activeCharacter;
+
+            const matchesStage =
+                activeStage === "all" || item.jobStage === activeStage;
+
+            return matchesCharacter && matchesStage;
+        });
+    }, [activeCharacter, activeStage]);
 
     return (
         <main className="page">
@@ -36,43 +45,109 @@ function ClassesPage() {
                     déjà ajoutés à ElCore.
                 </p>
             </section>
-            <section className="filter-bar">
-                <button className={activeCharacter === "all" ? "filter-button active" : "filter-button"} onClick={() => setActiveCharacter("all")}>
-                    Tous
-                </button>
-                {characters.map((character) => (
-                    <button key={character.id} className={activeCharacter === character.id ? "filter-button active" : "filter-button"} onClick={() => setActiveCharacter(character.id)}>
-                        {character.name}
-                    </button>
-                ))}
+
+            <section className="classes-controls">
+                <div className="classes-filter-group">
+                    <span className="classes-filter-label">Personnage</span>
+
+                    <div className="classes-character-strip" aria-label="Filtrer par personnage">
+                        <button
+                            className={activeCharacter === "all" ? "filter-chip active" : "filter-chip"}
+                            onClick={() => setActiveCharacter("all")}
+                        >
+                            Tous
+                        </button>
+
+                        {characters.map((character) => (
+                            <button
+                                key={character.id}
+                                className={activeCharacter === character.id ? "filter-chip active" : "filter-chip"}
+                                onClick={() => setActiveCharacter(character.id)}
+                            >
+                                {character.name}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="classes-filter-group">
+                    <span className="classes-filter-label">Étape</span>
+
+                    <div className="classes-stage-tabs" aria-label="Filtrer par étape">
+                        <button
+                            className={activeStage === "all" ? "stage-tab active" : "stage-tab"}
+                            onClick={() => setActiveStage("all")}
+                        >
+                            Toutes
+                        </button>
+
+                        {Object.entries(stageLabels).map(([stage, label]) => (
+                            <button
+                                key={stage}
+                                className={activeStage === stage ? "stage-tab active" : "stage-tab"}
+                                onClick={() => setActiveStage(stage)}
+                            >
+                                {label}
+                            </button>
+                        ))}
+                    </div>
+                </div>
             </section>
+
             <section className="classes-grid">
                 {filteredClasses.map((classItem) => {
                     const theme = characterThemes[classItem.characterId];
                     const masterLogo = getMasterLogo(classItem);
 
                     return (
-                        <Link to={getClassUrl(classItem)} className={classItem.jobStage === "master" ? "class-card master-stage" : "class-card"} key={`${classItem.characterId}-${classItem.pathName}-${classItem.jobStage}`} style={{borderColor: theme.primary,}}>
+                        <Link
+                            to={getClassUrl(classItem)}
+                            className={classItem.jobStage === "master" ? "class-card master-stage" : "class-card"}
+                            key={`${classItem.characterId}-${classItem.pathName}-${classItem.jobStage}`}
+                            style={{
+                                borderColor: theme.primary,
+                            }}
+                        >
                             <div className="class-card-image-wrap">
                                 {masterLogo && (
-                                    <img className="master-class-logo" src={masterLogo.image} alt={masterLogo.alt}/>
+                                    <img
+                                        className="master-class-logo"
+                                        src={masterLogo.image}
+                                        alt={masterLogo.alt}
+                                    />
                                 )}
-                                <img className="class-card-image" src={classItem.localPath} alt={classItem.alt}/>
+
+                                <img
+                                    className="class-card-image"
+                                    src={classItem.localPath}
+                                    alt={classItem.alt}
+                                />
                             </div>
+
                             <div className="class-card-content">
-                                <span className="class-stage-label" style={{backgroundColor: theme.glow, color: theme.primary,}}>
+                                <span
+                                    className="class-stage-label"
+                                    style={{
+                                        backgroundColor: theme.glow,
+                                        color: theme.primary,
+                                    }}
+                                >
                                     {stageLabels[classItem.jobStage] || classItem.jobStage}
                                 </span>
+
                                 <h2 style={{ color: theme.primary }}>
                                     {classItem.classNameFr || classItem.className}
                                 </h2>
+
                                 <p className="class-card-path">
                                     <strong>{classItem.character}</strong>
                                     <span>{classItem.pathNameFr || classItem.pathName}</span>
                                 </p>
+
                                 <small className="class-card-international-name">
                                     International : {classItem.className}
                                 </small>
+
                                 {masterLogo && (
                                     <small className="master-symbol-name">
                                         Symbole : {masterLogo.nameFr || masterLogo.name}

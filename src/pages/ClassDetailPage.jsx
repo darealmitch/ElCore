@@ -204,7 +204,7 @@ function ClassDetailPage() {
                     </article>
                 )}
                 <article className="detail-card wide builds-card">
-                    <h2>Builds liés</h2>
+                    <h2>Builds liés à cette classe</h2>
                     {relatedBuilds.length > 0 ? (
                         <div className="related-builds-grid">
                             {relatedBuilds.map((build) => (
@@ -212,7 +212,7 @@ function ClassDetailPage() {
                             ))}
                         </div>
                     ) : (
-                        <p>Aucun build n’a encore été ajouté pour cette spécialisation.</p>
+                        <p>Aucun build n’a encore été ajouté pour cette classe.</p>
                     )}
                 </article>
                 <article className="detail-card wide skills-card">
