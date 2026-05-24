@@ -60,6 +60,7 @@ function ClassDetailPage() {
             build.characterId === classItem.characterId &&
             build.className === classItem.className
     );
+
     const lore = classLore.find(
         (item) =>
             item.characterId === classItem.characterId &&
@@ -76,13 +77,14 @@ function ClassDetailPage() {
                     boxShadow: `0 0 38px ${theme.glow}`,
                 }}
             >
+                <Link className="back-link class-detail-back-link" to="/classes">
+                    ← Retour aux classes
+                </Link>
+
                 <div className="class-detail-content">
-                    <Link className="back-link" to="/classes">
-                        ← Retour aux classes
-                    </Link>
-                    <span className="class-stage-label" style={{backgroundColor: theme.glow, color: theme.primary,}}>
-                        {stageLabels[classItem.jobStage] || classItem.jobStage}
-                    </span>
+                        <span className="class-stage-label class-detail-stage-label" style={{backgroundColor: theme.glow, color: theme.primary,}}>
+                            {stageLabels[classItem.jobStage] || classItem.jobStage}
+                        </span>
                     <h1 style={{ color: theme.primary }}>
                         {classItem.classNameFr || classItem.className}
                     </h1>
@@ -99,14 +101,17 @@ function ClassDetailPage() {
                 </div>
                 <div className="class-detail-visual">
                     {masterLogo && (
-                        <img className="master-class-logo large" src={masterLogo.image} alt={masterLogo.alt}/>
+                        <img
+                            className="master-class-logo large"
+                            src={masterLogo.image}
+                            alt={masterLogo.alt}
+                        />
                     )}
                     <img className="class-detail-image" src={classItem.localPath} alt={classItem.alt}/>
                 </div>
             </section>
-
-            <section className="detail-grid">
-                <article className="detail-card">
+            <section className="detail-grid class-detail-layout">
+                <article className="detail-card identity-card">
                     <h2>Identité</h2>
                     <div className="detail-stats">
                         <div>
@@ -125,35 +130,41 @@ function ClassDetailPage() {
                             <span>Classe</span>
                             <strong>{classItem.classNameFr || classItem.className}</strong>
                         </div>
-                        {lore && (
-                            <article className="detail-card wide">
-                                <h2>{lore.title}</h2>
-                                <div className="class-lore-path">
-                                    <span>{lore.fromClassFr || lore.fromClass}</span>
-                                    <span>→</span>
-                                    <span>{lore.toClassFr || lore.toClass}</span>
-                                </div>
-                                {lore.quote && (
-                                    <blockquote className="class-quote">
-                                        “{lore.quote}”
-                                    </blockquote>
-                                )}
-                                <p>{lore.text}</p>
-                                {lore.themes?.length > 0 && (
-                                    <div className="class-lore-tags">
-                                        {lore.themes.map((theme) => (
-                                            <span key={theme}>{theme}</span>
-                                        ))}
-                                    </div>
-                                )}
-                            </article>
-                        )}
                     </div>
                 </article>
-
-                <article className="detail-card wide">
+                <article className="detail-card progression-card">
+                    <h2>Progression</h2>
+                    <p>
+                        Cette fiche appartient au chemin{" "}
+                        <strong>{classItem.pathNameFr || classItem.pathName}</strong>.
+                        Elle sera utilisée pour afficher l’évolution complète du personnage.
+                    </p>
+                </article>
+                {lore && (
+                    <article className="detail-card wide lore-card">
+                        <h2>{lore.title}</h2>
+                        <div className="class-lore-path">
+                            <span>{lore.fromClassFr || lore.fromClass}</span>
+                            <span>→</span>
+                            <span>{lore.toClassFr || lore.toClass}</span>
+                        </div>
+                        {lore.quote && (
+                            <blockquote className="class-quote">
+                                “{lore.quote}”
+                            </blockquote>
+                        )}
+                        <p>{lore.text}</p>
+                        {lore.themes?.length > 0 && (
+                            <div className="class-lore-tags">
+                                {lore.themes.map((theme) => (
+                                    <span key={theme}>{theme}</span>
+                                ))}
+                            </div>
+                        )}
+                    </article>
+                )}
+                <article className="detail-card wide builds-card">
                     <h2>Builds liés</h2>
-
                     {relatedBuilds.length > 0 ? (
                         <div className="related-builds-grid">
                             {relatedBuilds.map((build) => (
@@ -164,19 +175,9 @@ function ClassDetailPage() {
                         <p>Aucun build n’a encore été ajouté pour cette spécialisation.</p>
                     )}
                 </article>
-
-                <article className="detail-card">
+                <article className="detail-card wide skills-card">
                     <h2>Compétences</h2>
                     <p>Les compétences principales seront ajoutées quand les données seront prêtes.</p>
-                </article>
-
-                <article className="detail-card">
-                    <h2>Progression</h2>
-                    <p>
-                        Cette fiche appartient au chemin{" "}
-                        <strong>{classItem.pathNameFr || classItem.pathName}</strong>.
-                        Elle sera utilisée pour afficher l’évolution complète du personnage.
-                    </p>
                 </article>
             </section>
         </main>
