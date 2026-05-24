@@ -63,20 +63,17 @@ function ClassDetailPage() {
             item.className === classItem.className &&
             item.jobStage === classItem.jobStage
     );
-    const sameStageClasses = classImages.filter(
-        (item) => item.jobStage === classItem.jobStage
-    );
-    const currentClassIndex = sameStageClasses.findIndex(
+    const currentClassIndex = classImages.findIndex(
         (item) =>
             item.characterId === classItem.characterId &&
             item.className === classItem.className &&
             item.jobStage === classItem.jobStage
     );
     const previousClass =
-        currentClassIndex > 0 ? sameStageClasses[currentClassIndex - 1] : null;
+        currentClassIndex > 0 ? classImages[currentClassIndex - 1] : null;
     const nextClass =
-        currentClassIndex < sameStageClasses.length - 1
-            ? sameStageClasses[currentClassIndex + 1]
+        currentClassIndex >= 0 && currentClassIndex < classImages.length - 1
+            ? classImages[currentClassIndex + 1]
             : null;
 
     return (
