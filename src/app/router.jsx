@@ -32,8 +32,8 @@ export const router= createBrowserRouter([
                 element: <BuildsPage/>,
             },
             {
-                path: "tiers-list",
-                element: <TierListPage/>,
+                path: "tier-list",
+                element: <TierListPage />,
             },
             {
                 path: "guides",

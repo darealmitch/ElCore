@@ -10,7 +10,7 @@ function PopularCharactersSection() {
     return (
         <section className="home-section popular-characters-section">
             <SectionHeader eyebrow="Personnages populaires" title="Les fiches les plus consultées"/>
-            <div className="home-character-grid">
+            <div className="home-character-grid popular-character-grid">
                 {popularCharacters.map((character) => (
                     <CharacterCard key={character.id} character={character} compact />
                 ))}
