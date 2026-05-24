@@ -105,21 +105,13 @@
 .back-link:hover {
     color: #fff;
 }
-.back-link + span,
-.back-link + .class-badge,
-.back-link + .class-stage-pill,
-.back-link + .class-detail-badge {
+.class-detail-back-link + .class-detail-stage-label {
     display: inline-flex;
     width: fit-content;
-    margin-left: 0;
-    margin-bottom: 0.4rem;
 }
-
-.back-link + span + h1,
-.back-link + .class-badge + h1,
-.back-link + .class-stage-pill + h1,
-.back-link + .class-detail-badge + h1 {
-    margin-top: 0.4rem;
+.class-detail-stage-label + h1,
+.character-detail-role-badge + h1 {
+    margin-top: 0;
 }
 .character-detail-hero h1 {
     margin: 1rem 0 0;
@@ -201,6 +193,26 @@
     background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
     color: white;
     font-weight: 900;
+}
+.character-detail-back-link {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 4.2rem;
+}
+
+.character-detail-role-badge {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 0.75rem;
+}
+.character-detail-back-link + .character-detail-role-badge {
+    display: flex;
+    width: fit-content;
+    margin-left: 0;
+    margin-bottom: 0.75rem;
+}
+.character-detail-content h1 {
+    margin-top: 0;
 }
 @media (max-width: 900px) {
     .character-detail-hero,

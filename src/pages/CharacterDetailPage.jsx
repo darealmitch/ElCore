@@ -30,8 +30,8 @@ function CharacterDetailPage() {
         <main className="page">
             <section className="character-detail-hero" style={{borderColor: theme.primary, boxShadow: `0 0 40px ${theme.glow}`}}>
                 <div className="character-detail-content">
-                    <Link className="back-link" to="/personnages">← Retour aux personnages</Link>
-                    <span className="character-role" style={{backgroundColor: theme.glow, color: theme.primary}}>
+                    <Link className="back-link character-detail-back-link" to="/personnages">← Retour aux personnages</Link>
+                    <span className="character-role character-detail-role-badge" style={{backgroundColor: theme.glow, color: theme.primary}}>
                         {character.role}
                     </span>
                     <h1 style={{ color: theme.primary }}>{character.name}</h1>
@@ -43,6 +43,50 @@ function CharacterDetailPage() {
                 </div>
             </section>
             <section className="detail-section">
+                <section className="detail-grid">
+                    <article className="detail-card">
+                        <h2>Informations</h2>
+                        <div className="detail-stats">
+                            <div>
+                                <span>Âge</span>
+                                <strong>{character.age}</strong>
+                            </div>
+                            <div>
+                                <span>Genre</span>
+                                <strong>{character.gender}</strong>
+                            </div>
+                            <div>
+                                <span>Type</span>
+                                <strong>{character.type}</strong>
+                            </div>
+                            <div>
+                                <span>Arme</span>
+                                <strong>{character.weapon}</strong>
+                            </div>
+                        </div>
+                    </article>
+                    <article className="detail-card">
+                        <h2>Classes disponibles</h2>
+                        <div className="class-list">
+                            {character.classes.map((className) => (
+                                <span key={className} className="class-badge" style={{borderColor: theme.primary, color: theme.primary}}>
+                                {className}
+                            </span>
+                            ))}
+                        </div>
+                    </article>
+                    <article className="detail-card">
+                        <h2>Classe mise en avant</h2>
+                        <p>
+                            <strong>{character.featuredClass}</strong> est actuellement mise en avant sur ElCore pour ce personnage.
+                        </p>
+                    </article>
+                    <article className="detail-card">
+                        <h2>Rôle général</h2>
+                        <p>{character.description}</p>
+                    </article>
+                </section>
+                <br/>
                 <div className="section-header">
                     <span>Classes</span>
                     <h2>Chemins de spécialisation</h2>
@@ -65,49 +109,6 @@ function CharacterDetailPage() {
                         <p>Aucun build n’a encore été ajouté pour ce personnage.</p>
                     </article>
                 )}
-            </section>
-            <section className="detail-grid">
-                <article className="detail-card">
-                    <h2>Informations</h2>
-                    <div className="detail-stats">
-                        <div>
-                            <span>Âge</span>
-                            <strong>{character.age}</strong>
-                        </div>
-                        <div>
-                            <span>Genre</span>
-                            <strong>{character.gender}</strong>
-                        </div>
-                        <div>
-                            <span>Type</span>
-                            <strong>{character.type}</strong>
-                        </div>
-                        <div>
-                            <span>Arme</span>
-                            <strong>{character.weapon}</strong>
-                        </div>
-                    </div>
-                </article>
-                <article className="detail-card">
-                    <h2>Classes disponibles</h2>
-                    <div className="class-list">
-                        {character.classes.map((className) => (
-                            <span key={className} className="class-badge" style={{borderColor: theme.primary, color: theme.primary}}>
-                                {className}
-                            </span>
-                        ))}
-                    </div>
-                </article>
-                <article className="detail-card">
-                    <h2>Classe mise en avant</h2>
-                    <p>
-                        <strong>{character.featuredClass}</strong> est actuellement mise en avant sur ElCore pour ce personnage.
-                    </p>
-                </article>
-                <article className="detail-card">
-                    <h2>Rôle général</h2>
-                    <p>{character.description}</p>
-                </article>
             </section>
         </main>
     );
