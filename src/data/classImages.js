@@ -18,7 +18,7 @@ function createClassImage({
         classNameFr,
         fileName,
         localPath: `/images/classes/${fileName}`,
-        alt: `${character} en spécialisation ${classNameFr}`,
+        alt: `${character} en spécialisation ${classNameFr || className}`,
         dimensions: ""
     };
 }
@@ -27,7 +27,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Sword Knight",
+        pathName: "Knight Emperor",
         pathNameFr: "Chevalier Royal",
         jobStage: "job1",
         className: "Sword Knight",
@@ -37,7 +37,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Sword Knight",
+        pathName: "Knight Emperor",
         pathNameFr: "Chevalier Royal",
         jobStage: "job2",
         className: "Lord Knight",
@@ -47,7 +47,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Sword Knight",
+        pathName: "Knight Emperor",
         pathNameFr: "Chevalier Royal",
         jobStage: "job3",
         className: "Knight Emperor",
@@ -57,7 +57,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Sword Knight",
+        pathName: "Knight Emperor",
         pathNameFr: "Chevalier Royal",
         jobStage: "master",
         className: "Knight Emperor",
@@ -68,7 +68,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Magic Knight",
+        pathName: "Rune Master",
         pathNameFr: "Maître des runes",
         jobStage: "job1",
         className: "Magic Knight",
@@ -78,7 +78,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Magic Knight",
+        pathName: "Rune Master",
         pathNameFr: "Maître des runes",
         jobStage: "job2",
         className: "Rune Knight",
@@ -88,7 +88,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Magic Knight",
+        pathName: "Rune Master",
         pathNameFr: "Maître des runes",
         jobStage: "job3",
         className: "Rune Master",
@@ -98,7 +98,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Magic Knight",
+        pathName: "Rune Master",
         pathNameFr: "Maître des runes",
         jobStage: "master",
         className: "Rune Master",
@@ -109,7 +109,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Sheath Knight",
+        pathName: "Immortal",
         pathNameFr: "Immortel",
         jobStage: "job1",
         className: "Sheath Knight",
@@ -119,7 +119,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Sheath Knight",
+        pathName: "Immortal",
         pathNameFr: "Immortel",
         jobStage: "job2",
         className: "Infinity Sword",
@@ -129,7 +129,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Sheath Knight",
+        pathName: "Immortal",
         pathNameFr: "Immortel",
         jobStage: "job3",
         className: "Immortal",
@@ -139,7 +139,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Sheath Knight",
+        pathName: "Immortal",
         pathNameFr: "Immortel",
         jobStage: "master",
         className: "Immortal",
@@ -150,7 +150,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Root Knight",
+        pathName: "Genesis",
         pathNameFr: "Séphiroth",
         jobStage: "job1",
         className: "Root Knight",
@@ -160,7 +160,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Root Knight",
+        pathName: "Genesis",
         pathNameFr: "Séphiroth",
         jobStage: "job2",
         className: "Sacred Templar",
@@ -170,7 +170,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Root Knight",
+        pathName: "Genesis",
         pathNameFr: "Séphiroth",
         jobStage: "job3",
         className: "Genesis",
@@ -180,7 +180,7 @@ export const classImages = [
     createClassImage({
         characterId: "elsword",
         character: "Elsword",
-        pathName: "Root Knight",
+        pathName: "Genesis",
         pathNameFr: "Séphiroth",
         jobStage: "master",
         className: "Genesis",
@@ -191,7 +191,7 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "High Magician",
+        pathName: "Aether Sage",
         pathNameFr: "Étheriste",
         jobStage: "job1",
         className: "High Magician",
@@ -201,7 +201,7 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "High Magician",
+        pathName: "Aether Sage",
         pathNameFr: "Étheriste",
         jobStage: "job2",
         className: "Elemental Master",
@@ -211,7 +211,7 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "High Magician",
+        pathName: "Aether Sage",
         pathNameFr: "Étheriste",
         jobStage: "job3",
         className: "Aether Sage",
@@ -221,7 +221,7 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "High Magician",
+        pathName: "Aether Sage",
         pathNameFr: "Étheriste",
         jobStage: "master",
         className: "Aether Sage",
@@ -232,7 +232,7 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "Dark Magician",
+        pathName: "Oz Sorcerer",
         pathNameFr: "Magicienne d'Oz",
         jobStage: "job1",
         className: "Dark Magician",
@@ -242,7 +242,7 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "Dark Magician",
+        pathName: "Oz Sorcerer",
         pathNameFr: "Magicienne d'Oz",
         jobStage: "job2",
         className: "Void Princess",
@@ -252,7 +252,7 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "Dark Magician",
+        pathName: "Oz Sorcerer",
         pathNameFr: "Magicienne d'Oz",
         jobStage: "job3",
         className: "Oz Sorcerer",
@@ -262,7 +262,7 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "Dark Magician",
+        pathName: "Oz Sorcerer",
         pathNameFr: "Magicienne d'Oz",
         jobStage: "master",
         className: "Oz Sorcerer",
@@ -273,7 +273,7 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "Battle Magician",
+        pathName: "Metamorphy",
         pathNameFr: "Métamorphia",
         jobStage: "job1",
         className: "Battle Magician",
@@ -283,7 +283,7 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "Battle Magician",
+        pathName: "Metamorphy",
         pathNameFr: "Métamorphia",
         jobStage: "job2",
         className: "Dimension Witch",
@@ -293,7 +293,7 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "Battle Magician",
+        pathName: "Metamorphy",
         pathNameFr: "Métamorphia",
         jobStage: "job3",
         className: "Metamorphy",
@@ -303,7 +303,7 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "Battle Magician",
+        pathName: "Metamorphy",
         pathNameFr: "Métamorphia",
         jobStage: "master",
         className: "Metamorphy",
@@ -314,8 +314,8 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "Wiz Magician",
-        pathNameFr: "Lord Azoth",
+        pathName: "Lord Azoth",
+        pathNameFr: "Druidesse d'Azoth",
         jobStage: "job1",
         className: "Wiz Magician",
         classNameFr: "Wiz Magician",
@@ -324,8 +324,8 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "Wiz Magician",
-        pathNameFr: "Lord Azoth",
+        pathName: "Lord Azoth",
+        pathNameFr: "Druidesse d'Azoth",
         jobStage: "job2",
         className: "Mystic Alchemist",
         classNameFr: "Mystic Alchemist",
@@ -334,26 +334,28 @@ export const classImages = [
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "Wiz Magician",
-        pathNameFr: "Lord Azoth",
+        pathName: "Lord Azoth",
+        pathNameFr: "Druidesse d'Azoth",
         jobStage: "job3",
-        className: "Lord Azoth", classNameFr: "Druidesse d'Azoth",
+        className: "Lord Azoth",
+        classNameFr: "Druidesse d'Azoth",
         fileName: "aisha-lord-azoth.png"
     }),
     createClassImage({
         characterId: "aisha",
         character: "Aisha",
-        pathName: "Wiz Magician",
-        pathNameFr: "Lord Azoth",
+        pathName: "Lord Azoth",
+        pathNameFr: "Druidesse d'Azoth",
         jobStage: "master",
-        className: "Lord Azoth", classNameFr: "Druidesse d'Azoth",
+        className: "Lord Azoth",
+        classNameFr: "Druidesse d'Azoth",
         fileName: "aisha-lord-azoth-master.png"
     }),
 
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Combat Ranger",
+        pathName: "Anemos",
         pathNameFr: "Anemos",
         jobStage: "job1",
         className: "Combat Ranger",
@@ -363,7 +365,7 @@ export const classImages = [
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Combat Ranger",
+        pathName: "Anemos",
         pathNameFr: "Anemos",
         jobStage: "job2",
         className: "Wind Sneaker",
@@ -373,7 +375,7 @@ export const classImages = [
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Combat Ranger",
+        pathName: "Anemos",
         pathNameFr: "Anemos",
         jobStage: "job3",
         className: "Anemos",
@@ -383,7 +385,7 @@ export const classImages = [
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Combat Ranger",
+        pathName: "Anemos",
         pathNameFr: "Anemos",
         jobStage: "master",
         className: "Anemos",
@@ -394,7 +396,7 @@ export const classImages = [
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Sniping Ranger",
+        pathName: "Daybreaker",
         pathNameFr: "Aube",
         jobStage: "job1",
         className: "Sniping Ranger",
@@ -404,7 +406,7 @@ export const classImages = [
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Sniping Ranger",
+        pathName: "Daybreaker",
         pathNameFr: "Aube",
         jobStage: "job2",
         className: "Grand Archer",
@@ -414,7 +416,7 @@ export const classImages = [
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Sniping Ranger",
+        pathName: "Daybreaker",
         pathNameFr: "Aube",
         jobStage: "job3",
         className: "Daybreaker",
@@ -424,7 +426,7 @@ export const classImages = [
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Sniping Ranger",
+        pathName: "Daybreaker",
         pathNameFr: "Aube",
         jobStage: "master",
         className: "Daybreaker",
@@ -435,7 +437,7 @@ export const classImages = [
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Trapping Ranger",
+        pathName: "Twilight",
         pathNameFr: "Crépuscule",
         jobStage: "job1",
         className: "Trapping Ranger",
@@ -445,7 +447,7 @@ export const classImages = [
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Trapping Ranger",
+        pathName: "Twilight",
         pathNameFr: "Crépuscule",
         jobStage: "job2",
         className: "Night Watcher",
@@ -455,7 +457,7 @@ export const classImages = [
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Trapping Ranger",
+        pathName: "Twilight",
         pathNameFr: "Crépuscule",
         jobStage: "job3",
         className: "Twilight",
@@ -465,7 +467,7 @@ export const classImages = [
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Trapping Ranger",
+        pathName: "Twilight",
         pathNameFr: "Crépuscule",
         jobStage: "master",
         className: "Twilight",
@@ -476,45 +478,48 @@ export const classImages = [
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Poetic Ranger",
-        pathNameFr: "Prophetess",
+        pathName: "Prophetess",
+        pathNameFr: "Prophétesse",
         jobStage: "job1",
-        className: "Poetic Ranger", classNameFr: "Poétesse archère",
+        className: "Poetic Ranger",
+        classNameFr: "Poétesse archère",
         fileName: "rena-poetic-ranger.png"
     }),
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Poetic Ranger",
-        pathNameFr: "Prophetess",
+        pathName: "Prophetess",
+        pathNameFr: "Prophétesse",
         jobStage: "job2",
-        className: "Tale Spinner", classNameFr: "Tisseuse d'histoires",
+        className: "Tale Spinner",
+        classNameFr: "Tisseuse d'histoires",
         fileName: "rena-tale-spinner.png"
     }),
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Poetic Ranger",
-        pathNameFr: "Prophetess",
+        pathName: "Prophetess",
+        pathNameFr: "Prophétesse",
         jobStage: "job3",
-        className: "Prophetess", classNameFr: "Prophétesse",
+        className: "Prophetess",
+        classNameFr: "Prophétesse",
         fileName: "rena-prophetess.png"
     }),
     createClassImage({
         characterId: "rena",
         character: "Rena",
-        pathName: "Poetic Ranger",
-        pathNameFr: "Prophetess",
+        pathName: "Prophetess",
+        pathNameFr: "Prophétesse",
         jobStage: "master",
         className: "Prophetess",
-        classNameFr: "Prophetess",
+        classNameFr: "Prophétesse",
         fileName: "rena-prophetess-master.png"
     }),
 
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Sword Taker",
+        pathName: "Furious Blade",
         pathNameFr: "Lame furieuse",
         jobStage: "job1",
         className: "Sword Taker",
@@ -524,7 +529,7 @@ export const classImages = [
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Sword Taker",
+        pathName: "Furious Blade",
         pathNameFr: "Lame furieuse",
         jobStage: "job2",
         className: "Blade Master",
@@ -534,7 +539,7 @@ export const classImages = [
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Sword Taker",
+        pathName: "Furious Blade",
         pathNameFr: "Lame furieuse",
         jobStage: "job3",
         className: "Furious Blade",
@@ -544,7 +549,7 @@ export const classImages = [
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Sword Taker",
+        pathName: "Furious Blade",
         pathNameFr: "Lame furieuse",
         jobStage: "master",
         className: "Furious Blade",
@@ -555,7 +560,7 @@ export const classImages = [
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Over Taker",
+        pathName: "Rage Hearts",
         pathNameFr: "Cœur enragé",
         jobStage: "job1",
         className: "Over Taker",
@@ -565,7 +570,7 @@ export const classImages = [
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Over Taker",
+        pathName: "Rage Hearts",
         pathNameFr: "Cœur enragé",
         jobStage: "job2",
         className: "Reckless Fist",
@@ -575,7 +580,7 @@ export const classImages = [
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Over Taker",
+        pathName: "Rage Hearts",
         pathNameFr: "Cœur enragé",
         jobStage: "job3",
         className: "Rage Hearts",
@@ -585,7 +590,7 @@ export const classImages = [
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Over Taker",
+        pathName: "Rage Hearts",
         pathNameFr: "Cœur enragé",
         jobStage: "master",
         className: "Rage Hearts",
@@ -596,7 +601,7 @@ export const classImages = [
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Weapon Taker",
+        pathName: "Nova Imperator",
         pathNameFr: "Nova Imperator",
         jobStage: "job1",
         className: "Weapon Taker",
@@ -606,16 +611,17 @@ export const classImages = [
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Weapon Taker",
+        pathName: "Nova Imperator",
         pathNameFr: "Nova Imperator",
         jobStage: "job2",
-        className: "Veteran Commander", classNameFr: "Commandant Vétéran",
+        className: "Veteran Commander",
+        classNameFr: "Commandant Vétéran",
         fileName: "raven-veteran-commander.png"
     }),
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Weapon Taker",
+        pathName: "Nova Imperator",
         pathNameFr: "Nova Imperator",
         jobStage: "job3",
         className: "Nova Imperator",
@@ -625,7 +631,7 @@ export const classImages = [
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Weapon Taker",
+        pathName: "Nova Imperator",
         pathNameFr: "Nova Imperator",
         jobStage: "master",
         className: "Nova Imperator",
@@ -636,44 +642,48 @@ export const classImages = [
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Venom Taker",
-        pathNameFr: "Revenant",
+        pathName: "Revenant",
+        pathNameFr: "Âme fatale",
         jobStage: "job1",
-        className: "Venom Taker", classNameFr: "Venimophore",
+        className: "Venom Taker",
+        classNameFr: "Venimophore",
         fileName: "raven-venom-taker.png"
     }),
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Venom Taker",
-        pathNameFr: "Revenant",
+        pathName: "Revenant",
+        pathNameFr: "Âme fatale",
         jobStage: "job2",
-        className: "Mutant Reaper", classNameFr: "Métalame",
+        className: "Mutant Reaper",
+        classNameFr: "Métalame",
         fileName: "raven-mutant-reaper.png"
     }),
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Venom Taker",
-        pathNameFr: "Revenant",
+        pathName: "Revenant",
+        pathNameFr: "Âme fatale",
         jobStage: "job3",
-        className: "Revenant", classNameFr: "Âme fatale",
+        className: "Revenant",
+        classNameFr: "Âme fatale",
         fileName: "raven-revenant.png"
     }),
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Venom Taker",
-        pathNameFr: "Revenant",
+        pathName: "Revenant",
+        pathNameFr: "Âme fatale",
         jobStage: "master",
-        className: "Revenant", classNameFr: "Âme fatale",
+        className: "Revenant",
+        classNameFr: "Âme fatale",
         fileName: "raven-revenant-master.png"
     }),
 
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Exotic",
+        pathName: "Code: Ultimate",
         pathNameFr: "Nasod ultime",
         jobStage: "job1",
         className: "Code: Exotic",
@@ -683,7 +693,7 @@ export const classImages = [
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Exotic",
+        pathName: "Code: Ultimate",
         pathNameFr: "Nasod ultime",
         jobStage: "job2",
         className: "Code: Nemesis",
@@ -693,7 +703,7 @@ export const classImages = [
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Exotic",
+        pathName: "Code: Ultimate",
         pathNameFr: "Nasod ultime",
         jobStage: "job3",
         className: "Code: Ultimate",
@@ -703,7 +713,7 @@ export const classImages = [
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Exotic",
+        pathName: "Code: Ultimate",
         pathNameFr: "Nasod ultime",
         jobStage: "master",
         className: "Code: Ultimate",
@@ -714,7 +724,7 @@ export const classImages = [
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Architecture",
+        pathName: "Code: Esencia",
         pathNameFr: "Nasod essentielle",
         jobStage: "job1",
         className: "Code: Architecture",
@@ -724,7 +734,7 @@ export const classImages = [
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Architecture",
+        pathName: "Code: Esencia",
         pathNameFr: "Nasod essentielle",
         jobStage: "job2",
         className: "Code: Empress",
@@ -734,7 +744,7 @@ export const classImages = [
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Architecture",
+        pathName: "Code: Esencia",
         pathNameFr: "Nasod essentielle",
         jobStage: "job3",
         className: "Code: Esencia",
@@ -744,7 +754,7 @@ export const classImages = [
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Architecture",
+        pathName: "Code: Esencia",
         pathNameFr: "Nasod essentielle",
         jobStage: "master",
         className: "Code: Esencia",
@@ -755,16 +765,17 @@ export const classImages = [
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Electra",
+        pathName: "Code: Sariel",
         pathNameFr: "Code: Sariel",
         jobStage: "job1",
-        className: "Code: Electra", classNameFr: "Nasod Elektra",
+        className: "Code: Electra",
+        classNameFr: "Nasod Elektra",
         fileName: "eve-code-electra.png"
     }),
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Electra",
+        pathName: "Code: Sariel",
         pathNameFr: "Code: Sariel",
         jobStage: "job2",
         className: "Code: Battle Seraph",
@@ -774,7 +785,7 @@ export const classImages = [
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Electra",
+        pathName: "Code: Sariel",
         pathNameFr: "Code: Sariel",
         jobStage: "job3",
         className: "Code: Sariel",
@@ -784,7 +795,7 @@ export const classImages = [
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Electra",
+        pathName: "Code: Sariel",
         pathNameFr: "Code: Sariel",
         jobStage: "master",
         className: "Code: Sariel",
@@ -795,44 +806,48 @@ export const classImages = [
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Unknown",
-        pathNameFr: "Code: Antithese",
+        pathName: "Code: Antithese",
+        pathNameFr: "Nasod Antithesa",
         jobStage: "job1",
-        className: "Code: Unknown", classNameFr: "Nasod Incognita",
+        className: "Code: Unknown",
+        classNameFr: "Nasod Incognita",
         fileName: "eve-code-unknown.png"
     }),
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Unknown",
-        pathNameFr: "Code: Antithese",
+        pathName: "Code: Antithese",
+        pathNameFr: "Nasod Antithesa",
         jobStage: "job2",
-        className: "Code: Failess", classNameFr: "Nasod Absoluta",
+        className: "Code: Failess",
+        classNameFr: "Nasod Absoluta",
         fileName: "eve-code-failess.png"
     }),
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Unknown",
-        pathNameFr: "Code: Antithese",
+        pathName: "Code: Antithese",
+        pathNameFr: "Nasod Antithesa",
         jobStage: "job3",
-        className: "Code: Antithese", classNameFr: "Nasod Antihesa",
+        className: "Code: Antithese",
+        classNameFr: "Nasod Antihesa",
         fileName: "eve-code-antithese.png"
     }),
     createClassImage({
         characterId: "eve",
         character: "Eve",
-        pathName: "Code: Unknown",
-        pathNameFr: "Code: Antithese",
+        pathName: "Code: Antithese",
+        pathNameFr: "Nasod Antithesa",
         jobStage: "master",
-        className: "Code: Antithese", classNameFr: "Nasod Antithesa",
+        className: "Code: Antithese",
+        classNameFr: "Nasod Antithesa",
         fileName: "eve-code-antithese-master.png"
     }),
 
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Fury Guardian",
+        pathName: "Comet Crusader",
         pathNameFr: "Chevalier croisé cométaire",
         jobStage: "job1",
         className: "Fury Guardian",
@@ -842,7 +857,7 @@ export const classImages = [
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Fury Guardian",
+        pathName: "Comet Crusader",
         pathNameFr: "Chevalier croisé cométaire",
         jobStage: "job2",
         className: "Iron Paladin",
@@ -852,7 +867,7 @@ export const classImages = [
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Fury Guardian",
+        pathName: "Comet Crusader",
         pathNameFr: "Chevalier croisé cométaire",
         jobStage: "job3",
         className: "Comet Crusader",
@@ -862,7 +877,7 @@ export const classImages = [
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Fury Guardian",
+        pathName: "Comet Crusader",
         pathNameFr: "Chevalier croisé cométaire",
         jobStage: "master",
         className: "Comet Crusader",
@@ -873,7 +888,7 @@ export const classImages = [
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Shooting Guardian",
+        pathName: "Fatal Phantom",
         pathNameFr: "Fantôme Fatal",
         jobStage: "job1",
         className: "Shooting Guardian",
@@ -883,7 +898,7 @@ export const classImages = [
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Shooting Guardian",
+        pathName: "Fatal Phantom",
         pathNameFr: "Fantôme Fatal",
         jobStage: "job2",
         className: "Deadly Chaser",
@@ -893,7 +908,7 @@ export const classImages = [
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Shooting Guardian",
+        pathName: "Fatal Phantom",
         pathNameFr: "Fantôme Fatal",
         jobStage: "job3",
         className: "Fatal Phantom",
@@ -903,7 +918,7 @@ export const classImages = [
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Shooting Guardian",
+        pathName: "Fatal Phantom",
         pathNameFr: "Fantôme Fatal",
         jobStage: "master",
         className: "Fatal Phantom",
@@ -914,7 +929,7 @@ export const classImages = [
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Shelling Guardian",
+        pathName: "Centurion",
         pathNameFr: "Centurion",
         jobStage: "job1",
         className: "Shelling Guardian",
@@ -924,7 +939,7 @@ export const classImages = [
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Shelling Guardian",
+        pathName: "Centurion",
         pathNameFr: "Centurion",
         jobStage: "job2",
         className: "Tactical Trooper",
@@ -934,7 +949,7 @@ export const classImages = [
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Shelling Guardian",
+        pathName: "Centurion",
         pathNameFr: "Centurion",
         jobStage: "job3",
         className: "Centurion",
@@ -944,7 +959,7 @@ export const classImages = [
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Shelling Guardian",
+        pathName: "Centurion",
         pathNameFr: "Centurion",
         jobStage: "master",
         className: "Centurion",
@@ -955,25 +970,27 @@ export const classImages = [
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Core Guardian",
+        pathName: "Dius Aer",
         pathNameFr: "Dius Aer",
         jobStage: "job1",
-        className: "Core Guardian", classNameFr: "Gardien des cœurs",
+        className: "Core Guardian",
+        classNameFr: "Gardien des cœurs",
         fileName: "chung-core-guardian.png"
     }),
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Core Guardian",
+        pathName: "Dius Aer",
         pathNameFr: "Dius Aer",
         jobStage: "job2",
-        className: "Divine Phanes", classNameFr: "Phanès sacré",
+        className: "Divine Phanes",
+        classNameFr: "Phanès sacré",
         fileName: "chung-divine-phanes.png"
     }),
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Core Guardian",
+        pathName: "Dius Aer",
         pathNameFr: "Dius Aer",
         jobStage: "job3",
         className: "Dius Aer",
@@ -983,17 +1000,18 @@ export const classImages = [
     createClassImage({
         characterId: "chung",
         character: "Chung",
-        pathName: "Core Guardian",
+        pathName: "Dius Aer",
         pathNameFr: "Dius Aer",
         jobStage: "master",
         className: "Dius Aer",
         classNameFr: "Dius Aer",
         fileName: "chung-dius-aer-master.png"
     }),
+
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Hsien",
+        pathName: "Apsara",
         pathNameFr: "Apsara",
         jobStage: "job1",
         className: "Little Hsien",
@@ -1003,7 +1021,7 @@ export const classImages = [
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Hsien",
+        pathName: "Apsara",
         pathNameFr: "Apsara",
         jobStage: "job2",
         className: "Sakra Devanam",
@@ -1013,7 +1031,7 @@ export const classImages = [
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Hsien",
+        pathName: "Apsara",
         pathNameFr: "Apsara",
         jobStage: "job3",
         className: "Apsara",
@@ -1023,7 +1041,7 @@ export const classImages = [
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Hsien",
+        pathName: "Apsara",
         pathNameFr: "Apsara",
         jobStage: "master",
         className: "Apsara",
@@ -1034,7 +1052,7 @@ export const classImages = [
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Devil",
+        pathName: "Devi",
         pathNameFr: "Devi",
         jobStage: "job1",
         className: "Little Devil",
@@ -1044,7 +1062,7 @@ export const classImages = [
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Devil",
+        pathName: "Devi",
         pathNameFr: "Devi",
         jobStage: "job2",
         className: "Yama Raja",
@@ -1054,7 +1072,7 @@ export const classImages = [
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Devil",
+        pathName: "Devi",
         pathNameFr: "Devi",
         jobStage: "job3",
         className: "Devi",
@@ -1064,7 +1082,7 @@ export const classImages = [
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Devil",
+        pathName: "Devi",
         pathNameFr: "Devi",
         jobStage: "master",
         className: "Devi",
@@ -1075,7 +1093,7 @@ export const classImages = [
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Specter",
+        pathName: "Shakti",
         pathNameFr: "Shakti",
         jobStage: "job1",
         className: "Little Specter",
@@ -1085,7 +1103,7 @@ export const classImages = [
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Specter",
+        pathName: "Shakti",
         pathNameFr: "Shakti",
         jobStage: "job2",
         className: "Asura",
@@ -1095,7 +1113,7 @@ export const classImages = [
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Specter",
+        pathName: "Shakti",
         pathNameFr: "Shakti",
         jobStage: "job3",
         className: "Shakti",
@@ -1105,7 +1123,7 @@ export const classImages = [
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Specter",
+        pathName: "Shakti",
         pathNameFr: "Shakti",
         jobStage: "master",
         className: "Shakti",
@@ -1116,25 +1134,27 @@ export const classImages = [
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Helper",
+        pathName: "Surya",
         pathNameFr: "Surya",
         jobStage: "job1",
-        className: "Little Helper", classNameFr: "Bienfaitrice",
+        className: "Little Helper",
+        classNameFr: "Bienfaitrice",
         fileName: "ara-little-helper.png"
     }),
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Helper",
+        pathName: "Surya",
         pathNameFr: "Surya",
         jobStage: "job2",
-        className: "Marici", classNameFr: "Yang Yan",
+        className: "Marici",
+        classNameFr: "Yang Yan",
         fileName: "ara-marici.png"
     }),
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Helper",
+        pathName: "Surya",
         pathNameFr: "Surya",
         jobStage: "job3",
         className: "Surya",
@@ -1144,7 +1164,7 @@ export const classImages = [
     createClassImage({
         characterId: "ara",
         character: "Ara",
-        pathName: "Little Helper",
+        pathName: "Surya",
         pathNameFr: "Surya",
         jobStage: "master",
         className: "Surya",
@@ -1155,7 +1175,7 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Saber Knight",
+        pathName: "Empire Sword",
         pathNameFr: "Épée de l'empire",
         jobStage: "job1",
         className: "Saber Knight",
@@ -1165,7 +1185,7 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Saber Knight",
+        pathName: "Empire Sword",
         pathNameFr: "Épée de l'empire",
         jobStage: "job2",
         className: "Grand Master",
@@ -1175,7 +1195,7 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Saber Knight",
+        pathName: "Empire Sword",
         pathNameFr: "Épée de l'empire",
         jobStage: "job3",
         className: "Empire Sword",
@@ -1185,7 +1205,7 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Saber Knight",
+        pathName: "Empire Sword",
         pathNameFr: "Épée de l'empire",
         jobStage: "master",
         className: "Empire Sword",
@@ -1196,7 +1216,7 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Pyro Knight",
+        pathName: "Flame Lord",
         pathNameFr: "Maîtresse des flammes",
         jobStage: "job1",
         className: "Pyro Knight",
@@ -1206,7 +1226,7 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Pyro Knight",
+        pathName: "Flame Lord",
         pathNameFr: "Maîtresse des flammes",
         jobStage: "job2",
         className: "Blazing Heart",
@@ -1216,7 +1236,7 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Pyro Knight",
+        pathName: "Flame Lord",
         pathNameFr: "Maîtresse des flammes",
         jobStage: "job3",
         className: "Flame Lord",
@@ -1226,7 +1246,7 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Pyro Knight",
+        pathName: "Flame Lord",
         pathNameFr: "Maîtresse des flammes",
         jobStage: "master",
         className: "Flame Lord",
@@ -1237,7 +1257,7 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Dark Knight",
+        pathName: "Bloody Queen",
         pathNameFr: "Reine sanglante",
         jobStage: "job1",
         className: "Dark Knight",
@@ -1247,7 +1267,7 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Dark Knight",
+        pathName: "Bloody Queen",
         pathNameFr: "Reine sanglante",
         jobStage: "job2",
         className: "Crimson Avenger",
@@ -1257,7 +1277,7 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Dark Knight",
+        pathName: "Bloody Queen",
         pathNameFr: "Reine sanglante",
         jobStage: "job3",
         className: "Bloody Queen",
@@ -1267,7 +1287,7 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Dark Knight",
+        pathName: "Bloody Queen",
         pathNameFr: "Reine sanglante",
         jobStage: "master",
         className: "Bloody Queen",
@@ -1278,16 +1298,17 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Soar Knight",
+        pathName: "Adrestia",
         pathNameFr: "Adrestia",
         jobStage: "job1",
-        className: "Soar Knight", classNameFr: "Chevalier fauconnier",
+        className: "Soar Knight",
+        classNameFr: "Chevalier fauconnier",
         fileName: "elesis-soar-knight.png"
     }),
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Soar Knight",
+        pathName: "Adrestia",
         pathNameFr: "Adrestia",
         jobStage: "job2",
         className: "Patrona",
@@ -1297,7 +1318,7 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Soar Knight",
+        pathName: "Adrestia",
         pathNameFr: "Adrestia",
         jobStage: "job3",
         className: "Adrestia",
@@ -1307,7 +1328,7 @@ export const classImages = [
     createClassImage({
         characterId: "elesis",
         character: "Elesis",
-        pathName: "Soar Knight",
+        pathName: "Adrestia",
         pathNameFr: "Adrestia",
         jobStage: "master",
         className: "Adrestia",
@@ -1318,7 +1339,7 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Psychic Tracer",
+        pathName: "Doom Bringer",
         pathNameFr: "Calamité",
         jobStage: "job1",
         className: "Psychic Tracer",
@@ -1328,7 +1349,7 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Psychic Tracer",
+        pathName: "Doom Bringer",
         pathNameFr: "Calamité",
         jobStage: "job2",
         className: "Lunatic Psyker",
@@ -1338,7 +1359,7 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Psychic Tracer",
+        pathName: "Doom Bringer",
         pathNameFr: "Calamité",
         jobStage: "job3",
         className: "Doom Bringer",
@@ -1348,7 +1369,7 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Psychic Tracer",
+        pathName: "Doom Bringer",
         pathNameFr: "Calamité",
         jobStage: "master",
         className: "Doom Bringer",
@@ -1359,7 +1380,7 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Arc Tracer",
+        pathName: "Dominator",
         pathNameFr: "Dominateur",
         jobStage: "job1",
         className: "Arc Tracer",
@@ -1369,7 +1390,7 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Arc Tracer",
+        pathName: "Dominator",
         pathNameFr: "Dominateur",
         jobStage: "job2",
         className: "Mastermind",
@@ -1379,7 +1400,7 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Arc Tracer",
+        pathName: "Dominator",
         pathNameFr: "Dominateur",
         jobStage: "job3",
         className: "Dominator",
@@ -1389,7 +1410,7 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Arc Tracer",
+        pathName: "Dominator",
         pathNameFr: "Dominateur",
         jobStage: "master",
         className: "Dominator",
@@ -1400,7 +1421,7 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Time Tracer",
+        pathName: "Mad Paradox",
         pathNameFr: "Paradoxe",
         jobStage: "job1",
         className: "Time Tracer",
@@ -1410,7 +1431,7 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Time Tracer",
+        pathName: "Mad Paradox",
         pathNameFr: "Paradoxe",
         jobStage: "job2",
         className: "Diabolic Esper",
@@ -1420,7 +1441,7 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Time Tracer",
+        pathName: "Mad Paradox",
         pathNameFr: "Paradoxe",
         jobStage: "job3",
         className: "Mad Paradox",
@@ -1430,7 +1451,7 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Time Tracer",
+        pathName: "Mad Paradox",
         pathNameFr: "Paradoxe",
         jobStage: "master",
         className: "Mad Paradox",
@@ -1441,8 +1462,8 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Affect Tracer",
-        pathNameFr: "Overmind",
+        pathName: "Overmind",
+        pathNameFr: "Subjugueur",
         jobStage: "job1",
         className: "Affect Tracer",
         classNameFr: "Affect Tracer",
@@ -1451,8 +1472,8 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Affect Tracer",
-        pathNameFr: "Overmind",
+        pathName: "Overmind",
+        pathNameFr: "Subjugueur",
         jobStage: "job2",
         className: "Dissembler",
         classNameFr: "Dissembler",
@@ -1461,19 +1482,1051 @@ export const classImages = [
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Affect Tracer",
-        pathNameFr: "Overmind",
+        pathName: "Overmind",
+        pathNameFr: "Subjugueur",
         jobStage: "job3",
-        className: "Overmind", classNameFr: "Subjugueur",
+        className: "Overmind",
+        classNameFr: "Subjugueur",
         fileName: "add-overmind.png"
     }),
     createClassImage({
         characterId: "add",
         character: "Add",
-        pathName: "Affect Tracer",
-        pathNameFr: "Overmind",
+        pathName: "Overmind",
+        pathNameFr: "Subjugueur",
         jobStage: "master",
-        className: "Overmind", classNameFr: "Subjugueur",
+        className: "Overmind",
+        classNameFr: "Subjugueur",
         fileName: "add-overmind-master.png"
-    })
+    }),
+
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Catastrophe",
+        pathNameFr: "",
+        jobStage: "job1",
+        className: "Chiliarch",
+        classNameFr: "",
+        fileName: "luciel-chiliarch.png"
+    }),
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Catastrophe",
+        pathNameFr: "",
+        jobStage: "job2",
+        className: "Dreadlord",
+        classNameFr: "",
+        fileName: "luciel-dreadlord.png"
+    }),
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Catastrophe",
+        pathNameFr: "",
+        jobStage: "job3",
+        className: "Catastrophe",
+        classNameFr: "",
+        fileName: "luciel-catastrophe.png"
+    }),
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Catastrophe",
+        pathNameFr: "",
+        jobStage: "master",
+        className: "Catastrophe",
+        classNameFr: "",
+        fileName: "luciel-catastrophe-master.png"
+    }),
+
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Innocent",
+        pathNameFr: "",
+        jobStage: "job1",
+        className: "Royal Guard",
+        classNameFr: "",
+        fileName: "luciel-royal-guard.png"
+    }),
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Innocent",
+        pathNameFr: "",
+        jobStage: "job2",
+        className: "Noblesse",
+        classNameFr: "",
+        fileName: "luciel-noblesse.png"
+    }),
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Innocent",
+        pathNameFr: "",
+        jobStage: "job3",
+        className: "Innocent",
+        classNameFr: "",
+        fileName: "luciel-innocent.png"
+    }),
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Innocent",
+        pathNameFr: "",
+        jobStage: "master",
+        className: "Innocent",
+        classNameFr: "",
+        fileName: "luciel-innocent-master.png"
+    }),
+
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Diangelion",
+        pathNameFr: "",
+        jobStage: "job1",
+        className: "Diabla",
+        classNameFr: "",
+        fileName: "luciel-diabla.png"
+    }),
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Diangelion",
+        pathNameFr: "",
+        jobStage: "job2",
+        className: "Demonio",
+        classNameFr: "",
+        fileName: "luciel-demonio.png"
+    }),
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Diangelion",
+        pathNameFr: "",
+        jobStage: "job3",
+        className: "Diangelion",
+        classNameFr: "",
+        fileName: "luciel-diangelion.png"
+    }),
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Diangelion",
+        pathNameFr: "",
+        jobStage: "master",
+        className: "Diangelion",
+        classNameFr: "",
+        fileName: "luciel-diangelion-master.png"
+    }),
+
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Demersio",
+        pathNameFr: "",
+        jobStage: "job1",
+        className: "Emptiness",
+        classNameFr: "",
+        fileName: "luciel-emptiness.png"
+    }),
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Demersio",
+        pathNameFr: "",
+        jobStage: "job2",
+        className: "Turbids",
+        classNameFr: "",
+        fileName: "luciel-turbids.png"
+    }),
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Demersio",
+        pathNameFr: "",
+        jobStage: "job3",
+        className: "Demersio",
+        classNameFr: "",
+        fileName: "luciel-demersio.png"
+    }),
+    createClassImage({
+        characterId: "luciel",
+        character: "Lu/Ciel",
+        pathName: "Demersio",
+        pathNameFr: "",
+        jobStage: "master",
+        className: "Demersio",
+        classNameFr: "",
+        fileName: "luciel-demersio-master.png"
+    }),
+
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Tempest Burster",
+        pathNameFr: "",
+        jobStage: "job1",
+        className: "Heavy Barrel",
+        classNameFr: "",
+        fileName: "rose-heavy-barrel.png"
+    }),
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Tempest Burster",
+        pathNameFr: "",
+        jobStage: "job2",
+        className: "Storm Trooper",
+        classNameFr: "",
+        fileName: "rose-storm-trooper.png"
+    }),
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Tempest Burster",
+        pathNameFr: "",
+        jobStage: "job3",
+        className: "Tempest Burster",
+        classNameFr: "",
+        fileName: "rose-tempest-burster.png"
+    }),
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Tempest Burster",
+        pathNameFr: "",
+        jobStage: "master",
+        className: "Tempest Burster",
+        classNameFr: "",
+        fileName: "rose-tempest-burster-master.png"
+    }),
+
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Black Massacre",
+        pathNameFr: "",
+        jobStage: "job1",
+        className: "Bloodia",
+        classNameFr: "",
+        fileName: "rose-bloodia.png"
+    }),
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Black Massacre",
+        pathNameFr: "",
+        jobStage: "job2",
+        className: "Crimson Rose",
+        classNameFr: "",
+        fileName: "rose-crimson-rose.png"
+    }),
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Black Massacre",
+        pathNameFr: "",
+        jobStage: "job3",
+        className: "Black Massacre",
+        classNameFr: "",
+        fileName: "rose-black-massacre.png"
+    }),
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Black Massacre",
+        pathNameFr: "",
+        jobStage: "master",
+        className: "Black Massacre",
+        classNameFr: "",
+        fileName: "rose-black-massacre-master.png"
+    }),
+
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Minerva",
+        pathNameFr: "",
+        jobStage: "job1",
+        className: "Valkyrie",
+        classNameFr: "",
+        fileName: "rose-valkyrie.png"
+    }),
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Minerva",
+        pathNameFr: "",
+        jobStage: "job2",
+        className: "Freyja",
+        classNameFr: "",
+        fileName: "rose-freyja.png"
+    }),
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Minerva",
+        pathNameFr: "",
+        jobStage: "job3",
+        className: "Minerva",
+        classNameFr: "",
+        fileName: "rose-minerva.png"
+    }),
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Minerva",
+        pathNameFr: "",
+        jobStage: "master",
+        className: "Minerva",
+        classNameFr: "",
+        fileName: "rose-minerva-master.png"
+    }),
+
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Prime Operator",
+        pathNameFr: "Optimus Prime",
+        jobStage: "job1",
+        className: "Metal Heart",
+        classNameFr: "",
+        fileName: "rose-metal-heart.png"
+    }),
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Prime Operator",
+        pathNameFr: "Optimus Prime",
+        jobStage: "job2",
+        className: "Optimus",
+        classNameFr: "",
+        fileName: "rose-optimus.png"
+    }),
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Prime Operator",
+        pathNameFr: "Optimus Prime",
+        jobStage: "job3",
+        className: "Prime Operator",
+        classNameFr: "Optimus Prime",
+        fileName: "rose-prime-operator.png"
+    }),
+    createClassImage({
+        characterId: "rose",
+        character: "Rose",
+        pathName: "Prime Operator",
+        pathNameFr: "Optimus Prime",
+        jobStage: "master",
+        className: "Prime Operator",
+        classNameFr: "Optimus Prime",
+        fileName: "rose-prime-operator-master.png"
+    }),
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Richter",
+        pathNameFr: "Arbiter",
+        jobStage: "job1",
+        className: "Lofty: Executor",
+        classNameFr: "",
+        fileName: "ain-lofty-executor.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Richter",
+        pathNameFr: "Arbiter",
+        jobStage: "job2",
+        className: "Arme Thaumaturgy",
+        classNameFr: "",
+        fileName: "ain-arme-thaumaturgy.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Richter",
+        pathNameFr: "Arbiter",
+        jobStage: "job3",
+        className: "Richter",
+        classNameFr: "Arbiter",
+        fileName: "ain-richter.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Richter",
+        pathNameFr: "Arbiter",
+        jobStage: "master",
+        className: "Richter",
+        classNameFr: "Arbiter",
+        fileName: "ain-richter-master.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Bluhen",
+        pathNameFr: "Florere",
+        jobStage: "job1",
+        className: "Lofty: Anpassen",
+        classNameFr: "",
+        fileName: "ain-lofty-anpassen.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Bluhen",
+        pathNameFr: "Florere",
+        jobStage: "job2",
+        className: "Erbluhen Emotion",
+        classNameFr: "",
+        fileName: "ain-erbluhen-emotion.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Bluhen",
+        pathNameFr: "Florere",
+        jobStage: "job3",
+        className: "Bluhen",
+        classNameFr: "Florere",
+        fileName: "ain-bluhen.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Bluhen",
+        pathNameFr: "Florere",
+        jobStage: "master",
+        className: "Bluhen",
+        classNameFr: "Florere",
+        fileName: "ain-bluhen-master.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Herrscher",
+        pathNameFr: "Regnator",
+        jobStage: "job1",
+        className: "Lofty: Wanderer",
+        classNameFr: "",
+        fileName: "ain-lofty-wanderer.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Herrscher",
+        pathNameFr: "Regnator",
+        jobStage: "job2",
+        className: "Apostasia",
+        classNameFr: "",
+        fileName: "ain-apostasia.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Herrscher",
+        pathNameFr: "Regnator",
+        jobStage: "job3",
+        className: "Herrscher",
+        classNameFr: "Regnator",
+        fileName: "ain-herrscher.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Herrscher",
+        pathNameFr: "Regnator",
+        jobStage: "master",
+        className: "Herrscher",
+        classNameFr: "Regnator",
+        fileName: "ain-herrscher-master.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Opferung",
+        pathNameFr: "Sacratus",
+        jobStage: "job1",
+        className: "Lofty: Schreier",
+        classNameFr: "Adoleo",
+        fileName: "ain-lofty-schreier.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Opferung",
+        pathNameFr: "Sacratus",
+        jobStage: "job2",
+        className: "Schatz Reprise",
+        classNameFr: "Captura",
+        fileName: "ain-schatz-reprise.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Opferung",
+        pathNameFr: "Sacratus",
+        jobStage: "job3",
+        className: "Opferung",
+        classNameFr: "Sacratus",
+        fileName: "ain-opferung.png"
+    }),
+
+    createClassImage({
+        characterId: "ain",
+        character: "Ain",
+        pathName: "Opferung",
+        pathNameFr: "Sacratus",
+        jobStage: "master",
+        className: "Opferung",
+        classNameFr: "Sacratus",
+        fileName: "ain-opferung-master.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Eternity Winner",
+        pathNameFr: "",
+        jobStage: "job1",
+        className: "Sparky Child",
+        classNameFr: "",
+        fileName: "laby-sparky-child.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Eternity Winner",
+        pathNameFr: "",
+        jobStage: "job2",
+        className: "Rumble Pumn",
+        classNameFr: "",
+        fileName: "laby-rumble-pumn.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Eternity Winner",
+        pathNameFr: "",
+        jobStage: "job3",
+        className: "Eternity Winner",
+        classNameFr: "",
+        fileName: "laby-eternity-winner.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Eternity Winner",
+        pathNameFr: "",
+        jobStage: "master",
+        className: "Eternity Winner",
+        classNameFr: "",
+        fileName: "laby-eternity-winner-master.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Radiant Soul",
+        pathNameFr: "",
+        jobStage: "job1",
+        className: "Twinkle Child",
+        classNameFr: "",
+        fileName: "laby-twinkle-child.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Radiant Soul",
+        pathNameFr: "",
+        jobStage: "job2",
+        className: "Shining Romantica",
+        classNameFr: "",
+        fileName: "laby-shining-romantica.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Radiant Soul",
+        pathNameFr: "",
+        jobStage: "job3",
+        className: "Radiant Soul",
+        classNameFr: "",
+        fileName: "laby-radiant-soul.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Radiant Soul",
+        pathNameFr: "",
+        jobStage: "master",
+        className: "Radiant Soul",
+        classNameFr: "",
+        fileName: "laby-radiant-soul-master.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Nisha Labyrinth",
+        pathNameFr: "",
+        jobStage: "job1",
+        className: "Rusty Child",
+        classNameFr: "",
+        fileName: "laby-rusty-child.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Nisha Labyrinth",
+        pathNameFr: "",
+        jobStage: "job2",
+        className: "Daydreamer",
+        classNameFr: "",
+        fileName: "laby-daydreamer.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Nisha Labyrinth",
+        pathNameFr: "",
+        jobStage: "job3",
+        className: "Nisha Labyrinth",
+        classNameFr: "",
+        fileName: "laby-nisha-labyrinth.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Nisha Labyrinth",
+        pathNameFr: "",
+        jobStage: "master",
+        className: "Nisha Labyrinth",
+        classNameFr: "",
+        fileName: "laby-nisha-labyrinth-master.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Twins Picaro",
+        pathNameFr: "Arlequine",
+        jobStage: "job1",
+        className: "Rough Child",
+        classNameFr: "Morveuse",
+        fileName: "laby-rough-child.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Twins Picaro",
+        pathNameFr: "Arlequine",
+        jobStage: "job2",
+        className: "Punky Poppet",
+        classNameFr: "Filoute",
+        fileName: "laby-punky-poppet.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Twins Picaro",
+        pathNameFr: "Arlequine",
+        jobStage: "job3",
+        className: "Twins Picaro",
+        classNameFr: "Arlequine",
+        fileName: "laby-twins-picaro.png"
+    }),
+
+    createClassImage({
+        characterId: "laby",
+        character: "Laby",
+        pathName: "Twins Picaro",
+        pathNameFr: "Arlequine",
+        jobStage: "master",
+        className: "Twins Picaro",
+        classNameFr: "Arlequine",
+        fileName: "laby-twins-picaro-master.png"
+    }),
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Liberator",
+        pathNameFr: "Libérator",
+        jobStage: "job1",
+        className: "Second Revenger",
+        classNameFr: "Vengeur d'Âmes",
+        fileName: "noah-second-revenger.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Liberator",
+        pathNameFr: "Libérator",
+        jobStage: "job2",
+        className: "Silent Shadow",
+        classNameFr: "Ombre Silencieuse",
+        fileName: "noah-silent-shadow.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Liberator",
+        pathNameFr: "Libérator",
+        jobStage: "job3",
+        className: "Liberator",
+        classNameFr: "Libérator",
+        fileName: "noah-liberator.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Liberator",
+        pathNameFr: "Libérator",
+        jobStage: "master",
+        className: "Liberator",
+        classNameFr: "Libérator",
+        fileName: "noah-liberator-master.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Celestia",
+        pathNameFr: "Céléstia",
+        jobStage: "job1",
+        className: "Second Selection",
+        classNameFr: "Destinator",
+        fileName: "noah-second-selection.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Celestia",
+        pathNameFr: "Céléstia",
+        jobStage: "job2",
+        className: "Stellar Caster",
+        classNameFr: "Lanceur d'Étoiles",
+        fileName: "noah-stellar-caster.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Celestia",
+        pathNameFr: "Céléstia",
+        jobStage: "job3",
+        className: "Celestia",
+        classNameFr: "Céléstia",
+        fileName: "noah-celestia.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Celestia",
+        pathNameFr: "Céléstia",
+        jobStage: "master",
+        className: "Celestia",
+        classNameFr: "Céléstia",
+        fileName: "noah-celestia-master.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Nyx Pieta",
+        pathNameFr: "Nyx Pieta",
+        jobStage: "job1",
+        className: "Second Grief",
+        classNameFr: "Lune Soucieuse",
+        fileName: "noah-second-grief.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Nyx Pieta",
+        pathNameFr: "Nyx Pieta",
+        jobStage: "job2",
+        className: "Pale Pilgrim",
+        classNameFr: "Pélerin Lunaire",
+        fileName: "noah-pale-pilgrim.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Nyx Pieta",
+        pathNameFr: "Nyx Pieta",
+        jobStage: "job3",
+        className: "Nyx Pieta",
+        classNameFr: "Nyx Pieta",
+        fileName: "noah-nyx-pieta.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Nyx Pieta",
+        pathNameFr: "Nyx Pieta",
+        jobStage: "master",
+        className: "Nyx Pieta",
+        classNameFr: "Nyx Pieta",
+        fileName: "noah-nyx-pieta-master.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Morpheus",
+        pathNameFr: "Morphée",
+        jobStage: "job1",
+        className: "Second Dejection",
+        classNameFr: "",
+        fileName: "noah-second-dejection.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Morpheus",
+        pathNameFr: "Morphée",
+        jobStage: "job2",
+        className: "Hazy Delusion",
+        classNameFr: "",
+        fileName: "noah-hazy-delusion.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Morpheus",
+        pathNameFr: "Morphée",
+        jobStage: "job3",
+        className: "Morpheus",
+        classNameFr: "Morphée",
+        fileName: "noah-morpheus.png"
+    }),
+
+    createClassImage({
+        characterId: "noah",
+        character: "Noah",
+        pathName: "Morpheus",
+        pathNameFr: "Morphée",
+        jobStage: "master",
+        className: "Morpheus",
+        classNameFr: "Morphée",
+        fileName: "noah-morpheus-master.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Gembliss",
+        pathNameFr: "Eméraldia",
+        jobStage: "job1",
+        className: "Poten Finder",
+        classNameFr: "Minéralista",
+        fileName: "lithia-poten-finder.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Gembliss",
+        pathNameFr: "Eméraldia",
+        jobStage: "job2",
+        className: "Mighty Miner",
+        classNameFr: "Cristalina",
+        fileName: "lithia-mighty-miner.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Gembliss",
+        pathNameFr: "Eméraldia",
+        jobStage: "job3",
+        className: "Gembliss",
+        classNameFr: "Eméraldia",
+        fileName: "lithia-gembliss.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Gembliss",
+        pathNameFr: "Eméraldia",
+        jobStage: "master",
+        className: "Gembliss",
+        classNameFr: "Eméraldia",
+        fileName: "lithia-gembliss-master.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Avarice",
+        pathNameFr: "Avaricia",
+        jobStage: "job1",
+        className: "Fortune Finder",
+        classNameFr: "Jadoyante",
+        fileName: "lithia-fortune-finder.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Avarice",
+        pathNameFr: "Avaricia",
+        jobStage: "job2",
+        className: "Greedy Wonder",
+        classNameFr: "Adamantine",
+        fileName: "lithia-greedy-wonder.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Avarice",
+        pathNameFr: "Avaricia",
+        jobStage: "job3",
+        className: "Avarice",
+        classNameFr: "Avaricia",
+        fileName: "lithia-avarice.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Avarice",
+        pathNameFr: "Avaricia",
+        jobStage: "master",
+        className: "Avarice",
+        classNameFr: "Avaricia",
+        fileName: "lithia-avarice-master.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Achlys",
+        pathNameFr: "",
+        jobStage: "job1",
+        className: "Path Finder",
+        classNameFr: "",
+        fileName: "lithia-path-finder.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Achlys",
+        pathNameFr: "",
+        jobStage: "job2",
+        className: "Rima Clavis",
+        classNameFr: "",
+        fileName: "lithia-rima-clavis.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Achlys",
+        pathNameFr: "",
+        jobStage: "job3",
+        className: "Achlys",
+        classNameFr: "",
+        fileName: "lithia-achlys.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Achlys",
+        pathNameFr: "",
+        jobStage: "master",
+        className: "Achlys",
+        classNameFr: "",
+        fileName: "lithia-achlys-master.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Mischief",
+        pathNameFr: "",
+        jobStage: "job1",
+        className: "Trick Finder",
+        classNameFr: "",
+        fileName: "lithia-trick-finder.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Mischief",
+        pathNameFr: "",
+        jobStage: "job2",
+        className: "Cynical Sneer",
+        classNameFr: "",
+        fileName: "lithia-cynical-sneer.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Mischief",
+        pathNameFr: "",
+        jobStage: "job3",
+        className: "Mischief",
+        classNameFr: "",
+        fileName: "lithia-mischief.png"
+    }),
+
+    createClassImage({
+        characterId: "lithia",
+        character: "Lithia",
+        pathName: "Mischief",
+        pathNameFr: "",
+        jobStage: "master",
+        className: "Mischief",
+        classNameFr: "",
+        fileName: "lithia-mischief-master.png"
+    }),
 ];

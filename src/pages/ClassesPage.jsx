@@ -74,20 +74,10 @@ function ClassesPage() {
                         >
                             <div className="class-card-image-wrap">
                                 {masterLogo && (
-                                    <img
-                                        className="master-class-logo"
-                                        src={masterLogo.image}
-                                        alt={masterLogo.alt}
-                                    />
+                                    <img className="master-class-logo" src={masterLogo.image} alt={masterLogo.alt}/>
                                 )}
-
-                                <img
-                                    className="class-card-image"
-                                    src={classItem.localPath}
-                                    alt={classItem.alt}
-                                />
+                                <img className="class-card-image" src={classItem.localPath} alt={classItem.alt}/>
                             </div>
-
                             <div className="class-card-content">
                 <span
                     className="class-stage-label"
@@ -98,17 +88,13 @@ function ClassesPage() {
                 >
                   {stageLabels[classItem.jobStage] || classItem.jobStage}
                 </span>
-
                                 <h2 style={{ color: theme.primary }}>
                                     {classItem.classNameFr || classItem.className}
                                 </h2>
-
                                 <p>
                                     {classItem.character} — {classItem.pathNameFr || classItem.pathName}
                                 </p>
-
                                 <small>{classItem.className}</small>
-
                                 {masterLogo && (
                                     <small className="master-symbol-name">
                                         Symbole : {masterLogo.nameFr || masterLogo.name}

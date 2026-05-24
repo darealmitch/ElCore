@@ -33,7 +33,7 @@ export const characters = [
         lore: "Magicienne accomplie devenue Grande Magicienne dès son plus jeune âge, Aisha découvre lors d'un voyage avec son grand-père un anneau antique qui absorbe la majeure partie de ses pouvoirs. " +
             "Amputée de la plupart de ses capacités, elle se lance dans un périple pour les récupérer en suivant la signature magique de l'anneau disparu.",
         classes: ["Aether Sage", "Oz Sorcerer", "Metamorphy", "Lord Azoth"],
-        classesFr: ["Étheriste", "Magicienne d'Oz", "Métamorphia", "Lord Azoth"]
+        classesFr: ["Étheriste", "Magicienne d'Oz", "Métamorphia", "Druidesse d'Azoth"]
     },
     {
         id: "rena",
@@ -51,7 +51,7 @@ export const characters = [
         lore: "La plus mature et la plus belle de la Patrouille de l'El. Alors que le lien avec le monde des esprits s'affaiblit de plus en plus, Rena est déterminée à restaurer le pouvoir de l'El pour rétablir cette connexion. " +
             "Elle ressent la résonance de l'El depuis l'Arbre de l'El du Village de Ruben et part enquêter.",
         classes: ["Anemos", "Daybreaker", "Twilight", "Prophetess"],
-        classesFr: ["Anemos", "Aube", "Crépuscule", "Prophetess"]
+        classesFr: ["Anemos", "Aube", "Crépuscule", "Prophétesse"]
     },
     {
         id: "raven",
@@ -70,19 +70,19 @@ export const characters = [
             "Victime d'une machination d'aristocrates jaloux, il perd tout ce qui lui était cher en une seule nuit. Réanimé par les Nasods, il a juré de se venger du Royaume de Velder. " +
             "Désormais, rongé par la culpabilité de ses actes passés, il rejoint la Patrouille de l'El en guise d'expiation.",
         classes: ["Furious Blade", "Rage Hearts", "Nova Imperator", "Revenant"],
-        classesFr: ["Lame furieuse", "Cœur enragé", "Nova Imperator", "Revenant"]
+        classesFr: ["Lame furieuse", "Cœur enragé", "Nova Imperator", "Âme fatale"]
     },
     {
         id: "eve",
         name: "Eve",
         fullName: "Eve",
-        age: "Unknown",
+        age: "Inconnue",
         gender: "Female",
         type: "Reine Nasod",
         weapon: "Drones Nasod",
         role: "DPS / Technologie",
         featuredClass: "Code: Sariel",
-        featuredClassFr: "Code: Sariel",
+        featuredClassFr: "Nasod Sariel",
         image: "/images/personnages/eve.png",
         description: "La reine des Nasods, spécialisée dans les attaques énergétiques et mécaniques.",
         lore: "La Reine des Nasods, dotée d'une haute intelligence et d'une conscience de soi développée. " +
@@ -169,7 +169,7 @@ export const characters = [
         id: "luciel",
         name: "Lu/Ciel",
         fullName: "Luciela \"Lu\" R. Sourcream & Ciel",
-        age: "Unknown / 24 ans",
+        age: "Inconnue / 24 ans",
         gender: "Female / Mâle",
         type: "Duo démoniaque",
         weapon: "Gantelets / gunblades",
@@ -195,7 +195,7 @@ export const characters = [
         weapon: "Armes à feu",
         role: "Distance / Armes",
         featuredClass: "Prime Operator",
-        featuredClassFr: "",
+        featuredClassFr: "Optimus Prime",
         image: "/images/personnages/rose.png",
         description:
             "Une combattante venue d’une autre dimension, experte dans l’utilisation des armes à feu.",
@@ -208,25 +208,25 @@ export const characters = [
         id: "ain",
         name: "Ain",
         fullName: "Ainchase Ishmael",
-        age: "Unknown",
+        age: "Inconnu",
         gender: "Mâle",
         type: "Émissaire divin",
         weapon: "Pendule",
         role: "Divin / Support",
         featuredClass: "Bluhen",
-        featuredClassFr: "",
+        featuredClassFr: "Florere",
         image: "/images/personnages/ain.png",
         description:
             "Un être créé par la déesse Ishmael, utilisant projection magique et pouvoir divin.",
         lore: "Un être mystérieux qui a surgi devant la Patrouille de l'El. Il se présente comme un prêtre au service d'une déesse et propose d'aider à retrouver l'Éclat d'El dérobé. Pourtant, tout en lui demeure enveloppé de mystère.",
         classes: ["Richter", "Bluhen", "Herrscher", "Opferung"],
-        classesFr: ["", "", "", ""],
+        classesFr: ["Arbiter", "Florere", "Regnator", "Sacratus"],
     },
     {
         id: "laby",
         name: "Laby",
         fullName: "Laby",
-        age: "Unknown",
+        age: "Inconnue",
         gender: "Female",
         type: "Être mystérieux",
         weapon: "Nisha / miroir",
@@ -239,7 +239,7 @@ export const characters = [
         lore: "Elle a vécu au plus profond de la Forêt Noire pendant une durée indéterminée, jusqu'à ce qu'elle puisse enfin en sortir, guidée par la 'Troisième Lumière Bleue'. " +
             "Elle décide de quitter la forêt et de partir en voyage pour découvrir qui elle est vraiment.",
         classes: ["Eternity Winner", "Radiant Soul", "Nisha Labyrinth", "Twins Picaro"],
-        classesFr: ["", "", "", ""],
+        classesFr: ["", "", "", "Arlequine"],
     },
     {
         id: "noah",
@@ -251,14 +251,14 @@ export const characters = [
         weapon: "Faucille",
         role: "Lune / Burst",
         featuredClass: "Liberator",
-        featuredClassFr: "",
+        featuredClassFr: "Libérator",
         image: "/images/personnages/noah.png",
         description:
             "Un jeune homme lié au pouvoir de la lune, marqué par le temps et son passé.",
         lore: "Il manie une faucille comme arme principale et exploite le pouvoir de la lune et des ténèbres, issus d'une expérience qui l'a transformé. " +
             "Il a perdu son frère aux mains de l'Ordre de Henir et en a effacé le souvenir, avant de le retrouver après l'Explosion de l'El, après quoi il fut scellé pendant un temps.",
         classes: ["Liberator", "Celestia", "Nyx Pieta", "Morpheus"],
-        classesFr: ["", "", "", ""],
+        classesFr: ["Libérator", "Célestia", "Nyx Pieta", "Morphée"],
     },
     {
         id: "lithia",
@@ -270,7 +270,7 @@ export const characters = [
         weapon: "Pioche / gemmes",
         role: "Progression / Gemmes",
         featuredClass: "Gembliss",
-        featuredClassFr: "",
+        featuredClassFr: "Eméraldia",
         image: "/images/personnages/lithia.png",
         description:
             "Une chasseuse de trésors utilisant gemmes, magie et mobilité pour explorer les ruines.",
@@ -279,6 +279,6 @@ export const characters = [
             "En route pour livrer ses conclusions, elle retrouve une amie d'enfance à Sander et décide d'explorer des ruines inconnues. " +
             "Elle y rencontre un spectre et se retrouve frappée d'une mystérieuse malédiction.",
         classes: ["Gembliss", "Avarice", "Achlys", "Mischief"],
-        classesFr: ["", "", "", ""],
+        classesFr: ["Eméraldia", "Avaricia", "", ""],
     },
 ];
