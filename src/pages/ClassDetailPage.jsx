@@ -19,6 +19,41 @@ function getMasterLogo(classItem) {
 
     return masterSymbols[classItem.characterId] || null;
 }
+function ClassNavigationCard({ item, direction, disabled = false, theme }) {
+    const label = direction === "previous" ? "Classe précédente" : "Classe suivante";
+    const arrow = direction === "previous" ? "←" : "→";
+
+    if (disabled || !item) {
+        return (
+            <div className={`class-nav-card ${direction} disabled`}>
+                <span className="class-nav-direction">{label}</span>
+                <strong>{direction === "previous" ? "Début du catalogue" : "Fin du catalogue"}</strong>
+                <small>
+                    {direction === "previous"
+                        ? "Aucune classe avant celle-ci"
+                        : "Aucune classe après celle-ci"}
+                </small>
+            </div>
+        );
+    }
+    return (
+        <Link className={`class-nav-card ${direction}`} to={getClassUrl(item)} style={{borderColor: theme.primary,}}>
+            <div className="class-nav-copy">
+                <span className="class-nav-direction">{label}</span>
+                <strong>{item.classNameFr || item.className}</strong>
+                <small>
+                    {item.character} — {item.pathNameFr || item.pathName}
+                </small>
+            </div>
+            <div className="class-nav-visual">
+                <img src={item.localPath} alt={item.alt} />
+            </div>
+            <span className="class-nav-arrow" style={{color: theme.primary,}}>
+                {arrow}
+            </span>
+        </Link>
+    );
+}
 
 function ClassDetailPage() {
     const { characterId, classId, stage } = useParams();
@@ -113,36 +148,8 @@ function ClassDetailPage() {
             </section>
             <section className="detail-grid class-detail-layout">
                 <section className="class-detail-navigation">
-                    {previousClass ? (
-                        <Link className="class-nav-card" to={getClassUrl(previousClass)} style={{borderColor: theme.primary,}}>
-                            <span>Classe précédente</span>
-                            <strong>{previousClass.classNameFr || previousClass.className}</strong>
-                            <small>
-                                {previousClass.character} — {previousClass.pathNameFr || previousClass.pathName}
-                            </small>
-                        </Link>
-                    ) : (
-                        <div className="class-nav-card disabled">
-                            <span>Classe précédente</span>
-                            <strong>Début du catalogue</strong>
-                            <small>Aucune classe avant celle-ci</small>
-                        </div>
-                    )}
-                    {nextClass ? (
-                        <Link className="class-nav-card" to={getClassUrl(nextClass)} style={{borderColor: theme.primary,}}>
-                            <span>Classe suivante</span>
-                            <strong>{nextClass.classNameFr || nextClass.className}</strong>
-                            <small>
-                                {nextClass.character} — {nextClass.pathNameFr || nextClass.pathName}
-                            </small>
-                        </Link>
-                    ) : (
-                        <div className="class-nav-card disabled">
-                            <span>Classe suivante</span>
-                            <strong>Fin du catalogue</strong>
-                            <small>Aucune classe après celle-ci</small>
-                        </div>
-                    )}
+                    <ClassNavigationCard item={previousClass} direction="previous" disabled={!previousClass} theme={theme}/>
+                    <ClassNavigationCard item={nextClass} direction="next" disabled={!nextClass} theme={theme}/>
                 </section>
                 <article className="detail-card identity-card">
                     <h2>Identité</h2>

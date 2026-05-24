@@ -331,10 +331,13 @@
 /*Page classes*/
 .classes-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
 }
+
 .class-card {
+    position: relative;
+    isolation: isolate;
     display: flex;
     flex-direction: column;
     min-height: 24rem;
@@ -342,44 +345,145 @@
     padding: 1rem;
     border: 1px solid;
     border-radius: 1.5rem;
-    background: var(--bg-card);
+    background:
+            radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.055), transparent 32%),
+            linear-gradient(180deg, rgba(15, 23, 42, 0.86), rgba(2, 6, 23, 0.96));
+    text-decoration: none;
+    transform: translateY(0);
+    transition:
+            transform 0.24s ease,
+            border-color 0.24s ease,
+            box-shadow 0.24s ease,
+            background 0.24s ease;
 }
+
+.class-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: radial-gradient(circle at 50% 18%, currentColor, transparent 34%);
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+.class-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+            0 18px 42px rgba(0, 0, 0, 0.34),
+            0 0 20px color-mix(in srgb, currentColor 26%, transparent);
+}
+
+.class-card.master-stage {
+    background:
+            radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.075), transparent 34%),
+            linear-gradient(180deg, rgba(22, 26, 54, 0.92), rgba(2, 6, 23, 0.98));
+}
+
 .class-card-image-wrap {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    height: 15rem;
+    height: 14.5rem;
     margin-bottom: 1rem;
 }
+
 .class-card-image {
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: center bottom;
-    filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.5));
+    filter:
+            drop-shadow(0 18px 24px rgba(0, 0, 0, 0.52))
+            drop-shadow(0 0 12px color-mix(in srgb, currentColor 24%, transparent));
+    transition:
+            transform 0.24s ease,
+            filter 0.24s ease;
 }
+
+.class-card:hover .class-card-image {
+    transform: translateY(-4px) scale(1.035);
+}
+
 .class-card-content {
-    display: grid;
-    gap: 0.6rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.55rem;
 }
+
+.class-card-content .class-stage-label {
+    width: fit-content;
+    margin-bottom: 0.1rem;
+}
+
 .class-card-content h2 {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.28rem;
+    line-height: 1.15;
 }
-.class-card-content p {
+
+.class-card-path {
+    display: grid;
+    gap: 0.15rem;
     margin: 0;
     color: var(--text-muted);
+    line-height: 1.4;
 }
+
+.class-card-path strong {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.class-card-path span {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.class-card-international-name,
+.master-symbol-name {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+.master-symbol-name {
+    margin-top: auto;
+    color: var(--text-soft);
+}
+
+.master-class-logo {
+    position: absolute;
+    right: 0.4rem;
+    top: 0.3rem;
+    z-index: 3;
+    width: 3.2rem;
+    height: 3.2rem;
+    object-fit: contain;
+    filter:
+            drop-shadow(0 0 14px rgba(255, 255, 255, 0.18))
+            drop-shadow(0 10px 18px rgba(0, 0, 0, 0.45));
+}
+
 @media (max-width: 1200px) {
     .classes-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
+
 @media (max-width: 850px) {
     .classes-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
 @media (max-width: 620px) {
     .classes-grid {
         grid-template-columns: 1fr;
@@ -553,28 +657,126 @@
         font-size: 0.95rem;
     }
 }
+/* Navigation fiches de classes */
 .class-detail-navigation {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     margin-top: 1rem;
 }
+
 .class-nav-card {
+    position: relative;
     display: grid;
-    gap: 0.25rem;
-    padding: 1rem 1.1rem;
+    grid-template-columns: minmax(0, 1fr) 5.5rem;
+    align-items: center;
+    gap: 1rem;
+    min-height: 7rem;
+    overflow: hidden;
+    padding: 1rem 3.2rem 1rem 1.1rem;
     border: 1px solid;
     border-radius: 1.2rem;
-    background: rgba(15, 23, 42, 0.72);
+    background:
+            radial-gradient(circle at 100% 50%, rgba(255, 255, 255, 0.055), transparent 10rem),
+            rgba(15, 23, 42, 0.72);
     text-decoration: none;
     transition:
             transform 0.22s ease,
             background 0.22s ease,
-            box-shadow 0.22s ease;
+            box-shadow 0.22s ease,
+            border-color 0.22s ease;
+}
+
+.class-nav-card:hover {
+    transform: translateY(-3px);
+    background:
+            radial-gradient(circle at 100% 50%, rgba(255, 255, 255, 0.075), transparent 10rem),
+            rgba(15, 23, 42, 0.9);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.06);
+}
+
+.class-nav-card.previous {
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+    padding: 1rem 1.1rem 1rem 3.2rem;
+}
+
+.class-nav-card.previous .class-nav-copy {
+    grid-column: 2;
+    text-align: right;
+}
+
+.class-nav-card.previous .class-nav-visual {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.class-nav-copy {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.25rem;
+    min-width: 0;
+}
+
+.class-nav-direction {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+/*Bouton de Navigation entre les cartes*/
+.class-nav-card strong {
+    color: #fff;
+    font-size: 1.08rem;
+    line-height: 1.15;
+}
+.class-nav-card small {
+    overflow: hidden;
+    color: var(--text-soft);
+    font-weight: 800;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.class-nav-visual {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: end center;
+    height: 5.8rem;
+    overflow: hidden;
+}
+.class-nav-visual img {
+    width: 100%;
+    height: 6.6rem;
+    object-fit: contain;
+    object-position: center bottom;
+    opacity: 0.9;
+    filter: drop-shadow(0 12px 16px rgba(0, 0, 0, 0.5));
+    transition:
+            transform 0.22s ease,
+            opacity 0.22s ease;
+}
+.class-nav-card:hover .class-nav-visual img {
+    transform: scale(1.06);
+    opacity: 1;
+}
+.class-nav-arrow {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    z-index: 3;
+    font-size: 1.4rem;
+    font-weight: 1000;
+    transform: translateY(-50%);
+}
+.class-nav-card.previous .class-nav-arrow {
+    right: auto;
+    left: 1rem;
 }
 .class-nav-card.disabled {
-    opacity: 0.45;
     cursor: not-allowed;
+    opacity: 0.45;
     border-color: var(--border-soft) !important;
 }
 .class-nav-card.disabled:hover {
@@ -582,39 +784,33 @@
     background: rgba(15, 23, 42, 0.72);
     box-shadow: none;
 }
-.class-nav-card:hover {
-    transform: translateY(-3px);
-    background: rgba(15, 23, 42, 0.9);
-    box-shadow: 0 0 24px rgba(255, 255, 255, 0.06);
+.class-nav-card.disabled .class-nav-arrow,
+.class-nav-card.disabled .class-nav-visual {
+    display: none;
 }
-.class-nav-card span {
-    color: var(--text-muted);
-    font-size: 0.76rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-}
-.class-nav-card strong {
-    color: #fff;
-    font-size: 1.1rem;
-}
-.class-nav-card small {
-    color: var(--text-soft);
-    font-weight: 800;
-}
-.class-nav-card:first-child {
-    text-align: left;
-}
-.class-nav-card:last-child {
-    text-align: right;
+.class-nav-card.disabled {
+    grid-template-columns: 1fr;
+    padding: 1rem 1.1rem;
 }
 @media (max-width: 680px) {
     .class-detail-navigation {
         grid-template-columns: 1fr;
     }
-
-    .class-nav-card:last-child {
+    .class-nav-card,
+    .class-nav-card.previous {
+        grid-template-columns: minmax(0, 1fr) 5.2rem;
+        padding: 1rem 3rem 1rem 1rem;
+    }
+    .class-nav-card.previous .class-nav-copy {
+        grid-column: 1;
         text-align: left;
+    }
+    .class-nav-card.previous .class-nav-visual {
+        grid-column: 2;
+    }
+    .class-nav-card.previous .class-nav-arrow {
+        left: auto;
+        right: 1rem;
     }
 }
 /*Builds liés*/

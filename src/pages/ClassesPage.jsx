@@ -6,7 +6,6 @@ import { characterThemes } from "../data/characterThemes";
 import { masterSymbols } from "../data/masterSymbols";
 import { getClassUrl } from "../utils/classRoutes";
 
-
 const stageLabels = {
     job1: "1re Spécialisation",
     job2: "2e Spécialisation",
@@ -21,9 +20,9 @@ function getMasterLogo(classItem) {
 }
 function ClassesPage() {
     const [activeCharacter, setActiveCharacter] = useState("all");
-
     const filteredClasses = useMemo(() => {
         if (activeCharacter === "all") return classImages;
+
         return classImages.filter((item) => item.characterId === activeCharacter);
     }, [activeCharacter]);
 
@@ -38,18 +37,11 @@ function ClassesPage() {
                 </p>
             </section>
             <section className="filter-bar">
-                <button
-                    className={activeCharacter === "all" ? "filter-button active" : "filter-button"}
-                    onClick={() => setActiveCharacter("all")}
-                >
+                <button className={activeCharacter === "all" ? "filter-button active" : "filter-button"} onClick={() => setActiveCharacter("all")}>
                     Tous
                 </button>
                 {characters.map((character) => (
-                    <button
-                        key={character.id}
-                        className={activeCharacter === character.id ? "filter-button active" : "filter-button"}
-                        onClick={() => setActiveCharacter(character.id)}
-                    >
+                    <button key={character.id} className={activeCharacter === character.id ? "filter-button active" : "filter-button"} onClick={() => setActiveCharacter(character.id)}>
                         {character.name}
                     </button>
                 ))}
@@ -60,11 +52,7 @@ function ClassesPage() {
                     const masterLogo = getMasterLogo(classItem);
 
                     return (
-                        <Link to={getClassUrl(classItem)} className={classItem.jobStage === "master" ? "class-card master-stage" : "class-card"} key={`${classItem.characterId}-${classItem.pathName}-${classItem.jobStage}`}
-                            style={{
-                                borderColor: theme.primary,
-                                boxShadow: `0 0 20px ${theme.glow}`,
-                            }}>
+                        <Link to={getClassUrl(classItem)} className={classItem.jobStage === "master" ? "class-card master-stage" : "class-card"} key={`${classItem.characterId}-${classItem.pathName}-${classItem.jobStage}`} style={{borderColor: theme.primary,}}>
                             <div className="class-card-image-wrap">
                                 {masterLogo && (
                                     <img className="master-class-logo" src={masterLogo.image} alt={masterLogo.alt}/>
@@ -72,16 +60,19 @@ function ClassesPage() {
                                 <img className="class-card-image" src={classItem.localPath} alt={classItem.alt}/>
                             </div>
                             <div className="class-card-content">
-                            <span className="class-stage-label" style={{backgroundColor: theme.glow, color: theme.primary,}}>
-                                {stageLabels[classItem.jobStage] || classItem.jobStage}
-                            </span>
+                                <span className="class-stage-label" style={{backgroundColor: theme.glow, color: theme.primary,}}>
+                                    {stageLabels[classItem.jobStage] || classItem.jobStage}
+                                </span>
                                 <h2 style={{ color: theme.primary }}>
                                     {classItem.classNameFr || classItem.className}
                                 </h2>
-                                <p>
-                                    {classItem.character} — {classItem.pathNameFr || classItem.pathName}
+                                <p className="class-card-path">
+                                    <strong>{classItem.character}</strong>
+                                    <span>{classItem.pathNameFr || classItem.pathName}</span>
                                 </p>
-                                <small>{classItem.className}</small>
+                                <small className="class-card-international-name">
+                                    International : {classItem.className}
+                                </small>
                                 {masterLogo && (
                                     <small className="master-symbol-name">
                                         Symbole : {masterLogo.nameFr || masterLogo.name}
