@@ -830,7 +830,7 @@ export const classImages = [
         pathNameFr: "Nasod Antithesa",
         jobStage: "job3",
         className: "Code: Antithese",
-        classNameFr: "Nasod Antihesa",
+        classNameFr: "Nasod Antithesa",
         fileName: "eve-code-antithese.png"
     }),
     createClassImage({
