@@ -63,7 +63,8 @@ function ClassDetailPage() {
     const lore = classLore.find(
         (item) =>
             item.characterId === classItem.characterId &&
-            item.className === classItem.className
+            item.className === classItem.className &&
+            item.jobStage === classItem.jobStage
     );
 
     return (
@@ -126,30 +127,24 @@ function ClassDetailPage() {
                         </div>
                         {lore && (
                             <article className="detail-card wide">
-                                <h2>Identité de la spécialisation</h2>
+                                <h2>{lore.title}</h2>
+                                <div className="class-lore-path">
+                                    <span>{lore.fromClassFr || lore.fromClass}</span>
+                                    <span>→</span>
+                                    <span>{lore.toClassFr || lore.toClass}</span>
+                                </div>
                                 {lore.quote && (
                                     <blockquote className="class-quote">
                                         “{lore.quote}”
                                     </blockquote>
                                 )}
-                                <p>{lore.identityNote}</p>
+                                <p>{lore.text}</p>
                                 {lore.themes?.length > 0 && (
                                     <div className="class-lore-tags">
                                         {lore.themes.map((theme) => (
                                             <span key={theme}>{theme}</span>
                                         ))}
                                     </div>
-                                )}
-                                {lore.sourceTitle && (
-                                    <small>
-                                        Source : {lore.sourceUrl ? (
-                                        <a href={lore.sourceUrl} target="_blank" rel="noreferrer">
-                                            {lore.sourceTitle}
-                                        </a>
-                                    ) : (
-                                        lore.sourceTitle
-                                    )}
-                                    </small>
                                 )}
                             </article>
                         )}

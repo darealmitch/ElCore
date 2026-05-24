@@ -154,7 +154,7 @@ export const characters = [
         gender: "Mâle",
         type: "Scientifique / Dynamo",
         weapon: "Dynamos Nasod",
-        role: "Burst / Technologie",
+        role: "Booster / Technologie",
         featuredClass: "Doom Bringer",
         featuredClassFr: "Calamité",
         image: "/images/personnages/add.png",
@@ -200,7 +200,7 @@ export const characters = [
         description:
             "Une combattante venue d’une autre dimension, experte dans l’utilisation des armes à feu.",
         lore: "Membre du [Jardin Majestueux], la force d'élite protégeant la Cité Royale des Cieux, elle a reçu le nom de code [Rose] en tant que la plus puissante de cet ordre. " +
-            "Pour éliminer les ennemis menaçant les Cieux, Rose a été mandatée pour enquêter dans une dimension parallèle appelée Elrios.",
+            "Pour éliminer les ennemis menaçant les Cieux, Rose a été mandatée pour enquêter dans une dimension parallèle appelée Elios.",
         classes: ["Tempest Burster", "Black Massacre", "Minerva", "Prime Operator"],
         classesFr: ["", "", "", ""],
     },

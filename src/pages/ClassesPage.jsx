@@ -37,7 +37,6 @@ function ClassesPage() {
                     déjà ajoutés à ElCore.
                 </p>
             </section>
-
             <section className="filter-bar">
                 <button
                     className={activeCharacter === "all" ? "filter-button active" : "filter-button"}
@@ -45,7 +44,6 @@ function ClassesPage() {
                 >
                     Tous
                 </button>
-
                 {characters.map((character) => (
                     <button
                         key={character.id}
@@ -56,22 +54,17 @@ function ClassesPage() {
                     </button>
                 ))}
             </section>
-
             <section className="classes-grid">
                 {filteredClasses.map((classItem) => {
                     const theme = characterThemes[classItem.characterId];
                     const masterLogo = getMasterLogo(classItem);
 
                     return (
-                        <Link
-                            to={getClassUrl(classItem)}
-                            className={classItem.jobStage === "master" ? "class-card master-stage" : "class-card"}
-                            key={`${classItem.characterId}-${classItem.pathName}-${classItem.jobStage}`}
+                        <Link to={getClassUrl(classItem)} className={classItem.jobStage === "master" ? "class-card master-stage" : "class-card"} key={`${classItem.characterId}-${classItem.pathName}-${classItem.jobStage}`}
                             style={{
                                 borderColor: theme.primary,
                                 boxShadow: `0 0 20px ${theme.glow}`,
-                            }}
-                        >
+                            }}>
                             <div className="class-card-image-wrap">
                                 {masterLogo && (
                                     <img className="master-class-logo" src={masterLogo.image} alt={masterLogo.alt}/>
@@ -79,15 +72,9 @@ function ClassesPage() {
                                 <img className="class-card-image" src={classItem.localPath} alt={classItem.alt}/>
                             </div>
                             <div className="class-card-content">
-                <span
-                    className="class-stage-label"
-                    style={{
-                        backgroundColor: theme.glow,
-                        color: theme.primary,
-                    }}
-                >
-                  {stageLabels[classItem.jobStage] || classItem.jobStage}
-                </span>
+                            <span className="class-stage-label" style={{backgroundColor: theme.glow, color: theme.primary,}}>
+                                {stageLabels[classItem.jobStage] || classItem.jobStage}
+                            </span>
                                 <h2 style={{ color: theme.primary }}>
                                     {classItem.classNameFr || classItem.className}
                                 </h2>

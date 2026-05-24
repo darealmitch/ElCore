@@ -226,7 +226,7 @@ export const builds = [
         characterId: "aisha",
         character: "Aisha",
         className: "Lord Azoth",
-        classNameFr: "Lord Azoth",
+        classNameFr: "Druidesse d'Azoth",
         title: "DPS physique alchimique à fort potentiel",
         mode: "PvE",
         role: "DPS physique",
