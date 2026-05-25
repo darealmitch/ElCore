@@ -165,7 +165,6 @@ function ClassDetailPage() {
                 </section>
                 <article className="detail-card identity-card">
                     <h2>Identité</h2>
-
                     <div className="detail-stats">
                         <div>
                             <span>Personnage</span>
@@ -183,36 +182,6 @@ function ClassDetailPage() {
                             <span>Classe</span>
                             <strong>{classItem.classNameFr || classItem.className}</strong>
                         </div>
-                        {description && description.presentation && (
-                            <article className="detail-card wide class-description-card">
-                                {description.title && <h2>{description.title}</h2>}
-                                {description.path?.length > 0 && (
-                                    <div className="class-lore-path">
-                                        {description.path.map((step, index) => (
-                                            <span key={step}>
-                                                {step}
-                                                {index < description.path.length - 1 ? " → " : ""}
-                                            </span>
-                                        ))}
-                                    </div>
-                                )}
-                                <p>{description.presentation}</p>
-                                <div className="detail-stats">
-                                    {description.attackType && (
-                                        <div>
-                                            <span>Type d'attaque</span>
-                                            <strong>{description.attackType}</strong>
-                                        </div>
-                                    )}
-                                    {description.attackRange && (
-                                        <div>
-                                            <span>Portée d'attaque</span>
-                                            <strong>{description.attackRange}</strong>
-                                        </div>
-                                    )}
-                                </div>
-                            </article>
-                        )}
                     </div>
                 </article>
                 <article className="detail-card progression-card">
@@ -223,6 +192,36 @@ function ClassDetailPage() {
                         Elle sera utilisée pour afficher l’évolution complète du personnage.
                     </p>
                 </article>
+                {description && description.presentation && (
+                    <article className="detail-card wide class-description-card">
+                        {description.title && <h2>{description.title}</h2>}
+                        {description.path?.length > 0 && (
+                            <div className="class-lore-path">
+                                {description.path.map((step, index) => (
+                                    <span key={step}>
+                                                {step}
+                                        {index < description.path.length - 1 ? " → " : ""}
+                                            </span>
+                                ))}
+                            </div>
+                        )}
+                        <p>{description.presentation}</p>
+                        <div className="detail-stats">
+                            {description.attackType && (
+                                <div>
+                                    <span>Type d'attaque</span>
+                                    <strong>{description.attackType}</strong>
+                                </div>
+                            )}
+                            {description.attackRange && (
+                                <div>
+                                    <span>Portée d'attaque</span>
+                                    <strong>{description.attackRange}</strong>
+                                </div>
+                            )}
+                        </div>
+                    </article>
+                )}
                 {lore && (
                     <article className="detail-card wide lore-card">
                         <h2>{lore.title}</h2>
