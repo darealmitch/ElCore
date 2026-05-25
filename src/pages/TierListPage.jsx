@@ -1,11 +1,17 @@
 import { useMemo, useState } from "react";
 import { tierList } from "../data/tierList";
 import { characterThemes } from "../data/characterThemes";
+import { scrollToSectionAfterRender } from "../utils/scrollToSection";
 
 const modes = ["PvE", "Raid", "Débutant"];
 
 function TierListPage() {
     const [activeMode, setActiveMode] = useState("PvE");
+
+    const updateMode = (mode) => {
+        setActiveMode(mode);
+        scrollToSectionAfterRender("tier-list-results");
+    };
 
     const currentTierList = useMemo(
         () => tierList.find((list) => list.mode === activeMode),
@@ -25,17 +31,15 @@ function TierListPage() {
 
             <section className="filter-bar">
                 {modes.map((mode) => (
-                    <button
-                        key={mode}
-                        className={activeMode === mode ? "filter-button active" : "filter-button"}
-                        onClick={() => setActiveMode(mode)}
-                    >
+                    <button key={mode} className={
+                        activeMode === mode ? "filter-button active" : "filter-button"
+                    } onClick={() => updateMode(mode)}>
                         {mode}
                     </button>
                 ))}
             </section>
 
-            <section className="tier-list-wrapper">
+            <section className="tier-list-wrapper" id="tier-list-results">
                 {currentTierList?.tiers.map((tier) => (
                     <div className="tier-row" key={tier.rank}>
                         <div className="tier-rank">{tier.rank}</div>
@@ -45,23 +49,10 @@ function TierListPage() {
                                 const theme = characterThemes[entry.characterId];
 
                                 return (
-                                    <article
-                                        className="tier-entry-card"
-                                        key={`${entry.character}-${entry.className}`}
-                                        style={{
-                                            borderColor: theme.primary,
-                                            boxShadow: `0 0 20px ${theme.glow}`
-                                        }}
-                                    >
-                    <span
-                        style={{
-                            backgroundColor: theme.glow,
-                            color: theme.primary
-                        }}
-                    >
-                      {entry.role}
-                    </span>
-
+                                    <article className="tier-entry-card" key={`${entry.character}-${entry.className}`} style={{borderColor: theme.primary, boxShadow: `0 0 20px ${theme.glow}`}}>
+                                        <span style={{backgroundColor: theme.glow, color: theme.primary}}>
+                                            {entry.role}
+                                        </span>
                                         <h2 style={{ color: theme.primary }}>{entry.className}</h2>
                                         <strong>{entry.character}</strong>
                                         <p>{entry.reason}</p>

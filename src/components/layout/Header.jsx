@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { searchItems } from "../../data/searchItems";
+import { scrollToSection } from "../../utils/scrollToSection";
 
 const navLinks = [
     { label: "Accueil", path: "/" },
@@ -50,7 +51,7 @@ function Header() {
                         </div>
                     )}
                 </div>
-                <button>Commencer</button>
+                <button type="button" onClick={() => scrollToSection("quick-access")}>Commencer</button>
             </div>
         </header>
     );

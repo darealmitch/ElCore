@@ -5,6 +5,7 @@ import { characters } from "../data/characters";
 import { characterThemes } from "../data/characterThemes";
 import { masterSymbols } from "../data/masterSymbols";
 import { getClassUrl } from "../utils/classRoutes";
+import { scrollToSectionAfterRender } from "../utils/scrollToSection";
 
 const stageLabels = {
     job1: "1re Spécialisation",
@@ -22,6 +23,16 @@ function getMasterLogo(classItem) {
 function ClassesPage() {
     const [activeCharacter, setActiveCharacter] = useState("all");
     const [activeStage, setActiveStage] = useState("all");
+
+    const updateCharacterFilter = (characterId) => {
+        setActiveCharacter(characterId);
+        scrollToSectionAfterRender("classes-results");
+    };
+
+    const updateStageFilter = (stage) => {
+        setActiveStage(stage);
+        scrollToSectionAfterRender("classes-results");
+    };
 
     const filteredClasses = useMemo(() => {
         return classImages.filter((item) => {
@@ -53,7 +64,7 @@ function ClassesPage() {
                     <div className="classes-character-strip" aria-label="Filtrer par personnage">
                         <button
                             className={activeCharacter === "all" ? "filter-chip active" : "filter-chip"}
-                            onClick={() => setActiveCharacter("all")}
+                            onClick={() => updateCharacterFilter("all")}
                         >
                             Tous
                         </button>
@@ -62,7 +73,7 @@ function ClassesPage() {
                             <button
                                 key={character.id}
                                 className={activeCharacter === character.id ? "filter-chip active" : "filter-chip"}
-                                onClick={() => setActiveCharacter(character.id)}
+                                onClick={() => updateCharacterFilter(character.id)}
                             >
                                 {character.name}
                             </button>
@@ -76,7 +87,7 @@ function ClassesPage() {
                     <div className="classes-stage-tabs" aria-label="Filtrer par étape">
                         <button
                             className={activeStage === "all" ? "stage-tab active" : "stage-tab"}
-                            onClick={() => setActiveStage("all")}
+                            onClick={() => updateStageFilter("all")}
                         >
                             Toutes
                         </button>
@@ -85,7 +96,7 @@ function ClassesPage() {
                             <button
                                 key={stage}
                                 className={activeStage === stage ? "stage-tab active" : "stage-tab"}
-                                onClick={() => setActiveStage(stage)}
+                                onClick={() => updateStageFilter(stage)}
                             >
                                 {label}
                             </button>
@@ -94,7 +105,7 @@ function ClassesPage() {
                 </div>
             </section>
 
-            <section className="classes-grid">
+            <section className="classes-grid" id="classes-results">
                 {filteredClasses.map((classItem) => {
                     const theme = characterThemes[classItem.characterId];
                     const masterLogo = getMasterLogo(classItem);

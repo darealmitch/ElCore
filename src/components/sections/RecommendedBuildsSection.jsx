@@ -6,7 +6,7 @@ function RecommendedBuildsSection() {
     const recommendedBuilds = builds.slice(0, 3);
 
     return (
-        <section className="home-section">
+        <section className="home-section" id="recommended-builds">
             <SectionHeader eyebrow="Builds recommandés" title="Des builds vérifiés à consulter"/>
             <div className="home-build-grid">
                 {recommendedBuilds.map((build) => (

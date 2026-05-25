@@ -33,7 +33,7 @@ const quickAccessItems = [
 ];
 function QuickAccessSection() {
     return (
-        <section className="home-section">
+        <section className="home-section" id="quick-access">
             <div className="section-header">
                 <span>Navigation</span>
                 <h2>Accès rapide</h2>
