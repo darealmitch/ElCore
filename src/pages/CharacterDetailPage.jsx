@@ -4,6 +4,8 @@ import { characterThemes } from "../data/characterThemes";
 import ClassPathTimeline from "/src/components/ui/ClassPathTimeline";
 import BuildCard from "../components/ui/BuildCard";
 import { builds } from "../data/builds";
+import SkillTree from "../components/ui/SkillTree";
+import { classSkills } from "../data/classSkills";
 
 function CharacterDetailPage() {
     const { id } = useParams();
@@ -24,6 +26,11 @@ function CharacterDetailPage() {
     const theme = characterThemes[character.id];
     const characterBuilds = builds.filter(
         (build) => build.characterId === character.id
+    );
+    const baseSkillTree = classSkills.find(
+        (item) =>
+            item.characterId === character.id &&
+            item.jobStage === "base"
     );
 
     return (
@@ -87,6 +94,13 @@ function CharacterDetailPage() {
                     </article>
                 </section>
                 <br/>
+                {baseSkillTree && (
+                    <section className="detail-section character-base-skills-section">
+                        <article className="detail-card wide skills-card">
+                            <SkillTree data={baseSkillTree} />
+                        </article>
+                    </section>
+                )}
                 <div className="section-header">
                     <span>Classes</span>
                     <h2>Chemins de spécialisation</h2>
