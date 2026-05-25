@@ -6,7 +6,42 @@ import BuildCard from "../components/ui/BuildCard";
 import { builds } from "../data/builds";
 import SkillTree from "../components/ui/SkillTree";
 import { classSkills } from "../data/classSkills";
+import { characterMechanics } from "../data/characterMechanics";
+import { ELSWORD_AURA_COLORS } from "../data/skills";
 
+function renderElswordAuraText(text) {
+    if (!text) return null;
+
+    const parts = text.split(/(vitalité|destruction)/gi);
+
+    return parts.map((part, index) => {
+        const normalizedPart = part.toLowerCase();
+
+        if (normalizedPart === "vitalité") {
+            return (
+                <span
+                    key={`${part}-${index}`}
+                    className="elsword-aura-word vitality"
+                >
+                    {part}
+                </span>
+            );
+        }
+
+        if (normalizedPart === "destruction") {
+            return (
+                <span
+                    key={`${part}-${index}`}
+                    className="elsword-aura-word destruction"
+                >
+                    {part}
+                </span>
+            );
+        }
+
+        return part;
+    });
+}
 function CharacterDetailPage() {
     const { id } = useParams();
     const character = characters.find((item) => item.id === id);
@@ -31,6 +66,9 @@ function CharacterDetailPage() {
         (item) =>
             item.characterId === character.id &&
             item.jobStage === "base"
+    );
+    const characterMechanic = characterMechanics.find(
+        (item) => item.characterId === character.id
     );
 
     return (
@@ -93,11 +131,29 @@ function CharacterDetailPage() {
                         <p>{character.description}</p>
                     </article>
                 </section>
-                <br/>
                 {baseSkillTree && (
                     <section className="detail-section character-base-skills-section">
-                        <article className="detail-card wide skills-card">
-                            <SkillTree data={baseSkillTree} />
+                        <article className="detail-card wide skills-card character-skills-card">
+                            <div className="character-skills-layout">
+                                <SkillTree data={baseSkillTree} />
+
+                                {characterMechanic && (
+                                    <aside className="character-mechanic-card">
+                                        <span>Particularité</span>
+                                        <h3>{characterMechanic.title}</h3>
+
+                                        {characterMechanic.subtitle && (
+                                            <strong>{characterMechanic.subtitle}</strong>
+                                        )}
+                                        <p>{renderElswordAuraText(characterMechanic.text)}</p>
+                                        {characterMechanic.note && (
+                                            <p className="character-mechanic-note">
+                                                {renderElswordAuraText(characterMechanic.note)}
+                                            </p>
+                                        )}
+                                    </aside>
+                                )}
+                            </div>
                         </article>
                     </section>
                 )}

@@ -11,9 +11,10 @@ export const characters = [
         featuredClass: "Genesis",
         featuredClassFr: "Séphiroth",
         image: "/images/personnages/elsword.png",
-        description: "Un épéiste offensif, simple à prendre en main et efficace en combat rapproché.",
+        description: "Jeune épéiste courageux et impulsif, Elsword combat en première ligne avec une grande épée. " +
+            "Sa particularité repose sur la Voie de l'épée, une jauge unique qui alterne entre vitalité et destruction selon les attaques utilisées.",
         lore: "Petit frère d'Elesis, la Première Capitaine des Chevaliers Rouges de Velder, Elsword s'est entraîné dès son plus jeune âge pour être aussi fort que sa sœur, apprenant ses techniques au sabre auprès d'un chevalier de Velder." +
-            " Il a débuté son aventure en recevant la mission de restaurer l'El en tant que membre de la Patrouille de l'El.",
+            " Il a débuté son aventure en recevant la mission de restaurer l'El en tant que membre deq Chercheurs de l'Eldrit.",
         classes: ["Knight Emperor", "Rune Master", "Immortal", "Genesis"],
         classesFr: ["Chevalier Royal", "Maître des runes", "Immortel", "Séphiroth"]
     },

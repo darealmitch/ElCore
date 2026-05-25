@@ -1,35 +1,27 @@
 import { useMemo, useState } from "react";
-import { skills, SKILL_TYPE_COLORS } from "../../data/skills";
+import { skills, SKILL_TYPE_COLORS, ELSWORD_AURA_COLORS } from "../../data/skills";
 
 function getNodePosition(skill, treeSkills, levels) {
     const columnStart = skill.type === "passive" ? 60 : 0;
     const columnWidth = skill.type === "passive" ? 40 : 60;
-
     const levelIndex = levels.indexOf(skill.level);
     const safeLevelIndex = levelIndex >= 0 ? levelIndex : 0;
-
     const y =
         levels.length > 1
             ? 10 + (safeLevelIndex / (levels.length - 1)) * 80
             : 50;
-
     const skillsAtSameLevelAndType = treeSkills.filter(
         (item) => item.level === skill.level && item.type === skill.type
     );
-
     const skillIndex = skillsAtSameLevelAndType.findIndex(
         (item) => item.id === skill.id
     );
-
     const count = skillsAtSameLevelAndType.length;
-
     const localX =
         count <= 1
             ? 50
             : 18 + (skillIndex / (count - 1)) * 64;
-
     const x = columnStart + (localX / 100) * columnWidth;
-
     return { x, y };
 }
 
@@ -73,37 +65,35 @@ function SkillTree({ data }) {
 
                     <div className="skill-tree-icons">
                         {treeSkills.map((skill) => {
-                            const position = getNodePosition(
-                                skill,
-                                treeSkills,
-                                data.levels
-                            );
+                            const position = getNodePosition(skill, treeSkills, data.levels);
+                            const tooltipDirection = position.y >= 75 ? "left" : "bottom";
 
                             return (
                                 <button
                                     key={skill.id}
                                     type="button"
-                                    className={
-                                        selectedSkillId === skill.id
-                                            ? "skill-node active"
-                                            : "skill-node"
-                                    }
+                                    className={[
+                                        selectedSkillId === skill.id ? "skill-node active" : "skill-node",
+                                        tooltipDirection === "left" ? "tooltip-left" : "",
+                                    ].join(" ")}
                                     style={{
                                         left: `${position.x}%`,
                                         top: `${position.y}%`,
-                                        "--skill-border":
-                                            SKILL_TYPE_COLORS[skill.type] || "#facc15",
+                                        "--skill-border": SKILL_TYPE_COLORS[skill.type] || "#facc15",
+                                        "--skill-aura": skill.auraType
+                                            ? ELSWORD_AURA_COLORS[skill.auraType]
+                                            : "transparent",
                                     }}
-                                    onClick={() => setSelectedSkillId(skill.id)}
-                                    aria-label={skill.nameFr || skill.name}
-                                >
-                                    <img
-                                        src={skill.image}
-                                        alt={skill.nameFr || skill.name}
-                                    />
+                                    onClick={() => {
+                                        setSelectedSkillId((currentSkillId) =>
+                                            currentSkillId === skill.id ? null : skill.id
+                                        );
+                                    }}
+                                    aria-label={skill.nameFr || skill.name}>
+                                    <img src={skill.image} alt={skill.nameFr || skill.name} />
 
                                     <span className="skill-tooltip">
-                                        {skill.nameFr || skill.name}
+                                         {skill.nameFr || skill.name}
                                     </span>
                                 </button>
                             );

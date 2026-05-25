@@ -52,5 +52,17 @@ export const classesSystemGuide = {
             description:
                 "Compétences passives supplémentaires pour tous les personnages en 3e job.",
         },
+
+    ],
+    characterMechanics: [
+        {
+            characterId: "elsword",
+            title: "Particularité d'Elsword : la Voie de l'épée",
+            text: "En jouant avec Elsword, une jauge supplémentaire apparaît sous celle des PM : la jauge de la Voie de l'épée. " +
+                "Elle permet d'activer l'aura de vitalité ou l'aura de destruction pendant une période limitée. " +
+                "Selon le type de combos ou de compétences utilisés, la jauge tend vers la vitalité ou vers la destruction, ce qui permet d'obtenir des bonus supplémentaires.",
+            note: "Le système est contre-intuitif au premier abord : les attaques de vitalité font baisser la vitalité et monter la destruction, tandis que les attaques de destruction font baisser la destruction et monter la vitalité. " +
+                "Seules les attaques qui consomment la jauge profitent donc des bonus de leur aura respective.",
+        },
     ],
 };
