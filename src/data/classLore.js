@@ -80,10 +80,11 @@ export const classLore = [
         fromClassFr: "Invocateur d'épées",
         toClass: "Immortal",
         toClassFr: "Immortel",
-        quote: "",
-        text: "Profondément lié à l'épée magique Conwell, l'Invocateur d'épées fait le choix d'accepter pleinement le pouvoir de l'El sombre afin d'élargir ses capacités. " +
-            "En revendiquant cette puissance comme sienne, il renforce son habileté à invoquer de multiples lames et devient un guerrier implacable sous l'identité de l'Immortel.",
-        themes: ["Conwell", "El sombre", "Invocation de lames"]
+        quote: "Mon épée ne connaît aucun repos !",
+        text: "Profondément lié à l'épée magique Cornwell, l'Invocateur d'épées fait le choix d'accepter pleinement le pouvoir de l'El sombre afin d'élargir ses capacités." +
+            "Après son long périple et sa rencontre avec le grand El, son corps et son esprit se renforcent au point de lui permettre de maîtriser cette puissance comme la sienne." +
+            "En revendiquant cette force, il développe davantage son habileté à invoquer de multiples lames et devient un guerrier implacable sous l'identité de l'Immortel.",
+        themes: ["Cornwell", "El sombre", "Invocation de lames"]
     },
     {
         id: "elsword-immortal-master",
@@ -97,7 +98,7 @@ export const classLore = [
         toClass: "Immortal",
         toClassFr: "Immortel",
         quote: "",
-        text: "L'accès à la classe Maître permet à l'Immortel de parfaire son contrôle sur l'énergie obscure qu'il exploite et sur sa résonance avec Conwell. " +
+        text: "L'accès à la classe Maître permet à l'Immortel de parfaire son contrôle sur l'énergie obscure qu'il exploite et sur sa résonance avec Cornwell. " +
             "En canalisant cette force avec plus de rigueur, il affine son style fondé sur les lames invoquées et atteint une forme de maîtrise plus stable et plus tranchante.",
         themes: ["Classe Maître", "Contrôle", "Discipline"]
     },
@@ -135,5 +136,20 @@ export const classLore = [
         text: "Confronté à l'épreuve de la classe Maître, Séphiroth doit maintenir l'équilibre fragile entre sa conscience propre et l'influence de l'El. " +
             "Cet accomplissement renforce son rôle de gardien et lui permet de protéger Elios avec une précision accrue, sans laisser sa volonté se dissoudre entièrement dans la mission qu'il porte.",
         themes: ["Classe Maître", "Équilibre", "Protection d'Elios"]
+    },
+    {
+        characterId: "laby",
+        classNameFr: "Labyrinthe de Nisha",
+        jobStage: "job3",
+        title: "La 3e voie de spécialisation de Laby",
+        fromClassFr: "Bébé obscur",
+        toClassFr: "Labyrinthe de Nisha",
+        quote: "Es-tu prêt à te lancer dans ce sombre chapitre de la vie de Laby ?",
+        text: "Lorsque Laby quitte la contrée du Bosquet des ténèbres, où elle a vécu pendant des siècles, elle est encore emplie d'une énergie et d'un enthousiasme sans faille. " +
+            "Confrontée au monde réel, elle remet rapidement les pieds sur terre. Laby se replie de plus en plus sur elle-même et demande de l'aide à son miroir Nisha. " +
+            "Autrefois joyeuse, Laby se sent désormais étrangère à la fois au bosquet et au monde, elle se perd dans un tourbillon d'émotions négatives. " +
+            "Nisha recueille ses émotions négatives et invoque des illusions positives, mais ce monde illusoire finit par s'effriter." +
+            "Pour protéger Laby, Nisha décide finalement de prendre le contrôle de ses émotions, scelle la fillette dans son miroir et prend une apparence humaine.",
+        themes: ["Isolement", "Illusion", "Nisha", "Protection"],
     }
 ];

@@ -279,6 +279,6 @@ export const characters = [
             "En route pour livrer ses conclusions, elle retrouve une amie d'enfance à Sander et décide d'explorer des ruines inconnues. " +
             "Elle y rencontre un spectre et se retrouve frappée d'une mystérieuse malédiction.",
         classes: ["Gembliss", "Avarice", "Achlys", "Mischief"],
-        classesFr: ["Eméraldia", "Avaricia", "", ""],
+        classesFr: ["Eméraldia", "Avaricia", "", "Delinquenta"],
     },
 ];

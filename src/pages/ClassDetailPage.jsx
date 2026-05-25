@@ -99,12 +99,17 @@ function ClassDetailPage() {
             item.className === classItem.className &&
             item.jobStage === classItem.jobStage
     );
-    const description = classDescriptions.find(
-        (item) =>
-            item.characterId === classItem.characterId &&
-            item.className === classItem.className &&
-            item.jobStage === classItem.jobStage
-    );
+    const description = classDescriptions.find((item) => {
+        const sameCharacter = item.characterId === classItem.characterId;
+        const samePath =
+            item.pathName === classItem.pathName ||
+            item.pathNameFr === classItem.pathNameFr ||
+            item.className === classItem.pathName ||
+            item.classNameFr === classItem.pathNameFr ||
+            item.path?.includes(classItem.className) ||
+            item.path?.includes(classItem.classNameFr);
+        return sameCharacter && samePath;
+    });
     const currentClassIndex = classImages.findIndex(
         (item) =>
             item.characterId === classItem.characterId &&

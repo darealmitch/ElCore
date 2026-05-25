@@ -1691,7 +1691,7 @@ export const classImages = [
         pathNameFr: "",
         jobStage: "job3",
         className: "Tempest Burster",
-        classNameFr: "",
+        classNameFr: "Tempête furieuse",
         fileName: "rose-tempest-burster.png"
     }),
     createClassImage({
@@ -1701,7 +1701,7 @@ export const classImages = [
         pathNameFr: "",
         jobStage: "master",
         className: "Tempest Burster",
-        classNameFr: "",
+        classNameFr: "Tempête furieuse",
         fileName: "rose-tempest-burster-master.png"
     }),
 
@@ -1722,7 +1722,7 @@ export const classImages = [
         pathNameFr: "",
         jobStage: "job2",
         className: "Crimson Rose",
-        classNameFr: "",
+        classNameFr: "Rose pourpre",
         fileName: "rose-crimson-rose.png"
     }),
     createClassImage({
@@ -1750,7 +1750,7 @@ export const classImages = [
         characterId: "rose",
         character: "Rose",
         pathName: "Minerva",
-        pathNameFr: "",
+        pathNameFr: "Minerve",
         jobStage: "job1",
         className: "Valkyrie",
         classNameFr: "",
@@ -1760,7 +1760,7 @@ export const classImages = [
         characterId: "rose",
         character: "Rose",
         pathName: "Minerva",
-        pathNameFr: "",
+        pathNameFr: "Minerve",
         jobStage: "job2",
         className: "Freyja",
         classNameFr: "",
@@ -1770,20 +1770,20 @@ export const classImages = [
         characterId: "rose",
         character: "Rose",
         pathName: "Minerva",
-        pathNameFr: "",
+        pathNameFr: "Minerve",
         jobStage: "job3",
         className: "Minerva",
-        classNameFr: "",
+        classNameFr: "Minerve",
         fileName: "rose-minerva.png"
     }),
     createClassImage({
         characterId: "rose",
         character: "Rose",
         pathName: "Minerva",
-        pathNameFr: "",
+        pathNameFr: "Minerve",
         jobStage: "master",
         className: "Minerva",
-        classNameFr: "",
+        classNameFr: "Minerve",
         fileName: "rose-minerva-master.png"
     }),
 
@@ -2095,10 +2095,10 @@ export const classImages = [
         characterId: "laby",
         character: "Laby",
         pathName: "Nisha Labyrinth",
-        pathNameFr: "",
+        pathNameFr: "Labyrinthe de Nisha",
         jobStage: "job1",
         className: "Rusty Child",
-        classNameFr: "",
+        classNameFr: "Bébé obscur",
         fileName: "laby-rusty-child.png"
     }),
 
@@ -2106,10 +2106,10 @@ export const classImages = [
         characterId: "laby",
         character: "Laby",
         pathName: "Nisha Labyrinth",
-        pathNameFr: "",
+        pathNameFr: "Labyrinthe de Nisha",
         jobStage: "job2",
         className: "Daydreamer",
-        classNameFr: "",
+        classNameFr: "Rêveuse diurne",
         fileName: "laby-daydreamer.png"
     }),
 
@@ -2117,10 +2117,10 @@ export const classImages = [
         characterId: "laby",
         character: "Laby",
         pathName: "Nisha Labyrinth",
-        pathNameFr: "",
+        pathNameFr: "Labyrinthe de Nisha",
         jobStage: "job3",
         className: "Nisha Labyrinth",
-        classNameFr: "",
+        classNameFr: "Labyrinthe de Nisha",
         fileName: "laby-nisha-labyrinth.png"
     }),
 
@@ -2128,10 +2128,10 @@ export const classImages = [
         characterId: "laby",
         character: "Laby",
         pathName: "Nisha Labyrinth",
-        pathNameFr: "",
+        pathNameFr: "Labyrinthe de Nisha",
         jobStage: "master",
         className: "Nisha Labyrinth",
-        classNameFr: "",
+        classNameFr: "Labyrinthe de Nisha",
         fileName: "laby-nisha-labyrinth-master.png"
     }),
 
@@ -2317,7 +2317,7 @@ export const classImages = [
         pathNameFr: "Morphée",
         jobStage: "job1",
         className: "Second Dejection",
-        classNameFr: "",
+        classNameFr: "Errelune",
         fileName: "noah-second-dejection.png"
     }),
 
@@ -2328,7 +2328,7 @@ export const classImages = [
         pathNameFr: "Morphée",
         jobStage: "job2",
         className: "Hazy Delusion",
-        classNameFr: "",
+        classNameFr: "Incandesonge",
         fileName: "noah-hazy-delusion.png"
     }),
 
@@ -2493,7 +2493,7 @@ export const classImages = [
         pathNameFr: "",
         jobStage: "job1",
         className: "Trick Finder",
-        classNameFr: "",
+        classNameFr: "Cupido Girl",
         fileName: "lithia-trick-finder.png"
     }),
 
@@ -2504,7 +2504,7 @@ export const classImages = [
         pathNameFr: "",
         jobStage: "job2",
         className: "Cynical Sneer",
-        classNameFr: "",
+        classNameFr: "Cynical Girl",
         fileName: "lithia-cynical-sneer.png"
     }),
 
@@ -2515,7 +2515,7 @@ export const classImages = [
         pathNameFr: "",
         jobStage: "job3",
         className: "Mischief",
-        classNameFr: "",
+        classNameFr: "Delinquenta",
         fileName: "lithia-mischief.png"
     }),
 
@@ -2526,7 +2526,7 @@ export const classImages = [
         pathNameFr: "",
         jobStage: "master",
         className: "Mischief",
-        classNameFr: "",
+        classNameFr: "Delinquenta",
         fileName: "lithia-mischief-master.png"
     }),
 ];
