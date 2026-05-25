@@ -1192,3 +1192,114 @@
         grid-template-columns: 1fr;
     }
 }
+/* =========================
+   Page guides
+========================= */
+
+.guides-page {
+    display: grid;
+    gap: 1rem;
+}
+
+.guides-hero {
+    margin-bottom: 1rem;
+}
+
+.guide-section {
+    overflow: hidden;
+}
+
+.guide-section-header {
+    margin-bottom: 1rem;
+}
+
+.guide-section-header span {
+    display: inline-flex;
+    margin-bottom: 0.4rem;
+    color: var(--accent-blue);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.guide-section-header h2 {
+    margin: 0;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.guide-character-table-wrap {
+    overflow-x: auto;
+}
+
+.guide-character-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+}
+
+.guide-character-table th,
+.guide-character-table td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--border-soft);
+    text-align: left;
+    vertical-align: top;
+}
+
+.guide-character-table th {
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.guide-character-table td {
+    color: var(--text-soft);
+    line-height: 1.6;
+}
+
+.guide-character-table td:first-child {
+    color: #fff;
+    font-weight: 900;
+}
+
+.job-progression-list {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.job-progression-card {
+    display: grid;
+    grid-template-columns: 14rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--border-soft);
+    border-radius: 1rem;
+    background: rgba(2, 6, 23, 0.36);
+}
+
+.job-progression-card span {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.job-progression-card h3 {
+    margin: 0.35rem 0 0;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.job-progression-card p {
+    margin: 0;
+}
+
+@media (max-width: 760px) {
+    .job-progression-card {
+        grid-template-columns: 1fr;
+    }
+}

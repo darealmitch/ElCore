@@ -19,7 +19,7 @@ export const classesSystemGuide = {
     beginnerRecommendations: {
         title: "Quel personnage choisir pour débuter ?",
         text:
-            "Pour commencer, nous recommandons Elsword, Raven ou Elesis. Tous trois ont des combos de mêlée simples, encaissent bien les coups et sont efficaces aussi bien en solo qu'en groupe.",
+            "Pour commencer, nous recommandons Elsword, Raven Elesis ou Add. Tous trois ont des combos de mêlée simples, encaissent bien les coups et sont efficaces aussi bien en solo qu'en groupe.",
     },
     jobProgression: [
         {
