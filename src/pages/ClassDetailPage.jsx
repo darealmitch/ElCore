@@ -7,6 +7,8 @@ import { masterSymbols } from "../data/masterSymbols";
 import { toClassSlug, getClassUrl } from "../utils/classRoutes";
 import { classLore } from "../data/classLore";
 import { classDescriptions } from "../data/classDescriptions";
+import SkillTree from "../components/ui/SkillTree";
+import { classSkills } from "../data/classSkills";
 
 const stageLabels = {
     job1: "1re Spécialisation",
@@ -55,6 +57,15 @@ function ClassNavigationCard({ item, direction, disabled = false, theme }) {
         </Link>
     );
 }
+function getResolvedSkillIds(skillTree, allSkillTrees) {
+    if (!skillTree) return [];
+    const inheritedSkillIds = (skillTree.extends || []).flatMap((parentId) => {
+        const parentTree = allSkillTrees.find((item) => item.id === parentId);
+        return getResolvedSkillIds(parentTree, allSkillTrees);
+    });
+
+    return [...inheritedSkillIds, ...(skillTree.skillIds || [])];
+}
 
 function ClassDetailPage() {
     const { characterId, classId, stage } = useParams();
@@ -71,7 +82,23 @@ function ClassDetailPage() {
 
         return item.jobStage !== "master";
     });
-
+    const skillTree = classSkills.find(
+        (item) =>
+            item.characterId === classItem.characterId &&
+            item.jobStage === classItem.jobStage &&
+            (
+                item.className === classItem.className ||
+                item.classNameFr === classItem.classNameFr ||
+                item.pathName === classItem.pathName ||
+                item.pathNameFr === classItem.pathNameFr
+            )
+    );
+    const resolvedSkillTree = skillTree
+        ? {
+            ...skillTree,
+            skillIds: getResolvedSkillIds(skillTree, classSkills),
+        }
+        : null;
     if (!classItem) {
         return (
             <main className="page">
@@ -258,8 +285,14 @@ function ClassDetailPage() {
                     )}
                 </article>
                 <article className="detail-card wide skills-card">
-                    <h2>Compétences</h2>
-                    <p>Les compétences principales seront ajoutées quand les données seront prêtes.</p>
+                    {resolvedSkillTree ? (
+                        <SkillTree data={resolvedSkillTree} />
+                    ) : (
+                        <>
+                            <h2>Compétences</h2>
+                            <p>Les compétences principales seront ajoutées quand les données seront prêtes.</p>
+                        </>
+                    )}
                 </article>
             </section>
         </main>

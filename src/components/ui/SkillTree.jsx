@@ -37,6 +37,27 @@ function getNodePosition(skill, treeSkills, levels) {
 
     return { x, y };
 }
+function renderSkillDescription(description) {
+    if (!description) {
+        return (
+            <p>
+                La description de cette compétence sera ajoutée plus tard.
+            </p>
+        );
+    }
+    if (typeof description === "string") {
+        return <p>{description}</p>;
+    }
+    return (
+        <div className="skill-description-block">
+            {description.title && <strong>{description.title}</strong>}
+
+            {description.lines?.map((line) => (
+                <p key={line}>{line}</p>
+            ))}
+        </div>
+    );
+}
 
 function SkillTree({ data }) {
     const [selectedSkillId, setSelectedSkillId] = useState(null);
@@ -51,8 +72,17 @@ function SkillTree({ data }) {
     const treeSkills = useMemo(() => {
         return data.skillIds
             .map((skillId) => skillById[skillId])
-            .filter(Boolean);
-    }, [data.skillIds, skillById]);
+            .filter(Boolean)
+            .filter((skill) => {
+                const matchesMinLevel =
+                    data.minLevel === undefined || skill.level >= data.minLevel;
+
+                const matchesMaxLevel =
+                    data.maxLevel === undefined || skill.level <= data.maxLevel;
+
+                return matchesMinLevel && matchesMaxLevel;
+            });
+    }, [data.skillIds, data.minLevel, data.maxLevel, skillById]);
 
     const selectedSkill =
         treeSkills.find((skill) => skill.id === selectedSkillId) || null;
@@ -156,10 +186,7 @@ function SkillTree({ data }) {
                             </strong>
                         </p>
                     )}
-                    <p>
-                        {selectedSkill.description ||
-                            "La description de cette compétence sera ajoutée plus tard."}
-                    </p>
+                    {renderSkillDescription(selectedSkill.description)}
                 </article>
             )}
         </section>
