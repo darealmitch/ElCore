@@ -7,7 +7,6 @@ import { builds } from "../data/builds";
 import SkillTree from "../components/ui/SkillTree";
 import { classSkills } from "../data/classSkills";
 import { characterMechanics } from "../data/characterMechanics";
-import { ELSWORD_AURA_COLORS } from "../data/skills";
 
 function renderElswordAuraText(text) {
     if (!text) return null;
@@ -136,7 +135,6 @@ function CharacterDetailPage() {
                         <article className="detail-card wide skills-card character-skills-card">
                             <div className="character-skills-layout">
                                 <SkillTree data={baseSkillTree} />
-
                                 {characterMechanic && (
                                     <aside className="character-mechanic-card">
                                         <span>Particularité</span>
@@ -150,6 +148,27 @@ function CharacterDetailPage() {
                                             <p className="character-mechanic-note">
                                                 {renderElswordAuraText(characterMechanic.note)}
                                             </p>
+                                        )}
+                                        {characterMechanic.auras?.length > 0 && (
+                                            <div className="character-aura-list">
+                                                {characterMechanic.auras.map((aura) => (
+                                                    <article
+                                                        className={`character-aura-card character-aura-card-${aura.color}`}
+                                                        key={aura.id}
+                                                    >
+                                                        <h4>{aura.title}</h4>
+                                                        <p>{renderElswordAuraText(aura.description)}</p>
+
+                                                        {aura.bonuses?.length > 0 && (
+                                                            <ul>
+                                                                {aura.bonuses.map((bonus) => (
+                                                                    <li key={bonus}>{bonus}</li>
+                                                                ))}
+                                                            </ul>
+                                                        )}
+                                                    </article>
+                                                ))}
+                                            </div>
                                         )}
                                     </aside>
                                 )}

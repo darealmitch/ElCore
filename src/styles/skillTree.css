@@ -1,5 +1,5 @@
 /* =========================
-   Skill Tree interactive — compact
+   Skill Tree — arbre compact
 ========================= */
 
 .skill-tree-section {
@@ -92,6 +92,11 @@
     z-index: 5;
 }
 
+
+/* =========================
+   Skill Tree — nodes
+========================= */
+
 .skill-node {
     position: absolute;
     display: grid;
@@ -129,6 +134,11 @@
     height: 100%;
     object-fit: cover;
 }
+
+
+/* =========================
+   Skill Tree — tooltips
+========================= */
 
 .skill-tooltip {
     position: absolute;
@@ -169,6 +179,33 @@
     transform: translateX(-50%) translateY(0);
 }
 
+.skill-node.tooltip-left .skill-tooltip {
+    left: auto;
+    right: calc(100% + 0.75rem);
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%) translateX(0.35rem);
+}
+
+.skill-node.tooltip-left .skill-tooltip::before {
+    left: auto;
+    right: -0.35rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.skill-node.tooltip-left:hover .skill-tooltip,
+.skill-node.tooltip-left:focus-visible .skill-tooltip,
+.skill-node.tooltip-left.active .skill-tooltip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+
+/* =========================
+   Skill Tree — niveaux
+========================= */
+
 .skill-tree-levels {
     display: grid;
     align-content: space-around;
@@ -189,6 +226,11 @@
     font-size: 0.95rem;
     font-weight: 900;
 }
+
+
+/* =========================
+   Skill Tree — détail sélection
+========================= */
 
 .skill-detail-card {
     display: grid;
@@ -219,27 +261,29 @@
     color: var(--text-soft);
     line-height: 1.65;
 }
-.skill-node.tooltip-left .skill-tooltip {
-    left: auto;
-    right: calc(100% + 0.75rem);
-    bottom: auto;
-    top: 50%;
-    transform: translateY(-50%) translateX(0.35rem);
+
+.skill-detail-aura {
+    width: fit-content;
+    margin: 0;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid var(--skill-aura);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--skill-aura) 14%, transparent);
+    color: var(--skill-aura) !important;
+    font-size: 0.78rem;
+    font-weight: 900;
+    line-height: 1.2;
 }
 
-.skill-node.tooltip-left .skill-tooltip::before {
-    left: auto;
-    right: -0.35rem;
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
+.skill-detail-aura strong {
+    color: var(--skill-aura);
 }
 
-.skill-node.tooltip-left:hover .skill-tooltip,
-.skill-node.tooltip-left:focus-visible .skill-tooltip,
-.skill-node.tooltip-left.active .skill-tooltip {
-    opacity: 1;
-    transform: translateY(-50%) translateX(0);
-}
+
+/* =========================
+   Fiche personnage — bloc compétences
+========================= */
+
 .character-skills-card {
     overflow: hidden;
 }
@@ -247,15 +291,32 @@
 .character-skills-layout {
     display: grid;
     grid-template-columns: minmax(0, auto) minmax(18rem, 1fr);
-    align-items: stretch;
+    align-items: center;
     gap: 1.2rem;
 }
 
+.character-skills-layout .skill-tree-section {
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.character-skills-layout .skill-tree-title,
+.character-skills-layout .skill-tree-layout {
+    margin: 0;
+}
+
+
+/* =========================
+   Fiche personnage — mécanique personnage
+========================= */
+
 .character-mechanic-card {
-    align-self: stretch;
+    align-self: start;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100%;
     padding: 1.25rem;
     border: 1px solid var(--border-soft);
@@ -300,6 +361,7 @@
     border-radius: 0.8rem;
     background: rgba(96, 165, 250, 0.08);
 }
+
 .elsword-aura-word {
     display: inline;
     font-weight: 1000;
@@ -312,6 +374,70 @@
 .elsword-aura-word.destruction {
     color: #ef4444;
 }
+
+
+/* =========================
+   Fiche personnage — auras Elsword
+========================= */
+
+.character-aura-list {
+    display: grid;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.character-aura-card {
+    padding: 0.9rem;
+    border: 1px solid var(--border-soft);
+    border-radius: 0.9rem;
+    background: rgba(2, 6, 23, 0.32);
+}
+
+.character-aura-card h4 {
+    margin: 0 0 0.55rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.character-aura-card p {
+    margin: 0;
+}
+
+.character-aura-card ul {
+    display: grid;
+    gap: 0.45rem;
+    margin: 0.75rem 0 0;
+    padding-left: 1.1rem;
+    color: var(--text-soft);
+    line-height: 1.55;
+}
+
+.character-aura-card-vitality {
+    border-color: rgba(96, 165, 250, 0.42);
+    background:
+            radial-gradient(circle at top right, rgba(96, 165, 250, 0.12), transparent 12rem),
+            rgba(2, 6, 23, 0.32);
+}
+
+.character-aura-card-vitality li::marker {
+    color: #60a5fa;
+}
+
+.character-aura-card-destruction {
+    border-color: rgba(239, 68, 68, 0.42);
+    background:
+            radial-gradient(circle at top right, rgba(239, 68, 68, 0.12), transparent 12rem),
+            rgba(2, 6, 23, 0.32);
+}
+
+.character-aura-card-destruction li::marker {
+    color: #ef4444;
+}
+
+
+/* =========================
+   Responsive
+========================= */
 
 @media (max-width: 1050px) {
     .character-skills-layout {

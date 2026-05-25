@@ -10,13 +10,17 @@ export const SKILL_TYPE_COLORS = {
     specialActive: "#e11d48",
 };
 export const ELSWORD_AURA_TYPES = {
-    VITALITY: "vitality",
+    VITALITY: "vitalite",
     DESTRUCTION: "destruction",
 };
 
 export const ELSWORD_AURA_COLORS = {
-    vitality: "#60a5fa",
+    vitalite: "#60a5fa",
     destruction: "#ef4444",
+};
+export const ELSWORD_AURA_LABELS = {
+    vitalite: "l'aura de vitalité",
+    destruction: "l'aura de destruction",
 };
 
 export const skills = [
@@ -37,7 +41,7 @@ export const skills = [
         image: "/images/skills/elsword/skill2.png",
         type: SKILL_TYPES.ACTIVE,
         level: 1,
-        auraType:"",
+        auraType:"vitalite",
         description: "Elsword fait une roulade avant à toute vitesse. Il est invulnérable jusqu'à toucher le sol.",
     },
     {
@@ -57,7 +61,7 @@ export const skills = [
         image: "/images/skills/elsword/ElswordSkill3.png",
         type: SKILL_TYPES.ACTIVE,
         level: 5,
-        auraType:"",
+        auraType:"destruction",
         description: " Elsword frappe le sol de toutes ses forces avec son épée et crée une colonne de feu. " +
             "Les ennemis touchés subissent une brûlure.",
     },
@@ -68,7 +72,7 @@ export const skills = [
         image: "/images/skills/elsword/ElswordSkill4.png",
         type: SKILL_TYPES.ACTIVE,
         level: 10,
-        auraType:"",
+        auraType:"vitalite",
         description: "Elsword attaque l'adversaire avec une série de coups pour créer une explosion finale qui inflige des dégâts aux adversaires à proximité.",
     },
     {
@@ -89,7 +93,7 @@ export const skills = [
         image: "/images/skills/elsword/ElswordSkill6.png",
         type: SKILL_TYPES.ACTIVE,
         level: 20,
-        auraType:"",
+        auraType:"destruction",
         description: "Elsword frappe le sol avec son épée et crée trois colonnes de feu.",
     },
 ];
