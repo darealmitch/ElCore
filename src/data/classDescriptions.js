@@ -23,9 +23,10 @@ export const classDescriptions = [
         className: "Rune Master",
         classNameFr: "Maître des runes",
         jobStage: "job3",
-        title: "",
+        title: "Elsword 2e voie : Maître des runes",
         path: ["Chevalier-Mage", "Chevalier Runique", "Maître des runes"],
-        presentation: "",
+        presentation: "L'épéiste magique le plus puissant a conçu ses propres runes de maniement d'épée à l'aide de la puissance d'El." +
+            " Il triomphe de ses ennemis grâce à la magie runique et à sa technique d'épéiste époustouflante.",
         attackType: "",
         attackRange: "",
     },
@@ -50,7 +51,7 @@ export const classDescriptions = [
         className: "Genesis",
         classNameFr: "Séphiroth",
         jobStage: "job3",
-        title: "La 4e spécialisation d'Elsword !",
+        title: " Elsword 'e voie : Séphiroth",
         path: ["Bénitier", "Templier", "Séphiroth"],
         presentation:
             "Un chevalier qui intègre le pouvoir de la résonance d'El dans son épée pour anéantir ses ennemis.",
@@ -61,7 +62,20 @@ export const classDescriptions = [
     /* =========================
        Rena
     ========================= */
-
+    {
+        characterId: "rena",
+        pathName: "Daybreaker",
+        pathNameFr: "Aube",
+        className: "Daybreaker",
+        classNameFr: "Aube",
+        jobStage: "job3",
+        title: "Rena 2e voie : Aube",
+        path: ["Chasseresse", "Maîtresse-Archère", "Aube"],
+        presentation: "Cette meneuse des nobles Elfes bénéficie de la protection du monde des esprits. " +
+            "C'est une Elfe guerrière dont les flèches magiques renforcées par le lien qui l'unit aux esprits transpercent rapidement la défense ennemie.",
+        attackType: "",
+        attackRange: "Longue Portée",
+    },
     {
         characterId: "rena",
         pathName: "Twilight",
@@ -94,7 +108,19 @@ export const classDescriptions = [
     /* =========================
        Aisha
     ========================= */
-
+    {
+        characterId: "aisha",
+        pathName: "Oz Sorcerer",
+        pathNameFr: "Magicienne d'Oz",
+        className: "Oz Sorcerer",
+        classNameFr: "Magicienne d'Oz",
+        jobStage: "job3",
+        title: "Aisha 2e voie : Magicienne d'Oz",
+        path: ["Magicienne de l'occulte", "Princesse des âmes", "Magicienne d'Oz"],
+        presentation: "La Magicienne d'Oz est la maîtresse de la magie noire reconnue par le Dieu démoniaque en personne. Sa connaissance approfondie de la magie noire lui permet de mener ses ennemis à la perdition.",
+        attackType: "",
+        attackRange: "",
+    },
     {
         characterId: "aisha",
         pathName: "",
@@ -113,12 +139,25 @@ export const classDescriptions = [
     /* =========================
        Raven
     ========================= */
-
     {
         characterId: "raven",
-        pathName: "Nova Imperator",
-        pathNameFr: "Imperator nova",
-        className: "Nova Imperator",
+        pathName: "Rage Hearts",
+        pathNameFr: "Cœur enragé",
+        className: "Rage Hearts",
+        classNameFr: "Cœur enragé",
+        jobStage: "job3",
+        title: "Raven 2e voie : Cœur enragé",
+        path: ["Porteur de lame", "Poing de Feu","Cœur enragé" ],
+        presentation: "Ce combattant a transcendé les limites de son enveloppe corporelle humaine grâce à la coexistence de sa force nasod. " +
+            "Il use de la force explosive dévastatrice du bras nasod pour pulvériser ses adversaires.",
+        attackType: "Attaque physique",
+        attackRange: "",
+    },
+    {
+        characterId: "raven",
+        pathName: "Imperator Nova",
+        pathNameFr: "Imperator Nova",
+        className: "Imperator Nova",
         classNameFr: "Imperator nova",
         jobStage: "job3",
         title: "Raven 3e voie : Imperator nova",
@@ -146,7 +185,19 @@ export const classDescriptions = [
     /* =========================
        Eve
     ========================= */
-
+    {
+        characterId: "eve",
+        pathName: "Code: Esencia",
+        pathNameFr: "Nasod essentielle",
+        className: "Code: Esencia",
+        classNameFr: "Nasod essentielle",
+        jobStage: "job3",
+        title: "Ève 2e voie : Nasod essentielle",
+        path: ["Espérence Nasod", "Impératrice Nasod","Nasod essentielle"],
+        presentation: "La très miséricordieuse Impératrice nasod blanc neige commande ses fidèles familiers nasods pour terrasser les ennemis.",
+        attackType: "",
+        attackRange: "",
+    },
     {
         characterId: "eve",
         pathName: "",
@@ -156,8 +207,7 @@ export const classDescriptions = [
         jobStage: "job3",
         title: "Ève 3e voie : Nasod Sariel",
         path: [],
-        presentation:
-            "Voici une reine des Nasods rayonnante d'éclairs. Elle anéantit ses adversaires avec de l'énergie photonique émise à la vitesse lumière.",
+        presentation: "Voici une reine des Nasods rayonnante d'éclairs. Elle anéantit ses adversaires avec de l'énergie photonique émise à la vitesse lumière.",
         attackType: "",
         attackRange: "",
     },
@@ -168,10 +218,9 @@ export const classDescriptions = [
         className: "",
         classNameFr: "Nasod Antithesa",
         jobStage: "job3",
-        title: "La 4e spécialisation d'Ève, l'infaillible reine des Nasods, arrive !",
+        title: "Ève 4e voie : Nasod Antithesa",
         path: ["Nasod Incognita", "Nasod Absoluta", "Nasod Antithesa"],
-        presentation:
-            "Ève génère les codes de manœuvre aérienne qui avaient été perdus et regagne en mobilité.",
+        presentation: "Ève génère les codes de manœuvre aérienne qui avaient été perdus et regagne en mobilité.",
         attackType: "Attaque",
         attackRange: "Longue",
     },
@@ -179,7 +228,20 @@ export const classDescriptions = [
     /* =========================
        Chung
     ========================= */
-
+    {
+        characterId: "chung",
+        pathName: "Fatal Phantom",
+        pathNameFr: "Fantôme fatal",
+        className: "Fatal Phantom",
+        classNameFr: "Fantôme fatal",
+        jobStage: "job3",
+        title: "Chung 2e voie : Fantôme fatal",
+        path: ["Gardien tireur", "Flingueur","Fantôme fatal"],
+        presentation: "Ce tireur submerge les ennemis sous un déluge de projectiles à une vitesse fulgurante." +
+            " En un clin d'œil, il peut décharger une véritable tempête de projectiles pour triompher de ses ennemis.",
+        attackType: "Attaque magique",
+        attackRange: "Longue Portée",
+    },
     {
         characterId: "chung",
         pathName: "",
@@ -189,8 +251,9 @@ export const classDescriptions = [
         jobStage: "job3",
         title: "Chung 3e voie : Centurion",
         path: [],
-        presentation:
-            "Cet artilleur est comme une forteresse ambulante. Grâce à ses recherches, il a pu transcender les limites de la physique. Les membres de cette classe sont capables de tirer d'innombrables obus depuis le portail sur le champ de bataille.",
+        presentation: "Cet artilleur est comme une forteresse ambulante. " +
+            "Grâce à ses recherches, il a pu transcender les limites de la physique. " +
+            "Les membres de cette classe sont capables de tirer d'innombrables obus depuis le portail sur le champ de bataille.",
         attackType: "",
         attackRange: "",
     },
@@ -203,8 +266,8 @@ export const classDescriptions = [
         jobStage: "job3",
         title: "« J'offrirai ma protection à qui en cherche une. » La 4e voie de Chung s'ouvre.",
         path: ["Gardien des cœurs", "Phanès sacré", "Dius Aer"],
-        presentation:
-            "La pierre de protection soutient tes alliés. Ton armure ultralégère, Freiturnier, te permet d'attaquer plus rapidement.",
+        presentation: "La pierre de protection soutient tes alliés. " +
+            "Ton armure ultralégère, Freiturnier, te permet d'attaquer plus rapidement.",
         attackType: "Attaque physique",
         attackRange: "Moyenne",
     },
@@ -212,7 +275,20 @@ export const classDescriptions = [
     /* =========================
        Elesis
     ========================= */
-
+    {
+        characterId: "elesis",
+        pathName: "Flamme Lord",
+        pathNameFr: "Maîtresse des flammes",
+        className: "Flamme Lord",
+        classNameFr: "Maîtresse des flammes",
+        jobStage: "job3",
+        title: "Elesis 2e voie : Maîtresse des flammes",
+        path: ["Chevalier Pyromane", "Cœur de Flammes", "Maîtresse des Flammes"],
+        presentation: "L'incarnation du feu enveloppée de flammes. " +
+            "La Maîtresse des flammes est elle-même devenue une flamme qui réduit tout en cendre d'une seule flammèche.",
+        attackType: "",
+        attackRange: "",
+    },
     {
         characterId: "elesis",
         pathName: "",
@@ -229,9 +305,9 @@ export const classDescriptions = [
     },
     {
         characterId: "elesis",
-        pathName: "",
+        pathName: "Adrestia",
         pathNameFr: "Adrestia",
-        className: "",
+        className: "Adrestia",
         classNameFr: "Adrestia",
         jobStage: "job3",
         title:
@@ -246,16 +322,29 @@ export const classDescriptions = [
     /* =========================
        Ara
     ========================= */
-
     {
         characterId: "ara",
-        pathName: "",
+        pathName: "Devi",
+        pathNameFr: "Devi",
+        className: "Devi",
+        classNameFr: "Devi",
+        jobStage: "job3",
+        title: "Ara 2e voie : Devi",
+        path: ["Diablotin", "Yama-raj","Devi"],
+        presentation: "Une meneuse d'outre-tombe qui sème la mort. " +
+            "Elle déploie un flot ininterrompu de technique énergétique fulminante pour anéantir ses ennemis.",
+        attackType: "",
+        attackRange: "",
+    },
+    {
+        characterId: "ara",
+        pathName: "Shakti",
         pathNameFr: "Shakti",
-        className: "",
+        className: "Shakti",
         classNameFr: "Shakti",
         jobStage: "job3",
         title: "Ara 3e voie : Shakti",
-        path: [],
+        path: ["Petit Spectre", "Asura", "Shakti"],
         presentation:
             "Voici la première déesse renarde, créée par le lien avec une divinité. Elle triomphe de ses adversaires en usant de puissantes techniques d'exorcisme de l'ombre tout en s'alliant à Eun, la Gumiho.",
         attackType: "",
@@ -263,15 +352,14 @@ export const classDescriptions = [
     },
     {
         characterId: "ara",
-        pathName: "",
+        pathName: "Surya",
         pathNameFr: "Surya",
-        className: "",
+        className: "Surya",
         classNameFr: "Surya",
         jobStage: "job3",
         title: "L'as de la création Ara obtient sa 4e voie !",
         path: ["Bienfaitrice", "Yang Yan", "Surya"],
-        presentation:
-            "Cette classe s'appuie sur les esprits animaux pour bénéficier de divers pouvoirs afin d'attaquer les adversaires ou soutenir ses alliés.",
+        presentation: "Cette classe s'appuie sur les esprits animaux pour bénéficier de divers pouvoirs afin d'attaquer les adversaires ou soutenir ses alliés.",
         attackType: "Attaque magique",
         attackRange: "Moyenne",
     },
@@ -279,7 +367,20 @@ export const classDescriptions = [
     /* =========================
        Add
     ========================= */
-
+    {
+        characterId: "add",
+        pathName: "",
+        pathNameFr: "Dominateur",
+        className: "",
+        classNameFr: "Dominateur",
+        jobStage: "job3",
+        title: "Add 2e voie : Dominateur",
+        path: ["Maître de l'IA", "Machiavel", "Dominateur"],
+        presentation: "Ce savant fou a façonné un monde suprême à l'image de ses idéaux. " +
+            "Il se sert de son système PCD imprévisible pour prendre le contrôle du champ de bataille.",
+        attackType: "",
+        attackRange: "",
+    },
     {
         characterId: "add",
         pathName: "",
@@ -288,7 +389,7 @@ export const classDescriptions = [
         classNameFr: "Paradoxe",
         jobStage: "job3",
         title: "Add 3e voie : Paradoxe",
-        path: [],
+        path: ["Voyageur Temporel", "Seigneur du Temps", "Paradoxe"],
         presentation:
             "Ce diable du Paradoxe est pétri de contradictions multiples et erre dans l'espace-temps. Doté de compétences largement supérieures à la pointe de la science, il fait s'effondrer l'espace-temps avec brutalité.",
         attackType: "",
@@ -298,7 +399,20 @@ export const classDescriptions = [
     /* =========================
        Lu/Ciel
     ========================= */
-
+    {
+        characterId: "luciel",
+        pathName: "",
+        pathNameFr: "Innocence",
+        className: "Innocent",
+        classNameFr: "Innocence",
+        jobStage: "job3",
+        title: "Lu/Ciel 2e voie : Innocence",
+        path: ["Garde Royal", "Noble", "Innocence"],
+        presentation: "Tels un javelot et un bouclier qui se protègent mutuellement, Lu et Ciel ont transcendé leur puissance passée et règnent désormais sur les abîmes. " +
+            "Ils se servent d'esprits malins des abîmes et d'armes antiques pour vaincre leurs ennemis.",
+        attackType: "",
+        attackRange: "",
+    },
     {
         characterId: "luciel",
         pathName: "",
@@ -332,7 +446,20 @@ export const classDescriptions = [
     /* =========================
        Rose
     ========================= */
-
+    {
+        characterId: "rose",
+        pathName: "Black Massacre",
+        pathNameFr: "Veuve noire",
+        className: "Black Massacre",
+        classNameFr: "Veuve noire",
+        jobStage: "job3",
+        title: "Rose 2e voie : Veuve noire",
+        path: ["Sanguinaire","Rose pourpre", "Veuve Noire"],
+        presentation: "Cette vagabonde rouge sang se consacre corps et âme au massacre. " +
+            "Elle entrave ses ennemis à l'aide de la pistochaîne pour leur asséner un coup mortel.",
+        attackType: "",
+        attackRange: "",
+    },
     {
         characterId: "rose",
         pathName: "",
@@ -341,23 +468,23 @@ export const classDescriptions = [
         classNameFr: "Minerve",
         jobStage: "job3",
         title: "Rose 3e voie : Minerve",
-        path: [],
-        presentation:
-            "Cette maîtresse dans l'art des combats aériens use de sa formidable mobilité. Elle change le cours du combat en un rien de temps et triomphe de ses ennemis avec diverses grenades et techniques de combat à distance.",
+        path: ["Valkyrie", "Freyja", "Minerve"],
+        presentation: "Cette maîtresse dans l'art des combats aériens use de sa formidable mobilité. " +
+            "Elle change le cours du combat en un rien de temps et triomphe de ses ennemis avec diverses grenades et techniques de combat à distance.",
         attackType: "",
         attackRange: "",
     },
     {
         characterId: "rose",
         pathName: "",
-        pathNameFr: "Prime opératrice",
+        pathNameFr: "Prime Opératrice",
         className: "",
-        classNameFr: "Prime opératrice",
+        classNameFr: "Prime Opératrice",
         jobStage: "job3",
-        title: "Rose 3e voie : Prime opératrice",
-        path: [],
-        presentation:
-            "Voici l'inventrice de la légion mécanique contrôlée par satellite. Elle commande des machines ultra sophistiquées de sa propre création.",
+        title: "Rose 3e voie : Prime Opératrice",
+        path: ["Cœur d'Acier", "Optimus", "Prime Opératrice"],
+        presentation: "Voici l'inventrice de la légion mécanique contrôlée par satellite. " +
+            "Elle commande des machines ultra sophistiquées de sa propre création.",
         attackType: "",
         attackRange: "",
     },
@@ -365,7 +492,20 @@ export const classDescriptions = [
     /* =========================
        Ain
     ========================= */
-
+    {
+        characterId: "ain",
+        pathName: "Bluhen",
+        pathNameFr: "Florere",
+        className: "Bluhen",
+        classNameFr: "Florere",
+        jobStage: "job3",
+        title: "Ain 2e voie : Florere",
+        path: ["Aptare", "Vigere", "Florere"],
+        presentation: "Ce meneur d'émotions se développe au même rythme que les humains qui l'entourent. " +
+            "Il se sert de serments pour protéger ses alliés et terrasser ses ennemis.",
+        attackType: "",
+        attackRange: "",
+    },
     {
         characterId: "ain",
         pathName: "",
@@ -375,8 +515,8 @@ export const classDescriptions = [
         jobStage: "job3",
         title: "Ain 3e voie : Regnator",
         path: [],
-        presentation:
-            "Ce maître du vide régénéré attire tout vers le néant. Il met ses ennemis hors d'état de nuire par un chaos infini et anéantit tout en usant de la force du vide.",
+        presentation: "Ce maître du vide régénéré attire tout vers le néant. " +
+            "Il met ses ennemis hors d'état de nuire par un chaos infini et anéantit tout en usant de la force du vide.",
         attackType: "",
         attackRange: "",
     },
@@ -389,8 +529,8 @@ export const classDescriptions = [
         jobStage: "job3",
         title: "Le serviteur errant guette vainement sa déesse : mise à jour pour la 4e voie d'Ain",
         path: ["Adoleo", "Captura", "Sacratus"],
-        presentation:
-            "Pendant qu'Ain absorbe la force d'Eldrit de tout un chacun, son savoir-faire prend un contour plus défini. Dans cette classe, Ain combat en déployant une vaste palette d'astuces redoutablement efficaces.",
+        presentation: "Pendant qu'Ain absorbe la force d'Eldrit de tout un chacun, son savoir-faire prend un contour plus défini. " +
+            "Dans cette classe, Ain combat en déployant une vaste palette d'astuces redoutablement efficaces.",
         attackType: "Attaque physique",
         attackRange: "Moyenne",
     },
@@ -398,7 +538,20 @@ export const classDescriptions = [
     /* =========================
        Laby
     ========================= */
-
+    {
+        characterId: "laby",
+        pathName: "",
+        pathNameFr: "Lumièle",
+        className: "",
+        classNameFr: "Lumièle",
+        jobStage: "job3",
+        title: "La 2e spécialisation de Laby raconte la belle amitié d'une fillette et de son miroir.",
+        path: ["Bébé paillette", "Auralice", "Lumièle"],
+        presentation: "Désintéressée et pleine d'énergie, Laby tire ses pouvoirs de sa relation solide avec Nisha." +
+            " Elle attire les adversaires à elle pour ensuite les attaquer avec des jets d'eau multicolore, une pluie d'étoiles scintillantes ou des feux d'artifice fabuleux.",
+        attackType: "",
+        attackRange: "",
+    },
     {
         characterId: "laby",
         pathName: "",
@@ -446,6 +599,20 @@ export const classDescriptions = [
         attackType: "",
         attackRange: "",
     },
+    {
+        characterId: "noah",
+        pathName: "Celestia",
+        pathNameFr: "Célestia",
+        className: "Celestia",
+        classNameFr: "Célestia",
+        jobStage: "job3",
+        title: "2e voie de Noah",
+        path: ["Destinator", "Lanceur d'Étoiles", "Célestia"],
+        presentation:
+            "Tu actives tes cartes horoscope grâce au cycle et tu te bats selon une stratégie correspondant à ta carte.",
+        attackType: "",
+        attackRange: "",
+    },
 
     /* =========================
        Lithia
@@ -460,8 +627,7 @@ export const classDescriptions = [
         jobStage: "job3",
         title: "La première voie de Lithia rejoint le jeu.",
         path: ["Minéralista", "Cristalina", "Eméraldia"],
-        presentation:
-            "Elle utilise la force des minerais et combine sa pioche magique avec des reliques pour infliger des dégâts accrus.",
+        presentation: "Elle utilise la force des minerais et combine sa pioche magique avec des reliques pour infliger des dégâts accrus.",
         attackType: "Attaque physique",
         attackRange: "Combat rapproché",
     },
@@ -473,11 +639,9 @@ export const classDescriptions = [
         className: "",
         classNameFr: "Avaricia",
         jobStage: "job3",
-        title:
-            "Avec le pouvoir du minerai doré et sa force de volonté, Lithia renforce son pouvoir magique et soutient ses camarades.",
+        title: "Avec le pouvoir du minerai doré et sa force de volonté, Lithia renforce son pouvoir magique et soutient ses camarades.",
         path: ["Jadoyante", "Adamantine", "Avaricia"],
-        presentation:
-            "Elle accorde des avantages spéciaux à ceux à qui elle a donné sa parole. Il s'agit de la 2e spécialisation de Lithia.",
+        presentation: "Elle accorde des avantages spéciaux à ceux à qui elle a donné sa parole. Il s'agit de la 2e spécialisation de Lithia.",
         attackType: "",
         attackRange: "",
     },

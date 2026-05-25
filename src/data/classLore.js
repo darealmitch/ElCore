@@ -151,5 +151,89 @@ export const classLore = [
             "Nisha recueille ses émotions négatives et invoque des illusions positives, mais ce monde illusoire finit par s'effriter." +
             "Pour protéger Laby, Nisha décide finalement de prendre le contrôle de ses émotions, scelle la fillette dans son miroir et prend une apparence humaine.",
         themes: ["Isolement", "Illusion", "Nisha", "Protection"],
-    }
+    },
+    {
+        id: "luciel-innocence-job3",
+        characterId: "luciel",
+        className: "",
+        classNameFr: "Innocence",
+        jobStage: "job3",
+        title: "Lu/Ciel 2e voie : Innocence",
+        fromClass: "",
+        fromClassFr: "",
+        toClass: "",
+        toClassFr: "Innocence",
+        quote: "À genoux ! Je suis la véritable héritière du trône !",
+        text:
+            "Tels un javelot et un bouclier qui se protègent mutuellement, Lu et Ciel ont transcendé leur puissance passée et règnent désormais sur les abîmes. Ils se servent d'esprits malins des abîmes et d'armes antiques pour vaincre leurs ennemis. Grâce au renfort actif de Ciel, Lu a retrouvé une part de sa force passée, mais Ciel s'inquiète de la puissance croissante des ennemis. Conformément au pacte, seule la moitié de la force est transmise. En cherchant à fusionner ces forces, Lu propose une arme des démons antique appelée Vision de Sephiroth. Grâce à ce javelot démoniaque capable d'absorber la puissance de son porteur, Lu et Ciel tentent d'unir leurs âmes l'espace d'un instant. À la fois deux et un seul, ils ne ménagent pas leurs efforts pour reconquérir le trône.",
+        themes: ["Abîmes", "Pacte", "Vision de Sephiroth", "Trône démoniaque"]
+    },
+    {
+        id: "rose-veuve-noire-job3",
+        characterId: "rose",
+        className: "",
+        classNameFr: "Veuve noire",
+        jobStage: "job3",
+        title: "Rose 2e voie : Veuve noire",
+        fromClass: "",
+        fromClassFr: "",
+        toClass: "",
+        toClassFr: "Veuve noire",
+        quote: "Vous préférez que je vous coupe la tête ou que je vous transperce le bidon ? Héhéhé...",
+        text:
+            "Cette vagabonde rouge sang se consacre corps et âme au massacre. Elle entrave ses ennemis à l'aide de la pistochaîne pour leur asséner un coup mortel. Rose était exposée à l'énergie d'Eldrit, renforcée par la restauration d'El. C'est ainsi que la puissance de l'Eldrit ténébreux s'est également renforcée en elle. L'Eldrit ténébreux, créé dans le but de détruire Élios, déborde de haine et de pensées néfastes. L'énergie démoniaque de l'Eldrit ténébreux finit par consumer Rose, déstabilisée par son insécurité et ses remords. Obsédée par la princesse, Rose ne fait plus la différence entre le bien et le mal. Il ne reste rien de ses ennemis, si ce n'est quelques empreintes écarlates souillées de leur sang.",
+        themes: ["Eldrit ténébreux", "Pistochaîne", "Obsession", "Massacre"]
+    },
+    {
+        id: "ain-florere-job3",
+        characterId: "ain",
+        className: "",
+        classNameFr: "Florere",
+        jobStage: "job3",
+        title: "Ain 2e voie : Florere",
+        fromClass: "",
+        fromClassFr: "",
+        toClass: "",
+        toClassFr: "Florere",
+        quote: "Je ne te quitte pas.",
+        text:
+            "Ce meneur d'émotions se développe au même rythme que les humains qui l'entourent. Il se sert de serments pour protéger ses alliés et terrasser ses ennemis. Les camarades des chercheurs d'Eldrit ont réussi à surmonter leurs propres épreuves et ont échappé au Corridor d'El. Ain est surpris par leur volonté de fer qui dépasse toutes ses espérances et s'enorgueillit d'avoir côtoyé des êtres aussi courageux. Depuis lors, il se considère comme un homme ayant ses propres émotions et prend son destin en main. Il tient à renforcer sa volonté pour ne pas avoir éveillé ses émotions en vain et pour rester à la hauteur de ces personnes. Son existence est la preuve du lien noué entre les hommes et les dieux, et il poursuit donc ses aventures aux côtés des chercheurs d'Eldrit.",
+        themes: ["Émotions", "Serments", "Volonté", "Lien entre hommes et dieux"]
+    },
+    {
+        id: "elesis-maitresse-des-flammes-job3",
+        characterId: "elesis",
+        className: "",
+        classNameFr: "Maîtresse des flammes",
+        jobStage: "job3",
+        title: "Elesis 2e voie : Maîtresse des flammes",
+        fromClass: "",
+        fromClassFr: "",
+        toClass: "",
+        toClassFr: "Maîtresse des flammes",
+        quote: "Ahhh... Je hais ce qui est compliqué. Je vais me contenter de tout brûler !",
+        text:
+            "L'incarnation du feu enveloppée de flammes. La Maîtresse des flammes est elle-même devenue une flamme qui réduit tout en cendre d'une seule flammèche. Au cours des innombrables combats, Elesis excelle toujours plus dans le maniement des flammes et comprend que son potentiel n'est pas encore épuisé. Faire affluer de la force en continu ne suffit pas : le contenant doit évoluer. Elle avait craint de perdre le contrôle des flammes et d'être à son tour réduite en cendres, mais elle finit par comprendre qu'elle doit vaincre sa peur et accepter la force purificatrice du feu. Elle décide alors d'exploiter tout son potentiel et s'approprie une technique lui permettant de se changer en flamme, renaissant sous la forme de l'incarnation du feu, capable de tout réduire en cendres sur le champ de bataille.",
+        themes: ["Flammes", "Force purificatrice", "Dépassement de soi", "Incarnation du feu"]
+    },
+    {
+        id: "laby-lumiele-job3",
+        characterId: "laby",
+        className: "",
+        classNameFr: "Lumièle",
+        jobStage: "job3",
+        title: "La belle amitié de Laby et Nisha",
+        fromClass: "",
+        fromClassFr: "Auralice",
+        toClass: "",
+        toClassFr: "Lumièle",
+        quote: "Ensemble, nous sommes les meilleures, Nisha ! Nous allons pouvoir rendre tout le monde heureux !",
+        text: "Quand Laby comprend que Nisha, son miroir, absorbe toutes ses émotions négatives à sa place alors qu'elle-même profite uniquement des bons moments, elle décide de partager absolument tout avec Nisha, les bonnes comme les mauvaises choses. " +
+            "Laby pense que c'est la meilleure façon d'aider Nisha et tous les autres pour rendre le monde meilleur. " +
+            "Désintéressée et pleine d'énergie, elle tire ses pouvoirs de sa relation solide avec Nisha. " +
+            "Elles se promettent toutes les deux de rester amies pour toujours. Tout au long de cette voie, Laby dégage une formidable énergie positive. " +
+            "Elle attire les adversaires à elle pour ensuite les attaquer à grands coups de jets d'eau multicolore, de pluie d'étoiles scintillantes ou de feux d'artifice fabuleux. " +
+            "Quand Laby et Nisha sont en parfaite harmonie, leurs attaques sont plus puissantes et plus colorées.",
+        themes: ["Nisha", "Amitié", "Énergie positive", "Harmonie"]
+    },
 ];

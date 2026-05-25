@@ -150,7 +150,7 @@ function ClassesPage() {
 
                                 {masterLogo && (
                                     <small className="master-symbol-name">
-                                        Symbole : {masterLogo.nameFr || masterLogo.name}
+                                        Maître : {masterLogo.nameFr || masterLogo.name}
                                     </small>
                                 )}
                             </div>
