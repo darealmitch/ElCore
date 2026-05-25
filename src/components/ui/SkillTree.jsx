@@ -1,11 +1,11 @@
 import { useMemo, useState } from "react";
-import { skills } from "../../data/skills";
+import { skills, SKILL_TYPE_COLORS } from "../../data/skills";
 
-function getNodePosition(node, nodes, levels) {
-    const columnStart = node.type === "passive" ? 60 : 0;
-    const columnWidth = node.type === "passive" ? 40 : 60;
+function getNodePosition(skill, treeSkills, levels) {
+    const columnStart = skill.type === "passive" ? 60 : 0;
+    const columnWidth = skill.type === "passive" ? 40 : 60;
 
-    const levelIndex = levels.indexOf(node.level);
+    const levelIndex = levels.indexOf(skill.level);
     const safeLevelIndex = levelIndex >= 0 ? levelIndex : 0;
 
     const y =
@@ -13,20 +13,20 @@ function getNodePosition(node, nodes, levels) {
             ? 10 + (safeLevelIndex / (levels.length - 1)) * 80
             : 50;
 
-    const nodesAtSameLevelAndType = nodes.filter(
-        (item) => item.level === node.level && item.type === node.type
+    const skillsAtSameLevelAndType = treeSkills.filter(
+        (item) => item.level === skill.level && item.type === skill.type
     );
 
-    const nodeIndex = nodesAtSameLevelAndType.findIndex(
-        (item) => item.skillId === node.skillId
+    const skillIndex = skillsAtSameLevelAndType.findIndex(
+        (item) => item.id === skill.id
     );
 
-    const count = nodesAtSameLevelAndType.length;
+    const count = skillsAtSameLevelAndType.length;
 
     const localX =
         count <= 1
             ? 50
-            : 18 + (nodeIndex / (count - 1)) * 64;
+            : 18 + (skillIndex / (count - 1)) * 64;
 
     const x = columnStart + (localX / 100) * columnWidth;
 
@@ -43,13 +43,14 @@ function SkillTree({ data }) {
         }, {});
     }, []);
 
-    const selectedNode = data.nodes.find(
-        (node) => node.skillId === selectedSkillId
-    );
+    const treeSkills = useMemo(() => {
+        return data.skillIds
+            .map((skillId) => skillById[skillId])
+            .filter(Boolean);
+    }, [data.skillIds, skillById]);
 
-    const selectedSkill = selectedNode
-        ? skillById[selectedNode.skillId]
-        : null;
+    const selectedSkill =
+        treeSkills.find((skill) => skill.id === selectedSkillId) || null;
 
     return (
         <section className="skill-tree-section">
@@ -71,32 +72,29 @@ function SkillTree({ data }) {
                     </div>
 
                     <div className="skill-tree-icons">
-                        {data.nodes.map((node) => {
-                            const skill = skillById[node.skillId];
-
-                            if (!skill) return null;
-
+                        {treeSkills.map((skill) => {
                             const position = getNodePosition(
-                                node,
-                                data.nodes,
+                                skill,
+                                treeSkills,
                                 data.levels
                             );
 
                             return (
                                 <button
-                                    key={node.skillId}
+                                    key={skill.id}
                                     type="button"
                                     className={
-                                        selectedSkillId === node.skillId
+                                        selectedSkillId === skill.id
                                             ? "skill-node active"
                                             : "skill-node"
                                     }
                                     style={{
                                         left: `${position.x}%`,
                                         top: `${position.y}%`,
-                                        "--skill-border": node.borderColor || "#facc15",
+                                        "--skill-border":
+                                            SKILL_TYPE_COLORS[skill.type] || "#facc15",
                                     }}
-                                    onClick={() => setSelectedSkillId(node.skillId)}
+                                    onClick={() => setSelectedSkillId(skill.id)}
                                     aria-label={skill.nameFr || skill.name}
                                 >
                                     <img
