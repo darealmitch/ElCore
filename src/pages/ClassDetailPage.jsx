@@ -6,6 +6,7 @@ import { characterThemes } from "../data/characterThemes";
 import { masterSymbols } from "../data/masterSymbols";
 import { toClassSlug, getClassUrl } from "../utils/classRoutes";
 import { classLore } from "../data/classLore";
+import { classDescriptions } from "../data/classDescriptions";
 
 const stageLabels = {
     job1: "1re Spécialisation",
@@ -98,6 +99,12 @@ function ClassDetailPage() {
             item.className === classItem.className &&
             item.jobStage === classItem.jobStage
     );
+    const description = classDescriptions.find(
+        (item) =>
+            item.characterId === classItem.characterId &&
+            item.className === classItem.className &&
+            item.jobStage === classItem.jobStage
+    );
     const currentClassIndex = classImages.findIndex(
         (item) =>
             item.characterId === classItem.characterId &&
@@ -153,6 +160,7 @@ function ClassDetailPage() {
                 </section>
                 <article className="detail-card identity-card">
                     <h2>Identité</h2>
+
                     <div className="detail-stats">
                         <div>
                             <span>Personnage</span>
@@ -170,6 +178,36 @@ function ClassDetailPage() {
                             <span>Classe</span>
                             <strong>{classItem.classNameFr || classItem.className}</strong>
                         </div>
+                        {description && description.presentation && (
+                            <article className="detail-card wide class-description-card">
+                                {description.title && <h2>{description.title}</h2>}
+                                {description.path?.length > 0 && (
+                                    <div className="class-lore-path">
+                                        {description.path.map((step, index) => (
+                                            <span key={step}>
+                                                {step}
+                                                {index < description.path.length - 1 ? " → " : ""}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+                                <p>{description.presentation}</p>
+                                <div className="detail-stats">
+                                    {description.attackType && (
+                                        <div>
+                                            <span>Type d'attaque</span>
+                                            <strong>{description.attackType}</strong>
+                                        </div>
+                                    )}
+                                    {description.attackRange && (
+                                        <div>
+                                            <span>Portée d'attaque</span>
+                                            <strong>{description.attackRange}</strong>
+                                        </div>
+                                    )}
+                                </div>
+                            </article>
+                        )}
                     </div>
                 </article>
                 <article className="detail-card progression-card">
