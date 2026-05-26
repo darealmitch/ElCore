@@ -5,6 +5,7 @@ import { transcendenceGuide } from "../../data/transcendenceGuide";
 function getSafeLevels(levels) {
     return Array.isArray(levels) ? levels : [];
 }
+
 function getLevelCellPosition(level, levels) {
     const safeLevels = getSafeLevels(levels);
     const levelIndex = safeLevels.indexOf(level);
@@ -35,6 +36,7 @@ function getNodePosition(skill, treeSkills, levels) {
 
     return { x, y };
 }
+
 function getSectionPosition(section, levels) {
     const safeLevels = getSafeLevels(levels);
     const betweenLevels = section.id === "transcendence" ? [65, 70] : section.betweenLevels;
@@ -49,6 +51,7 @@ function getSectionPosition(section, levels) {
 
     return getLevelBoundaryPosition(section.level, safeLevels);
 }
+
 function renderSkillDescription(description) {
     if (!description) return <p>La description de cette compétence sera ajoutée plus tard.</p>;
     if (typeof description === "string") return <p>{description}</p>;
@@ -60,10 +63,58 @@ function renderSkillDescription(description) {
         </div>
     );
 }
+
+function SkillButton({ skill, isActive, isTooltipLeft, className, onClick, style = {} }) {
+    return (
+        <button
+            type="button"
+            className={[className, isActive ? "active" : "", isTooltipLeft ? "tooltip-left" : ""].join(" ")}
+            style={{
+                ...style,
+                "--skill-border": SKILL_TYPE_COLORS[skill.type] || "#facc15",
+                "--skill-aura": skill.auraType ? ELSWORD_AURA_COLORS[skill.auraType] : "transparent",
+            }}
+            onClick={onClick}
+            aria-label={skill.nameFr || skill.name}
+        >
+            <img src={skill.image} alt={skill.nameFr || skill.name} />
+            <span className="skill-tooltip">{skill.nameFr || skill.name}</span>
+        </button>
+    );
+}
+
+function SkillDetailCard({ selectedSkill }) {
+    if (!selectedSkill) return null;
+
+    const selectedSkillBadge = selectedSkill.badge || (selectedSkill.level === 65 ? "hyperActive" : "");
+
+    return (
+        <article className="skill-detail-card">
+            <div>
+                <span>Compétence sélectionnée</span>
+                <h3>{selectedSkill.nameFr || selectedSkill.name}</h3>
+            </div>
+
+            {selectedSkillBadge && (
+                <p className="skill-detail-badge" style={{ "--skill-badge": SKILL_BADGE_COLORS[selectedSkillBadge] }}>
+                    {SKILL_BADGE_LABELS[selectedSkillBadge]}
+                </p>
+            )}
+
+            {selectedSkill.auraType && (
+                <p className="skill-detail-aura" style={{ "--skill-aura": ELSWORD_AURA_COLORS[selectedSkill.auraType] }}>
+                    Cette compétence utilise <strong>{ELSWORD_AURA_LABELS[selectedSkill.auraType]}</strong>
+                </p>
+            )}
+
+            {renderSkillDescription(selectedSkill.description)}
+        </article>
+    );
+}
+
 function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }) {
     const hasTranscendence = data.sections?.some((section) => section.id === "transcendence");
     const selectedSkill = treeSkills.find((skill) => skill.id === selectedSkillId) || null;
-    const selectedSkillBadge = selectedSkill?.badge || (selectedSkill?.level >= 65 ? "hyperActive" : "");
 
     return (
         <section className="skill-tree-section skill-tree-rows-section">
@@ -97,39 +148,27 @@ function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }
                                             <div className="skill-row-content">
                                                 <div className="skill-row-column">
                                                     {skillsAtLevel.filter((skill) => skill.type !== "passive").map((skill) => (
-                                                        <button
+                                                        <SkillButton
                                                             key={skill.id}
-                                                            type="button"
-                                                            className={selectedSkillId === skill.id ? "skill-node row-node active" : "skill-node row-node"}
-                                                            style={{
-                                                                "--skill-border": SKILL_TYPE_COLORS[skill.type] || "#facc15",
-                                                                "--skill-aura": skill.auraType ? ELSWORD_AURA_COLORS[skill.auraType] : "transparent",
-                                                            }}
+                                                            skill={skill}
+                                                            isActive={selectedSkillId === skill.id}
+                                                            isTooltipLeft={level >= 80}
+                                                            className="skill-node row-node"
                                                             onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
-                                                            aria-label={skill.nameFr || skill.name}
-                                                        >
-                                                            <img src={skill.image} alt={skill.nameFr || skill.name} />
-                                                            <span className="skill-tooltip">{skill.nameFr || skill.name}</span>
-                                                        </button>
+                                                        />
                                                     ))}
                                                 </div>
 
                                                 <div className="skill-row-column passive">
                                                     {skillsAtLevel.filter((skill) => skill.type === "passive").map((skill) => (
-                                                        <button
+                                                        <SkillButton
                                                             key={skill.id}
-                                                            type="button"
-                                                            className={selectedSkillId === skill.id ? "skill-node row-node active" : "skill-node row-node"}
-                                                            style={{
-                                                                "--skill-border": SKILL_TYPE_COLORS[skill.type] || "#60a5fa",
-                                                                "--skill-aura": skill.auraType ? ELSWORD_AURA_COLORS[skill.auraType] : "transparent",
-                                                            }}
+                                                            skill={skill}
+                                                            isActive={selectedSkillId === skill.id}
+                                                            isTooltipLeft={level === 80}
+                                                            className="skill-node row-node"
                                                             onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
-                                                            aria-label={skill.nameFr || skill.name}
-                                                        >
-                                                            <img src={skill.image} alt={skill.nameFr || skill.name} />
-                                                            <span className="skill-tooltip">{skill.nameFr || skill.name}</span>
-                                                        </button>
+                                                        />
                                                     ))}
                                                 </div>
                                             </div>
@@ -160,36 +199,15 @@ function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }
                 )}
             </div>
 
-            {selectedSkill && (
-                <article className="skill-detail-card">
-                    <div>
-                        <span>Compétence sélectionnée</span>
-                        <h3>{selectedSkill.nameFr || selectedSkill.name}</h3>
-                    </div>
-
-                    {selectedSkillBadge && (
-                        <p className="skill-detail-badge" style={{ "--skill-badge": SKILL_BADGE_COLORS[selectedSkillBadge] }}>
-                            {SKILL_BADGE_LABELS[selectedSkillBadge]}
-                        </p>
-                    )}
-
-                    {selectedSkill.auraType && (
-                        <p className="skill-detail-aura" style={{ "--skill-aura": ELSWORD_AURA_COLORS[selectedSkill.auraType] }}>
-                            Cette compétence utilise <strong>{ELSWORD_AURA_LABELS[selectedSkill.auraType]}</strong>
-                        </p>
-                    )}
-
-                    {renderSkillDescription(selectedSkill.description)}
-                </article>
-            )}
+            <SkillDetailCard selectedSkill={selectedSkill} />
         </section>
     );
 }
 
 function SkillTree({ data }) {
     const [selectedSkillId, setSelectedSkillId] = useState(null);
-
     const levels = getSafeLevels(data.levels);
+
     const skillById = useMemo(() => {
         return skills.reduce((acc, skill) => {
             acc[skill.id] = skill;
@@ -207,8 +225,9 @@ function SkillTree({ data }) {
                 return matchesMinLevel && matchesMaxLevel;
             });
     }, [data.skillIds, data.minLevel, data.maxLevel, skillById]);
+
     const selectedSkill = treeSkills.find((skill) => skill.id === selectedSkillId) || null;
-    const selectedSkillBadge = selectedSkill?.badge || (selectedSkill?.level >= 65 ? "hyperActive" : "");
+
     if (data.layout === "rows") {
         return <SkillTreeRows data={data} treeSkills={treeSkills} selectedSkillId={selectedSkillId} setSelectedSkillId={setSelectedSkillId} />;
     }
@@ -231,9 +250,9 @@ function SkillTree({ data }) {
                         {data.levels.map((level) => {
                             const levelY = getLevelBoundaryPosition(level, levels);
                             if (levelY === null) return null;
-
                             return <div className="skill-tree-level-line" key={`line-${level}`} style={{ top: `${levelY}%` }} />;
                         })}
+
                         {data.sections?.map((section) => {
                             const sectionY = getSectionPosition(section, levels);
                             if (sectionY === null) return null;
@@ -247,25 +266,22 @@ function SkillTree({ data }) {
 
                         {treeSkills.map((skill) => {
                             const position = getNodePosition(skill, treeSkills, levels);
-                            const tooltipDirection = position.y >= 75 ? "left" : "bottom";
+                            const isRightSideSkill = position.x >= 50;
+                            const tooltipDirection = position.y >= 75 && isRightSideSkill ? "left" : "bottom";
 
                             return (
-                                <button
+                                <SkillButton
                                     key={skill.id}
-                                    type="button"
-                                    className={[selectedSkillId === skill.id ? "skill-node active" : "skill-node", tooltipDirection === "left" ? "tooltip-left" : ""].join(" ")}
+                                    skill={skill}
+                                    isActive={selectedSkillId === skill.id}
+                                    isTooltipLeft={tooltipDirection === "left"}
+                                    className="skill-node"
+                                    onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
                                     style={{
                                         left: `${position.x}%`,
-                                        top: `calc(${position.y}% + 1.2rem)`,
-                                        "--skill-border": SKILL_TYPE_COLORS[skill.type] || "#facc15",
-                                        "--skill-aura": skill.auraType ? ELSWORD_AURA_COLORS[skill.auraType] : "transparent",
+                                        top: `${position.y}%`,
                                     }}
-                                    onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
-                                    aria-label={skill.nameFr || skill.name}
-                                >
-                                    <img src={skill.image} alt={skill.nameFr || skill.name} />
-                                    <span className="skill-tooltip">{skill.nameFr || skill.name}</span>
-                                </button>
+                                />
                             );
                         })}
                     </div>
@@ -276,30 +292,8 @@ function SkillTree({ data }) {
                 </aside>
             </div>
 
-            {selectedSkill && (
-                <article className="skill-detail-card">
-                    <div>
-                        <span>Compétence sélectionnée</span>
-                        <h3>{selectedSkill.nameFr || selectedSkill.name}</h3>
-                    </div>
-
-                    {selectedSkillBadge && (
-                        <p className="skill-detail-badge" style={{ "--skill-badge": SKILL_BADGE_COLORS[selectedSkillBadge] }}>
-                            {SKILL_BADGE_LABELS[selectedSkillBadge]}
-                        </p>
-                    )}
-
-                    {selectedSkill.auraType && (
-                        <p className="skill-detail-aura" style={{ "--skill-aura": ELSWORD_AURA_COLORS[selectedSkill.auraType] }}>
-                            Cette compétence utilise <strong>{ELSWORD_AURA_LABELS[selectedSkill.auraType]}</strong>
-                        </p>
-                    )}
-
-                    {renderSkillDescription(selectedSkill.description)}
-                </article>
-            )}
+            <SkillDetailCard selectedSkill={selectedSkill} />
         </section>
     );
 }
-
 export default SkillTree;

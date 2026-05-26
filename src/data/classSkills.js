@@ -82,6 +82,12 @@ export const classSkills = [
             "elsword-lk-skill-10",
             "elsword-lk-skill-11",
             "elsword-lk-skill-12",
+            "elsword-lk-skill-13",
+            "elsword-lk-skill-14",
+            "elsword-lk-skill-15",
+            "elsword-lk-skill-16",
+            "elsword-lk-skill-17",
+            "elsword-lk-skill-18",
         ],
     },
 ];

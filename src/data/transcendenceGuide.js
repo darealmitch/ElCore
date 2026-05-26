@@ -8,18 +8,18 @@ export const transcendenceGuide = {
     details: [
         {
             title: "Accès à la transcendance",
-            text:
-                "Un personnage peut être transcendé lorsqu'il est niveau 70 ou plus et qu'il a complété sa deuxième quête de spécialisation. Il peut ensuite compléter les quêtes de transcendance ou utiliser l'objet dédié à l'Elromarché.",
+            text: "Un personnage peut être transcendé lorsqu'il est niveau 70 ou plus et qu'il a complété sa deuxième quête de spécialisation. " +
+                "Il peut ensuite compléter les quêtes de transcendance ou utiliser l'objet dédié à l'Elromarché.",
         },
         {
             title: "Nouvelles compétences",
-            text:
-                "Une fois transcendé, l'arbre de compétences est prolongé avec de nouvelles compétences. Certaines compétences peuvent être scellées et nécessitent une quête ou un objet spécifique pour être débloquées.",
+            text: "Une fois transcendé, l'arbre de compétences est prolongé avec de nouvelles compétences. " +
+                "Certaines compétences peuvent être scellées et nécessitent une quête ou un objet spécifique pour être débloquées.",
         },
         {
             title: "Bonus du booster",
-            text:
-                "En booster, les personnages transcendés reçoivent de meilleurs bonus. Le bonus de transcendance peut aussi réduire le temps de rechargement de certaines compétences et augmenter leurs dégâts.",
+            text: "En booster, les personnages transcendés reçoivent de meilleurs bonus. " +
+                "Le bonus de transcendance peut aussi réduire le temps de rechargement de certaines compétences et augmenter leurs dégâts.",
         },
     ],
 };
