@@ -347,7 +347,7 @@ export const skills = [
         description: "Elsword exécute la compétence Lame chantante verticalement.",
     },
     {
-        id: "elsword-lk-skill-14",
+        id: "elsword-lk-skill-19",
         name: "Awakened Will: Lord Knight",
         nameFr: "Volonté déchainé: Haut Chevalier",
         image: "/images/skills/el/lk/LordKnightPassive4.png",

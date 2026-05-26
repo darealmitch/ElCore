@@ -88,6 +88,7 @@ export const classSkills = [
             "elsword-lk-skill-16",
             "elsword-lk-skill-17",
             "elsword-lk-skill-18",
+            "elsword-lk-skill-19",
         ],
     },
     {
