@@ -632,52 +632,54 @@
     object-fit: contain;
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.25));
 }
+.skill-system-summary-list {
+    display: grid;
+    gap: 1rem;
+}
 
-.transcendence-summary-card {
+.skill-system-summary-card {
     display: grid;
     gap: 0.9rem;
     padding: 1.15rem;
-    border: 1px solid rgba(239, 68, 68, 0.34);
+    border: 1px solid rgba(148, 163, 184, 0.28);
     border-radius: 1.1rem;
     background:
-            radial-gradient(circle at top right, rgba(239, 68, 68, 0.12), transparent 16rem),
+            radial-gradient(circle at top right, rgba(147, 125, 255, 0.12), transparent 16rem),
             rgba(2, 6, 23, 0.36);
 }
 
-.transcendence-summary-header {
+.skill-system-summary-header {
     display: flex;
     align-items: center;
     gap: 0.85rem;
 }
 
-.transcendence-summary-header img {
+.skill-system-summary-header img {
     width: 3rem;
     height: 3rem;
     object-fit: contain;
-    filter: drop-shadow(0 0 14px rgba(239, 68, 68, 0.28));
 }
 
-.transcendence-summary-header span {
-    color: #ef4444;
+.skill-system-summary-header span {
+    color: var(--accent-blue);
     font-size: 0.72rem;
     font-weight: 900;
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
-.transcendence-summary-header h3 {
+.skill-system-summary-header h3 {
     margin: 0.25rem 0 0;
     color: #fff;
     font-size: clamp(1.35rem, 2vw, 1.75rem);
     line-height: 1.05;
 }
 
-.transcendence-summary-card p {
+.skill-system-summary-card p {
     margin: 0;
     color: var(--text-soft);
     line-height: 1.65;
 }
-
 @media (max-width: 1100px) {
     .skill-rows-with-summary {
         grid-template-columns: 1fr;

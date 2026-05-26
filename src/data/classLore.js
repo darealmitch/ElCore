@@ -1,7 +1,7 @@
 export const classLore = [
     // --- VOIE 1 : KNIGHT EMPEROR (CHEVALIER ROYAL) ---
     {
-        id: "elsword-knight-emperor-job3",
+        id: "base-knight-emperor-job3",
         characterId: "elsword",
         className: "Knight Emperor",
         classNameFr: "Chevalier Royal",
@@ -18,7 +18,7 @@ export const classLore = [
         themes: ["Chevalerie", "Amitié", "Confiance en soi"]
     },
     {
-        id: "elsword-knight-emperor-master",
+        id: "base-knight-emperor-master",
         characterId: "elsword",
         className: "Knight Emperor",
         classNameFr: "Chevalier Royal",
@@ -36,7 +36,7 @@ export const classLore = [
 
     // --- VOIE 2 : RUNE MASTER (MAÎTRE DES RUNES) ---
     {
-        id: "elsword-rune-master-job3",
+        id: "base-rune-master-job3",
         characterId: "elsword",
         className: "Rune Master",
         classNameFr: "Maître des runes",
@@ -52,7 +52,7 @@ export const classLore = [
         themes: ["Magie runique", "Combat hybride", "Évolution"]
     },
     {
-        id: "elsword-rune-master-master",
+        id: "base-rune-master-master",
         characterId: "elsword",
         className: "Rune Master",
         classNameFr: "Maître des runes",
@@ -70,7 +70,7 @@ export const classLore = [
 
     // --- VOIE 3 : IMMORTAL (IMMORTEL) ---
     {
-        id: "elsword-immortal-job3",
+        id: "base-immortal-job3",
         characterId: "elsword",
         className: "Immortal",
         classNameFr: "Immortel",
@@ -87,7 +87,7 @@ export const classLore = [
         themes: ["Cornwell", "El sombre", "Invocation de lames"]
     },
     {
-        id: "elsword-immortal-master",
+        id: "base-immortal-master",
         characterId: "elsword",
         className: "Immortal",
         classNameFr: "Immortel",
@@ -105,7 +105,7 @@ export const classLore = [
 
     // --- VOIE 4 : GENESIS (SÉPHIROTH) ---
     {
-        id: "elsword-genesis-job3",
+        id: "base-genesis-job3",
         characterId: "elsword",
         className: "Genesis",
         classNameFr: "Séphiroth",
@@ -122,7 +122,7 @@ export const classLore = [
         themes: ["Résonance de l'El", "Devoir", "Protection d'Elios"]
     },
     {
-        id: "elsword-genesis-master",
+        id: "base-genesis-master",
         characterId: "elsword",
         className: "Genesis",
         classNameFr: "Séphiroth",

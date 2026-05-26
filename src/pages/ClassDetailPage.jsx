@@ -59,12 +59,13 @@ function ClassNavigationCard({ item, direction, disabled = false, theme }) {
 }
 function getResolvedSkillIds(skillTree, allSkillTrees) {
     if (!skillTree) return [];
+
     const inheritedSkillIds = (skillTree.extends || []).flatMap((parentId) => {
         const parentTree = allSkillTrees.find((item) => item.id === parentId);
         return getResolvedSkillIds(parentTree, allSkillTrees);
     });
 
-    return [...inheritedSkillIds, ...(skillTree.skillIds || [])];
+    return [...new Set([...inheritedSkillIds, ...(skillTree.skillIds || [])])];
 }
 
 function ClassDetailPage() {
@@ -82,23 +83,6 @@ function ClassDetailPage() {
 
         return item.jobStage !== "master";
     });
-    const skillTree = classSkills.find(
-        (item) =>
-            item.characterId === classItem.characterId &&
-            item.jobStage === classItem.jobStage &&
-            (
-                item.className === classItem.className ||
-                item.classNameFr === classItem.classNameFr ||
-                item.pathName === classItem.pathName ||
-                item.pathNameFr === classItem.pathNameFr
-            )
-    );
-    const resolvedSkillTree = skillTree
-        ? {
-            ...skillTree,
-            skillIds: getResolvedSkillIds(skillTree, classSkills),
-        }
-        : null;
     if (!classItem) {
         return (
             <main className="page">
@@ -115,6 +99,24 @@ function ClassDetailPage() {
     }
     const theme = characterThemes[classItem.characterId];
     const masterLogo = getMasterLogo(classItem);
+    const skillTree = classSkills.find(
+        (item) =>
+            item.characterId === classItem.characterId &&
+            item.jobStage === classItem.jobStage &&
+            (
+                item.className === classItem.className ||
+                item.classNameFr === classItem.classNameFr ||
+                item.pathName === classItem.pathName ||
+                item.pathNameFr === classItem.pathNameFr
+            )
+    );
+    const resolvedSkillTree = skillTree
+        ? {
+            ...skillTree,
+            skillIds: getResolvedSkillIds(skillTree, classSkills),
+            masterLogo: masterLogo?.image || skillTree.masterLogo || "",
+        }
+        : null;
     const relatedBuilds = builds.filter(
         (build) =>
             build.characterId === classItem.characterId &&

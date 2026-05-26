@@ -23,7 +23,7 @@ export const classSkills = [
         ],
     },
     {
-        id: "elsword-sk-skill",
+        id: "elsword-sk-skills",
         characterId: "elsword",
         className: "Sword Knight",
         classNameFr: "Chevalier de l'épée",
@@ -54,7 +54,7 @@ export const classSkills = [
         classNameFr: "Haut Chevalier",
         jobStage: "job2",
         title: "Compétences — Haut Chevalier",
-        extends: ["elsword-sk-skill"],
+        extends: ["elsword-sk-skills"],
         layout: "rows",
         minLevel: 35,
         columns: [
@@ -88,6 +88,52 @@ export const classSkills = [
             "elsword-lk-skill-16",
             "elsword-lk-skill-17",
             "elsword-lk-skill-18",
+        ],
+    },
+    {
+        id: "elsword-ke-skills",
+        characterId: "elsword",
+        className: "Knight Emperor",
+        classNameFr: "Chevalier Royal",
+        jobStage: "job3",
+        title: "Compétences — Chevalier Royal",
+        layout: "rows",
+        extends: ["elsword-lk-skills"],
+        minLevel: 15,
+        columns: [
+            { id: "active", label: "Skills", type: "active" },
+            { id: "passive", label: "Passives", type: "passive" },
+        ],
+        levels: [15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 95, 99],
+        sections: [
+            {id: "forceSkills", label: "Compétences de force"}
+        ],
+        skillIds: [
+            "el-ke-skill-1",
+            "el-ke-skill-2",
+            "el-ke-skill-3",
+        ],
+    },
+    {
+        id: "elsword-ke-master",
+        characterId: "elsword",
+        className: "Knight Emperor",
+        classNameFr: "Chevalier Royal",
+        jobStage: "master",
+        title: "Compétences — Chevalier Royal",
+        layout: "rows",
+        extends: ["elsword-ke-skills"],
+        minLevel: 1,
+        columns: [
+            { id: "active", label: "Skills", type: "active" },
+            { id: "passive", label: "Passives", type: "passive" },
+        ],
+        levels: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 95, 99, "master"],
+        sections: [
+            { id: "masterClass", label: "Classe Maître" },
+            { id: "forceSkills", label: "Compétences de force" },
+        ],
+        skillIds: [
         ],
     },
 ];

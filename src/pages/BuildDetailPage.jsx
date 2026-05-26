@@ -32,11 +32,9 @@ function BuildDetailPage() {
           {build.mode}
         </span>
                 <h1 style={{ color: theme.primary }}>{build.title}</h1>
-
                 <p className="build-detail-class">
                     {build.character} — {build.classNameFr || build.className}
                 </p>
-
                 <p>Nom international : <strong>{build.className}</strong></p>
                 <p>{build.notes}</p>
             </section>

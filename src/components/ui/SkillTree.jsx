@@ -1,6 +1,29 @@
 import { useMemo, useState } from "react";
 import { skills, SKILL_TYPE_COLORS, ELSWORD_AURA_COLORS, ELSWORD_AURA_LABELS, SKILL_BADGE_LABELS, SKILL_BADGE_COLORS } from "../../data/skills";
 import { transcendenceGuide } from "../../data/transcendenceGuide";
+import { masterClassGuide } from "../../data/masterClassGuide";
+import { forceSkillGuide } from "../../data/forceSkillGuide";
+
+const skillSystemGuides = {
+    transcendence: transcendenceGuide,
+    masterClass: masterClassGuide,
+    forceSkills: forceSkillGuide,
+};
+
+function getGuideForSection(section, data) {
+    const guide = skillSystemGuides[section.id];
+    if (!guide) return null;
+
+    if (section.id === "masterClass" && data.masterLogo) {
+        return { ...guide, logo: data.masterLogo };
+    }
+
+    return guide;
+}
+
+function formatLevelLabel(level) {
+    return level === "master" ? "Classe Maître" : `Lv ${level}`;
+}
 
 function getSafeLevels(levels) {
     return Array.isArray(levels) ? levels : [];
@@ -113,14 +136,15 @@ function SkillDetailCard({ selectedSkill }) {
 }
 
 function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }) {
-    const hasTranscendence = data.sections?.some((section) => section.id === "transcendence");
+    const levels = getSafeLevels(data.levels);
+    const visibleGuides = (data.sections || []).map((section) => getGuideForSection(section, data)).filter(Boolean);
     const selectedSkill = treeSkills.find((skill) => skill.id === selectedSkillId) || null;
 
     return (
         <section className="skill-tree-section skill-tree-rows-section">
             <h2 className="skill-tree-title">{data.title || "Skills"}</h2>
 
-            <div className={hasTranscendence ? "skill-rows-with-summary" : "skill-rows-with-summary no-summary"}>
+            <div className={visibleGuides.length ? "skill-rows-with-summary" : "skill-rows-with-summary no-summary"}>
                 <div className="skill-rows-layout">
                     <div className="skill-rows-board classic-look">
                         <div className="skill-rows-headers">
@@ -129,7 +153,7 @@ function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }
                         </div>
 
                         <div className="skill-rows-body">
-                            {data.levels.map((level) => {
+                            {levels.map((level) => {
                                 const skillsAtLevel = treeSkills.filter((skill) => skill.level === level);
                                 const sectionBeforeLevel = data.sections?.find((section) => section.id === "transcendence" && level === 70);
 
@@ -138,7 +162,7 @@ function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }
                                         {sectionBeforeLevel && (
                                             <div className="skill-row-divider">
                                                 <span>
-                                                    {transcendenceGuide.logo && <img src={transcendenceGuide.logo} alt="" />}
+                                                    {getGuideForSection(sectionBeforeLevel, data)?.logo && <img src={getGuideForSection(sectionBeforeLevel, data).logo} alt="" />}
                                                     {sectionBeforeLevel.label}
                                                 </span>
                                             </div>
@@ -152,7 +176,7 @@ function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }
                                                             key={skill.id}
                                                             skill={skill}
                                                             isActive={selectedSkillId === skill.id}
-                                                            isTooltipLeft={level >= 80}
+                                                            isTooltipLeft={typeof level === "number" && level >= 80}
                                                             className="skill-node row-node"
                                                             onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
                                                         />
@@ -165,7 +189,7 @@ function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }
                                                             key={skill.id}
                                                             skill={skill}
                                                             isActive={selectedSkillId === skill.id}
-                                                            isTooltipLeft={level === 80}
+                                                            isTooltipLeft={typeof level === "number" && level >= 80}
                                                             className="skill-node row-node"
                                                             onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
                                                         />
@@ -179,22 +203,26 @@ function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }
                         </div>
                     </div>
 
-                    <aside className="skill-tree-levels rows-levels" aria-label="Niveaux" style={{ "--level-count": data.levels.length }}>
-                        {data.levels.map((level) => <span key={level}>Lv {level}</span>)}
+                    <aside className="skill-tree-levels rows-levels" aria-label="Niveaux" style={{ "--level-count": levels.length }}>
+                        {levels.map((level) => <span key={level}>{formatLevelLabel(level)}</span>)}
                     </aside>
                 </div>
 
-                {hasTranscendence && (
-                    <aside className="transcendence-summary-card">
-                        <div className="transcendence-summary-header">
-                            {transcendenceGuide.logo && <img src={transcendenceGuide.logo} alt="" />}
-                            <div>
-                                <span>Particularité</span>
-                                <h3>{transcendenceGuide.title}</h3>
-                            </div>
-                        </div>
+                {visibleGuides.length > 0 && (
+                    <aside className="skill-system-summary-list">
+                        {visibleGuides.map((guide) => (
+                            <article className="skill-system-summary-card" key={guide.title}>
+                                <div className="skill-system-summary-header">
+                                    {guide.logo && <img src={guide.logo} alt="" />}
+                                    <div>
+                                        <span>Particularité</span>
+                                        <h3>{guide.title}</h3>
+                                    </div>
+                                </div>
 
-                        <p>{transcendenceGuide.summary}</p>
+                                <p>{guide.summary}</p>
+                            </article>
+                        ))}
                     </aside>
                 )}
             </div>
@@ -220,8 +248,11 @@ function SkillTree({ data }) {
             .map((skillId) => skillById[skillId])
             .filter(Boolean)
             .filter((skill) => {
+                if (typeof skill.level !== "number") return true;
+
                 const matchesMinLevel = data.minLevel === undefined || skill.level >= data.minLevel;
                 const matchesMaxLevel = data.maxLevel === undefined || skill.level <= data.maxLevel;
+
                 return matchesMinLevel && matchesMaxLevel;
             });
     }, [data.skillIds, data.minLevel, data.maxLevel, skillById]);
@@ -247,7 +278,7 @@ function SkillTree({ data }) {
                     </div>
 
                     <div className="skill-tree-icons">
-                        {data.levels.map((level) => {
+                        {levels.map((level) => {
                             const levelY = getLevelBoundaryPosition(level, levels);
                             if (levelY === null) return null;
                             return <div className="skill-tree-level-line" key={`line-${level}`} style={{ top: `${levelY}%` }} />;
@@ -277,10 +308,7 @@ function SkillTree({ data }) {
                                     isTooltipLeft={tooltipDirection === "left"}
                                     className="skill-node"
                                     onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
-                                    style={{
-                                        left: `${position.x}%`,
-                                        top: `${position.y}%`,
-                                    }}
+                                    style={{ left: `${position.x}%`, top: `${position.y}%` }}
                                 />
                             );
                         })}
@@ -288,7 +316,7 @@ function SkillTree({ data }) {
                 </div>
 
                 <aside className="skill-tree-levels" aria-label="Niveaux" style={{ "--level-count": levels.length }}>
-                    {levels.map((level) => <span key={level}>Lv {level}</span>)}
+                    {levels.map((level) => <span key={level}>{formatLevelLabel(level)}</span>)}
                 </aside>
             </div>
 
@@ -296,4 +324,5 @@ function SkillTree({ data }) {
         </section>
     );
 }
+
 export default SkillTree;
