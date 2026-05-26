@@ -1,6 +1,6 @@
-import { classSkills } from "../ClassSkills.js";
+import {elswordClassSkills} from "./elswordClassSkills.js";
 
 export const classSkills = [
-    ...classSkills,
+    ...elswordClassSkills,
 
 ];
