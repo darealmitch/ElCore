@@ -5,7 +5,7 @@ import ClassPathTimeline from "/src/components/ui/ClassPathTimeline";
 import BuildCard from "../components/ui/BuildCard";
 import { builds } from "../data/builds";
 import SkillTree from "../components/ui/SkillTree";
-import { classSkills } from "../data/classSkills";
+import { classSkills } from "../data/ClassSkills.js";
 import { characterMechanics } from "../data/characterMechanics";
 
 function renderElswordAuraText(text) {

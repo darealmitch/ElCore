@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { skills, SKILL_TYPE_COLORS, ELSWORD_AURA_COLORS, ELSWORD_AURA_LABELS, SKILL_BADGE_LABELS, SKILL_BADGE_COLORS } from "../../data/skills";
+import { elswordClassSkills, SKILL_TYPE_COLORS, ELSWORD_AURA_COLORS, ELSWORD_AURA_LABELS, SKILL_BADGE_LABELS, SKILL_BADGE_COLORS } from "../../data/classSkills/elswordClassSkills.js";
 import { transcendenceGuide } from "../../data/transcendenceGuide";
 import { masterClassGuide } from "../../data/masterClassGuide";
 import { forceSkillGuide } from "../../data/forceSkillGuide";
@@ -22,7 +22,13 @@ function getGuideForSection(section, data) {
 }
 
 function formatLevelLabel(level) {
-    return level === "master" ? "Classe Maître" : `Lv ${level}`;
+    return level === "master" ? "Classe Maître" : `Level ${level}`;
+}
+function getRowTooltipDirection(level, index) {
+    if (level === "master") return index === 0 ? "top-right" : "top";
+    if (typeof level === "number" && (level === 40 || level >= 80)) return "left";
+
+    return "";
 }
 
 function getSafeLevels(levels) {
@@ -169,10 +175,7 @@ function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }
                                             <div className="skill-row-content">
                                                 <div className="skill-row-column">
                                                     {skillsAtLevel.filter((skill) => skill.type !== "passive").map((skill, index) => {
-                                                        const tooltipDirection =
-                                                            level === "master"
-                                                                ? index === 0 ? "top-right" : "top"
-                                                                : typeof level === "number" && level >= 80 ? "left" : "";
+                                                        const tooltipDirection = getRowTooltipDirection(level, index);
 
                                                         return (
                                                             <SkillButton
@@ -189,10 +192,7 @@ function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }
 
                                                 <div className="skill-row-column passive">
                                                     {skillsAtLevel.filter((skill) => skill.type === "passive").map((skill, index) => {
-                                                        const tooltipDirection =
-                                                            level === "master"
-                                                                ? index === 0 ? "top-right" : "top"
-                                                                : typeof level === "number" && level >= 80 ? "left" : "";
+                                                        const tooltipDirection = getRowTooltipDirection(level, index);
 
                                                         return (
                                                             <SkillButton
@@ -248,7 +248,7 @@ function SkillTree({ data }) {
     const levels = getSafeLevels(data.levels);
 
     const skillById = useMemo(() => {
-        return skills.reduce((acc, skill) => {
+        return elswordClassSkills.reduce((acc, skill) => {
             acc[skill.id] = skill;
             return acc;
         }, {});
@@ -316,7 +316,7 @@ function SkillTree({ data }) {
                                     key={skill.id}
                                     skill={skill}
                                     isActive={selectedSkillId === skill.id}
-                                    isTooltipLeft={tooltipDirection === "left"}
+                                    tooltipDirection={tooltipDirection === "left" ? "left" : ""}
                                     className="skill-node"
                                     onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
                                     style={{ left: `${position.x}%`, top: `${position.y}%` }}

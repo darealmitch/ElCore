@@ -13,8 +13,8 @@ export const builds = [
         statsFr: ["Attaque physique", "Coups critiques", "Maximisation", "Dégâts additionnels", "Dégâts aux boss"],
         skills: ["Grand Cross", "Armor Break", "Double Slash", "Triple Geyser", "Counter Attack"],
         skillsFr: ["Grand Cross", "Brise-armure", "Double Slash", "Triple Geyser", "Counter Attack"],
-        traits: ["Heavy on main damage skills", "Damage on core skills", "Utility traits on debuff tools"],
-        traitsFr: ["Heavy sur les gros skills", "Dégâts sur les skills principaux", "Traits utilitaires sur les outils de debuff"],
+        traits: ["Heavy on main damage elswordClassSkills", "Damage on core elswordClassSkills", "Utility traits on debuff tools"],
+        traitsFr: ["Heavy sur les gros elswordClassSkills", "Dégâts sur les elswordClassSkills principaux", "Traits utilitaires sur les outils de debuff"],
         equipment: ["Physical DPS setup", "Critical/Maximize sockets", "Boss Damage weapon orientation"],
         equipmentFr: ["Équipement DPS physique", "Sockets Critique/Maximisation", "Arme orientée dégâts aux boss"],
         rotation: [
@@ -44,25 +44,25 @@ export const builds = [
         difficulty: "Moyenne",
         stats: ["Magical Attack", "Critical", "Maximize", "Additional Damage", "Boss Damage"],
         statsFr: ["Attaque magique", "Coups critiques", "Maximisation", "Dégâts additionnels", "Dégâts aux boss"],
-        skills: ["Rune skills", "Magical burst skills", "Offensive buffs"],
+        skills: ["Rune elswordClassSkills", "Magical burst elswordClassSkills", "Offensive buffs"],
         skillsFr: ["Compétences runiques", "Compétences de burst magique", "Buffs offensifs"],
-        traits: ["Heavy on burst skills", "Damage on main skills"],
-        traitsFr: ["Heavy sur les skills de burst", "Dégâts sur les skills principaux"],
+        traits: ["Heavy on burst elswordClassSkills", "Damage on main elswordClassSkills"],
+        traitsFr: ["Heavy sur les elswordClassSkills de burst", "Dégâts sur les elswordClassSkills principaux"],
         equipment: ["Magical DPS setup", "Critical/Maximize sockets", "Boss Damage orientation"],
         equipmentFr: ["Équipement DPS magique", "Sockets Critique/Maximisation", "Orientation dégâts aux boss"],
         rotation: [
             "Maintenir les buffs runiques",
             "Préparer les fenêtres de burst",
-            "Aligner les gros skills sur les fenêtres boss",
-            "Compléter avec les skills courts entre les gros cooldowns"
+            "Aligner les gros elswordClassSkills sur les fenêtres boss",
+            "Compléter avec les elswordClassSkills courts entre les gros cooldowns"
         ],
-        strengths: ["Bon potentiel de raid", "Bon burst magique", "Bonne portée selon les skills"],
+        strengths: ["Bon potentiel de raid", "Bon burst magique", "Bonne portée selon les elswordClassSkills"],
         weaknesses: ["Demande du timing", "Moins simple qu’une voie pure clear"],
         notes: "À choisir si tu préfères un gameplay magique plus technique qu’un simple corps-à-corps. Le personnage récompense bien le timing : prépare tes buffs, attends la bonne fenêtre boss, puis envoie ton burst.",
         sourceNotes: "CoboDex liste Rune Master comme 2e chemin magique d’Elsword.",
         confidence: "moyen",
         patchReference: "CoboDex consulté en 2026",
-        needsVerification: ["skills exacts", "traits finaux", "rotation optimale"]
+        needsVerification: ["elswordClassSkills exacts", "traits finaux", "rotation optimale"]
     },
     {
         id: "elsword-immortal",
@@ -76,16 +76,16 @@ export const builds = [
         difficulty: "Moyenne",
         stats: ["Physical Attack", "Critical", "Maximize", "Additional Damage"],
         statsFr: ["Attaque physique", "Coups critiques", "Maximisation", "Dégâts additionnels"],
-        skills: ["High uptime melee skills", "Buff-oriented actives"],
+        skills: ["High uptime melee elswordClassSkills", "Buff-oriented actives"],
         skillsFr: ["Compétences mêlée à uptime élevé", "Actifs orientés buffs"],
-        traits: ["Damage on main skills", "Heavy if confirmed"],
-        traitsFr: ["Dégâts sur skills principaux", "Heavy si confirmé"],
+        traits: ["Damage on main elswordClassSkills", "Heavy if confirmed"],
+        traitsFr: ["Dégâts sur elswordClassSkills principaux", "Heavy si confirmé"],
         equipment: ["Physical DPS setup", "Critical/Maximize/Additional Damage sockets"],
         equipmentFr: ["Équipement DPS physique", "Sockets Critique/Maximisation/Dégâts additionnels"],
         rotation: [
             "Maintenir les buffs offensifs",
-            "Utiliser les skills mêlée à cooldown court",
-            "Garder les gros skills pour les élites et boss"
+            "Utiliser les elswordClassSkills mêlée à cooldown court",
+            "Garder les gros elswordClassSkills pour les élites et boss"
         ],
         strengths: ["Bon sustain", "Bonne pression en PvE général"],
         weaknesses: ["Build exact non verrouillé", "Dépendance au stuff"],
@@ -93,7 +93,7 @@ export const builds = [
         sourceNotes: "CoboDex liste Immortal comme 3e chemin physique d’Elsword.",
         confidence: "faible",
         patchReference: "CoboDex consulté en 2026",
-        needsVerification: ["skills exacts", "traits", "rotation", "équipement endgame"]
+        needsVerification: ["elswordClassSkills exacts", "traits", "rotation", "équipement endgame"]
     },
     {
         id: "elsword-genesis",
@@ -107,10 +107,10 @@ export const builds = [
         difficulty: "Difficile",
         stats: ["Magical Attack", "Critical", "Maximize", "Boss Damage"],
         statsFr: ["Attaque magique", "Coups critiques", "Maximisation", "Dégâts aux boss"],
-        skills: ["Endgame magical burst skills", "Utility buffs"],
+        skills: ["Endgame magical burst elswordClassSkills", "Utility buffs"],
         skillsFr: ["Compétences de burst magique endgame", "Buffs utilitaires"],
-        traits: ["Heavy on burst skills", "Damage on main skills"],
-        traitsFr: ["Heavy sur les skills de burst", "Dégâts sur skills principaux"],
+        traits: ["Heavy on burst elswordClassSkills", "Damage on main elswordClassSkills"],
+        traitsFr: ["Heavy sur les elswordClassSkills de burst", "Dégâts sur elswordClassSkills principaux"],
         equipment: ["Magical DPS endgame setup", "Critical/Maximize/Boss Damage sockets"],
         equipmentFr: ["Équipement DPS magique endgame", "Sockets Critique/Maximisation/Dégâts boss"],
         rotation: [
@@ -124,7 +124,7 @@ export const builds = [
         sourceNotes: "CoboDex liste Genesis comme 4e chemin magique d’Elsword.",
         confidence: "moyen",
         patchReference: "CoboDex consulté en 2026",
-        needsVerification: ["skills exacts", "traits", "rotation", "nom FR selon ton client"]
+        needsVerification: ["elswordClassSkills exacts", "traits", "rotation", "nom FR selon ton client"]
     },
 
     {
@@ -139,15 +139,15 @@ export const builds = [
         difficulty: "Moyenne",
         stats: ["Magical Attack", "Critical", "Maximize", "Additional Damage"],
         statsFr: ["Attaque magique", "Coups critiques", "Maximisation", "Dégâts additionnels"],
-        skills: ["Area skills", "Control skills", "Magical nukes"],
+        skills: ["Area elswordClassSkills", "Control elswordClassSkills", "Magical nukes"],
         skillsFr: ["Compétences de zone", "Compétences de contrôle", "Sorts de burst magique"],
-        traits: ["Damage on main skills", "Heavy if burst is needed"],
-        traitsFr: ["Dégâts sur les skills principaux", "Heavy si besoin de burst"],
+        traits: ["Damage on main elswordClassSkills", "Heavy if burst is needed"],
+        traitsFr: ["Dégâts sur les elswordClassSkills principaux", "Heavy si besoin de burst"],
         equipment: ["Magical PvE setup", "Critical/Maximize sockets"],
         equipmentFr: ["Équipement magique PvE", "Sockets Critique/Maximisation"],
         rotation: [
             "Contrôler la zone",
-            "Lancer les skills de clear",
+            "Lancer les elswordClassSkills de clear",
             "Réserver les gros sorts pour les élites et boss"
         ],
         strengths: ["Très bon farming", "Bon confort de jeu", "Clear solide"],
@@ -156,7 +156,7 @@ export const builds = [
         sourceNotes: "CoboDex liste Aether Sage comme 1er chemin magique d’Aisha.",
         confidence: "moyen",
         patchReference: "CoboDex consulté en 2026",
-        needsVerification: ["skills exacts", "traits", "rotation endgame"]
+        needsVerification: ["elswordClassSkills exacts", "traits", "rotation endgame"]
     },
     {
         id: "aisha-oz-sorcerer",
@@ -170,15 +170,15 @@ export const builds = [
         difficulty: "Facile",
         stats: ["Magical Attack", "Critical", "Maximize", "Additional Damage"],
         statsFr: ["Attaque magique", "Coups critiques", "Maximisation", "Dégâts additionnels"],
-        skills: ["Dark magic skills", "Area damage", "Simple burst"],
+        skills: ["Dark magic elswordClassSkills", "Area damage", "Simple burst"],
         skillsFr: ["Compétences de magie noire", "Dégâts de zone", "Burst simple"],
-        traits: ["Damage on main skills", "Heavy if available"],
-        traitsFr: ["Dégâts sur les skills principaux", "Heavy si disponible"],
+        traits: ["Damage on main elswordClassSkills", "Heavy if available"],
+        traitsFr: ["Dégâts sur les elswordClassSkills principaux", "Heavy si disponible"],
         equipment: ["Accessible magical setup", "Critical/Maximize sockets"],
         equipmentFr: ["Équipement magique accessible", "Sockets Critique/Maximisation"],
         rotation: [
             "Appliquer les buffs offensifs",
-            "Enchaîner les skills de zone",
+            "Enchaîner les elswordClassSkills de zone",
             "Utiliser les gros sorts sur boss"
         ],
         strengths: ["Facile à apprendre", "Bon confort", "Très bon choix débutant"],
@@ -187,7 +187,7 @@ export const builds = [
         sourceNotes: "CoboDex décrit Oz Sorcerer comme Magical DPS et option simple pour débutants.",
         confidence: "élevé",
         patchReference: "CoboDex consulté en 2026",
-        needsVerification: ["skills exacts", "traits finaux"]
+        needsVerification: ["elswordClassSkills exacts", "traits finaux"]
     },
     {
         id: "aisha-metamorphy",
@@ -203,8 +203,8 @@ export const builds = [
         statsFr: ["Attaque physique", "Coups critiques", "Maximisation", "Réduction de cooldown", "Dégâts additionnels"],
         skills: ["Energetic Body", "Megaton Press", "[Mod] Gust Storm: Strange Particle", "Impact Zone"],
         skillsFr: ["Energetic Body", "Megaton Press", "[Mod] Gust Storm: Strange Particle", "Impact Zone"],
-        traits: ["Cooldown uptime", "Damage on main skills", "Support uptime"],
-        traitsFr: ["Uptime de cooldown", "Dégâts sur les skills principaux", "Maintien des buffs/support"],
+        traits: ["Cooldown uptime", "Damage on main elswordClassSkills", "Support uptime"],
+        traitsFr: ["Uptime de cooldown", "Dégâts sur les elswordClassSkills principaux", "Maintien des buffs/support"],
         equipment: ["Physical hybrid setup", "Cooldown/critical/maximize orientation", "Exascale Red if applicable"],
         equipmentFr: ["Équipement hybride physique", "Orientation cooldown/critique/maximisation", "Exascale rouge si applicable"],
         rotation: [
@@ -219,7 +219,7 @@ export const builds = [
         sourceNotes: "CoboDex décrit Metamorphy comme physical hybrid DPS/support avec CDR, Physical Attack et réduction de défense ennemie.",
         confidence: "élevé",
         patchReference: "CoboDex, mise à jour 2026",
-        needsVerification: ["traductions FR officielles des skills", "traits exacts selon patch"]
+        needsVerification: ["traductions FR officielles des elswordClassSkills", "traits exacts selon patch"]
     },
     {
         id: "aisha-lord-azoth",
@@ -235,23 +235,23 @@ export const builds = [
         statsFr: ["Attaque physique", "Coups critiques", "Maximisation", "Dégâts additionnels"],
         skills: ["Mystic Flask", "Homunculus", "Melting Point", "Magnum Opus", "Philosopher's Stone"],
         skillsFr: ["Mystic Flask", "Homunculus", "Melting Point", "Magnum Opus", "Philosopher's Stone"],
-        traits: ["Damage on main skills", "Heavy on burst skills"],
-        traitsFr: ["Dégâts sur les skills principaux", "Heavy sur les skills de burst"],
+        traits: ["Damage on main elswordClassSkills", "Heavy on burst elswordClassSkills"],
+        traitsFr: ["Dégâts sur les elswordClassSkills principaux", "Heavy sur les elswordClassSkills de burst"],
         equipment: ["Physical DPS setup", "Critical/Maximize sockets", "Burst orientation"],
         equipmentFr: ["Équipement DPS physique", "Sockets Critique/Maximisation", "Orientation burst"],
         rotation: [
             "Préparer les effets d’alchimie",
-            "Utiliser les skills à forte valeur",
+            "Utiliser les elswordClassSkills à forte valeur",
             "Gérer les fenêtres de mana et cooldown",
             "Burst pendant les fenêtres de boss"
         ],
         strengths: ["Bon potentiel", "Identité alchimique forte", "Bonne valeur solo/PvE"],
         weaknesses: ["Plus technique qu’Oz Sorcerer", "Demande une meilleure compréhension du kit"],
-        notes: "Classe intéressante pour les joueurs qui aiment préparer leur burst plutôt que lancer leurs skills au hasard. Le kit demande un peu plus de compréhension, mais il devient très rentable quand tu maîtrises ses fenêtres d’alchimie.",
+        notes: "Classe intéressante pour les joueurs qui aiment préparer leur burst plutôt que lancer leurs elswordClassSkills au hasard. Le kit demande un peu plus de compréhension, mais il devient très rentable quand tu maîtrises ses fenêtres d’alchimie.",
         sourceNotes: "CoboDex liste Lord Azoth comme 4th Path, Physical.",
         confidence: "élevé",
         patchReference: "CoboDex consulté en 2026",
-        needsVerification: ["traductions FR officielles des skills", "rotation optimisée"]
+        needsVerification: ["traductions FR officielles des elswordClassSkills", "rotation optimisée"]
     },
 
     {
@@ -266,7 +266,7 @@ export const builds = [
         difficulty: "Moyenne",
         stats: ["Physical Attack", "Cooldown Reduction", "Action Speed", "Survivability"],
         statsFr: ["Attaque physique", "Réduction de cooldown", "Vitesse d’action", "Survie"],
-        skills: ["Group buffs", "Defense debuffs", "Utility skills"],
+        skills: ["Group buffs", "Defense debuffs", "Utility elswordClassSkills"],
         skillsFr: ["Buffs de groupe", "Debuffs de défense", "Compétences utilitaires"],
         traits: ["Support uptime", "Utility traits"],
         traitsFr: ["Maintien des buffs", "Traits utilitaires"],
@@ -283,7 +283,7 @@ export const builds = [
         sourceNotes: "CoboDex liste Anemos comme 1er chemin physique de Rena.",
         confidence: "moyen",
         patchReference: "CoboDex consulté en 2026",
-        needsVerification: ["skills exacts", "traits", "rotation support"]
+        needsVerification: ["elswordClassSkills exacts", "traits", "rotation support"]
     },
     {
         id: "rena-daybreaker",
@@ -297,24 +297,24 @@ export const builds = [
         difficulty: "Facile à moyenne",
         stats: ["Magical Attack", "Critical", "Maximize", "Additional Damage"],
         statsFr: ["Attaque magique", "Coups critiques", "Maximisation", "Dégâts additionnels"],
-        skills: ["Stigma Shot", "Arrow skills", "Long-range burst"],
+        skills: ["Stigma Shot", "Arrow elswordClassSkills", "Long-range burst"],
         skillsFr: ["Stigma Shot", "Compétences de flèches", "Burst à grande portée"],
-        traits: ["Damage on main skills", "Heavy on large skills"],
-        traitsFr: ["Dégâts sur skills principaux", "Heavy sur les gros skills"],
+        traits: ["Damage on main elswordClassSkills", "Heavy on large elswordClassSkills"],
+        traitsFr: ["Dégâts sur elswordClassSkills principaux", "Heavy sur les gros elswordClassSkills"],
         equipment: ["Magical DPS setup", "Critical/Maximize sockets"],
         equipmentFr: ["Équipement DPS magique", "Sockets Critique/Maximisation"],
         rotation: [
             "Appliquer les debuffs",
             "Maintenir les buffs de tir",
-            "Utiliser les gros skills sur les packs et boss"
+            "Utiliser les gros elswordClassSkills sur les packs et boss"
         ],
         strengths: ["Très bon clear", "Excellente portée", "Bon confort"],
         weaknesses: ["Moins orientée support qu’Anemos ou Prophetess"],
-        notes: "Très agréable si tu aimes jouer à distance avec une bonne portée. Elle est forte pour clean et confortable en PvE, mais il faut bien gérer ton placement pour profiter pleinement de tes gros skills.",
+        notes: "Très agréable si tu aimes jouer à distance avec une bonne portée. Elle est forte pour clean et confortable en PvE, mais il faut bien gérer ton placement pour profiter pleinement de tes gros elswordClassSkills.",
         sourceNotes: "CoboDex liste Daybreaker comme 2e chemin magique de Rena.",
         confidence: "moyen",
         patchReference: "CoboDex consulté en 2026",
-        needsVerification: ["skills exacts", "traits", "rotation"]
+        needsVerification: ["elswordClassSkills exacts", "traits", "rotation"]
     },
     {
         id: "rena-twilight",
@@ -328,15 +328,15 @@ export const builds = [
         difficulty: "Moyenne",
         stats: ["Physical Attack", "Critical", "Maximize", "Additional Damage", "Boss Damage"],
         statsFr: ["Attaque physique", "Coups critiques", "Maximisation", "Dégâts additionnels", "Dégâts aux boss"],
-        skills: ["High mobility shots", "Burst arrows", "Debuff skills"],
+        skills: ["High mobility shots", "Burst arrows", "Debuff elswordClassSkills"],
         skillsFr: ["Tirs à haute mobilité", "Flèches de burst", "Compétences de debuff"],
-        traits: ["Damage on main skills", "Heavy if build allows it"],
-        traitsFr: ["Dégâts sur skills principaux", "Heavy si le build le permet"],
+        traits: ["Damage on main elswordClassSkills", "Heavy if build allows it"],
+        traitsFr: ["Dégâts sur elswordClassSkills principaux", "Heavy si le build le permet"],
         equipment: ["Physical DPS setup", "Critical/Maximize/Additional Damage sockets"],
         equipmentFr: ["Équipement DPS physique", "Sockets Critique/Maximisation/Dégâts additionnels"],
         rotation: [
             "Poser les debuffs",
-            "Utiliser les skills de burst",
+            "Utiliser les elswordClassSkills de burst",
             "Répéter selon les fenêtres de boss"
         ],
         strengths: ["Très bon mono-cible", "Bonne mobilité", "DPS solide"],
@@ -345,7 +345,7 @@ export const builds = [
         sourceNotes: "CoboDex liste Twilight comme 3e chemin physique de Rena.",
         confidence: "moyen",
         patchReference: "CoboDex consulté en 2026",
-        needsVerification: ["skills exacts", "traits", "équipement endgame"]
+        needsVerification: ["elswordClassSkills exacts", "traits", "équipement endgame"]
     },
     {
         id: "rena-prophetess",
@@ -359,7 +359,7 @@ export const builds = [
         difficulty: "Moyenne",
         stats: ["Magical Attack", "Cooldown Reduction", "Action Speed", "Survivability"],
         statsFr: ["Attaque magique", "Réduction de cooldown", "Vitesse d’action", "Survie"],
-        skills: ["[Mod] Aero Tornado: Chorus of Unity", "Tenacity skills", "Bravery skills", "Group buffs"],
+        skills: ["[Mod] Aero Tornado: Chorus of Unity", "Tenacity elswordClassSkills", "Bravery elswordClassSkills", "Group buffs"],
         skillsFr: ["[Mod] Aero Tornado: Chorus of Unity", "Skills de Tenacité", "Skills de Bravoure", "Buffs de groupe"],
         traits: ["Buff uptime", "Cooldown acceleration uptime", "Support traits"],
         traitsFr: ["Maintien des buffs", "Maintien de l’accélération de cooldown", "Traits de soutien"],
@@ -369,7 +369,7 @@ export const builds = [
             "Activer les buffs principaux",
             "Maintenir [Mod] Aero Tornado: Chorus of Unity",
             "Réappliquer la réduction de défense après les phases d’hyper armor",
-            "Utiliser les Bravery skills pour contribuer aux dégâts"
+            "Utiliser les Bravery elswordClassSkills pour contribuer aux dégâts"
         ],
         strengths: ["Très forte synergie magique", "Nombreux buffs de groupe", "Très utile en raid même à investissement modéré"],
         weaknesses: ["Dégâts personnels limités", "Fragile", "Cooldowns difficiles sans aide"],
@@ -377,7 +377,7 @@ export const builds = [
         sourceNotes: "CoboDex décrit Prophetess comme très forte en party magique, avec buffs d’attaque magique, dégâts, boss damage, defense shred, action speed et cooldown acceleration.",
         confidence: "élevé",
         patchReference: "CoboDex consulté en 2026",
-        needsVerification: ["traductions FR officielles des skills", "setup endgame exact"]
+        needsVerification: ["traductions FR officielles des elswordClassSkills", "setup endgame exact"]
     },
 
     {
@@ -392,15 +392,15 @@ export const builds = [
         difficulty: "Moyenne",
         stats: ["Physical Attack", "Critical", "Maximize", "Additional Damage"],
         statsFr: ["Attaque physique", "Coups critiques", "Maximisation", "Dégâts additionnels"],
-        skills: ["Melee burst skills", "Clear skills"],
+        skills: ["Melee burst elswordClassSkills", "Clear elswordClassSkills"],
         skillsFr: ["Compétences de burst mêlée", "Compétences de clear"],
-        traits: ["Damage on main skills", "Heavy depending on setup"],
-        traitsFr: ["Dégâts sur skills principaux", "Heavy selon le setup"],
+        traits: ["Damage on main elswordClassSkills", "Heavy depending on setup"],
+        traitsFr: ["Dégâts sur elswordClassSkills principaux", "Heavy selon le setup"],
         equipment: ["Physical DPS setup", "Critical/Maximize sockets"],
         equipmentFr: ["Équipement DPS physique", "Sockets Critique/Maximisation"],
         rotation: [
             "Approcher",
-            "Utiliser les skills de zone",
+            "Utiliser les elswordClassSkills de zone",
             "Burst sur les élites et boss",
             "Repositionner entre les fenêtres de dégâts"
         ],
@@ -410,7 +410,7 @@ export const builds = [
         sourceNotes: "Elwiki confirme Furious Blade comme classe Raven ; build précis à recouper.",
         confidence: "moyen",
         patchReference: "À vérifier",
-        needsVerification: ["skills exacts", "traits", "rotation", "équipement"]
+        needsVerification: ["elswordClassSkills exacts", "traits", "rotation", "équipement"]
     },
     {
         id: "raven-rage-hearts",
@@ -424,24 +424,24 @@ export const builds = [
         difficulty: "Moyenne",
         stats: ["Physical Attack", "Critical", "Maximize", "Additional Damage"],
         statsFr: ["Attaque physique", "Coups critiques", "Maximisation", "Dégâts additionnels"],
-        skills: ["Flame core skills", "Sustained damage tools"],
+        skills: ["Flame core elswordClassSkills", "Sustained damage tools"],
         skillsFr: ["Compétences du noyau de flammes", "Outils de dégâts continus"],
-        traits: ["Damage on main skills", "Comfort traits if needed"],
-        traitsFr: ["Dégâts sur skills principaux", "Traits de confort si nécessaire"],
+        traits: ["Damage on main elswordClassSkills", "Comfort traits if needed"],
+        traitsFr: ["Dégâts sur elswordClassSkills principaux", "Traits de confort si nécessaire"],
         equipment: ["Physical DPS setup", "Critical/Maximize/Additional Damage sockets"],
         equipmentFr: ["Équipement DPS physique", "Sockets Critique/Maximisation/Dégâts additionnels"],
         rotation: [
             "Maintenir les effets de classe",
-            "Alterner skills courts et gros skills",
+            "Alterner elswordClassSkills courts et gros elswordClassSkills",
             "Garder un uptime constant"
         ],
         strengths: ["Bon sustain", "Bonne identité de classe"],
         weaknesses: ["Demande du rythme", "Moins explosif que certains burst paths"],
-        notes: "À jouer si tu aimes les classes nerveuses avec un rythme constant. Le plus important est de maintenir ton uptime : alterne correctement tes skills courts et tes gros cooldowns pour éviter les temps morts.",
+        notes: "À jouer si tu aimes les classes nerveuses avec un rythme constant. Le plus important est de maintenir ton uptime : alterne correctement tes elswordClassSkills courts et tes gros cooldowns pour éviter les temps morts.",
         sourceNotes: "Classe confirmée, build non verrouillé.",
         confidence: "faible",
         patchReference: "À vérifier",
-        needsVerification: ["skills exacts", "traits", "rotation", "équipement endgame"]
+        needsVerification: ["elswordClassSkills exacts", "traits", "rotation", "équipement endgame"]
     },
 
     {
@@ -456,16 +456,16 @@ export const builds = [
         difficulty: "Moyenne",
         stats: ["Magical Attack", "Critical", "Maximize", "Additional Damage"],
         statsFr: ["Attaque magique", "Coups critiques", "Maximisation", "Dégâts additionnels"],
-        skills: ["Laser-type skills", "Nasod weapon skills", "Burst skills"],
+        skills: ["Laser-type elswordClassSkills", "Nasod weapon elswordClassSkills", "Burst elswordClassSkills"],
         skillsFr: ["Compétences de type laser", "Compétences d’armes nasod", "Compétences de burst"],
-        traits: ["Damage on main skills", "Heavy if available"],
-        traitsFr: ["Dégâts sur skills principaux", "Heavy si disponible"],
+        traits: ["Damage on main elswordClassSkills", "Heavy if available"],
+        traitsFr: ["Dégâts sur elswordClassSkills principaux", "Heavy si disponible"],
         equipment: ["Magical DPS setup", "Critical/Maximize sockets"],
         equipmentFr: ["Équipement DPS magique", "Sockets Critique/Maximisation"],
         rotation: [
             "Préparer les modules",
             "Lancer les grosses séquences de dégâts",
-            "Réutiliser les skills de clear entre les fenêtres"
+            "Réutiliser les elswordClassSkills de clear entre les fenêtres"
         ],
         strengths: ["Bon clear", "Bon confort à distance"],
         weaknesses: ["Demande de la familiarité avec le kit"],
@@ -473,7 +473,7 @@ export const builds = [
         sourceNotes: "Elwiki confirme Code: Ultimate ; build précis à vérifier.",
         confidence: "moyen",
         patchReference: "À vérifier",
-        needsVerification: ["skills exacts", "traits", "rotation", "équipement"]
+        needsVerification: ["elswordClassSkills exacts", "traits", "rotation", "équipement"]
     },
     {
         id: "eve-code-esencia",
@@ -504,6 +504,6 @@ export const builds = [
         sourceNotes: "Elwiki confirme Code: Esencia et son identité autour des assistants/invocations nasod.",
         confidence: "moyen",
         patchReference: "À vérifier",
-        needsVerification: ["skills exacts", "traits", "rotation", "équipement"]
+        needsVerification: ["elswordClassSkills exacts", "traits", "rotation", "équipement"]
     }
 ];

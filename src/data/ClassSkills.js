@@ -1,6 +1,6 @@
 export const classSkills = [
     {
-        id: "elsword-base-skills",
+        id: "elsword-base-elswordClassSkills",
         characterId: "elsword",
         className: "Elsword",
         classNameFr: "Elsword",
@@ -23,13 +23,13 @@ export const classSkills = [
         ],
     },
     {
-        id: "elsword-sk-skills",
+        id: "elsword-sk-elswordClassSkills",
         characterId: "elsword",
         className: "Sword Knight",
         classNameFr: "Chevalier de l'épée",
         jobStage: "job1",
         title: "Compétences — Chevalier de l'épée",
-        extends: ["elsword-base-skills"],
+        extends: ["elsword-base-elswordClassSkills"],
         minLevel: 15,
         columns: [
             { id: "active", label: "Skills", type: "active" },
@@ -48,13 +48,13 @@ export const classSkills = [
         ],
     },
     {
-        id: "elsword-lk-skills",
+        id: "elsword-lk-elswordClassSkills",
         characterId: "elsword",
         className: "Lord Knight",
         classNameFr: "Haut Chevalier",
         jobStage: "job2",
         title: "Compétences — Haut Chevalier",
-        extends: ["elsword-sk-skills"],
+        extends: ["elsword-sk-elswordClassSkills"],
         layout: "rows",
         minLevel: 35,
         columns: [
@@ -92,14 +92,14 @@ export const classSkills = [
         ],
     },
     {
-        id: "elsword-ke-skills",
+        id: "elsword-ke-elswordClassSkills",
         characterId: "elsword",
         className: "Knight Emperor",
         classNameFr: "Chevalier Royal",
         jobStage: "job3",
         title: "Compétences — Chevalier Royal",
         layout: "rows",
-        extends: ["elsword-lk-skills"],
+        extends: ["elsword-lk-elswordClassSkills"],
         minLevel: 15,
         columns: [
             { id: "active", label: "Skills", type: "active" },
@@ -123,7 +123,7 @@ export const classSkills = [
         jobStage: "master",
         title: "Compétences — Chevalier Royal",
         layout: "rows",
-        extends: ["elsword-ke-skills"],
+        extends: ["elsword-ke-elswordClassSkills"],
         minLevel: 1,
         columns: [
             { id: "active", label: "Skills", type: "active" },
@@ -139,6 +139,32 @@ export const classSkills = [
             "elsword-ke-master-skill-2",
             "elsword-ke-master-skill-3",
             "elsword-ke-master-skill-4",
+        ],
+    },
+    {
+
+        id: "elsword-mk-elswordClassSkills",
+        characterId: "elsword",
+        className: "Magic knight",
+        classNameFr: "Chevalier Mage",
+        jobStage: "job1",
+        title: "Compétences — Chevalier Mage",
+        extends: ["elsword-base-elswordClassSkills"],
+        minLevel: 15,
+        columns: [
+            { id: "active", label: "Skills", type: "active" },
+            { id: "passive", label: "Passives", type: "passive" },
+        ],
+        levels: [15, 20, 25, 30, 35, 40],
+        skillIds: [
+            "elsword-mk-skill-1",
+            "elsword-mk-skill-2",
+            "elsword-mk-skill-3",
+            "elsword-mk-skill-4",
+            "elsword-mk-skill-5",
+            "elsword-mk-skill-6",
+            "elsword-mk-skill-7",
+            "elsword-mk-skill-8",
         ],
     },
 ];
