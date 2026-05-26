@@ -24,7 +24,7 @@
 
 .skill-tree-board {
     position: relative;
-    min-height: 32rem;
+    min-height: 48rem;
     overflow: hidden;
     border-radius: 0.8rem;
     background:
@@ -90,6 +90,8 @@
     position: absolute;
     inset: 4.2rem 0 0;
     z-index: 5;
+    padding-top: 1.25rem;
+    padding-bottom: 1.2rem;
 }
 
 
@@ -101,6 +103,7 @@
     position: absolute;
     display: grid;
     place-items: center;
+    z-index: 6;
     width: 4.2rem;
     height: 4.2rem;
     padding: 0.18rem;
@@ -208,12 +211,13 @@
 
 .skill-tree-levels {
     display: grid;
-    align-content: space-around;
+    grid-template-rows: repeat(var(--level-count), minmax(0, 1fr));
+    align-content: stretch;
     justify-items: center;
     padding: 4.2rem 0 1.2rem;
 }
-
 .skill-tree-levels span {
+    align-self: center;
     display: inline-grid;
     place-items: center;
     min-width: 4.8rem;
@@ -278,7 +282,58 @@
 .skill-detail-aura strong {
     color: var(--skill-aura);
 }
+.skill-tree-section-divider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    display: grid;
+    place-items: center;
+    height: 2.5rem;
+    background:
+            linear-gradient(90deg, rgba(239, 68, 68, 0.82), rgba(239, 68, 68, 0.62));
+    transform: translateY(-50%);
+    pointer-events: none;
+}
 
+.skill-tree-section-divider span {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 1000;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+.skill-detail-badge {
+    width: fit-content;
+    margin: 0;
+    padding: 0.42rem 0.7rem;
+    border: 1px solid var(--skill-badge);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--skill-badge) 14%, transparent);
+    color: var(--skill-badge) !important;
+    font-size: 0.74rem;
+    font-weight: 1000;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+.skill-tree-board.has-sections {
+    min-height: 48rem;
+}
+.skill-tree-board.has-sections + .skill-tree-levels {
+    padding-top: 4.2rem;
+}
+.skill-tree-level-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.14), transparent);
+    transform: translateY(-50%);
+    pointer-events: none;
+}
 
 /* =========================
    Fiche personnage — bloc compétences
@@ -433,7 +488,152 @@
 .character-aura-card-destruction li::marker {
     color: #ef4444;
 }
+/* =========================
+   Skill Tree — rows avec visuel arbre classique
+========================= */
 
+.skill-rows-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 42rem) 5.5rem;
+    align-items: stretch;
+    gap: 0.8rem;
+}
+
+.skill-rows-board.classic-look {
+    overflow: hidden;
+    border-radius: 0.8rem;
+    background: rgba(2, 6, 23, 0.72);
+}
+
+.skill-rows-headers {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    min-height: 4.2rem;
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 900;
+}
+
+.skill-rows-headers div {
+    display: grid;
+    place-items: center;
+}
+
+.skill-rows-headers div:first-child {
+    background: rgba(185, 20, 25, 0.82);
+}
+
+.skill-rows-headers div:last-child {
+    background: rgba(30, 85, 190, 0.78);
+}
+
+.skill-rows-body {
+    display: grid;
+    min-height: 42rem;
+}
+
+.skill-row-group {
+    display: grid;
+    min-height: 5.4rem;
+    background:
+            linear-gradient(90deg, rgba(140, 20, 20, 0.68) 0%, rgba(140, 20, 20, 0.68) 60%, rgba(20, 62, 160, 0.58) 60%, rgba(20, 62, 160, 0.58) 100%);
+}
+
+.skill-row-group + .skill-row-group {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.skill-row {
+    display: grid;
+    align-items: center;
+    min-height: 5.4rem;
+    padding: 0.55rem 0.9rem;
+}
+
+.skill-row-content {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    min-height: 4.3rem;
+}
+
+.skill-row-column {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    min-width: 0;
+    padding-inline: 0.8rem;
+}
+
+.skill-row-column.passive {
+    justify-content: center;
+}
+
+.row-node {
+    position: relative;
+    left: auto;
+    top: auto;
+    flex: 0 0 auto;
+    width: 3.8rem;
+    height: 3.8rem;
+    transform: none;
+}
+
+.row-node:hover,
+.row-node:focus-visible,
+.row-node.active {
+    transform: scale(1.07);
+}
+
+.skill-row-divider {
+    display: grid;
+    place-items: center;
+    min-height: 2.5rem;
+    background: linear-gradient(90deg, rgba(239, 68, 68, 0.82), rgba(239, 68, 68, 0.62));
+}
+
+.skill-row-divider span {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 1000;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.rows-levels {
+    padding: 4.2rem 0 0;
+}
+
+@media (max-width: 900px) {
+    .skill-rows-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .rows-levels {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.55rem;
+        overflow-x: auto;
+        padding: 0;
+    }
+}
+
+@media (max-width: 620px) {
+    .skill-row-content,
+    .skill-rows-headers {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-row-group {
+        background: rgba(15, 23, 42, 0.72);
+    }
+
+    .skill-row-column.passive {
+        justify-content: flex-start;
+    }
+}
 
 /* =========================
    Responsive
