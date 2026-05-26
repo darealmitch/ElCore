@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { skills, SKILL_TYPE_COLORS, ELSWORD_AURA_COLORS, ELSWORD_AURA_LABELS, SKILL_BADGE_LABELS, SKILL_BADGE_COLORS } from "../../data/skills";
+import { transcendenceGuide } from "../../data/transcendenceGuide";
 
 function getSafeLevels(levels) {
     return Array.isArray(levels) ? levels : [];
@@ -60,6 +61,7 @@ function renderSkillDescription(description) {
     );
 }
 function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }) {
+    const hasTranscendence = data.sections?.some((section) => section.id === "transcendence");
     const selectedSkill = treeSkills.find((skill) => skill.id === selectedSkillId) || null;
     const selectedSkillBadge = selectedSkill?.badge || (selectedSkill?.level >= 65 ? "hyperActive" : "");
 
@@ -67,76 +69,95 @@ function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }
         <section className="skill-tree-section skill-tree-rows-section">
             <h2 className="skill-tree-title">{data.title || "Skills"}</h2>
 
-            <div className="skill-rows-layout">
-                <div className="skill-rows-board classic-look">
-                    <div className="skill-rows-headers">
-                        <div>Skills</div>
-                        <div>Passives</div>
-                    </div>
+            <div className={hasTranscendence ? "skill-rows-with-summary" : "skill-rows-with-summary no-summary"}>
+                <div className="skill-rows-layout">
+                    <div className="skill-rows-board classic-look">
+                        <div className="skill-rows-headers">
+                            <div>Skills</div>
+                            <div>Passives</div>
+                        </div>
 
-                    <div className="skill-rows-body">
-                        {data.levels.map((level) => {
-                            const skillsAtLevel = treeSkills.filter((skill) => skill.level === level);
-                            const sectionBeforeLevel = data.sections?.find((section) => section.id === "transcendence" && level === 70);
+                        <div className="skill-rows-body">
+                            {data.levels.map((level) => {
+                                const skillsAtLevel = treeSkills.filter((skill) => skill.level === level);
+                                const sectionBeforeLevel = data.sections?.find((section) => section.id === "transcendence" && level === 70);
 
-                            return (
-                                <div key={level} className="skill-row-group">
-                                    {sectionBeforeLevel && (
-                                        <div className="skill-row-divider">
-                                            <span>{sectionBeforeLevel.label}</span>
-                                        </div>
-                                    )}
-
-                                    <div className="skill-row">
-                                        <div className="skill-row-content">
-                                            <div className="skill-row-column">
-                                                {skillsAtLevel.filter((skill) => skill.type !== "passive").map((skill) => (
-                                                    <button
-                                                        key={skill.id}
-                                                        type="button"
-                                                        className={selectedSkillId === skill.id ? "skill-node row-node active" : "skill-node row-node"}
-                                                        style={{
-                                                            "--skill-border": SKILL_TYPE_COLORS[skill.type] || "#facc15",
-                                                            "--skill-aura": skill.auraType ? ELSWORD_AURA_COLORS[skill.auraType] : "transparent",
-                                                        }}
-                                                        onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
-                                                        aria-label={skill.nameFr || skill.name}
-                                                    >
-                                                        <img src={skill.image} alt={skill.nameFr || skill.name} />
-                                                        <span className="skill-tooltip">{skill.nameFr || skill.name}</span>
-                                                    </button>
-                                                ))}
+                                return (
+                                    <div key={level} className="skill-row-group">
+                                        {sectionBeforeLevel && (
+                                            <div className="skill-row-divider">
+                                                <span>
+                                                    {transcendenceGuide.logo && <img src={transcendenceGuide.logo} alt="" />}
+                                                    {sectionBeforeLevel.label}
+                                                </span>
                                             </div>
+                                        )}
 
-                                            <div className="skill-row-column passive">
-                                                {skillsAtLevel.filter((skill) => skill.type === "passive").map((skill) => (
-                                                    <button
-                                                        key={skill.id}
-                                                        type="button"
-                                                        className={selectedSkillId === skill.id ? "skill-node row-node active" : "skill-node row-node"}
-                                                        style={{
-                                                            "--skill-border": SKILL_TYPE_COLORS[skill.type] || "#60a5fa",
-                                                            "--skill-aura": skill.auraType ? ELSWORD_AURA_COLORS[skill.auraType] : "transparent",
-                                                        }}
-                                                        onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
-                                                        aria-label={skill.nameFr || skill.name}
-                                                    >
-                                                        <img src={skill.image} alt={skill.nameFr || skill.name} />
-                                                        <span className="skill-tooltip">{skill.nameFr || skill.name}</span>
-                                                    </button>
-                                                ))}
+                                        <div className="skill-row">
+                                            <div className="skill-row-content">
+                                                <div className="skill-row-column">
+                                                    {skillsAtLevel.filter((skill) => skill.type !== "passive").map((skill) => (
+                                                        <button
+                                                            key={skill.id}
+                                                            type="button"
+                                                            className={selectedSkillId === skill.id ? "skill-node row-node active" : "skill-node row-node"}
+                                                            style={{
+                                                                "--skill-border": SKILL_TYPE_COLORS[skill.type] || "#facc15",
+                                                                "--skill-aura": skill.auraType ? ELSWORD_AURA_COLORS[skill.auraType] : "transparent",
+                                                            }}
+                                                            onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
+                                                            aria-label={skill.nameFr || skill.name}
+                                                        >
+                                                            <img src={skill.image} alt={skill.nameFr || skill.name} />
+                                                            <span className="skill-tooltip">{skill.nameFr || skill.name}</span>
+                                                        </button>
+                                                    ))}
+                                                </div>
+
+                                                <div className="skill-row-column passive">
+                                                    {skillsAtLevel.filter((skill) => skill.type === "passive").map((skill) => (
+                                                        <button
+                                                            key={skill.id}
+                                                            type="button"
+                                                            className={selectedSkillId === skill.id ? "skill-node row-node active" : "skill-node row-node"}
+                                                            style={{
+                                                                "--skill-border": SKILL_TYPE_COLORS[skill.type] || "#60a5fa",
+                                                                "--skill-aura": skill.auraType ? ELSWORD_AURA_COLORS[skill.auraType] : "transparent",
+                                                            }}
+                                                            onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
+                                                            aria-label={skill.nameFr || skill.name}
+                                                        >
+                                                            <img src={skill.image} alt={skill.nameFr || skill.name} />
+                                                            <span className="skill-tooltip">{skill.nameFr || skill.name}</span>
+                                                        </button>
+                                                    ))}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            );
-                        })}
+                                );
+                            })}
+                        </div>
                     </div>
+
+                    <aside className="skill-tree-levels rows-levels" aria-label="Niveaux" style={{ "--level-count": data.levels.length }}>
+                        {data.levels.map((level) => <span key={level}>Lv {level}</span>)}
+                    </aside>
                 </div>
 
-                <aside className="skill-tree-levels rows-levels" aria-label="Niveaux" style={{ "--level-count": data.levels.length }}>
-                    {data.levels.map((level) => <span key={level}>Lv {level}</span>)}
-                </aside>
+                {hasTranscendence && (
+                    <aside className="transcendence-summary-card">
+                        <div className="transcendence-summary-header">
+                            {transcendenceGuide.logo && <img src={transcendenceGuide.logo} alt="" />}
+                            <div>
+                                <span>Particularité</span>
+                                <h3>{transcendenceGuide.title}</h3>
+                            </div>
+                        </div>
+
+                        <p>{transcendenceGuide.summary}</p>
+                    </aside>
+                )}
             </div>
 
             {selectedSkill && (

@@ -605,6 +605,84 @@
 .rows-levels {
     padding: 4.2rem 0 0;
 }
+/* =========================
+   Transcendance — résumé fiche compétence
+========================= */
+
+.skill-rows-with-summary {
+    display: grid;
+    grid-template-columns: minmax(0, auto) minmax(19rem, 1fr);
+    align-items: start;
+    gap: 1.2rem;
+}
+
+.skill-rows-with-summary.no-summary {
+    grid-template-columns: 1fr;
+}
+
+.skill-row-divider span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.skill-row-divider img {
+    width: 1.35rem;
+    height: 1.35rem;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.25));
+}
+
+.transcendence-summary-card {
+    display: grid;
+    gap: 0.9rem;
+    padding: 1.15rem;
+    border: 1px solid rgba(239, 68, 68, 0.34);
+    border-radius: 1.1rem;
+    background:
+            radial-gradient(circle at top right, rgba(239, 68, 68, 0.12), transparent 16rem),
+            rgba(2, 6, 23, 0.36);
+}
+
+.transcendence-summary-header {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.transcendence-summary-header img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    filter: drop-shadow(0 0 14px rgba(239, 68, 68, 0.28));
+}
+
+.transcendence-summary-header span {
+    color: #ef4444;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.transcendence-summary-header h3 {
+    margin: 0.25rem 0 0;
+    color: #fff;
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+    line-height: 1.05;
+}
+
+.transcendence-summary-card p {
+    margin: 0;
+    color: var(--text-soft);
+    line-height: 1.65;
+}
+
+@media (max-width: 1100px) {
+    .skill-rows-with-summary {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (max-width: 900px) {
     .skill-rows-layout {
