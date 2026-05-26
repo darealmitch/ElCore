@@ -87,19 +87,16 @@ function renderSkillDescription(description) {
     );
 }
 
-function SkillButton({ skill, isActive, isTooltipLeft, className, onClick, style = {} }) {
+function SkillButton({ skill, isActive, tooltipDirection = "", className, onClick, style = {} }) {
     return (
-        <button
-            type="button"
-            className={[className, isActive ? "active" : "", isTooltipLeft ? "tooltip-left" : ""].join(" ")}
+        <button type="button" className={[className, isActive ? "active" : "", tooltipDirection ? `tooltip-${tooltipDirection}` : ""].join(" ")}
             style={{
                 ...style,
                 "--skill-border": SKILL_TYPE_COLORS[skill.type] || "#facc15",
                 "--skill-aura": skill.auraType ? ELSWORD_AURA_COLORS[skill.auraType] : "transparent",
             }}
             onClick={onClick}
-            aria-label={skill.nameFr || skill.name}
-        >
+            aria-label={skill.nameFr || skill.name}>
             <img src={skill.image} alt={skill.nameFr || skill.name} />
             <span className="skill-tooltip">{skill.nameFr || skill.name}</span>
         </button>
@@ -171,29 +168,43 @@ function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }
                                         <div className="skill-row">
                                             <div className="skill-row-content">
                                                 <div className="skill-row-column">
-                                                    {skillsAtLevel.filter((skill) => skill.type !== "passive").map((skill) => (
-                                                        <SkillButton
-                                                            key={skill.id}
-                                                            skill={skill}
-                                                            isActive={selectedSkillId === skill.id}
-                                                            isTooltipLeft={typeof level === "number" && level >= 80}
-                                                            className="skill-node row-node"
-                                                            onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
-                                                        />
-                                                    ))}
+                                                    {skillsAtLevel.filter((skill) => skill.type !== "passive").map((skill, index) => {
+                                                        const tooltipDirection =
+                                                            level === "master"
+                                                                ? index === 0 ? "top-right" : "top"
+                                                                : typeof level === "number" && level >= 80 ? "left" : "";
+
+                                                        return (
+                                                            <SkillButton
+                                                                key={skill.id}
+                                                                skill={skill}
+                                                                isActive={selectedSkillId === skill.id}
+                                                                tooltipDirection={tooltipDirection}
+                                                                className="skill-node row-node"
+                                                                onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
+                                                            />
+                                                        );
+                                                    })}
                                                 </div>
 
                                                 <div className="skill-row-column passive">
-                                                    {skillsAtLevel.filter((skill) => skill.type === "passive").map((skill) => (
-                                                        <SkillButton
-                                                            key={skill.id}
-                                                            skill={skill}
-                                                            isActive={selectedSkillId === skill.id}
-                                                            isTooltipLeft={typeof level === "number" && level >= 80}
-                                                            className="skill-node row-node"
-                                                            onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
-                                                        />
-                                                    ))}
+                                                    {skillsAtLevel.filter((skill) => skill.type === "passive").map((skill, index) => {
+                                                        const tooltipDirection =
+                                                            level === "master"
+                                                                ? index === 0 ? "top-right" : "top"
+                                                                : typeof level === "number" && level >= 80 ? "left" : "";
+
+                                                        return (
+                                                            <SkillButton
+                                                                key={skill.id}
+                                                                skill={skill}
+                                                                isActive={selectedSkillId === skill.id}
+                                                                tooltipDirection={tooltipDirection}
+                                                                className="skill-node row-node"
+                                                                onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)}
+                                                            />
+                                                        );
+                                                    })}
                                                 </div>
                                             </div>
                                         </div>

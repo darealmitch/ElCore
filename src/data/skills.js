@@ -2,12 +2,14 @@ export const SKILL_TYPES = {
     ACTIVE: "active",
     PASSIVE: "passive",
     SPECIAL_ACTIVE: "specialActive",
+    MASTER: "master",
 };
 
 export const SKILL_TYPE_COLORS = {
     active: "#facc15",
     passive: "#60a5fa",
     specialActive: "#e11d48",
+    master: "#a855f7",
 };
 
 export const ELSWORD_AURA_COLORS = {
@@ -446,5 +448,78 @@ export const skills = [
             "S’il reste immobile pendant plus d’une seconde, le bonus [Combativité] s’active et disparaît dès qu’il recommence à bouger. " +
             "Après un certain temps, [Combativité] restaure ses PV et ses PM, puis réduit le temps de rechargement d’une compétence placée dans ses cases de compétence, à l’exception de l’hyper compétence et d’Amour divin. " +
             "Si Elsword passe en combat juste après l’activation de [Combativité], sa première attaque inflige davantage de dégâts et le coût en PM de sa première compétence est réduit.",
-    }
+    },
+    {
+        id: "elsword-ke-master-skill-1",
+        name: "Sword of the Sun - Solarius /Stage 1",
+        nameFr: "Épée du soleil - Solarius — Étape 1",
+        image: "/images/skills/el/ke/SunSwordSolariusS1.png",
+        type: SKILL_TYPES.MASTER,
+        level: "master",
+        auraType: "",
+        badge: SKILL_BADGES.MASTER_SKILL,
+        description: {
+            title: "Étape 1",
+            lines: [
+                "Elsword puise dans l’énergie d’El qu’il renferme pour créer une projection en forme d’épée.",
+                "La projection tombe du ciel, inflige des dégâts aux ennemis proches, puis disparaît.",
+                "Cette première étape est automatiquement débloquée lors du passage en Classe Maître.",
+            ],
+        },
+    },
+    {
+        id: "elsword-ke-master-skill-2",
+        name: "Sword of the Sun - Solarius /Stage 2",
+        nameFr: "Épée du soleil - Solarius — Étape 2",
+        image: "/images/skills/el/ke/SunSwordSolariusS2.png",
+        type: SKILL_TYPES.MASTER,
+        level: "master",
+        auraType: "",
+        badge: SKILL_BADGES.MASTER_SKILL,
+        description: {
+            title: "Étape 2",
+            lines: [
+                "Elsword puise dans l’énergie d’El qu’il renferme pour créer l’Épée du soleil.",
+                "L’Épée du soleil tombe du ciel, inflige des dégâts aux ennemis proches, puis explose avant de disparaître.",
+                "Cette deuxième étape se débloque grâce à une quête de compétence.",
+            ],
+        },
+    },
+    {
+        id: "elsword-ke-master-skill-3",
+        name: "Sword of the Sun - Solarius /Stage 3",
+        nameFr: "Épée du soleil - Solarius — Étape 3",
+        image: "/images/skills/el/ke/SunSwordSolariusS3.png",
+        type: SKILL_TYPES.MASTER,
+        level: "master",
+        auraType: "",
+        badge: SKILL_BADGES.MASTER_SKILL,
+        description: {
+            title: "Étape 3",
+            lines: [
+                "Elsword mélange l’énergie d’El qu’il renferme avec l’énergie du soleil pour créer sa propre épée.",
+                "L’énergie fusionnée tombe du ciel et inflige des dégâts aux ennemis proches.",
+                "Le Chevalier Royal arrache ensuite l’épée du sol et enchaîne deux puissantes attaques tranchantes.",
+                "Cette troisième étape se débloque après l’étape précédente, grâce à une quête de compétence.",
+            ],
+        },
+    },
+    {
+        id: "elsword-ke-master-skill-4",
+        name: "Sword of the Sun - Solarius /Stage 4",
+        nameFr: "Épée du soleil - Solarius — Étape 4",
+        image: "/images/skills/el/ke/SunSwordSolariusS4.png",
+        type: SKILL_TYPES.MASTER,
+        level: "master",
+        auraType: "",
+        badge: SKILL_BADGES.MASTER_SKILL,
+        description: {
+            title: "Étape 4",
+            lines: [
+                "Elsword mélange l’énergie d’El qu’il renferme avec l’énergie du soleil pour créer sa propre épée.",
+                "La chaleur dévastatrice de cette épée incinère instantanément les ennemis proches.",
+                "Cette quatrième étape représente la version la plus puissante de la compétence de maître.",
+            ],
+        },
+    },
 ]

@@ -134,6 +134,10 @@ export const classSkills = [
             { id: "forceSkills", label: "Compétences de force" },
         ],
         skillIds: [
+            "elsword-ke-master-skill-1",
+            "elsword-ke-master-skill-2",
+            "elsword-ke-master-skill-3",
+            "elsword-ke-master-skill-4",
         ],
     },
 ];

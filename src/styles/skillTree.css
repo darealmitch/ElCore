@@ -680,6 +680,67 @@
     color: var(--text-soft);
     line-height: 1.65;
 }
+.skill-node.tooltip-top .skill-tooltip {
+    left: 50%;
+    bottom: calc(100% + 0.75rem);
+    top: auto;
+    transform: translateX(-50%) translateY(0.35rem);
+}
+
+.skill-node.tooltip-top .skill-tooltip::before {
+    left: 50%;
+    top: auto;
+    bottom: -0.35rem;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.skill-node.tooltip-top:hover .skill-tooltip,
+.skill-node.tooltip-top:focus-visible .skill-tooltip,
+.skill-node.tooltip-top.active .skill-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+.skill-node.tooltip-top .skill-tooltip {
+    left: 50%;
+    bottom: calc(100% + 0.75rem);
+    top: auto;
+    transform: translateX(-50%) translateY(0.35rem);
+}
+
+.skill-node.tooltip-top .skill-tooltip::before {
+    left: 50%;
+    top: auto;
+    bottom: -0.35rem;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.skill-node.tooltip-top:hover .skill-tooltip,
+.skill-node.tooltip-top:focus-visible .skill-tooltip,
+.skill-node.tooltip-top.active .skill-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.skill-node.tooltip-top-right .skill-tooltip {
+    left: 0;
+    bottom: calc(100% + 0.75rem);
+    top: auto;
+    transform: translateY(0.35rem);
+}
+
+.skill-node.tooltip-top-right .skill-tooltip::before {
+    left: 1.25rem;
+    top: auto;
+    bottom: -0.35rem;
+    transform: rotate(45deg);
+}
+
+.skill-node.tooltip-top-right:hover .skill-tooltip,
+.skill-node.tooltip-top-right:focus-visible .skill-tooltip,
+.skill-node.tooltip-top-right.active .skill-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
 @media (max-width: 1100px) {
     .skill-rows-with-summary {
         grid-template-columns: 1fr;
