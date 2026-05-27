@@ -9,7 +9,7 @@ import { characterMechanics } from "../data/characterMechanics";
 import { classSkills } from "../data/skills/index.js";
 import { useEffect } from "react";
 
-function renderElswordAuraText(text) {
+function renderAuraText(text) {
     if (!text) return null;
 
     const parts = text.split(/(vitalité|destruction|tempête)/gi);
@@ -42,17 +42,17 @@ function CharacterMechanicCard({ characterMechanic }) {
 
             {characterMechanic.subtitle && <strong>{characterMechanic.subtitle}</strong>}
 
-            {mainText && <p>{renderElswordAuraText(mainText)}</p>}
+            {mainText && <p>{renderAuraText(mainText)}</p>}
 
             {characterMechanic.note && (
                 <p className="character-mechanic-note">
-                    {renderElswordAuraText(characterMechanic.note)}
+                    {renderAuraText(characterMechanic.note)}
                 </p>
             )}
 
             {details.length > 0 && (
                 <ul className="character-mechanic-details">
-                    {details.map((detail) => <li key={detail}>{renderElswordAuraText(detail)}</li>)}
+                    {details.map((detail) => <li key={detail}>{renderAuraText(detail)}</li>)}
                 </ul>
             )}
 
@@ -61,11 +61,11 @@ function CharacterMechanicCard({ characterMechanic }) {
                     {characterMechanic.auras.map((aura) => (
                         <article className={`character-aura-card character-aura-card-${aura.color}`} key={aura.id}>
                             <h4>{aura.title}</h4>
-                            <p>{renderElswordAuraText(aura.description)}</p>
+                            <p>{renderAuraText(aura.description)}</p>
 
                             {aura.bonuses?.length > 0 && (
                                 <ul>
-                                    {aura.bonuses.map((bonus) => <li key={bonus}>{renderElswordAuraText(bonus)}</li>)}
+                                    {aura.bonuses.map((bonus) => <li key={bonus}>{renderAuraText(bonus)}</li>)}
                                 </ul>
                             )}
                         </article>

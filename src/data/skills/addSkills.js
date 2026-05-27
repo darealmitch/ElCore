@@ -194,5 +194,23 @@ export const addSkills = [
             ],
         },
     },
-
+/*Psychopathe*/
+    {
+        id: "add-psy-skill1",
+        name: "Dynamo Configuration: Pylon",
+        nameFr: "Configuration : Pylône",
+        image: "/images/skills/add/lp/AddSharedSkill1.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 35,
+        description: {
+            lines: [
+                "Add crée une sphère d’énergie stationnaire pendant 20 secondes.",
+                "La sphère inflige des dégâts aux ennemis proches et augmente la régénération de PM des alliés.",
+                "Si d’autres sphères sont créées dans un rayon de 10 mètres, elles sont reliées par des arcs électriques qui infligent des dégâts continus aux ennemis, sans les maintenir en place.",
+                "Cette compétence peut aussi être utilisée en plein saut.",
+                "Utilisation multiple : Add peut créer jusqu’à 3 pylônes dans un court intervalle de temps.",
+                "Synergie avec Voyageur temporel : en mode dynamo, la compétence consomme des PDY au lieu des PM.",
+            ],
+        },
+    }
 ]
