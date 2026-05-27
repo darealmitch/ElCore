@@ -308,9 +308,11 @@ function SkillTree({ data }) {
                         {treeSkills.map((skill) => {
                             const position = getNodePosition(skill, treeSkills, levels);
                             const isRightSideSkill = position.x >= 50;
-                            const tooltipDirection = position.y >= 75 && isRightSideSkill ? "left" : "bottom";
+                            const isBaseTree = data.jobStage === "base";
+                            const tooltipDirection = isBaseTree && skill.level === 20 ? "left" : position.y >= 75 && isRightSideSkill ? "left" : "";
 
-                            return <SkillButton key={skill.id} skill={skill} isActive={selectedSkillId === skill.id} tooltipDirection={tooltipDirection === "left" ? "left" : ""} className="skill-node" onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)} style={{ left: `${position.x}%`, top: `${position.y}%` }} />;
+                            return <SkillButton key={skill.id} skill={skill} isActive={selectedSkillId === skill.id} tooltipDirection={tooltipDirection} className="skill-node" onClick={() => setSelectedSkillId((currentSkillId) => currentSkillId === skill.id ? null : skill.id)} style={{ left: `${position.x}%`, top: `${position.y}%` }} />;
+
                         })}
                     </div>
                 </div>
