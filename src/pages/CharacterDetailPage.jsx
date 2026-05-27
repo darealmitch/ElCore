@@ -5,7 +5,7 @@ import ClassPathTimeline from "/src/components/ui/ClassPathTimeline";
 import BuildCard from "../components/ui/BuildCard";
 import { builds } from "../data/builds";
 import SkillTree from "../components/ui/SkillTree";
-import { classSkills } from "../data/ClassSkills.js";
+import { elswordClassSkills } from "../data/classSkills/elswordClassSkills.js";
 import { characterMechanics } from "../data/characterMechanics";
 
 function renderElswordAuraText(text) {
@@ -61,7 +61,7 @@ function CharacterDetailPage() {
     const characterBuilds = builds.filter(
         (build) => build.characterId === character.id
     );
-    const baseSkillTree = classSkills.find(
+    const baseSkillTree = elswordClassSkills.find(
         (item) =>
             item.characterId === character.id &&
             item.jobStage === "base"

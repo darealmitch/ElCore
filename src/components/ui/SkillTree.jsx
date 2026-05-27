@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { skills } from "../../data/classSkills/index.js";
+import { skills } from "../../data/skills/index.js";
 import { SKILL_TYPE_COLORS, ELSWORD_AURA_COLORS, ELSWORD_AURA_LABELS, SKILL_BADGE_LABELS, SKILL_BADGE_COLORS, FORCE_SKILL_RARITY_LABELS, FORCE_SKILL_RARITY_COLORS } from "../../data/skillConstants.js";
 import { transcendenceGuide } from "../../data/transcendenceGuide";
 import { masterClassGuide } from "../../data/masterClassGuide";
