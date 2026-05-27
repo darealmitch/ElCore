@@ -140,10 +140,7 @@
     padding: 2rem;
     border: 1px solid var(--border-soft);
     border-radius: 2rem;
-    background:
-            radial-gradient(circle at top right, rgba(147, 125, 255, 0.14), transparent 24rem),
-            radial-gradient(circle at bottom left, rgba(0, 219, 233, 0.08), transparent 22rem),
-            rgba(15, 23, 42, 0.58);
+    background: radial-gradient(circle at top right, rgba(147, 125, 255, 0.14), transparent 24rem), radial-gradient(circle at bottom left, rgba(0, 219, 233, 0.08), transparent 22rem), rgba(15, 23, 42, 0.58);
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.24);
 }
 
@@ -186,31 +183,6 @@
     align-items: stretch;
 }
 
-@media (max-width: 1180px) {
-    .characters-page-grid,
-    .characters-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 720px) {
-    .characters-page-grid,
-    .characters-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .characters-page-hero {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 3rem;
-    }
-
-    .characters-page-summary {
-        width: 100%;
-        text-align: left;
-    }
-}
-
 
 /* =========================
    Fiche détail personnage
@@ -224,9 +196,7 @@
     padding: 2rem;
     border: 1px solid;
     border-radius: 2rem;
-    background:
-            radial-gradient(circle at top right, rgba(255, 255, 255, 0.07), transparent 18rem),
-            rgba(15, 23, 42, 0.78);
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.07), transparent 18rem), rgba(15, 23, 42, 0.78);
 }
 
 .character-detail-content {
@@ -235,9 +205,43 @@
 }
 
 .character-detail-back-link {
-    display: block;
+    display: inline-flex;
     width: fit-content;
-    margin-bottom: 4.2rem;
+    margin-bottom: 0;
+}
+
+.character-switch-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin: 0.8rem 0 3.2rem;
+}
+
+.character-switch-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.35rem;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.62);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 900;
+    text-decoration: none;
+    transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+}
+
+.character-switch-link:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.32);
+    background: rgba(30, 41, 59, 0.82);
+}
+
+.character-switch-link.disabled {
+    cursor: not-allowed;
+    opacity: 0.38;
 }
 
 .character-detail-role-badge {
@@ -285,32 +289,6 @@
     filter: drop-shadow(0 28px 34px rgba(0, 0, 0, 0.55));
 }
 
-@media (max-width: 900px) {
-    .character-detail-hero,
-    .detail-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .character-detail-visual {
-        order: -1;
-        min-height: 20rem;
-    }
-
-    .character-detail-image {
-        height: 20rem;
-    }
-}
-
-@media (max-width: 620px) {
-    .character-detail-hero {
-        padding: 1.2rem;
-    }
-
-    .detail-stats {
-        grid-template-columns: 1fr;
-    }
-}
-
 
 /* =========================
    Page builds
@@ -345,18 +323,6 @@
     gap: 1rem;
 }
 
-@media (max-width: 1150px) {
-    .builds-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 680px) {
-    .builds-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 
 /* =========================
    Fiche détail build
@@ -366,9 +332,7 @@
     padding: 2rem;
     border: 1px solid;
     border-radius: 2rem;
-    background:
-            radial-gradient(circle at top right, rgba(255, 255, 255, 0.07), transparent 18rem),
-            rgba(15, 23, 42, 0.78);
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.07), transparent 18rem), rgba(15, 23, 42, 0.78);
 }
 
 .build-detail-mode {
@@ -404,16 +368,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-top: 1rem;
-}
-
-@media (max-width: 760px) {
-    .build-detail-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .build-detail-hero {
-        padding: 1.2rem;
-    }
 }
 
 
@@ -479,11 +433,7 @@
     color: var(--text-soft);
     font-weight: 900;
     cursor: pointer;
-    transition:
-            background 0.2s ease,
-            color 0.2s ease,
-            border-color 0.2s ease,
-            transform 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .filter-chip:hover {
@@ -521,9 +471,7 @@
     font-weight: 900;
     cursor: pointer;
     white-space: nowrap;
-    transition:
-            background 0.2s ease,
-            color 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .stage-tab:hover {
@@ -545,16 +493,10 @@
     padding: 1rem;
     border: 1px solid;
     border-radius: 1.5rem;
-    background:
-            radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.055), transparent 32%),
-            linear-gradient(180deg, rgba(15, 23, 42, 0.86), rgba(2, 6, 23, 0.96));
+    background: radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.055), transparent 32%), linear-gradient(180deg, rgba(15, 23, 42, 0.86), rgba(2, 6, 23, 0.96));
     text-decoration: none;
     transform: translateY(0);
-    transition:
-            transform 0.24s ease,
-            border-color 0.24s ease,
-            box-shadow 0.24s ease,
-            background 0.24s ease;
+    transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
 }
 
 .class-card::before {
@@ -569,15 +511,11 @@
 
 .class-card:hover {
     transform: translateY(-6px);
-    box-shadow:
-            0 18px 42px rgba(0, 0, 0, 0.34),
-            0 0 20px color-mix(in srgb, currentColor 26%, transparent);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34), 0 0 20px color-mix(in srgb, currentColor 26%, transparent);
 }
 
 .class-card.master-stage {
-    background:
-            radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.075), transparent 34%),
-            linear-gradient(180deg, rgba(22, 26, 54, 0.92), rgba(2, 6, 23, 0.98));
+    background: radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.075), transparent 34%), linear-gradient(180deg, rgba(22, 26, 54, 0.92), rgba(2, 6, 23, 0.98));
 }
 
 .class-card-image-wrap {
@@ -595,12 +533,8 @@
     height: 100%;
     object-fit: contain;
     object-position: center bottom;
-    filter:
-            drop-shadow(0 18px 24px rgba(0, 0, 0, 0.52))
-            drop-shadow(0 0 12px color-mix(in srgb, currentColor 24%, transparent));
-    transition:
-            transform 0.24s ease,
-            filter 0.24s ease;
+    filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.52)) drop-shadow(0 0 12px color-mix(in srgb, currentColor 24%, transparent));
+    transition: transform 0.24s ease, filter 0.24s ease;
 }
 
 .class-card:hover .class-card-image {
@@ -667,37 +601,7 @@
     width: 3.2rem;
     height: 3.2rem;
     object-fit: contain;
-    filter:
-            drop-shadow(0 0 14px rgba(255, 255, 255, 0.18))
-            drop-shadow(0 10px 18px rgba(0, 0, 0, 0.45));
-}
-
-@media (max-width: 1200px) {
-    .classes-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 850px) {
-    .classes-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 760px) {
-    .classes-controls {
-        margin-top: 1rem;
-    }
-
-    .classes-stage-tabs {
-        width: 100%;
-    }
-}
-
-@media (max-width: 620px) {
-    .classes-grid {
-        grid-template-columns: 1fr;
-    }
+    filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.18)) drop-shadow(0 10px 18px rgba(0, 0, 0, 0.45));
 }
 
 
@@ -716,19 +620,71 @@
     padding: 2.4rem;
     border: 1px solid;
     border-radius: 2rem;
-    background:
-            radial-gradient(circle at 78% 38%, rgba(255, 255, 255, 0.08), transparent 22rem),
-            radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.045), transparent 18rem),
-            rgba(15, 23, 42, 0.78);
+    background: radial-gradient(circle at 78% 38%, rgba(255, 255, 255, 0.08), transparent 22rem), radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.045), transparent 18rem), rgba(15, 23, 42, 0.78);
 }
 
 .class-detail-hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background:
-            linear-gradient(90deg, rgba(7, 12, 38, 0.96) 0%, rgba(7, 12, 38, 0.72) 42%, rgba(7, 12, 38, 0.22) 100%);
+    background: linear-gradient(90deg, rgba(7, 12, 38, 0.96) 0%, rgba(7, 12, 38, 0.72) 42%, rgba(7, 12, 38, 0.22) 100%);
     pointer-events: none;
+}
+.identity-character-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-height: 2.25rem;
+    margin: -0.2rem 0 1rem;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.62);
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 900;
+    text-decoration: none;
+    transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+}
+
+.identity-character-link:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.32);
+    background: rgba(30, 41, 59, 0.82);
+}
+
+.class-detail-back-link {
+    position: absolute;
+    top: 1.4rem;
+    left: 1.6rem;
+    z-index: 5;
+    margin-bottom: 0;
+    transform: none;
+}
+
+.class-to-character-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-height: 2.2rem;
+    margin: 0 0 1rem;
+    padding: 0.48rem 0.78rem;;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.62);
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 900;
+    text-decoration: none;
+    transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+}
+
+.class-to-character-link:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.32);
+    background: rgba(30, 41, 59, 0.82);
 }
 
 .class-detail-content {
@@ -792,15 +748,6 @@
     filter: drop-shadow(0 28px 34px rgba(0, 0, 0, 0.55));
 }
 
-.class-detail-back-link {
-    position: absolute;
-    top: 1.4rem;
-    left: 1.6rem;
-    z-index: 5;
-    margin-bottom: 0;
-    transform: none;
-}
-
 .class-detail-stage-label {
     display: inline-flex;
     width: fit-content;
@@ -816,9 +763,7 @@
     width: 4.2rem;
     height: 4.2rem;
     object-fit: contain;
-    filter:
-            drop-shadow(0 0 18px currentColor)
-            drop-shadow(0 12px 24px rgba(0, 0, 0, 0.45));
+    filter: drop-shadow(0 0 18px currentColor) drop-shadow(0 12px 24px rgba(0, 0, 0, 0.45));
 }
 
 .class-lore-path {
@@ -863,65 +808,6 @@
     font-weight: 900;
 }
 
-@media (max-width: 900px) {
-    .class-detail-hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-        padding: 1.4rem;
-    }
-
-    .class-detail-hero::before {
-        background:
-                linear-gradient(180deg, rgba(7, 12, 38, 0.38) 0%, rgba(7, 12, 38, 0.95) 72%);
-    }
-
-    .class-detail-visual {
-        order: -1;
-        min-height: 22rem;
-    }
-
-    .class-detail-image {
-        max-width: 26rem;
-        height: 22rem;
-    }
-
-    .class-detail-back-link {
-        position: relative;
-        top: auto;
-        left: auto;
-        margin-bottom: 1.2rem;
-    }
-
-    .class-detail-stage-label {
-        margin-top: 0;
-        margin-bottom: 0.8rem;
-    }
-
-    .master-class-logo.large {
-        right: 1rem;
-        top: 1rem;
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-}
-
-@media (max-width: 620px) {
-    .class-lore-card,
-    .class-builds-card {
-        padding: 1.1rem;
-    }
-
-    .class-lore-path {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .class-quote {
-        padding: 0.9rem;
-        font-size: 0.95rem;
-    }
-}
-
 
 /* =========================
    Navigation fiches de classes
@@ -945,22 +831,14 @@
     padding: 1rem 3.2rem 1rem 1.1rem;
     border: 1px solid;
     border-radius: 1.2rem;
-    background:
-            radial-gradient(circle at 100% 50%, rgba(255, 255, 255, 0.055), transparent 10rem),
-            rgba(15, 23, 42, 0.72);
+    background: radial-gradient(circle at 100% 50%, rgba(255, 255, 255, 0.055), transparent 10rem), rgba(15, 23, 42, 0.72);
     text-decoration: none;
-    transition:
-            transform 0.22s ease,
-            background 0.22s ease,
-            box-shadow 0.22s ease,
-            border-color 0.22s ease;
+    transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .class-nav-card:hover {
     transform: translateY(-3px);
-    background:
-            radial-gradient(circle at 100% 50%, rgba(255, 255, 255, 0.075), transparent 10rem),
-            rgba(15, 23, 42, 0.9);
+    background: radial-gradient(circle at 100% 50%, rgba(255, 255, 255, 0.075), transparent 10rem), rgba(15, 23, 42, 0.9);
     box-shadow: 0 0 24px rgba(255, 255, 255, 0.06);
 }
 
@@ -1025,9 +903,7 @@
     object-position: center bottom;
     opacity: 0.9;
     filter: drop-shadow(0 12px 16px rgba(0, 0, 0, 0.5));
-    transition:
-            transform 0.22s ease,
-            opacity 0.22s ease;
+    transition: transform 0.22s ease, opacity 0.22s ease;
 }
 
 .class-nav-card:hover .class-nav-visual img {
@@ -1069,32 +945,6 @@
     display: none;
 }
 
-@media (max-width: 680px) {
-    .class-detail-navigation {
-        grid-template-columns: 1fr;
-    }
-
-    .class-nav-card,
-    .class-nav-card.previous {
-        grid-template-columns: minmax(0, 1fr) 5.2rem;
-        padding: 1rem 3rem 1rem 1rem;
-    }
-
-    .class-nav-card.previous .class-nav-copy {
-        grid-column: 1;
-        text-align: left;
-    }
-
-    .class-nav-card.previous .class-nav-visual {
-        grid-column: 2;
-    }
-
-    .class-nav-card.previous .class-nav-arrow {
-        left: auto;
-        right: 1rem;
-    }
-}
-
 
 /* =========================
    Builds liés
@@ -1104,12 +954,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
-}
-
-@media (max-width: 760px) {
-    .related-builds-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 
@@ -1180,18 +1024,7 @@
     line-height: 1.6;
 }
 
-@media (max-width: 1050px) {
-    .tier-entries {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (max-width: 760px) {
-    .tier-row,
-    .tier-entries {
-        grid-template-columns: 1fr;
-    }
-}
 /* =========================
    Page guides
 ========================= */
@@ -1298,8 +1131,186 @@
     margin: 0;
 }
 
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1200px) {
+    .classes-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1180px) {
+    .characters-page-grid,
+    .characters-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1150px) {
+    .builds-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1050px) {
+    .tier-entries {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .character-detail-hero,
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .character-detail-visual {
+        order: -1;
+        min-height: 20rem;
+    }
+
+    .character-detail-image {
+        height: 20rem;
+    }
+
+    .class-detail-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 1.4rem;
+    }
+
+    .class-detail-hero::before {
+        background: linear-gradient(180deg, rgba(7, 12, 38, 0.38) 0%, rgba(7, 12, 38, 0.95) 72%);
+    }
+
+    .class-detail-back-actions {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 1.2rem;
+    }
+
+    .class-detail-visual {
+        order: -1;
+        min-height: 22rem;
+    }
+
+    .class-detail-image {
+        max-width: 26rem;
+        height: 22rem;
+    }
+
+    .class-detail-stage-label {
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+    }
+
+    .master-class-logo.large {
+        right: 1rem;
+        top: 1rem;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .classes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 @media (max-width: 760px) {
+    .build-detail-grid,
+    .related-builds-grid,
+    .tier-row,
+    .tier-entries,
     .job-progression-card {
         grid-template-columns: 1fr;
+    }
+
+    .build-detail-hero {
+        padding: 1.2rem;
+    }
+
+    .classes-controls {
+        margin-top: 1rem;
+    }
+
+    .classes-stage-tabs {
+        width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    .characters-page-grid,
+    .characters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .characters-page-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 3rem;
+    }
+
+    .characters-page-summary {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 680px) {
+    .builds-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .class-detail-navigation {
+        grid-template-columns: 1fr;
+    }
+
+    .class-nav-card,
+    .class-nav-card.previous {
+        grid-template-columns: minmax(0, 1fr) 5.2rem;
+        padding: 1rem 3rem 1rem 1rem;
+    }
+
+    .class-nav-card.previous .class-nav-copy {
+        grid-column: 1;
+        text-align: left;
+    }
+
+    .class-nav-card.previous .class-nav-visual {
+        grid-column: 2;
+    }
+
+    .class-nav-card.previous .class-nav-arrow {
+        left: auto;
+        right: 1rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .character-detail-hero,
+    .class-lore-card,
+    .class-builds-card {
+        padding: 1.1rem;
+    }
+
+    .detail-stats,
+    .classes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .class-lore-path {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .class-quote {
+        padding: 0.9rem;
+        font-size: 0.95rem;
     }
 }

@@ -1,4 +1,7 @@
-/* Cartes personnages */
+/* =========================
+   Cartes personnages
+========================= */
+
 .character-card {
     position: relative;
     isolation: isolate;
@@ -9,14 +12,8 @@
     padding: 1rem;
     border: 1px solid;
     border-radius: 1.55rem;
-    background:
-            radial-gradient(circle at 50% 8%, rgba(255, 255, 255, 0.045), transparent 32%),
-            linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.96));
-    transition:
-            transform 0.25s ease,
-            border-color 0.25s ease,
-            box-shadow 0.25s ease,
-            background 0.25s ease;
+    background: radial-gradient(circle at 50% 8%, rgba(255, 255, 255, 0.045), transparent 32%), linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.96));
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .character-card::before {
@@ -24,8 +21,7 @@
     position: absolute;
     inset: 0;
     z-index: 0;
-    background:
-            radial-gradient(circle at 50% 18%, currentColor, transparent 34%);
+    background: radial-gradient(circle at 50% 18%, currentColor, transparent 34%);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s ease;
@@ -43,9 +39,7 @@
 
 .character-card:hover {
     transform: translateY(-6px);
-    box-shadow:
-            0 18px 42px rgba(0, 0, 0, 0.34),
-            0 0 20px color-mix(in srgb, currentColor 24%, transparent);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34), 0 0 20px color-mix(in srgb, currentColor 24%, transparent);
 }
 
 .character-card:hover::before {
@@ -74,16 +68,12 @@
     object-fit: contain;
     object-position: center bottom;
     filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.5));
-    transition:
-            transform 0.25s ease,
-            filter 0.25s ease;
+    transition: transform 0.25s ease, filter 0.25s ease;
 }
 
 .character-card:hover .character-card-image {
     transform: translateY(-5px) scale(1.025);
-    filter:
-            drop-shadow(0 16px 22px rgba(0, 0, 0, 0.52))
-            drop-shadow(0 0 12px color-mix(in srgb, currentColor 24%, transparent));
+    filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.52)) drop-shadow(0 0 12px color-mix(in srgb, currentColor 24%, transparent));
 }
 
 .character-card-content {
@@ -185,23 +175,6 @@
     font-weight: 900;
 }
 
-.class-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-top: 0.9rem;
-    margin-bottom: 1.1rem;
-}
-
-.class-badge {
-    padding: 0.28rem 0.5rem;
-    border: 1px solid;
-    border-radius: 999px;
-    background: rgba(2, 6, 23, 0.35);
-    font-size: 0.7rem;
-    font-weight: 800;
-}
-
 .character-card-link {
     display: inline-flex;
     align-items: center;
@@ -213,10 +186,7 @@
     border-radius: 999px;
     color: white;
     font-weight: 900;
-    transition:
-            transform 0.22s ease,
-            filter 0.22s ease,
-            box-shadow 0.22s ease;
+    transition: transform 0.22s ease, filter 0.22s ease, box-shadow 0.22s ease;
 }
 
 .character-card-link:hover {
@@ -225,7 +195,11 @@
     box-shadow: 0 0 18px color-mix(in srgb, currentColor 26%, transparent);
 }
 
-/* Cartes personnages compactes — accueil */
+
+/* =========================
+   Cartes personnages compactes
+========================= */
+
 .character-card.compact {
     min-height: 27rem;
 }
@@ -246,7 +220,23 @@
     width: 100%;
 }
 
-/* Page personnages */
+.popular-character-grid .character-card.compact {
+    min-height: 27rem;
+}
+
+.popular-character-grid .character-card.compact .character-card-visual {
+    height: 11rem;
+}
+
+.popular-character-grid .character-card.compact .character-card-link {
+    width: 100%;
+}
+
+
+/* =========================
+   Page personnages
+========================= */
+
 .characters-page-grid,
 .characters-grid {
     display: grid;
@@ -266,33 +256,33 @@
     min-width: 11rem;
 }
 
-/* Section accueil — cartes compactes */
-.popular-character-grid .character-card.compact {
-    min-height: 27rem;
+
+/* =========================
+   Badges classes
+========================= */
+
+.class-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.9rem;
+    margin-bottom: 1.1rem;
 }
 
-.popular-character-grid .character-card.compact .character-card-visual {
-    height: 11rem;
+.class-badge {
+    padding: 0.28rem 0.5rem;
+    border: 1px solid;
+    border-radius: 999px;
+    background: rgba(2, 6, 23, 0.35);
+    font-size: 0.7rem;
+    font-weight: 800;
 }
 
-.popular-character-grid .character-card.compact .character-card-link {
-    width: 100%;
-}
 
-@media (max-width: 1180px) {
-    .characters-page-grid,
-    .characters-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
+/* =========================
+   Cartes builds
+========================= */
 
-@media (max-width: 720px) {
-    .characters-page-grid,
-    .characters-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/*Cartes builds*/
 .build-card {
     display: flex;
     flex-direction: column;
@@ -302,6 +292,7 @@
     border-radius: 1.5rem;
     background: var(--bg-card);
 }
+
 .build-card-top {
     display: flex;
     justify-content: space-between;
@@ -309,20 +300,24 @@
     font-size: 0.8rem;
     font-weight: 900;
 }
+
 .build-card h3 {
     margin: 1rem 0 0;
     font-size: 1.25rem;
     line-height: 1.15;
 }
+
 .build-card p {
     color: var(--text-muted);
     line-height: 1.55;
 }
+
 .build-character {
     margin-bottom: 0.4rem;
     color: var(--text-soft) !important;
     font-weight: 900;
 }
+
 .stat-list {
     display: flex;
     flex-wrap: wrap;
@@ -330,6 +325,7 @@
     margin-top: 1rem;
     margin-bottom: 1.2rem;
 }
+
 .stat-list span {
     padding: 0.35rem 0.6rem;
     border-radius: 999px;
@@ -338,6 +334,7 @@
     font-size: 0.75rem;
     font-weight: 800;
 }
+
 .build-card-button {
     display: inline-flex;
     justify-content: center;
@@ -350,47 +347,50 @@
     font-weight: 900;
     cursor: pointer;
 }
-.class-stage-card {
-    color: inherit;
-    transition: transform 0.25s ease, border-color 0.25s ease;
-}
 
-.class-stage-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255, 255, 255, 0.32);
-}
-/*Timeline des spécialisations*/
+
+/* =========================
+   Timeline des spécialisations
+========================= */
+
 .detail-section {
     margin-top: 1.5rem;
 }
+
 .class-paths-section {
     display: grid;
     gap: 1rem;
 }
+
 .class-path-card {
     padding: 1.2rem;
     border: 1px solid;
     border-radius: 1.5rem;
     background: var(--bg-card);
 }
+
 .class-path-header {
     margin-bottom: 1rem;
 }
+
 .class-path-header span {
     font-size: 0.78rem;
     font-weight: 900;
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
+
 .class-path-header h3 {
     margin: 0.35rem 0 0;
     font-size: 1.5rem;
 }
+
 .class-stage-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.8rem;
 }
+
 .class-stage-card {
     display: flex;
     flex-direction: column;
@@ -399,7 +399,15 @@
     border: 1px solid var(--border-soft);
     border-radius: 1.2rem;
     background: rgba(2, 6, 23, 0.42);
+    color: inherit;
+    transition: transform 0.25s ease, border-color 0.25s ease;
 }
+
+.class-stage-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.32);
+}
+
 .class-stage-image-wrap {
     display: flex;
     align-items: flex-end;
@@ -407,6 +415,7 @@
     height: 12rem;
     padding: 0.8rem;
 }
+
 .class-stage-image {
     width: 100%;
     height: 100%;
@@ -414,11 +423,13 @@
     object-position: center bottom;
     filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.5));
 }
+
 .class-stage-content {
     display: grid;
     gap: 0.6rem;
     padding: 0.9rem;
 }
+
 .class-stage-label {
     width: fit-content;
     padding: 0.3rem 0.55rem;
@@ -426,15 +437,23 @@
     font-size: 0.72rem;
     font-weight: 900;
 }
+
 .class-stage-content strong {
     color: #fff;
     font-size: 1rem;
 }
+
+
+/* =========================
+   Classe maître
+========================= */
+
 .class-stage-image-wrap,
 .class-card-image-wrap,
 .class-detail-visual {
     position: relative;
 }
+
 .master-class-logo {
     position: absolute;
     top: 0.7rem;
@@ -445,39 +464,28 @@
     object-fit: contain;
     filter: drop-shadow(0 0 14px rgba(250, 204, 21, 0.55));
 }
+
 .master-class-logo.large {
     top: 1.2rem;
     right: 1.2rem;
     width: 4.2rem;
     height: 4.2rem;
 }
-@media (max-width: 1100px) {
-    .class-stage-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 620px) {
-    .class-stage-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* Section accueil — cartes compactes */
-.popular-character-grid .character-card.compact {
-    min-height: 27rem;
-}
 
-.popular-character-grid .character-card.compact .character-card-visual {
-    height: 11rem;
-}
-
-.popular-character-grid .character-card.compact .character-card-link {
-    width: 100%;
-}
+/* =========================
+   Responsive
+========================= */
 
 @media (max-width: 1180px) {
     .characters-page-grid,
     .characters-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1100px) {
+    .class-stage-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -487,9 +495,9 @@
         grid-template-columns: 1fr;
     }
 }
-.character-international-name {
-    display: block;
-    margin-top: 0.25rem;
-    font-size: 0.72rem;
-    font-weight: 800;
+
+@media (max-width: 620px) {
+    .class-stage-grid {
+        grid-template-columns: 1fr;
+    }
 }

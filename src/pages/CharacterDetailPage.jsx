@@ -7,6 +7,7 @@ import { builds } from "../data/builds";
 import SkillTree from "../components/ui/SkillTree";
 import { characterMechanics } from "../data/characterMechanics";
 import { classSkills } from "../data/skills/index.js";
+import { useEffect } from "react";
 
 function renderElswordAuraText(text) {
     if (!text) return null;
@@ -78,6 +79,9 @@ function CharacterMechanicCard({ characterMechanic }) {
 function CharacterDetailPage() {
     const { id } = useParams();
     const character = characters.find((item) => item.id === id);
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, [id]);
 
     if (!character) {
         return (
@@ -91,7 +95,9 @@ function CharacterDetailPage() {
             </main>
         );
     }
-
+    const characterIndex = characters.findIndex((item) => item.id === character.id);
+    const previousCharacter = characterIndex > 0 ? characters[characterIndex - 1] : null;
+    const nextCharacter = characterIndex < characters.length - 1 ? characters[characterIndex + 1] : null;
     const theme = characterThemes[character.id];
     const characterBuilds = builds.filter((build) => build.characterId === character.id);
     const baseSkillTree = classSkills.find((item) => item.characterId === character.id && item.jobStage === "base");
@@ -102,6 +108,19 @@ function CharacterDetailPage() {
             <section className="character-detail-hero" style={{ borderColor: theme.primary, boxShadow: `0 0 40px ${theme.glow}` }}>
                 <div className="character-detail-content">
                     <Link className="back-link character-detail-back-link" to="/personnages">← Retour aux personnages</Link>
+                    <nav className="character-switch-nav" aria-label="Navigation entre personnages">
+                        {previousCharacter ? (
+                            <Link className="character-switch-link previous" to={`/personnages/${previousCharacter.id}`}>← {previousCharacter.name}</Link>
+                        ) : (
+                            <span className="character-switch-link disabled">← Précédent</span>
+                        )}
+
+                        {nextCharacter ? (
+                            <Link className="character-switch-link next" to={`/personnages/${nextCharacter.id}`}>{nextCharacter.name} →</Link>
+                        ) : (
+                            <span className="character-switch-link disabled">Suivant →</span>
+                        )}
+                    </nav>
                     <span className="character-role character-detail-role-badge" style={{ backgroundColor: theme.glow, color: theme.primary }}>
                         {character.role}
                     </span>
