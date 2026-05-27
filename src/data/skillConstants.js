@@ -1,15 +1,23 @@
 export const SKILL_TYPES = {
     ACTIVE: "active",
     PASSIVE: "passive",
-    SPECIAL_ACTIVE: "specialActive",
     MASTER: "master",
+    TENACITY: "tenacite",
+    STRENGTH: "force",
+    BRAVERY: "bravoure",
+    HYPER_ACTIVE: "hyperActive",
+    HYPER_ACTIVE_2: "hyperActive2",
 };
 
 export const SKILL_TYPE_COLORS = {
     active: "#facc15",
     passive: "#60a5fa",
-    specialActive: "#e11d48",
-    master: "#a855f7",
+    master: "#22c55e",
+    tenacite: "#06b6d4",
+    force: "#a855f7",
+    bravoure: "#ef4444",
+    hyperActive: "#f97316",
+    hyperActive2: "#fb7185",
 };
 
 export const ELSWORD_AURA_COLORS = {
@@ -39,4 +47,24 @@ export const SKILL_BADGE_COLORS = {
     hyperActive2: "#fb7185",
     masterSkill: "#a855f7",
     forceSkill: "#22c55e",
+};
+export const FORCE_SKILL_RARITIES = {
+    RARE: "rare",
+    ELITE: "elite",
+    UNIQUE: "unique",
+    LEGENDARY: "legendary",
+};
+
+export const FORCE_SKILL_RARITY_LABELS = {
+    rare: "Rare",
+    elite: "Élite",
+    unique: "Unique",
+    legendary: "Légendaire",
+};
+
+export const FORCE_SKILL_RARITY_COLORS = {
+    rare: "#22c55e",
+    elite: "#3b82f6",
+    unique: "#a855f7",
+    legendary: "#f59e0b",
 };

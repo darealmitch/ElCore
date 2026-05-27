@@ -1,7 +1,12 @@
+import { SKILL_TYPES, SKILL_BADGES, FORCE_SKILL_RARITIES } from "./skillConstants.js";
+
 export const forceSkillGuide = {
     title: "Compétences de force",
-    summary: "Les compétences de force sont un système supplémentaire débloqué avec la 3e spécialisation. " +
-        "Elles possèdent leur propre interface, sont obtenues principalement via des butins de donjon et permettent d'ajouter des passifs, des actifs ou des compétences d'alternance au personnage.",
+    summary:
+        "Les compétences de force sont un système commun débloqué avec la 3e spécialisation. " +
+        "Elles possèdent leur propre interface et permettent d'équiper des passifs, des actifs et des compétences d'alternance. " +
+        "Ces compétences peuvent modifier certaines compétences existantes, ajouter des effets supplémentaires ou offrir de nouvelles options de combat. " +
+        "Elles sont généralement obtenues grâce à des butins de donjon, puis activées depuis le menu dédié aux compétences de force.",
     details: [
         {
             title: "Fonctionnement général",
@@ -63,4 +68,44 @@ export const forceSkillGuide = {
                 "Les compétences légendaires n'existent qu'en une seule variante et font partie des compétences de force les plus rares.",
         },
     ],
+    detailsSkills: [
+        {
+            id: "force-passive-illipia-aura",
+            name: "Illipia's Aura",
+            nameFr: "Aura d'Illipia",
+            image: "/images/skills/forceSkill/EnergyOfIllipia.png",
+            type: SKILL_TYPES.PASSIVE,
+            level: "force",
+            badge: SKILL_BADGES.FORCE_SKILL,
+            rarity: FORCE_SKILL_RARITIES.UNIQUE,
+            auraType: "",
+            description: "Augmente les PV maximums et permet au personnage de récupérer régulièrement une quantité fixe de PV lorsqu’il est hors combat.",
+        },
+        {
+            id: "force-active-hyper-acceleration",
+            name: "Hyper Acceleration",
+            nameFr: "Hyper accélération",
+            image: "/images/skills/forceSkill/ExtremeSpeed.png",
+            type: SKILL_TYPES.ACTIVE,
+            level: "force",
+            badge: SKILL_BADGES.FORCE_SKILL,
+            rarity: FORCE_SKILL_RARITIES.UNIQUE,
+            auraType: "",
+            description: "Ta vitesse de déplacement et ta capacité de saut augmentent fortement pendant une courte durée, mais cet effet entraîne ensuite des effets secondaires.",
+        },
+        {
+            id: "force-passive-lightning-chain",
+            name: "Lightning Chain",
+            nameFr: "Sphère d'éclairs",
+            image: "/images/skills/forceSkill/EnergyOfIllipia.png",
+            type: SKILL_TYPES.PASSIVE,
+            level: "force",
+            badge: SKILL_BADGES.FORCE_SKILL,
+            rarity: FORCE_SKILL_RARITIES.UNIQUE,
+            auraType: "",
+            description: "Une sphère se charge toutes les secondes tant que vous n'êtes pas en mode combat. " +
+                "Une fois entièrement chargée, un éclair qui rebondit sur les ennemis est invoqué." +
+                "À chaque touche supplémentaire, les dégâts diminuent.",
+        },
+    ]
 };
