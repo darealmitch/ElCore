@@ -8,7 +8,7 @@ import { toClassSlug, getClassUrl } from "../utils/classRoutes";
 import { classLore } from "../data/classLore";
 import { classDescriptions } from "../data/classDescriptions";
 import SkillTree from "../components/ui/SkillTree";
-import { classSkills } from "../data/ClassSkills.js";
+import { classSkills } from "../data/classSkills/index.js";
 
 const stageLabels = {
     job1: "1re Spécialisation",

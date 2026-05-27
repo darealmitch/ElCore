@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
-import { elswordClassSkills, SKILL_TYPE_COLORS, ELSWORD_AURA_COLORS, ELSWORD_AURA_LABELS, SKILL_BADGE_LABELS, SKILL_BADGE_COLORS } from "../../data/classSkills/elswordClassSkills.js";
+import { skills } from "../../data/classSkills/index.js";
+import { SKILL_TYPE_COLORS, ELSWORD_AURA_COLORS, ELSWORD_AURA_LABELS, SKILL_BADGE_LABELS, SKILL_BADGE_COLORS } from "../../data/skillConstants.js";
 import { transcendenceGuide } from "../../data/transcendenceGuide";
 import { masterClassGuide } from "../../data/masterClassGuide";
 import { forceSkillGuide } from "../../data/forceSkillGuide";
@@ -26,7 +27,7 @@ function formatLevelLabel(level) {
 }
 function getRowTooltipDirection(level, index) {
     if (level === "master") return index === 0 ? "top-right" : "top";
-    if (typeof level === "number" && (level === 40 || level >= 80)) return "left";
+    if (typeof level === "number" && (level === 40 || level >= 90)) return "left";
 
     return "";
 }
@@ -161,7 +162,7 @@ function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }
                                 const sectionBeforeLevel = data.sections?.find((section) => section.id === "transcendence" && level === 70);
 
                                 return (
-                                    <div key={level} className="skill-row-group">
+                                    <div key={level} className={level === "master" ? "skill-row-group master-row-group" : "skill-row-group"}>
                                         {sectionBeforeLevel && (
                                             <div className="skill-row-divider">
                                                 <span>
@@ -172,7 +173,7 @@ function SkillTreeRows({ data, treeSkills, selectedSkillId, setSelectedSkillId }
                                         )}
 
                                         <div className="skill-row">
-                                            <div className="skill-row-content">
+                                            <div className={level === "master" ? "skill-row-content master-row-content" : "skill-row-content"}>
                                                 <div className="skill-row-column">
                                                     {skillsAtLevel.filter((skill) => skill.type !== "passive").map((skill, index) => {
                                                         const tooltipDirection = getRowTooltipDirection(level, index);
@@ -248,7 +249,7 @@ function SkillTree({ data }) {
     const levels = getSafeLevels(data.levels);
 
     const skillById = useMemo(() => {
-        return elswordClassSkills.reduce((acc, skill) => {
+        return skills.reduce((acc, skill) => {
             acc[skill.id] = skill;
             return acc;
         }, {});

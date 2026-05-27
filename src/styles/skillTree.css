@@ -741,6 +741,32 @@
     opacity: 1;
     transform: translateY(0);
 }
+.master-row-group {
+    background:
+            radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.24), transparent 18rem),
+            linear-gradient(90deg, rgba(88, 28, 135, 0.78), rgba(126, 34, 206, 0.66));
+}
+
+.master-row-content {
+    grid-template-columns: 1fr;
+}
+
+.master-row-content .skill-row-column {
+    grid-column: 1 / -1;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 1.4rem;
+    padding-inline: 1.2rem;
+}
+
+.master-row-content .skill-row-column.passive {
+    display: none;
+}
+
+.master-row-content .row-node {
+    width: 4.1rem;
+    height: 4.1rem;
+}
 @media (max-width: 1100px) {
     .skill-rows-with-summary {
         grid-template-columns: 1fr;

@@ -1,47 +1,6 @@
-export const SKILL_TYPES = {
-    ACTIVE: "active",
-    PASSIVE: "passive",
-    SPECIAL_ACTIVE: "specialActive",
-    MASTER: "master",
-};
+import { SKILL_TYPES, SKILL_BADGES } from "../skillConstants";
 
-export const SKILL_TYPE_COLORS = {
-    active: "#facc15",
-    passive: "#60a5fa",
-    specialActive: "#e11d48",
-    master: "#a855f7",
-};
-
-export const ELSWORD_AURA_COLORS = {
-    vitalite: "#60a5fa",
-    destruction: "#ef4444",
-};
-export const ELSWORD_AURA_LABELS = {
-    vitalite: "l'aura de vitalité",
-    destruction: "l'aura de destruction",
-};
-export const SKILL_BADGES = {
-    HYPER_ACTIVE: "hyperActive",
-    HYPER_ACTIVE_2: "hyperActive2",
-    MASTER_SKILL: "masterSkill",
-    FORCE_SKILL: "forceSkill",
-};
-
-export const SKILL_BADGE_LABELS = {
-    hyperActive: "Hyper compétence",
-    hyperActive2: "Hyper compétence II",
-    masterSkill: "Compétence de maître",
-    forceSkill: "Compétence de force",
-};
-
-export const SKILL_BADGE_COLORS = {
-    hyperActive: "#f97316",
-    hyperActive2: "#fb7185",
-    masterSkill: "#a855f7",
-    forceSkill: "#22c55e",
-};
-
-export const elswordClassSkills = [
+export const elswordSkills = [
     {
         id: "elsword-base-skill-1",
         name: "Méga Slash",
@@ -599,10 +558,310 @@ export const elswordClassSkills = [
         id: "elsword-mk-skill-8",
         name: "Magic Chain",
         nameFr: "Liens magiques",
-        image: "/images/skills/el/mk//ElSkill11i.png",
+        image: "/images/skills/el/mk/ElSkill11i.png",
         type: SKILL_TYPES.PASSIVE,
         level: 40,
         auraType: "",
         description: "Elsword réduit la résistance magique de l’ennemi, à l’exception des compétences spéciales actives et des hyper compétences.",
     },
+    /*Rune Knight*/
+    {
+        id: "elsword-rk-skill-1",
+        name: "Phoenix Talon",
+        nameFr: "Serres du phœnix",
+        image: "/images/skills/el/rk/ElSkill10i.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 35,
+        auraType: "vitalite",
+        description: "Elsword invoque le Phénix, qui inflige des dégâts aux ennemis proches avant qu’Elsword n’absorbe sa puissance pour bénéficier d’un bonus.",
+    },
+    {
+        id: "elsword-rk-skill-2",
+        name: "Fire Rune",
+        nameFr: "Rune de feu",
+        image: "/images/skills/el/rk/Heat_Rune.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 35,
+        auraType: "vitalite",
+        description: "Elsword invoque une rune de feu qui embrase les ennemis proches.",
+    },
+    {
+        id: "elsword-rk-skill-3",
+        name: "Sword Enchant",
+        nameFr: "Épée animée",
+        image: "/images/skills/el/rk/Sword_Enchant_New.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 35,
+        auraType: "",
+        description: "Elsword ajoute l’élément feu, eau ou nature à son épée.",
+    },
+    {
+        id: "elsword-rk-skill-4",
+        name: "Enchant Dash",
+        nameFr: "",
+        image: "/images/skills/el/rk/EnchantDash.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 40,
+        auraType: "vitalite",
+        description: "Elsword imprègne son épée de puissance magique et charge droit devant lui. " +
+            "En cas de coup réussi, l’effet passif d’Épée animé s’active à coup sûr.",
+    },
+    {
+        id: "elsword-rk-skill-5",
+        name: "Lodestar",
+        nameFr: "Grande roue",
+        image: "/images/skills/el/rk/Giant_Wheel.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 45,
+        auraType: "destruction",
+        description: "Elsword invoque l’Étoile polaire. Celle-ci tournoie rapidement pour infliger des dégâts aux ennemis, puis charge droit devant elle.",
+    },
+    {
+        id: "elsword-rk-skill-6",
+        name: "Luna Blade",
+        nameFr: "Lame lunaire",
+        image: "/images/skills/el/rk/SI_Lunablade_NEW.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 45,
+        auraType: "destruction",
+        description: "Une gigantesque lame lunaire s’abat sur les ennemis. Les adversaires touchés subissent des dégâts et perdent des PM.",
+    },
+    {
+        id: "elsword-rk-skill-7",
+        name: "Magic Counter",
+        nameFr: "Contre-attaque",
+        image: "/images/skills/el/lk/LordKnightSkill6.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 50,
+        auraType: "destruction",
+        description: "Elsword tente une contre-attaque avec des runes lorsqu’il est attaqué de face par des commandes.",
+    },
+    {
+        id: "elsword-rk-skill-8",
+        name: "Rune Field",
+        nameFr: "Champs de runes",
+        image: "/images/skills/el/rk/RuneTerritory.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 50,
+        auraType: "vitalite",
+        description: "Elsword frappe le sol avec son épée runique et crée un champ de runes. " +
+            "Les ennemis présents dans la zone reçoivent un stigmate runique. " +
+            "Les alliés infligent davantage de dégâts physiques et magiques aux cibles marquées par ce stigmate.",
+    },
+    {
+        id: "elsword-rk-skill-9",
+        name: "Splash Explosion",
+        nameFr: "Salve de feu",
+        image: "/images/skills/el/rk/ElSkill4i.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 55,
+        auraType: "vitalite",
+        description: "Elsword invoque une première rune magique, qu'il fait ensuite exploser.",
+    },
+    {
+        id: "elsword-rk-skill-10",
+        name: "Rune Mastery",
+        nameFr: "Maître des runes",
+        image: "/images/skills/el/rk/Rune_Mastery.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 60,
+        auraType: "",
+        description: "La taille et la durée des runes d’Elsword augmentent, à l’exception des compétences spéciales actives et des hyper compétences.",
+    },
+    {
+        id: "elsword-rk-skill-11",
+        name: "Magic Proficiency",
+        nameFr: "Entrainement magique",
+        image: "/images/skills/el/rk/MagicResistanceMasteryR.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 60,
+        auraType: "",
+        description: "La défense magique d’Elsword augmente, et chaque fois qu’il inflige des dégâts, ses dégâts critiques augmentent.",
+    },
+    {
+        id: "elsword-rk-skill-12",
+        name: "Shining Rune Buster",
+        nameFr: "Rune étincellante",
+        image: "/images/skills/el/rk/SRB.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 65,
+        auraType: "",
+        description: " Elsword invoque un géant trou noir grâce à ses Runes emprisonnant toutes ses cibles. " +
+            "Il invoque ensuite des épées runiques et empale ses ennemis tout en drainant la mana de ses cibles. " +
+            "Il fait finalement exploser toutes les épées runiques laissant déchaîner des dégâts colossaux et massifs .",
+    },
+    {
+        id: "elsword-rk-skill-13",
+        name: "Awakened Will: Rune Slayer",
+        nameFr: "Volonté déchainé: Chevalier Runique",
+        image: "/images/skills/el/rk/RSTrans4.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 70,
+        auraType: "",
+        description: "Lorsqu’Elsword subit un effet d’attribut, sa régénération de PM s’accélère pendant une durée limitée et toutes ses résistances augmentent.",
+    },
+    {
+        id: "elsword-rk-skill-14",
+        name: "Triple Saber",
+        nameFr: "Triple sabre",
+        image: "/images/skills/el/rk/RSTrans1.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 70,
+        auraType: "destruction",
+        description: "Elsword grave une grande rune magique et y plante trois épées runiques pour infliger des dégâts aux ennemis.",
+    },
+    {
+        id: "elsword-rk-skill-15",
+        name: "Enchant Breaker",
+        nameFr: "Destructeur élémentaire",
+        image: "/images/skills/el/rk/RSTrans2.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 80,
+        auraType: "vitalite",
+        description: "Elsword réduit la résistance élémentaire de l’ennemi.",
+    },
+    {
+        id: "elsword-rk-skill-16",
+        name: "Awakened One",
+        nameFr: "Spécialisation",
+        image: "/images/skills/el/lk/TransShared.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 80,
+        auraType: "",
+        description: "Cette compétence améliore les capacités physiques "
+    },
+    {
+        id: "elsword-rk-skill-17",
+        name: "Overs Geyser",
+        nameFr: "Geyser d'Orvus",
+        image: "/images/skills/el/rk/RSTrans3.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 90,
+        auraType: "destruction",
+        description: "Elsword fais apparaître plusieurs lames enflammées qui jaillissent du sol et transpercent les ennemis.",
+    },
+    {
+        id: "elsword-rk-skill-18",
+        name: "Magic Coalting",
+        nameFr: "Revêtement magique",
+        image: "/images/skills/el/rk/RSTrans5.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 90,
+        auraType: "",
+        description: "Elsword renforce sa puissance grâce aux runes, augmentant ses PM maximums et sa réduction des dégâts.",
+    },
+    {
+        id: "elsword-rk-skill-19",
+        name: "Extreme Rune Buster",
+        nameFr: "Runes extremes",
+        image: "/images/skills/el/rk/RSTrans6.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 95,
+        auraType: "destruction",
+        description: "Elsword frappe le sol avec une épée chargée de mana, déclenchant une série d’explosions de runes de feu, de glace et de poison.",
+    },
+    /*Rune Master*/
+    {
+        id: "el-rm-skill-1",
+        name: "Eclipse",
+        nameFr: "",
+        image: "/images/skills/el/rk/RMEclipse.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 99,
+        badge: SKILL_BADGES.HYPER_ACTIVE_2,
+        auraType: "",
+        description: "Une fois qu'Elsword a dégagé d'innombrables runes tout d'un coup, il déclenche une gigantesque explosion.",
+    },
+    {
+        id: "el-rm-skill-2",
+        name: "Mana Flow",
+        nameFr: "Flux magique",
+        image: "/images/skills/el/rk/RuneMasterPassive1.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 99,
+        auraType: "",
+        description: "Elsword a détecté le flux magique, ce qui optimise ses attaques.",
+    },
+    {
+        id: "el-rm-skill-3",
+        name: "New Heights",
+        nameFr: "État de l'illumination",
+        image: "/images/skills/el/rk/RuneMasterPassive2.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 99,
+        auraType: "",
+        description: "Elsword acquiert une meilleur compréhension des runes et les emploie plus efficacement.",
+    },
+    {
+        id: "elsword-rm-master-skill-1",
+        name: "Deep Impact - Stage 1",
+        nameFr: "Impact runique  — Étape 1",
+        image: "/images/skills/el/rk/Deep_Impact_Stage1.png",
+        type: SKILL_TYPES.MASTER,
+        level: "master",
+        auraType: "",
+        badge: SKILL_BADGES.MASTER_SKILL,
+        description: {
+            title: "Étape 1",
+            lines: [
+                "Elsword crée une rune chargée d’une puissante énergie. " +
+                "La rune tombe lentement, inflige des dégâts aux ennemis, puis disparaît.",
+                "Cette première étape est automatiquement débloquée lors du passage en Classe Maître.",
+            ],
+        },
+    },
+    {
+        id: "elsword-rm-master-skill-2",
+        name: "Deep Impact - Stage 2",
+        nameFr: "Impact runique  — Étape 2",
+        image: "/images/skills/el/rk/Deep_Impact_Stage2.png",
+        type: SKILL_TYPES.MASTER,
+        level: "master",
+        auraType: "",
+        badge: SKILL_BADGES.MASTER_SKILL,
+        description: {
+            title: "Étape 2",
+            lines: [
+                "Elsword crée une rune chargée d’une puissante énergie." +
+                "Elle tombe lentement, inflige des dégâts aux ennemis, puis disparaît.",
+                "Cette deuxième étape se débloque grâce à une quête de compétence.",
+            ],
+        },
+    },
+    {
+        id: "elsword-rm-master-skill-3",
+        name: "Deep Impact - Stage 3",
+        nameFr: "Impact runique  — Étape 3",
+        image: "/images/skills/el/rk/Deep_Impact_Stage3.png",
+        type: SKILL_TYPES.MASTER,
+        level: "master",
+        auraType: "",
+        badge: SKILL_BADGES.MASTER_SKILL,
+        description: {
+            title: "Étape 3",
+            lines: [
+                "Elsword crée une rune chargée d’une puissante énergie. " +
+                "Elle tombe lentement, puis explose à l’impact.",
+                "Cette troisième étape se débloque grâce à une quête de compétence.",
+            ],
+        },
+    },
+    {
+        id: "elsword-rm-master-skill-4",
+        name: "Deep Impact - Stage 4",
+        nameFr: "Impact runique  — Étape 4",
+        image: "/images/skills/el/rk/Deep_Impact_Stage4.png",
+        type: SKILL_TYPES.MASTER,
+        level: "master",
+        auraType: "",
+        badge: SKILL_BADGES.MASTER_SKILL,
+        description: {
+            title: "Étape 4",
+            lines: [
+                "Elsword crée une rune chargée d’une puissante énergie. " +
+                "Elle tombe lentement comme un météore et désintègre tout ce qu’elle touche.",
+                "Cette quatrième étape se débloque grâce à une quête de compétence.",
+            ],
+        },
+    }
 ]
