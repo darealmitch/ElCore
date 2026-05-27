@@ -15,6 +15,8 @@ function CharacterCard({ character, compact = false }) {
                 color: theme.primary,
                 borderColor: theme.primary,
                 boxShadow: compact ? undefined : `0 0 24px ${theme.glow}`,
+                "--theme-primary": theme.primary,
+                "--theme-glow": theme.glow
             }}
         >
             <div className="character-card-aura" />

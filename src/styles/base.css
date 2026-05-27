@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800;900&display=swap');
+
 :root {
     color-scheme: dark;
     --bg-main: #050816;
@@ -20,7 +22,14 @@ body {
             radial-gradient(circle at top right, rgba(168, 85, 247, 0.12), transparent 28rem),
             var(--bg-main);
     color: var(--text-main);
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.03em;
 }
 a {
     color: inherit;

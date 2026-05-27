@@ -9,11 +9,32 @@
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    padding: 1rem 5%;
+    padding: 1.25rem 5%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     background: rgba(12, 17, 43, 0.78);
     backdrop-filter: blur(16px);
     box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+    transition: padding 0.3s ease, background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+        .site-header {
+            animation: header-scroll linear both;
+            animation-timeline: scroll();
+            animation-range: 0px 100px;
+        }
+    }
+}
+
+@keyframes header-scroll {
+    to {
+        background: rgba(7, 12, 38, 0.95);
+        padding-top: 0.65rem;
+        padding-bottom: 0.65rem;
+        backdrop-filter: blur(24px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
 }
 .logo{
     display: flex;
@@ -215,3 +236,114 @@
         height: 2.75rem;
     }
 }
+
+/* =========================
+   Barre de progression de lecture
+   ========================= */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    z-index: 100;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+        #scroll-progress {
+            animation: grow-progress auto linear;
+            animation-timeline: scroll();
+        }
+    }
+}
+
+@keyframes grow-progress {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* =========================
+   Boutons et Ripple effect
+   ========================= */
+.btn-primary,
+.header-actions button,
+.character-card-link,
+.build-card-button,
+.hero-button,
+.filter-button,
+.filter-chip,
+.stage-tab {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+                filter 0.25s ease, 
+                box-shadow 0.25s ease, 
+                background 0.25s ease, 
+                border-color 0.25s ease;
+}
+
+.btn-primary:hover,
+.header-actions button:hover,
+.character-card-link:hover,
+.build-card-button:hover,
+.hero-button:hover,
+.filter-button:hover,
+.filter-chip:hover {
+    transform: translateY(-2px) scale(1.03);
+    filter: brightness(1.1);
+}
+
+.btn-primary:active,
+.header-actions button:active,
+.character-card-link:active,
+.build-card-button:active,
+.hero-button:active {
+    transform: translateY(0) scale(0.97);
+}
+
+/* Pseudo-élément pour effet Ripple en pur CSS */
+.btn-primary::after,
+.header-actions button::after,
+.character-card-link::after,
+.build-card-button::after,
+.hero-button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn-primary:active::after,
+.header-actions button:active::after,
+.character-card-link:active::after,
+.build-card-button:active::after,
+.hero-button:active::after {
+    animation: ripple 0.4s ease-out;
+}
+
+@keyframes ripple {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.6;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+

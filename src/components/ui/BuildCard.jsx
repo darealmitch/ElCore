@@ -5,7 +5,13 @@ function BuildCard({ build }) {
     const theme = characterThemes[build.characterId];
 
     return (
-        <article className="build-card" style={{borderColor: theme.primary, boxShadow: `0 0 22px ${theme.glow}`}}>
+        <article className="build-card" style={{
+            borderColor: theme.primary,
+            boxShadow: `0 0 22px ${theme.glow}`,
+            "--theme-primary": theme.primary,
+            "--theme-secondary": theme.secondary,
+            "--theme-glow": theme.glow
+        }}>
             <div className="build-card-top">
                 <span style={{ color: theme.primary }}>{build.mode}</span>
                 <strong>{build.difficulty}</strong>
@@ -24,6 +30,7 @@ function BuildCard({ build }) {
                 Voir le build
             </Link>
         </article>
+
     );
 }
 export default BuildCard;

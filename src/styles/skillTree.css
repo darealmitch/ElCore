@@ -49,7 +49,7 @@
     min-height: 48rem;
 }
 
-.skill-tree-board.has-sections + .skill-tree-levels {
+.skill-tree-board.has-sections+.skill-tree-levels {
     padding-top: 4.2rem;
 }
 
@@ -105,10 +105,22 @@
     left: 0;
     right: 0;
     z-index: 3;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.14), transparent);
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.05) 20%, var(--accent-blue) 40%, var(--accent-purple) 60%, rgba(255, 255, 255, 0.05) 80%, transparent 100%);
+    background-size: 200% 100%;
     transform: translateY(-50%);
     pointer-events: none;
+    animation: skill-line-flow 6s infinite linear;
+}
+
+@keyframes skill-line-flow {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
 }
 
 .skill-tree-section-divider {
@@ -156,12 +168,31 @@
 }
 
 .skill-node:hover,
-.skill-node:focus-visible,
-.skill-node.active {
+.skill-node:focus-visible {
     z-index: 10;
     transform: translate(-50%, -50%) scale(1.07);
     filter: brightness(1.1);
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 14px color-mix(in srgb, var(--skill-aura) 55%, transparent);
+}
+
+.skill-node.active {
+    z-index: 10;
+    filter: brightness(1.1);
+    animation: node-active-pulse 2s infinite ease-in-out;
+}
+
+@keyframes node-active-pulse {
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1.07);
+        outline-offset: 3px;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 14px color-mix(in srgb, var(--skill-aura) 55%, transparent);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.15);
+        outline-offset: 6px;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.44), 0 0 28px color-mix(in srgb, var(--skill-aura) 85%, transparent);
+    }
 }
 
 .skill-node img {
@@ -428,13 +459,28 @@
 }
 
 .skill-row-group {
+    position: relative;
     display: grid;
     min-height: 5.4rem;
     background: linear-gradient(90deg, rgba(140, 20, 20, 0.68) 0%, rgba(140, 20, 20, 0.68) 60%, rgba(20, 62, 160, 0.58) 60%, rgba(20, 62, 160, 0.58) 100%);
 }
 
 .skill-row-group + .skill-row-group {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 0;
+}
+
+.skill-row-group + .skill-row-group::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.05) 20%, var(--accent-blue) 40%, var(--accent-purple) 60%, rgba(255, 255, 255, 0.05) 80%, transparent 100%);
+    background-size: 200% 100%;
+    pointer-events: none;
+    animation: skill-line-flow 6s infinite linear;
 }
 
 .skill-row {
@@ -476,9 +522,28 @@
 }
 
 .row-node:hover,
-.row-node:focus-visible,
-.row-node.active {
+.row-node:focus-visible {
     transform: scale(1.07);
+}
+
+.row-node.active {
+    animation: row-node-active-pulse 2s infinite ease-in-out;
+}
+
+@keyframes row-node-active-pulse {
+
+    0%,
+    100% {
+        transform: scale(1.07);
+        outline-offset: 3px;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 14px color-mix(in srgb, var(--skill-border, #facc15) 55%, transparent);
+    }
+
+    50% {
+        transform: scale(1.15);
+        outline-offset: 6px;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.44), 0 0 28px color-mix(in srgb, var(--skill-border, #facc15) 85%, transparent);
+    }
 }
 
 .rows-levels {
@@ -607,6 +672,7 @@
     color: var(--text-soft);
     line-height: 1.65;
 }
+
 .skill-description-block {
     display: grid;
     gap: 0.65rem;
@@ -740,7 +806,7 @@
     line-height: 1.05;
 }
 
-.character-mechanic-card > strong {
+.character-mechanic-card>strong {
     display: block;
     margin-top: 0.45rem;
     color: var(--text-soft);
@@ -886,9 +952,18 @@
 }
 
 @media (max-width: 900px) {
+
     .skill-tree-layout,
     .skill-rows-layout {
         grid-template-columns: 1fr;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1.5rem;
+    }
+
+    .skill-tree-board,
+    .skill-rows-board {
+        min-width: 600px;
     }
 
     .skill-tree-levels,
