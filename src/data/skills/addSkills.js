@@ -365,7 +365,7 @@ export const addSkills = [
     {
         id: "add-psy-skill11",
         name: "Fantasy Tracer",
-        nameFr: "",
+        nameFr: "Visionnaire",
         image: "/images/skills/add/lp/LunaticPsykerPassive3.png",
         type: SKILL_TYPES.PASSIVE,
         level: 60,
