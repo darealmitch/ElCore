@@ -7,6 +7,7 @@ import "./styles/cards.css";
 import "./styles/home.css";
 import App from "./App.jsx";
 import "./styles/skillTree.css";
+import "./styles/lore.css";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
