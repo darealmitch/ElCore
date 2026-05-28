@@ -10,7 +10,7 @@ const quickAccessItems = [
         colorClass: "quick-access-purple",
     },
     {
-        title: "Lore",
+        title: "Histoire",
         description: "Découvre l’univers d’Élios, l’El, les régions et les grands événements.",
         to: "/lore",
         icon: Telescope,
