@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import ScrollToTopButton from "../ui/ScrollToTopButton";
 import ScrollToTopOnRouteChange from "./ScrollToTopOnRouteChange";
 
+
 function MainLayout() {
     useEffect(() => {
         if (!CSS.supports('animation-timeline', 'scroll()')) {
