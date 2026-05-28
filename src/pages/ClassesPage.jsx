@@ -23,17 +23,14 @@ function getMasterLogo(classItem) {
 function ClassesPage() {
     const [activeCharacter, setActiveCharacter] = useState("all");
     const [activeStage, setActiveStage] = useState("all");
-
     const updateCharacterFilter = (characterId) => {
         setActiveCharacter(characterId);
         scrollToSectionAfterRender("classes-results");
     };
-
     const updateStageFilter = (stage) => {
         setActiveStage(stage);
         scrollToSectionAfterRender("classes-results");
     };
-
     const filteredClasses = useMemo(() => {
         return classImages.filter((item) => {
             const matchesCharacter =
