@@ -1,4 +1,7 @@
-/* Accueil — Hero */
+/* =========================
+   Accueil — Hero
+========================= */
+
 .hero-premium {
     position: relative;
     overflow: hidden;
@@ -85,11 +88,49 @@
     line-height: 1.8;
 }
 
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.6rem;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.2rem;
+    padding: 0.9rem 1.4rem;
+    border-radius: 0.9rem;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.hero-button.primary {
+    background: linear-gradient(135deg, #937dff, #a855f7);
+    color: white;
+    box-shadow: 0 0 24px rgba(147, 125, 255, 0.35);
+}
+
+.hero-button.secondary {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(46, 51, 78, 0.42);
+    color: white;
+}
+
+.hero-section {
+    display: block !important;
+    min-height: auto !important;
+    padding-top: 0 !important;
+    align-items: initial !important;
+}
+
 .hero-visual {
     position: relative;
-    min-height: 34rem;
     display: grid;
     place-items: center;
+    min-height: 34rem;
 }
 
 .hero-glow {
@@ -107,14 +148,14 @@
 .hero-character {
     position: relative;
     z-index: 2;
-    height: 34rem;
     max-width: 100%;
+    height: 34rem;
     transition: transform 0.25s ease;
 }
 
 .hero-character img {
-    height: 100%;
     width: auto;
+    height: 100%;
     object-fit: contain;
     filter:
             drop-shadow(0 0 28px rgba(147, 125, 255, 0.34))
@@ -146,8 +187,8 @@
     color: var(--text-muted);
     font-size: 0.82rem;
     font-weight: 800;
-    text-transform: uppercase;
     letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 .hero-floating-card-top {
@@ -156,8 +197,8 @@
 }
 
 .hero-floating-card-left {
-    left: 0;
     bottom: 8rem;
+    left: 0;
     animation-delay: 2s;
 }
 
@@ -167,148 +208,11 @@
     animation-delay: 1s;
 }
 
-.hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-top: 1.6rem;
-}
 
-.hero-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 3.2rem;
-    padding: 0.9rem 1.4rem;
-    border-radius: 0.9rem;
-    font-weight: 900;
-    text-decoration: none;
-}
+/* =========================
+   Accueil — Sections communes
+========================= */
 
-.hero-button.primary {
-    background: linear-gradient(135deg, #937dff, #a855f7);
-    color: white;
-    box-shadow: 0 0 24px rgba(147, 125, 255, 0.35);
-}
-
-.hero-button.secondary {
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(46, 51, 78, 0.42);
-    color: white;
-}
-
-.hero-section {
-    min-height: auto !important;
-    padding-top: 0 !important;
-    display: block !important;
-    align-items: initial !important;
-}
-
-@keyframes heroPulse {
-    0%, 100% {
-        opacity: 0.72;
-        transform: scale(1);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.08);
-    }
-}
-
-@keyframes heroFloat {
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-12px);
-    }
-}
-
-/* Parallaxe Scroll-Driven pour le Hero */
-@media (prefers-reduced-motion: no-preference) {
-    @supports ((animation-timeline: view()) and (animation-range: entry)) {
-        .hero-premium {
-            view-timeline: --hero-tl block;
-        }
-        .hero-character {
-            animation: hero-char-parallax linear both;
-            animation-timeline: --hero-tl;
-            animation-range: exit 0% exit 100%;
-        }
-        .hero-floating-card-top {
-            animation: hero-card-top-parallax linear both;
-            animation-timeline: --hero-tl;
-            animation-range: exit 0% exit 100%;
-        }
-        .hero-floating-card-left {
-            animation: hero-card-left-parallax linear both;
-            animation-timeline: --hero-tl;
-            animation-range: exit 0% exit 100%;
-        }
-        .hero-floating-card-bottom {
-            animation: hero-card-bottom-parallax linear both;
-            animation-timeline: --hero-tl;
-            animation-range: exit 0% exit 100%;
-        }
-        .hero-content {
-            animation: hero-content-parallax linear both;
-            animation-timeline: --hero-tl;
-            animation-range: exit 0% exit 100%;
-        }
-        
-        /* Révélation au scroll pour les sections de l'accueil et leurs cartes */
-        .home-section,
-        .quick-access-card,
-        .popular-character-grid .character-card.compact,
-        .home-build-grid .build-card {
-            animation: scroll-reveal-up linear both;
-            animation-timeline: view();
-            animation-range: entry 10% entry 35%;
-        }
-    }
-}
-
-@keyframes hero-char-parallax {
-    to {
-        transform: translateY(80px) scale(0.96);
-    }
-}
-@keyframes hero-card-top-parallax {
-    to {
-        transform: translateY(120px);
-    }
-}
-@keyframes hero-card-left-parallax {
-    to {
-        transform: translateY(60px);
-    }
-}
-@keyframes hero-card-bottom-parallax {
-    to {
-        transform: translateY(140px);
-    }
-}
-@keyframes hero-content-parallax {
-    to {
-        transform: translateY(40px);
-        opacity: 0.3;
-    }
-}
-@keyframes scroll-reveal-up {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Accueil — Sections communes */
 .home-section {
     padding: 3rem 5%;
 }
@@ -319,21 +223,219 @@
 
 .section-header span {
     color: var(--accent-blue);
-    font-weight: 900;
-    text-transform: uppercase;
     font-size: 0.78rem;
+    font-weight: 900;
     letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
 .section-header h2 {
     margin: 0.4rem 0 0;
     font-size: clamp(1.7rem, 3vw, 2.5rem);
 }
+/* =========================
+   Accueil — Comprendre ElCore
+========================= */
 
-/* Accueil — Accès rapide */
+.home-intent-section {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    padding: 4rem 5%;
+    background:
+            radial-gradient(circle at 50% 0%, rgba(96, 165, 250, 0.08), transparent 28rem),
+            linear-gradient(180deg, rgba(5, 8, 22, 1), rgba(7, 12, 38, 1) 45%, rgba(5, 8, 22, 1));
+}
+
+.home-intent-banner {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr);
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+    width: 100%;
+    min-height: 16rem;
+    padding: 1.8rem;
+    border: 1px solid var(--border-soft);
+    border-radius: 1.8rem;
+    background:
+            linear-gradient(135deg, rgba(46, 51, 78, 0.62), rgba(7, 12, 38, 0.88)),
+            radial-gradient(circle at 82% 50%, rgba(147, 125, 255, 0.18), transparent 18rem);
+    box-shadow:
+            0 28px 80px rgba(0, 0, 0, 0.32),
+            0 0 40px rgba(96, 165, 250, 0.08);
+}
+
+.home-intent-banner::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    z-index: -1;
+    border-radius: calc(1.8rem - 1px);
+    background:
+            linear-gradient(90deg, rgba(255, 255, 255, 0.055), transparent 38%),
+            radial-gradient(circle at 12% 12%, rgba(0, 219, 233, 0.08), transparent 16rem);
+    pointer-events: none;
+}
+
+.home-intent-orb {
+    position: absolute;
+    right: -5rem;
+    top: 50%;
+    z-index: -1;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 999px;
+    border: 1px solid rgba(202, 190, 255, 0.18);
+    background:
+            radial-gradient(circle, rgba(0, 219, 233, 0.14), transparent 58%),
+            radial-gradient(circle, rgba(147, 125, 255, 0.18), transparent 70%);
+    transform: translateY(-50%);
+    filter: blur(1px);
+}
+
+.home-intent-copy {
+    display: grid;
+    gap: 0.8rem;
+    max-width: 52rem;
+}
+
+.home-intent-copy span {
+    width: fit-content;
+    color: var(--accent-blue);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.home-intent-copy h2 {
+    margin: 0;
+    max-width: 48rem;
+    color: #fff;
+    font-size: clamp(1.9rem, 3.6vw, 3.2rem);
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+}
+
+.home-intent-copy p {
+    max-width: 46rem;
+    margin: 0;
+    color: var(--text-soft);
+    line-height: 1.75;
+}
+
+.home-intent-flow {
+    position: relative;
+    display: grid;
+    gap: 0.7rem;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 1.4rem;
+    background: rgba(2, 6, 23, 0.34);
+    backdrop-filter: blur(12px);
+}
+
+.home-intent-flow-item {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.home-intent-flow-item strong {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid rgba(0, 219, 233, 0.24);
+    border-radius: 1rem;
+    background: rgba(0, 219, 233, 0.08);
+    color: #00dbe9;
+    font-size: 0.85rem;
+    font-weight: 1000;
+    box-shadow: 0 0 18px rgba(0, 219, 233, 0.12);
+}
+
+.home-intent-flow-item span {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.home-intent-flow-line {
+    width: 2px;
+    height: 1.6rem;
+    margin-left: 1.45rem;
+    background: linear-gradient(to bottom, rgba(0, 219, 233, 0.65), rgba(147, 125, 255, 0.35));
+    border-radius: 999px;
+}
+.quick-access-section {
+    padding-top: 4rem;
+}
+.home-intent-section::before,
+.home-intent-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 5rem;
+    pointer-events: none;
+}
+
+.home-intent-section::before {
+    top: 0;
+    background: linear-gradient(180deg, rgba(5, 8, 22, 1), transparent);
+}
+
+.home-intent-section::after {
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(5, 8, 22, 1), transparent);
+}
+
+.home-intent-banner {
+    z-index: 2;
+}
+
+@media (max-width: 950px) {
+    .home-intent-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .home-intent-flow {
+        max-width: 30rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .home-intent-banner {
+        padding: 1.1rem;
+        border-radius: 1.4rem;
+    }
+
+    .home-intent-copy h2 {
+        font-size: 2rem;
+    }
+
+    .home-intent-flow {
+        padding: 0.85rem;
+    }
+}
+
+/* =========================
+   Accueil — Accès rapide
+========================= */
+
+.quick-access-section {
+    padding-top: 1.5rem;
+}
+
 .quick-access-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
 }
 
@@ -344,6 +446,7 @@
     border-radius: 1.4rem;
     background: rgba(46, 51, 78, 0.35);
     backdrop-filter: blur(12px);
+    text-decoration: none;
     transition:
             transform 0.25s ease,
             border-color 0.25s ease,
@@ -365,6 +468,18 @@
     border-radius: 0.95rem;
     background: rgba(255, 255, 255, 0.06);
     font-size: 1.3rem;
+}
+
+.quick-access-card h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.quick-access-card p {
+    margin: 0.7rem 0 0;
+    color: var(--text-muted);
+    line-height: 1.6;
 }
 
 .quick-access-purple {
@@ -427,17 +542,11 @@
     box-shadow: 0 0 28px rgba(202, 190, 255, 0.24);
 }
 
-.quick-access-card h3 {
-    margin: 0;
-    font-size: 1.25rem;
-}
 
-.quick-access-card p {
-    margin-top: 0.7rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-}
-/* Accueil — Personnages populaires */
+/* =========================
+   Accueil — Personnages populaires
+========================= */
+
 .home-character-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -495,8 +604,8 @@
     position: absolute;
     inset: 1px;
     z-index: 0;
-    border-radius: calc(1.5rem - 1px);
     border: 1px solid color-mix(in srgb, currentColor 42%, transparent);
+    border-radius: calc(1.5rem - 1px);
     pointer-events: none;
 }
 
@@ -510,8 +619,8 @@
     z-index: 1;
     display: grid;
     place-items: center;
-    padding: 0.65rem 1rem 0.1rem;
     margin: 0;
+    padding: 0.65rem 1rem 0.1rem;
 }
 
 .popular-character-grid .character-card.compact .character-card-image {
@@ -594,18 +703,24 @@
     margin-bottom: 0;
     overflow: hidden;
     transform: translateY(0.45rem);
-    transition: opacity 0.22s ease, max-height 0.25s ease, margin 0.22s ease, transform 0.22s ease;
+    transition:
+            opacity 0.22s ease,
+            max-height 0.25s ease,
+            margin 0.22s ease,
+            transform 0.22s ease;
 }
 
 .popular-character-grid .character-card.compact:hover p {
     opacity: 1;
     max-height: 4rem;
+    margin: 0.65rem 0 0.85rem;
     transform: translateY(0);
 }
 
 .popular-character-grid .character-card.compact:hover .class-list {
     opacity: 1;
     max-height: 4.5rem;
+    margin-bottom: 1rem;
     transform: translateY(0);
 }
 
@@ -622,19 +737,7 @@
     flex-wrap: wrap;
     gap: 0.45rem;
 }
-.popular-character-grid .character-card.compact:hover p {
-    opacity: 1;
-    max-height: 4rem;
-    margin: 0.65rem 0 0.85rem;
-    transform: translateY(0);
-}
 
-.popular-character-grid .character-card.compact:hover .class-list {
-    opacity: 1;
-    max-height: 4.5rem;
-    margin-bottom: 1rem;
-    transform: translateY(0);
-}
 .popular-character-grid .character-card.compact .class-badge {
     background: rgba(255, 255, 255, 0.045);
     font-size: 0.72rem;
@@ -647,8 +750,8 @@
     min-height: 2.45rem;
     margin-top: 0.65rem;
     padding: 0.42rem 1rem;
-    border-radius: 0.9rem;
     border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.9rem;
     box-shadow: none;
     font-size: 0.9rem;
     transition:
@@ -662,6 +765,190 @@
     filter: brightness(1.06);
     box-shadow: 0 0 18px color-mix(in srgb, currentColor 30%, transparent);
 }
+
+
+/* =========================
+   Accueil — Builds recommandés
+========================= */
+
+.home-build-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes heroPulse {
+    0%,
+    100% {
+        opacity: 0.72;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+}
+
+@keyframes heroFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes hero-char-parallax {
+    to {
+        transform: translateY(80px) scale(0.96);
+    }
+}
+
+@keyframes hero-card-top-parallax {
+    to {
+        transform: translateY(120px);
+    }
+}
+
+@keyframes hero-card-left-parallax {
+    to {
+        transform: translateY(60px);
+    }
+}
+
+@keyframes hero-card-bottom-parallax {
+    to {
+        transform: translateY(140px);
+    }
+}
+
+@keyframes hero-content-parallax {
+    to {
+        transform: translateY(40px);
+        opacity: 0.3;
+    }
+}
+
+@keyframes scroll-reveal-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   Scroll animations
+========================= */
+
+@media (prefers-reduced-motion: no-preference) {
+    @supports ((animation-timeline: view()) and (animation-range: entry)) {
+        .hero-premium {
+            view-timeline: --hero-tl block;
+        }
+
+        .hero-character {
+            animation: hero-char-parallax linear both;
+            animation-timeline: --hero-tl;
+            animation-range: exit 0% exit 100%;
+        }
+
+        .hero-floating-card-top {
+            animation: hero-card-top-parallax linear both;
+            animation-timeline: --hero-tl;
+            animation-range: exit 0% exit 100%;
+        }
+
+        .hero-floating-card-left {
+            animation: hero-card-left-parallax linear both;
+            animation-timeline: --hero-tl;
+            animation-range: exit 0% exit 100%;
+        }
+
+        .hero-floating-card-bottom {
+            animation: hero-card-bottom-parallax linear both;
+            animation-timeline: --hero-tl;
+            animation-range: exit 0% exit 100%;
+        }
+
+        .hero-content {
+            animation: hero-content-parallax linear both;
+            animation-timeline: --hero-tl;
+            animation-range: exit 0% exit 100%;
+        }
+
+        .home-section,
+        .quick-access-card,
+        .home-intent-card,
+        .popular-character-grid .character-card.compact,
+        .home-build-grid .build-card {
+            animation: scroll-reveal-up linear both;
+            animation-timeline: view();
+            animation-range: entry 10% entry 35%;
+        }
+    }
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1150px) {
+    .home-character-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1050px) {
+    .quick-access-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 980px) {
+    .hero-premium {
+        padding-top: 6rem !important;
+    }
+
+    .hero-premium-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        transform: none;
+    }
+
+    .hero-visual {
+        min-height: 32rem;
+    }
+
+    .hero-character {
+        height: 30rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .home-intent-card,
+    .home-intent-grid,
+    .home-build-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 680px) {
     .home-character-grid {
         grid-template-columns: 1fr;
@@ -679,77 +966,47 @@
         max-height: 17rem;
     }
 }
-/* Accueil — Builds recommandés */
-.home-build-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-/* Responsive */
-@media (max-width: 1150px) {
-    .home-character-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 1050px) {
-    .quick-access-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 980px) {
-    .hero-premium {
-        padding-top: 6rem !important;
-    }
-    .hero-premium-inner {
-        grid-template-columns: 1fr;
-    }
-    .hero-content {
-        transform: none;
-    }
-    .hero-visual {
-        min-height: 32rem;
-    }
-    .hero-character {
-        height: 30rem;
-    }
-}
-@media (max-width: 950px) {
-    .home-build-grid {
-        grid-template-columns: 1fr;
-    }
-}
+
 @media (max-width: 620px) {
     .home-section {
         padding-inline: 1rem;
     }
+
     .hero-premium {
         padding-inline: 1rem !important;
         padding-top: 4rem !important;
     }
+
     .hero-content h1 {
         font-size: 3.2rem;
     }
+
     .hero-actions {
         flex-direction: column;
     }
+
     .hero-button {
         width: 100%;
     }
+
     .hero-visual {
-        min-height: 28rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        min-height: 28rem;
     }
+
     .hero-character {
         height: 25rem;
     }
+
     .hero-floating-card {
         position: relative;
         inset: auto;
         width: 100%;
         min-width: 0;
     }
+
     .quick-access-grid {
         grid-template-columns: 1fr;
     }

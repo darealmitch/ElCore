@@ -38,9 +38,9 @@ export const builds = [
         character: "Elsword",
         className: "Rune Master",
         classNameFr: "Maître des runes",
-        title: "DPS magique orienté bossing et burst",
+        title: "DPS magique orienté bossing et Booster",
         mode: "Raid",
-        role: "DPS magique / burst",
+        role: "DPS magique / Booster",
         difficulty: "Moyenne",
         stats: ["Magical Attack", "Critical", "Maximize", "Additional Damage", "Boss Damage"],
         statsFr: ["Attaque magique", "Coups critiques", "Maximisation", "Dégâts additionnels", "Dégâts aux boss"],
@@ -511,27 +511,130 @@ export const builds = [
         characterId: "add",
         character: "Add",
         className: "Doom Bringer",
-        classNameFr: "Doom Bringer",
-        title: "DPS magique du 1er chemin d’Add",
+        classNameFr: "Calamité",
+        title: "DPS magique explosif basé sur le mode dynamo et l’armure nasod",
         mode: "PvE",
-        role: "DPS magique",
-        difficulty: "À vérifier",
-        stats: ["Magical Attack", "Critical", "Maximize", "Additional Damage", "Boss Damage"],
-        statsFr: ["Attaque magique", "Coups critiques", "Maximisation", "Dégâts additionnels", "Dégâts aux boss"],
-        skills: [],
-        skillsFr: [],
-        traits: [],
-        traitsFr: [],
-        equipment: ["Magical DPS setup", "Critical/Maximize sockets", "Boss Damage orientation"],
-        equipmentFr: ["Équipement DPS magique", "Sockets Critique/Maximisation", "Orientation dégâts aux boss"],
-        rotation: [],
-        strengths: ["Données officielles confirmées : Damage Dealer", "1er chemin d’Add", "Orientation magique confirmée"],
-        weaknesses: ["Rotation non renseignée faute de source officielle vérifiée", "Traits et compétences prioritaires à vérifier"],
-        notes: "Doom Bringer est le 1er chemin d’Add. Les sources vérifiées le présentent comme un Damage Dealer magique. Je laisse volontairement les skills, traits et rotation vides tant qu’on n’a pas une source fiable pour éviter d’ajouter de fausses données.",
-        sourceNotes: "CoboDex indique Doom Bringer comme Damage Dealer, 1st Path, Magical.",
-        confidence: "élevé pour le rôle/type, faible pour le build détaillé",
-        patchReference: "CoboDex NA Server English · L.260520.1_1",
-        needsVerification: ["nom français officiel", "skills principaux", "traits", "rotation", "équipement endgame"]
+        role: "DPS magique / burst / armure nasod",
+        difficulty: "Moyenne à difficile",
+
+        stats: [
+            "Magical Attack",
+            "Critical",
+            "Maximize",
+            "Additional Damage",
+            "Boss Damage"
+        ],
+        statsFr: [
+            "Attaque magique",
+            "Coups critiques",
+            "Maximisation",
+            "Dégâts additionnels",
+            "Dégâts aux boss"
+        ],
+
+        skills: [
+            "Dynamo Configuration - Dissolver",
+            "Particle Accelerator",
+            "Neutron Bomb",
+            "Statis Field",
+            "Conqueror",
+            "Psychic Storm",
+            "EMP Shock",
+            "Nasod Armor Mode - Full Burst",
+            "Quicksilver Accel",
+            "Dynamo Configuration - Railgun",
+            "Supersonic",
+            "Plasma Burst",
+            "Blood Boil",
+            "Enhanced Plasma"
+        ],
+        skillsFr: [
+            "Configuration dynamo : solvatation",
+            "Accélérateur de particules",
+            "Bombes à neutrons",
+            "Champs de stase",
+            "Conquérant",
+            "Déchaînement psychique",
+            "Choc à IEM",
+            "Armure nasod - Explosion",
+            "Accélérateur de mercure",
+            "Configuration dynamo : Javelot",
+            "Supersonique",
+            "Choc plasma",
+            "Sang Bouillant",
+            "Plasma renforcé"
+        ],
+
+        traits: [
+            "Damage or Heavy on main burst skills when confirmed",
+            "Light on utility skills if MP management is difficult",
+            "Utility traits on Nasod Armor connection tools",
+            "Damage traits on bossing skills"
+        ],
+        traitsFr: [
+            "Dégâts ou Lourd sur les compétences principales de burst si confirmé",
+            "Léger sur les compétences utilitaires si la gestion des PM est difficile",
+            "Traits utilitaires sur les outils liés à l’armure nasod",
+            "Traits de dégâts sur les compétences de bossing"
+        ],
+
+        equipment: [
+            "Magical DPS setup",
+            "Critical and Maximize sockets",
+            "Boss Damage orientation",
+            "Additional Damage as secondary offensive value",
+            "Comfort setup if MP/DP management is unstable"
+        ],
+        equipmentFr: [
+            "Équipement DPS magique",
+            "Sockets Coups critiques et Maximisation",
+            "Orientation Dégâts aux boss",
+            "Dégâts additionnels en valeur offensive secondaire",
+            "Équipement de confort si la gestion PM/PDY est instable"
+        ],
+
+        rotation: [
+            "Activer le mode dynamo dès que possible pour profiter de l’armure nasod et des effets liés aux PCD.",
+            "Utiliser Configuration dynamo : solvatation et les outils d’armure nasod pour maintenir les ressources.",
+            "Regrouper ou préparer les ennemis avec Bombes à neutrons ou Champs de stase selon la situation.",
+            "Utiliser Conquérant, Déchaînement psychique ou Supersonique comme principales compétences de dégâts.",
+            "Garder Armure nasod - Explosion pour les grosses fenêtres de burst.",
+            "Utiliser Configuration dynamo : Javelot, Choc à IEM ou Décharge psionique pour compléter les fenêtres de dégâts.",
+            "Exploiter les effets de Sang Bouillant et Plasma renforcé en continuant à utiliser les combos d’armure nasod.",
+            "Sur boss, concentrer les PCD sur les compétences qui gagnent réellement des dégâts ou de la durée grâce à eux."
+        ],
+
+        strengths: [
+            "Très bon potentiel de burst magique",
+            "Gameplay dynamique autour du mode dynamo",
+            "Bonne synergie avec les combos d’armure nasod",
+            "Plusieurs compétences profitent directement des PCD",
+            "Bon potentiel en bossing avec Conquérant, Supersonique et Armure nasod - Explosion",
+            "Passifs de Calamité renforçant les dégâts et la récupération de ressources"
+        ],
+        weaknesses: [
+            "Demande une bonne gestion des PM, PDY et PCD",
+            "Perd beaucoup d’efficacité si le mode dynamo est mal maintenu",
+            "Certaines compétences demandent un bon placement",
+            "Rotation et traits exacts à vérifier selon les derniers équilibrages",
+            "Moins simple à jouer qu’un DPS direct sans ressource secondaire"
+        ],
+
+        notes: "Doom Bringer, ou Calamité, est le 1er chemin d’Add orienté DPS magique. Son gameplay repose sur le mode dynamo, les PCD et l’armure nasod. L’objectif est de maintenir une pression constante avec les combos d’armure nasod, puis de concentrer les ressources sur les grosses compétences comme Conquérant, Supersonique, Déchaînement psychique ou Armure nasod - Explosion. Les passifs Sang Bouillant et Plasma renforcé renforcent cette logique en améliorant les capacités de combat, les dégâts critiques, la récupération de PDY et la puissance liée aux combos d’armure nasod.",
+
+        sourceNotes: "Build adapté aux données de compétences Add déjà intégrées au projet : Traqueur psychique, Psychopathe, Calamité et Classe de Maître. Les noms français utilisés viennent des champs nameFr fournis dans addSkills. Les priorités exactes de traits et de rotation endgame restent à vérifier avec une source récente.",
+
+        confidence: "élevé pour le rôle, le type magique et la mécanique générale — moyen pour les traits, la rotation et les priorités endgame",
+
+        patchReference: "Données internes ElCore Add / Doom Bringer",
+
+        needsVerification: [
+            "Traits exacts recommandés après les derniers équilibrages",
+            "Priorité réelle des compétences en contenu endgame",
+            "Rotation optimale actuelle en raid et bossing",
+            "Noms français officiels à confirmer pour les compétences sans nameFr complet",
+            "Équipement endgame précis selon la méta actuelle"
+        ]
     },
     {
         id: "add-dominator",
@@ -555,9 +658,7 @@ export const builds = [
         strengths: ["Données officielles confirmées : Damage Dealer", "2e chemin d’Add", "Orientation physique confirmée"],
         weaknesses: ["Rotation non renseignée faute de source officielle vérifiée", "Traits et compétences prioritaires à vérifier"],
         notes: "Dominator est le 2e chemin d’Add. Les sources vérifiées le présentent comme un Damage Dealer physique. Je ne remplis pas les skills et la rotation sans source fiable.",
-        sourceNotes: "CoboDex indique Dominator comme Damage Dealer, 2nd Path, Physical.",
         confidence: "élevé pour le rôle/type, faible pour le build détaillé",
-        patchReference: "CoboDex NA Server English · L.260520.1_1",
         needsVerification: ["nom français officiel", "skills principaux", "traits", "rotation", "équipement endgame"]
     },
     {

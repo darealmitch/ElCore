@@ -7,7 +7,6 @@ import ScrollToTopOnRouteChange from "./ScrollToTopOnRouteChange";
 
 function MainLayout() {
     useEffect(() => {
-        // Fallback for browsers that do not support CSS scroll-driven animations (e.g. Firefox)
         if (!CSS.supports('animation-timeline', 'scroll()')) {
             const handleScroll = () => {
                 const progress = document.getElementById("scroll-progress");

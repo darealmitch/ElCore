@@ -24,15 +24,14 @@ function HeroSection() {
                             Le cœur <br /><span>stratégique</span> <br />d’Elsword
                         </h1>
                             <p>
-                                Optimisez votre gameplay avec nos guides détaillés,
-                                nos builds optimisés par les meilleurs joueurs et nos tier-lists actualisées à chaque patch.
+                                ElCore est un portail Elsword FR pour comprendre les personnages, explorer les classes, consulter des guides et préparer ses builds.
                             </p>
                         <div className="hero-actions">
-                            <a href="/personnages" className="hero-button primary">
-                                Voir les personnages
+                            <a href="/guides" className="hero-button primary">
+                                Commencer avec les guides
                             </a>
-                            <a href="/builds" className="hero-button secondary">
-                                Explorer les builds
+                            <a href="/personnages" className="hero-button secondary">
+                                Explorer les personnages
                             </a>
                         </div>
                 </div>
