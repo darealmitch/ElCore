@@ -13,8 +13,8 @@ export const characters = [
         image: "/images/personnages/elsword.png",
         description: "Jeune épéiste courageux et impulsif, Elsword combat en première ligne avec une grande épée. " +
             "Sa particularité repose sur la Voie de l'épée, une jauge unique qui alterne entre vitalité et destruction selon les attaques utilisées.",
-        lore: "Petit frère d'Elesis, la Première Capitaine des Chevaliers Rouges de Velder, Elsword s'est entraîné dès son plus jeune âge pour être aussi fort que sa sœur, apprenant ses techniques au sabre auprès d'un chevalier de Velder." +
-            " Il a débuté son aventure en recevant la mission de restaurer l'El en tant que membre deq Chercheurs de l'Eldrit.",
+        lore: "Petit frère d'Elesis, la Première Capitaine des Chevaliers Rouges de Belder, Elsword s'est entraîné dès son plus jeune âge pour être aussi fort que sa sœur, apprenant ses techniques au sabre auprès d'un chevalier de Belder." +
+            " Il a débuté son aventure en recevant la mission de restaurer l'El en tant que membre des Chercheurs de l'Eldrit.",
         classes: ["Knight Emperor", "Rune Master", "Immortal", "Genesis"],
         classesFr: ["Chevalier Royal", "Maître des runes", "Immortel", "Séphiroth"]
     },
@@ -68,7 +68,7 @@ export const characters = [
         image: "/images/personnages/raven.png",
         description: "Un mercenaire agressif utilisant sa lame et son bras Nasod pour maintenir la pression.",
         lore: "Un homme du peuple qui a gravi les échelons jusqu'à devenir le capitaine d'un célèbre ordre de chevaliers mercenaires. " +
-            "Victime d'une machination d'aristocrates jaloux, il perd tout ce qui lui était cher en une seule nuit. Réanimé par les Nasods, il a juré de se venger du Royaume de Velder. " +
+            "Victime d'une machination d'aristocrates jaloux, il perd tout ce qui lui était cher en une seule nuit. Réanimé par les Nasods, il a juré de se venger du Royaume de Belder. " +
             "Désormais, rongé par la culpabilité de ses actes passés, il rejoint la Patrouille de l'El en guise d'expiation.",
         classes: ["Furious Blade", "Rage Hearts", "Nova Imperator", "Revenant"],
         classesFr: ["Lame furieuse", "Cœur enragé", "Nova Imperator", "Âme fatale"]
@@ -80,7 +80,7 @@ export const characters = [
         age: "Inconnue",
         gender: "Femme",
         type: "Reine Nasod",
-        weapon: "Drones Nasod",
+        weapon: "Gravitons Nasod (Moby et Levy assistants nasods)",
         role: "DPS / Technologie",
         featuredClass: "Code: Sariel",
         featuredClassFr: "Nasod Sariel",
@@ -99,7 +99,7 @@ export const characters = [
         age: "13 ans",
         gender: "Homme",
         type: "Gardien",
-        weapon: "Destroyer",
+        weapon: "Bazooka (Destroyer)",
         role: "Tank / Canon",
         featuredClass: "Centurion",
         featuredClassFr: "Centurion",
@@ -141,9 +141,9 @@ export const characters = [
         featuredClassFr: "Épée de l'empire",
         image: "/images/personnages/elesis.png",
         description: "Une chevalière puissante maniant une grande épée avec force et maîtrise.",
-        lore: "Influencée par son père, chevalier libre de Velder, Elesis est elle-même une épéiste hors pair. " +
-            "Lorsqu'elle et Elsword sont soudainement attaqués par des démons, elle anticipe le danger et rejoint les Chevaliers de Velder pour protéger le royaume de l'invasion démoniaque imminente. " +
-            "Elle finit par retrouver le démon qui avait attaqué Feita et Velder.",
+        lore: "Influencée par son père, chevalier libre de Belder, Elesis est elle-même une épéiste hors pair. " +
+            "Lorsqu'elle et Elsword sont soudainement attaqués par des démons, elle anticipe le danger et rejoint les Chevaliers de Belder pour protéger le royaume de l'invasion démoniaque imminente. " +
+            "Elle finit par retrouver le démon qui avait attaqué Feita et Belder.",
         classes: ["Empire Sword", "Flame Lord", "Bloody Queen", "Adrestia"],
         classesFr: ["Épée de l'empire", "Maîtresse des flammes", "Reine sanglante", "Adrestia"]
     },
@@ -276,7 +276,7 @@ export const characters = [
         description:
             "Une chasseuse de trésors utilisant gemmes, magie et mobilité pour explorer les ruines.",
         lore: "Esprit libre qui ne se laisse pas brider par les règles. " +
-            "Magicienne et chasseuse de trésors voyageant en solitaire, Lithia a été mandatée par la 'Société des Ressources Biologiques' pour explorer la capitale de l'Ancien Royaume, Elrionode. " +
+            "Magicienne et chasseuse de trésors voyageant en solitaire, Lithia a été mandatée par la 'Société des Ressources Biologiques' pour explorer la capitale de l'Ancien Royaume, Élyanod. " +
             "En route pour livrer ses conclusions, elle retrouve une amie d'enfance à Sander et décide d'explorer des ruines inconnues. " +
             "Elle y rencontre un spectre et se retrouve frappée d'une mystérieuse malédiction.",
         classes: ["Gembliss", "Avarice", "Achlys", "Mischief"],

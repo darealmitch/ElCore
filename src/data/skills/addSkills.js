@@ -1,4 +1,4 @@
-import { SKILL_TYPES } from "../skillConstants.js";
+import {SKILL_BADGES, SKILL_TYPES} from "../skillConstants.js";
 
 export const addSkills = [
     {
@@ -72,7 +72,7 @@ export const addSkills = [
     {
         id: "add-tp-skill1",
         name:"Dynamo Configuration - Dissolver",
-        nameFr: "Configuration : solvatation",
+        nameFr: "Configuration dynamo : solvatation",
         image: "/images/skills/add/tp/PsychicTracerSkill1.png",
         type: SKILL_TYPES.ACTIVE,
         level: 15,
@@ -149,7 +149,7 @@ export const addSkills = [
     {
         id: "add-tp-skill6",
         name: "Dynamo Configuration: Magnetron",
-        nameFr: "Configuration : magnétron",
+        nameFr: "Configuration dynamo : magnétron",
         image: "/images/skills/add/tp/PsychicTracerSkill5.png",
         type: SKILL_TYPES.ACTIVE,
         level: 30,
@@ -198,7 +198,7 @@ export const addSkills = [
     {
         id: "add-psy-skill1",
         name: "Dynamo Configuration: Pylon",
-        nameFr: "Configuration : Pylône",
+        nameFr: "Configuration dynamo : Pylône",
         image: "/images/skills/add/lp/AddSharedSkill1.png",
         type: SKILL_TYPES.ACTIVE,
         level: 35,
@@ -212,5 +212,417 @@ export const addSkills = [
                 "Synergie avec Voyageur temporel : en mode dynamo, la compétence consomme des PDY au lieu des PM.",
             ],
         },
-    }
+    },
+    {
+        id: "add-psy-skill2",
+        name: "Conqueror",
+        nameFr: "Conquérant",
+        image: "/images/skills/add/lp/LunaticPsykerSkill1.png",
+        type: SKILL_TYPES.BRAVERY,
+        level: 35,
+        description: {
+            lines: [
+                "Les dynamos d’Add forment un canon énergétique qui tire 12 projectiles téléguidés.",
+                "En mode dynamo, l’attaque devient un rayon continu.",
+                "Consommation de PCD : en mode dynamo, cette compétence consomme jusqu’à 3 PCD.",
+                "La compétence peut aussi être utilisée sans PCD.",
+                "Chaque PCD consommé ajoute un projectile explosif supplémentaire.",
+                "En mode dynamo, appuyer sur la commande indiquée à la fin de la compétence déclenche un combo d’armure nasod.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill3",
+        name: "Body of Transcendence",
+        nameFr: "Corps transcendé",
+        image: "/images/skills/add/lp/LunaticPsykerPassive1.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 35,
+        description: {
+            lines: [
+                "Lors des combos d’armure nasod, Add a une chance d’effectuer un coup puissant qui ignore la défense de l’ennemi.",
+                "En mode dynamo, sa vitesse de déplacement augmente.",
+                "Lorsqu’Add utilise Substitution, il reçoit 1 PCD.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill4",
+        name: "Energy Shock",
+        nameFr: "",
+        image: "/images/skills/add/lp/LunaticPsykerSkill2.png",
+        type: SKILL_TYPES.TENACITY,
+        level: 40,
+        description: {
+            lines: [
+                "Add libère l’énergie surchargée contenue dans ses dynamos.",
+                "Les ennemis touchés subissent une réduction de toutes leurs vitesses.",
+                "Récupération de PDY : Add récupère 20 PDY à l’utilisation de la compétence.",
+                "Les PDY ne sont pas récupérés lorsque le mode dynamo est actif.",
+                "Consommation de PCD : la compétence peut consommer 1 PCD.",
+                "Lorsqu’un PCD est consommé, le dernier coup enchaîne avec un combo d’armure nasod.",
+                "La compétence peut aussi être utilisée sans PCD.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill5",
+        name: "Psychic Storm",
+        nameFr: "Déchaînement psychique",
+        image: "/images/skills/add/lp/LunaticPsykerSkill3.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 45,
+        description: {
+            lines: [
+                "Add crée une tempête de plasma autour de lui.",
+                "La tempête attire les ennemis proches, puis explose.",
+                "Consommation de PCD : en mode dynamo, cette compétence consomme jusqu’à 3 PCD.",
+                "La compétence peut aussi être utilisée sans PCD.",
+                "Chaque PCD consommé augmente la durée et la taille de la tempête.",
+                "En mode dynamo, appuyer sur la commande indiquée à la fin de la compétence déclenche un combo d’armure nasod.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill6",
+        name: "EMP Shock",
+        nameFr: "Choc à IEM",
+        image: "/images/skills/add/lp/LunaticPsykerSkill4.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 45,
+        description: {
+            lines: [
+                "Add déclenche une impulsion électromagnétique.",
+                "Les ennemis proches, jusqu’à 1,2 mètre, subissent des dégâts, perdent des PM et voient leurs compétences entrer en temps de rechargement.",
+                "Les ennemis hors de cette portée subissent les mêmes effets à hauteur de 50 %.",
+                "Cette compétence peut aussi être utilisée en plein saut.",
+                "En mode dynamo, appuyer sur la commande indiquée à la fin de la compétence déclenche un combo d’armure nasod.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill7",
+        name: "Psionic Beat",
+        nameFr: "Décharge psionique",
+        image: "/images/skills/add/lp/LunaticPsykerSkill5.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 50,
+        description: {
+            lines: [
+                "Add tire une décharge d’énergie psionique qui rebondit d’un ennemi à l’autre.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill8",
+        name: "Nasod Armor Mode - Full Burst",
+        nameFr: "Armure nasod - Explosion",
+        image: "/images/skills/add/lp/LunaticPsykerSkill6.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 50,
+        description: {
+            lines: [
+                "Add utilise le mode Armure nasod de manière optimale pendant une durée limitée.",
+                "À l’activation, une onde de choc inflige des dégâts aux ennemis proches.",
+                "Pendant la durée de l’effet, les dégâts des compétences de Ténacité, de Force et de Bravoure augmentent.",
+                "Les chances d’activation et les dégâts de Tempête de particules sont doublés.",
+                "Compétence de PDY : en mode dynamo, 20 % des PDY sont consommés.",
+                "Consommation de PCD : en mode dynamo, cette compétence consomme jusqu’à 2 PCD.",
+                "Chaque PCD consommé augmente la durée de 5 secondes.",
+                "La compétence peut aussi être utilisée sans PCD.",
+                "Effet renforcé final : le temps de rechargement diminue de 4 secondes.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill9",
+        name: "Quicksilver Accel",
+        nameFr: "Accélérateur de mercure",
+        image: "/images/skills/add/lp/LunaticPsykerSkill7.png",
+        type: SKILL_TYPES.TENACITY,
+        level: 55,
+        description: {
+            lines: [
+                "Add fonce en avant et emporte avec lui les ennemis touchés.",
+                "Changement de direction : si la touche de compétence est pressée à nouveau pendant la charge, Add repart en arrière en consommant 10 PM.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill10",
+        name: "Output Exchange",
+        nameFr: "Transformateur de puissance",
+        image: "/images/skills/add/lp/LunaticPsykerPassive2.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 60,
+        description: {
+            lines: [
+                "Lorsque ses points de dynamo sont inférieurs à 200, Add les récupère plus rapidement.",
+                "Lorsque ses points de dynamo sont supérieurs à 200, son attaque magique et ses chances de coup critique augmentent.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill11",
+        name: "Fantasy Tracer",
+        nameFr: "",
+        image: "/images/skills/add/lp/LunaticPsykerPassive3.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 60,
+        description: {
+            lines: [
+                "Lorsqu’Add active le mode dynamo, il récupère une partie de ses PM.",
+                "Après Tir à impulsion et Substitution, Add peut enchaîner directement avec des combos d’armure nasod.",
+                "Cet enchaînement s’active en mode dynamo si la touche de compétence est pressée dans les 2 secondes suivant l’activation de la compétence.",
+                "L’enchaînement peut aussi être effectué au sol, mais pas pendant qu’Add est attaqué.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill12",
+        name: "Dooms Day",
+        nameFr: "Jugement dernier",
+        image: "/images/skills/add/lp/LunaticPsykerHyperActive.png",
+        type: SKILL_TYPES.HYPER_ACTIVE,
+        badge: SKILL_BADGES.HYPER_ACTIVE,
+        level: 65,
+        description: {
+            lines: [
+                "Add concentre du plasma jusqu’à son niveau d’énergie maximal, puis le libère dans une explosion massive.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill13",
+        name: "Psion Rush",
+        nameFr: "Assaut psionique",
+        image: "/images/skills/add/lp/LunaticPsykerSkill8.png",
+        type: SKILL_TYPES.TENACITY,
+        level: 70,
+        description: {
+            lines: [
+                "En mode dynamo, Add libère une décharge d’énergie qui frappe les ennemis 3 fois.",
+                "Compétence de PDY : en mode dynamo, 20 % des PDY sont consommés.",
+                "Consommation de PCD : en mode dynamo, cette compétence consomme 1 PCD.",
+                "Chaque PCD consommé augmente les dégâts de 10 %.",
+                "La compétence peut aussi être utilisée sans PCD.",
+                "En mode dynamo, appuyer sur la commande indiquée à la fin de la compétence déclenche un combo d’armure nasod.",
+                "Effet renforcé final : les dégâts sont multipliés par 1,2.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill14",
+        name: "Awakened Will : Lunatic Psyker",
+        nameFr: "Volonté déchaînée : psychopathe",
+        image: "/images/skills/add/lp/LunaticPsykerPassive4.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 70,
+        description: {
+            lines: [
+                "Add renforce ses capacités physiques en fonction du mode dynamo.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill15",
+        name: "Dynamo Configuration - Railgun",
+        nameFr: "Configuration dynamo : Javelot",
+        image: "/images/skills/add/lp/LunaticPsykerSkill9.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 80,
+        description: {
+            lines: [
+                "Add tire un projectile à grande vitesse à travers un puissant champ magnétique.",
+                "Le projectile transperce les ennemis jusqu’à 2 fois.",
+                "En cas de coup réussi, Add obtient 1 PCD.",
+                "Le projectile devient plus destructeur selon l’état de l’armure nasod.",
+                "En mode dynamo, le projectile renforcé transperce tous les ennemis devant Add.",
+                "Compétence de PDY : en mode dynamo, 20 % des PDY sont consommés.",
+                "Effet renforcé final : en mode dissolution, le nombre de transpercements augmente de 1.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill16",
+        name: "Awakened One",
+        nameFr: "Spécialisation",
+        image: "/images/skills/el/lk/TransShared.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 80,
+        description: {
+            lines: [
+                "Cette compétence améliore les capacités physiques d’Add.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill17",
+        name: "Quicksilver Strike",
+        nameFr: "Coup mercuriel",
+        image: "/images/skills/add/lp/LunaticPsykerSkill10.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 90,
+        description: {
+            lines: [
+                "Cette compétence améliore les capacités physiques d’Add.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill18",
+        name: "Amplify Energy",
+        nameFr: "Amplification énergétique",
+        image: "/images/skills/add/lp/LunaticPsykerPassive5.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 90,
+        description: {
+            lines: [
+                "Add amplifie l’énergie du [Armure nasod - Combinaison de combat].",
+                "Les dégâts des combos d’armure nasod augmentent.",
+                "Les compétences de type libération d’énergie sont renforcées.",
+                "Les coups des combos d’armure nasod ignorent la garde de l’ennemi.",
+                "En cas de coup réussi avec un combo d’armure nasod, Add obtient des PCD supplémentaires.",
+            ],
+        },
+    },
+    {
+        id: "add-psy-skill19",
+        name: "Supersonic",
+        nameFr: "Supersonique",
+        image: "/images/skills/add/lp/LunaticPsykerSkill11.png",
+        type: SKILL_TYPES.BRAVERY,
+        level: 95,
+        description: {
+            lines: [
+                "Add frappe l’ennemi à une vitesse extrême.",
+                "Cette compétence peut aussi être utilisée en plein saut.",
+                "Compétence de PDY : en mode dynamo, 20 % des PDY sont consommés.",
+                "Consommation de PCD : en mode dynamo, cette compétence consomme jusqu’à 3 PCD.",
+                "Chaque PCD consommé augmente les dégâts de 5 %.",
+                "La compétence peut aussi être utilisée sans PCD.",
+                "En mode dynamo, appuyer sur la commande indiquée à la fin de la compétence déclenche un combo d’armure nasod.",
+                "Effet renforcé final : le temps de rechargement diminue de 4 secondes.",
+            ],
+        },
+    },
+    /*Calamité*/
+    {
+        id: "add-db-skill1",
+        name: "Plasma Burst",
+        nameFr: "Choc plasma",
+        image: "/images/skills/add/lp/DoomBringerHyperActive.png",
+        type: SKILL_TYPES.HYPER_ACTIVE_2,
+        level: 99,
+        badge: SKILL_BADGES.HYPER_ACTIVE_2,
+        description: {
+            lines: [
+                "Add invoque un cercle de plasma hautement concentré, puis déclenche une gigantesque explosion.",
+            ],
+        },
+    },
+    {
+        id: "add-db-skill2",
+        name: "Blood Boil",
+        nameFr: "Sang Bouillant",
+        image: "/images/skills/add/lp/DoomBringerPassive1.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 99,
+        description: {
+            lines: [
+                "Les compétences à touche directe d’Add sont renforcées.",
+                "Lorsqu’Add touche un ennemi avec une compétence à touche directe, cela provoque un débordement d’énergie dans l’armure nasod.",
+                "Pendant un court instant, ses capacités physiques s’améliorent fortement.",
+                "Débordement d’énergie : toutes les vitesses d’Add augmentent, ainsi que la probabilité d’activation des attributs élémentaires.",
+                "Lorsque la barrière de l’armure nasod est activée, elle ne consomme pas de PDY.",
+                "En cas d’activation de la barrière de l’armure nasod, les dégâts critiques augmentent selon le nombre de PCD restants.",
+            ],
+        },
+    },
+    {
+        id: "add-db-skill3",
+        name: "Enhanced Plasma",
+        nameFr: "Plasma renforcé",
+        image: "/images/skills/add/lp/DoomBringerPassive2.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 99,
+        description: {
+            lines: [
+                "Les liens symbiotiques entre Add et l’armure nasod renforcent ses capacités de combat.",
+                "Plasma renforcé : lorsqu’Add utilise un combo d’armure nasod, l’effet [Plasma renforcé] s’active et sa force d’attaque augmente pendant une durée limitée.",
+                "Combat efficace : lorsqu’Add touche un ennemi avec un combo d’armure nasod, il récupère une partie des PDY consommés.",
+                "Les PM maximums d’Add augmentent.",
+            ],
+        },
+    },
+    /*Classe des maitres Calamité*/
+    {
+        id: "add-db-master1",
+        name: "Symmetric Identity - Stage 1",
+        nameFr: "Identité symétrique - Étape 1",
+        image: "/images/skills/add/lp/DoomBringerMaster1.png",
+        type: SKILL_TYPES.MASTER,
+        badge: SKILL_BADGES.MASTER_SKILL,
+        level: "master",
+
+        description: {
+            title: "Étape 1",
+            lines: [
+                "Add invoque un clone qui reproduit ses mouvements et annihile les ennemis.",
+                "Lorsque Add croise la trajectoire de son clone, l’énergie explose.",
+                "Cette première étape est automatiquement débloquée lors du passage en Classe Maître",
+            ],
+        },
+    },
+    {
+        id: "add-db-master2",
+        name: "Symmetric Identity - Stage 2",
+        nameFr: "Identité symétrique - Étape 2",
+        image: "/images/skills/add/lp/DoomBringerMaster2.png",
+        type: SKILL_TYPES.MASTER,
+        badge: SKILL_BADGES.MASTER_SKILL,
+        level: "master",
+        description: {
+            title: "Étape 2",
+            lines: [
+                "Add invoque un clone qui reproduit ses mouvements et annihile les ennemis.",
+                "Lorsque Add croise la trajectoire de son clone, l’énergie explose, puis déclenche une série d’attaques multiples.",
+                "Cette deuxième étape se débloque grâce à une quête de compétence.",
+            ],
+        },
+    },
+    {
+        id: "add-db-master3",
+        name: "Symmetric Identity - Stage 3",
+        nameFr: "Identité symétrique - Étape 3",
+        image: "/images/skills/add/lp/DoomBringerMaster3.png",
+        type: SKILL_TYPES.MASTER,
+        badge: SKILL_BADGES.MASTER_SKILL,
+        level: "master",
+        description: {
+            title: "Étape 3",
+            lines: [
+                "Add invoque un clone qui reproduit ses mouvements et annihile les ennemis.",
+                "Lorsque Add croise la trajectoire de son clone, l’énergie explose, puis déclenche une série d’attaques multiples.",
+                "Ensuite, une explosion en chaîne se produit en plein air.",
+                "Cette troisième étape se débloque grâce à une quête de compétence.",
+            ],
+        },
+    },
+    {
+        id: "add-db-master4",
+        name: "Symmetric Identity - Stage 4",
+        nameFr: "Identité symétrique - Étape 4",
+        image: "/images/skills/add/lp/DoomBringerMaster4.png",
+        type: SKILL_TYPES.MASTER,
+        badge: SKILL_BADGES.MASTER_SKILL,
+        level: "master",
+        description: {
+            title: "Étape 4",
+            lines: [
+                "Add invoque un clone qui reproduit ses mouvements et annihile entièrement les lignes ennemies.",
+                "Cette quatrième étape se débloque grâce à une quête de compétence.",
+            ],
+        },
+    },
 ]

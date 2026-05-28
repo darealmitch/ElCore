@@ -179,8 +179,30 @@
 .characters-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.4rem;
+    gap: 1.6rem;
     align-items: stretch;
+    perspective: 1200px;
+}
+
+.characters-page-grid .character-card,
+.characters-grid .character-card {
+    min-height: 31rem;
+    transform-style: preserve-3d;
+}
+
+.characters-page-grid .character-card:nth-child(3n + 2),
+.characters-grid .character-card:nth-child(3n + 2) {
+    transform: translateY(1.2rem);
+}
+
+.characters-page-grid .character-card:hover,
+.characters-grid .character-card:hover {
+    transform: translateY(-8px) rotateX(1.5deg) rotateY(-1.5deg);
+}
+
+.characters-page-grid .character-card:nth-child(3n + 2):hover,
+.characters-grid .character-card:nth-child(3n + 2):hover {
+    transform: translateY(0.3rem) rotateX(1.5deg) rotateY(-1.5deg);
 }
 
 
@@ -1143,10 +1165,18 @@
 }
 
 @media (max-width: 1180px) {
-    .characters-page-grid,
-    .characters-grid {
+    .characters-page-grid, .characters-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+}
+.characters-page-grid .character-card:nth-child(3n + 2),
+.characters-grid .character-card:nth-child(3n + 2) {
+    transform: none;
+}
+
+.characters-page-grid .character-card:nth-child(3n + 2):hover,
+.characters-grid .character-card:nth-child(3n + 2):hover {
+    transform: translateY(-8px) rotateX(1.5deg) rotateY(-1.5deg);
 }
 
 @media (max-width: 1150px) {

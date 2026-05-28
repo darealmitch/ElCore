@@ -252,6 +252,16 @@ function ClassDetailPage() {
                         )}
                     </article>
                 )}
+                <article className="detail-card wide skills-card">
+                    {resolvedSkillTree ? (
+                        <SkillTree data={resolvedSkillTree} />
+                    ) : (
+                        <>
+                            <h2>Compétences</h2>
+                            <p>Les compétences principales seront ajoutées quand les données seront prêtes.</p>
+                        </>
+                    )}
+                </article>
 
                 <article className="detail-card wide builds-card">
                     <h2>Builds liés à cette classe</h2>
@@ -261,17 +271,6 @@ function ClassDetailPage() {
                         </div>
                     ) : (
                         <p>Aucun build n’a encore été ajouté pour cette classe.</p>
-                    )}
-                </article>
-
-                <article className="detail-card wide skills-card">
-                    {resolvedSkillTree ? (
-                        <SkillTree data={resolvedSkillTree} />
-                    ) : (
-                        <>
-                            <h2>Compétences</h2>
-                            <p>Les compétences principales seront ajoutées quand les données seront prêtes.</p>
-                        </>
                     )}
                 </article>
             </section>
