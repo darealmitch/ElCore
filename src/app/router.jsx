@@ -1,4 +1,4 @@
-import {createBrowserRouter} from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../components/layout/MainLayout";
 import HomePage from "../pages/HomePage";
 import CharactersPage from "../pages/CharactersPage";
@@ -9,27 +9,29 @@ import GuidesPage from "../pages/GuidesPage";
 import BuildDetailPage from "../pages/BuildDetailPage";
 import ClassesPage from "../pages/ClassesPage";
 import ClassDetailPage from "../pages/ClassDetailPage";
+import LorePage from "../pages/LorePage";
+import LoreChapterPage from "../pages/LoreChapterPage";
 
-export const router= createBrowserRouter([
+export const router = createBrowserRouter([
     {
         path: "/",
-        element: <MainLayout/>,
-        children:[
+        element: <MainLayout />,
+        children: [
             {
                 index: true,
-                element: <HomePage/>,
+                element: <HomePage />,
             },
             {
                 path: "personnages",
-                element: <CharactersPage/>,
+                element: <CharactersPage />,
             },
             {
                 path: "personnages/:id",
-                element: <CharacterDetailPage/>,
+                element: <CharacterDetailPage />,
             },
             {
                 path: "builds",
-                element: <BuildsPage/>,
+                element: <BuildsPage />,
             },
             {
                 path: "tier-list",
@@ -37,15 +39,26 @@ export const router= createBrowserRouter([
             },
             {
                 path: "guides",
-                element: <GuidesPage/>,
+                element: <GuidesPage />,
+            },
+            {
+                path: "lore",
+                element: <LorePage />,
+            },
+            {
+
+                path: "lore/:chapterId",
+
+                element: <LoreChapterPage />,
+
             },
             {
                 path: "builds/:id",
-                element: <BuildDetailPage />
+                element: <BuildDetailPage />,
             },
             {
                 path: "classes",
-                element: <ClassesPage />
+                element: <ClassesPage />,
             },
             {
                 path: "classes/:characterId/:classId",
@@ -55,7 +68,6 @@ export const router= createBrowserRouter([
                 path: "classes/:characterId/:classId/:stage",
                 element: <ClassDetailPage />,
             },
-
-        ]
-    }
+        ],
+    },
 ]);
