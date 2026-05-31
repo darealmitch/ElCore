@@ -371,30 +371,24 @@
 .lore-text-block.image-gallery {
     grid-template-columns: 1fr;
 }
-
 .lore-text-block.image-gallery .lore-text-copy {
     max-width: 58rem;
 }
-
 .lore-text-block.image-gallery .lore-section-images {
     width: 100%;
 }
-
 .lore-section-images {
     display: grid;
     gap: 0.9rem;
     min-width: 0;
 }
-
 .lore-section-images.single {
     grid-template-columns: 1fr;
 }
-
 .lore-section-images.multiple {
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     align-items: stretch;
 }
-
 .lore-section-images.multiple .lore-section-image {
     height: 100%;
 }
@@ -402,8 +396,8 @@
     height: 22rem;
     padding: 0.75rem;
     background:
-                radial-gradient(circle at 50% 45%, rgba(96, 165, 250, 0.08), transparent 14rem),
-                rgba(2, 6, 22, 0.36);
+            radial-gradient(circle at 50% 45%, rgba(96, 165, 250, 0.08), transparent 14rem),
+            rgba(2, 6, 22, 0.36);
 }
 .lore-section-images.multiple .lore-section-image-button img {
     width: 100%;
@@ -411,11 +405,24 @@
     object-fit: contain;
     object-position: center bottom;
 }
-
 .lore-section-images.multiple .lore-section-image figcaption {
     min-height: 3.2rem;
 }
-
+.lore-section-images.carousel {
+    display: flex;
+    gap: 0.9rem;
+    overflow-x: auto;
+    padding-bottom: 0.45rem;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+}
+.lore-section-images.carousel .lore-section-image {
+    flex: 0 0 min(15.5rem, 78vw);
+    scroll-snap-align: start;
+}
+.lore-section-images.carousel .lore-section-image-button {
+    height: 22rem;
+}
 /* =========================
    Lore — Lightbox
 ========================= */
@@ -747,7 +754,10 @@
 
         bottom: 5rem;
     }
-    .lore-section-images.multiple {
+    .lore-section-images.multiple:not(.carousel) {
         grid-template-columns: 1fr;
+    }
+    .lore-section-images.carousel .lore-section-image {
+        flex-basis: min(16rem, 82vw);
     }
 }

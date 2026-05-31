@@ -112,11 +112,8 @@ function LoreChapterPage() {
                     const sectionImages = section.images || (section.image ? [section.image] : []);
                     const hasImage = sectionImages.length > 0;
                     const hasMultipleImages = sectionImages.length > 1;
-                    const imagePositionClass = hasMultipleImages
-                        ? "image-gallery"
-                        : hasImage && index % 2 === 1
-                            ? "image-left"
-                            : "image-right";
+                    const hasCarouselImages = sectionImages.length >= 5;
+                    const imagePositionClass = hasMultipleImages ? "image-gallery" : hasImage && index % 2 === 1 ? "image-left" : "image-right";
 
                     return (
                         <article className={`lore-text-block ${hasImage ? imagePositionClass : ""}`} id={section.id} key={section.id || section.title}>
@@ -128,7 +125,7 @@ function LoreChapterPage() {
                                 {section.note && <p className="lore-section-note">{section.note}</p>}
                             </div>
                             {hasImage && (
-                                <div className={`lore-section-images ${hasMultipleImages ? "multiple" : "single"}`}>
+                                <div className={`lore-section-images ${hasMultipleImages ? "multiple" : "single"} ${hasCarouselImages ? "carousel" : ""}`}>
                                     {sectionImages.map((image) => (
                                         <figure className="lore-section-image" key={image.src}>
                                             <button className="lore-section-image-button" type="button" onClick={() => setActiveImage(image)} aria-label={`Agrandir l’image : ${image.alt}`}>
