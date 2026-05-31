@@ -583,12 +583,44 @@ export const loreChapters = [
         sections: [
             {
                 id: "role-maitres-el",
-                title: "Les gardiens de l’El",
+                title: "Un devoir de protection",
                 paragraphs: [
                     "Après la restauration du continent, des Maîtres furent choisis pour gouverner l’El et protéger son équilibre.",
                     "Ils agirent comme les chevaliers gardiens de la Dame de l’El.",
                     "Leur rôle ne se limitait pas au combat : ils devaient aussi comprendre, canaliser et préserver l’énergie de l’El.",
                     "Autour d’eux se forma l’Ordre de l’El, une structure destinée à maintenir l’équilibre du monde.",
+                ],
+                images: [
+                    {
+                        src: "/images/lore/07/denif.png",
+                        alt: "Denif",
+                        caption: "Denif, Maître de l’El de l’Eau.",
+                    },
+                    {
+                        src: "/images/lore/07/ventus.png",
+                        alt: "Ventus",
+                        caption: "Ventus, Maître de l’El du Vent.",
+                    },
+                    {
+                        src: "/images/lore/07/gajar.png",
+                        alt: "Gajar",
+                        caption: "Gajar, Maître de l’El de la Terre.",
+                    },
+                    {
+                        src: "/images/lore/07/rossou.png",
+                        alt: "Rosso",
+                        caption: "Rosso, Maître de l’El du Feu.",
+                    },
+                    {
+                        src: "/images/lore/07/solace.png",
+                        alt: "Solace",
+                        caption: "Solace, Maître de l’El du Soleil.",
+                    },
+                    {
+                        src: "/images/lore/07/ebalon.png",
+                        alt: "Ebalon",
+                        caption: "Ebalon, Maître de l’El de la Lune.",
+                    },
                 ],
                 note: "Les Maîtres de l’El sont à la fois des protecteurs, des guides et les héritiers d’un devoir plus lourd qu’il n’y paraît.",
             },
@@ -612,6 +644,38 @@ export const loreChapters = [
                     "Elles s’installèrent près des El élémentaires, permettant aux sociétés de se reconstruire autour de ces sources d’énergie.",
                     "Leur rôle prolongeait celui des Maîtres et de la Dame de l’El, mais d’une manière plus répartie.",
                     "Elles devinrent les gardiennes locales de l’équilibre de l’El.",
+                ],
+                images: [
+                    {
+                        src: "/images/lore/07/artea.png",
+                        alt: "Artea",
+                        caption: "Artea, Prêtresse de l’El de la Terre.",
+                    },
+                    {
+                        src: "/images/lore/07/sasha.png",
+                        alt: "Sasha",
+                        caption: "Sasha, Prêtresse de l’El de l’Eau.",
+                    },
+                    {
+                        src: "/images/lore/07/anduran.png",
+                        alt: "Anduran",
+                        caption: "Anduran, Prêtresse de l’El du Vent.",
+                    },
+                    {
+                        src: "/images/lore/07/ignia.png",
+                        alt: "Ignia",
+                        caption: "Ignia, Prêtresse de l’El du Feu.",
+                    },
+                    {
+                        src: "/images/lore/07/gloria.png",
+                        alt: "Gloria",
+                        caption: "Gloria, Prêtresse de l’El du Soleil.",
+                    },
+                    {
+                        src: "/images/lore/07/darkmoon.png",
+                        alt: "Darkmoon",
+                        caption: "Darkmoon, Prêtresse de l’El de la Lune.",
+                    },
                 ],
                 note: "L’existence des Prêtresses montre que la protection de l’El ne peut plus dépendre d’une seule personne.",
             },
