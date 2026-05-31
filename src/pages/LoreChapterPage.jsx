@@ -11,6 +11,8 @@ function LoreChapterPage() {
     const sortedChapters = [...loreChapters].sort((a, b) => a.order - b.order);
     const currentChapterIndex = sortedChapters.findIndex((item) => item.id === chapterId);
     const nextChapter = currentChapterIndex >= 0 ? sortedChapters[currentChapterIndex + 1] : null;
+    const isLastChapter = currentChapterIndex === sortedChapters.length - 1;
+    const chapterNavigationTarget = nextChapter || (isLastChapter ? { id: null, title: "Retour au lore" } : null);
 
     useEffect(() => {
         if (!activeImage) return undefined;
@@ -70,8 +72,7 @@ function LoreChapterPage() {
             className="page lore-page lore-chapter-page"
             style={{
                 "--lore-page-bg": `url(${chapter.mapBackground})`,
-            }}
-        >
+            }}>
             <section className="lore-chapter-detail-hero">
                 <Link className="back-link lore-back-link" to="/lore">
                     ← Retour au lore
@@ -83,7 +84,6 @@ function LoreChapterPage() {
                     <p>{chapter.summary}</p>
                 </div>
             </section>
-
             {chapter.sections.some((section) => section.id) && (
                 <nav className={`lore-section-selector ${isSectionNavOpen ? "open" : ""}`} aria-label="Navigation rapide du chapitre">
                     <button className="lore-section-selector-toggle" type="button" onClick={() => setIsSectionNavOpen((current) => !current)} aria-expanded={isSectionNavOpen}>
@@ -107,7 +107,6 @@ function LoreChapterPage() {
                     </div>
                 </nav>
             )}
-
             <section className="lore-chapter-detail-body">
                 {chapter.sections.map((section, index) => {
                     const sectionImages = section.images || (section.image ? [section.image] : []);
@@ -145,22 +144,18 @@ function LoreChapterPage() {
                     );
                 })}
             </section>
-
-            {nextChapter && (
-                <Link
-                    className={`lore-next-chapter-button ${showNextChapterButton ? "visible" : ""}`} to={`/lore/${nextChapter.id}`} aria-label={`Aller au chapitre suivant : ${nextChapter.title}`}>
-                    <span>Chapitre suivant</span>
-                    <strong>{nextChapter.title}</strong>
-                    <small aria-hidden="true">→</small>
+            {chapterNavigationTarget && (
+                <Link className={`lore-next-chapter-button ${showNextChapterButton ? "visible" : ""}`} to={chapterNavigationTarget.id ? `/lore/${chapterNavigationTarget.id}` : "/lore"} aria-label={chapterNavigationTarget.id ? `Aller au chapitre suivant : ${chapterNavigationTarget.title}` : "Retourner à l’accueil du lore"}>
+                    <span>{chapterNavigationTarget.id ? "Chapitre suivant" : "Fin du lore"}</span>
+                    <strong>{chapterNavigationTarget.title}</strong>
+                    <small aria-hidden="true">{chapterNavigationTarget.id ? "→" : "↩"}</small>
                 </Link>
             )}
-
             {activeImage && (
                 <div className="lore-image-lightbox" role="dialog" aria-modal="true" aria-label={activeImage.alt} onClick={() => setActiveImage(null)}>
                     <button className="lore-image-lightbox-close" type="button" onClick={() => setActiveImage(null)} aria-label="Fermer l’image agrandie">
                         ×
                     </button>
-
                     <figure className="lore-image-lightbox-content" onClick={(event) => event.stopPropagation()}>
                         <img src={activeImage.src} alt={activeImage.alt} />
                         {activeImage.caption && <figcaption>{activeImage.caption}</figcaption>}
