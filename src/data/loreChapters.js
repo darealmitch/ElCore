@@ -644,6 +644,11 @@ export const loreChapters = [
                     "Malgré le sceau créé par Ismaël, l’influence de Henir continue de menacer Élios à travers des failles, des expériences interdites et des passages instables.",
                     "Son pouvoir altère l’espace, le temps et la vie elle-même.",
                 ],
+                image: {
+                    src: "/images/lore/08/henir.png",
+                    alt: "Dimension de Henir",
+                    caption: "Henir, une dimension de chaos où l’espace, le temps et la vie se déforment.",
+                },
                 note: "Henir n’est pas seulement un lieu : c’est une force qui déforme tout ce qu’elle touche.",
             },
             {
@@ -667,6 +672,11 @@ export const loreChapters = [
                     "L’arrivée du Roi Démon changea cet équilibre en unifiant les forces les plus puissantes du royaume.",
                     "Sous son influence, plusieurs seigneurs démons furent rassemblés afin d’étendre leur domination.",
                 ],
+                image: {
+                    src: "/images/lore/06/demon-realm.png",
+                    alt: "Royaume des Démons",
+                    caption: "Le Royaume des Démons, un monde brutal né en miroir du monde matériel.",
+                },
                 note: "Le Royaume des Démons n’est pas seulement l’opposé d’Élios : c’est un monde avec ses propres factions, ambitions et fractures.",
             },
             {
@@ -674,10 +684,27 @@ export const loreChapters = [
                 title: "Les quatre Seigneurs démons",
                 paragraphs: [
                     "Le Roi Démon recruta quatre grandes figures du Royaume des Démons afin d’unifier le territoire sous son autorité.",
-                    "Parmi eux se trouvaient le Roi à l’Œil Noir Berngart, le Roi Démon Rouge Stirbargen, la Reine du Fantôme Blanc Aegirp et la Reine d’Acier Luciela.",
+                    "Parmi eux se trouvaient le Roi à l’Œil Noir Berngart, le Roi Démon Rouge Stirbargen, la Reine du Fantôme Blanc Aegirp et la Reine d’Acier Luciela (Lu/Ciel).",
                     "Avec leur aide, le Roi Démon imposa son règne sur le Royaume des Démons.",
                     "Mais lorsque son trône fut laissé vacant, l’équilibre du royaume s’effondra.",
                     "Les factions démoniaques commencèrent alors à s’affronter pour récupérer le pouvoir perdu.",
+                ],
+                images: [
+                    {
+                        src: "/images/lore/08/stirbargen.png",
+                        alt: "Stirbargen",
+                        caption: "Stirbargen, le Roi Démon Rouge.",
+                    },
+                    {
+                        src: "/images/lore/08/aegirp.png",
+                        alt: "Aegirp",
+                        caption: "Aegirp, la Reine du Fantôme Blanc.",
+                    },
+                    {
+                        src: "/images/lore/08/lu.png",
+                        alt: "Luiciela",
+                        caption: "Luiciela, la Reine d'Acier",
+                    }
                 ],
                 note: "Les Seigneurs démons montrent que la menace démoniaque n’est jamais totalement unie : elle est aussi traversée par ses propres trahisons.",
             },

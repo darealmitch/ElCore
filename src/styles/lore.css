@@ -364,12 +364,57 @@
             opacity 0.2s ease,
             transform 0.2s ease;
 }
+/* =========================
+   Lore — Galeries d’images multiples
+========================= */
 
-.lore-section-image-button:hover .lore-image-zoom-label {
-    opacity: 1;
-    transform: translateY(0);
+.lore-text-block.image-gallery {
+    grid-template-columns: 1fr;
 }
 
+.lore-text-block.image-gallery .lore-text-copy {
+    max-width: 58rem;
+}
+
+.lore-text-block.image-gallery .lore-section-images {
+    width: 100%;
+}
+
+.lore-section-images {
+    display: grid;
+    gap: 0.9rem;
+    min-width: 0;
+}
+
+.lore-section-images.single {
+    grid-template-columns: 1fr;
+}
+
+.lore-section-images.multiple {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    align-items: stretch;
+}
+
+.lore-section-images.multiple .lore-section-image {
+    height: 100%;
+}
+.lore-section-images.multiple .lore-section-image-button {
+    height: 22rem;
+    padding: 0.75rem;
+    background:
+                radial-gradient(circle at 50% 45%, rgba(96, 165, 250, 0.08), transparent 14rem),
+                rgba(2, 6, 22, 0.36);
+}
+.lore-section-images.multiple .lore-section-image-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+.lore-section-images.multiple .lore-section-image figcaption {
+    min-height: 3.2rem;
+}
 
 /* =========================
    Lore — Lightbox
@@ -701,5 +746,8 @@
     .lore-next-chapter-button {
 
         bottom: 5rem;
+    }
+    .lore-section-images.multiple {
+        grid-template-columns: 1fr;
     }
 }

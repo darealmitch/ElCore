@@ -20,10 +20,8 @@ function LoreChapterPage() {
                 setActiveImage(null);
             }
         };
-
         document.body.style.overflow = "hidden";
         window.addEventListener("keydown", handleKeyDown);
-
         return () => {
             document.body.style.overflow = "";
             window.removeEventListener("keydown", handleKeyDown);
@@ -38,18 +36,14 @@ function LoreChapterPage() {
                 setShowNextChapterButton(false);
                 return;
             }
-
             const bodyBottom = body.getBoundingClientRect().bottom;
             const triggerPoint = window.innerHeight + 80;
 
             setShowNextChapterButton(bodyBottom <= triggerPoint);
         };
-
         handleScroll();
-
         window.addEventListener("scroll", handleScroll, { passive: true });
         window.addEventListener("resize", handleScroll);
-
         return () => {
             window.removeEventListener("scroll", handleScroll);
             window.removeEventListener("resize", handleScroll);
@@ -116,8 +110,14 @@ function LoreChapterPage() {
 
             <section className="lore-chapter-detail-body">
                 {chapter.sections.map((section, index) => {
-                    const hasImage = Boolean(section.image);
-                    const imagePositionClass = hasImage && index % 2 === 1 ? "image-left" : "image-right";
+                    const sectionImages = section.images || (section.image ? [section.image] : []);
+                    const hasImage = sectionImages.length > 0;
+                    const hasMultipleImages = sectionImages.length > 1;
+                    const imagePositionClass = hasMultipleImages
+                        ? "image-gallery"
+                        : hasImage && index % 2 === 1
+                            ? "image-left"
+                            : "image-right";
 
                     return (
                         <article className={`lore-text-block ${hasImage ? imagePositionClass : ""}`} id={section.id} key={section.id || section.title}>
@@ -128,14 +128,18 @@ function LoreChapterPage() {
                                 ))}
                                 {section.note && <p className="lore-section-note">{section.note}</p>}
                             </div>
-                            {section.image && (
-                                <figure className="lore-section-image">
-                                    <button className="lore-section-image-button" type="button" onClick={() => setActiveImage(section.image)} aria-label={`Agrandir l’image : ${section.image.alt}`}>
-                                        <img src={section.image.src} alt={section.image.alt} />
-                                        <span className="lore-image-zoom-label">Agrandir</span>
-                                    </button>
-                                    {section.image.caption && <figcaption>{section.image.caption}</figcaption>}
-                                </figure>
+                            {hasImage && (
+                                <div className={`lore-section-images ${hasMultipleImages ? "multiple" : "single"}`}>
+                                    {sectionImages.map((image) => (
+                                        <figure className="lore-section-image" key={image.src}>
+                                            <button className="lore-section-image-button" type="button" onClick={() => setActiveImage(image)} aria-label={`Agrandir l’image : ${image.alt}`}>
+                                                <img src={image.src} alt={image.alt} />
+                                                <span className="lore-image-zoom-label">Agrandir</span>
+                                            </button>
+                                            {image.caption && <figcaption>{image.caption}</figcaption>}
+                                        </figure>
+                                    ))}
+                                </div>
                             )}
                         </article>
                     );
