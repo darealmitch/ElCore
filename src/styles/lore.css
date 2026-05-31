@@ -563,7 +563,85 @@
 .lore-text-block {
     scroll-margin-top: 7rem;
 }
+/* =========================
+   Lore — Bouton chapitre suivant
+========================= */
 
+.lore-next-chapter-button {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 5.5rem;
+    z-index: 40;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 0.7rem;
+    row-gap: 0.12rem;
+    align-items: center;
+    max-width: min(18rem, calc(100vw - 2rem));
+    padding: 0.75rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 1rem;
+    background: rgba(5, 8, 22, 0.72);
+    color: #fff;
+    text-decoration: none;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(0.75rem);
+    transition:
+            opacity 0.22s ease,
+            transform 0.22s ease,
+            border-color 0.22s ease,
+            background 0.22s ease;
+}
+
+.lore-next-chapter-button.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.lore-next-chapter-button:hover {
+    border-color: rgba(96, 165, 250, 0.36);
+    background: rgba(15, 23, 42, 0.86);
+}
+
+.lore-next-chapter-button span {
+    grid-column: 1;
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.lore-next-chapter-button strong {
+    grid-column: 1;
+    overflow: hidden;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 900;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.lore-next-chapter-button small {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    color: var(--text-soft);
+    font-size: 1.25rem;
+    font-weight: 1000;
+}
+
+@media (max-width: 620px) {
+    .lore-next-chapter-button {
+        right: 1rem;
+        bottom: 1rem;
+        max-width: calc(100vw - 2rem);
+        padding: 0.7rem 0.8rem;
+    }
+}
 /* =========================
    Lore — Responsive
 ========================= */
@@ -619,5 +697,9 @@
 
     .lore-image-lightbox-content img {
         border-radius: 0.9rem;
+    }
+    .lore-next-chapter-button {
+
+        bottom: 5rem;
     }
 }
