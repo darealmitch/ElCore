@@ -688,6 +688,11 @@ export const loreChapters = [
                     "Les Prêtresses furent également réunies dans la cité antique.",
                     "Ce retour marque une nouvelle étape pour Élios, car les figures anciennes du monde reprennent leur place face aux menaces modernes.",
                 ],
+                image: {
+                    src: "/images/lore/07/master-road.png",
+                    alt: "Master Road",
+                    caption: "Master Road, le lieu où les Maîtres de l’El reprennent leur rôle auprès des héros.",
+                },
                 note: "Le réveil des Maîtres ne ramène pas seulement le passé : il oblige aussi le présent à affronter ce que l’histoire avait laissé en suspens.",
             },
         ],
