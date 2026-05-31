@@ -63,13 +63,8 @@ function LoreChapterPage() {
                     className={`lore-section-selector ${isSectionNavOpen ? "open" : ""}`}
                     aria-label="Sélection rapide des villages"
                 >
-                    <button
-                        className="lore-section-selector-toggle"
-                        type="button"
-                        onClick={() => setIsSectionNavOpen((current) => !current)}
-                        aria-expanded={isSectionNavOpen}
-                    >
-                        Sélectionner un village
+                    <button className="lore-section-selector-toggle" type="button" onClick={() => setIsSectionNavOpen((current) => !current)} aria-expanded={isSectionNavOpen}>
+                        Explorer les sections
                         <span aria-hidden="true">{isSectionNavOpen ? "×" : "→"}</span>
                     </button>
 
