@@ -40,26 +40,6 @@ function CharacterCard({ character, compact = false }) {
                     )}
                 </div>
                 <p>{character.description}</p>
-                {!compact && (
-                    <>
-                        <div className="character-info">
-                            <span>{character.type}</span>
-                            <span>{character.weapon}</span>
-                            <span>{character.age}</span>
-                            <span>{character.gender}</span>
-                        </div>
-                        <div className="character-featured-block">
-                            <span>Classe mise en avant</span>
-                            <strong>{character.featuredClassFr || character.featuredClass}</strong>
-                            {character.featuredClassFr &&
-                                character.featuredClassFr !== character.featuredClass && (
-                                    <small className="character-international-name">
-                                        International : {character.featuredClass}
-                                    </small>
-                                )}
-                        </div>
-                    </>
-                )}
                 <div className="class-list">
                     {visibleClasses.map((className, index) => {
                         const classNameFr = character.classesFr?.[index] || className;

@@ -47,7 +47,23 @@
 }
 
 .character-card-aura {
-    display: none;
+    position: absolute;
+    z-index: 1;
+    top: -1.5rem;
+    left: 50%;
+    width: 90%;
+    height: 16rem;
+    transform: translateX(-50%);
+    background: radial-gradient(circle at 50% 45%, currentColor, transparent 68%);
+    opacity: 0.16;
+    filter: blur(26px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.character-card:hover .character-card-aura {
+    opacity: 0.36;
+    transform: translateX(-50%) translateY(-0.4rem) scale(1.06);
 }
 
 .character-card-visual {
@@ -121,60 +137,6 @@
     -webkit-box-orient: vertical;
 }
 
-.character-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45rem;
-    margin-top: 0.9rem;
-}
-
-.character-info span {
-    padding: 0.32rem 0.58rem;
-    border-radius: 999px;
-    background: rgba(148, 163, 184, 0.12);
-    color: var(--text-soft);
-    font-size: 0.72rem;
-    font-weight: 800;
-}
-
-.character-featured-block {
-    margin-top: 0.9rem;
-    padding: 0.75rem;
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    border-radius: 0.9rem;
-    background: rgba(2, 6, 23, 0.28);
-}
-
-.character-featured-block span {
-    display: block;
-    color: var(--text-muted);
-    font-size: 0.66rem;
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
-.character-featured-block strong {
-    display: block;
-    margin-top: 0.3rem;
-    color: #fff;
-    font-size: 0.95rem;
-}
-
-.character-international-name {
-    display: block;
-    margin-top: 0.25rem;
-    font-size: 0.72rem;
-    font-weight: 800;
-}
-
-.character-featured-class {
-    display: block;
-    margin-top: 1rem;
-    color: #fff;
-    font-weight: 900;
-}
-
 .character-card-link {
     display: inline-flex;
     align-items: center;
@@ -212,10 +174,6 @@
     font-size: 1.35rem;
 }
 
-.character-card.compact .character-featured-block {
-    display: none;
-}
-
 .character-card.compact .character-card-link {
     width: 100%;
 }
@@ -247,7 +205,7 @@
 
 .characters-page-grid .character-card,
 .characters-grid .character-card {
-    min-height: 29rem;
+    min-height: 25rem;
 }
 
 .characters-page-grid .character-card-link,
