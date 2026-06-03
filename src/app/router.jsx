@@ -11,11 +11,14 @@ import ClassesPage from "../pages/ClassesPage";
 import ClassDetailPage from "../pages/ClassDetailPage";
 import LorePage from "../pages/LorePage";
 import LoreChapterPage from "../pages/LoreChapterPage";
+import NotFoundPage from "../pages/NotFoundPage";
+import ErrorPage from "../pages/ErrorPage";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 index: true,
@@ -67,6 +70,10 @@ export const router = createBrowserRouter([
             {
                 path: "classes/:characterId/:classId/:stage",
                 element: <ClassDetailPage />,
+            },
+            {
+                path: "*",
+                element: <NotFoundPage />,
             },
         ],
     },
