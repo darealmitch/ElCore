@@ -78,9 +78,9 @@ function ClassPathTimeline({ characterId }) {
                                           key={`${stage.pathName}-${stage.jobStage}`}>
                                         <div className="class-stage-image-wrap">
                                             {masterLogo && (
-                                                <img className="master-class-logo" src={masterLogo.image} alt={masterLogo.alt}/>
+                                                <img className="master-class-logo" src={masterLogo.image} alt={masterLogo.alt} loading="lazy"/>
                                             )}
-                                            <img className="class-stage-image" src={imagePath} alt={stage.alt}/>
+                                            <img className="class-stage-image" src={imagePath} alt={stage.alt} loading="lazy"/>
                                         </div>
                                         <div className="class-stage-content">
                                         <span className="class-stage-label" style={{backgroundColor: theme.glow, color: theme.primary}}>

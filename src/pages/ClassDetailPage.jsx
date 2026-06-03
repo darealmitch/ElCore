@@ -46,7 +46,7 @@ function ClassNavigationCard({ item, direction, disabled = false, theme }) {
                 <small>{item.character} — {item.pathNameFr || item.pathName}</small>
             </div>
             <div className="class-nav-visual">
-                <img src={item.localPath} alt={item.alt} />
+                <img src={item.localPath} alt={item.alt} loading="lazy" />
             </div>
             <span className="class-nav-arrow" style={{ color: theme.primary }}>{arrow}</span>
         </Link>

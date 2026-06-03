@@ -122,6 +122,7 @@ function ClassesPage() {
                                         className="master-class-logo"
                                         src={masterLogo.image}
                                         alt={masterLogo.alt}
+                                        loading="lazy"
                                     />
                                 )}
 
@@ -129,6 +130,7 @@ function ClassesPage() {
                                     className="class-card-image"
                                     src={classItem.localPath}
                                     alt={classItem.alt}
+                                    loading="lazy"
                                 />
                             </div>
 

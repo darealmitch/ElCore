@@ -94,7 +94,7 @@ function SkillButton({ skill, isActive, tooltipDirection = "", className, onClic
                 style={{ ...style, "--skill-border": SKILL_TYPE_COLORS[skill.type] || "#facc15", "--skill-aura": skill.auraType ? ELSWORD_AURA_COLORS[skill.auraType] : "transparent" }}
                 onClick={onClick}
                 aria-label={skill.nameFr || skill.name}>
-            <img src={skill.image} alt={skill.nameFr || skill.name} />
+            <img src={skill.image} alt={skill.nameFr || skill.name} loading="lazy" />
             <span className="skill-tooltip">{skill.nameFr || skill.name}</span>
         </button>
     );

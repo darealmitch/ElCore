@@ -25,6 +25,7 @@ function CharacterCard({ character, compact = false }) {
                     className="character-card-image"
                     src={character.image}
                     alt={character.name}
+                    loading="lazy"
                 />
             </div>
             <div className="character-card-content">

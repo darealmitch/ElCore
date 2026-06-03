@@ -129,7 +129,7 @@ function LoreChapterPage() {
                                     {sectionImages.map((image) => (
                                         <figure className="lore-section-image" key={image.src}>
                                             <button className="lore-section-image-button" type="button" onClick={() => setActiveImage(image)} aria-label={`Agrandir l’image : ${image.alt}`}>
-                                                <img src={image.src} alt={image.alt} />
+                                                <img src={image.src} alt={image.alt} loading="lazy" />
                                                 <span className="lore-image-zoom-label">Agrandir</span>
                                             </button>
                                             {image.caption && <figcaption>{image.caption}</figcaption>}
