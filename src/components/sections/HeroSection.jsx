@@ -5,16 +5,16 @@ function HeroSection() {
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return undefined;
-        const heroSection = canvas.closest(".hero-premium");
+        const heroSection = canvas.closest(".hero");
         const ctx = canvas.getContext("2d");
         if (!ctx || !heroSection) return undefined;
         return undefined;
     }, []);
 
     return (
-        <section className="hero-premium" id="hero-section">
+        <section className="hero" id="hero-section">
             <canvas ref={canvasRef} className="hero-particles-canvas" />
-            <div className="hero-premium-inner">
+            <div className="hero-inner">
                 <div className="hero-content">
                     <span className="hero-badge">
                         <span className="hero-badge-dot" />
@@ -54,7 +54,7 @@ function HeroSection() {
                     </div>
                     <div className="hero-floating-card hero-floating-card-bottom">
                         <strong>PvE / PvP</strong>
-                        <span>Tier lists</span>
+                        <span>Classements</span>
                     </div>
                 </div>
             </div>

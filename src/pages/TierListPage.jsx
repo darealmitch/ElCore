@@ -21,10 +21,10 @@ function TierListPage() {
     return (
         <main className="page">
             <section className="page-hero">
-                <span>Tier List</span>
+                <span>Classement</span>
                 <h1>Classement des classes</h1>
                 <p>
-                    Compare les classes selon les modes de jeu. Cette tier list utilise
+                    Compare les classes selon les modes de jeu. Ce classement utilise
                     uniquement les données déjà ajoutées dans ElCore.
                 </p>
             </section>

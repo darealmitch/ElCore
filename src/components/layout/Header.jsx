@@ -8,7 +8,7 @@ const navLinks = [
     { label: "Personnages", path: "/personnages" },
     { label: "Classes", path: "/classes" },
     { label: "Builds", path: "/builds" },
-    { label: "Tier List", path: "/tier-list" },
+    { label: "Classement", path: "/tier-list" },
     { label: "Guides", path: "/guides" }
 ];
 

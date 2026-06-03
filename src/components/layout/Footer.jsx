@@ -10,7 +10,7 @@ function Footer() {
             <div className="footer-links">
                 <NavLink to="/personnages">Personnages</NavLink>
                 <NavLink to="/builds">Builds</NavLink>
-                <NavLink to="/tier-list">Tier List</NavLink>
+                <NavLink to="/tier-list">Classement</NavLink>
                 <NavLink to="/guides">Guides</NavLink>
             </div>
             <p className="footer-disclaimer">

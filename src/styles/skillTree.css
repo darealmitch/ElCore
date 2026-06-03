@@ -1,12 +1,8 @@
-/* =========================
-   Skill Tree — base
-========================= */
-
+/*Skill Tree — base*/
 .skill-tree-section {
     display: grid;
     gap: 1rem;
 }
-
 .skill-tree-title {
     margin: 0;
     color: #fff;
@@ -15,18 +11,13 @@
     letter-spacing: -0.04em;
 }
 
-
-/* =========================
-   Skill Tree — arbre compact
-========================= */
-
+/*Skill Tree — arbre compact*/
 .skill-tree-layout {
     display: grid;
     grid-template-columns: minmax(0, 42rem) 5.5rem;
     align-items: stretch;
     gap: 0.8rem;
 }
-
 .skill-tree-board {
     position: relative;
     min-height: 48rem;
@@ -34,45 +25,37 @@
     border-radius: 0.8rem;
     background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.045), transparent 16rem), rgba(2, 6, 23, 0.72);
 }
-
 .skill-tree-board::before {
     content: "";
     position: absolute;
     inset: 0;
-    opacity: 0.08;
     background-image: repeating-radial-gradient(ellipse at center, rgba(255, 255, 255, 0.45) 0 1px, transparent 1px 13px);
     background-size: 44px 20px;
+    opacity: 0.08;
     pointer-events: none;
 }
-
 .skill-tree-board.has-sections {
     min-height: 48rem;
 }
-
-.skill-tree-board.has-sections+.skill-tree-levels {
+.skill-tree-board.has-sections + .skill-tree-levels {
     padding-top: 4.2rem;
 }
-
 .skill-tree-columns {
     position: absolute;
     inset: 0;
     display: grid;
     grid-template-columns: 60% 40%;
 }
-
 .skill-tree-column {
     position: relative;
     min-width: 0;
 }
-
 .skill-tree-column-active {
     background: rgba(140, 20, 20, 0.68);
 }
-
 .skill-tree-column-passive {
     background: rgba(20, 62, 160, 0.58);
 }
-
 .skill-tree-column-header {
     position: relative;
     z-index: 2;
@@ -83,15 +66,12 @@
     font-size: 1.35rem;
     font-weight: 900;
 }
-
 .skill-tree-column-active .skill-tree-column-header {
     background: rgba(185, 20, 25, 0.82);
 }
-
 .skill-tree-column-passive .skill-tree-column-header {
     background: rgba(30, 85, 190, 0.78);
 }
-
 .skill-tree-icons {
     position: absolute;
     inset: 4.2rem 0 0;
@@ -99,11 +79,10 @@
     padding-top: 1.25rem;
     padding-bottom: 1.2rem;
 }
-
 .skill-tree-level-line {
     position: absolute;
-    left: 0;
     right: 0;
+    left: 0;
     z-index: 3;
     height: 2px;
     background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.05) 20%, var(--accent-blue) 40%, var(--accent-purple) 60%, rgba(255, 255, 255, 0.05) 80%, transparent 100%);
@@ -112,21 +91,10 @@
     pointer-events: none;
     animation: skill-line-flow 6s infinite linear;
 }
-
-@keyframes skill-line-flow {
-    0% {
-        background-position: -200% 0;
-    }
-
-    100% {
-        background-position: 200% 0;
-    }
-}
-
 .skill-tree-section-divider {
     position: absolute;
-    left: 0;
     right: 0;
+    left: 0;
     z-index: 4;
     display: grid;
     place-items: center;
@@ -135,7 +103,6 @@
     transform: translateY(-50%);
     pointer-events: none;
 }
-
 .skill-tree-section-divider span {
     color: #fff;
     font-size: 0.9rem;
@@ -145,16 +112,12 @@
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
-
-/* =========================
-   Skill Tree — nodes
-========================= */
-
+/*Skill Tree — nodes*/
 .skill-node {
     position: absolute;
+    z-index: 6;
     display: grid;
     place-items: center;
-    z-index: 6;
     width: 4.2rem;
     height: 4.2rem;
     padding: 0.18rem;
@@ -166,7 +129,6 @@
     transform: translate(-50%, -50%);
     transition: transform 0.18s ease, filter 0.18s ease, box-shadow 0.18s ease, outline-color 0.18s ease;
 }
-
 .skill-node:hover,
 .skill-node:focus-visible {
     z-index: 10;
@@ -174,27 +136,11 @@
     filter: brightness(1.1);
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 14px color-mix(in srgb, var(--skill-aura) 55%, transparent);
 }
-
 .skill-node.active {
     z-index: 10;
     filter: brightness(1.1);
     animation: node-active-pulse 2s infinite ease-in-out;
 }
-
-@keyframes node-active-pulse {
-    0%,
-    100% {
-        transform: translate(-50%, -50%) scale(1.07);
-        outline-offset: 3px;
-        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 14px color-mix(in srgb, var(--skill-aura) 55%, transparent);
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(1.15);
-        outline-offset: 6px;
-        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.44), 0 0 28px color-mix(in srgb, var(--skill-aura) 85%, transparent);
-    }
-}
-
 .skill-node img {
     display: block;
     width: 100%;
@@ -202,15 +148,11 @@
     object-fit: cover;
 }
 
-
-/* =========================
-   Skill Tree — tooltips
-========================= */
-
+/*Skill Tree — tooltips*/
 .skill-tooltip {
     position: absolute;
-    left: 50%;
     bottom: -2.8rem;
+    left: 50%;
     z-index: 20;
     width: max-content;
     max-width: 14rem;
@@ -225,82 +167,71 @@
     transform: translateX(-50%) translateY(-0.3rem);
     transition: opacity 0.16s ease, transform 0.16s ease;
 }
-
 .skill-tooltip::before {
     content: "";
     position: absolute;
-    left: 50%;
     top: -0.35rem;
+    left: 50%;
     width: 0.65rem;
     height: 0.65rem;
     background: #fff;
     transform: translateX(-50%) rotate(45deg);
 }
-
 .skill-node:hover .skill-tooltip,
 .skill-node:focus-visible .skill-tooltip,
 .skill-node.active .skill-tooltip {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
-
 .skill-node.tooltip-left .skill-tooltip {
-    left: auto;
+    top: 50%;
     right: calc(100% + 0.75rem);
     bottom: auto;
-    top: 50%;
+    left: auto;
     transform: translateY(-50%) translateX(0.35rem);
 }
-
 .skill-node.tooltip-left .skill-tooltip::before {
-    left: auto;
-    right: -0.35rem;
     top: 50%;
+    right: -0.35rem;
+    left: auto;
     transform: translateY(-50%) rotate(45deg);
 }
-
 .skill-node.tooltip-left:hover .skill-tooltip,
 .skill-node.tooltip-left:focus-visible .skill-tooltip,
 .skill-node.tooltip-left.active .skill-tooltip {
     opacity: 1;
     transform: translateY(-50%) translateX(0);
 }
-
 .skill-node.tooltip-top .skill-tooltip {
-    left: 50%;
-    bottom: calc(100% + 0.75rem);
     top: auto;
+    bottom: calc(100% + 0.75rem);
+    left: 50%;
     transform: translateX(-50%) translateY(0.35rem);
 }
-
 .skill-node.tooltip-top .skill-tooltip::before {
-    left: 50%;
     top: auto;
     bottom: -0.35rem;
+    left: 50%;
     transform: translateX(-50%) rotate(45deg);
 }
-
 .skill-node.tooltip-top:hover .skill-tooltip,
 .skill-node.tooltip-top:focus-visible .skill-tooltip,
 .skill-node.tooltip-top.active .skill-tooltip {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
-
 .skill-node.tooltip-top-right .skill-tooltip {
-    left: 0;
-    bottom: calc(100% + 0.75rem);
     top: auto;
+    bottom: calc(100% + 0.75rem);
+    left: 0;
     transform: translateY(0.35rem);
 }
-
 .skill-node.tooltip-top-right .skill-tooltip::before {
-    left: 1.25rem;
     top: auto;
     bottom: -0.35rem;
+    left: 1.25rem;
     transform: rotate(45deg);
 }
-
 .skill-node.tooltip-top-right:hover .skill-tooltip,
 .skill-node.tooltip-top-right:focus-visible .skill-tooltip,
 .skill-node.tooltip-top-right.active .skill-tooltip {
@@ -308,11 +239,7 @@
     transform: translateY(0);
 }
 
-
-/* =========================
-   Skill Tree — niveaux
-========================= */
-
+/*Skill Tree — niveaux*/
 .skill-tree-levels {
     display: grid;
     grid-template-rows: repeat(var(--level-count), minmax(0, 1fr));
@@ -320,10 +247,9 @@
     justify-items: center;
     padding: 4.2rem 0 1.2rem;
 }
-
 .skill-tree-levels span {
-    align-self: center;
     display: inline-grid;
+    align-self: center;
     place-items: center;
     min-width: 4.8rem;
     min-height: 2.9rem;
@@ -336,11 +262,7 @@
     font-weight: 900;
 }
 
-
-/* =========================
-   Skill Tree — détail sélection
-========================= */
-
+/*Skill Tree — détail sélection*/
 .skill-detail-card {
     display: grid;
     gap: 0.6rem;
@@ -350,7 +272,6 @@
     border-radius: 1rem;
     background: rgba(15, 23, 42, 0.76);
 }
-
 .skill-detail-card span {
     color: var(--text-muted);
     font-size: 0.68rem;
@@ -358,29 +279,25 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
-
 .skill-detail-card h3 {
     margin: 0.2rem 0 0;
     color: #fff;
     font-size: 1.15rem;
 }
-
 .skill-detail-card p {
     margin: 0;
     color: var(--text-soft);
     line-height: 1.65;
 }
-
 .skill-detail-aura,
 .skill-detail-badge,
 .skill-detail-rarity {
     width: fit-content;
     margin: 0;
     border-radius: 999px;
-    line-height: 1.2;
     font-weight: 1000;
+    line-height: 1.2;
 }
-
 .skill-detail-aura {
     padding: 0.45rem 0.7rem;
     border: 1px solid var(--skill-aura);
@@ -388,11 +305,9 @@
     color: var(--skill-aura) !important;
     font-size: 0.78rem;
 }
-
 .skill-detail-aura strong {
     color: var(--skill-aura);
 }
-
 .skill-detail-badge {
     padding: 0.42rem 0.7rem;
     border: 1px solid var(--skill-badge);
@@ -402,7 +317,6 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
-
 .skill-detail-rarity {
     padding: 0.42rem 0.7rem;
     border: 1px solid var(--skill-rarity);
@@ -413,24 +327,18 @@
     text-transform: uppercase;
 }
 
-
-/* =========================
-   Skill Tree — rows
-========================= */
-
+/*Skill Tree — rows*/
 .skill-rows-layout {
     display: grid;
     grid-template-columns: minmax(0, 42rem) 5.5rem;
     align-items: stretch;
     gap: 0.8rem;
 }
-
 .skill-rows-board.classic-look {
     overflow: hidden;
     border-radius: 0.8rem;
     background: rgba(2, 6, 23, 0.72);
 }
-
 .skill-rows-headers {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -439,42 +347,35 @@
     font-size: 1.35rem;
     font-weight: 900;
 }
-
 .skill-rows-headers div {
     display: grid;
     place-items: center;
 }
-
 .skill-rows-headers div:first-child {
     background: rgba(185, 20, 25, 0.82);
 }
-
 .skill-rows-headers div:last-child {
     background: rgba(30, 85, 190, 0.78);
 }
-
 .skill-rows-body {
     display: grid;
     min-height: 42rem;
 }
-
 .skill-row-group {
     position: relative;
     display: grid;
     min-height: 5.4rem;
     background: linear-gradient(90deg, rgba(140, 20, 20, 0.68) 0%, rgba(140, 20, 20, 0.68) 60%, rgba(20, 62, 160, 0.58) 60%, rgba(20, 62, 160, 0.58) 100%);
 }
-
 .skill-row-group + .skill-row-group {
     border-top: 0;
 }
-
 .skill-row-group + .skill-row-group::before {
     content: "";
     position: absolute;
-    left: 0;
-    right: 0;
     top: 0;
+    right: 0;
+    left: 0;
     z-index: 2;
     height: 2px;
     background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.05) 20%, var(--accent-blue) 40%, var(--accent-purple) 60%, rgba(255, 255, 255, 0.05) 80%, transparent 100%);
@@ -482,21 +383,18 @@
     pointer-events: none;
     animation: skill-line-flow 6s infinite linear;
 }
-
 .skill-row {
     display: grid;
     align-items: center;
     min-height: 5.4rem;
     padding: 0.55rem 0.9rem;
 }
-
 .skill-row-content {
     display: grid;
     grid-template-columns: 60% 40%;
     align-items: center;
     min-height: 4.3rem;
 }
-
 .skill-row-column {
     display: flex;
     flex-wrap: wrap;
@@ -506,62 +404,36 @@
     min-width: 0;
     padding-inline: 0.8rem;
 }
-
 .skill-row-column.passive {
     justify-content: center;
 }
-
 .row-node {
     position: relative;
-    left: auto;
     top: auto;
+    left: auto;
     flex: 0 0 auto;
     width: 3.8rem;
     height: 3.8rem;
     transform: none;
 }
-
 .row-node:hover,
 .row-node:focus-visible {
     transform: scale(1.07);
 }
-
 .row-node.active {
     animation: row-node-active-pulse 2s infinite ease-in-out;
 }
-
-@keyframes row-node-active-pulse {
-
-    0%,
-    100% {
-        transform: scale(1.07);
-        outline-offset: 3px;
-        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 14px color-mix(in srgb, var(--skill-border, #facc15) 55%, transparent);
-    }
-
-    50% {
-        transform: scale(1.15);
-        outline-offset: 6px;
-        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.44), 0 0 28px color-mix(in srgb, var(--skill-border, #facc15) 85%, transparent);
-    }
-}
-
 .rows-levels {
     padding: 4.2rem 0 0;
 }
 
-
-/* =========================
-   Skill Tree — séparateurs rows
-========================= */
-
+/*Skill Tree — séparateurs rows*/
 .skill-row-divider {
     display: grid;
     place-items: center;
     min-height: 2.5rem;
     background: linear-gradient(90deg, rgba(239, 68, 68, 0.82), rgba(239, 68, 68, 0.62));
 }
-
 .skill-row-divider span {
     display: inline-flex;
     align-items: center;
@@ -572,7 +444,6 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
-
 .skill-row-divider img {
     width: 1.35rem;
     height: 1.35rem;
@@ -580,57 +451,42 @@
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.25));
 }
 
-
-/* =========================
-   Skill Tree — classe maître
-========================= */
-
+/*Skill Tree — classe maître*/
 .master-row-group {
     background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.24), transparent 18rem), linear-gradient(90deg, rgba(88, 28, 135, 0.78), rgba(126, 34, 206, 0.66));
 }
-
 .master-row-content {
     grid-template-columns: 1fr;
 }
-
 .master-row-content .skill-row-column {
     grid-column: 1 / -1;
     justify-content: space-evenly;
-    width: 100%;
     gap: 1.4rem;
+    width: 100%;
     padding-inline: 1.2rem;
 }
-
 .master-row-content .skill-row-column.passive {
     display: none;
 }
-
 .master-row-content .row-node {
     width: 4.1rem;
     height: 4.1rem;
 }
 
-
-/* =========================
-   Skill Tree — guides système
-========================= */
-
+/*Skill Tree — guides système*/
 .skill-rows-with-summary {
     display: grid;
     grid-template-columns: minmax(0, auto) minmax(19rem, 1fr);
     align-items: start;
     gap: 1.2rem;
 }
-
 .skill-rows-with-summary.no-summary {
     grid-template-columns: 1fr;
 }
-
 .skill-system-summary-list {
     display: grid;
     gap: 1rem;
 }
-
 .skill-system-summary-card {
     display: grid;
     gap: 0.9rem;
@@ -639,19 +495,16 @@
     border-radius: 1.1rem;
     background: radial-gradient(circle at top right, rgba(147, 125, 255, 0.12), transparent 16rem), rgba(2, 6, 23, 0.36);
 }
-
 .skill-system-summary-header {
     display: flex;
     align-items: center;
     gap: 0.85rem;
 }
-
 .skill-system-summary-header img {
     width: 3rem;
     height: 3rem;
     object-fit: contain;
 }
-
 .skill-system-summary-header span {
     color: var(--accent-blue);
     font-size: 0.72rem;
@@ -659,25 +512,21 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
-
 .skill-system-summary-header h3 {
     margin: 0.25rem 0 0;
     color: #fff;
     font-size: clamp(1.35rem, 2vw, 1.75rem);
     line-height: 1.05;
 }
-
 .skill-system-summary-card p {
     margin: 0;
     color: var(--text-soft);
     line-height: 1.65;
 }
-
 .skill-description-block {
     display: grid;
     gap: 0.65rem;
 }
-
 .skill-description-block strong {
     width: fit-content;
     padding: 0.35rem 0.65rem;
@@ -690,7 +539,6 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
-
 .skill-description-block p {
     position: relative;
     margin: 0;
@@ -702,67 +550,50 @@
     line-height: 1.55;
 }
 
-
-/* =========================
-   Skill Tree — compétences de force
-========================= */
-
+/*Skill Tree — compétences de force*/
 .skill-system-guide-skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
     align-items: center;
+    gap: 0.8rem;
 }
-
 .guide-skill-node {
     position: relative;
-    left: auto;
     top: auto;
+    left: auto;
     width: 3.5rem;
     height: 3.5rem;
     transform: none;
     box-shadow: 0 0 0 2px var(--skill-rarity, transparent);
 }
-
 .guide-skill-node:hover,
 .guide-skill-node:focus-visible,
 .guide-skill-node.active {
     transform: scale(1.07);
 }
 
-
-/* =========================
-   Fiche personnage — bloc compétences
-========================= */
-
+/*Fiche personnage — bloc compétences*/
 .character-skills-card {
     overflow: hidden;
 }
-
 .character-skills-layout {
     display: grid;
     grid-template-columns: minmax(0, auto) minmax(18rem, 1fr);
     align-items: center;
     gap: 1.2rem;
 }
-
 .character-skills-layout .skill-tree-section {
     display: grid;
     align-items: center;
     gap: 1rem;
     width: 100%;
 }
-
 .character-skills-layout .skill-tree-title,
 .character-skills-layout .skill-tree-layout {
     margin: 0;
 }
 
-
-/* =========================
-   Fiche personnage — mécanique
-========================= */
-
+/*Fiche personnage — mécanique*/
 .character-mechanic-card {
     align-self: start;
     display: flex;
@@ -776,20 +607,16 @@
     border-radius: 1.1rem;
     background: radial-gradient(circle at top right, rgba(96, 165, 250, 0.1), transparent 16rem), rgba(2, 6, 23, 0.34);
 }
-
 .character-mechanic-card::-webkit-scrollbar {
     width: 0.45rem;
 }
-
 .character-mechanic-card::-webkit-scrollbar-thumb {
     border-radius: 999px;
     background: rgba(96, 165, 250, 0.45);
 }
-
 .character-mechanic-card::-webkit-scrollbar-track {
     background: rgba(15, 23, 42, 0.35);
 }
-
 .character-mechanic-card span {
     width: fit-content;
     color: var(--accent-blue);
@@ -798,34 +625,29 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
-
 .character-mechanic-card h3 {
     margin: 0.45rem 0 0;
     color: #fff;
     font-size: clamp(1.4rem, 2vw, 2rem);
     line-height: 1.05;
 }
-
-.character-mechanic-card>strong {
+.character-mechanic-card > strong {
     display: block;
     margin-top: 0.45rem;
     color: var(--text-soft);
     font-size: 0.95rem;
 }
-
 .character-mechanic-card p {
     margin: 1rem 0 0;
     color: var(--text-soft);
     line-height: 1.7;
 }
-
 .character-mechanic-note {
     padding: 0.9rem;
     border-left: 3px solid var(--accent-blue);
     border-radius: 0.8rem;
     background: rgba(96, 165, 250, 0.08);
 }
-
 .character-mechanic-details {
     display: grid;
     gap: 0.7rem;
@@ -833,7 +655,6 @@
     padding: 0;
     list-style: none;
 }
-
 .character-mechanic-details li {
     position: relative;
     padding: 0.75rem 0.85rem 0.75rem 2.35rem;
@@ -843,65 +664,52 @@
     color: var(--text-soft);
     line-height: 1.5;
 }
-
 .character-mechanic-details li::before {
     content: "";
     position: absolute;
-    left: 0.85rem;
     top: 1rem;
+    left: 0.85rem;
     width: 0.55rem;
     height: 0.55rem;
     border-radius: 999px;
     background: var(--accent-blue);
     box-shadow: 0 0 12px rgba(96, 165, 250, 0.65);
 }
-
 .character-mechanic-details li:hover {
     border-color: rgba(96, 165, 250, 0.35);
     background: rgba(30, 41, 59, 0.68);
 }
-
 .elsword-aura-word {
     display: inline;
     font-weight: 1000;
 }
-
 .elsword-aura-word.vitality {
     color: #60a5fa;
 }
-
 .elsword-aura-word.destruction {
     color: #ef4444;
 }
 
-
-/* =========================
-   Fiche personnage — auras
-========================= */
-
+/*Fiche personnage — auras*/
 .character-aura-list {
     display: grid;
     gap: 0.8rem;
     margin-top: 1rem;
 }
-
 .character-aura-card {
     padding: 0.9rem;
     border: 1px solid var(--border-soft);
     border-radius: 0.9rem;
     background: rgba(2, 6, 23, 0.32);
 }
-
 .character-aura-card h4 {
     margin: 0 0 0.55rem;
     color: #fff;
     font-size: 1rem;
 }
-
 .character-aura-card p {
     margin: 0;
 }
-
 .character-aura-card ul {
     display: grid;
     gap: 0.45rem;
@@ -910,62 +718,84 @@
     color: var(--text-soft);
     line-height: 1.55;
 }
-
 .character-aura-card-vitality {
     border-color: rgba(96, 165, 250, 0.42);
     background: radial-gradient(circle at top right, rgba(96, 165, 250, 0.12), transparent 12rem), rgba(2, 6, 23, 0.32);
 }
-
 .character-aura-card-vitality li::marker {
     color: #60a5fa;
 }
-
 .character-aura-card-destruction {
     border-color: rgba(239, 68, 68, 0.42);
     background: radial-gradient(circle at top right, rgba(239, 68, 68, 0.12), transparent 12rem), rgba(2, 6, 23, 0.32);
 }
-
 .character-aura-card-destruction li::marker {
     color: #ef4444;
 }
 
+/*Animations*/
+@keyframes skill-line-flow {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+@keyframes node-active-pulse {
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1.07);
+        outline-offset: 3px;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 14px color-mix(in srgb, var(--skill-aura) 55%, transparent);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.15);
+        outline-offset: 6px;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.44), 0 0 28px color-mix(in srgb, var(--skill-aura) 85%, transparent);
+    }
+}
+@keyframes row-node-active-pulse {
+    0%,
+    100% {
+        transform: scale(1.07);
+        outline-offset: 3px;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 14px color-mix(in srgb, var(--skill-border, #facc15) 55%, transparent);
+    }
+    50% {
+        transform: scale(1.15);
+        outline-offset: 6px;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.44), 0 0 28px color-mix(in srgb, var(--skill-border, #facc15) 85%, transparent);
+    }
+}
 
-/* =========================
-   Responsive
-========================= */
-
+/*Responsive*/
 @media (max-width: 1100px) {
     .skill-rows-with-summary {
         grid-template-columns: 1fr;
     }
 }
-
 @media (max-width: 1050px) {
     .character-skills-layout {
         grid-template-columns: 1fr;
     }
-
     .character-mechanic-card {
         justify-content: flex-start;
         max-height: none;
     }
 }
-
 @media (max-width: 900px) {
-
     .skill-tree-layout,
     .skill-rows-layout {
         grid-template-columns: 1fr;
         overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
         padding-bottom: 1.5rem;
+        -webkit-overflow-scrolling: touch;
     }
-
     .skill-tree-board,
     .skill-rows-board {
         min-width: 600px;
     }
-
     .skill-tree-levels,
     .rows-levels {
         display: flex;
@@ -974,46 +804,37 @@
         overflow-x: auto;
         padding: 0;
     }
-
     .skill-tree-levels span {
         flex: 0 0 auto;
     }
 }
-
 @media (max-width: 620px) {
     .skill-tree-board {
         min-height: 27rem;
     }
-
     .skill-tree-column-header {
         height: 3.6rem;
         font-size: 1.05rem;
     }
-
     .skill-tree-icons {
         inset: 3.6rem 0 0;
     }
-
     .skill-node {
         width: 3.3rem;
         height: 3.3rem;
         border-width: 0.16rem;
     }
-
     .skill-tooltip {
         max-width: 12rem;
         font-size: 0.78rem;
     }
-
     .skill-row-content,
     .skill-rows-headers {
         grid-template-columns: 1fr;
     }
-
     .skill-row-group {
         background: rgba(15, 23, 42, 0.72);
     }
-
     .skill-row-column.passive {
         justify-content: flex-start;
     }
