@@ -266,7 +266,7 @@ function SkillTree({ data }) {
 
     const guideSkills = useMemo(() => {
         return (data.sections || []).map((section) => getGuideForSection(section, data)).filter(Boolean).flatMap((guide) => guide.detailsSkills || []);
-    }, [data.sections, data]);
+    }, [data]);
 
     const selectedSkill = treeSkills.find((skill) => skill.id === selectedSkillId) || null;
 
