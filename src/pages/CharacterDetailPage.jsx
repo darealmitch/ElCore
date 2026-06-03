@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { characters } from "../data/characters";
 import { characterThemes } from "../data/characterThemes";
-import ClassPathTimeline from "/src/components/ui/ClassPathTimeline";
+import ClassPathTimeline from "../components/ui/ClassPathTimeline";
 import BuildCard from "../components/ui/BuildCard";
 import { builds } from "../data/builds";
 import SkillTree from "../components/ui/SkillTree";
