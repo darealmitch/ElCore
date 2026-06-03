@@ -19,6 +19,12 @@ export const loreChapters = [
                     "Selon l’univers du jeu, Élios était autrefois un monde où la vie était presque inexistante. Lorsque le cristal d’El fut envoyé dans ce monde, tout commença à changer : la vie apparut, les terres se transformèrent et l’équilibre du monde se construisit autour de l’énergie de l’El.",
                     "Le Royaume des Elians naquit alors et prit soin de l’El, jusqu’au jour où celui-ci explosa. Ses fragments furent dispersés à travers Élios et donnèrent naissance à plusieurs villages, régions et royaumes.",
                 ],
+                image: {
+                    src: "/images/lore/06/MappaElios.png",
+                    alt: "Carte du monde d’Élios",
+                    caption: "Élios, un monde dont l’équilibre s’est construit autour de l’énergie de l’El.",
+                },
+                note: "Avant d’être une suite de régions et de royaumes, Élios est d’abord un monde façonné par l’arrivée de l’El.",
             },
         ],
     },
@@ -39,6 +45,11 @@ export const loreChapters = [
                     "Lorsque le monde matériel vit le jour, un autre royaume apparut comme une réaction en miroir : le Royaume des Démons.",
                     "Une fois les mondes créés, Elria envoya la déesse Ismaël afin de veiller sur le nouveau monde.",
                 ],
+                image: {
+                    src: "/images/lore/02/Story3.png",
+                    alt: "Monde matériel créé autour de l’El",
+                    caption: "Le monde matériel prend forme, traversé par l’énergie de l’El.",
+                },
                 note: "Avant même l’arrivée de l’El, l’univers repose déjà sur une tension entre lumière, ténèbres et mondes opposés.",
             },
             {
@@ -53,6 +64,18 @@ export const loreChapters = [
                     "Les habitants vinrent de nombreux horizons pour admirer cette pierre, qu’ils appelèrent l’El.",
                     "La terre que l’El avait fait revivre prit alors le nom d’Élios.",
                 ],
+                images: [
+                    {
+                        src: "/images/lore/02/cristal.png",
+                        alt: "Cristal d’El",
+                        caption: "Le Cristal d’El, le joyau dont l’énergie fit renaître Élios.",
+                    },
+                    {
+                        src: "/images/lore/02/Lore-2.png",
+                        alt: "L’El apportant la vie à la terre",
+                        caption: "L’El répand son énergie sur la terre et marque le début d’un monde vivant.",
+                    }
+                ],
                 note: "L’El n’est pas seulement une source d’énergie : il est le souffle qui transforme une terre stérile en monde vivant.",
             },
             {
@@ -64,6 +87,11 @@ export const loreChapters = [
                     "La connexion entre Élios, Henir et le Royaume des Démons fut ainsi séparée.",
                     "Grâce à cette séparation, le monde matériel put se développer sous la protection de l’El.",
                 ],
+                image: {
+                    src: "/images/lore/02/ishmael.png",
+                    alt: "Ismaël",
+                    caption: "Ismaël, figure divine liée à la protection du monde matériel."
+                },
                 note: "L’El nourrit Élios, mais il sert aussi de frontière entre les mondes qui pourraient le menacer.",
             },
             {
@@ -74,6 +102,23 @@ export const loreChapters = [
                     "Chaque territoire donna naissance à une bête liée à l’énergie de la terre.",
                     "Certaines de ces créatures bénirent les terres qu’elles parcouraient.",
                     "D’autres, au contraire, semèrent la destruction sur leur passage.",
+                ],
+                images: [
+                    {
+                        src: "/images/lore/02/Ancient_Phoru.png",
+                        alt: "Ancien Porou",
+                        caption: "Ancien Porou, une bête liée à la protection de l’El.",
+                    },
+                    {
+                        src: "/images/lore/02/eun.png",
+                        alt: "Eun",
+                        caption: "Eun, une bête spirituelle ancienne scellée dans une relique.",
+                    },
+                    {
+                        src: "/images/lore/02/NephilimLord.png",
+                        alt: "Nephilim Lord",
+                        caption: "Nephilim Lord, une entité ancienne liée aux esprits et aux territoires.",
+                    },
                 ],
                 note: "Même les forces nées de l’El ne sont pas toujours paisibles : la vie qu’il apporte peut aussi prendre une forme sauvage.",
             },
@@ -87,6 +132,11 @@ export const loreChapters = [
                     "Ils devinrent alors connus sous le nom d’Elfes Noirs et furent considérés comme maudits par ceux de l’extérieur.",
                     "Ils finirent par trouver un moyen de passer d’Élios au Royaume des Démons, où ils résident désormais.",
                 ],
+                image: {
+                    src: "/images/lore/02/chloe.png",
+                    alt: "Chloé",
+                    caption: "Chloé, une Elfe Noire liée au Royaume des Démons.",
+                },
                 note: "L’histoire des Elfes montre que la frontière entre Élios et le monde démoniaque transforme aussi ceux qui s’en approchent trop longtemps.",
             },
         ],
@@ -108,6 +158,11 @@ export const loreChapters = [
                     "Pour protéger ce monde et y faire naître la vie, Ismaël envoya un immense joyau sur la terre.",
                     "Cette gemme permit aux océans, aux plantes et à la nature de s’épanouir, devenant plus tard connue sous le nom d’El.",
                 ],
+                image: {
+                    src: "/images/lore/02/ishmael.png",
+                    alt: "Ismaël",
+                    caption: "Ismaël, la déesse qui veilla sur le monde matériel et envoya l’El sur la terre.",
+                },
                 note: "Avant même la Dame de l’El, Ismaël apparaît comme la première protectrice du monde matériel.",
             },
             {
@@ -120,6 +175,11 @@ export const loreChapters = [
                     "Grâce à elle, la vie revint peu à peu sur les terres ravagées.",
                     "Depuis cet événement, les habitants commencèrent à vénérer la Dame de l’El comme celle qui maintient et stabilise le pouvoir de l’El.",
                 ],
+                image: {
+                    src: "/images/lore/03/el-lady.png",
+                    alt: "Dame de l’El",
+                    caption: "La Dame de l’El, figure bénie par Ismaël pour stabiliser l’El.",
+                },
                 note: "La Dame de l’El apparaît comme une figure de salut, mais son rôle porte déjà le poids d’un sacrifice silencieux.",
             },
             {
@@ -131,6 +191,11 @@ export const loreChapters = [
                     "Une nouvelle Dame de l’El fut ensuite trouvée afin de maintenir la stabilité du cristal.",
                     "Les Maîtres de l’El agirent comme ses chevaliers gardiens, et l’Ordre de l’El fut formé au cœur du royaume restauré.",
                 ],
+                image: {
+                    src: "/images/lore/03/El_Masters.jpg",
+                    alt: "Ordre de l’El",
+                    caption: "L’Ordre de l’El fut formé pour protéger la Dame de l’El et préserver l’équilibre du monde.",
+                },
                 note: "Autour de la Dame de l’El se construit peu à peu tout un ordre destiné à protéger l’équilibre du monde.",
             },
             {
@@ -143,6 +208,11 @@ export const loreChapters = [
                     "Mais malgré son apparence paisible, l’El devient particulièrement instable pendant cette période.",
                     "Il revient alors à la Dame de l’El de maintenir le cristal stable et de l’empêcher de se briser.",
                 ],
+                image: {
+                    src: "/images/lore/03/Lore-4.jpg",
+                    alt: "Fête de l’Harmonie",
+                    caption: "La Fête de l’Harmonie, un moment de paix où l’El devient pourtant particulièrement instable.",
+                },
                 note: "La Fête de l’Harmonie semble célébrer la paix, mais elle révèle surtout la fragilité du rôle porté par la Dame de l’El.",
             },
             {
@@ -154,6 +224,38 @@ export const loreChapters = [
                     "Contrairement aux Maîtres, ces prêtresses ne devaient pas être formées au combat, mais à la capacité de maintenir et stabiliser l’El.",
                     "Ce système devait permettre d’éviter que l’équilibre du monde repose uniquement sur la Dame de l’El.",
                     "Il représentait aussi une solution possible pour empêcher que la Dame soit condamnée à se sacrifier pour l’El.",
+                ],
+                images: [
+                    {
+                        src: "/images/lore/07/artea.png",
+                        alt: "Artea",
+                        caption: "Artea, Prêtresse de l’El de la Terre.",
+                    },
+                    {
+                        src: "/images/lore/07/sasha.png",
+                        alt: "Sasha",
+                        caption: "Sasha, Prêtresse de l’El de l’Eau.",
+                    },
+                    {
+                        src: "/images/lore/07/anduran.png",
+                        alt: "Anduran",
+                        caption: "Anduran, Prêtresse de l’El du Vent.",
+                    },
+                    {
+                        src: "/images/lore/07/ignia.png",
+                        alt: "Ignia",
+                        caption: "Ignia, Prêtresse de l’El du Feu.",
+                    },
+                    {
+                        src: "/images/lore/07/gloria.png",
+                        alt: "Gloria",
+                        caption: "Gloria, Prêtresse de l’El du Soleil.",
+                    },
+                    {
+                        src: "/images/lore/07/darkmoon.png",
+                        alt: "Darkmoon",
+                        caption: "Darkmoon, Prêtresse de l’El de la Lune.",
+                    },
                 ],
                 note: "La création des Prêtresses de l’El montre que certains avaient déjà compris que le système autour de la Dame était trop fragile.",
             },
@@ -167,6 +269,11 @@ export const loreChapters = [
                     "L’esprit d’Ismaël continua de se transmettre à une autre personne choisie pour protéger l’El et maintenir sa forme.",
                     "Ainsi naquit un cycle où chaque Dame de l’El devait préserver l’équilibre du monde en portant seule le poids de l’El.",
                 ],
+                image: {
+                    src: "/images/lore/03/Chapter_27_Quest_1-8.png",
+                    alt: "Solace tenant la Dame de l’El",
+                    caption: "La Dame de l’El, au cœur d’un cycle où protection et sacrifice deviennent indissociables.",
+                },
                 note: "Derrière la figure sacrée de la Dame de l’El se cache une vérité plus lourde : le monde est sauvé par un sacrifice répété.",
             },
         ],
@@ -188,6 +295,18 @@ export const loreChapters = [
                     "Lorsqu’Hernia fut choisie pour devenir la prochaine Dame de l’El, elle fut emmenée pendant la Nuit d’Ismaël.",
                     "Fenriart, incapable de l’accepter, consacra les années suivantes à la retrouver.",
                 ],
+                images: [
+                    {
+                        src: "/images/lore/04/Solace5.png",
+                        alt: "Fenriart à 27 ans",
+                        caption: "Fenriart à 27 ans, devenu le Maître de l’El du Soleil sous le nom de Solace.",
+                    },
+                    {
+                        src: "/images/lore/04/ElLady2.png",
+                        alt: "Hernia à 15 ans",
+                        caption: "Hernia à 15 ans, avant que son destin ne soit lié à celui de la Dame de l’El.",
+                    },
+                ],
                 note: "Avant d’être une catastrophe mondiale, l’Explosion de l’El naît aussi d’un lien personnel brisé par le devoir.",
             },
             {
@@ -200,6 +319,11 @@ export const loreChapters = [
                     "Il créa un appareil destiné à remplacer la fonction de la Dame de l’El.",
                     "Mais Hernia refusa de fuir son devoir, affirmant qu’elle ne pouvait pas faire passer son propre bonheur avant celui du monde.",
                 ],
+                image: {
+                    src: "/images/lore/03/26-story.jpg",
+                    alt: "Solace et la Dame de l’El",
+                    caption: "Solace face au destin de la Dame de l’El, partagé entre devoir, amour et sacrifice.",
+                },
                 note: "Solace ne cherche pas seulement à défier l’ordre établi : il veut sauver une personne que le monde considère déjà comme un pilier.",
             },
             {
@@ -213,6 +337,11 @@ export const loreChapters = [
                     "Solace parvint à s’enfuir avec elle, mais sans la Dame de l’El, la stabilité du cristal fut compromise.",
                     "L’El explosa alors, se brisant en millions de fragments dispersés à travers Élios et même dans d’autres dimensions.",
                 ],
+                image: {
+                    src: "/images/lore/04/El_Tower_Explosion.png",
+                    alt: "Explosion de l’El",
+                    caption: "L’Explosion de l’El, la catastrophe qui brisa le cristal et dispersa ses fragments à travers Élios.",
+                },
                 note: "L’Explosion de l’El marque le moment où un système bâti sur un seul sacrifice finit par s’effondrer.",
             },
             {
@@ -224,6 +353,11 @@ export const loreChapters = [
                     "La catastrophe l’envoya à travers une faille de l’espace-temps, le laissant prisonnier du royaume de Henir.",
                     "Depuis ce lieu chaotique, il chercha un moyen de revenir à Élios et d’accomplir sa mission.",
                 ],
+                image: {
+                    src: "/images/personnages/ain.png",
+                    alt: "Ainchase Ishmael",
+                    caption: "Ain, l’agent envoyé par Ismaël pour restaurer l’El avant d’être projeté dans Henir.",
+                },
                 note: "Ain arrive comme une réponse divine, mais son destin commence par un échec face à une catastrophe déjà accomplie.",
             },
             {
@@ -247,7 +381,86 @@ export const loreChapters = [
         title: "Le groupe de recherche de l’El",
         eyebrow: "Héros",
         summary: "Introduire Elsword et ses compagnons, leur objectif et leur rôle dans la restauration de l’El.",
-        sections: [],
+        sections: [
+            {
+                id: "naissance-du-groupe",
+                title: "La naissance du groupe",
+                paragraphs: [
+                    "Le groupe de recherche de l’El naît autour d’un événement simple en apparence : le vol de l’El de Ruben par Benders.",
+                    "Elsword, alors membre des chercheurs d’El de Ruben, se lance à sa poursuite afin de récupérer l’artefact lié à l’Arbre d’El.",
+                    "Sur sa route, il est rejoint par Aisha et Rena, elles aussi liées à l’El par leurs propres objectifs.",
+                    "Ce qui commence comme une mission locale devient peu à peu le point de départ d’un voyage à travers tout Élios.",
+                ],
+                note: "Le groupe ne se forme pas autour d’une grande prophétie dès le départ : il naît d’une urgence concrète, avant de devenir le cœur de l’aventure.",
+            },
+            {
+                id: "objectif-initial",
+                title: "Un objectif d’abord simple",
+                paragraphs: [
+                    "Au début de leur voyage, Elsword et ses compagnons cherchent surtout à récupérer les fragments d’El volés ou dispersés.",
+                    "Leur route les conduit de Ruben à Elder, puis vers Besma et Altera, où ils découvrent que les problèmes liés à l’El dépassent largement leur village d’origine.",
+                    "Chaque région révèle une menace plus vaste : complots humains, technologies nasods, fragments d’El convoités et signes d’une invasion démoniaque.",
+                    "Le groupe comprend alors que restaurer l’El ne consiste pas seulement à retrouver des morceaux perdus, mais à protéger l’équilibre même du monde.",
+                ],
+                note: "La quête du groupe évolue progressivement : retrouver l’El devient comprendre pourquoi le monde entier dépend de lui.",
+            },
+            {
+                id: "compagnons-de-route",
+                title: "Des compagnons aux destins liés",
+                paragraphs: [
+                    "Au fil du voyage, de nouveaux compagnons rejoignent le groupe, chacun avec son histoire, ses blessures et ses raisons de poursuivre la route.",
+                    "Raven, Eve, Chung, Ara, Elesis, Add, Lu, Ciel, Rose, Ain et Laby viennent enrichir le groupe par leurs liens avec les Nasods, les démons, l’El, Henir ou les anciennes forces du monde.",
+                    "Leur diversité donne au groupe une place particulière dans l’histoire d’Élios : ils ne représentent pas un seul royaume, mais plusieurs peuples, époques et conflits.",
+                    "En avançant ensemble, ils deviennent capables d’affronter des menaces qu’aucun d’eux n’aurait pu résoudre seul.",
+                ],
+                note: "Le groupe de recherche de l’El n’est pas seulement une équipe de héros : c’est une alliance entre des destins que l’El rassemble peu à peu.",
+            },
+            {
+                id: "face-aux-demons",
+                title: "Face aux démons",
+                paragraphs: [
+                    "À mesure que le voyage progresse, les démons deviennent l’une des principales menaces rencontrées par le groupe.",
+                    "De Parte à Belder, puis Hamel, Sander et Ranox, les invasions démoniaques révèlent que les forces du Royaume des Démons cherchent à atteindre les El élémentaires et les Prêtresses.",
+                    "Le groupe doit alors protéger les régions attaquées, libérer les territoires occupés et empêcher les démons de déstabiliser davantage Élios.",
+                    "Ces conflits transforment leur mission : ils ne sont plus seulement à la recherche de l’El, ils deviennent les défenseurs directs de son équilibre.",
+                ],
+                note: "Face aux démons, le groupe passe du rôle de voyageurs à celui de rempart entre Élios et les forces qui veulent l’envahir.",
+            },
+            {
+                id: "vers-la-dame-de-l-el",
+                title: "À la recherche de la Dame de l’El",
+                paragraphs: [
+                    "Après avoir rencontré les Prêtresses de l’El et suivi les indices liés à la prophétie, le groupe comprend que la Dame de l’El est au cœur du déséquilibre du monde.",
+                    "Leur voyage les mène alors vers Atlas, Élysion et Solace, dans une quête qui dépasse les frontières ordinaires d’Élios.",
+                    "En découvrant l’histoire de Solace et Hernia, le groupe comprend que la stabilité de l’El repose depuis longtemps sur un cycle de sacrifice.",
+                    "Elsword refuse alors de choisir entre répéter ce sacrifice ou abandonner le monde à son sort.",
+                ],
+                note: "La recherche de la Dame de l’El pousse le groupe à affronter la vérité derrière l’équilibre du monde.",
+            },
+            {
+                id: "restauration-de-l-el",
+                title: "La restauration de l’El",
+                paragraphs: [
+                    "Au terme de son choix, Elsword décide de restaurer l’El sans sacrifier la Dame de l’El ni sa sœur.",
+                    "Il rassemble l’El dispersé à travers le monde et devient lui-même le cœur du cristal restauré.",
+                    "Ce sacrifice permet à l’El de retrouver sa forme originelle et provoque le réveil d’Élyanod ainsi que celui des Maîtres de l’El.",
+                    "Ses compagnons refusent cependant de l’abandonner et entrent dans l’El afin de le ramener.",
+                    "Grâce à leur volonté commune, Elsword est libéré, et le groupe peut poursuivre sa route vers les menaces encore présentes.",
+                ],
+                note: "La restauration de l’El montre que la force du groupe ne vient pas seulement d’Elsword, mais du lien qui unit tous ses compagnons.",
+            },
+            {
+                id: "apres-elios",
+                title: "Au-delà d’Élios",
+                paragraphs: [
+                    "Après la restauration de l’El, le groupe ne peut pas simplement considérer sa mission comme terminée.",
+                    "Les menaces liées à Henir, au Dark El et au Royaume des Démons continuent de peser sur l’équilibre du monde.",
+                    "Le groupe cherche alors un moyen d’atteindre le monde démoniaque afin d’empêcher ces forces d’utiliser le Dark El contre Élios.",
+                    "Cette nouvelle étape marque une transition majeure : le voyage ne consiste plus seulement à sauver Élios de l’intérieur, mais à affronter les dangers venus d’un autre monde.",
+                ],
+                note: "Après Élios, le groupe entre dans une phase plus vaste de son histoire, où la restauration de l’El devient seulement le début d’un nouveau conflit.",
+            },
+        ],
     },
     {
         id: "regions",
