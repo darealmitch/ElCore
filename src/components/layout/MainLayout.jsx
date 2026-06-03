@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -28,7 +28,9 @@ function MainLayout() {
             <ScrollToTopOnRouteChange />
             <div id="scroll-progress" aria-hidden="true" />
             <Header />
-            <Outlet />
+            <Suspense fallback={<div style={{ minHeight: "60vh", display: "grid", placeItems: "center" }} aria-busy="true">Chargement…</div>}>
+                <Outlet />
+            </Suspense>
             <ScrollToTopButton />
             <Footer />
         </>
