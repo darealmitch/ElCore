@@ -38,7 +38,7 @@ function QuickAccessSection() {
             <section className="home-section quick-access-section" id="quick-access">
                 <div className="section-header">
 
-                    <section className="home-section home-intent-section">
+                    <section className="home-section home-intent-section" id="comprendre-elcore">
                         <article className="home-intent-banner">
                             <div className="home-intent-orb" aria-hidden="true" />
 

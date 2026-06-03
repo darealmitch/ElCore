@@ -399,7 +399,9 @@
 .home-intent-banner {
     z-index: 2;
 }
-
+#comprendre-elcore {
+    scroll-margin-top: 5.5rem;
+}
 @media (max-width: 950px) {
     .home-intent-banner {
         grid-template-columns: 1fr;

@@ -27,11 +27,14 @@ function HeroSection() {
                                 ElCore est un portail Elsword FR pour comprendre les personnages, explorer les classes, consulter des guides et préparer ses builds.
                             </p>
                         <div className="hero-actions">
-                            <a href="/guides" className="hero-button primary">
-                                Commencer avec les guides
+                            <a href="#comprendre-elcore" className="hero-button primary" onClick={(event) => {
+                                event.preventDefault();
+                                document.getElementById("comprendre-elcore")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                            }}>
+                                Comprendre Elcore
                             </a>
-                            <a href="/personnages" className="hero-button secondary">
-                                Explorer les personnages
+                            <a href="/guides" className="hero-button secondary">
+                                Commencer avec les guides
                             </a>
                         </div>
                 </div>
