@@ -1,5 +1,4 @@
 import { Link, useParams } from "react-router-dom";
-import { useEffect } from "react";
 import { characters } from "../data/characters";
 import BuildCard from "../components/ui/BuildCard";
 import { builds } from "../data/builds";
@@ -66,10 +65,6 @@ function getResolvedSkillIds(skillTree, allSkillTrees) {
 
 function ClassDetailPage() {
     const { characterId, classId, stage } = useParams();
-
-    useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }, [characterId, classId, stage]);
 
     const classItem = classImages.find((item) => {
         const sameCharacter = item.characterId === characterId;
