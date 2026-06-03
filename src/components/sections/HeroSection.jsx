@@ -24,7 +24,7 @@ function HeroSection() {
                             Le cœur <br /><span>stratégique</span> <br />d’Elsword
                         </h1>
                             <p>
-                                ElCore est un portail Elsword FR pour comprendre les personnages, explorer les classes, consulter des guides et préparer ses builds.
+                                ElCore est un portail Elsword FR pour comprendre les personnages, explorer les classes, consulter des guides et préparer ses configurations.
                             </p>
                         <div className="hero-actions">
                             <a href="#comprendre-elcore" className="hero-button primary" onClick={(event) => {

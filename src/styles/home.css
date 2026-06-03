@@ -641,7 +641,7 @@
     box-shadow: 0 0 18px color-mix(in srgb, currentColor 30%, transparent);
 }
 
-/*Accueil — Builds recommandés*/
+/*Accueil — Configurations recommandés*/
 .home-build-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));

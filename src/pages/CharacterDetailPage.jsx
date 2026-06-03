@@ -209,8 +209,8 @@ function CharacterDetailPage() {
 
             <section className="detail-section">
                 <div className="section-header">
-                    <span>Builds</span>
-                    <h2>Builds disponibles</h2>
+                    <span>Configurations</span>
+                    <h2>Configurations disponibles</h2>
                 </div>
 
                 {characterBuilds.length > 0 ? (

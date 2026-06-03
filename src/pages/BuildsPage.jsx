@@ -21,10 +21,10 @@ function BuildsPage() {
     return (
         <main className="page">
             <section className="page-hero">
-                <span>Builds</span>
-                <h1>Builds Elsword</h1>
+                <span>Configurations</span>
+                <h1>Configurations Elsword</h1>
                 <p>
-                    Consulte les builds structurés par personnage, classe, mode de jeu,
+                    Consulte les configurations structurés par personnage, classe, mode de jeu,
                     rôle, statistiques, compétences et rotations.
                 </p>
             </section>

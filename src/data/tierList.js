@@ -1,126 +1,417 @@
 export const tierList = [
     {
-        mode: "PvE",
-        tiers: [
-            {
-                rank: "S",
-                entries: [
-                    {
-                        characterId: "elsword",
-                        character: "Elsword",
-                        className: "Knight Emperor",
-                        role: "DPS physique / clear",
-                        reason: "Très bon choix de progression, polyvalent et simple à prendre en main."
-                    },
-                    {
-                        characterId: "aisha",
-                        character: "Aisha",
-                        className: "Aether Sage",
-                        role: "DPS magique / utilitaire",
-                        reason: "Très efficace pour le farming, les zones et la progression PvE."
-                    },
-                    {
-                        characterId: "eve",
-                        character: "Eve",
-                        className: "Code: Sariel",
-                        role: "DPS magique / clear",
-                        reason: "Très bon clear et bonne puissance solo."
-                    }
-                ]
-            },
-            {
-                rank: "A",
-                entries: [
-                    {
-                        characterId: "raven",
-                        character: "Raven",
-                        className: "Furious Blade",
-                        role: "DPS physique",
-                        reason: "Bon clear et style offensif clair, mais plus dépendant du positionnement."
-                    },
-                    {
-                        characterId: "raven",
-                        character: "Raven",
-                        className: "Rage Hearts",
-                        role: "DPS physique / sustained",
-                        reason: "Bon sustain et cycle lisible, moins explosif que certains burst paths."
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        mode: "Raid",
-        tiers: [
-            {
-                rank: "S",
-                entries: [
-                    {
-                        characterId: "rena",
-                        character: "Rena",
-                        className: "Anemos",
-                        role: "Support / debuff / utility",
-                        reason: "Très utile en raid grâce à son kit d’équipe et ses debuffs."
-                    },
-                    {
-                        characterId: "eve",
-                        character: "Eve",
-                        className: "Code: Esencia",
-                        role: "Support / summon synergy",
-                        reason: "Très appréciée en groupe pour son utilité et ses synergies."
-                    }
-                ]
-            },
-            {
-                rank: "A",
-                entries: [
-                    {
-                        characterId: "elsword",
-                        character: "Elsword",
-                        className: "Rune Master",
-                        role: "DPS magique / burst",
-                        reason: "Bon potentiel de raid, mais demande du timing."
-                    },
-                    {
-                        characterId: "rena",
-                        character: "Rena",
-                        className: "Twilight",
-                        role: "DPS physique / burst",
-                        reason: "Bon mono-cible et bonne mobilité, mais moins utile qu’un support."
-                    },
-                    {
-                        characterId: "eve",
-                        character: "Eve",
-                        className: "Code: Antithese",
-                        role: "Support hybride / DPS",
-                        reason: "Très forte en groupe, mais plus technique à jouer."
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        mode: "Débutant",
+        id: "support",
+        title: "Support / Utilité",
+        description: "Classement indicatif des classes utiles en raid et en groupe. Il prend en compte les buffs, soins, debuffs, cleanse et capacités de contrôle.",
+        warning: "Classement provisoire basé sur les tendances communautaires disponibles. À vérifier selon le serveur, le patch, l’équipement, l’ERP et la composition du groupe.",
         tiers: [
             {
                 rank: "S",
                 entries: [
                     {
                         characterId: "aisha",
-                        character: "Aisha",
-                        className: "Oz Sorcerer",
-                        role: "DPS magique",
-                        reason: "Simple, confortable et très bonne en PvE général."
+                        characterName: "Aisha",
+                        classNameFr: "Druidesse d'Azoth",
+                        classNameInternational: "Lord Azoth",
+                        chibiImage: null,
+                        role: "Support pur",
+                        reason: "Apporte des buffs offensifs, une réduction de défense sur les boss et du cleanse pour les alliés.",
+                        conditions: "Pensée pour le jeu en groupe. Son intérêt principal n’est pas le DPS personnel.",
+                        confidence: "moyenne",
+                    },
+                    {
+                        characterId: "chung",
+                        characterName: "Chung",
+                        classNameFr: "Dius Aer",
+                        classNameInternational: "Dius Aer",
+                        chibiImage: null,
+                        role: "Support hybride",
+                        reason: "Très recherché en raid grâce à ses buffs, ses soins HP/MP, sa réduction de dégâts et ses debuffs sur les boss.",
+                        conditions: "Brille surtout en groupe coordonné. Son intérêt est moins marqué en solo.",
+                        confidence: "moyenne",
+                    },
+                    {
+                        characterId: "ara",
+                        characterName: "Ara",
+                        classNameFr: "Surya",
+                        classNameInternational: "Surya",
+                        chibiImage: null,
+                        role: "Support mixte",
+                        reason: "Utile grâce à ses soins, ses buffs, sa réduction de dégâts et sa capacité à contrôler certains boss.",
+                        conditions: "Son efficacité dépend du boss et de la possibilité d’utiliser correctement le contrôle.",
+                        confidence: "moyenne",
+                    },
+                    {
+                        characterId: "luciel",
+                        characterName: "Lu/Ciel",
+                        classNameFr: "Nom français à compléter",
+                        classNameInternational: "Demersio",
+                        chibiImage: null,
+                        role: "DPS / Support hybride",
+                        reason: "Très utile en groupe grâce à son mélange de dégâts, de support et de synergies, mais plus dépendant de la maîtrise du joueur.",
+                        conditions: "Demande de bien maîtriser l’alternance Lu/Ciel, les rotations et les timings.",
+                        confidence: "moyenne",
+                    },
+                ],
+            },
+            {
+                rank: "A",
+                entries: [
+                    {
+                        characterId: "add",
+                        characterName: "Add",
+                        classNameFr: "Dominateur",
+                        classNameInternational: "Dominator",
+                        chibiImage: null,
+                        role: "Support / DPS hybride",
+                        reason: "Dispose de debuffs utiles et peut renforcer les dégâts du groupe, mais semble moins demandé que les supports principaux.",
+                        conditions: "Demande une bonne maîtrise pour maintenir son utilité en groupe.",
+                        confidence: "faible",
+                    },
+                    {
+                        characterId: "ain",
+                        characterName: "Ain",
+                        classNameFr: "Florere",
+                        classNameInternational: "Bluhen",
+                        chibiImage: null,
+                        role: "Support / soigneur",
+                        reason: "Apporte une vraie valeur de support et de sustain, mais les données récentes sont moins solides que pour les supports les plus cités.",
+                        conditions: "Son intérêt dépend de la composition et du besoin réel en soins ou soutien.",
+                        confidence: "faible à moyenne",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: "pve",
+        title: "PvE général",
+        description: "Classement indicatif des classes efficaces pour le contenu PvE général, le farming et la progression hors raid spécialisé.",
+        warning: "Classement à utiliser avec prudence. Les performances varient selon le patch, le stuff, l’ERP, le serveur et la maîtrise du joueur.",
+        tiers: [
+            {
+                rank: "S",
+                entries: [
+                    {
+                        characterId: "elsword",
+                        characterName: "Elsword",
+                        classNameFr: "Séphiroth",
+                        classNameInternational: "Genesis",
+                        chibiImage: null,
+                        role: "DPS",
+                        reason: "Souvent cité comme DPS solide, avec un bon potentiel en contenu PvE selon le stuff et la maîtrise.",
+                        conditions: "Dépend fortement du patch, du contenu et de l’investissement du joueur.",
+                        confidence: "faible à moyenne",
+                    },
+                    {
+                        characterId: "laby",
+                        characterName: "Laby",
+                        classNameFr: "Arlequine",
+                        classNameInternational: "Twins Picaro",
+                        chibiImage: null,
+                        role: "DPS offensif autonome",
+                        reason: "Très forte en dégâts personnels et en contenu PvE général, avec une bonne capacité à avancer seule.",
+                        conditions: "Apporte peu d’utilité au groupe comparé aux classes support.",
+                        confidence: "moyenne",
+                    },
+                ],
+            },
+            {
+                rank: "A",
+                entries: [
+                    {
+                        characterId: "elsword",
+                        characterName: "Elsword",
+                        classNameFr: "Chevalier Royal",
+                        classNameInternational: "Knight Emperor",
+                        chibiImage: "/images/tier-list/chibi/knight-emperor.png",
+                        role: "DPS corps à corps / clear",
+                        reason: "Bon candidat pour le clearing et le PvE général, avec une efficacité reconnue mais plus contextuelle selon les contenus.",
+                        conditions: "Moins universel que les meilleurs DPS selon les boss, les donjons et le patch.",
+                        confidence: "moyenne",
+                    },
+                    {
+                        characterId: "elesis",
+                        characterName: "Elesis",
+                        classNameFr: "Adrestia",
+                        classNameInternational: "Adrestia",
+                        chibiImage: null,
+                        role: "DPS avec debuffs",
+                        reason: "Bon potentiel offensif avec des debuffs utiles, ce qui la rend intéressante en PvE et dans certains contenus de groupe.",
+                        conditions: "Sa valeur dépend du contenu et des besoins de la composition.",
+                        confidence: "faible à moyenne",
+                    },
+                    {
+                        characterId: "luciel",
+                        characterName: "Lu/Ciel",
+                        classNameFr: "Nom français à compléter",
+                        classNameInternational: "Demersio",
+                        chibiImage: null,
+                        role: "DPS / Support hybride",
+                        reason: "Classe solide grâce à son mélange de dégâts et d’utilité, mais plus dépendante de la maîtrise du joueur.",
+                        conditions: "Peut être difficile à optimiser à cause de sa mécanique à deux personnages.",
+                        confidence: "faible à moyenne",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: "raid",
+        title: "Raid",
+        description: "Classement indicatif des classes utiles en raid. Cette section distingue surtout les classes de support et les classes DPS à potentiel.",
+        warning: "Le raid dépend fortement du boss, de la taille de hitbox, du serveur, du patch, du stuff, de l’ERP et de la composition du groupe.",
+        tiers: [
+            {
+                rank: "S",
+                entries: [
+                    {
+                        characterId: "aisha",
+                        characterName: "Aisha",
+                        classNameFr: "Druidesse d'Azoth",
+                        classNameInternational: "Lord Azoth",
+                        chibiImage: null,
+                        role: "Support pur",
+                        reason: "Très pertinente en raid grâce à son utilité de groupe, ses buffs, debuffs et outils de soutien.",
+                        conditions: "Sa valeur vient surtout de son apport au groupe, pas de son DPS personnel.",
+                        confidence: "moyenne",
+                    },
+                    {
+                        characterId: "chung",
+                        characterName: "Chung",
+                        classNameFr: "Dius Aer",
+                        classNameInternational: "Dius Aer",
+                        chibiImage: null,
+                        role: "Support hybride",
+                        reason: "Excellent profil de raid grâce au soutien défensif, aux soins, aux buffs et aux debuffs.",
+                        conditions: "Plus fort dans une composition organisée.",
+                        confidence: "moyenne",
+                    },
+                    {
+                        characterId: "ara",
+                        characterName: "Ara",
+                        classNameFr: "Surya",
+                        classNameInternational: "Surya",
+                        chibiImage: null,
+                        role: "Support mixte",
+                        reason: "Très utile pour le sustain, les buffs et certains contrôles selon les boss.",
+                        conditions: "Certains boss limitent l’intérêt du contrôle ou du freeze.",
+                        confidence: "moyenne",
+                    },
+                    {
+                        characterId: "luciel",
+                        characterName: "Lu/Ciel",
+                        classNameFr: "Nom français à compléter",
+                        classNameInternational: "Demersio",
+                        chibiImage: null,
+                        role: "DPS / Support hybride",
+                        reason: "Souvent valorisé pour son utilité de groupe et son potentiel contre certains boss.",
+                        conditions: "Très dépendant de la maîtrise et des besoins de la composition.",
+                        confidence: "moyenne",
+                    },
+                ],
+            },
+            {
+                rank: "A",
+                entries: [
+                    {
+                        characterId: "elsword",
+                        characterName: "Elsword",
+                        classNameFr: "Séphiroth",
+                        classNameInternational: "Genesis",
+                        chibiImage: null,
+                        role: "DPS",
+                        reason: "Peut être très fort comme DPS selon le contenu, mais manque de données assez stables pour le placer définitivement en S raid.",
+                        conditions: "Dépend fortement du stuff, de l’ERP et du boss.",
+                        confidence: "faible à moyenne",
                     },
                     {
                         characterId: "elsword",
-                        character: "Elsword",
-                        className: "Knight Emperor",
-                        role: "DPS physique / clear",
-                        reason: "Très accessible et polyvalent pour progresser."
-                    }
-                ]
-            }
-        ]
-    }
+                        characterName: "Elsword",
+                        classNameFr: "Chevalier Royal",
+                        classNameInternational: "Knight Emperor",
+                        chibiImage: "/images/tier-list/chibi/knight-emperor.png",
+                        role: "DPS corps à corps",
+                        reason: "Peut être très performant dans certains raids ou situations, mais son efficacité reste contextuelle.",
+                        conditions: "Varie selon le boss, la hitbox et la composition.",
+                        confidence: "moyenne",
+                    },
+                    {
+                        characterId: "raven",
+                        characterName: "Raven",
+                        classNameFr: "Nova Imperator",
+                        classNameInternational: "Nova Imperator",
+                        chibiImage: null,
+                        role: "DPS",
+                        reason: "Anciennement cité comme bon DPS, mais son statut actuel doit être revérifié avec des données plus récentes.",
+                        conditions: "À valider selon le patch actuel et le serveur.",
+                        confidence: "très faible",
+                    },
+                    {
+                        characterId: "elesis",
+                        characterName: "Elesis",
+                        classNameFr: "Adrestia",
+                        classNameInternational: "Adrestia",
+                        chibiImage: null,
+                        role: "DPS avec debuffs",
+                        reason: "Potentiel offensif intéressant avec une utilité de debuff.",
+                        conditions: "Sa valeur dépend du contenu, du boss et de la composition.",
+                        confidence: "faible",
+                    },
+                    {
+                        characterId: "laby",
+                        characterName: "Laby",
+                        classNameFr: "Arlequine",
+                        classNameInternational: "Twins Picaro",
+                        chibiImage: null,
+                        role: "DPS brut",
+                        reason: "Mentionnée pour son fort potentiel de dégâts, mais son apport de groupe reste limité.",
+                        conditions: "Plus intéressante si la composition a déjà assez d’utilité.",
+                        confidence: "faible à moyenne",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: "debutant",
+        title: "Débutant",
+        description: "Classement indicatif des classes plus accessibles pour commencer Elsword, progresser plus facilement et apprendre les bases.",
+        warning: "Les données débutant sont partiellement anciennes. Ce classement doit être validé avec des joueurs actifs avant publication définitive.",
+        tiers: [
+            {
+                rank: "S",
+                entries: [
+                    {
+                        characterId: "laby",
+                        characterName: "Laby",
+                        classNameFr: "Nom français à compléter",
+                        classNameInternational: "Eternity Winner",
+                        chibiImage: null,
+                        role: "DPS accessible",
+                        reason: "Souvent recommandée pour sa prise en main simple, sa mobilité et son bon confort en progression.",
+                        conditions: "Moins prioritaire en raid endgame que certaines classes support.",
+                        confidence: "moyenne",
+                    },
+                ],
+            },
+            {
+                rank: "A",
+                entries: [
+                    {
+                        characterId: "elsword",
+                        characterName: "Elsword",
+                        classNameFr: "Chevalier Royal",
+                        classNameInternational: "Knight Emperor",
+                        chibiImage: "/images/chibi/KnightEmperorChibi.png",
+                        role: "DPS simple / corps à corps",
+                        reason: "Bon candidat pour débuter grâce à un rôle lisible, du clear et une prise en main directe.",
+                        conditions: "Moins universel en endgame selon le contenu.",
+                        confidence: "moyenne",
+                    },
+                    {
+                        characterId: "eve",
+                        characterName: "Ève",
+                        classNameFr: "Code: Sariel",
+                        classNameInternational: "Code: Sariel",
+                        chibiImage: null,
+                        role: "DPS à distance",
+                        reason: "Accessible grâce à son style de jeu à distance et à son confort pour toucher les ennemis sans trop s’exposer.",
+                        conditions: "Certaines mécaniques de boss réduisent l’avantage du jeu à distance.",
+                        confidence: "faible",
+                    },
+                    {
+                        characterId: "ara",
+                        characterName: "Ara",
+                        classNameFr: "Shakti",
+                        classNameInternational: "Shakti",
+                        chibiImage: null,
+                        role: "DPS polyvalent",
+                        reason: "Appréciée pour sa mobilité, son confort de jeu et sa polyvalence en progression.",
+                        conditions: "L’optimisation à haut niveau peut devenir plus complexe.",
+                        confidence: "faible",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: "solo",
+        title: "Solo",
+        description: "Classement indicatif des classes utilisables confortablement en solo.",
+        warning: "Le solo manque de données récentes vérifiées. Les performances dépendent fortement du stuff, du sustain, du contenu et de la maîtrise du joueur.",
+        tiers: [
+            {
+                rank: "S",
+                entries: [
+                    {
+                        characterId: "laby",
+                        characterName: "Laby",
+                        classNameFr: "Arlequine",
+                        classNameInternational: "Twins Picaro",
+                        chibiImage: null,
+                        role: "DPS autonome",
+                        reason: "Très bon potentiel offensif en solo grâce à ses dégâts personnels élevés.",
+                        conditions: "Sustain et survie à vérifier selon le contenu joué.",
+                        confidence: "faible à moyenne",
+                    },
+                ],
+            },
+            {
+                rank: "A",
+                entries: [
+                    {
+                        characterId: "elsword",
+                        characterName: "Elsword",
+                        classNameFr: "Chevalier Royal",
+                        classNameInternational: "Knight Emperor",
+                        chibiImage: "/images/tier-list/chibi/knight-emperor.png",
+                        role: "DPS / clear / corps à corps",
+                        reason: "Bon clearing et confort de progression, même si sa valeur varie selon les boss et les donjons.",
+                        conditions: "Moins dominant dans certains contenus spécialisés.",
+                        confidence: "moyenne",
+                    },
+                    {
+                        characterId: "elsword",
+                        characterName: "Elsword",
+                        classNameFr: "Immortel",
+                        classNameInternational: "Immortal",
+                        chibiImage: null,
+                        role: "DPS orienté confort",
+                        reason: "Parfois cité pour son confort face aux boss, mais les données disponibles sont anciennes.",
+                        conditions: "À vérifier avec des données récentes.",
+                        confidence: "très faible",
+                    },
+                ],
+            },
+        ],
+    },
 ];
+
+export const tierListNotes = {
+    summary: "Ce classement est une base de travail indicative pour ElCore. Il ne doit pas être présenté comme une vérité définitive.",
+    order: [
+        "Elsword",
+        "Aisha",
+        "Rena",
+        "Raven",
+        "Ève",
+        "Chung",
+        "Ara",
+        "Elesis",
+        "Add",
+        "Lu/Ciel",
+        "Rose",
+        "Ain",
+        "Laby",
+        "Noah",
+        "Lithia",
+    ],
+    limitations: [
+        "Les données disponibles sont incomplètes et parfois contradictoires.",
+        "Le serveur KR reçoit souvent les patchs avant les autres serveurs.",
+        "Les performances varient fortement selon le stuff, l’ERP, les accessoires et la maîtrise du joueur.",
+        "Le classement Raid DPS reste le moins fiable, car il dépend du boss, de la hitbox, des immunités et de la composition.",
+        "Les noms français vides dans characters.js sont indiqués comme “Nom français à compléter”.",
+    ],
+};

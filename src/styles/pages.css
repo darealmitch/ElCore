@@ -255,7 +255,7 @@
     filter: drop-shadow(0 28px 34px rgba(0, 0, 0, 0.55));
 }
 
-/*Page builds*/
+/*Page Configurations*/
 .filter-bar {
     display: flex;
     flex-wrap: wrap;
@@ -802,7 +802,7 @@
     display: none;
 }
 
-/*Builds liés*/
+/*Configurations liés*/
 .related-builds-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -863,6 +863,20 @@
 .tier-entry-card p {
     color: var(--text-muted);
     line-height: 1.6;
+}
+.tier-entry-chibi {
+    display: block;
+    width: 5.5rem;
+    height: 5.5rem;
+    margin: 0 0 0.8rem auto;
+    object-fit: contain;
+    filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.45));
+}
+.tier-entry-card small {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--text-muted);
+    font-weight: 800;
 }
 
 /*Page guides*/

@@ -14,7 +14,7 @@ function BuildDetailPage() {
                     <h1>Build introuvable</h1>
                     <p>Le build demandé n’existe pas dans la base ElCore.</p>
                     <Link className="btn-primary" to="/builds">
-                        Retour aux builds
+                        Retour aux Configurations
                     </Link>
                 </section>
             </main>
@@ -26,7 +26,7 @@ function BuildDetailPage() {
         <main className="page">
             <section className="build-detail-hero" style={{borderColor: theme.primary, boxShadow: `0 0 38px ${theme.glow}`}}>
                 <Link className="back-link" to="/builds">
-                    ← Retour aux builds
+                    ← Retour aux Configurations
                 </Link>
                 <span className="build-detail-mode" style={{backgroundColor: theme.glow, color: theme.primary}}>
           {build.mode}

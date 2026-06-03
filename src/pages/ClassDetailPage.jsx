@@ -160,7 +160,7 @@ function ClassDetailPage() {
                     <h1 style={{ color: theme.primary }}>{classItem.classNameFr || classItem.className}</h1>
                     <p className="class-detail-subtitle">{classItem.character} — {classItem.pathNameFr || classItem.pathName}</p>
                     <p>Nom international : <strong>{classItem.className}</strong></p>
-                    <p>Cette fiche sert à détailler le rôle, les compétences, les builds, les rotations et les conseils de progression de cette spécialisation.</p>
+                    <p>Cette fiche sert à détailler le rôle, les compétences, les configurations, les rotations et les conseils de progression de cette spécialisation.</p>
                 </div>
 
                 <div className="class-detail-visual">
@@ -264,7 +264,7 @@ function ClassDetailPage() {
                 </article>
 
                 <article className="detail-card wide builds-card">
-                    <h2>Builds liés à cette classe</h2>
+                    <h2>Configurations liés à cette classe</h2>
                     {relatedBuilds.length > 0 ? (
                         <div className="related-builds-grid">
                             {relatedBuilds.map((build) => <BuildCard key={build.id} build={build} />)}
