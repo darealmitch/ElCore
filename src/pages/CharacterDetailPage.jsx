@@ -7,7 +7,6 @@ import { builds } from "../data/builds";
 import SkillTree from "../components/ui/SkillTree";
 import { characterMechanics } from "../data/characterMechanics";
 import { classSkills } from "../data/skills/index.js";
-import { useEffect } from "react";
 
 function renderAuraText(text) {
     if (!text) return null;
@@ -79,9 +78,6 @@ function CharacterMechanicCard({ characterMechanic }) {
 function CharacterDetailPage() {
     const { id } = useParams();
     const character = characters.find((item) => item.id === id);
-    useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }, [id]);
 
     if (!character) {
         return (
