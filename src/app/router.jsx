@@ -5,6 +5,7 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../components/layout/MainLayout";
+import ErrorPage from "../pages/ErrorPage";
 
 const HomePage = lazy(() => import("../pages/HomePage"));
 const CharactersPage = lazy(() => import("../pages/CharactersPage"));
@@ -17,11 +18,13 @@ const LorePage = lazy(() => import("../pages/LorePage"));
 const LoreChapterPage = lazy(() => import("../pages/LoreChapterPage"));
 const ClassesPage = lazy(() => import("../pages/ClassesPage"));
 const ClassDetailPage = lazy(() => import("../pages/ClassDetailPage"));
+const NotFoundPage = lazy(() => import("../pages/NotFoundPage"));
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout />,
+        errorElement: <ErrorPage />,
         children: [
             { index: true, element: <HomePage /> },
             { path: "personnages", element: <CharactersPage /> },
@@ -35,6 +38,7 @@ export const router = createBrowserRouter([
             { path: "classes", element: <ClassesPage /> },
             { path: "classes/:characterId/:classId", element: <ClassDetailPage /> },
             { path: "classes/:characterId/:classId/:stage", element: <ClassDetailPage /> },
+            { path: "*", element: <NotFoundPage /> },
         ],
     },
 ]);
