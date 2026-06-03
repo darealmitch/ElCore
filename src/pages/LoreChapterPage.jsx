@@ -7,6 +7,12 @@ function LoreChapterPage() {
     const chapter = loreChapters.find((item) => item.id === chapterId);
     const [activeImage, setActiveImage] = useState(null);
     const [isSectionNavOpen, setIsSectionNavOpen] = useState(false);
+    const [showNextChapterButton, setShowNextChapterButton] = useState(false);
+    const sortedChapters = [...loreChapters].sort((a, b) => a.order - b.order);
+    const currentChapterIndex = sortedChapters.findIndex((item) => item.id === chapterId);
+    const previousChapter = currentChapterIndex > 0 ? sortedChapters[currentChapterIndex - 1] : null;
+    const nextChapter = currentChapterIndex >= 0 ? sortedChapters[currentChapterIndex + 1] : null;
+    const isLastChapter = currentChapterIndex === sortedChapters.length - 1;
 
     useEffect(() => {
         if (!activeImage) return undefined;
@@ -16,7 +22,6 @@ function LoreChapterPage() {
                 setActiveImage(null);
             }
         };
-
         document.body.style.overflow = "hidden";
         window.addEventListener("keydown", handleKeyDown);
         return () => {
@@ -24,6 +29,28 @@ function LoreChapterPage() {
             window.removeEventListener("keydown", handleKeyDown);
         };
     }, [activeImage]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const body = document.querySelector(".lore-chapter-detail-body");
+
+            if (!body) {
+                setShowNextChapterButton(false);
+                return;
+            }
+            const bodyBottom = body.getBoundingClientRect().bottom;
+            const triggerPoint = window.innerHeight + 80;
+
+            setShowNextChapterButton(bodyBottom <= triggerPoint);
+        };
+        handleScroll();
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        window.addEventListener("resize", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleScroll);
+        };
+    }, [chapterId]);
 
     if (!chapter) {
         return (
@@ -45,8 +72,7 @@ function LoreChapterPage() {
             className="page lore-page lore-chapter-page"
             style={{
                 "--lore-page-bg": `url(${chapter.mapBackground})`,
-            }}
-        >
+            }}>
             <section className="lore-chapter-detail-hero">
                 <Link className="back-link lore-back-link" to="/lore">
                     ← Retour au lore
@@ -59,17 +85,9 @@ function LoreChapterPage() {
                 </div>
             </section>
             {chapter.sections.some((section) => section.id) && (
-                <nav
-                    className={`lore-section-selector ${isSectionNavOpen ? "open" : ""}`}
-                    aria-label="Sélection rapide des villages"
-                >
-                    <button
-                        className="lore-section-selector-toggle"
-                        type="button"
-                        onClick={() => setIsSectionNavOpen((current) => !current)}
-                        aria-expanded={isSectionNavOpen}
-                    >
-                        Sélectionner un village
+                <nav className={`lore-section-selector ${isSectionNavOpen ? "open" : ""}`} aria-label="Navigation rapide du chapitre">
+                    <button className="lore-section-selector-toggle" type="button" onClick={() => setIsSectionNavOpen((current) => !current)} aria-expanded={isSectionNavOpen}>
+                        Explorer les sections
                         <span aria-hidden="true">{isSectionNavOpen ? "×" : "→"}</span>
                     </button>
 
@@ -91,63 +109,71 @@ function LoreChapterPage() {
             )}
             <section className="lore-chapter-detail-body">
                 {chapter.sections.map((section, index) => {
-                    const hasImage = Boolean(section.image);
-                    const imagePositionClass =
-                        hasImage && index % 2 === 1 ? "image-left" : "image-right";
-
+                    const sectionImages = section.images || (section.image ? [section.image] : []);
+                    const hasImage = sectionImages.length > 0;
+                    const hasMultipleImages = sectionImages.length > 1;
+                    const hasCarouselImages = sectionImages.length >= 5;
+                    const imagePositionClass = hasMultipleImages ? "image-gallery" : hasImage && index % 2 === 1 ? "image-left" : "image-right";
 
                     return (
-                        <article
-                            className={`lore-text-block ${hasImage ? imagePositionClass : ""}`}
-                            id={section.id}
-                            key={section.title}
-                        >
+                        <article className={`lore-text-block ${hasImage ? imagePositionClass : ""}`} id={section.id} key={section.id || section.title}>
                             <div className="lore-text-copy">
                                 <h2>{section.title}</h2>
-
                                 {section.paragraphs.map((paragraph) => (
                                     <p key={paragraph}>{paragraph}</p>
                                 ))}
-
-                                {section.note && (
-                                    <p className="lore-section-note">{section.note}</p>
-                                )}
+                                {section.note && <p className="lore-section-note">{section.note}</p>}
                             </div>
-
-                            {section.image && (
-                                <figure className="lore-section-image">
-                                    <button
-                                        className="lore-section-image-button"
-                                        type="button"
-                                        onClick={() => setActiveImage(section.image)}
-                                        aria-label={`Agrandir l’image : ${section.image.alt}`}
-                                    >
-                                        <img src={section.image.src} alt={section.image.alt} />
-                                        <span className="lore-image-zoom-label">Agrandir</span>
-                                    </button>
-
-                                    {section.image.caption && (
-                                        <figcaption>{section.image.caption}</figcaption>
-                                    )}
-                                </figure>
+                            {hasImage && (
+                                <div className={`lore-section-images ${hasMultipleImages ? "multiple" : "single"} ${hasCarouselImages ? "carousel" : ""}`}>
+                                    {sectionImages.map((image) => (
+                                        <figure className="lore-section-image" key={image.src}>
+                                            <button className="lore-section-image-button" type="button" onClick={() => setActiveImage(image)} aria-label={`Agrandir l’image : ${image.alt}`}>
+                                                <img src={image.src} alt={image.alt} />
+                                                <span className="lore-image-zoom-label">Agrandir</span>
+                                            </button>
+                                            {image.caption && <figcaption>{image.caption}</figcaption>}
+                                        </figure>
+                                    ))}
+                                </div>
                             )}
                         </article>
                     );
                 })}
             </section>
+            {(previousChapter || nextChapter || isLastChapter) && (
+                <div className={`lore-chapter-navigation ${showNextChapterButton ? "visible" : ""}`}>
+                    {previousChapter && (
+                        <Link className="lore-chapter-navigation-button previous" to={`/lore/${previousChapter.id}`} aria-label={`Aller au chapitre précédent : ${previousChapter.title}`}>
+                            <small aria-hidden="true">←</small>
+                            <span>Chapitre précédent</span>
+                            <strong>{previousChapter.title}</strong>
+                        </Link>
+                    )}
 
+                    {nextChapter ? (
+                        <Link className="lore-chapter-navigation-button next" to={`/lore/${nextChapter.id}`} aria-label={`Aller au chapitre suivant : ${nextChapter.title}`}>
+                            <span>Chapitre suivant</span>
+                            <strong>{nextChapter.title}</strong>
+                            <small aria-hidden="true">→</small>
+                        </Link>
+                    ) : (
+                        <Link className="lore-chapter-navigation-button next" to="/lore" aria-label="Retourner à l’accueil du lore">
+                            <span>Fin du lore</span>
+                            <strong>Retour au lore</strong>
+                            <small aria-hidden="true">↩</small>
+                        </Link>
+                    )}
+                </div>
+            )}
             {activeImage && (
                 <div className="lore-image-lightbox" role="dialog" aria-modal="true" aria-label={activeImage.alt} onClick={() => setActiveImage(null)}>
                     <button className="lore-image-lightbox-close" type="button" onClick={() => setActiveImage(null)} aria-label="Fermer l’image agrandie">
                         ×
                     </button>
-
                     <figure className="lore-image-lightbox-content" onClick={(event) => event.stopPropagation()}>
                         <img src={activeImage.src} alt={activeImage.alt} />
-
-                        {activeImage.caption && (
-                            <figcaption>{activeImage.caption}</figcaption>
-                        )}
+                        {activeImage.caption && <figcaption>{activeImage.caption}</figcaption>}
                     </figure>
                 </div>
             )}

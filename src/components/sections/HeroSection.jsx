@@ -5,16 +5,16 @@ function HeroSection() {
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return undefined;
-        const heroSection = canvas.closest(".hero-premium");
+        const heroSection = canvas.closest(".hero");
         const ctx = canvas.getContext("2d");
         if (!ctx || !heroSection) return undefined;
         return undefined;
     }, []);
 
     return (
-        <section className="hero-premium" id="hero-section">
+        <section className="hero" id="hero-section">
             <canvas ref={canvasRef} className="hero-particles-canvas" />
-            <div className="hero-premium-inner">
+            <div className="hero-inner">
                 <div className="hero-content">
                     <span className="hero-badge">
                         <span className="hero-badge-dot" />
@@ -24,14 +24,17 @@ function HeroSection() {
                             Le cœur <br /><span>stratégique</span> <br />d’Elsword
                         </h1>
                             <p>
-                                ElCore est un portail Elsword FR pour comprendre les personnages, explorer les classes, consulter des guides et préparer ses builds.
+                                ElCore est un portail Elsword FR pour comprendre les personnages, explorer les classes, consulter des guides et préparer ses configurations.
                             </p>
                         <div className="hero-actions">
-                            <a href="/guides" className="hero-button primary">
-                                Commencer avec les guides
+                            <a href="#comprendre-elcore" className="hero-button primary" onClick={(event) => {
+                                event.preventDefault();
+                                document.getElementById("comprendre-elcore")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                            }}>
+                                Comprendre Elcore
                             </a>
-                            <a href="/personnages" className="hero-button secondary">
-                                Explorer les personnages
+                            <a href="/guides" className="hero-button secondary">
+                                Commencer avec les guides
                             </a>
                         </div>
                 </div>
@@ -51,7 +54,7 @@ function HeroSection() {
                     </div>
                     <div className="hero-floating-card hero-floating-card-bottom">
                         <strong>PvE / PvP</strong>
-                        <span>Tier lists</span>
+                        <span>Classements</span>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,9 @@
-.app{
+/*Layout global*/
+.app {
     min-height: 100vh;
 }
+
+/*Header*/
 .site-header {
     position: sticky;
     top: 0;
@@ -16,27 +19,7 @@
     box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
     transition: padding 0.3s ease, background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-    @supports (animation-timeline: scroll()) {
-        .site-header {
-            animation: header-scroll linear both;
-            animation-timeline: scroll();
-            animation-range: 0px 100px;
-        }
-    }
-}
-
-@keyframes header-scroll {
-    to {
-        background: rgba(7, 12, 38, 0.95);
-        padding-top: 0.65rem;
-        padding-bottom: 0.65rem;
-        backdrop-filter: blur(24px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-    }
-}
-.logo{
+.logo {
     display: flex;
     align-items: center;
     gap: 0.65rem;
@@ -67,9 +50,9 @@
 .nav-link.active::after {
     content: "";
     position: absolute;
-    left: 0;
     right: 0;
     bottom: -0.45rem;
+    left: 0;
     height: 2px;
     border-radius: 999px;
     background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
@@ -89,21 +72,58 @@
     outline: none;
 }
 .header-actions button {
+    padding: 0.8rem 1.25rem;
     border: 0;
     border-radius: 999px;
-    padding: 0.8rem 1.25rem;
     background: linear-gradient(135deg, #7c5dff, #a855f7);
     color: white;
     font-weight: 900;
     cursor: pointer;
     box-shadow: 0 0 22px rgba(147, 125, 255, 0.35);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .header-actions button:hover {
-    transform: translateY(-1px);
     box-shadow: 0 0 30px rgba(0, 219, 233, 0.32);
 }
+
+/*Recherche globale*/
+.search-box {
+    position: relative;
+}
+.search-results {
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    right: 0;
+    width: min(24rem, 84vw);
+    padding: 0.5rem;
+    border: 1px solid var(--border-soft);
+    border-radius: 1rem;
+    background: rgba(15, 23, 42, 0.96);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+.search-result {
+    display: grid;
+    gap: 0.2rem;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+}
+.search-result:hover {
+    background: rgba(96, 165, 250, 0.12);
+}
+.search-result span {
+    color: #93c5fd;
+    font-size: 0.72rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.search-result strong {
+    color: #fff;
+}
+.search-result small {
+    color: var(--text-muted);
+}
+
+/*Footer*/
 .site-footer {
     margin-top: 4rem;
     padding: 2rem 5%;
@@ -135,60 +155,8 @@
     margin: 1rem 0 0;
     font-size: 0.9rem;
 }
-@media (max-width: 1050px) {
-    .site-header {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-    .nav-links {
-        flex-wrap: wrap;
-    }
-    .header-actions {
-        width: 100%;
-    }
-    .header-actions input {
-        flex: 1;
-        width: 100%;
-    }
-}
-/*Recherche globale*/
-.search-box {
-    position: relative;
-}
-.search-results {
-    position: absolute;
-    top: calc(100% + 0.6rem);
-    right: 0;
-    width: min(24rem, 84vw);
-    padding: 0.5rem;
-    border: 1px solid var(--border-soft);
-    border-radius: 1rem;
-    background: rgba(15, 23, 42, 0.96);
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(18px);
-}
-.search-result {
-    display: grid;
-    gap: 0.2rem;
-    padding: 0.8rem;
-    border-radius: 0.8rem;
-}
-.search-result:hover {
-    background: rgba(96, 165, 250, 0.12);
-}
-.search-result span {
-    color: #93c5fd;
-    font-size: 0.72rem;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-.search-result strong {
-    color: #fff;
-}
-.search-result small {
-    color: var(--text-muted);
-}
-/* Bouton de retour en haut */
+
+/*Bouton de retour en haut*/
 .scroll-top-button {
     position: fixed;
     right: 1.4rem;
@@ -211,68 +179,35 @@
     box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34), 0 0 22px rgba(147, 125, 255, 0.32);
     transition: opacity 0.2s ease, transform 0.2s ease, filter 0.2s ease;
 }
-
 .scroll-top-button.visible {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0) scale(1);
 }
-
 .scroll-top-button:hover {
-    filter: brightness(1.08);
     transform: translateY(-2px) scale(1.02);
+    filter: brightness(1.08);
 }
 
-/* Décalage des ancres sous le header sticky */
+/*Décalage des ancres sous le header sticky*/
 [id] {
     scroll-margin-top: 6rem;
 }
 
-@media (max-width: 620px) {
-    .scroll-top-button {
-        right: 1rem;
-        bottom: 1rem;
-        width: 2.75rem;
-        height: 2.75rem;
-    }
-}
-
-/* =========================
-   Barre de progression de lecture
-   ========================= */
+/*Barre de progression de lecture*/
 #scroll-progress {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
     width: 100%;
     height: 4px;
     background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-    transform-origin: 0 50%;
     transform: scaleX(0);
-    z-index: 100;
+    transform-origin: 0 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    @supports (animation-timeline: scroll()) {
-        #scroll-progress {
-            animation: grow-progress auto linear;
-            animation-timeline: scroll();
-        }
-    }
-}
-
-@keyframes grow-progress {
-    from {
-        transform: scaleX(0);
-    }
-    to {
-        transform: scaleX(1);
-    }
-}
-
-/* =========================
-   Boutons et Ripple effect
-   ========================= */
+/*Boutons et Ripple effect*/
 .btn-primary,
 .header-actions button,
 .character-card-link,
@@ -283,13 +218,13 @@
 .stage-tab {
     position: relative;
     overflow: hidden;
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
-                filter 0.25s ease, 
-                box-shadow 0.25s ease, 
-                background 0.25s ease, 
-                border-color 0.25s ease;
+    transition:
+            transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+            filter 0.25s ease,
+            box-shadow 0.25s ease,
+            background 0.25s ease,
+            border-color 0.25s ease;
 }
-
 .btn-primary:hover,
 .header-actions button:hover,
 .character-card-link:hover,
@@ -300,7 +235,6 @@
     transform: translateY(-2px) scale(1.03);
     filter: brightness(1.1);
 }
-
 .btn-primary:active,
 .header-actions button:active,
 .character-card-link:active,
@@ -308,8 +242,6 @@
 .hero-button:active {
     transform: translateY(0) scale(0.97);
 }
-
-/* Pseudo-élément pour effet Ripple en pur CSS */
 .btn-primary::after,
 .header-actions button::after,
 .character-card-link::after,
@@ -321,13 +253,12 @@
     left: 50%;
     width: 200%;
     height: 200%;
-    background: rgba(255, 255, 255, 0.25);
     border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
+    background: rgba(255, 255, 255, 0.25);
     opacity: 0;
     pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
 }
-
 .btn-primary:active::after,
 .header-actions button:active::after,
 .character-card-link:active::after,
@@ -336,14 +267,72 @@
     animation: ripple 0.4s ease-out;
 }
 
-@keyframes ripple {
+/*Animations*/
+@keyframes header-scroll {
+    to {
+        padding-top: 0.65rem;
+        padding-bottom: 0.65rem;
+        background: rgba(7, 12, 38, 0.95);
+        backdrop-filter: blur(24px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+}
+@keyframes grow-progress {
     from {
-        transform: translate(-50%, -50%) scale(0);
-        opacity: 0.6;
+        transform: scaleX(0);
     }
     to {
-        transform: translate(-50%, -50%) scale(1);
+        transform: scaleX(1);
+    }
+}
+@keyframes ripple {
+    from {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
         opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
     }
 }
 
+/*Scroll animations*/
+@media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+        .site-header {
+            animation: header-scroll linear both;
+            animation-timeline: scroll();
+            animation-range: 0px 100px;
+        }
+        #scroll-progress {
+            animation: grow-progress auto linear;
+            animation-timeline: scroll();
+        }
+    }
+}
+
+/*Responsive*/
+@media (max-width: 1050px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+    }
+    .header-actions {
+        width: 100%;
+    }
+    .header-actions input {
+        flex: 1;
+        width: 100%;
+    }
+}
+@media (max-width: 620px) {
+    .scroll-top-button {
+        right: 1rem;
+        bottom: 1rem;
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+}

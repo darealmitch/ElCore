@@ -33,7 +33,7 @@ const quickGuideCards = [
     {
         id: "builds",
         icon: "⚔️",
-        title: "Builds",
+        title: "Configurations",
         description: "Préparer l’optimisation après le choix de classe.",
         href: "/builds",
         isRoute: true,

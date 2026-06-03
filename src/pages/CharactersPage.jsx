@@ -41,7 +41,7 @@ function CharactersPage() {
                 </div>
                 <div className="characters-page-summary">
                     <strong>{characters.length}</strong>
-                    <span>personnages disponibles</span>
+                    <span>Personnages disponibles</span>
                 </div>
             </section>
 

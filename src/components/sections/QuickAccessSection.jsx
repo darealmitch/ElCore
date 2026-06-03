@@ -38,7 +38,7 @@ function QuickAccessSection() {
             <section className="home-section quick-access-section" id="quick-access">
                 <div className="section-header">
 
-                    <section className="home-section home-intent-section">
+                    <section className="home-section home-intent-section" id="comprendre-elcore">
                         <article className="home-intent-banner">
                             <div className="home-intent-orb" aria-hidden="true" />
 
@@ -48,7 +48,7 @@ function QuickAccessSection() {
                                 <p>
                                     ElCore ne sert pas seulement à lister des personnages. Le site t’aide à lire
                                     Elsword dans le bon ordre : comprendre les systèmes, identifier le rôle d’un
-                                    personnage, puis comparer les spécialisations avant d’optimiser ton build.
+                                    personnage, puis comparer les spécialisations avant d’optimiser ton configuration.
                                 </p>
                             </div>
 

@@ -1,12 +1,8 @@
-/* =========================
-   Lore — Page catalogue
-========================= */
-
+/*Lore — Page catalogue*/
 .lore-page {
     display: grid;
     gap: 1.5rem;
 }
-
 .lore-hero {
     position: relative;
     overflow: hidden;
@@ -19,7 +15,6 @@
             rgba(15, 23, 42, 0.58);
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.24);
 }
-
 .lore-hero > span {
     display: inline-flex;
     margin-bottom: 0.6rem;
@@ -29,27 +24,22 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
-
 .lore-hero h1,
 .lore-hero p {
     max-width: 54rem;
 }
-
 .lore-hero p {
     margin-top: 1rem;
 }
-
 .lore-chapters-section {
     display: grid;
     gap: 1rem;
 }
-
 .lore-chapters-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
 }
-
 .lore-chapter-card {
     position: relative;
     display: grid;
@@ -69,7 +59,6 @@
             border-color 0.2s ease,
             box-shadow 0.2s ease;
 }
-
 .lore-chapter-card:hover {
     transform: translateY(-4px);
     border-color: rgba(96, 165, 250, 0.42);
@@ -77,7 +66,6 @@
             0 18px 38px rgba(0, 0, 0, 0.28),
             0 0 18px rgba(96, 165, 250, 0.1);
 }
-
 .lore-chapter-order {
     display: grid;
     place-items: center;
@@ -90,14 +78,12 @@
     font-size: 0.9rem;
     font-weight: 1000;
 }
-
 .lore-chapter-content {
     display: grid;
     align-content: start;
     gap: 0.45rem;
     min-width: 0;
 }
-
 .lore-chapter-eyebrow {
     color: var(--text-muted);
     font-size: 0.72rem;
@@ -105,24 +91,18 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
-
 .lore-chapter-content h3 {
     margin: 0;
     color: #fff;
     font-size: 1.35rem;
 }
-
 .lore-chapter-content p {
     margin: 0;
     color: var(--text-soft);
     line-height: 1.65;
 }
 
-
-/* =========================
-   Lore — Page détail chapitre
-========================= */
-
+/*Lore — Page détail chapitre*/
 .lore-chapter-page {
     position: relative;
     isolation: isolate;
@@ -134,7 +114,6 @@
     background-position: center;
     background-attachment: fixed;
 }
-
 .lore-chapter-page::before {
     content: "";
     position: fixed;
@@ -145,7 +124,6 @@
             radial-gradient(circle at bottom left, rgba(168, 85, 247, 0.12), transparent 26rem);
     pointer-events: none;
 }
-
 .lore-chapter-detail-hero {
     position: relative;
     overflow: hidden;
@@ -158,12 +136,10 @@
     backdrop-filter: blur(10px);
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
 }
-
 .lore-back-link {
     position: relative;
     z-index: 2;
 }
-
 .lore-chapter-detail-content {
     position: relative;
     z-index: 2;
@@ -172,7 +148,6 @@
     max-width: 58rem;
     margin-top: 4rem;
 }
-
 .lore-chapter-detail-content > span {
     width: fit-content;
     padding: 0.42rem 0.75rem;
@@ -185,11 +160,9 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
-
 .lore-chapter-detail-content h1 {
     color: #fff;
 }
-
 .lore-chapter-detail-content p {
     max-width: 48rem;
     margin: 0;
@@ -197,17 +170,12 @@
     font-size: 1.05rem;
     line-height: 1.75;
 }
-
 .lore-chapter-detail-body {
     display: grid;
     gap: 1.1rem;
 }
 
-
-/* =========================
-   Lore — Blocs narratifs illustrés
-========================= */
-
+/*Lore — Blocs narratifs illustrés*/
 .lore-text-block {
     position: relative;
     display: grid;
@@ -222,35 +190,30 @@
             rgba(5, 8, 22, 0.74);
     backdrop-filter: blur(12px);
     box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22);
+    scroll-margin-top: 7rem;
 }
-
 .lore-text-block.image-right,
 .lore-text-block.image-left {
     grid-template-columns: minmax(0, 1.08fr) minmax(18rem, 0.72fr);
     align-items: center;
 }
-
 .lore-text-block.image-left {
     grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1.08fr);
 }
-
 .lore-text-block.image-left .lore-section-image {
     grid-column: 1;
     grid-row: 1;
 }
-
 .lore-text-block.image-left .lore-text-copy {
     grid-column: 2;
     grid-row: 1;
 }
-
 .lore-text-copy {
     position: relative;
     min-width: 0;
     max-width: 58rem;
     padding-left: 1rem;
 }
-
 .lore-text-copy::before {
     content: "";
     position: absolute;
@@ -259,13 +222,8 @@
     left: 0;
     width: 2px;
     border-radius: 999px;
-    background: linear-gradient(
-            180deg,
-            rgba(96, 165, 250, 0.7),
-            rgba(168, 85, 247, 0.22)
-    );
+    background: linear-gradient(180deg, rgba(96, 165, 250, 0.7), rgba(168, 85, 247, 0.22));
 }
-
 .lore-text-copy h2 {
     margin: 0 0 1rem;
     color: #fff;
@@ -273,37 +231,29 @@
     line-height: 1.05;
     letter-spacing: -0.035em;
 }
-
 .lore-text-copy p {
-    margin: 0;
     max-width: 52rem;
+    margin: 0;
     color: rgba(226, 232, 240, 0.84);
     font-size: 1rem;
     line-height: 1.82;
 }
-
 .lore-text-copy p:first-of-type {
     color: #fff;
     font-size: 1.08rem;
     font-weight: 800;
     line-height: 1.65;
 }
-
 .lore-text-copy p + p {
     margin-top: 0.65rem;
 }
-
 .lore-section-note {
     margin-top: 1rem !important;
     color: var(--text-muted) !important;
     font-style: italic;
 }
 
-
-/* =========================
-   Lore — Images de section
-========================= */
-
+/*Lore — Images de section*/
 .lore-section-image {
     overflow: hidden;
     margin: 0;
@@ -312,18 +262,16 @@
     background: rgba(2, 6, 23, 0.42);
     box-shadow: 0 18px 38px rgba(0, 0, 0, 0.26);
 }
-
 .lore-section-image-button {
     position: relative;
     display: block;
     width: 100%;
-    padding: 0;
     overflow: hidden;
+    padding: 0;
     border: none;
     background: transparent;
     cursor: zoom-in;
 }
-
 .lore-section-image-button img {
     display: block;
     width: 100%;
@@ -333,12 +281,10 @@
             transform 0.22s ease,
             filter 0.22s ease;
 }
-
 .lore-section-image-button:hover img {
     transform: scale(1.035);
     filter: brightness(1.08);
 }
-
 .lore-section-image figcaption {
     padding: 0.7rem 0.85rem;
     color: var(--text-muted);
@@ -346,7 +292,6 @@
     font-weight: 800;
     line-height: 1.45;
 }
-
 .lore-image-zoom-label {
     position: absolute;
     right: 0.75rem;
@@ -365,16 +310,64 @@
             transform 0.2s ease;
 }
 
-.lore-section-image-button:hover .lore-image-zoom-label {
-    opacity: 1;
-    transform: translateY(0);
+/*Lore — Galeries d’images multiples*/
+.lore-text-block.image-gallery {
+    grid-template-columns: 1fr;
+}
+.lore-text-block.image-gallery .lore-text-copy {
+    max-width: 58rem;
+}
+.lore-text-block.image-gallery .lore-section-images {
+    width: 100%;
+}
+.lore-section-images {
+    display: grid;
+    gap: 0.9rem;
+    min-width: 0;
+}
+.lore-section-images.single {
+    grid-template-columns: 1fr;
+}
+.lore-section-images.multiple {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    align-items: stretch;
+}
+.lore-section-images.multiple .lore-section-image {
+    height: 100%;
+}
+.lore-section-images.multiple .lore-section-image-button {
+    height: 22rem;
+    padding: 0.75rem;
+    background:
+            radial-gradient(circle at 50% 45%, rgba(96, 165, 250, 0.08), transparent 14rem),
+            rgba(2, 6, 22, 0.36);
+}
+.lore-section-images.multiple .lore-section-image-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+}
+.lore-section-images.multiple .lore-section-image figcaption {
+    min-height: 3.2rem;
+}
+.lore-section-images.carousel {
+    display: flex;
+    gap: 0.9rem;
+    overflow-x: auto;
+    padding-bottom: 0.45rem;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+}
+.lore-section-images.carousel .lore-section-image {
+    flex: 0 0 min(15.5rem, 78vw);
+    scroll-snap-align: start;
+}
+.lore-section-images.carousel .lore-section-image-button {
+    height: 22rem;
 }
 
-
-/* =========================
-   Lore — Lightbox
-========================= */
-
+/*Lore — Lightbox*/
 .lore-image-lightbox {
     position: fixed;
     inset: 0;
@@ -385,7 +378,6 @@
     background: rgba(2, 6, 23, 0.86);
     backdrop-filter: blur(12px);
 }
-
 .lore-image-lightbox-close {
     position: fixed;
     top: 1rem;
@@ -403,7 +395,6 @@
     font-weight: 700;
     cursor: pointer;
 }
-
 .lore-image-lightbox-content {
     display: grid;
     gap: 0.8rem;
@@ -411,7 +402,6 @@
     max-height: 88vh;
     margin: 0;
 }
-
 .lore-image-lightbox-content img {
     display: block;
     max-width: 100%;
@@ -422,17 +412,14 @@
     background: rgba(2, 6, 23, 0.5);
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.44);
 }
-
 .lore-image-lightbox-content figcaption {
     color: var(--text-soft);
-    text-align: center;
     font-size: 0.85rem;
     font-weight: 800;
+    text-align: center;
 }
-/* =========================
-   Lore — Sélecteur de villages
-========================= */
 
+/*Lore — Sélecteur de sections*/
 .lore-section-selector {
     position: sticky;
     top: 5.5rem;
@@ -449,7 +436,6 @@
     backdrop-filter: blur(12px);
     box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
 }
-
 .lore-section-selector-toggle {
     position: relative;
     z-index: 2;
@@ -475,7 +461,6 @@
             border-color 0.18s ease,
             background 0.18s ease;
 }
-
 .lore-section-selector-toggle:hover {
     transform: translateY(-1px);
     border-color: rgba(96, 165, 250, 0.55);
@@ -483,7 +468,6 @@
             radial-gradient(circle at top right, rgba(96, 165, 250, 0.22), transparent 9rem),
             rgba(30, 41, 59, 0.92);
 }
-
 .lore-section-selector-toggle span {
     display: grid;
     place-items: center;
@@ -495,7 +479,6 @@
     font-size: 0.95rem;
     line-height: 1;
 }
-
 .lore-section-selector-list {
     display: flex;
     flex: 1;
@@ -511,26 +494,21 @@
             opacity 0.22s ease,
             transform 0.22s ease;
 }
-
 .lore-section-selector.open .lore-section-selector-list {
     opacity: 1;
     transform: translateX(0);
     pointer-events: auto;
 }
-
 .lore-section-selector-list::-webkit-scrollbar {
     height: 0.4rem;
 }
-
 .lore-section-selector-list::-webkit-scrollbar-track {
     background: transparent;
 }
-
 .lore-section-selector-list::-webkit-scrollbar-thumb {
     border-radius: 999px;
     background: rgba(148, 163, 184, 0.32);
 }
-
 .lore-section-selector-link {
     flex: 0 0 auto;
     display: inline-flex;
@@ -552,7 +530,6 @@
             background 0.18s ease,
             color 0.18s ease;
 }
-
 .lore-section-selector-link:hover {
     transform: translateY(-1px);
     border-color: rgba(96, 165, 250, 0.42);
@@ -560,33 +537,96 @@
     color: #fff;
 }
 
-.lore-text-block {
-    scroll-margin-top: 7rem;
+/*Lore — Navigation entre chapitres*/
+.lore-chapter-navigation {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 5.5rem;
+    z-index: 40;
+    display: flex;
+    gap: 0.7rem;
+    max-width: min(38rem, calc(100vw - 2rem));
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(0.75rem);
+    transition:
+            opacity 0.22s ease,
+            transform 0.22s ease;
+}
+.lore-chapter-navigation.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.lore-chapter-navigation-button {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 0.7rem;
+    row-gap: 0.12rem;
+    min-width: 0;
+    max-width: 18rem;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 1rem;
+    background: rgba(5, 8, 22, 0.72);
+    color: #fff;
+    text-decoration: none;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
+    transition:
+            border-color 0.22s ease,
+            background 0.22s ease;
+}
+.lore-chapter-navigation-button:hover {
+    border-color: rgba(96, 165, 250, 0.36);
+    background: rgba(15, 23, 42, 0.86);
+}
+.lore-chapter-navigation-button span {
+    grid-column: 2;
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.lore-chapter-navigation-button strong {
+    grid-column: 2;
+    overflow: hidden;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 900;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.lore-chapter-navigation-button small {
+    grid-row: 1 / span 2;
+    color: var(--text-soft);
+    font-size: 1.25rem;
+    font-weight: 1000;
+}
+.lore-chapter-navigation-button.previous small {
+    grid-column: 1;
+}
+.lore-chapter-navigation-button.next small {
+    grid-column: 3;
 }
 
-/* =========================
-   Lore — Responsive
-========================= */
-
+/*Lore — Responsive*/
 @media (max-width: 900px) {
     .lore-chapter-page {
         background-attachment: scroll;
     }
-
     .lore-chapters-grid,
     .lore-text-block.image-right,
     .lore-text-block.image-left {
         grid-template-columns: 1fr;
     }
-
     .lore-text-block.image-left .lore-section-image,
     .lore-text-block.image-left .lore-text-copy {
         grid-column: auto;
         grid-row: auto;
     }
-}
-.lore-text-block {
-    scroll-margin-top: 7rem;
 }
 @media (max-width: 620px) {
     .lore-hero,
@@ -595,29 +635,41 @@
     .lore-text-block {
         padding: 1rem;
     }
-
     .lore-chapter-card {
         grid-template-columns: 1fr;
     }
-
     .lore-chapter-detail-hero {
         border-radius: 1.4rem;
     }
-
     .lore-text-copy {
         padding-left: 0.8rem;
     }
-
     .lore-image-lightbox {
         padding: 1rem;
     }
-
     .lore-image-lightbox-close {
         top: 0.75rem;
         right: 0.75rem;
     }
-
     .lore-image-lightbox-content img {
         border-radius: 0.9rem;
+    }
+    .lore-section-images.multiple:not(.carousel) {
+        grid-template-columns: 1fr;
+    }
+    .lore-section-images.carousel .lore-section-image {
+        flex-basis: min(16rem, 82vw);
+    }
+    .lore-chapter-navigation {
+        right: 1rem;
+        bottom: 5rem;
+        left: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: none;
+    }
+    .lore-chapter-navigation-button {
+        max-width: none;
+        padding: 0.7rem 0.8rem;
     }
 }
