@@ -72,7 +72,7 @@ function GuidesPage() {
                         <div className="guides-ariel-glow" />
                         <img
                             className="guides-ariel-image"
-                            src="/images/home/ariel.png"
+                            src="/images/home/ariel.webp"
                             alt=""
                         />
                         <span className="guides-floating-card guides-floating-card-1">Guides</span>

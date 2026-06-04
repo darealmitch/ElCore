@@ -303,7 +303,7 @@ export const tierList = [
                         characterName: "Elsword",
                         classNameFr: "Chevalier Royal",
                         classNameInternational: "Knight Emperor",
-                        chibiImage: "/images/chibi/KnightEmperorChibi.png",
+                        chibiImage: "/images/chibi/KnightEmperorChibi.webp",
                         role: "DPS simple / corps à corps",
                         reason: "Bon candidat pour débuter grâce à un rôle lisible, du clear et une prise en main directe.",
                         conditions: "Moins universel en endgame selon le contenu.",

@@ -1,6 +1,6 @@
 export const transcendenceGuide = {
     title: "Transcendance",
-    logo: "/images/master/Trans.png",
+    logo: "/images/master/Trans.webp",
     summary:
         "À partir du niveau 70, une deuxième spécialisation peut accéder à la transcendance. " +
         "Elle ne remplace pas la spécialisation actuelle : elle l'améliore en prolongeant l'arbre de compétences avec de nouvelles compétences, dont certaines peuvent être scellées. " +

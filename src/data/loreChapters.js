@@ -20,7 +20,7 @@ export const loreChapters = [
                     "Le Royaume des Elians naquit alors et prit soin de l’El, jusqu’au jour où celui-ci explosa. Ses fragments furent dispersés à travers Élios et donnèrent naissance à plusieurs villages, régions et royaumes.",
                 ],
                 image: {
-                    src: "/images/lore/06/MappaElios.png",
+                    src: "/images/lore/06/MappaElios.webp",
                     alt: "Carte du monde d’Élios",
                     caption: "Élios, un monde dont l’équilibre s’est construit autour de l’énergie de l’El.",
                 },
@@ -46,7 +46,7 @@ export const loreChapters = [
                     "Une fois les mondes créés, Elria envoya la déesse Ismaël afin de veiller sur le nouveau monde.",
                 ],
                 image: {
-                    src: "/images/lore/02/Story3.png",
+                    src: "/images/lore/02/Story3.webp",
                     alt: "Monde matériel créé autour de l’El",
                     caption: "Le monde matériel prend forme, traversé par l’énergie de l’El.",
                 },
@@ -66,12 +66,12 @@ export const loreChapters = [
                 ],
                 images: [
                     {
-                        src: "/images/lore/02/cristal.png",
+                        src: "/images/lore/02/cristal.webp",
                         alt: "Cristal d’El",
                         caption: "Le Cristal d’El, le joyau dont l’énergie fit renaître Élios.",
                     },
                     {
-                        src: "/images/lore/02/Lore-2.png",
+                        src: "/images/lore/02/Lore-2.webp",
                         alt: "L’El apportant la vie à la terre",
                         caption: "L’El répand son énergie sur la terre et marque le début d’un monde vivant.",
                     }
@@ -88,7 +88,7 @@ export const loreChapters = [
                     "Grâce à cette séparation, le monde matériel put se développer sous la protection de l’El.",
                 ],
                 image: {
-                    src: "/images/lore/02/ishmael.png",
+                    src: "/images/lore/02/ishmael.webp",
                     alt: "Ismaël",
                     caption: "Ismaël, figure divine liée à la protection du monde matériel."
                 },
@@ -105,17 +105,17 @@ export const loreChapters = [
                 ],
                 images: [
                     {
-                        src: "/images/lore/02/Ancient_Phoru.png",
+                        src: "/images/lore/02/Ancient_Phoru.webp",
                         alt: "Ancien Porou",
                         caption: "Ancien Porou, une bête liée à la protection de l’El.",
                     },
                     {
-                        src: "/images/lore/02/eun.png",
+                        src: "/images/lore/02/eun.webp",
                         alt: "Eun",
                         caption: "Eun, une bête spirituelle ancienne scellée dans une relique.",
                     },
                     {
-                        src: "/images/lore/02/NephilimLord.png",
+                        src: "/images/lore/02/NephilimLord.webp",
                         alt: "Nephilim Lord",
                         caption: "Nephilim Lord, une entité ancienne liée aux esprits et aux territoires.",
                     },
@@ -133,7 +133,7 @@ export const loreChapters = [
                     "Ils finirent par trouver un moyen de passer d’Élios au Royaume des Démons, où ils résident désormais.",
                 ],
                 image: {
-                    src: "/images/lore/02/chloe.png",
+                    src: "/images/lore/02/chloe.webp",
                     alt: "Chloé",
                     caption: "Chloé, une Elfe Noire liée au Royaume des Démons.",
                 },
@@ -159,7 +159,7 @@ export const loreChapters = [
                     "Cette gemme permit aux océans, aux plantes et à la nature de s’épanouir, devenant plus tard connue sous le nom d’El.",
                 ],
                 image: {
-                    src: "/images/lore/02/ishmael.png",
+                    src: "/images/lore/02/ishmael.webp",
                     alt: "Ismaël",
                     caption: "Ismaël, la déesse qui veilla sur le monde matériel et envoya l’El sur la terre.",
                 },
@@ -176,7 +176,7 @@ export const loreChapters = [
                     "Depuis cet événement, les habitants commencèrent à vénérer la Dame de l’El comme celle qui maintient et stabilise le pouvoir de l’El.",
                 ],
                 image: {
-                    src: "/images/lore/03/el-lady.png",
+                    src: "/images/lore/03/el-lady.webp",
                     alt: "Dame de l’El",
                     caption: "La Dame de l’El, figure bénie par Ismaël pour stabiliser l’El.",
                 },
@@ -192,7 +192,7 @@ export const loreChapters = [
                     "Les Maîtres de l’El agirent comme ses chevaliers gardiens, et l’Ordre de l’El fut formé au cœur du royaume restauré.",
                 ],
                 image: {
-                    src: "/images/lore/03/El_Masters.jpg",
+                    src: "/images/lore/03/El_Masters.webp",
                     alt: "Ordre de l’El",
                     caption: "L’Ordre de l’El fut formé pour protéger la Dame de l’El et préserver l’équilibre du monde.",
                 },
@@ -209,7 +209,7 @@ export const loreChapters = [
                     "Il revient alors à la Dame de l’El de maintenir le cristal stable et de l’empêcher de se briser.",
                 ],
                 image: {
-                    src: "/images/lore/03/Lore-4.jpg",
+                    src: "/images/lore/03/Lore-4.webp",
                     alt: "Fête de l’Harmonie",
                     caption: "La Fête de l’Harmonie, un moment de paix où l’El devient pourtant particulièrement instable.",
                 },
@@ -227,32 +227,32 @@ export const loreChapters = [
                 ],
                 images: [
                     {
-                        src: "/images/lore/07/artea.png",
+                        src: "/images/lore/07/artea.webp",
                         alt: "Artea",
                         caption: "Artea, Prêtresse de l’El de la Terre.",
                     },
                     {
-                        src: "/images/lore/07/sasha.png",
+                        src: "/images/lore/07/sasha.webp",
                         alt: "Sasha",
                         caption: "Sasha, Prêtresse de l’El de l’Eau.",
                     },
                     {
-                        src: "/images/lore/07/anduran.png",
+                        src: "/images/lore/07/anduran.webp",
                         alt: "Anduran",
                         caption: "Anduran, Prêtresse de l’El du Vent.",
                     },
                     {
-                        src: "/images/lore/07/ignia.png",
+                        src: "/images/lore/07/ignia.webp",
                         alt: "Ignia",
                         caption: "Ignia, Prêtresse de l’El du Feu.",
                     },
                     {
-                        src: "/images/lore/07/gloria.png",
+                        src: "/images/lore/07/gloria.webp",
                         alt: "Gloria",
                         caption: "Gloria, Prêtresse de l’El du Soleil.",
                     },
                     {
-                        src: "/images/lore/07/darkmoon.png",
+                        src: "/images/lore/07/darkmoon.webp",
                         alt: "Darkmoon",
                         caption: "Darkmoon, Prêtresse de l’El de la Lune.",
                     },
@@ -270,7 +270,7 @@ export const loreChapters = [
                     "Ainsi naquit un cycle où chaque Dame de l’El devait préserver l’équilibre du monde en portant seule le poids de l’El.",
                 ],
                 image: {
-                    src: "/images/lore/03/Chapter_27_Quest_1-8.png",
+                    src: "/images/lore/03/Chapter_27_Quest_1-8.webp",
                     alt: "Solace tenant la Dame de l’El",
                     caption: "La Dame de l’El, au cœur d’un cycle où protection et sacrifice deviennent indissociables.",
                 },
@@ -297,12 +297,12 @@ export const loreChapters = [
                 ],
                 images: [
                     {
-                        src: "/images/lore/04/Solace5.png",
+                        src: "/images/lore/04/Solace5.webp",
                         alt: "Fenriart à 27 ans",
                         caption: "Fenriart à 27 ans, devenu le Maître de l’El du Soleil sous le nom de Solace.",
                     },
                     {
-                        src: "/images/lore/04/ElLady2.png",
+                        src: "/images/lore/04/ElLady2.webp",
                         alt: "Hernia à 15 ans",
                         caption: "Hernia à 15 ans, avant que son destin ne soit lié à celui de la Dame de l’El.",
                     },
@@ -320,7 +320,7 @@ export const loreChapters = [
                     "Mais Hernia refusa de fuir son devoir, affirmant qu’elle ne pouvait pas faire passer son propre bonheur avant celui du monde.",
                 ],
                 image: {
-                    src: "/images/lore/03/26-story.jpg",
+                    src: "/images/lore/03/26-story.webp",
                     alt: "Solace et la Dame de l’El",
                     caption: "Solace face au destin de la Dame de l’El, partagé entre devoir, amour et sacrifice.",
                 },
@@ -338,7 +338,7 @@ export const loreChapters = [
                     "L’El explosa alors, se brisant en millions de fragments dispersés à travers Élios et même dans d’autres dimensions.",
                 ],
                 image: {
-                    src: "/images/lore/04/El_Tower_Explosion.png",
+                    src: "/images/lore/04/El_Tower_Explosion.webp",
                     alt: "Explosion de l’El",
                     caption: "L’Explosion de l’El, la catastrophe qui brisa le cristal et dispersa ses fragments à travers Élios.",
                 },
@@ -354,7 +354,7 @@ export const loreChapters = [
                     "Depuis ce lieu chaotique, il chercha un moyen de revenir à Élios et d’accomplir sa mission.",
                 ],
                 image: {
-                    src: "/images/personnages/ain.png",
+                    src: "/images/personnages/ain.webp",
                     alt: "Ainchase Ishmael",
                     caption: "Ain, l’agent envoyé par Ismaël pour restaurer l’El avant d’être projeté dans Henir.",
                 },
@@ -468,7 +468,7 @@ export const loreChapters = [
         title: "Les régions principales",
         eyebrow: "Voyage",
         summary: "Présenter les lieux importants traversés pendant l’aventure et leur place dans l’histoire.",
-        mapBackground: "/images/lore/06/MappaElios.png",
+        mapBackground: "/images/lore/06/MappaElios.webp",
         sections: [
             {
                 title: "Un monde façonné par l’El",
@@ -487,7 +487,7 @@ export const loreChapters = [
                 ],
                 note: "La suite présente les villages et régions majeures du continent d’Élios, dans l’ordre où ils accompagnent le début de l’aventure.",
                 image: {
-                    src: "/images/lore/06/MappaElios.png",
+                    src: "/images/lore/06/MappaElios.webp",
                     alt: "Carte du continent d’Élios",
                     caption: "Le continent d’Élios",
                 },
@@ -504,7 +504,7 @@ export const loreChapters = [
                 ],
                 note: "À Ruben, tout commence simplement : un arbre sacré, un vol, et les premiers pas d’un voyage qui dépassera vite les frontières du village.",
                 image: {
-                    src: "/images/lore/06/ruben.png",
+                    src: "/images/lore/06/ruben.webp",
                     alt: "Village de Ruben",
                     caption: "Ruben, le premier village de l’aventure.",
                 },
@@ -523,7 +523,7 @@ export const loreChapters = [
                 ],
                 note: "À Elder, l’aventure prend une forme plus humaine : derrière les murailles et les progrès de la ville, les ambitions commencent déjà à troubler l’ordre établi.",
                 image: {
-                    src: "/images/lore/06/elder.png",
+                    src: "/images/lore/06/elder.webp",
                     alt: "Village d’Elder",
                     caption: "Elder, une ville prospère marquée par l’autorité de Lord Robo.",
                 },
@@ -541,7 +541,7 @@ export const loreChapters = [
                 ],
                 note: "À Besma, le voyage quitte les routes familières pour s’enfoncer dans une région plus sauvage, où même les peuples paisibles semblent perdre leur équilibre.",
                 image: {
-                    src: "/images/lore/06/besma.png",
+                    src: "/images/lore/06/besma.webp",
                     alt: "Village de Besma",
                     caption: "Besma, une région désertique du nord-est d’Élios marquée par la tribu des Sauriens.",
                 },
@@ -559,7 +559,7 @@ export const loreChapters = [
                 ],
                 note: "À Altera, le monde semble changer de visage : la nature laisse place aux machines, et les secrets enfouis commencent à remonter à la surface.",
                 image: {
-                    src: "/images/lore/06/altera.png",
+                    src: "/images/lore/06/altera.webp",
                     alt: "Village d’Altera",
                     caption: "Altera, une île flottante mystérieuse habitée par les Pongos et marquée par la technologie nasod.",
                 },
@@ -576,7 +576,7 @@ export const loreChapters = [
                 ],
                 note: "À Parte, le voyage perd peu à peu son air d’expédition et commence à prendre la forme d’une véritable menace.",
                 image: {
-                    src: "/images/lore/06/parte.png",
+                    src: "/images/lore/06/parte.webp",
                     alt: "Région de Parte",
                     caption: "Parte, une vallée isolée et ravagée menant au Royaume de Belder.",
                 },
@@ -593,7 +593,7 @@ export const loreChapters = [
                 ],
                 note: "À Belder, l’aventure bascule dans la guerre ouverte : il ne s’agit plus seulement de suivre une menace, mais de faire face à un royaume déjà tombé.",
                 image: {
-                    src: "/images/lore/06/camp.png",
+                    src: "/images/lore/06/camp.webp",
                     alt: "Camp de refuge de Belder",
                     caption: "Belder, un royaume envahi dont les survivants se rassemblent aux frontières.",
                 },
@@ -611,7 +611,7 @@ export const loreChapters = [
                 ],
                 note: "À Hamel, l’eau n’est plus seulement un symbole de vie : elle devient le reflet d’une cité brisée, encore debout malgré l’ombre qui l’envahit.",
                 image: {
-                    src: "/images/lore/06/hamel.png",
+                    src: "/images/lore/06/hamel.webp",
                     alt: "Ville de Hamel",
                     caption: "Hamel, la cité de l’eau et capitale du duché de Senace.",
                 },
@@ -628,7 +628,7 @@ export const loreChapters = [
                 ],
                 note: "À Sander, le désert ne cache pas seulement des ruines : il dissimule aussi des tensions anciennes, portées par le vent et les traces laissées sous le sable.",
                 image: {
-                    src: "/images/lore/06/sander.png",
+                    src: "/images/lore/06/sander.webp",
                     alt: "Ville de Sander",
                     caption: "Sander, la ville du sable située au sud d’Élios.",
                 },
@@ -646,7 +646,7 @@ export const loreChapters = [
                 ],
                 note: "À Ranox, la chaleur ne vient pas seulement du feu : elle annonce une tension prête à éclater sous la surface.",
                 image: {
-                    src: "/images/lore/06/ranox.png",
+                    src: "/images/lore/06/ranox.webp",
                     alt: "Village de Ranox",
                     caption: "Ranox, un village marqué par l’Eldrit du feu et les fissures de lave.",
                 },
@@ -661,7 +661,7 @@ export const loreChapters = [
                 ],
                 note: "Même au cœur d’une région instable, Ranox conserve quelques lieux capables d’apaiser le voyageur.",
                 image: {
-                    src: "/images/lore/06/CharmingGeyser2.png",
+                    src: "/images/lore/06/CharmingGeyser2.webp",
                     alt: "Ravissant geyser",
                     caption: "Le Ravissant geyser, une source chaude de Ranox.",
                 },
@@ -678,7 +678,7 @@ export const loreChapters = [
                 ],
                 note: "À la Station d’Atlas, le voyage semble ralentir un instant, mais chaque minerai transporté rappelle que l’énergie d’Élios repose aussi sur des rouages invisibles.",
                 image: {
-                    src: "/images/lore/06/atlas.png",
+                    src: "/images/lore/06/atlas.webp",
                     alt: "Station d’Atlas",
                     caption: "La Station d’Atlas, un point de passage futuriste lié au minerai de Décion.",
                 },
@@ -695,7 +695,7 @@ export const loreChapters = [
                 ],
                 note: "À Élysion, le voyage quitte les terres connues d’Élios pour entrer dans un monde artificiel, suspendu entre miracle technologique et vérité dissimulée.",
                 image: {
-                    src: "/images/lore/06/elysion.png",
+                    src: "/images/lore/06/elysion.webp",
                     alt: "Élysion",
                     caption: "Élysion, un paradis artificiel créé par les Debrians pour les Nasods.",
                 },
@@ -712,7 +712,7 @@ export const loreChapters = [
                 ],
                 note: "À Élyanod, le passé ne dort plus sous les ruines : il revient avec ses réponses, mais aussi avec une menace capable de s’étendre bien au-delà de la cité.",
                 image: {
-                    src: "/images/lore/06/elyanod.png",
+                    src: "/images/lore/06/elyanod.webp",
                     alt: "Élyanod",
                     caption: "Élyanod, l’ancienne capitale des Elians où se croisent l’énergie de l’El et le pouvoir de Henir.",
                 },
@@ -727,7 +727,7 @@ export const loreChapters = [
                 ],
                 note: "À partir de ce point, l’aventure ne consiste plus seulement à restaurer l’équilibre d’Élios : elle pousse le groupe à affronter l’origine même des menaces venues d’ailleurs.",
                 image: {
-                    src: "/images/lore/06/demon-realm.png",
+                    src: "/images/lore/06/demon-realm.webp",
                     alt: "Monde démoniaque",
                     caption: "Le monde démoniaque, nouvelle frontière du voyage après Élyanod.",
                 },
@@ -745,7 +745,7 @@ export const loreChapters = [
                 ],
                 note: "À Varnimyr, le monde démoniaque ne se présente pas comme une simple terre ennemie : il ressemble plutôt à un reflet brisé d’un foyer qui aurait perdu l’El.",
                 image: {
-                    src: "/images/lore/06/varnimyr.jpg",
+                    src: "/images/lore/06/varnimyr.webp",
                     alt: "Varnimyr",
                     caption: "Varnimyr, première grande région traversée dans le monde démoniaque.",
                 },
@@ -762,7 +762,7 @@ export const loreChapters = [
                 ],
                 note: "À Pruinaum, le monde démoniaque ne se contente plus d’être hostile : il semble cacher ses propres lignes de front sous la glace.",
                 image: {
-                    src: "/images/lore/06/camp-aurora.png",
+                    src: "/images/lore/06/camp-aurora.webp",
                     alt: "Camp Aurora",
                     caption: "Camp Aurora, une base cachée sous les falaises de Pruinaum.",
                 },
@@ -780,7 +780,7 @@ export const loreChapters = [
                 ],
                 note: "À Tirnog, le monde démoniaque cesse d’être seulement hostile ou militaire : il devient séduisant, étrange, et presque trop beau pour être honnête.",
                 image: {
-                    src: "/images/lore/06/magmelia.png",
+                    src: "/images/lore/06/magmelia.webp",
                     alt: "Magmélia",
                     caption: "Magmélia, le village de Tirnog où résident les démons des rêves.",
                 },
@@ -805,32 +805,32 @@ export const loreChapters = [
                 ],
                 images: [
                     {
-                        src: "/images/lore/07/denif.png",
+                        src: "/images/lore/07/denif.webp",
                         alt: "Denif",
                         caption: "Denif, Maître de l’El de l’Eau.",
                     },
                     {
-                        src: "/images/lore/07/ventus.png",
+                        src: "/images/lore/07/ventus.webp",
                         alt: "Ventus",
                         caption: "Ventus, Maître de l’El du Vent.",
                     },
                     {
-                        src: "/images/lore/07/gajar.png",
+                        src: "/images/lore/07/gajar.webp",
                         alt: "Gajar",
                         caption: "Gajar, Maître de l’El de la Terre.",
                     },
                     {
-                        src: "/images/lore/07/rossou.png",
+                        src: "/images/lore/07/rossou.webp",
                         alt: "Rosso",
                         caption: "Rosso, Maître de l’El du Feu.",
                     },
                     {
-                        src: "/images/lore/07/solace.png",
+                        src: "/images/lore/07/solace.webp",
                         alt: "Solace",
                         caption: "Solace, Maître de l’El du Soleil.",
                     },
                     {
-                        src: "/images/lore/07/ebalon.png",
+                        src: "/images/lore/07/ebalon.webp",
                         alt: "Ebalon",
                         caption: "Ebalon, Maître de l’El de la Lune.",
                     },
@@ -860,32 +860,32 @@ export const loreChapters = [
                 ],
                 images: [
                     {
-                        src: "/images/lore/07/artea.png",
+                        src: "/images/lore/07/artea.webp",
                         alt: "Artea",
                         caption: "Artea, Prêtresse de l’El de la Terre.",
                     },
                     {
-                        src: "/images/lore/07/sasha.png",
+                        src: "/images/lore/07/sasha.webp",
                         alt: "Sasha",
                         caption: "Sasha, Prêtresse de l’El de l’Eau.",
                     },
                     {
-                        src: "/images/lore/07/anduran.png",
+                        src: "/images/lore/07/anduran.webp",
                         alt: "Anduran",
                         caption: "Anduran, Prêtresse de l’El du Vent.",
                     },
                     {
-                        src: "/images/lore/07/ignia.png",
+                        src: "/images/lore/07/ignia.webp",
                         alt: "Ignia",
                         caption: "Ignia, Prêtresse de l’El du Feu.",
                     },
                     {
-                        src: "/images/lore/07/gloria.png",
+                        src: "/images/lore/07/gloria.webp",
                         alt: "Gloria",
                         caption: "Gloria, Prêtresse de l’El du Soleil.",
                     },
                     {
-                        src: "/images/lore/07/darkmoon.png",
+                        src: "/images/lore/07/darkmoon.webp",
                         alt: "Darkmoon",
                         caption: "Darkmoon, Prêtresse de l’El de la Lune.",
                     },
@@ -902,7 +902,7 @@ export const loreChapters = [
                     "Ce retour marque une nouvelle étape pour Élios, car les figures anciennes du monde reprennent leur place face aux menaces modernes.",
                 ],
                 image: {
-                    src: "/images/lore/07/master-road.png",
+                    src: "/images/lore/07/master-road.webp",
                     alt: "Master Road",
                     caption: "Master Road, le lieu où les Maîtres de l’El reprennent leur rôle auprès des héros.",
                 },
@@ -927,7 +927,7 @@ export const loreChapters = [
                     "Son pouvoir altère l’espace, le temps et la vie elle-même.",
                 ],
                 image: {
-                    src: "/images/lore/08/henir.png",
+                    src: "/images/lore/08/henir.webp",
                     alt: "Dimension de Henir",
                     caption: "Henir, une dimension de chaos où l’espace, le temps et la vie se déforment.",
                 },
@@ -955,7 +955,7 @@ export const loreChapters = [
                     "Sous son influence, plusieurs seigneurs démons furent rassemblés afin d’étendre leur domination.",
                 ],
                 image: {
-                    src: "/images/lore/06/demon-realm.png",
+                    src: "/images/lore/06/demon-realm.webp",
                     alt: "Royaume des Démons",
                     caption: "Le Royaume des Démons, un monde brutal né en miroir du monde matériel.",
                 },
@@ -973,17 +973,17 @@ export const loreChapters = [
                 ],
                 images: [
                     {
-                        src: "/images/lore/08/stirbargen.png",
+                        src: "/images/lore/08/stirbargen.webp",
                         alt: "Stirbargen",
                         caption: "Stirbargen, le Roi Démon Rouge.",
                     },
                     {
-                        src: "/images/lore/08/aegirp.png",
+                        src: "/images/lore/08/aegirp.webp",
                         alt: "Aegirp",
                         caption: "Aegirp, la Reine du Fantôme Blanc.",
                     },
                     {
-                        src: "/images/lore/08/lu.png",
+                        src: "/images/lore/08/lu.webp",
                         alt: "Luiciela",
                         caption: "Luiciela, la Reine d'Acier",
                     }

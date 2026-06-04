@@ -32,7 +32,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Sword Knight",
         classNameFr: "Chevalier de l'épée",
-        fileName: "elsword-sword-knight.png"
+        fileName: "elsword-sword-knight.webp"
     }),
     createClassImage({
         characterId: "elsword",
@@ -42,7 +42,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Lord Knight",
         classNameFr: "Haut Chevalier",
-        fileName: "elsword-lord-knight.png"
+        fileName: "elsword-lord-knight.webp"
     }),
     createClassImage({
         characterId: "elsword",
@@ -52,7 +52,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Knight Emperor",
         classNameFr: "Chevalier Royal",
-        fileName: "elsword-knight-emperor.png"
+        fileName: "elsword-knight-emperor.webp"
     }),
     createClassImage({
         characterId: "elsword",
@@ -62,7 +62,7 @@ export const classImages = [
         jobStage: "master",
         className: "Knight Emperor",
         classNameFr: "Chevalier Royal",
-        fileName: "elsword-knight-emperor-master.png"
+        fileName: "elsword-knight-emperor-master.webp"
     }),
 
     createClassImage({
@@ -73,7 +73,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Magic Knight",
         classNameFr: "Chevalier Mage",
-        fileName: "elsword-magic-knight.png"
+        fileName: "elsword-magic-knight.webp"
     }),
     createClassImage({
         characterId: "elsword",
@@ -83,7 +83,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Rune Knight",
         classNameFr: "Chevalier Runique",
-        fileName: "elsword-rune-knight.png"
+        fileName: "elsword-rune-knight.webp"
     }),
     createClassImage({
         characterId: "elsword",
@@ -93,7 +93,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Rune Master",
         classNameFr: "Maître des runes",
-        fileName: "elsword-rune-master.png"
+        fileName: "elsword-rune-master.webp"
     }),
     createClassImage({
         characterId: "elsword",
@@ -103,7 +103,7 @@ export const classImages = [
         jobStage: "master",
         className: "Rune Master",
         classNameFr: "Maître des runes",
-        fileName: "elsword-rune-master-master.png"
+        fileName: "elsword-rune-master-master.webp"
     }),
 
     createClassImage({
@@ -114,7 +114,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Sheath Knight",
         classNameFr: "Chevalier de Cornwell",
-        fileName: "elsword-sheath-knight.png"
+        fileName: "elsword-sheath-knight.webp"
     }),
     createClassImage({
         characterId: "elsword",
@@ -124,7 +124,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Infinity Sword",
         classNameFr: "Invocateur d'épées",
-        fileName: "elsword-infinity-sword.png"
+        fileName: "elsword-infinity-sword.webp"
     }),
     createClassImage({
         characterId: "elsword",
@@ -134,7 +134,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Immortal",
         classNameFr: "Immortel",
-        fileName: "elsword-immortal.png"
+        fileName: "elsword-immortal.webp"
     }),
     createClassImage({
         characterId: "elsword",
@@ -144,7 +144,7 @@ export const classImages = [
         jobStage: "master",
         className: "Immortal",
         classNameFr: "Immortel",
-        fileName: "elsword-immortal-master.png"
+        fileName: "elsword-immortal-master.webp"
     }),
 
     createClassImage({
@@ -155,7 +155,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Root Knight",
         classNameFr: "Bénitier",
-        fileName: "elsword-root-knight.png"
+        fileName: "elsword-root-knight.webp"
     }),
     createClassImage({
         characterId: "elsword",
@@ -165,7 +165,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Sacred Templar",
         classNameFr: "Templier",
-        fileName: "elsword-sacred-templar.png"
+        fileName: "elsword-sacred-templar.webp"
     }),
     createClassImage({
         characterId: "elsword",
@@ -175,7 +175,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Genesis",
         classNameFr: "Séphiroth",
-        fileName: "elsword-genesis.png"
+        fileName: "elsword-genesis.webp"
     }),
     createClassImage({
         characterId: "elsword",
@@ -185,7 +185,7 @@ export const classImages = [
         jobStage: "master",
         className: "Genesis",
         classNameFr: "Séphiroth",
-        fileName: "elsword-genesis-master.png"
+        fileName: "elsword-genesis-master.webp"
     }),
 
     createClassImage({
@@ -196,7 +196,7 @@ export const classImages = [
         jobStage: "job1",
         className: "High Magician",
         classNameFr: "Archimage",
-        fileName: "aisha-high-magician.png"
+        fileName: "aisha-high-magician.webp"
     }),
     createClassImage({
         characterId: "aisha",
@@ -206,7 +206,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Elemental Master",
         classNameFr: "Maîtresse des éléments",
-        fileName: "aisha-elemental-master.png"
+        fileName: "aisha-elemental-master.webp"
     }),
     createClassImage({
         characterId: "aisha",
@@ -216,7 +216,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Aether Sage",
         classNameFr: "Étheriste",
-        fileName: "aisha-aether-sage.png"
+        fileName: "aisha-aether-sage.webp"
     }),
     createClassImage({
         characterId: "aisha",
@@ -226,7 +226,7 @@ export const classImages = [
         jobStage: "master",
         className: "Aether Sage",
         classNameFr: "Étheriste",
-        fileName: "aisha-aether-sage-master.png"
+        fileName: "aisha-aether-sage-master.webp"
     }),
 
     createClassImage({
@@ -237,7 +237,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Dark Magician",
         classNameFr: "Magicienne de l'occulte",
-        fileName: "aisha-dark-magician.png"
+        fileName: "aisha-dark-magician.webp"
     }),
     createClassImage({
         characterId: "aisha",
@@ -247,7 +247,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Void Princess",
         classNameFr: "Princesse des âmes",
-        fileName: "aisha-void-princess.png"
+        fileName: "aisha-void-princess.webp"
     }),
     createClassImage({
         characterId: "aisha",
@@ -257,7 +257,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Oz Sorcerer",
         classNameFr: "Magicienne d'Oz",
-        fileName: "aisha-oz-sorcerer.png"
+        fileName: "aisha-oz-sorcerer.webp"
     }),
     createClassImage({
         characterId: "aisha",
@@ -267,7 +267,7 @@ export const classImages = [
         jobStage: "master",
         className: "Oz Sorcerer",
         classNameFr: "Magicienne d'Oz",
-        fileName: "aisha-oz-sorcerer-master.png"
+        fileName: "aisha-oz-sorcerer-master.webp"
     }),
 
     createClassImage({
@@ -278,7 +278,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Battle Magician",
         classNameFr: "Mage de bataille",
-        fileName: "aisha-battle-magician.png"
+        fileName: "aisha-battle-magician.webp"
     }),
     createClassImage({
         characterId: "aisha",
@@ -288,7 +288,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Dimension Witch",
         classNameFr: "Sorcière dimensionnelle",
-        fileName: "aisha-dimension-witch.png"
+        fileName: "aisha-dimension-witch.webp"
     }),
     createClassImage({
         characterId: "aisha",
@@ -298,7 +298,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Metamorphy",
         classNameFr: "Métamorphia",
-        fileName: "aisha-metamorphy.png"
+        fileName: "aisha-metamorphy.webp"
     }),
     createClassImage({
         characterId: "aisha",
@@ -308,7 +308,7 @@ export const classImages = [
         jobStage: "master",
         className: "Metamorphy",
         classNameFr: "Métamorphia",
-        fileName: "aisha-metamorphy-master.png"
+        fileName: "aisha-metamorphy-master.webp"
     }),
 
     createClassImage({
@@ -319,7 +319,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Wiz Magician",
         classNameFr: "Wiz Magician",
-        fileName: "aisha-wiz-magician.png"
+        fileName: "aisha-wiz-magician.webp"
     }),
     createClassImage({
         characterId: "aisha",
@@ -329,7 +329,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Mystic Alchemist",
         classNameFr: "Mystic Alchemist",
-        fileName: "aisha-mystic-alchemist.png"
+        fileName: "aisha-mystic-alchemist.webp"
     }),
     createClassImage({
         characterId: "aisha",
@@ -339,7 +339,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Lord Azoth",
         classNameFr: "Druidesse d'Azoth",
-        fileName: "aisha-lord-azoth.png"
+        fileName: "aisha-lord-azoth.webp"
     }),
     createClassImage({
         characterId: "aisha",
@@ -349,7 +349,7 @@ export const classImages = [
         jobStage: "master",
         className: "Lord Azoth",
         classNameFr: "Druidesse d'Azoth",
-        fileName: "aisha-lord-azoth-master.png"
+        fileName: "aisha-lord-azoth-master.webp"
     }),
 
     createClassImage({
@@ -360,7 +360,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Combat Ranger",
         classNameFr: "Guerrière archère",
-        fileName: "rena-combat-ranger.png"
+        fileName: "rena-combat-ranger.webp"
     }),
     createClassImage({
         characterId: "rena",
@@ -370,7 +370,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Wind Sneaker",
         classNameFr: "Voyageuse du vent",
-        fileName: "rena-wind-sneaker.png"
+        fileName: "rena-wind-sneaker.webp"
     }),
     createClassImage({
         characterId: "rena",
@@ -380,7 +380,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Anemos",
         classNameFr: "Anemos",
-        fileName: "rena-anemos.png"
+        fileName: "rena-anemos.webp"
     }),
     createClassImage({
         characterId: "rena",
@@ -390,7 +390,7 @@ export const classImages = [
         jobStage: "master",
         className: "Anemos",
         classNameFr: "Anemos",
-        fileName: "rena-anemos-master.png"
+        fileName: "rena-anemos-master.webp"
     }),
 
     createClassImage({
@@ -401,7 +401,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Sniping Ranger",
         classNameFr: "Chasseresse",
-        fileName: "rena-sniping-ranger.png"
+        fileName: "rena-sniping-ranger.webp"
     }),
     createClassImage({
         characterId: "rena",
@@ -411,7 +411,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Grand Archer",
         classNameFr: "Maîtresse-archère",
-        fileName: "rena-grand-archer.png"
+        fileName: "rena-grand-archer.webp"
     }),
     createClassImage({
         characterId: "rena",
@@ -421,7 +421,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Daybreaker",
         classNameFr: "Aube",
-        fileName: "rena-daybreaker.png"
+        fileName: "rena-daybreaker.webp"
     }),
     createClassImage({
         characterId: "rena",
@@ -431,7 +431,7 @@ export const classImages = [
         jobStage: "master",
         className: "Daybreaker",
         classNameFr: "Aube",
-        fileName: "rena-daybreaker-master.png"
+        fileName: "rena-daybreaker-master.webp"
     }),
 
     createClassImage({
@@ -442,7 +442,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Trapping Ranger",
         classNameFr: "Guerrière d'Erendil",
-        fileName: "rena-trapping-ranger.png"
+        fileName: "rena-trapping-ranger.webp"
     }),
     createClassImage({
         characterId: "rena",
@@ -452,7 +452,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Night Watcher",
         classNameFr: "Ombre sylvestre",
-        fileName: "rena-night-watcher.png"
+        fileName: "rena-night-watcher.webp"
     }),
     createClassImage({
         characterId: "rena",
@@ -462,7 +462,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Twilight",
         classNameFr: "Crépuscule",
-        fileName: "rena-twilight.png"
+        fileName: "rena-twilight.webp"
     }),
     createClassImage({
         characterId: "rena",
@@ -472,7 +472,7 @@ export const classImages = [
         jobStage: "master",
         className: "Twilight",
         classNameFr: "Crépuscule",
-        fileName: "rena-twilight-master.png"
+        fileName: "rena-twilight-master.webp"
     }),
 
     createClassImage({
@@ -483,7 +483,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Poetic Ranger",
         classNameFr: "Poétesse archère",
-        fileName: "rena-poetic-ranger.png"
+        fileName: "rena-poetic-ranger.webp"
     }),
     createClassImage({
         characterId: "rena",
@@ -493,7 +493,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Tale Spinner",
         classNameFr: "Tisseuse d'histoires",
-        fileName: "rena-tale-spinner.png"
+        fileName: "rena-tale-spinner.webp"
     }),
     createClassImage({
         characterId: "rena",
@@ -503,7 +503,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Prophetess",
         classNameFr: "Prophétesse",
-        fileName: "rena-prophetess.png"
+        fileName: "rena-prophetess.webp"
     }),
     createClassImage({
         characterId: "rena",
@@ -513,7 +513,7 @@ export const classImages = [
         jobStage: "master",
         className: "Prophetess",
         classNameFr: "Prophétesse",
-        fileName: "rena-prophetess-master.png"
+        fileName: "rena-prophetess-master.webp"
     }),
 
     createClassImage({
@@ -524,7 +524,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Sword Taker",
         classNameFr: "Porteur d'épée",
-        fileName: "raven-sword-taker.png"
+        fileName: "raven-sword-taker.webp"
     }),
     createClassImage({
         characterId: "raven",
@@ -534,7 +534,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Blade Master",
         classNameFr: "Maître de l'épée",
-        fileName: "raven-blade-master.png"
+        fileName: "raven-blade-master.webp"
     }),
     createClassImage({
         characterId: "raven",
@@ -544,7 +544,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Furious Blade",
         classNameFr: "Lame furieuse",
-        fileName: "raven-furious-blade.png"
+        fileName: "raven-furious-blade.webp"
     }),
     createClassImage({
         characterId: "raven",
@@ -554,7 +554,7 @@ export const classImages = [
         jobStage: "master",
         className: "Furious Blade",
         classNameFr: "Lame furieuse",
-        fileName: "raven-furious-blade-master.png"
+        fileName: "raven-furious-blade-master.webp"
     }),
 
     createClassImage({
@@ -565,7 +565,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Over Taker",
         classNameFr: "Porteur de lame",
-        fileName: "raven-over-taker.png"
+        fileName: "raven-over-taker.webp"
     }),
     createClassImage({
         characterId: "raven",
@@ -575,7 +575,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Reckless Fist",
         classNameFr: "Poing de feu",
-        fileName: "raven-reckless-fist.png"
+        fileName: "raven-reckless-fist.webp"
     }),
     createClassImage({
         characterId: "raven",
@@ -585,7 +585,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Rage Hearts",
         classNameFr: "Cœur enragé",
-        fileName: "raven-rage-hearts.png"
+        fileName: "raven-rage-hearts.webp"
     }),
     createClassImage({
         characterId: "raven",
@@ -595,7 +595,7 @@ export const classImages = [
         jobStage: "master",
         className: "Rage Hearts",
         classNameFr: "Cœur enragé",
-        fileName: "raven-rage-hearts-master.png"
+        fileName: "raven-rage-hearts-master.webp"
     }),
 
     createClassImage({
@@ -606,7 +606,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Weapon Taker",
         classNameFr: "Maître de la destinée",
-        fileName: "raven-weapon-taker.png"
+        fileName: "raven-weapon-taker.webp"
     }),
     createClassImage({
         characterId: "raven",
@@ -616,7 +616,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Veteran Commander",
         classNameFr: "Commandant Vétéran",
-        fileName: "raven-veteran-commander.png"
+        fileName: "raven-veteran-commander.webp"
     }),
     createClassImage({
         characterId: "raven",
@@ -626,7 +626,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Nova Imperator",
         classNameFr: "Imperator Nova",
-        fileName: "raven-nova-imperator.png"
+        fileName: "raven-nova-imperator.webp"
     }),
     createClassImage({
         characterId: "raven",
@@ -636,7 +636,7 @@ export const classImages = [
         jobStage: "master",
         className: "Nova Imperator",
         classNameFr: "Imperator Nova",
-        fileName: "raven-nova-imperator-master.png"
+        fileName: "raven-nova-imperator-master.webp"
     }),
 
     createClassImage({
@@ -647,7 +647,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Venom Taker",
         classNameFr: "Venimophore",
-        fileName: "raven-venom-taker.png"
+        fileName: "raven-venom-taker.webp"
     }),
     createClassImage({
         characterId: "raven",
@@ -657,7 +657,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Mutant Reaper",
         classNameFr: "Métalame",
-        fileName: "raven-mutant-reaper.png"
+        fileName: "raven-mutant-reaper.webp"
     }),
     createClassImage({
         characterId: "raven",
@@ -667,7 +667,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Revenant",
         classNameFr: "Âme fatale",
-        fileName: "raven-revenant.png"
+        fileName: "raven-revenant.webp"
     }),
     createClassImage({
         characterId: "raven",
@@ -677,7 +677,7 @@ export const classImages = [
         jobStage: "master",
         className: "Revenant",
         classNameFr: "Âme fatale",
-        fileName: "raven-revenant-master.png"
+        fileName: "raven-revenant-master.webp"
     }),
 
     createClassImage({
@@ -688,7 +688,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Code: Exotic",
         classNameFr: "Vengeresse nasod",
-        fileName: "eve-code-exotic.png"
+        fileName: "eve-code-exotic.webp"
     }),
     createClassImage({
         characterId: "eve",
@@ -698,7 +698,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Code: Nemesis",
         classNameFr: "Némésis nasod",
-        fileName: "eve-code-nemesis.png"
+        fileName: "eve-code-nemesis.webp"
     }),
     createClassImage({
         characterId: "eve",
@@ -708,7 +708,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Code: Ultimate",
         classNameFr: "Nasod ultime",
-        fileName: "eve-code-ultimate.png"
+        fileName: "eve-code-ultimate.webp"
     }),
     createClassImage({
         characterId: "eve",
@@ -718,7 +718,7 @@ export const classImages = [
         jobStage: "master",
         className: "Code: Ultimate",
         classNameFr: "Nasod ultime",
-        fileName: "eve-code-ultimate-master.png"
+        fileName: "eve-code-ultimate-master.webp"
     }),
 
     createClassImage({
@@ -729,7 +729,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Code: Architecture",
         classNameFr: "Espérance nasod",
-        fileName: "eve-code-architecture.png"
+        fileName: "eve-code-architecture.webp"
     }),
     createClassImage({
         characterId: "eve",
@@ -739,7 +739,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Code: Empress",
         classNameFr: "Impératrice Nasod",
-        fileName: "eve-code-empress.png"
+        fileName: "eve-code-empress.webp"
     }),
     createClassImage({
         characterId: "eve",
@@ -749,7 +749,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Code: Esencia",
         classNameFr: "Nasod essentielle",
-        fileName: "eve-code-esencia.png"
+        fileName: "eve-code-esencia.webp"
     }),
     createClassImage({
         characterId: "eve",
@@ -759,7 +759,7 @@ export const classImages = [
         jobStage: "master",
         className: "Code: Esencia",
         classNameFr: "Nasod essentielle",
-        fileName: "eve-code-esencia-master.png"
+        fileName: "eve-code-esencia-master.webp"
     }),
 
     createClassImage({
@@ -770,7 +770,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Code: Electra",
         classNameFr: "Nasod Elektra",
-        fileName: "eve-code-electra.png"
+        fileName: "eve-code-electra.webp"
     }),
     createClassImage({
         characterId: "eve",
@@ -780,7 +780,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Code: Battle Seraph",
         classNameFr: "Séraphin Nasod",
-        fileName: "eve-code-battle-seraph.png"
+        fileName: "eve-code-battle-seraph.webp"
     }),
     createClassImage({
         characterId: "eve",
@@ -790,7 +790,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Code: Sariel",
         classNameFr: "Nasod Sariel",
-        fileName: "eve-code-sariel.png"
+        fileName: "eve-code-sariel.webp"
     }),
     createClassImage({
         characterId: "eve",
@@ -800,7 +800,7 @@ export const classImages = [
         jobStage: "master",
         className: "Code: Sariel",
         classNameFr: "Nasod Sariel",
-        fileName: "eve-code-sariel-master.png"
+        fileName: "eve-code-sariel-master.webp"
     }),
 
     createClassImage({
@@ -811,7 +811,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Code: Unknown",
         classNameFr: "Nasod Incognita",
-        fileName: "eve-code-unknown.png"
+        fileName: "eve-code-unknown.webp"
     }),
     createClassImage({
         characterId: "eve",
@@ -821,7 +821,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Code: Failess",
         classNameFr: "Nasod Absoluta",
-        fileName: "eve-code-failess.png"
+        fileName: "eve-code-failess.webp"
     }),
     createClassImage({
         characterId: "eve",
@@ -831,7 +831,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Code: Antithese",
         classNameFr: "Nasod Antithesa",
-        fileName: "eve-code-antithese.png"
+        fileName: "eve-code-antithese.webp"
     }),
     createClassImage({
         characterId: "eve",
@@ -841,7 +841,7 @@ export const classImages = [
         jobStage: "master",
         className: "Code: Antithese",
         classNameFr: "Nasod Antithesa",
-        fileName: "eve-code-antithese-master.png"
+        fileName: "eve-code-antithese-master.webp"
     }),
 
     createClassImage({
@@ -852,7 +852,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Fury Guardian",
         classNameFr: "Gardien colérique",
-        fileName: "chung-fury-guardian.png"
+        fileName: "chung-fury-guardian.webp"
     }),
     createClassImage({
         characterId: "chung",
@@ -862,7 +862,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Iron Paladin",
         classNameFr: "Paladin adamantium",
-        fileName: "chung-iron-paladin.png"
+        fileName: "chung-iron-paladin.webp"
     }),
     createClassImage({
         characterId: "chung",
@@ -872,7 +872,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Comet Crusader",
         classNameFr: "Chevalier croisé cométaire",
-        fileName: "chung-comet-crusader.png"
+        fileName: "chung-comet-crusader.webp"
     }),
     createClassImage({
         characterId: "chung",
@@ -882,7 +882,7 @@ export const classImages = [
         jobStage: "master",
         className: "Comet Crusader",
         classNameFr: "Chevalier croisé cométaire",
-        fileName: "chung-comet-crusader-master.png"
+        fileName: "chung-comet-crusader-master.webp"
     }),
 
     createClassImage({
@@ -893,7 +893,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Shooting Guardian",
         classNameFr: "Gardien tireur",
-        fileName: "chung-shooting-guardian.png"
+        fileName: "chung-shooting-guardian.webp"
     }),
     createClassImage({
         characterId: "chung",
@@ -903,7 +903,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Deadly Chaser",
         classNameFr: "Flingeur",
-        fileName: "chung-deadly-chaser.png"
+        fileName: "chung-deadly-chaser.webp"
     }),
     createClassImage({
         characterId: "chung",
@@ -913,7 +913,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Fatal Phantom",
         classNameFr: "Fantôme Fatal",
-        fileName: "chung-fatal-phantom.png"
+        fileName: "chung-fatal-phantom.webp"
     }),
     createClassImage({
         characterId: "chung",
@@ -923,7 +923,7 @@ export const classImages = [
         jobStage: "master",
         className: "Fatal Phantom",
         classNameFr: "Fantôme Fatal",
-        fileName: "chung-fatal-phantom-master.png"
+        fileName: "chung-fatal-phantom-master.webp"
     }),
 
     createClassImage({
@@ -934,7 +934,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Shelling Guardian",
         classNameFr: "Gardien artilleur",
-        fileName: "chung-shelling-guardian.png"
+        fileName: "chung-shelling-guardian.webp"
     }),
     createClassImage({
         characterId: "chung",
@@ -944,7 +944,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Tactical Trooper",
         classNameFr: "Canonnier de commando",
-        fileName: "chung-tactical-trooper.png"
+        fileName: "chung-tactical-trooper.webp"
     }),
     createClassImage({
         characterId: "chung",
@@ -954,7 +954,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Centurion",
         classNameFr: "Centurion",
-        fileName: "chung-centurion.png"
+        fileName: "chung-centurion.webp"
     }),
     createClassImage({
         characterId: "chung",
@@ -964,7 +964,7 @@ export const classImages = [
         jobStage: "master",
         className: "Centurion",
         classNameFr: "Centurion",
-        fileName: "chung-centurion-master.png"
+        fileName: "chung-centurion-master.webp"
     }),
 
     createClassImage({
@@ -975,7 +975,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Core Guardian",
         classNameFr: "Gardien des cœurs",
-        fileName: "chung-core-guardian.png"
+        fileName: "chung-core-guardian.webp"
     }),
     createClassImage({
         characterId: "chung",
@@ -985,7 +985,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Divine Phanes",
         classNameFr: "Phanès sacré",
-        fileName: "chung-divine-phanes.png"
+        fileName: "chung-divine-phanes.webp"
     }),
     createClassImage({
         characterId: "chung",
@@ -995,7 +995,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Dius Aer",
         classNameFr: "Dius Aer",
-        fileName: "chung-dius-aer.png"
+        fileName: "chung-dius-aer.webp"
     }),
     createClassImage({
         characterId: "chung",
@@ -1005,7 +1005,7 @@ export const classImages = [
         jobStage: "master",
         className: "Dius Aer",
         classNameFr: "Dius Aer",
-        fileName: "chung-dius-aer-master.png"
+        fileName: "chung-dius-aer-master.webp"
     }),
 
     createClassImage({
@@ -1016,7 +1016,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Little Hsien",
         classNameFr: "Petite Hsien",
-        fileName: "ara-little-hsien.png"
+        fileName: "ara-little-hsien.webp"
     }),
     createClassImage({
         characterId: "ara",
@@ -1026,7 +1026,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Sakra Devanam",
         classNameFr: "Sakra Devanam",
-        fileName: "ara-sakra-devanam.png"
+        fileName: "ara-sakra-devanam.webp"
     }),
     createClassImage({
         characterId: "ara",
@@ -1036,7 +1036,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Apsara",
         classNameFr: "Apsara",
-        fileName: "ara-apsara.png"
+        fileName: "ara-apsara.webp"
     }),
     createClassImage({
         characterId: "ara",
@@ -1046,7 +1046,7 @@ export const classImages = [
         jobStage: "master",
         className: "Apsara",
         classNameFr: "Apsara",
-        fileName: "ara-apsara-master.png"
+        fileName: "ara-apsara-master.webp"
     }),
 
     createClassImage({
@@ -1057,7 +1057,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Little Devil",
         classNameFr: "Diablotin",
-        fileName: "ara-little-devil.png"
+        fileName: "ara-little-devil.webp"
     }),
     createClassImage({
         characterId: "ara",
@@ -1067,7 +1067,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Yama Raja",
         classNameFr: "Yama Raja",
-        fileName: "ara-yama-raja.png"
+        fileName: "ara-yama-raja.webp"
     }),
     createClassImage({
         characterId: "ara",
@@ -1077,7 +1077,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Devi",
         classNameFr: "Devi",
-        fileName: "ara-devi.png"
+        fileName: "ara-devi.webp"
     }),
     createClassImage({
         characterId: "ara",
@@ -1087,7 +1087,7 @@ export const classImages = [
         jobStage: "master",
         className: "Devi",
         classNameFr: "Devi",
-        fileName: "ara-devi-master.png"
+        fileName: "ara-devi-master.webp"
     }),
 
     createClassImage({
@@ -1098,7 +1098,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Little Specter",
         classNameFr: "Petit Spectre",
-        fileName: "ara-little-specter.png"
+        fileName: "ara-little-specter.webp"
     }),
     createClassImage({
         characterId: "ara",
@@ -1108,7 +1108,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Asura",
         classNameFr: "Asura",
-        fileName: "ara-asura.png"
+        fileName: "ara-asura.webp"
     }),
     createClassImage({
         characterId: "ara",
@@ -1118,7 +1118,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Shakti",
         classNameFr: "Shakti",
-        fileName: "ara-shakti.png"
+        fileName: "ara-shakti.webp"
     }),
     createClassImage({
         characterId: "ara",
@@ -1128,7 +1128,7 @@ export const classImages = [
         jobStage: "master",
         className: "Shakti",
         classNameFr: "Shakti",
-        fileName: "ara-shakti-master.png"
+        fileName: "ara-shakti-master.webp"
     }),
 
     createClassImage({
@@ -1139,7 +1139,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Little Helper",
         classNameFr: "Bienfaitrice",
-        fileName: "ara-little-helper.png"
+        fileName: "ara-little-helper.webp"
     }),
     createClassImage({
         characterId: "ara",
@@ -1149,7 +1149,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Marici",
         classNameFr: "Yang Yan",
-        fileName: "ara-marici.png"
+        fileName: "ara-marici.webp"
     }),
     createClassImage({
         characterId: "ara",
@@ -1159,7 +1159,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Surya",
         classNameFr: "Surya",
-        fileName: "ara-surya.png"
+        fileName: "ara-surya.webp"
     }),
     createClassImage({
         characterId: "ara",
@@ -1169,7 +1169,7 @@ export const classImages = [
         jobStage: "master",
         className: "Surya",
         classNameFr: "Surya",
-        fileName: "ara-surya-master.png"
+        fileName: "ara-surya-master.webp"
     }),
 
     createClassImage({
@@ -1180,7 +1180,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Saber Knight",
         classNameFr: "Maître-escrimeur",
-        fileName: "elesis-saber-knight.png"
+        fileName: "elesis-saber-knight.webp"
     }),
     createClassImage({
         characterId: "elesis",
@@ -1190,7 +1190,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Grand Master",
         classNameFr: "Grand Maître",
-        fileName: "elesis-grand-master.png"
+        fileName: "elesis-grand-master.webp"
     }),
     createClassImage({
         characterId: "elesis",
@@ -1200,7 +1200,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Empire Sword",
         classNameFr: "Épée de l'empire",
-        fileName: "elesis-empire-sword.png"
+        fileName: "elesis-empire-sword.webp"
     }),
     createClassImage({
         characterId: "elesis",
@@ -1210,7 +1210,7 @@ export const classImages = [
         jobStage: "master",
         className: "Empire Sword",
         classNameFr: "Épée de l'empire",
-        fileName: "elesis-empire-sword-master.png"
+        fileName: "elesis-empire-sword-master.webp"
     }),
 
     createClassImage({
@@ -1221,7 +1221,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Pyro Knight",
         classNameFr: "Chevalier Pyromane",
-        fileName: "elesis-pyro-knight.png"
+        fileName: "elesis-pyro-knight.webp"
     }),
     createClassImage({
         characterId: "elesis",
@@ -1231,7 +1231,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Blazing Heart",
         classNameFr: "Cœur de Flammes",
-        fileName: "elesis-blazing-heart.png"
+        fileName: "elesis-blazing-heart.webp"
     }),
     createClassImage({
         characterId: "elesis",
@@ -1241,7 +1241,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Flame Lord",
         classNameFr: "Maîtresse des flammes",
-        fileName: "elesis-flame-lord.png"
+        fileName: "elesis-flame-lord.webp"
     }),
     createClassImage({
         characterId: "elesis",
@@ -1251,7 +1251,7 @@ export const classImages = [
         jobStage: "master",
         className: "Flame Lord",
         classNameFr: "Maîtresse des flammes",
-        fileName: "elesis-flame-lord-master.png"
+        fileName: "elesis-flame-lord-master.webp"
     }),
 
     createClassImage({
@@ -1262,7 +1262,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Dark Knight",
         classNameFr: "Chevalier ténébreux",
-        fileName: "elesis-dark-knight.png"
+        fileName: "elesis-dark-knight.webp"
     }),
     createClassImage({
         characterId: "elesis",
@@ -1272,7 +1272,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Crimson Avenger",
         classNameFr: "Vengeresse pourpre",
-        fileName: "elesis-crimson-avenger.png"
+        fileName: "elesis-crimson-avenger.webp"
     }),
     createClassImage({
         characterId: "elesis",
@@ -1282,7 +1282,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Bloody Queen",
         classNameFr: "Reine sanglante",
-        fileName: "elesis-bloody-queen.png"
+        fileName: "elesis-bloody-queen.webp"
     }),
     createClassImage({
         characterId: "elesis",
@@ -1292,7 +1292,7 @@ export const classImages = [
         jobStage: "master",
         className: "Bloody Queen",
         classNameFr: "Reine sanglante",
-        fileName: "elesis-bloody-queen-master.png"
+        fileName: "elesis-bloody-queen-master.webp"
     }),
 
     createClassImage({
@@ -1303,7 +1303,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Soar Knight",
         classNameFr: "Chevalier fauconnier",
-        fileName: "elesis-soar-knight.png"
+        fileName: "elesis-soar-knight.webp"
     }),
     createClassImage({
         characterId: "elesis",
@@ -1313,7 +1313,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Patrona",
         classNameFr: "Patrona",
-        fileName: "elesis-patrona.png"
+        fileName: "elesis-patrona.webp"
     }),
     createClassImage({
         characterId: "elesis",
@@ -1323,7 +1323,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Adrestia",
         classNameFr: "Adrestia",
-        fileName: "elesis-adrestia.png"
+        fileName: "elesis-adrestia.webp"
     }),
     createClassImage({
         characterId: "elesis",
@@ -1333,7 +1333,7 @@ export const classImages = [
         jobStage: "master",
         className: "Adrestia",
         classNameFr: "Adrestia",
-        fileName: "elesis-adrestia-master.png"
+        fileName: "elesis-adrestia-master.webp"
     }),
 
     createClassImage({
@@ -1344,7 +1344,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Psychic Tracer",
         classNameFr: "Traqueur psychique",
-        fileName: "add-psychic-tracer.png"
+        fileName: "add-psychic-tracer.webp"
     }),
     createClassImage({
         characterId: "add",
@@ -1354,7 +1354,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Lunatic Psyker",
         classNameFr: "Psychopathe",
-        fileName: "add-lunatic-psyker.png"
+        fileName: "add-lunatic-psyker.webp"
     }),
     createClassImage({
         characterId: "add",
@@ -1364,7 +1364,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Doom Bringer",
         classNameFr: "Calamité",
-        fileName: "add-doom-bringer.png"
+        fileName: "add-doom-bringer.webp"
     }),
     createClassImage({
         characterId: "add",
@@ -1374,7 +1374,7 @@ export const classImages = [
         jobStage: "master",
         className: "Doom Bringer",
         classNameFr: "Calamité",
-        fileName: "add-doom-bringer-master.png"
+        fileName: "add-doom-bringer-master.webp"
     }),
 
     createClassImage({
@@ -1385,7 +1385,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Arc Tracer",
         classNameFr: "Maître de l'IA",
-        fileName: "add-arc-tracer.png"
+        fileName: "add-arc-tracer.webp"
     }),
     createClassImage({
         characterId: "add",
@@ -1395,7 +1395,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Mastermind",
         classNameFr: "Machiavel",
-        fileName: "add-mastermind.png"
+        fileName: "add-mastermind.webp"
     }),
     createClassImage({
         characterId: "add",
@@ -1405,7 +1405,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Dominator",
         classNameFr: "Dominateur",
-        fileName: "add-dominator.png"
+        fileName: "add-dominator.webp"
     }),
     createClassImage({
         characterId: "add",
@@ -1415,7 +1415,7 @@ export const classImages = [
         jobStage: "master",
         className: "Dominator",
         classNameFr: "Dominateur",
-        fileName: "add-dominator-master.png"
+        fileName: "add-dominator-master.webp"
     }),
 
     createClassImage({
@@ -1426,7 +1426,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Time Tracer",
         classNameFr: "Voyageur Temporel",
-        fileName: "add-time-tracer.png"
+        fileName: "add-time-tracer.webp"
     }),
     createClassImage({
         characterId: "add",
@@ -1436,7 +1436,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Diabolic Esper",
         classNameFr: "Seigneur du Temps",
-        fileName: "add-diabolic-esper.png"
+        fileName: "add-diabolic-esper.webp"
     }),
     createClassImage({
         characterId: "add",
@@ -1446,7 +1446,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Mad Paradox",
         classNameFr: "Paradoxe",
-        fileName: "add-mad-paradox.png"
+        fileName: "add-mad-paradox.webp"
     }),
     createClassImage({
         characterId: "add",
@@ -1456,7 +1456,7 @@ export const classImages = [
         jobStage: "master",
         className: "Mad Paradox",
         classNameFr: "Paradoxe",
-        fileName: "add-mad-paradox-master.png"
+        fileName: "add-mad-paradox-master.webp"
     }),
 
     createClassImage({
@@ -1467,7 +1467,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Affect Tracer",
         classNameFr: "Affect Tracer",
-        fileName: "add-affect-tracer.png"
+        fileName: "add-affect-tracer.webp"
     }),
     createClassImage({
         characterId: "add",
@@ -1477,7 +1477,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Dissembler",
         classNameFr: "Dissembler",
-        fileName: "add-dissembler.png"
+        fileName: "add-dissembler.webp"
     }),
     createClassImage({
         characterId: "add",
@@ -1487,7 +1487,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Overmind",
         classNameFr: "Subjugueur",
-        fileName: "add-overmind.png"
+        fileName: "add-overmind.webp"
     }),
     createClassImage({
         characterId: "add",
@@ -1497,7 +1497,7 @@ export const classImages = [
         jobStage: "master",
         className: "Overmind",
         classNameFr: "Subjugueur",
-        fileName: "add-overmind-master.png"
+        fileName: "add-overmind-master.webp"
     }),
 
     createClassImage({
@@ -1508,7 +1508,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Chiliarch",
         classNameFr: "Chiliarque",
-        fileName: "luciel-chiliarch.png"
+        fileName: "luciel-chiliarch.webp"
     }),
     createClassImage({
         characterId: "luciel",
@@ -1518,7 +1518,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Dreadlord",
         classNameFr: "Ange de la Mort",
-        fileName: "luciel-dreadlord.png"
+        fileName: "luciel-dreadlord.webp"
     }),
     createClassImage({
         characterId: "luciel",
@@ -1528,7 +1528,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Catastrophe",
         classNameFr: "",
-        fileName: "luciel-catastrophe.png"
+        fileName: "luciel-catastrophe.webp"
     }),
     createClassImage({
         characterId: "luciel",
@@ -1538,7 +1538,7 @@ export const classImages = [
         jobStage: "master",
         className: "Catastrophe",
         classNameFr: "",
-        fileName: "luciel-catastrophe-master.png"
+        fileName: "luciel-catastrophe-master.webp"
     }),
 
     createClassImage({
@@ -1549,7 +1549,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Royal Guard",
         classNameFr: "Garde Royal",
-        fileName: "luciel-royal-guard.png"
+        fileName: "luciel-royal-guard.webp"
     }),
     createClassImage({
         characterId: "luciel",
@@ -1559,7 +1559,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Noblesse",
         classNameFr: "Noble",
-        fileName: "luciel-noblesse.png"
+        fileName: "luciel-noblesse.webp"
     }),
     createClassImage({
         characterId: "luciel",
@@ -1569,7 +1569,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Innocent",
         classNameFr: "",
-        fileName: "luciel-innocent.png"
+        fileName: "luciel-innocent.webp"
     }),
     createClassImage({
         characterId: "luciel",
@@ -1579,7 +1579,7 @@ export const classImages = [
         jobStage: "master",
         className: "Innocent",
         classNameFr: "Innocence",
-        fileName: "luciel-innocent-master.png"
+        fileName: "luciel-innocent-master.webp"
     }),
 
     createClassImage({
@@ -1590,7 +1590,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Diabla",
         classNameFr: "Diabla",
-        fileName: "luciel-diabla.png"
+        fileName: "luciel-diabla.webp"
     }),
     createClassImage({
         characterId: "luciel",
@@ -1600,7 +1600,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Demonio",
         classNameFr: "Demonio",
-        fileName: "luciel-demonio.png"
+        fileName: "luciel-demonio.webp"
     }),
     createClassImage({
         characterId: "luciel",
@@ -1610,7 +1610,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Diangelion",
         classNameFr: "",
-        fileName: "luciel-diangelion.png"
+        fileName: "luciel-diangelion.webp"
     }),
     createClassImage({
         characterId: "luciel",
@@ -1620,7 +1620,7 @@ export const classImages = [
         jobStage: "master",
         className: "Diangelion",
         classNameFr: "",
-        fileName: "luciel-diangelion-master.png"
+        fileName: "luciel-diangelion-master.webp"
     }),
 
     createClassImage({
@@ -1631,7 +1631,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Emptiness",
         classNameFr: "",
-        fileName: "luciel-emptiness.png"
+        fileName: "luciel-emptiness.webp"
     }),
     createClassImage({
         characterId: "luciel",
@@ -1641,7 +1641,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Turbids",
         classNameFr: "",
-        fileName: "luciel-turbids.png"
+        fileName: "luciel-turbids.webp"
     }),
     createClassImage({
         characterId: "luciel",
@@ -1651,7 +1651,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Demersio",
         classNameFr: "",
-        fileName: "luciel-demersio.png"
+        fileName: "luciel-demersio.webp"
     }),
     createClassImage({
         characterId: "luciel",
@@ -1661,7 +1661,7 @@ export const classImages = [
         jobStage: "master",
         className: "Demersio",
         classNameFr: "",
-        fileName: "luciel-demersio-master.png"
+        fileName: "luciel-demersio-master.webp"
     }),
 
     createClassImage({
@@ -1672,7 +1672,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Heavy Barrel",
         classNameFr: "Grand Calibre",
-        fileName: "rose-heavy-barrel.png"
+        fileName: "rose-heavy-barrel.webp"
     }),
     createClassImage({
         characterId: "rose",
@@ -1682,7 +1682,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Storm Trooper",
         classNameFr: "Avant-Garde",
-        fileName: "rose-storm-trooper.png"
+        fileName: "rose-storm-trooper.webp"
     }),
     createClassImage({
         characterId: "rose",
@@ -1692,7 +1692,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Tempest Burster",
         classNameFr: "Tempête furieuse",
-        fileName: "rose-tempest-burster.png"
+        fileName: "rose-tempest-burster.webp"
     }),
     createClassImage({
         characterId: "rose",
@@ -1702,7 +1702,7 @@ export const classImages = [
         jobStage: "master",
         className: "Tempest Burster",
         classNameFr: "Tempête furieuse",
-        fileName: "rose-tempest-burster-master.png"
+        fileName: "rose-tempest-burster-master.webp"
     }),
 
     createClassImage({
@@ -1713,7 +1713,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Bloodia",
         classNameFr: "Sanguinaire",
-        fileName: "rose-bloodia.png"
+        fileName: "rose-bloodia.webp"
     }),
     createClassImage({
         characterId: "rose",
@@ -1723,7 +1723,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Crimson Rose",
         classNameFr: "Rose pourpre",
-        fileName: "rose-crimson-rose.png"
+        fileName: "rose-crimson-rose.webp"
     }),
     createClassImage({
         characterId: "rose",
@@ -1733,7 +1733,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Black Massacre",
         classNameFr: "Veuve Noire",
-        fileName: "rose-black-massacre.png"
+        fileName: "rose-black-massacre.webp"
     }),
     createClassImage({
         characterId: "rose",
@@ -1743,7 +1743,7 @@ export const classImages = [
         jobStage: "master",
         className: "Black Massacre",
         classNameFr: "Veuve Noire",
-        fileName: "rose-black-massacre-master.png"
+        fileName: "rose-black-massacre-master.webp"
     }),
 
     createClassImage({
@@ -1754,7 +1754,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Valkyrie",
         classNameFr: "Valkyrie",
-        fileName: "rose-valkyrie.png"
+        fileName: "rose-valkyrie.webp"
     }),
     createClassImage({
         characterId: "rose",
@@ -1764,7 +1764,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Freyja",
         classNameFr: "Freyja",
-        fileName: "rose-freyja.png"
+        fileName: "rose-freyja.webp"
     }),
     createClassImage({
         characterId: "rose",
@@ -1774,7 +1774,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Minerva",
         classNameFr: "Minerve",
-        fileName: "rose-minerva.png"
+        fileName: "rose-minerva.webp"
     }),
     createClassImage({
         characterId: "rose",
@@ -1784,7 +1784,7 @@ export const classImages = [
         jobStage: "master",
         className: "Minerva",
         classNameFr: "Minerve",
-        fileName: "rose-minerva-master.png"
+        fileName: "rose-minerva-master.webp"
     }),
 
     createClassImage({
@@ -1795,7 +1795,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Metal Heart",
         classNameFr: "Cœur d'acier",
-        fileName: "rose-metal-heart.png"
+        fileName: "rose-metal-heart.webp"
     }),
     createClassImage({
         characterId: "rose",
@@ -1805,7 +1805,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Optimus",
         classNameFr: "",
-        fileName: "rose-optimus.png"
+        fileName: "rose-optimus.webp"
     }),
     createClassImage({
         characterId: "rose",
@@ -1815,7 +1815,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Prime Operator",
         classNameFr: "Prime Opératrice",
-        fileName: "rose-prime-operator.png"
+        fileName: "rose-prime-operator.webp"
     }),
     createClassImage({
         characterId: "rose",
@@ -1825,7 +1825,7 @@ export const classImages = [
         jobStage: "master",
         className: "Prime Operator",
         classNameFr: "Prime Opératrice",
-        fileName: "rose-prime-operator-master.png"
+        fileName: "rose-prime-operator-master.webp"
     }),
     createClassImage({
         characterId: "ain",
@@ -1835,7 +1835,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Lofty: Executor",
         classNameFr: "Exactor",
-        fileName: "ain-lofty-executor.png"
+        fileName: "ain-lofty-executor.webp"
     }),
 
     createClassImage({
@@ -1846,7 +1846,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Arme Thaumaturgy",
         classNameFr: "Prodigium",
-        fileName: "ain-arme-thaumaturgy.png"
+        fileName: "ain-arme-thaumaturgy.webp"
     }),
 
     createClassImage({
@@ -1857,7 +1857,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Richter",
         classNameFr: "Arbiter",
-        fileName: "ain-richter.png"
+        fileName: "ain-richter.webp"
     }),
 
     createClassImage({
@@ -1868,7 +1868,7 @@ export const classImages = [
         jobStage: "master",
         className: "Richter",
         classNameFr: "Arbiter",
-        fileName: "ain-richter-master.png"
+        fileName: "ain-richter-master.webp"
     }),
 
     createClassImage({
@@ -1879,7 +1879,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Lofty: Anpassen",
         classNameFr: "Aptare",
-        fileName: "ain-lofty-anpassen.png"
+        fileName: "ain-lofty-anpassen.webp"
     }),
 
     createClassImage({
@@ -1890,7 +1890,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Erbluhen Emotion",
         classNameFr: "Vigere",
-        fileName: "ain-erbluhen-emotion.png"
+        fileName: "ain-erbluhen-emotion.webp"
     }),
 
     createClassImage({
@@ -1901,7 +1901,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Bluhen",
         classNameFr: "Florere",
-        fileName: "ain-bluhen.png"
+        fileName: "ain-bluhen.webp"
     }),
 
     createClassImage({
@@ -1912,7 +1912,7 @@ export const classImages = [
         jobStage: "master",
         className: "Bluhen",
         classNameFr: "Florere",
-        fileName: "ain-bluhen-master.png"
+        fileName: "ain-bluhen-master.webp"
     }),
 
     createClassImage({
@@ -1923,7 +1923,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Lofty: Wanderer",
         classNameFr: "Viator",
-        fileName: "ain-lofty-wanderer.png"
+        fileName: "ain-lofty-wanderer.webp"
     }),
 
     createClassImage({
@@ -1934,7 +1934,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Apostasia",
         classNameFr: "Apostata",
-        fileName: "ain-apostasia.png"
+        fileName: "ain-apostasia.webp"
     }),
 
     createClassImage({
@@ -1945,7 +1945,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Herrscher",
         classNameFr: "Regnator",
-        fileName: "ain-herrscher.png"
+        fileName: "ain-herrscher.webp"
     }),
 
     createClassImage({
@@ -1956,7 +1956,7 @@ export const classImages = [
         jobStage: "master",
         className: "Herrscher",
         classNameFr: "Regnator",
-        fileName: "ain-herrscher-master.png"
+        fileName: "ain-herrscher-master.webp"
     }),
 
     createClassImage({
@@ -1967,7 +1967,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Lofty: Schreier",
         classNameFr: "Adoleo",
-        fileName: "ain-lofty-schreier.png"
+        fileName: "ain-lofty-schreier.webp"
     }),
 
     createClassImage({
@@ -1978,7 +1978,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Schatz Reprise",
         classNameFr: "Captura",
-        fileName: "ain-schatz-reprise.png"
+        fileName: "ain-schatz-reprise.webp"
     }),
 
     createClassImage({
@@ -1989,7 +1989,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Opferung",
         classNameFr: "Sacratus",
-        fileName: "ain-opferung.png"
+        fileName: "ain-opferung.webp"
     }),
 
     createClassImage({
@@ -2000,7 +2000,7 @@ export const classImages = [
         jobStage: "master",
         className: "Opferung",
         classNameFr: "Sacratus",
-        fileName: "ain-opferung-master.png"
+        fileName: "ain-opferung-master.webp"
     }),
 
     createClassImage({
@@ -2011,7 +2011,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Sparky Child",
         classNameFr: "Bébé Étincelle",
-        fileName: "laby-sparky-child.png"
+        fileName: "laby-sparky-child.webp"
     }),
 
     createClassImage({
@@ -2022,7 +2022,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Rumble Pumn",
         classNameFr: "Bébé Cyclone",
-        fileName: "laby-rumble-pumn.png"
+        fileName: "laby-rumble-pumn.webp"
     }),
 
     createClassImage({
@@ -2033,7 +2033,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Eternity Winner",
         classNameFr: "Championne Éonienne",
-        fileName: "laby-eternity-winner.png"
+        fileName: "laby-eternity-winner.webp"
     }),
 
     createClassImage({
@@ -2044,7 +2044,7 @@ export const classImages = [
         jobStage: "master",
         className: "Eternity Winner",
         classNameFr: "Championne Éonienne",
-        fileName: "laby-eternity-winner-master.png"
+        fileName: "laby-eternity-winner-master.webp"
     }),
 
     createClassImage({
@@ -2055,7 +2055,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Twinkle Child",
         classNameFr: "Bébé Paillette",
-        fileName: "laby-twinkle-child.png"
+        fileName: "laby-twinkle-child.webp"
     }),
 
     createClassImage({
@@ -2066,7 +2066,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Shining Romantica",
         classNameFr: "Auralice",
-        fileName: "laby-shining-romantica.png"
+        fileName: "laby-shining-romantica.webp"
     }),
 
     createClassImage({
@@ -2077,7 +2077,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Radiant Soul",
         classNameFr: "Lumièle",
-        fileName: "laby-radiant-soul.png"
+        fileName: "laby-radiant-soul.webp"
     }),
 
     createClassImage({
@@ -2088,7 +2088,7 @@ export const classImages = [
         jobStage: "master",
         className: "Radiant Soul",
         classNameFr: "Lumièle",
-        fileName: "laby-radiant-soul-master.png"
+        fileName: "laby-radiant-soul-master.webp"
     }),
 
     createClassImage({
@@ -2099,7 +2099,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Rusty Child",
         classNameFr: "Bébé obscur",
-        fileName: "laby-rusty-child.png"
+        fileName: "laby-rusty-child.webp"
     }),
 
     createClassImage({
@@ -2110,7 +2110,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Daydreamer",
         classNameFr: "Rêveuse diurne",
-        fileName: "laby-daydreamer.png"
+        fileName: "laby-daydreamer.webp"
     }),
 
     createClassImage({
@@ -2121,7 +2121,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Nisha Labyrinth",
         classNameFr: "Labyrinthe de Nisha",
-        fileName: "laby-nisha-labyrinth.png"
+        fileName: "laby-nisha-labyrinth.webp"
     }),
 
     createClassImage({
@@ -2132,7 +2132,7 @@ export const classImages = [
         jobStage: "master",
         className: "Nisha Labyrinth",
         classNameFr: "Labyrinthe de Nisha",
-        fileName: "laby-nisha-labyrinth-master.png"
+        fileName: "laby-nisha-labyrinth-master.webp"
     }),
 
     createClassImage({
@@ -2143,7 +2143,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Rough Child",
         classNameFr: "Morveuse",
-        fileName: "laby-rough-child.png"
+        fileName: "laby-rough-child.webp"
     }),
 
     createClassImage({
@@ -2154,7 +2154,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Punky Poppet",
         classNameFr: "Filoute",
-        fileName: "laby-punky-poppet.png"
+        fileName: "laby-punky-poppet.webp"
     }),
 
     createClassImage({
@@ -2165,7 +2165,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Twins Picaro",
         classNameFr: "Arlequine",
-        fileName: "laby-twins-picaro.png"
+        fileName: "laby-twins-picaro.webp"
     }),
 
     createClassImage({
@@ -2176,7 +2176,7 @@ export const classImages = [
         jobStage: "master",
         className: "Twins Picaro",
         classNameFr: "Arlequine",
-        fileName: "laby-twins-picaro-master.png"
+        fileName: "laby-twins-picaro-master.webp"
     }),
     createClassImage({
         characterId: "noah",
@@ -2186,7 +2186,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Second Revenger",
         classNameFr: "Vengeur d'Âmes",
-        fileName: "noah-second-revenger.png"
+        fileName: "noah-second-revenger.webp"
     }),
 
     createClassImage({
@@ -2197,7 +2197,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Silent Shadow",
         classNameFr: "Ombre Silencieuse",
-        fileName: "noah-silent-shadow.png"
+        fileName: "noah-silent-shadow.webp"
     }),
 
     createClassImage({
@@ -2208,7 +2208,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Liberator",
         classNameFr: "Libérator",
-        fileName: "noah-liberator.png"
+        fileName: "noah-liberator.webp"
     }),
 
     createClassImage({
@@ -2219,7 +2219,7 @@ export const classImages = [
         jobStage: "master",
         className: "Liberator",
         classNameFr: "Libérator",
-        fileName: "noah-liberator-master.png"
+        fileName: "noah-liberator-master.webp"
     }),
 
     createClassImage({
@@ -2230,7 +2230,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Second Selection",
         classNameFr: "Destinator",
-        fileName: "noah-second-selection.png"
+        fileName: "noah-second-selection.webp"
     }),
 
     createClassImage({
@@ -2241,7 +2241,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Stellar Caster",
         classNameFr: "Lanceur d'Étoiles",
-        fileName: "noah-stellar-caster.png"
+        fileName: "noah-stellar-caster.webp"
     }),
 
     createClassImage({
@@ -2252,7 +2252,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Celestia",
         classNameFr: "Céléstia",
-        fileName: "noah-celestia.png"
+        fileName: "noah-celestia.webp"
     }),
 
     createClassImage({
@@ -2263,7 +2263,7 @@ export const classImages = [
         jobStage: "master",
         className: "Celestia",
         classNameFr: "Céléstia",
-        fileName: "noah-celestia-master.png"
+        fileName: "noah-celestia-master.webp"
     }),
 
     createClassImage({
@@ -2274,7 +2274,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Second Grief",
         classNameFr: "Lune Soucieuse",
-        fileName: "noah-second-grief.png"
+        fileName: "noah-second-grief.webp"
     }),
 
     createClassImage({
@@ -2285,7 +2285,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Pale Pilgrim",
         classNameFr: "Pélerin Lunaire",
-        fileName: "noah-pale-pilgrim.png"
+        fileName: "noah-pale-pilgrim.webp"
     }),
 
     createClassImage({
@@ -2296,7 +2296,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Nyx Pieta",
         classNameFr: "Nyx Pieta",
-        fileName: "noah-nyx-pieta.png"
+        fileName: "noah-nyx-pieta.webp"
     }),
 
     createClassImage({
@@ -2307,7 +2307,7 @@ export const classImages = [
         jobStage: "master",
         className: "Nyx Pieta",
         classNameFr: "Nyx Pieta",
-        fileName: "noah-nyx-pieta-master.png"
+        fileName: "noah-nyx-pieta-master.webp"
     }),
 
     createClassImage({
@@ -2318,7 +2318,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Second Dejection",
         classNameFr: "Errelune",
-        fileName: "noah-second-dejection.png"
+        fileName: "noah-second-dejection.webp"
     }),
 
     createClassImage({
@@ -2329,7 +2329,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Hazy Delusion",
         classNameFr: "Incandesonge",
-        fileName: "noah-hazy-delusion.png"
+        fileName: "noah-hazy-delusion.webp"
     }),
 
     createClassImage({
@@ -2340,7 +2340,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Morpheus",
         classNameFr: "Morphée",
-        fileName: "noah-morpheus.png"
+        fileName: "noah-morpheus.webp"
     }),
 
     createClassImage({
@@ -2351,7 +2351,7 @@ export const classImages = [
         jobStage: "master",
         className: "Morpheus",
         classNameFr: "Morphée",
-        fileName: "noah-morpheus-master.png"
+        fileName: "noah-morpheus-master.webp"
     }),
 
     createClassImage({
@@ -2362,7 +2362,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Poten Finder",
         classNameFr: "Minéralista",
-        fileName: "lithia-poten-finder.png"
+        fileName: "lithia-poten-finder.webp"
     }),
 
     createClassImage({
@@ -2373,7 +2373,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Mighty Miner",
         classNameFr: "Cristalina",
-        fileName: "lithia-mighty-miner.png"
+        fileName: "lithia-mighty-miner.webp"
     }),
 
     createClassImage({
@@ -2384,7 +2384,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Gembliss",
         classNameFr: "Eméraldia",
-        fileName: "lithia-gembliss.png"
+        fileName: "lithia-gembliss.webp"
     }),
 
     createClassImage({
@@ -2395,7 +2395,7 @@ export const classImages = [
         jobStage: "master",
         className: "Gembliss",
         classNameFr: "Eméraldia",
-        fileName: "lithia-gembliss-master.png"
+        fileName: "lithia-gembliss-master.webp"
     }),
 
     createClassImage({
@@ -2406,7 +2406,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Fortune Finder",
         classNameFr: "Jadoyante",
-        fileName: "lithia-fortune-finder.png"
+        fileName: "lithia-fortune-finder.webp"
     }),
 
     createClassImage({
@@ -2417,7 +2417,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Greedy Wonder",
         classNameFr: "Adamantine",
-        fileName: "lithia-greedy-wonder.png"
+        fileName: "lithia-greedy-wonder.webp"
     }),
 
     createClassImage({
@@ -2428,7 +2428,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Avarice",
         classNameFr: "Avaricia",
-        fileName: "lithia-avarice.png"
+        fileName: "lithia-avarice.webp"
     }),
 
     createClassImage({
@@ -2439,7 +2439,7 @@ export const classImages = [
         jobStage: "master",
         className: "Avarice",
         classNameFr: "Avaricia",
-        fileName: "lithia-avarice-master.png"
+        fileName: "lithia-avarice-master.webp"
     }),
 
     createClassImage({
@@ -2450,7 +2450,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Path Finder",
         classNameFr: "",
-        fileName: "lithia-path-finder.png"
+        fileName: "lithia-path-finder.webp"
     }),
 
     createClassImage({
@@ -2461,7 +2461,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Rima Clavis",
         classNameFr: "",
-        fileName: "lithia-rima-clavis.png"
+        fileName: "lithia-rima-clavis.webp"
     }),
 
     createClassImage({
@@ -2472,7 +2472,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Achlys",
         classNameFr: "",
-        fileName: "lithia-achlys.png"
+        fileName: "lithia-achlys.webp"
     }),
 
     createClassImage({
@@ -2483,7 +2483,7 @@ export const classImages = [
         jobStage: "master",
         className: "Achlys",
         classNameFr: "",
-        fileName: "lithia-achlys-master.png"
+        fileName: "lithia-achlys-master.webp"
     }),
 
     createClassImage({
@@ -2494,7 +2494,7 @@ export const classImages = [
         jobStage: "job1",
         className: "Trick Finder",
         classNameFr: "Cupido Girl",
-        fileName: "lithia-trick-finder.png"
+        fileName: "lithia-trick-finder.webp"
     }),
 
     createClassImage({
@@ -2505,7 +2505,7 @@ export const classImages = [
         jobStage: "job2",
         className: "Cynical Sneer",
         classNameFr: "Cynical Girl",
-        fileName: "lithia-cynical-sneer.png"
+        fileName: "lithia-cynical-sneer.webp"
     }),
 
     createClassImage({
@@ -2516,7 +2516,7 @@ export const classImages = [
         jobStage: "job3",
         className: "Mischief",
         classNameFr: "Delinquenta",
-        fileName: "lithia-mischief.png"
+        fileName: "lithia-mischief.webp"
     }),
 
     createClassImage({
@@ -2527,6 +2527,6 @@ export const classImages = [
         jobStage: "master",
         className: "Mischief",
         classNameFr: "Delinquenta",
-        fileName: "lithia-mischief-master.png"
+        fileName: "lithia-mischief-master.webp"
     }),
 ];
