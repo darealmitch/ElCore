@@ -78,6 +78,95 @@
     margin-top: 0.4rem;
     color: #fff;
 }
+
+/* Fiche personnage — sections (template commun, thémé par personnage) */
+.character-detail .section-header span {
+    color: var(--theme-primary, var(--accent-blue));
+}
+
+.character-detail .detail-card {
+    position: relative;
+    overflow: hidden;
+    border-color: color-mix(in srgb, var(--theme-primary, #60a5fa) 24%, transparent);
+    background:
+        radial-gradient(circle at 0% 0%, color-mix(in srgb, var(--theme-primary, #60a5fa) 9%, transparent), transparent 55%),
+        var(--bg-card);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.character-detail .detail-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--theme-primary, #60a5fa), transparent 72%);
+    opacity: 0.65;
+}
+
+.character-detail .detail-card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--theme-primary, #60a5fa) 48%, transparent);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.42), 0 0 26px var(--theme-glow, rgba(96, 165, 250, 0.28));
+}
+
+.character-detail .detail-card h2 {
+    color: var(--theme-primary, #fff);
+}
+
+.character-detail .detail-stats div {
+    border-color: color-mix(in srgb, var(--theme-primary, #60a5fa) 18%, transparent);
+}
+
+/* Chemins de spécialisation + builds : même barre d'accent que les cartes */
+.character-detail .class-path-card,
+.character-detail .build-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.character-detail .class-path-card::before,
+.character-detail .build-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 1;
+    height: 2px;
+    background: linear-gradient(90deg, var(--theme-primary, #60a5fa), transparent 72%);
+    opacity: 0.65;
+}
+
+.character-detail .class-path-card {
+    background:
+        radial-gradient(circle at 0% 0%, color-mix(in srgb, var(--theme-primary, #60a5fa) 9%, transparent), transparent 55%),
+        var(--bg-card);
+}
+
+/* Cartes d'étape : survol thémé au lieu du blanc */
+.character-detail .class-stage-card {
+    border-color: color-mix(in srgb, var(--theme-primary, #60a5fa) 16%, transparent);
+}
+
+.character-detail .class-stage-card:hover {
+    border-color: color-mix(in srgb, var(--theme-primary, #60a5fa) 50%, transparent);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 22px var(--theme-glow, rgba(96, 165, 250, 0.28));
+}
+
+/* Mécanique : thémée au lieu du bleu codé en dur */
+.character-detail .character-mechanic-card {
+    border-color: color-mix(in srgb, var(--theme-primary, #60a5fa) 22%, transparent);
+    background:
+        radial-gradient(circle at top right, color-mix(in srgb, var(--theme-primary, #60a5fa) 12%, transparent), transparent 16rem),
+        rgba(2, 6, 23, 0.34);
+}
+
+.character-detail .character-mechanic-card span {
+    color: var(--theme-primary, var(--accent-blue));
+}
+
+.character-detail .character-mechanic-card::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--theme-primary, #60a5fa) 55%, transparent);
+}
+
 .pill-list {
     display: flex;
     flex-wrap: wrap;

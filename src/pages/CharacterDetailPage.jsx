@@ -100,7 +100,7 @@ function CharacterDetailPage() {
     const characterMechanic = characterMechanics.find((item) => item.characterId === character.id);
 
     return (
-        <main className="page">
+        <main className="page character-detail" style={{ "--theme-primary": theme.primary, "--theme-glow": theme.glow }}>
             <section className="character-detail-hero" style={{ borderColor: theme.primary, boxShadow: `0 0 40px ${theme.glow}` }}>
                 <div className="character-detail-content">
                     <Link className="back-link character-detail-back-link" to="/personnages">← Retour aux personnages</Link>
