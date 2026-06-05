@@ -112,9 +112,7 @@ function ClassesPage() {
                             to={getClassUrl(classItem)}
                             className={classItem.jobStage === "master" ? "class-card master-stage" : "class-card"}
                             key={`${classItem.characterId}-${classItem.pathName}-${classItem.jobStage}`}
-                            style={{
-                                borderColor: theme.primary,
-                            }}
+                            style={{ borderColor: theme.primary, "--theme-primary": theme.primary }}
                         >
                             <div className="class-card-image-wrap">
                                 {masterLogo && (

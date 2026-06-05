@@ -9,14 +9,12 @@ const roleCategories = [
 function CharactersPage() {
     const [query, setQuery] = useState("");
     const [activeRole, setActiveRole] = useState("all");
-
     const filteredCharacters = useMemo(() => {
         const value = query.trim().toLowerCase();
         return characters.filter((character) => {
             const matchesRole =
                 activeRole === "all" ||
                 character.role.split("/")[0].trim() === activeRole;
-
             const matchesQuery =
                 !value ||
                 character.name.toLowerCase().includes(value) ||
@@ -44,7 +42,6 @@ function CharactersPage() {
                     <span>Personnages disponibles</span>
                 </div>
             </section>
-
             <section className="characters-controls">
                 <div className="characters-search">
                     <input
@@ -56,24 +53,16 @@ function CharactersPage() {
                     />
                 </div>
                 <div className="characters-role-filters" aria-label="Filtrer par rôle">
-                    <button
-                        className={activeRole === "all" ? "filter-chip active" : "filter-chip"}
-                        onClick={() => setActiveRole("all")}
-                    >
+                    <button className={activeRole === "all" ? "filter-chip active" : "filter-chip"} onClick={() => setActiveRole("all")}>
                         Tous
                     </button>
                     {roleCategories.map((role) => (
-                        <button
-                            key={role}
-                            className={activeRole === role ? "filter-chip active" : "filter-chip"}
-                            onClick={() => setActiveRole(role)}
-                        >
+                        <button key={role} className={activeRole === role ? "filter-chip active" : "filter-chip"} onClick={() => setActiveRole(role)}>
                             {role}
                         </button>
                     ))}
                 </div>
             </section>
-
             {filteredCharacters.length > 0 ? (
                 <section className="characters-grid">
                     {filteredCharacters.map((character) => (
@@ -88,5 +77,4 @@ function CharactersPage() {
         </main>
     );
 }
-
 export default CharactersPage;

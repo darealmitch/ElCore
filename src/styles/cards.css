@@ -64,7 +64,25 @@
     align-items: flex-end;
     justify-content: center;
     height: 12.5rem;
-    margin-bottom: 0.9rem;
+    margin-bottom: 1rem;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: radial-gradient(120% 78% at 50% 100%, color-mix(in srgb, currentColor 16%, transparent), transparent 62%), linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(2, 6, 23, 0.28));
+}
+.character-card-visual::after {
+    content: "";
+    position: absolute;
+    right: 9%;
+    bottom: 0;
+    left: 9%;
+    height: 40%;
+    background: radial-gradient(ellipse at 50% 100%, color-mix(in srgb, currentColor 32%, transparent), transparent 70%);
+    opacity: 0.55;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+.character-card:hover .character-card-visual::after {
+    opacity: 0.8;
 }
 .character-card-image {
     position: relative;
@@ -100,10 +118,16 @@
     font-size: 0.72rem;
     font-weight: 900;
 }
+.character-card .character-role {
+    font-size: 0.64rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
 .character-card h2 {
-    margin: 0.5rem 0 0;
-    font-size: 1.5rem;
-    line-height: 1.05;
+    margin: 0.4rem 0 0;
+    font-size: 1.62rem;
+    line-height: 1;
+    letter-spacing: -0.01em;
 }
 .character-full-name {
     color: var(--text-muted);
@@ -196,6 +220,9 @@
     background: rgba(2, 6, 23, 0.35);
     font-size: 0.7rem;
     font-weight: 800;
+}
+.character-card .class-badge {
+    background: color-mix(in srgb, currentColor 10%, rgba(2, 6, 23, 0.42));
 }
 
 /*Cartes Configurations*/
