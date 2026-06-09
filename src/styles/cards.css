@@ -176,7 +176,7 @@
     padding: 0.28rem 0.5rem;
     border: 1px solid;
     border-radius: 999px;
-    background: rgba(2, 6, 23, 0.35);
+    background: rgba(16, 11, 8, 0.35);
     font-size: 0.7rem;
     font-weight: 800;
 }
@@ -198,7 +198,7 @@
 }
 .build-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45), 0 0 32px var(--theme-glow, rgba(96, 165, 250, 0.28)) !important;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45), 0 0 32px var(--theme-glow, rgba(201, 145, 58, 0.28)) !important;
 }
 .build-card-top {
     display: flex;
@@ -231,8 +231,8 @@
 .stat-list span {
     padding: 0.35rem 0.6rem;
     border-radius: 999px;
-    background: rgba(96, 165, 250, 0.12);
-    color: #bfdbfe;
+    background: rgba(201, 145, 58, 0.12);
+    color: #d8ccb8;
     font-size: 0.75rem;
     font-weight: 800;
 }
@@ -288,7 +288,7 @@
     overflow: hidden;
     border: 1px solid var(--border-soft);
     border-radius: 1.5rem;
-    background: rgba(2, 6, 23, 0.42);
+    background: rgba(16, 11, 8, 0.42);
     color: inherit;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
