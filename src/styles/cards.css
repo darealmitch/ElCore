@@ -8,54 +8,24 @@
     overflow: hidden;
     padding: 1rem;
     border: 1px solid;
-    border-radius: 1.75rem;
-    background: radial-gradient(circle at 50% 8%, rgba(255, 255, 255, 0.045), transparent 32%), linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.96));
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-}
-.character-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background: radial-gradient(circle at 50% 18%, currentColor, transparent 34%);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease;
+    border-radius: 8px;
+    background: #1a1310;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5) !important;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .character-card::after {
     content: "";
     position: absolute;
-    inset: 1px;
+    inset: 4px;
     z-index: 0;
-    border: 1px solid rgba(255, 255, 255, 0.035);
-    border-radius: calc(1.55rem - 1px);
+    border: 1px solid #c9913a;
+    border-radius: 5px;
+    opacity: 0.5;
     pointer-events: none;
+    transition: opacity 0.25s ease;
 }
-.character-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45), 0 0 24px color-mix(in srgb, currentColor 32%, transparent);
-}
-.character-card:hover::before {
-    opacity: 0.08;
-}
-.character-card-aura {
-    position: absolute;
-    z-index: 1;
-    top: -1.5rem;
-    left: 50%;
-    width: 90%;
-    height: 16rem;
-    transform: translateX(-50%);
-    background: radial-gradient(circle at 50% 45%, currentColor, transparent 68%);
-    opacity: 0.16;
-    filter: blur(26px);
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.character-card:hover .character-card-aura {
-    opacity: 0.36;
-    transform: translateX(-50%) translateY(-0.4rem) scale(1.06);
+.character-card:hover::after {
+    opacity: 1;
 }
 .character-card-visual {
     position: relative;
@@ -65,24 +35,9 @@
     justify-content: center;
     height: 12.5rem;
     margin-bottom: 1rem;
-    border-radius: 1.25rem;
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    background: radial-gradient(120% 78% at 50% 100%, color-mix(in srgb, currentColor 16%, transparent), transparent 62%), linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(2, 6, 23, 0.28));
-}
-.character-card-visual::after {
-    content: "";
-    position: absolute;
-    right: 9%;
-    bottom: 0;
-    left: 9%;
-    height: 40%;
-    background: radial-gradient(ellipse at 50% 100%, color-mix(in srgb, currentColor 32%, transparent), transparent 70%);
-    opacity: 0.55;
-    pointer-events: none;
-    transition: opacity 0.25s ease;
-}
-.character-card:hover .character-card-visual::after {
-    opacity: 0.8;
+    border-radius: 6px;
+    border: 1px solid rgba(201, 145, 58, 0.22);
+    background: #12111a;
 }
 .character-card-image {
     position: relative;
@@ -91,12 +46,11 @@
     height: 100%;
     object-fit: contain;
     object-position: center bottom;
-    filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.5));
-    transition: transform 0.25s ease, filter 0.25s ease;
+    filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.55));
+    transition: filter 0.25s ease;
 }
 .character-card:hover .character-card-image {
-    transform: translateY(-5px) scale(1.025);
-    filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.52)) drop-shadow(0 0 12px color-mix(in srgb, currentColor 24%, transparent));
+    filter: brightness(1.1) drop-shadow(0 14px 18px rgba(0, 0, 0, 0.55));
 }
 .character-card-content {
     position: relative;
@@ -125,9 +79,11 @@
 }
 .character-card h2 {
     margin: 0.4rem 0 0;
-    font-size: 1.62rem;
-    line-height: 1;
-    letter-spacing: -0.01em;
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
 }
 .character-full-name {
     color: var(--text-muted);
@@ -151,16 +107,19 @@
     width: fit-content;
     min-width: 10.5rem;
     margin-top: auto;
-    padding: 0.78rem 1rem;
-    border-radius: 999px;
-    color: white;
-    font-weight: 900;
-    transition: transform 0.22s ease, filter 0.22s ease, box-shadow 0.22s ease;
+    padding: 0.7rem 1rem;
+    border: 1px solid #c9913a;
+    border-radius: 4px;
+    background: transparent !important;
+    color: #c9913a;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    transition: background 0.22s ease, color 0.22s ease;
 }
 .character-card-link:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.06);
-    box-shadow: 0 0 18px color-mix(in srgb, currentColor 26%, transparent);
+    background: rgba(201, 145, 58, 0.14) !important;
+    color: #e6b35c;
 }
 
 /*Cartes personnages compactes*/
@@ -222,7 +181,8 @@
     font-weight: 800;
 }
 .character-card .class-badge {
-    background: color-mix(in srgb, currentColor 10%, rgba(2, 6, 23, 0.42));
+    background: #12111a;
+    border-radius: 3px;
 }
 
 /*Cartes Configurations*/
