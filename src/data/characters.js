@@ -203,7 +203,7 @@ export const characters = [
         lore: "Membre du [Jardin Majestueux], la force d'élite protégeant la Cité Royale des Cieux, elle a reçu le nom de code [Rose] en tant que la plus puissante de cet ordre. " +
             "Pour éliminer les ennemis menaçant les Cieux, Rose a été mandatée pour enquêter dans une dimension parallèle appelée Elios.",
         classes: ["Tempest Burster", "Black Massacre", "Minerva", "Prime Operator"],
-        classesFr: ["", "", "", ""],
+        classesFr: ["Tempête furieuse", "Veuve noire", "Minerve", "Prime Opératrice"],
     },
     {
         id: "ain",
@@ -240,7 +240,7 @@ export const characters = [
         lore: "Elle a vécu au plus profond de la Forêt Noire pendant une durée indéterminée, jusqu'à ce qu'elle puisse enfin en sortir, guidée par la 'Troisième Lumière Bleue'. " +
             "Elle décide de quitter la forêt et de partir en voyage pour découvrir qui elle est vraiment.",
         classes: ["Eternity Winner", "Radiant Soul", "Nisha Labyrinth", "Twins Picaro"],
-        classesFr: ["", "", "", "Arlequine"],
+        classesFr: ["Championne Éonienne", "Lumièle", "Labyrinthe de Nisha", "Arlequine"],
     },
     {
         id: "noah",

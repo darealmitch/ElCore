@@ -124,7 +124,7 @@ export const tierList = [
                         characterName: "Elsword",
                         classNameFr: "Chevalier Royal",
                         classNameInternational: "Knight Emperor",
-                        chibiImage: "/images/tier-list/chibi/knight-emperor.png",
+                        chibiImage: "/images/chibi/KnightEmperorChibi.webp",
                         role: "DPS corps à corps / clear",
                         reason: "Bon candidat pour le clearing et le PvE général, avec une efficacité reconnue mais plus contextuelle selon les contenus.",
                         conditions: "Moins universel que les meilleurs DPS selon les boss, les donjons et le patch.",
@@ -144,7 +144,7 @@ export const tierList = [
                     {
                         characterId: "luciel",
                         characterName: "Lu/Ciel",
-                        classNameFr: "Nom français à compléter",
+                        classNameFr: "Demersio",
                         classNameInternational: "Demersio",
                         chibiImage: null,
                         role: "DPS / Support hybride",
@@ -201,7 +201,7 @@ export const tierList = [
                     {
                         characterId: "luciel",
                         characterName: "Lu/Ciel",
-                        classNameFr: "Nom français à compléter",
+                        classNameFr: "Demersio",
                         classNameInternational: "Demersio",
                         chibiImage: null,
                         role: "DPS / Support hybride",
