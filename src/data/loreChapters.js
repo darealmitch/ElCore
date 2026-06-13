@@ -887,7 +887,7 @@ export const loreChapters = [
                     {
                         src: "/images/lore/07/darkmoon.webp",
                         alt: "Darkmoon",
-                        caption: "Darkmoon, Prêtresse de l’El de la Lune.",
+                        caption: "NoireLune;, Prêtresse de l’El de la Lune.",
                     },
                 ],
                 note: "L’existence des Prêtresses montre que la protection de l’El ne peut plus dépendre d’une seule personne.",
