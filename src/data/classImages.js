@@ -318,7 +318,7 @@ export const classImages = [
         pathNameFr: "Druidesse d'Azoth",
         jobStage: "job1",
         className: "Wiz Magician",
-        classNameFr: "Wiz Magician",
+        classNameFr: "Magicienne de génie",
         fileName: "aisha-wiz-magician.webp"
     }),
     createClassImage({
@@ -328,7 +328,7 @@ export const classImages = [
         pathNameFr: "Druidesse d'Azoth",
         jobStage: "job2",
         className: "Mystic Alchemist",
-        classNameFr: "Mystic Alchemist",
+        classNameFr: "Alchimiste mystique",
         fileName: "aisha-mystic-alchemist.webp"
     }),
     createClassImage({
@@ -1466,7 +1466,7 @@ export const classImages = [
         pathNameFr: "Subjugueur",
         jobStage: "job1",
         className: "Affect Tracer",
-        classNameFr: "Affect Tracer",
+        classNameFr: "Traceur d'impulsions",
         fileName: "add-affect-tracer.webp"
     }),
     createClassImage({
@@ -1476,7 +1476,7 @@ export const classImages = [
         pathNameFr: "Subjugueur",
         jobStage: "job2",
         className: "Dissembler",
-        classNameFr: "Dissembler",
+        classNameFr: "Décomposeur",
         fileName: "add-dissembler.webp"
     }),
     createClassImage({
@@ -1568,7 +1568,7 @@ export const classImages = [
         pathNameFr: "Innocence",
         jobStage: "job3",
         className: "Innocent",
-        classNameFr: "",
+        classNameFr: "Innocence",
         fileName: "luciel-innocent.webp"
     }),
     createClassImage({
@@ -1586,7 +1586,7 @@ export const classImages = [
         characterId: "luciel",
         character: "Lu/Ciel",
         pathName: "Diangelion",
-        pathNameFr: "",
+        pathNameFr: "Diangelion",
         jobStage: "job1",
         className: "Diabla",
         classNameFr: "Diabla",
@@ -1596,7 +1596,7 @@ export const classImages = [
         characterId: "luciel",
         character: "Lu/Ciel",
         pathName: "Diangelion",
-        pathNameFr: "",
+        pathNameFr: "Diangelion",
         jobStage: "job2",
         className: "Demonio",
         classNameFr: "Demonio",
@@ -1606,20 +1606,20 @@ export const classImages = [
         characterId: "luciel",
         character: "Lu/Ciel",
         pathName: "Diangelion",
-        pathNameFr: "",
+        pathNameFr: "Diangelion",
         jobStage: "job3",
         className: "Diangelion",
-        classNameFr: "",
+        classNameFr: "Diangelion",
         fileName: "luciel-diangelion.webp"
     }),
     createClassImage({
         characterId: "luciel",
         character: "Lu/Ciel",
         pathName: "Diangelion",
-        pathNameFr: "",
+        pathNameFr: "Diangelion",
         jobStage: "master",
         className: "Diangelion",
-        classNameFr: "",
+        classNameFr: "Diangelion",
         fileName: "luciel-diangelion-master.webp"
     }),
 
@@ -1627,40 +1627,40 @@ export const classImages = [
         characterId: "luciel",
         character: "Lu/Ciel",
         pathName: "Demersio",
-        pathNameFr: "",
+        pathNameFr: "Demersio",
         jobStage: "job1",
         className: "Emptiness",
-        classNameFr: "",
+        classNameFr: "Isolatesse",
         fileName: "luciel-emptiness.webp"
     }),
     createClassImage({
         characterId: "luciel",
         character: "Lu/Ciel",
         pathName: "Demersio",
-        pathNameFr: "",
+        pathNameFr: "Demersio",
         jobStage: "job2",
         className: "Turbids",
-        classNameFr: "",
+        classNameFr: "Tristesso",
         fileName: "luciel-turbids.webp"
     }),
     createClassImage({
         characterId: "luciel",
         character: "Lu/Ciel",
         pathName: "Demersio",
-        pathNameFr: "",
+        pathNameFr: "Demersio",
         jobStage: "job3",
         className: "Demersio",
-        classNameFr: "",
+        classNameFr: "Demersio",
         fileName: "luciel-demersio.webp"
     }),
     createClassImage({
         characterId: "luciel",
         character: "Lu/Ciel",
         pathName: "Demersio",
-        pathNameFr: "",
+        pathNameFr: "Demersio",
         jobStage: "master",
         className: "Demersio",
-        classNameFr: "",
+        classNameFr: "Demersio",
         fileName: "luciel-demersio-master.webp"
     }),
 
@@ -2446,10 +2446,10 @@ export const classImages = [
         characterId: "lithia",
         character: "Lithia",
         pathName: "Achlys",
-        pathNameFr: "",
+        pathNameFr: "Achlys",
         jobStage: "job1",
         className: "Path Finder",
-        classNameFr: "",
+        classNameFr: "Détraqueuse",
         fileName: "lithia-path-finder.webp"
     }),
 
@@ -2457,10 +2457,10 @@ export const classImages = [
         characterId: "lithia",
         character: "Lithia",
         pathName: "Achlys",
-        pathNameFr: "",
+        pathNameFr: "Achlys",
         jobStage: "job2",
         className: "Rima Clavis",
-        classNameFr: "",
+        classNameFr: "Rima Clavis",
         fileName: "lithia-rima-clavis.webp"
     }),
 
@@ -2468,10 +2468,10 @@ export const classImages = [
         characterId: "lithia",
         character: "Lithia",
         pathName: "Achlys",
-        pathNameFr: "",
+        pathNameFr: "Achlys",
         jobStage: "job3",
         className: "Achlys",
-        classNameFr: "",
+        classNameFr: "Achlys",
         fileName: "lithia-achlys.webp"
     }),
 
@@ -2479,10 +2479,10 @@ export const classImages = [
         characterId: "lithia",
         character: "Lithia",
         pathName: "Achlys",
-        pathNameFr: "",
+        pathNameFr: "Achlys",
         jobStage: "master",
         className: "Achlys",
-        classNameFr: "",
+        classNameFr: "Achlys",
         fileName: "lithia-achlys-master.webp"
     }),
 
@@ -2490,7 +2490,7 @@ export const classImages = [
         characterId: "lithia",
         character: "Lithia",
         pathName: "Mischief",
-        pathNameFr: "",
+        pathNameFr: "Delinquenta",
         jobStage: "job1",
         className: "Trick Finder",
         classNameFr: "Cupido Girl",
@@ -2501,7 +2501,7 @@ export const classImages = [
         characterId: "lithia",
         character: "Lithia",
         pathName: "Mischief",
-        pathNameFr: "",
+        pathNameFr: "Delinquenta",
         jobStage: "job2",
         className: "Cynical Sneer",
         classNameFr: "Cynical Girl",
@@ -2512,7 +2512,7 @@ export const classImages = [
         characterId: "lithia",
         character: "Lithia",
         pathName: "Mischief",
-        pathNameFr: "",
+        pathNameFr: "Delinquenta",
         jobStage: "job3",
         className: "Mischief",
         classNameFr: "Delinquenta",
@@ -2523,7 +2523,7 @@ export const classImages = [
         characterId: "lithia",
         character: "Lithia",
         pathName: "Mischief",
-        pathNameFr: "",
+        pathNameFr: "Delinquenta",
         jobStage: "master",
         className: "Mischief",
         classNameFr: "Delinquenta",

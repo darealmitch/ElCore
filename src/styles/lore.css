@@ -10,9 +10,9 @@
     border: 1px solid var(--border-soft);
     border-radius: 2rem;
     background:
-            radial-gradient(circle at top right, rgba(201, 145, 58, 0.14), transparent 24rem),
-            radial-gradient(circle at bottom left, rgba(201, 145, 58, 0.08), transparent 22rem),
-            rgba(26, 19, 16, 0.58);
+            radial-gradient(circle at top right, rgba(255, 255, 255, 0.14), transparent 24rem),
+            radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.08), transparent 22rem),
+            rgba(20, 20, 20, 0.58);
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.24);
 }
 .lore-hero > span {
@@ -51,7 +51,7 @@
     border: 1px solid var(--border-soft);
     border-radius: 1.4rem;
     background:
-            radial-gradient(circle at top right, rgba(201, 145, 58, 0.08), transparent 14rem),
+            radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 14rem),
             var(--bg-card);
     text-decoration: none;
     transition:
@@ -61,19 +61,19 @@
 }
 .lore-chapter-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(201, 145, 58, 0.42);
+    border-color: rgba(255, 255, 255, 0.42);
     box-shadow:
             0 18px 38px rgba(0, 0, 0, 0.28),
-            0 0 18px rgba(201, 145, 58, 0.1);
+            0 0 18px rgba(255, 255, 255, 0.1);
 }
 .lore-chapter-order {
     display: grid;
     place-items: center;
     width: 3.2rem;
     height: 3.2rem;
-    border: 1px solid rgba(201, 145, 58, 0.32);
+    border: 1px solid rgba(255, 255, 255, 0.32);
     border-radius: 1rem;
-    background: rgba(201, 145, 58, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     color: #d8ccb8;
     font-size: 0.9rem;
     font-weight: 1000;
@@ -108,7 +108,7 @@
     isolation: isolate;
     overflow: hidden;
     background-image:
-            linear-gradient(180deg, rgba(12, 9, 8, 0.94), rgba(12, 9, 8, 0.78), rgba(12, 9, 8, 0.96)),
+            linear-gradient(180deg, rgba(10, 10, 10, 0.94), rgba(10, 10, 10, 0.78), rgba(10, 10, 10, 0.96)),
             var(--lore-page-bg);
     background-size: cover;
     background-position: center;
@@ -120,8 +120,8 @@
     inset: 0;
     z-index: -1;
     background:
-            radial-gradient(circle at top right, rgba(201, 145, 58, 0.14), transparent 28rem),
-            radial-gradient(circle at bottom left, rgba(176, 48, 48, 0.12), transparent 26rem);
+            radial-gradient(circle at top right, rgba(255, 255, 255, 0.14), transparent 28rem),
+            radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.12), transparent 26rem);
     pointer-events: none;
 }
 .lore-chapter-detail-hero {
@@ -131,8 +131,8 @@
     border: 1px solid rgba(255, 255, 255, 0.075);
     border-radius: 2rem;
     background:
-            radial-gradient(circle at top right, rgba(201, 145, 58, 0.08), transparent 22rem),
-            rgba(12, 9, 8, 0.68);
+            radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 22rem),
+            rgba(10, 10, 10, 0.68);
     backdrop-filter: blur(10px);
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
 }
@@ -151,9 +151,9 @@
 .lore-chapter-detail-content > span {
     width: fit-content;
     padding: 0.42rem 0.75rem;
-    border: 1px solid rgba(201, 145, 58, 0.38);
+    border: 1px solid rgba(255, 255, 255, 0.38);
     border-radius: 999px;
-    background: rgba(201, 145, 58, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     color: var(--accent-blue);
     font-size: 0.76rem;
     font-weight: 900;
@@ -186,8 +186,8 @@
     border: 1px solid rgba(255, 255, 255, 0.075);
     border-radius: 1.45rem;
     background:
-            radial-gradient(circle at 0% 0%, rgba(201, 145, 58, 0.055), transparent 18rem),
-            rgba(12, 9, 8, 0.74);
+            radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.055), transparent 18rem),
+            rgba(10, 10, 10, 0.74);
     backdrop-filter: blur(12px);
     box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22);
     scroll-margin-top: 7rem;
@@ -222,7 +222,7 @@
     left: 0;
     width: 2px;
     border-radius: 999px;
-    background: linear-gradient(180deg, rgba(201, 145, 58, 0.7), rgba(176, 48, 48, 0.22));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.22));
 }
 .lore-text-copy h2 {
     margin: 0 0 1rem;
@@ -259,7 +259,7 @@
     margin: 0;
     border: 1px solid rgba(255, 255, 255, 0.075);
     border-radius: 1.15rem;
-    background: rgba(16, 11, 8, 0.42);
+    background: rgba(17, 17, 17, 0.42);
     box-shadow: 0 18px 38px rgba(0, 0, 0, 0.26);
 }
 .lore-section-image-button {
@@ -299,7 +299,7 @@
     padding: 0.35rem 0.6rem;
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 999px;
-    background: rgba(12, 9, 8, 0.76);
+    background: rgba(10, 10, 10, 0.76);
     color: #fff;
     font-size: 0.72rem;
     font-weight: 900;
@@ -339,7 +339,7 @@
     height: 22rem;
     padding: 0.75rem;
     background:
-            radial-gradient(circle at 50% 45%, rgba(201, 145, 58, 0.08), transparent 14rem),
+            radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.08), transparent 14rem),
             rgba(2, 6, 22, 0.36);
 }
 .lore-section-images.multiple .lore-section-image-button img {
@@ -375,7 +375,7 @@
     display: grid;
     place-items: center;
     padding: 2rem;
-    background: rgba(16, 11, 8, 0.86);
+    background: rgba(17, 17, 17, 0.86);
     backdrop-filter: blur(12px);
 }
 .lore-image-lightbox-close {
@@ -389,7 +389,7 @@
     height: 2.8rem;
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 999px;
-    background: rgba(26, 19, 16, 0.86);
+    background: rgba(20, 20, 20, 0.86);
     color: #fff;
     font-size: 1.8rem;
     font-weight: 700;
@@ -409,7 +409,7 @@
     object-fit: contain;
     border: 1px solid var(--border-soft);
     border-radius: 1.2rem;
-    background: rgba(16, 11, 8, 0.5);
+    background: rgba(17, 17, 17, 0.5);
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.44);
 }
 .lore-image-lightbox-content figcaption {
@@ -432,7 +432,7 @@
     padding: 0.65rem;
     border: 1px solid rgba(255, 255, 255, 0.075);
     border-radius: 999px;
-    background: rgba(12, 9, 8, 0.78);
+    background: rgba(10, 10, 10, 0.78);
     backdrop-filter: blur(12px);
     box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
 }
@@ -446,11 +446,11 @@
     gap: 0.65rem;
     min-height: 2.65rem;
     padding: 0.7rem 1rem;
-    border: 1px solid rgba(201, 145, 58, 0.32);
+    border: 1px solid rgba(255, 255, 255, 0.32);
     border-radius: 999px;
     background:
-            radial-gradient(circle at top right, rgba(201, 145, 58, 0.16), transparent 9rem),
-            rgba(26, 19, 16, 0.86);
+            radial-gradient(circle at top right, rgba(255, 255, 255, 0.16), transparent 9rem),
+            rgba(20, 20, 20, 0.86);
     color: #fff;
     font-size: 0.85rem;
     font-weight: 900;
@@ -463,10 +463,10 @@
 }
 .lore-section-selector-toggle:hover {
     transform: translateY(-1px);
-    border-color: rgba(201, 145, 58, 0.55);
+    border-color: rgba(255, 255, 255, 0.55);
     background:
-            radial-gradient(circle at top right, rgba(201, 145, 58, 0.22), transparent 9rem),
-            rgba(31, 22, 15, 0.92);
+            radial-gradient(circle at top right, rgba(255, 255, 255, 0.22), transparent 9rem),
+            rgba(22, 22, 22, 0.92);
 }
 .lore-section-selector-toggle span {
     display: grid;
@@ -507,7 +507,7 @@
 }
 .lore-section-selector-list::-webkit-scrollbar-thumb {
     border-radius: 999px;
-    background: rgba(201, 145, 58, 0.32);
+    background: rgba(255, 255, 255, 0.32);
 }
 .lore-section-selector-link {
     flex: 0 0 auto;
@@ -532,8 +532,8 @@
 }
 .lore-section-selector-link:hover {
     transform: translateY(-1px);
-    border-color: rgba(201, 145, 58, 0.42);
-    background: rgba(201, 145, 58, 0.1);
+    border-color: rgba(255, 255, 255, 0.42);
+    background: rgba(255, 255, 255, 0.1);
     color: #fff;
 }
 
@@ -569,7 +569,7 @@
     padding: 0.75rem 0.9rem;
     border: 1px solid rgba(255, 255, 255, 0.09);
     border-radius: 1rem;
-    background: rgba(12, 9, 8, 0.72);
+    background: rgba(10, 10, 10, 0.72);
     color: #fff;
     text-decoration: none;
     backdrop-filter: blur(12px);
@@ -579,8 +579,8 @@
             background 0.22s ease;
 }
 .lore-chapter-navigation-button:hover {
-    border-color: rgba(201, 145, 58, 0.36);
-    background: rgba(26, 19, 16, 0.86);
+    border-color: rgba(255, 255, 255, 0.36);
+    background: rgba(20, 20, 20, 0.86);
 }
 .lore-chapter-navigation-button span {
     grid-column: 2;

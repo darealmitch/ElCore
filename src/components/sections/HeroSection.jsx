@@ -33,8 +33,8 @@ function HeroSection() {
                             }}>
                                 Comprendre Elcore
                             </a>
-                            <a href="/guides" className="hero-button secondary">
-                                Commencer avec les guides
+                            <a href="/personnages" className="hero-button secondary">
+                                Voir les personnages
                             </a>
                         </div>
                 </div>

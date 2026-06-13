@@ -243,7 +243,7 @@ export const elswordClassSkills = [
         jobStage: "master",
         title: "Compétences — Maître des runes",
         layout: "rows",
-        extends: ["elsword-ke-elswordClassSkills"],
+        extends: ["elsword-rm-elswordClassSkills"],
         minLevel: 1,
         columns: [
             { id: "active", label: "Skills", type: "active" },

@@ -12,9 +12,9 @@ export const classDescriptions = [
         jobStage: "job3",
         title: "",
         path: ["Chevalier de l'épée", "Haut Chevalier", "Chevalier Royal"],
-        presentation: "",
-        attackType: "",
-        attackRange: "",
+        presentation: "Combattant agressif avant d'amélioré ses techniques de corps à corps",
+        attackType: "Attaque physique",
+        attackRange: "Proche",
     },
     {
         characterId: "elsword",
@@ -25,10 +25,9 @@ export const classDescriptions = [
         jobStage: "job3",
         title: "Elsword 2e voie : Maître des runes",
         path: ["Chevalier-Mage", "Chevalier Runique", "Maître des runes"],
-        presentation: "L'épéiste magique le plus puissant a conçu ses propres runes de maniement d'épée à l'aide de la puissance d'El." +
-            " Il triomphe de ses ennemis grâce à la magie runique et à sa technique d'épéiste époustouflante.",
-        attackType: "",
-        attackRange: "",
+        presentation: "Combattant des flammes utilisant l'épée et la magie runique",
+        attackType: "Attaque magique",
+        attackRange: "Moyenne",
     },
     {
         characterId: "elsword",
@@ -41,8 +40,8 @@ export const classDescriptions = [
         path: ["Chevalier de Cornwell", "Invocateur d'épées", "Immortel"],
         presentation:
             "Des possibilités infinies s'offrent à cet épéiste, qui maîtrise les ténèbres et repousse ses propres limites. Grâce à cette spécialisation, tu utiliseras tes deux épées pour acculer l'ennemi sans relâche.",
-        attackType: "",
-        attackRange: "",
+        attackType: "Attaque physique",
+        attackRange: "Proche",
     },
     {
         characterId: "elsword",
@@ -56,7 +55,7 @@ export const classDescriptions = [
         presentation:
             "Un chevalier qui intègre le pouvoir de la résonance d'El dans son épée pour anéantir ses ennemis.",
         attackType: "Attaque magique",
-        attackRange: "Moyenne",
+        attackRange: "Moyen",
     },
 
     /* =========================
