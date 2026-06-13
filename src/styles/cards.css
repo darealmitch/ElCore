@@ -263,16 +263,17 @@
 .class-path-card {
     padding: 1.2rem;
     border: 1px solid;
-    border-radius: 1.5rem;
+    border-radius: 2px;
     background: var(--bg-card);
 }
 .class-path-header {
     margin-bottom: 1rem;
 }
 .class-path-header span {
-    font-size: 0.78rem;
-    font-weight: 900;
-    letter-spacing: 0.12em;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
 }
 .class-path-header h3 {
@@ -281,16 +282,15 @@
 }
 .class-stage-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
     gap: 0.8rem;
 }
 .class-stage-card {
     display: flex;
     flex-direction: column;
-    min-height: 18rem;
     overflow: hidden;
     border: 1px solid var(--border-soft);
-    border-radius: 1.5rem;
+    border-radius: 2px;
     background: rgba(17, 17, 17, 0.42);
     color: inherit;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -305,7 +305,7 @@
     position: relative;
     align-items: flex-end;
     justify-content: center;
-    height: 12rem;
+    height: 9.5rem;
     padding: 0.8rem;
 }
 .class-stage-image {
@@ -322,14 +322,20 @@
 }
 .class-stage-label {
     width: fit-content;
-    padding: 0.3rem 0.55rem;
-    border-radius: 999px;
-    font-size: 0.72rem;
-    font-weight: 900;
+    padding: 0.28rem 0.5rem;
+    border-radius: 2px;
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 .class-stage-content strong {
     color: #fff;
-    font-size: 1rem;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
 }
 
 /*Classe maître*/
