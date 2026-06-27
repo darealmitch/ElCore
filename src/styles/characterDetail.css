@@ -161,7 +161,7 @@
     align-items: center;
     gap: 0.5rem;
     width: fit-content;
-    margin-top: auto;
+    margin-top: 10px;
     padding: 0.8rem 1.3rem;
     border: none;
     border-radius: 10px;
@@ -436,7 +436,7 @@
 }
 
 /* ============================================================
-   Chemins de spécialisation — carte-sélecteur + frise focalisée
+   Informations de classes — carte-sélecteur + frise focalisée
    ============================================================ */
 .cp {
     --ink: #eef0f8;
@@ -557,7 +557,7 @@
 }
 .cp-node {
     flex: 1 1 0;
-    min-width: 92px;
+    min-width: 130px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -573,8 +573,8 @@
 }
 .cp-pic {
     position: relative;
-    width: 98px;
-    height: 104px;
+    width: 140px;
+    height: 160px;
     border-radius: 14px;
     border: 1px solid var(--line);
     overflow: hidden;
@@ -623,9 +623,9 @@
 }
 .cp-conn {
     position: relative;
-    flex: 0 0 30px;
+    flex: 0 0 50px;
     align-self: flex-start;
-    margin-top: 51px;
+    margin-top: 80px;
     height: 2px;
     background: rgba(255, 255, 255, 0.08);
 }
@@ -643,10 +643,10 @@
     border-left-color: color-mix(in srgb, var(--c) 60%, transparent);
 }
 .cp-band {
-    flex: 0 0 44px;
+    flex: 0 0 60px;
     align-self: flex-start;
-    margin-top: 26px;
-    height: 56px;
+    margin-top: 50px;
+    height: 86px;
     border-radius: 7px;
     background: repeating-linear-gradient(45deg, var(--c) 0 8px, var(--c2) 8px 16px);
     display: grid;

@@ -1,6 +1,6 @@
 import { Fragment, useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import gsap from "gsap";
 import { classImages } from "../../data/classImages";
 import { characters } from "../../data/characters";
@@ -55,7 +55,7 @@ function ClassPathTimeline({ characterId }) {
     if (paths.length === 0) {
         return (
             <article className="detail-card">
-                <h2>Chemins de spécialisation</h2>
+                <h2>Informations de classes</h2>
                 <p>Aucune spécialisation n’a encore été ajoutée pour ce personnage.</p>
             </article>
         );
@@ -102,7 +102,7 @@ function ClassPathTimeline({ characterId }) {
             </div>
 
             {/* Frise focalisée du chemin sélectionné */}
-            <AnimatePresence mode="wait">
+            <useReducedMotion mode="wait">
                 <motion.div
                     key={selected.pathName}
                     ref={friseRef}
@@ -126,7 +126,7 @@ function ClassPathTimeline({ characterId }) {
                         return (
                             <Fragment key={`${stage.pathName}-${stage.jobStage}`}>
                                 {isMaster ? (
-                                    <div className="cp-band" aria-hidden="true"><span>◆ Classe de Maître</span></div>
+                                    <div className="cp-band" aria-hidden="true"><span>Classe de Maître</span></div>
                                 ) : (
                                     <span className="cp-conn" aria-hidden="true"><span className="cp-conn-fill" /></span>
                                 )}
@@ -144,7 +144,7 @@ function ClassPathTimeline({ characterId }) {
                         );
                     })}
                 </motion.div>
-            </AnimatePresence>
+            </useReducedMotion>
         </section>
     );
 }

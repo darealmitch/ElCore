@@ -131,9 +131,10 @@ function CharacterDetailPage() {
 
                     <div className="cd-meta">
                         <div><div className="k">Âge</div><div className="v">{character.age}</div></div>
-                        <div><div className="k">Rôle</div><div className="v">{character.role}</div></div>
+                        <div><div className="k">Genre</div><div className="v">{character.gender}</div></div>
                         <div><div className="k">Arme</div><div className="v">{character.weapon}</div></div>
                         <div><div className="k">Type</div><div className="v">{character.type}</div></div>
+                        <div><div className="k">Rôle</div><div className="v">{character.role}</div></div>
                     </div>
 
                     <div className="cd-classes">
@@ -170,7 +171,6 @@ function CharacterDetailPage() {
                         <span className="cd-panel-label">Identité</span>
                         <div className="cd-idgrid">
                             <div><span className="k">Âge</span><span className="v">{character.age}</span></div>
-                            <div><span className="k">Genre</span><span className="v">{character.gender}</span></div>
                             <div><span className="k">Type</span><span className="v">{character.type}</span></div>
                             <div><span className="k">Arme</span><span className="v">{character.weapon}</span></div>
                         </div>
@@ -198,7 +198,7 @@ function CharacterDetailPage() {
 
                 <div className="section-header" id="specialisations">
                     <span>Classes</span>
-                    <h2>Chemins de spécialisation</h2>
+                    <h2>Informations de classes</h2>
                 </div>
 
                 <ClassPathTimeline characterId={character.id} />

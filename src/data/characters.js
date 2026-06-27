@@ -11,10 +11,9 @@ export const characters = [
         featuredClass: "Genesis",
         featuredClassFr: "Séphiroth",
         image: "/images/personnages/elsword.webp",
-        description: "Jeune épéiste courageux et impulsif, Elsword manie une grande épée avec une agilité étonnante et suit les traces de sa sœur ainée Elesis." +
-            "pour prouver sa valeur au sein du groupe de recherche." +
-            "Sa particularité repose sur la Voie de l'épée, une jauge unique qui alterne entre vitalité qui accélère ses mouvements et sa rénégération de mana" +
-            "et destruction qui décuple ses dégats.",
+        description: "C'est le frère d'Elesis, la commandante des chevaliers rouges du royaume de Belder. " +
+            "Il a toujours revé d'acquérir les compétences de sa sœur, c'est pourquoi il s'est entraîné toute sa jeunesse avec un professeur venant de Belder afin d'apprendre des techniques de combat systématiques. " +
+            "Les chercheurs d'Eldrit l'ont chargé de retrouver un cristal d'Eldrit. C'est ainsi qu'ont commencé ses aventures.",
         lore: "Petit frère d'Elesis, la Première Capitaine des Chevaliers Rouges de Belder, Elsword s'est entraîné dès son plus jeune âge pour être aussi fort que sa sœur, apprenant ses techniques au sabre auprès d'un chevalier de Belder." +
             " Il a débuté son aventure en recevant la mission de restaurer l'El en tant que membre des Chercheurs de l'Eldrit.",
         classes: ["Knight Emperor", "Rune Master", "Immortal", "Genesis"],
@@ -26,13 +25,15 @@ export const characters = [
         fullName: "Aisha Landar",
         age: "15 ans",
         gender: "Femme",
-        type: "Grande Magicienne",
+        type: "Magicienne",
         weapon: "Baguette",
         role: "Magie / DPS",
         featuredClass: "Aether Sage",
         featuredClassFr: "Étheriste",
         image: "/images/personnages/aisha.webp",
-        description: "Une magicienne puissante, spécialisée dans les sorts à distance et le contrôle magique.",
+        description: "C'est une puissante magicienne qui a voyagé de par le monde avec son grand-père, un sage, pendant de longues années. " +
+            "Mais un jour, sur un site archéologique, un anneau l'a ensorcelée. " +
+            "Aisha a perdu la majeure partie de ses pouvoirs. Depuis, elle tente de les récupérer en recherchant l'aura disparue.",
         lore: "Magicienne accomplie devenue Grande Magicienne dès son plus jeune âge, Aisha découvre lors d'un voyage avec son grand-père un anneau antique qui absorbe la majeure partie de ses pouvoirs. " +
             "Amputée de la plupart de ses capacités, elle se lance dans un périple pour les récupérer en suivant la signature magique de l'anneau disparu.",
         classes: ["Aether Sage", "Oz Sorcerer", "Metamorphy", "Lord Azoth"],
@@ -50,7 +51,9 @@ export const characters = [
         featuredClass: "Daybreaker",
         featuredClassFr: "Aube",
         image: "/images/personnages/rena.webp",
-        description: "Une archère agile qui combine attaques à distance, mobilité et lien avec les esprits.",
+        description: "Une Elfe, la plus belle et la plus sage des compagnons d'Elsword.\n" +
+            "Rena a réalisé que l'aura d'Eldrit devait absolument être récupérée afin de rétablir la connexion déclinante avec le monde des esprits.\n" +
+            "Lorsqu'elle a ressenti d'étranges vibrations provenant de l'Arbre dEl du village de Ruben, elle s'est immédiatement mise en route.",
         lore: "La plus mature et la plus belle de la Patrouille de l'El. Alors que le lien avec le monde des esprits s'affaiblit de plus en plus, Rena est déterminée à restaurer le pouvoir de l'El pour rétablir cette connexion. " +
             "Elle ressent la résonance de l'El depuis l'Arbre de l'El du Village de Ruben et part enquêter.",
         classes: ["Anemos", "Daybreaker", "Twilight", "Prophetess"],
@@ -68,7 +71,9 @@ export const characters = [
         featuredClass: "Furious Blade",
         featuredClassFr: "Lame furieuse",
         image: "/images/personnages/raven.webp",
-        description: "Un mercenaire agressif utilisant sa lame et son bras Nasod pour maintenir la pression.",
+        description: "Bien qu'il n'ait été qu'un simple citoyen, il a réussi à devenir le chef des chevaliers mercenaires. Malheureusement, son succès a rendu la noblesse jalouse, et il a tout perdu suite à une infâme intrigue.\n" +
+            "Les Nasods l'ont ressuscité et à présent, il a soif de vengeance.\n" +
+            "Décidé à assumer ses responsabilités pour les actes quil a commis, il a choisi de se joindre à Elsword et ses compagnons.",
         lore: "Un homme du peuple qui a gravi les échelons jusqu'à devenir le capitaine d'un célèbre ordre de chevaliers mercenaires. " +
             "Victime d'une machination d'aristocrates jaloux, il perd tout ce qui lui était cher en une seule nuit. Réanimé par les Nasods, il a juré de se venger du Royaume de Belder. " +
             "Désormais, rongé par la culpabilité de ses actes passés, il rejoint la Patrouille de l'El en guise d'expiation.",
@@ -87,7 +92,10 @@ export const characters = [
         featuredClass: "Code: Sariel",
         featuredClassFr: "Nasod Sariel",
         image: "/images/personnages/eve.webp",
-        description: "La reine des Nasods, spécialisée dans les attaques énergétiques et mécaniques.",
+        description: "Reine des Nasods, disposant d'une intelligence supérieure, et d'un ego surdimensionné. " +
+            "Lors de la disparition de la force de l'Eldrit, elle est entrée en hibernation. " +
+            "Elle ne s'est réveillée que par hasard, lorsqu'elle a à nouveau ressenti une aura d'Eldrit. " +
+            "Elle a constaté que les compagnons d'Elsword avaient détruit son noyau d'énergie et a décidé de se joindre à eux pour rétablir la puissance de l'Eldrit.",
         lore: "La Reine des Nasods, dotée d'une haute intelligence et d'une conscience de soi développée. " +
             "Eve est entrée en hibernation lorsque le pouvoir de l'El a soudainement disparu, mais se réveille lorsque de l'énergie El s'infiltre suite aux perturbations causées par la Patrouille de l'El. " +
             "Elle rejoint Elsword et ses compagnons pour retrouver l'El et reconstruire le noyau d'énergie qu'elle a découvert détruit.",
@@ -101,12 +109,16 @@ export const characters = [
         age: "13 ans",
         gender: "Homme",
         type: "Gardien",
-        weapon: "Bazooka (Destroyer ou Destructeur)",
+        weapon: "Bazooka (Destructeur)",
         role: "Tank / Canon",
         featuredClass: "Centurion",
         featuredClassFr: "Centurion",
         image: "/images/personnages/chung.webp",
-        description: "Un jeune gardien en armure lourde utilisant un énorme canon pour contrôler le combat.",
+        description: "Véritable nom : Prince Saker. Ce descendant de la famille Saker protège Hamel, la capitale du Duché de Cenarth. " +
+            "Son père, le \"chevalier blanc'\", a été ensorcelé et a combattu aux côtés des démons lors de l'assaut d'Hamel. " +
+            "Le Prince Saker, impuissant face à l'attaque, s'est joint aux compagnons d'Elsword pour accroitre ses capacités. " +
+            "Il a choisi le nom de 'Chung'. " +
+            "La pierre de protection, combinée à sa détermination se renforcer corps et âme en voyageant, a permis de renforcer Freiturnier et Destructeur.",
         lore: "Héritier de la famille Seiker, protecteurs attitrés de la Cité d'Hamel. Lorsque son père, le Colosse Blanc Helputt, est corrompu par la magie démoniaque et envahit Hamel, Chung tente de l'arrêter en vain. " +
             "Il rejoint la Patrouille de l'El pour devenir plus fort, choisissant de se faire appeler Chung plutôt que son vrai nom jusqu'à ce qu'il s'estime digne de le porter.",
         classes: ["Comet Crusader", "Fatal Phantom", "Centurion", "Dius Aer"],
@@ -124,7 +136,10 @@ export const characters = [
         featuredClass: "Shakti",
         featuredClassFr: "Shakti",
         image: "/images/personnages/ara.webp",
-        description: "Une combattante agile utilisant la lance, les arts martiaux et l’énergie spirituelle.",
+        description: "Descendante d'une famille de guerriers du royaume du Nord, sur le continent de Naios. " +
+            "Son frère Aren a été transformé en démon par l'Eldrit ténébreux et a attaqué sa propre famille et son village." +
+            "En compagnie d'Eun, la renarde à neuf queues scellée dans une épingle à cheveux, Ara s'est mise en route afin de retrouver son frère et de lui rendre son aspect initial. " +
+            "Cependant, Eun a un but bien différent : elle veut s'échapper de l'épingle à cheveux dans laquelle elle est emprisonnée...",
         lore: "Née dans une famille d'arts martiaux de l'Empire du Nord, Ara Haan voit son frère Aren être possédé par un démon, détruisant leur village et leur famille sous le nom de 'Ran' en quête de l'El de la Lune. " +
             "Avec l'aide d'Eun, un renard divin scellé en elle, elle se lance à la poursuite de son frère pour le sauver.",
         classes: ["Apsara", "Devi", "Shakti", "Surya"],
@@ -142,7 +157,10 @@ export const characters = [
         featuredClass: "Empire Sword",
         featuredClassFr: "Épée de l'empire",
         image: "/images/personnages/elesis.webp",
-        description: "Une chevalière puissante maniant une grande épée avec force et maîtrise.",
+        description: "Elle dispose de facultés exceptionnelles qu'elle doit en grande partie à son père qui était un chevalier errant de Belder." +
+            "Rendue furieuse par l'attaque-surprise des démons, elle a rejoint les chevaliers royaux de Belder. " +
+            "Elle a conscience du danger qu'elle et Elsword courent et se consacre à la lutte contre les démons. " +
+            "Un de ces jours, elle finira bien par trouver les démons qui ont attaqué Parte et Belder...",
         lore: "Influencée par son père, chevalier libre de Belder, Elesis est elle-même une épéiste hors pair. " +
             "Lorsqu'elle et Elsword sont soudainement attaqués par des démons, elle anticipe le danger et rejoint les Chevaliers de Belder pour protéger le royaume de l'invasion démoniaque imminente. " +
             "Elle finit par retrouver le démon qui avait attaqué Feita et Belder.",
@@ -161,8 +179,10 @@ export const characters = [
         featuredClass: "Doom Bringer",
         featuredClassFr: "Calamité",
         image: "/images/personnages/add.webp",
-        description: "Un génie déchu d'une lignée de chercheurs Nasods, Add à broyé des décennies dans une faille spatio-temporelle avant de resurgir avec un savoir interdit et une seule obsession: " +
-            "Réecrire son passé, quitte à plier les lois de la physique.",
+        description: "Membre d'une famille de mécaniciens et d'inventeurs, Add a brisé un tabou : celui de vouloir créer des Nasods aux capacités surhumaines. " +
+            "Il était en détresse et traqué. Pendant qu'il était poursuivi, il est tombé dans une fissure de l'espace-temps où se trouvait une bibliothèque et y a acquis une connaissance ancestrale. " +
+            "Animé d'une féroce rancune, il a tout mis en œuvre pour trouver un moyen de revenir. " +
+            "C'est alors quil a découvert Eve, qui renfermait d'innombrables codes antiques...",
         lore: "Descendant d'une éminente famille de chercheurs Nasod persécutée pour avoir étudié des savoirs interdits visant à rendre les Nasods plus 'humains'. " +
             "En fuyant, Add tombe dans les failles du temps et de l'espace, y acquérant d'immenses connaissances. " +
             "Il parvient finalement à s'en échapper et entame un voyage pour rejoindre sa propre ligne temporelle.",
@@ -181,8 +201,9 @@ export const characters = [
         featuredClass: "Catastrophe",
         featuredClassFr: "",
         image: "/images/personnages/luciel.webp",
-        description:
-            "Un duo lié par contrat, combinant puissance démoniaque et attaques rapides.",
+        description: "Une ancienne souveraine du monde démoniaque et un assassin d'outre-tombe. " +
+            "Lorsque leur vie est menacée par des assassins de démons, ils parviennent à échapper à la menace de justesse grâce à un pacte. " +
+            "Pour restaurer la force divine que Lu a perdue et reconquérir son pouvoir de souveraine, ils sont partis à la recherche de traces de démons…..",
         lore: "Une reine démoniaque déchue et un assassin, tous deux traqués par des assassins du royaume des démons. " +
             "Au bord de la mort, ils parviennent à conclure un contrat spirituel qui leur permet d'échapper de justesse à leurs poursuivants. " +
             "Pour recouvrer le pouvoir et l'autorité perdus de Lu, ils partent ensemble en quête.",
@@ -201,8 +222,10 @@ export const characters = [
         featuredClass: "Prime Operator",
         featuredClassFr: "Optimus Prime",
         image: "/images/personnages/rose.webp",
-        description:
-            "Une combattante venue d’une autre dimension, experte dans l’utilisation des armes à feu.",
+        description: "Elle fait partie de l'élite de la troupe défensive du royaume des cieux qui protège la princesse et compte parmi les membres de la troupe de la princesse. " +
+            "Son nom de code est Rose. " +
+            "Il symbolise sa combattivité hors du commun. " +
+            "Issue de l'autre dimension, elle s'est rendue à Élios sur ordre de la princesse pour découvrir l'origine de la catastrophe qui menace le royaume des cieux et l'écarter.",
         lore: "Membre du [Jardin Majestueux], la force d'élite protégeant la Cité Royale des Cieux, elle a reçu le nom de code [Rose] en tant que la plus puissante de cet ordre. " +
             "Pour éliminer les ennemis menaçant les Cieux, Rose a été mandatée pour enquêter dans une dimension parallèle appelée Elios.",
         classes: ["Tempest Burster", "Black Massacre", "Minerva", "Prime Operator"],
@@ -220,8 +243,8 @@ export const characters = [
         featuredClass: "Bluhen",
         featuredClassFr: "Florere",
         image: "/images/personnages/ain.webp",
-        description:
-            "Un être créé par la déesse Ishmael, utilisant projection magique et pouvoir divin.",
+        description: "Un jeune homme énigmatique est apparu sans crier gare devant Elsword et ses compagnons. " +
+            "Il se présente comme étant un prêtre au service de la déesse et leur propose son aide pour chercher le fragment d'Eldrit de Ruben, mais il reste mystérieux.",
         lore: "Un être mystérieux qui a surgi devant la Patrouille de l'El. Il se présente comme un prêtre au service d'une déesse et propose d'aider à retrouver l'Éclat d'El dérobé. Pourtant, tout en lui demeure enveloppé de mystère.",
         classes: ["Richter", "Bluhen", "Herrscher", "Opferung"],
         classesFr: ["Arbiter", "Florere", "Regnator", "Sacratus"],
@@ -238,8 +261,10 @@ export const characters = [
         featuredClass: "Eternity Winner",
         featuredClassFr: "",
         image: "/images/personnages/laby.webp",
-        description:
-            "Une fille joyeuse accompagnée de Nisha, son miroir, avec un style de jeu rapide et expressif.",
+        description: "Au plus profond du Bosquet des ténèbres se trouvait la source du mal.\n" +
+            "Laby y était enfermée, seule. Un éclat bleu lui avait permis de sortir du Bosquet des ténèbres.\n" +
+            "C'était la troisième fois qu'elle l'apercevait...\n " +
+            "Elle se met désormais en quête pour découvrir sa véritable identité.",
         lore: "Elle a vécu au plus profond de la Forêt Noire pendant une durée indéterminée, jusqu'à ce qu'elle puisse enfin en sortir, guidée par la 'Troisième Lumière Bleue'. " +
             "Elle décide de quitter la forêt et de partir en voyage pour découvrir qui elle est vraiment.",
         classes: ["Eternity Winner", "Radiant Soul", "Nisha Labyrinth", "Twins Picaro"],
@@ -257,10 +282,12 @@ export const characters = [
         featuredClass: "Liberator",
         featuredClassFr: "Libérator",
         image: "/images/personnages/noah.webp",
-        description:
-            "Un jeune homme lié au pouvoir de la lune, marqué par le temps et son passé.",
-        lore: "Il manie une faucille comme arme principale et exploite le pouvoir de la lune et des ténèbres, issus d'une expérience qui l'a transformé. " +
-            "Il a perdu son frère aux mains de l'Ordre de Henir et en a effacé le souvenir, avant de le retrouver après l'Explosion de l'El, après quoi il fut scellé pendant un temps.",
+        description: "Il utilise son arme principale, une faux, avec une lune modifiée et le pouvoir de l'obscurité.\n" +
+            "Il a oublié quil avait perdu son frère aîné à cause l'ordre de Henir.\n" +
+            "Après l'explosion de l'El, ses souvenirs le rattrappent et il est scellé.\n" +
+            "Grâce à la restauration d'Élyanod, lui et les ruines s'éveillent après un long sommeil.",
+        lore: "Avec des mouvements légers et rapides, il brandit sa faux et attaque les points faibles\n" +
+            "de ses adversaires pour les terrasser grâce au pouvoir de l'obscurité.",
         classes: ["Liberator", "Celestia", "Nyx Pieta", "Morpheus"],
         classesFr: ["Libérator", "Célestia", "Nyx Pieta", "Morphée"],
     },
@@ -276,8 +303,11 @@ export const characters = [
         featuredClass: "Gembliss",
         featuredClassFr: "Eméraldia",
         image: "/images/personnages/lithia.webp",
-        description:
-            "Une chasseuse de trésors utilisant gemmes, magie et mobilité pour explorer les ruines.",
+        description: "Un électron libre.\n" +
+            "Elle vagabonde seule et accepte des missions de magicienne et de chasseuse de trésors.\n" +
+            "L'Académie des ressources naturelles a chargé Lithia d'explorer Élyanod, la capitale resurgie du royaume antique.\n" +
+            "Après avoir accompli sa mission, elle est tombée sur un ami d'enfance, à Sander, avec lequel elle est allée explorer des ruines inconnues.\n" +
+            "C'est là qu'un esprit des ruines lui a lancé une malédiction.",
         lore: "Esprit libre qui ne se laisse pas brider par les règles. " +
             "Magicienne et chasseuse de trésors voyageant en solitaire, Lithia a été mandatée par la 'Société des Ressources Biologiques' pour explorer la capitale de l'Ancien Royaume, Élyanod. " +
             "En route pour livrer ses conclusions, elle retrouve une amie d'enfance à Sander et décide d'explorer des ruines inconnues. " +
