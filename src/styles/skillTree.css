@@ -355,7 +355,7 @@
     background: rgba(185, 20, 25, 0.82);
 }
 .skill-rows-headers div:last-child {
-    background: rgba(138, 90, 43, 0.78);
+    background: rgba(30, 85, 190, 0.78);
 }
 .skill-rows-body {
     display: grid;
@@ -365,7 +365,7 @@
     position: relative;
     display: grid;
     min-height: 5.4rem;
-    background: linear-gradient(90deg, rgba(140, 20, 20, 0.68) 0%, rgba(140, 20, 20, 0.68) 60%, rgba(138, 90, 43, 0.58) 60%, rgba(138, 90, 43, 0.58) 100%);
+    background: linear-gradient(90deg, rgba(140, 20, 20, 0.68) 0%, rgba(140, 20, 20, 0.68) 60%, rgba(20, 62, 160, 0.58) 60%, rgba(20, 62, 160, 0.58) 100%);
 }
 .skill-row-group + .skill-row-group {
     border-top: 0;
