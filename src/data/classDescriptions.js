@@ -1,8 +1,5 @@
 export const classDescriptions = [
-    /* =========================
-       Elsword
-    ========================= */
-
+    /*Elsword*/
     {
         characterId: "elsword",
         pathName: "Knight Emperor",
@@ -58,9 +55,7 @@ export const classDescriptions = [
         attackRange: "Moyen",
     },
 
-    /* =========================
-       Rena
-    ========================= */
+    /*Rena*/
     {
         characterId: "rena",
         pathName: "Daybreaker",
@@ -104,9 +99,7 @@ export const classDescriptions = [
         attackRange: "Longue",
     },
 
-    /* =========================
-       Aisha
-    ========================= */
+    /*Aisha*/
     {
         characterId: "aisha",
         pathName: "Oz Sorcerer",
@@ -135,9 +128,7 @@ export const classDescriptions = [
         attackRange: "",
     },
 
-    /* =========================
-       Raven
-    ========================= */
+    /*Raven*/
     {
         characterId: "raven",
         pathName: "Rage Hearts",
@@ -181,9 +172,7 @@ export const classDescriptions = [
         attackRange: "Moyenne",
     },
 
-    /* =========================
-       Eve
-    ========================= */
+    /*Eve*/
     {
         characterId: "eve",
         pathName: "Code: Esencia",
@@ -224,9 +213,7 @@ export const classDescriptions = [
         attackRange: "Longue",
     },
 
-    /* =========================
-       Chung
-    ========================= */
+    /*Chung*/
     {
         characterId: "chung",
         pathName: "Fatal Phantom",
@@ -271,9 +258,7 @@ export const classDescriptions = [
         attackRange: "Moyenne",
     },
 
-    /* =========================
-       Elesis
-    ========================= */
+    /*Elesis*/
     {
         characterId: "elesis",
         pathName: "Flamme Lord",
@@ -318,9 +303,7 @@ export const classDescriptions = [
         attackRange: "Moyenne",
     },
 
-    /* =========================
-       Ara
-    ========================= */
+    /*Ara*/
     {
         characterId: "ara",
         pathName: "Devi",
@@ -363,9 +346,7 @@ export const classDescriptions = [
         attackRange: "Moyenne",
     },
 
-    /* =========================
-       Add
-    ========================= */
+    /*Add*/
     {
         characterId: "add",
         pathName: "",
@@ -395,9 +376,7 @@ export const classDescriptions = [
         attackRange: "",
     },
 
-    /* =========================
-       Lu/Ciel
-    ========================= */
+    /*Lu/Ciel*/
     {
         characterId: "luciel",
         pathName: "",
@@ -442,9 +421,7 @@ export const classDescriptions = [
         attackRange: "Moyenne",
     },
 
-    /* =========================
-       Rose
-    ========================= */
+    /*Rose*/
     {
         characterId: "rose",
         pathName: "Black Massacre",
@@ -488,9 +465,7 @@ export const classDescriptions = [
         attackRange: "",
     },
 
-    /* =========================
-       Ain
-    ========================= */
+    /*Ain*/
     {
         characterId: "ain",
         pathName: "Bluhen",
@@ -534,9 +509,7 @@ export const classDescriptions = [
         attackRange: "Moyenne",
     },
 
-    /* =========================
-       Laby
-    ========================= */
+    /*Laby*/
     {
         characterId: "laby",
         pathName: "",
@@ -566,9 +539,7 @@ export const classDescriptions = [
         attackRange: "",
     },
 
-    /* =========================
-       Noah
-    ========================= */
+    /*Noah*/
 
     {
         characterId: "noah",
@@ -613,9 +584,7 @@ export const classDescriptions = [
         attackRange: "",
     },
 
-    /* =========================
-       Lithia
-    ========================= */
+    /*Lithia*/
 
     {
         characterId: "lithia",
