@@ -250,28 +250,127 @@
     font-size: 0.95rem;
     line-height: 1.75;
 }
-.cd-idgrid {
+.cd-stats {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem 1.4rem;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
     margin-top: 1.2rem;
+    padding: 1.2rem;
+    background: #121212;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
 }
-.cd-idgrid .k {
-    display: block;
-    font-family: var(--mono);
+.cd-stats-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.cd-stats-left .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px dotted #2a2a2a;
+}
+.cd-stats-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 140px;
+    text-align: center;
+}
+.attack-icon {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+.attack-value {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #fff;
+}
+.cd-stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.attack-label {
     font-size: 0.6rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--mut);
+    color: #9a9a9a;
 }
-.cd-idgrid .v {
+.cd-stats-grid .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+    padding: 4px 0;
+    border-bottom: 1px dotted #2a2a2a;
+}
+.cd-stats .k {
+    display: block;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+.cd-stats .v {
     display: block;
     margin-top: 0.3rem;
     font-family: 'Oswald', sans-serif;
     font-size: 1.05rem;
     font-weight: 500;
     line-height: 1.25;
-    color: var(--ink);
+    color: #ffffff;
+    text-align: left;
+}
+.class-stats{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:12px;
+}
+
+.class-stat{
+    display:grid;
+    grid-template-columns:110px 110px;
+}
+
+.label{
+    padding:8px 12px;
+    background:#51596d;
+    color:white;
+    font-weight:600;
+}
+
+.value{
+    padding:8px 12px;
+    font-weight:700;
+    text-align:center;
+    color:white;
+}
+
+.speed,
+.range,
+.difficulty{
+    background:linear-gradient(90deg,#4fd7ff,#6cf6ff);
+}
+
+.attack-type{
+    width:96px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:#3f4760;
+    border-radius:8px;
+}
+
+.pictureType img{
+    width:38px;
+    height:38px;
 }
 @media (max-width: 900px) {
     .cd-overview { grid-template-columns: 1fr; }

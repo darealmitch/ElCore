@@ -17,7 +17,14 @@ export const characters = [
         lore: "Petit frère d'Elesis, la Première Capitaine des Chevaliers Rouges de Belder, Elsword s'est entraîné dès son plus jeune âge pour être aussi fort que sa sœur, apprenant ses techniques au sabre auprès d'un chevalier de Belder." +
             " Il a débuté son aventure en recevant la mission de restaurer l'El en tant que membre des Chercheurs de l'Eldrit.",
         classes: ["Knight Emperor", "Rune Master", "Immortal", "Genesis"],
-        classesFr: ["Chevalier Royal", "Maître des runes", "Immortel", "Séphiroth"]
+        classesFr: ["Chevalier Royal", "Maître des runes", "Immortel", "Séphiroth"],
+        stats: {
+            speed: "Moyenne",
+            range: "Courte",
+            difficulty: "Facile",
+            pictureType: "/images/combat/Physical_Class.png",
+            attackType: "Physique",
+        }
     },
     {
         id: "aisha",
@@ -37,7 +44,14 @@ export const characters = [
         lore: "Magicienne accomplie devenue Grande Magicienne dès son plus jeune âge, Aisha découvre lors d'un voyage avec son grand-père un anneau antique qui absorbe la majeure partie de ses pouvoirs. " +
             "Amputée de la plupart de ses capacités, elle se lance dans un périple pour les récupérer en suivant la signature magique de l'anneau disparu.",
         classes: ["Aether Sage", "Oz Sorcerer", "Metamorphy", "Lord Azoth"],
-        classesFr: ["Étheriste", "Magicienne d'Oz", "Métamorphia", "Druidesse d'Azoth"]
+        classesFr: ["Étheriste", "Magicienne d'Oz", "Métamorphia", "Druidesse d'Azoth"],
+        stats: {
+            speed: "Lent",
+            range: "Moyenne",
+            difficulty: "Difficile",
+            pictureType: "/images/combat/Magical_Class.png",
+            attackType: "Physique",
+        }
     },
     {
         id: "rena",
@@ -57,7 +71,14 @@ export const characters = [
         lore: "La plus mature et la plus belle de la Patrouille de l'El. Alors que le lien avec le monde des esprits s'affaiblit de plus en plus, Rena est déterminée à restaurer le pouvoir de l'El pour rétablir cette connexion. " +
             "Elle ressent la résonance de l'El depuis l'Arbre de l'El du Village de Ruben et part enquêter.",
         classes: ["Anemos", "Daybreaker", "Twilight", "Prophetess"],
-        classesFr: ["Anemos", "Aube", "Crépuscule", "Prophétesse"]
+        classesFr: ["Anemos", "Aube", "Crépuscule", "Prophétesse"],
+        stats: {
+            speed: "Moyenne",
+            range: "Longue",
+            difficulty: "Facile",
+            pictureType: "/images/combat/Magical_Class.png",
+            attackType: "Physique",
+        }
     },
     {
         id: "raven",
@@ -78,7 +99,14 @@ export const characters = [
             "Victime d'une machination d'aristocrates jaloux, il perd tout ce qui lui était cher en une seule nuit. Réanimé par les Nasods, il a juré de se venger du Royaume de Belder. " +
             "Désormais, rongé par la culpabilité de ses actes passés, il rejoint la Patrouille de l'El en guise d'expiation.",
         classes: ["Furious Blade", "Rage Hearts", "Nova Imperator", "Revenant"],
-        classesFr: ["Lame furieuse", "Cœur enragé", "Nova Imperator", "Âme fatale"]
+        classesFr: ["Lame furieuse", "Cœur enragé", "Nova Imperator", "Âme fatale"],
+        stats: {
+            speed: "Moyenne",
+            range: "Courte",
+            difficulty: "Moyenne",
+            pictureType: "/images/combat/Physical_Class.png",
+            attackType: "Physique",
+        }
     },
     {
         id: "eve",
@@ -100,7 +128,14 @@ export const characters = [
             "Eve est entrée en hibernation lorsque le pouvoir de l'El a soudainement disparu, mais se réveille lorsque de l'énergie El s'infiltre suite aux perturbations causées par la Patrouille de l'El. " +
             "Elle rejoint Elsword et ses compagnons pour retrouver l'El et reconstruire le noyau d'énergie qu'elle a découvert détruit.",
         classes: ["Code: Ultimate", "Code: Esencia", "Code: Sariel", "Code: Antithese"],
-        classesFr: ["Nasod ultime", "Nasod essentielle", "Code: Sariel", "Code: Antithese"]
+        classesFr: ["Nasod ultime", "Nasod essentielle", "Code: Sariel", "Code: Antithese"],
+        stats: {
+            speed: "Moyenne",
+            range: "Moyenne",
+            difficulty: "Moyenne",
+            pictureType: "/images/combat/Magical_Class.png",
+            attackType: "Physique",
+        }
     },
     {
         id: "chung",
@@ -122,7 +157,14 @@ export const characters = [
         lore: "Héritier de la famille Seiker, protecteurs attitrés de la Cité d'Hamel. Lorsque son père, le Colosse Blanc Helputt, est corrompu par la magie démoniaque et envahit Hamel, Chung tente de l'arrêter en vain. " +
             "Il rejoint la Patrouille de l'El pour devenir plus fort, choisissant de se faire appeler Chung plutôt que son vrai nom jusqu'à ce qu'il s'estime digne de le porter.",
         classes: ["Comet Crusader", "Fatal Phantom", "Centurion", "Dius Aer"],
-        classesFr: ["Chevalier croisé cométaire", "Fantôme Fatal", "Centurion", "Dius Aer"]
+        classesFr: ["Chevalier croisé cométaire", "Fantôme Fatal", "Centurion", "Dius Aer"],
+        stats: {
+            speed: "Lent",
+            range: "Moyenne",
+            difficulty: "Facile",
+            pictureType: "/images/combat/Magical_Class.png",
+            attackType: "Physique",
+        }
     },
     {
         id: "ara",
@@ -143,7 +185,14 @@ export const characters = [
         lore: "Née dans une famille d'arts martiaux de l'Empire du Nord, Ara Haan voit son frère Aren être possédé par un démon, détruisant leur village et leur famille sous le nom de 'Ran' en quête de l'El de la Lune. " +
             "Avec l'aide d'Eun, un renard divin scellé en elle, elle se lance à la poursuite de son frère pour le sauver.",
         classes: ["Apsara", "Devi", "Shakti", "Surya"],
-        classesFr: ["Apsara", "Devi", "Shakti", "Surya"]
+        classesFr: ["Apsara", "Devi", "Shakti", "Surya"],
+        stats: {
+            speed: "Rapide",
+            range: "Courte",
+            difficulty: "Moyenne",
+            pictureType: "/images/combat/Physical_Class.png",
+            attackType: "Physique",
+        }
     },
     {
         id: "elesis",
@@ -165,7 +214,14 @@ export const characters = [
             "Lorsqu'elle et Elsword sont soudainement attaqués par des démons, elle anticipe le danger et rejoint les Chevaliers de Belder pour protéger le royaume de l'invasion démoniaque imminente. " +
             "Elle finit par retrouver le démon qui avait attaqué Feita et Belder.",
         classes: ["Empire Sword", "Flame Lord", "Bloody Queen", "Adrestia"],
-        classesFr: ["Épée de l'empire", "Maîtresse des flammes", "Reine sanglante", "Adrestia"]
+        classesFr: ["Épée de l'empire", "Maîtresse des flammes", "Reine sanglante", "Adrestia"],
+        stats: {
+            speed: "Moyenne",
+            range: "Courte",
+            difficulty: "Moyenne",
+            pictureType: "/images/combat/Physical_Class.png",
+            attackType: "Physique",
+        }
     },
     {
         id: "add",
@@ -187,7 +243,14 @@ export const characters = [
             "En fuyant, Add tombe dans les failles du temps et de l'espace, y acquérant d'immenses connaissances. " +
             "Il parvient finalement à s'en échapper et entame un voyage pour rejoindre sa propre ligne temporelle.",
         classes: ["Doom Bringer", "Dominator", "Mad Paradox", "Overmind"],
-        classesFr: ["Calamité", "Dominateur", "Paradoxe", "Overmind"]
+        classesFr: ["Calamité", "Dominateur", "Paradoxe", "Overmind"],
+        stats: {
+            speed: "Moyenne",
+            range: "Longue",
+            difficulty: "Moyenne",
+            pictureType: "/images/combat/Magical_Class.png",
+            attackType: "Physique",
+        }
     },
     {
         id: "luciel",
@@ -209,6 +272,13 @@ export const characters = [
             "Pour recouvrer le pouvoir et l'autorité perdus de Lu, ils partent ensemble en quête.",
         classes: ["Catastrophe", "Innocence", "Diangelion", "Demersio"],
         classesFr: ["", "", "", ""],
+        stats: {
+            speed: "Moyenne",
+            range: "Longue",
+            difficulty: "Moyenne",
+            pictureType: "/images/combat/Physical_Class.png",
+            attackType: "Physique",
+        }
     },
     {
         id: "rose",
@@ -230,6 +300,13 @@ export const characters = [
             "Pour éliminer les ennemis menaçant les Cieux, Rose a été mandatée pour enquêter dans une dimension parallèle appelée Elios.",
         classes: ["Tempest Burster", "Black Massacre", "Minerva", "Prime Operator"],
         classesFr: ["Tempête furieuse", "Veuve noire", "Minerve", "Prime Opératrice"],
+        stats: {
+            speed: "Rapide",
+            range: "Longue",
+            difficulty: "Moyenne",
+            pictureType: "/images/combat/Physical_Class.png",
+            attackType: "Physique",
+        }
     },
     {
         id: "ain",
@@ -248,6 +325,13 @@ export const characters = [
         lore: "Un être mystérieux qui a surgi devant la Patrouille de l'El. Il se présente comme un prêtre au service d'une déesse et propose d'aider à retrouver l'Éclat d'El dérobé. Pourtant, tout en lui demeure enveloppé de mystère.",
         classes: ["Richter", "Bluhen", "Herrscher", "Opferung"],
         classesFr: ["Arbiter", "Florere", "Regnator", "Sacratus"],
+        stats: {
+            speed: "Moyenne",
+            range: "Moyenne",
+            difficulty: "Moyenne",
+            pictureType: "/images/combat/Magical_Class.png",
+            attackType: "Physique",
+        }
     },
     {
         id: "laby",
@@ -269,6 +353,13 @@ export const characters = [
             "Elle décide de quitter la forêt et de partir en voyage pour découvrir qui elle est vraiment.",
         classes: ["Eternity Winner", "Radiant Soul", "Nisha Labyrinth", "Twins Picaro"],
         classesFr: ["Championne Éonienne", "Lumièle", "Labyrinthe de Nisha", "Arlequine"],
+        stats: {
+            speed: "Rapide",
+            range: "Moyenne",
+            difficulty: "Facile",
+            pictureType: "/images/combat/Physical_Class.png",
+            attackType: "Physique",
+        }
     },
     {
         id: "noah",
@@ -290,6 +381,13 @@ export const characters = [
             "de ses adversaires pour les terrasser grâce au pouvoir de l'obscurité.",
         classes: ["Liberator", "Celestia", "Nyx Pieta", "Morpheus"],
         classesFr: ["Libérator", "Célestia", "Nyx Pieta", "Morphée"],
+        stats: {
+            speed: "Rapide",
+            range: "Proche",
+            difficulty: "Facile",
+            attackType: "Physique",
+            pictureType: "/images/combat/Physical_Class.png",
+        }
     },
     {
         id: "lithia",
@@ -314,5 +412,12 @@ export const characters = [
             "Elle y rencontre un spectre et se retrouve frappée d'une mystérieuse malédiction.",
         classes: ["Gembliss", "Avarice", "Achlys", "Mischief"],
         classesFr: ["Eméraldia", "Avaricia", "", "Delinquenta"],
+        stats: {
+            speed: "Rapide",
+            range: "Courte",
+            difficulty: "Moyenne",
+            pictureType: "/images/combat/Physical_Class.png",
+            attackType: "Physique",
+        }
     },
 ];

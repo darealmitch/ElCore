@@ -9,6 +9,8 @@ import SkillTree from "../components/ui/SkillTree";
 import { characterMechanics } from "../data/characterMechanics";
 import { classSkills } from "../data/skills/index.js";
 
+
+
 function renderAuraText(text) {
     if (!text) return null;
 
@@ -74,6 +76,7 @@ function CharacterMechanicCard({ characterMechanic }) {
     );
 }
 
+
 function CharacterDetailPage() {
     const { id } = useParams();
     const character = characters.find((item) => item.id === id);
@@ -91,12 +94,13 @@ function CharacterDetailPage() {
         );
     }
     const characterIndex = characters.findIndex((item) => item.id === character.id);
-    const previousCharacter = characterIndex > 0 ? characters[characterIndex - 1] : null;
-    const nextCharacter = characterIndex < characters.length - 1 ? characters[characterIndex + 1] : null;
+    const previousCharacter = characters[(characterIndex - 1 + characters.length) % characters.length];
+    const nextCharacter = characters[(characterIndex + 1) % characters.length];
     const theme = characterThemes[character.id];
     const characterBuilds = builds.filter((build) => build.characterId === character.id);
     const baseSkillTree = classSkills.find((item) => item.characterId === character.id && item.jobStage === "base");
     const characterMechanic = characterMechanics.find((item) => item.characterId === character.id);
+    const stats = character.stats;
 
     return (
         <main className="page character-detail" style={{ "--theme-primary": theme.primary, "--theme-glow": theme.glow }}>
@@ -168,11 +172,42 @@ function CharacterDetailPage() {
                     </article>
 
                     <article className="cd-panel">
-                        <span className="cd-panel-label">Identité</span>
-                        <div className="cd-idgrid">
-                            <div><span className="k">Âge</span><span className="v">{character.age}</span></div>
-                            <div><span className="k">Type</span><span className="v">{character.type}</span></div>
-                            <div><span className="k">Arme</span><span className="v">{character.weapon}</span></div>
+                        <span className="cd-panel-label">Statistiques</span>
+
+                        <div className="cd-stats">
+
+                            {/* LEFT */}
+                            <div className="cd-stats-left">
+                                <div className="row">
+                                    <span className="k">Vitesse</span>
+                                    <span className="v">{stats?.speed}</span>
+                                </div>
+
+                                <div className="row">
+                                    <span className="k">Portée</span>
+                                    <span className="v">{stats?.range}</span>
+                                </div>
+
+                                <div className="row">
+                                    <span className="k">Difficulté</span>
+                                    <span className="v">{stats?.difficulty}</span>
+                                </div>
+                            </div>
+
+                            {/* RIGHT */}
+                            <div className="cd-stats-right">
+                                {stats?.pictureType && (
+                                    <img
+                                        className="attack-icon"
+                                        src={stats.pictureType}
+                                        alt="type d'attaque"
+                                    />
+                                )}
+
+                                <span className="attack-value">{stats?.attackType}</span>
+                                <span className="attack-label">Type d'attaque</span>
+                            </div>
+
                         </div>
                     </article>
                 </section>
