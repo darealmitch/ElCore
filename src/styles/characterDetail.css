@@ -1,7 +1,4 @@
-/* ============================================================
-   Présentation personnage — hero « ElCore Codex »
-   (cohérent avec le roster ; portrait normalisé via .portrait-img)
-   ============================================================ */
+/*Présentation personnage — hero « ElCore Codex »*/
 .cd-hero {
     --ink: #eef0f8;
     --mut: #8b91a8;
@@ -197,7 +194,7 @@
     .cd-cta:hover { transform: none; }
 }
 
-/* ---------- Aperçu sous le hero (Rôle général + Identité) ---------- */
+/*Aperçu sous le hero — Rôle général + Identité*/
 .cd-overview {
     display: grid;
     grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
@@ -376,7 +373,7 @@
     .cd-overview { grid-template-columns: 1fr; }
 }
 
-/* ---------- Compétences de base + particularité ---------- */
+/*Compétences de base + particularité*/
 .cd-skills-layout {
     display: grid;
     grid-template-columns: minmax(0, auto) minmax(20rem, 1fr);
@@ -534,9 +531,7 @@
     .cd-skills-layout { grid-template-columns: 1fr; }
 }
 
-/* ============================================================
-   Informations de classes — carte-sélecteur + frise focalisée
-   ============================================================ */
+/*Informations de classes — carte-sélecteur + frise*/
 .cp {
     --ink: #eef0f8;
     --mut: #8b91a8;
@@ -545,7 +540,7 @@
     gap: 18px;
 }
 
-/* --- Carte de branches (sélecteur) --- */
+/*Carte de branches (sélecteur)*/
 .cp-map {
     display: grid;
     grid-template-columns: 56px 1fr;
@@ -646,7 +641,7 @@
     box-shadow: 0 0 8px var(--glow);
 }
 
-/* --- Frise focalisée --- */
+/*Frise focalisée*/
 .cp-frise {
     display: flex;
     align-items: flex-start;

@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
 
-/* ============================================================
-   Roster « ElCore Codex » — page de sélection des personnages
-   Tout est scopé sous .roster-page pour ne rien casser ailleurs.
-   ============================================================ */
+/*Roster « ElCore Codex » — sélection des personnages*/
 .roster-page {
     --rp-disp: 'Oswald', 'Anton', sans-serif;
     --rp-ink: #eef0f8;
@@ -30,7 +27,7 @@
     transition: background 0.6s ease;
 }
 
-/* ---------- En-tête ---------- */
+/*En-tête*/
 .roster-head {
     max-width: 46rem;
     margin-bottom: 2.4rem;
@@ -70,7 +67,7 @@
     line-height: 1.7;
 }
 
-/* ---------- Scène : vedette + grille ---------- */
+/*Scène — vedette + grille*/
 .roster-stage {
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.25fr);
@@ -78,7 +75,7 @@
     align-items: start;
 }
 
-/* ---------- Panneau vedette (sticky) ---------- */
+/*Panneau vedette (sticky)*/
 .roster-feature {
     position: sticky;
     top: 6rem;
@@ -235,7 +232,7 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ---------- Colonne droite : contrôles + grille ---------- */
+/*Colonne droite — contrôles + grille*/
 .roster-main {
     display: flex;
     flex-direction: column;
@@ -417,7 +414,7 @@
     text-align: center;
 }
 
-/* ---------- Responsive ---------- */
+/*Responsive*/
 @media (max-width: 1080px) {
     .roster-stage { grid-template-columns: 1fr; }
     .roster-feature { position: static; }
