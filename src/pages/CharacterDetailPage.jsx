@@ -130,9 +130,9 @@ function CharacterDetailPage() {
                     )}
 
                     <div className="cd-meta">
+                        <div><div className="k">Âge</div><div className="v">{character.age}</div></div>
                         <div><div className="k">Rôle</div><div className="v">{character.role}</div></div>
                         <div><div className="k">Arme</div><div className="v">{character.weapon}</div></div>
-                        <div><div className="k">Âge</div><div className="v">{character.age}</div></div>
                         <div><div className="k">Type</div><div className="v">{character.type}</div></div>
                     </div>
 

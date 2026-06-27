@@ -434,3 +434,237 @@
 @media (max-width: 1024px) {
     .cd-skills-layout { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   Chemins de spécialisation — carte-sélecteur + frise focalisée
+   ============================================================ */
+.cp {
+    --ink: #eef0f8;
+    --mut: #8b91a8;
+    --line: rgba(255, 255, 255, 0.09);
+    display: grid;
+    gap: 18px;
+}
+
+/* --- Carte de branches (sélecteur) --- */
+.cp-map {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 16px;
+    align-items: stretch;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: linear-gradient(180deg, #12151f, #0b0d15);
+}
+.cp-map-base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+.cp-map-base-node {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(180deg, #161a25, #0b0d15);
+    display: grid;
+    place-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #cfd5e6;
+}
+.cp-map-base-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mut);
+}
+.cp-map-lanes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 16px;
+    border-left: 2px solid color-mix(in srgb, var(--c) 35%, transparent);
+}
+.cp-lane {
+    position: relative;
+    display: grid;
+    grid-template-columns: 132px 1fr;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 13px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--ink);
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.cp-lane::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    width: 14px;
+    height: 2px;
+    background: color-mix(in srgb, var(--c) 35%, transparent);
+}
+.cp-lane:hover { border-color: rgba(255, 255, 255, 0.2); transform: translateX(2px); }
+.cp-lane.is-active {
+    border-color: color-mix(in srgb, var(--c) 55%, transparent);
+    background: color-mix(in srgb, var(--c) 10%, transparent);
+}
+.cp-lane-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    line-height: 1.05;
+}
+.cp-lane-chain { display: flex; align-items: center; }
+.cp-lane-step { display: flex; align-items: center; }
+.cp-lane-seg {
+    width: 18px;
+    height: 2px;
+    background: color-mix(in srgb, var(--c) 30%, transparent);
+}
+.cp-pip {
+    width: 9px;
+    height: 9px;
+    background: color-mix(in srgb, var(--c) 55%, transparent);
+    transform: rotate(45deg);
+}
+.cp-lane.is-active .cp-pip { background: var(--c); }
+.cp-pip-master {
+    background: var(--c);
+    box-shadow: 0 0 8px var(--glow);
+}
+
+/* --- Frise focalisée --- */
+.cp-frise {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    padding: 6px 2px 4px;
+    overflow-x: auto;
+}
+.cp-node {
+    flex: 1 1 0;
+    min-width: 92px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.cp-node-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+}
+.cp-pic {
+    position: relative;
+    width: 98px;
+    height: 104px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    overflow: hidden;
+    background:
+        radial-gradient(70% 70% at 50% 22%, color-mix(in srgb, var(--c) 22%, transparent), transparent 70%),
+        linear-gradient(180deg, #141823, #0b0d15);
+    transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+.cp-pic-base { border-color: rgba(255, 255, 255, 0.18); }
+.cp-pic-master {
+    border-color: var(--c);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--c) 45%, transparent);
+}
+.cp-node-link:hover .cp-pic {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--c) 60%, transparent);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5), 0 0 22px color-mix(in srgb, var(--c) 35%, transparent);
+}
+.cp-master-logo {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: 3;
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px var(--glow));
+}
+.cp-stage {
+    margin-top: 11px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mut);
+}
+.cp-name {
+    margin-top: 3px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    line-height: 1.05;
+    color: var(--ink);
+}
+.cp-conn {
+    position: relative;
+    flex: 0 0 30px;
+    align-self: flex-start;
+    margin-top: 51px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.08);
+}
+.cp-conn-fill {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--c) 75%, transparent), color-mix(in srgb, var(--c) 35%, transparent));
+}
+.cp-conn::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: -3px;
+    border: 4px solid transparent;
+    border-left-color: color-mix(in srgb, var(--c) 60%, transparent);
+}
+.cp-band {
+    flex: 0 0 44px;
+    align-self: flex-start;
+    margin-top: 26px;
+    height: 56px;
+    border-radius: 7px;
+    background: repeating-linear-gradient(45deg, var(--c) 0 8px, var(--c2) 8px 16px);
+    display: grid;
+    place-items: center;
+}
+.cp-band span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #1a0808;
+}
+
+@media (max-width: 860px) {
+    .cp-lane { grid-template-columns: 1fr; gap: 7px; }
+    .cp-frise { gap: 0; }
+    .cp-node { min-width: 84px; }
+}
