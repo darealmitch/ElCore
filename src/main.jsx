@@ -6,6 +6,7 @@ import "./styles/pages.css";
 import "./styles/cards.css";
 import "./styles/home.css";
 import "./styles/roster.css";
+import "./styles/characterDetail.css";
 import App from "./App.jsx";
 import "./styles/skillTree.css";
 import "./styles/lore.css";

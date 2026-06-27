@@ -1,0 +1,198 @@
+/* ============================================================
+   Présentation personnage — hero « ElCore Codex »
+   (cohérent avec le roster ; portrait normalisé via .portrait-img)
+   ============================================================ */
+.cd-hero {
+    --ink: #eef0f8;
+    --mut: #8b91a8;
+    --line: rgba(255, 255, 255, 0.09);
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 2rem;
+    align-items: stretch;
+    overflow: hidden;
+    min-height: 30rem;
+    padding: 1.8rem 2rem;
+    border-radius: 18px;
+    border: 1px solid color-mix(in srgb, var(--c) 34%, transparent);
+    background:
+        radial-gradient(82% 80% at 84% 8%, color-mix(in srgb, var(--c) 22%, transparent), transparent 60%),
+        linear-gradient(180deg, #13161f, #090a10);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 42px color-mix(in srgb, var(--c) 15%, transparent);
+    font-family: 'Inter', sans-serif;
+}
+
+.cd-hero-text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+.cd-hero-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
+}
+.cd-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--mut);
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+.cd-back:hover { color: var(--ink); }
+.cd-back svg { width: 15px; height: 15px; }
+.cd-switch { display: flex; gap: 0.4rem; }
+.cd-switch a,
+.cd-switch span {
+    display: inline-flex;
+    align-items: center;
+    max-width: 9rem;
+    overflow: hidden;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--mut);
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+.cd-switch a:hover {
+    color: var(--ink);
+    border-color: color-mix(in srgb, var(--c) 50%, transparent);
+}
+.cd-switch .disabled { opacity: 0.4; }
+
+.cd-pill {
+    width: fit-content;
+    padding: 0.36rem 0.8rem;
+    border: 1px solid color-mix(in srgb, var(--c) 55%, transparent);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--c) 12%, transparent);
+    color: color-mix(in srgb, var(--c) 80%, #ffffff);
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+.cd-pill::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 0.55rem;
+    background: var(--c);
+    transform: rotate(45deg);
+    vertical-align: middle;
+}
+.cd-name {
+    margin: 0.9rem 0 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
+.cd-fullname {
+    margin-top: 0.5rem;
+    color: color-mix(in srgb, var(--c) 70%, #ffffff);
+    font-family: var(--mono);
+    font-size: 0.86rem;
+    letter-spacing: 0.04em;
+}
+.cd-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-top: 1.5rem;
+}
+.cd-meta .k {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mut);
+}
+.cd-meta .v {
+    margin-top: 0.25rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--ink);
+}
+.cd-classes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 1.4rem;
+}
+.cd-classes span {
+    padding: 0.34rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--ink);
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.02em;
+}
+.cd-lore {
+    max-width: 42rem;
+    margin: 1.5rem 0 0;
+    color: #c3c8db;
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+.cd-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    margin-top: auto;
+    padding: 0.8rem 1.3rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--c), var(--c2));
+    color: #0a0b11;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+.cd-cta:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+    box-shadow: 0 12px 28px color-mix(in srgb, var(--c) 40%, transparent);
+}
+.cd-cta svg { width: 16px; height: 16px; }
+
+.cd-hero-visual {
+    position: relative;
+    align-self: stretch;
+    min-height: 26rem;
+}
+
+@media (max-width: 900px) {
+    .cd-hero { grid-template-columns: 1fr; }
+    .cd-hero-visual { min-height: 22rem; order: -1; }
+    .cd-lore { max-width: none; }
+    .cd-cta { margin-top: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .cd-cta:hover { transform: none; }
+}

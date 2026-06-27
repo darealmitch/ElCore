@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { characters } from "../data/characters";
 import { characterThemes } from "../data/characterThemes";
+import Portrait from "../components/ui/Portrait";
 import ClassPathTimeline from "../components/ui/ClassPathTimeline";
 import BuildCard from "../components/ui/BuildCard";
 import { builds } from "../data/builds";
@@ -101,32 +102,62 @@ function CharacterDetailPage() {
 
     return (
         <main className="page character-detail" style={{ "--theme-primary": theme.primary, "--theme-glow": theme.glow }}>
-            <section className="character-detail-hero" style={{ borderColor: theme.primary, boxShadow: `0 0 40px ${theme.glow}` }}>
-                <div className="character-detail-content">
-                    <Link className="back-link character-detail-back-link" to="/personnages">← Retour aux personnages</Link>
-                    <nav className="character-switch-nav" aria-label="Navigation entre personnages">
-                        {previousCharacter ? (
-                            <Link className="character-switch-link previous" to={`/personnages/${previousCharacter.id}`}>← {previousCharacter.name}</Link>
-                        ) : (
-                            <span className="character-switch-link disabled">← Précédent</span>
-                        )}
+            <section className="cd-hero" style={{ "--c": theme.primary, "--c2": theme.secondary, "--glow": theme.glow }}>
+                <div className="cd-hero-text">
+                    <div className="cd-hero-top">
+                        <Link className="cd-back" to="/personnages">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M19 12H5M11 18l-6-6 6-6" />
+                            </svg>
+                            Personnages
+                        </Link>
+                        <nav className="cd-switch" aria-label="Navigation entre personnages">
+                            {previousCharacter ? (
+                                <Link to={`/personnages/${previousCharacter.id}`}>← {previousCharacter.name}</Link>
+                            ) : (
+                                <span className="disabled">← Précédent</span>
+                            )}
+                            {nextCharacter ? (
+                                <Link to={`/personnages/${nextCharacter.id}`}>{nextCharacter.name} →</Link>
+                            ) : (
+                                <span className="disabled">Suivant →</span>
+                            )}
+                        </nav>
+                    </div>
 
-                        {nextCharacter ? (
-                            <Link className="character-switch-link next" to={`/personnages/${nextCharacter.id}`}>{nextCharacter.name} →</Link>
-                        ) : (
-                            <span className="character-switch-link disabled">Suivant →</span>
-                        )}
-                    </nav>
-                    <span className="character-role character-detail-role-badge" style={{ backgroundColor: theme.glow, color: theme.primary }}>
-                        {character.role}
-                    </span>
-                    <h1 style={{ color: theme.primary }}>{character.name}</h1>
-                    <p className="full-name">{character.fullName}</p>
-                    <p className="character-lore">{character.lore}</p>
+                    <span className="cd-pill">{character.featuredClassFr || character.featuredClass}</span>
+                    <h1 className="cd-name">{character.name}</h1>
+                    {character.fullName && character.fullName !== character.name && (
+                        <span className="cd-fullname">{character.fullName}</span>
+                    )}
+
+                    <div className="cd-meta">
+                        <div><div className="k">Rôle</div><div className="v">{character.role}</div></div>
+                        <div><div className="k">Arme</div><div className="v">{character.weapon}</div></div>
+                        <div><div className="k">Âge</div><div className="v">{character.age}</div></div>
+                        <div><div className="k">Type</div><div className="v">{character.type}</div></div>
+                    </div>
+
+                    <div className="cd-classes">
+                        {character.classes.map((className, index) => (
+                            <span key={className} title={`International : ${className}`}>
+                                {character.classesFr?.[index] || className}
+                            </span>
+                        ))}
+                    </div>
+
+                    <p className="cd-lore">{character.lore}</p>
+
+                    <a className="cd-cta" href="#specialisations">
+                        Voir les spécialisations
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M5 12h14M13 6l6 6-6 6" />
+                        </svg>
+                    </a>
                 </div>
 
-                <div className="character-detail-visual">
-                    <img className="character-detail-image" src={character.image} alt={character.name} />
+                <div className="cd-hero-visual">
+                    <Portrait src={character.image} alt={character.name} eager mode="contain" />
                 </div>
             </section>
 
@@ -195,7 +226,7 @@ function CharacterDetailPage() {
                     </section>
                 )}
 
-                <div className="section-header">
+                <div className="section-header" id="specialisations">
                     <span>Classes</span>
                     <h2>Chemins de spécialisation</h2>
                 </div>
