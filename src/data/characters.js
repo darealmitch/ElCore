@@ -50,7 +50,7 @@ export const characters = [
             range: "Moyenne",
             difficulty: "Difficile",
             pictureType: "/images/combat/Magical_Class.png",
-            attackType: "Physique",
+            attackType: "Magique",
         }
     },
     {
@@ -77,7 +77,7 @@ export const characters = [
             range: "Longue",
             difficulty: "Facile",
             pictureType: "/images/combat/Magical_Class.png",
-            attackType: "Physique",
+            attackType: "Magique",
         }
     },
     {
@@ -134,7 +134,7 @@ export const characters = [
             range: "Moyenne",
             difficulty: "Moyenne",
             pictureType: "/images/combat/Magical_Class.png",
-            attackType: "Physique",
+            attackType: "Magique",
         }
     },
     {
@@ -163,7 +163,7 @@ export const characters = [
             range: "Moyenne",
             difficulty: "Facile",
             pictureType: "/images/combat/Magical_Class.png",
-            attackType: "Physique",
+            attackType: "Magique",
         }
     },
     {
@@ -249,7 +249,7 @@ export const characters = [
             range: "Longue",
             difficulty: "Moyenne",
             pictureType: "/images/combat/Magical_Class.png",
-            attackType: "Physique",
+            attackType: "Magique",
         }
     },
     {
@@ -330,7 +330,7 @@ export const characters = [
             range: "Moyenne",
             difficulty: "Moyenne",
             pictureType: "/images/combat/Magical_Class.png",
-            attackType: "Physique",
+            attackType: "Magique",
         }
     },
     {
