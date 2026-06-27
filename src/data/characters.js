@@ -12,7 +12,7 @@ export const characters = [
         featuredClassFr: "Séphiroth",
         image: "/images/personnages/elsword.webp",
         description: "C'est le frère d'Elesis, la commandante des chevaliers rouges du royaume de Belder. " +
-            "Il a toujours revé d'acquérir les compétences de sa sœur, c'est pourquoi il s'est entraîné toute sa jeunesse avec un professeur venant de Belder afin d'apprendre des techniques de combat systématiques. " +
+            "Il a toujours rêvé d'acquérir les compétences de sa sœur, c'est pourquoi il s'est entraîné toute sa jeunesse avec un professeur venant de Belder afin d'apprendre des techniques de combat systématiques. " +
             "Les chercheurs d'Eldrit l'ont chargé de retrouver un cristal d'Eldrit. C'est ainsi qu'ont commencé ses aventures.",
         lore: "Petit frère d'Elesis, la Première Capitaine des Chevaliers Rouges de Belder, Elsword s'est entraîné dès son plus jeune âge pour être aussi fort que sa sœur, apprenant ses techniques au sabre auprès d'un chevalier de Belder." +
             " Il a débuté son aventure en recevant la mission de restaurer l'El en tant que membre des Chercheurs de l'Eldrit.",
@@ -73,7 +73,7 @@ export const characters = [
         image: "/images/personnages/raven.webp",
         description: "Bien qu'il n'ait été qu'un simple citoyen, il a réussi à devenir le chef des chevaliers mercenaires. Malheureusement, son succès a rendu la noblesse jalouse, et il a tout perdu suite à une infâme intrigue.\n" +
             "Les Nasods l'ont ressuscité et à présent, il a soif de vengeance.\n" +
-            "Décidé à assumer ses responsabilités pour les actes quil a commis, il a choisi de se joindre à Elsword et ses compagnons.",
+            "Décidé à assumer ses responsabilités pour les actes qu'il a commis, il a choisi de se joindre à Elsword et ses compagnons.",
         lore: "Un homme du peuple qui a gravi les échelons jusqu'à devenir le capitaine d'un célèbre ordre de chevaliers mercenaires. " +
             "Victime d'une machination d'aristocrates jaloux, il perd tout ce qui lui était cher en une seule nuit. Réanimé par les Nasods, il a juré de se venger du Royaume de Belder. " +
             "Désormais, rongé par la culpabilité de ses actes passés, il rejoint la Patrouille de l'El en guise d'expiation.",
@@ -182,7 +182,7 @@ export const characters = [
         description: "Membre d'une famille de mécaniciens et d'inventeurs, Add a brisé un tabou : celui de vouloir créer des Nasods aux capacités surhumaines. " +
             "Il était en détresse et traqué. Pendant qu'il était poursuivi, il est tombé dans une fissure de l'espace-temps où se trouvait une bibliothèque et y a acquis une connaissance ancestrale. " +
             "Animé d'une féroce rancune, il a tout mis en œuvre pour trouver un moyen de revenir. " +
-            "C'est alors quil a découvert Eve, qui renfermait d'innombrables codes antiques...",
+            "C'est alors qu'il a découvert Eve, qui renfermait d'innombrables codes antiques...",
         lore: "Descendant d'une éminente famille de chercheurs Nasod persécutée pour avoir étudié des savoirs interdits visant à rendre les Nasods plus 'humains'. " +
             "En fuyant, Add tombe dans les failles du temps et de l'espace, y acquérant d'immenses connaissances. " +
             "Il parvient finalement à s'en échapper et entame un voyage pour rejoindre sa propre ligne temporelle.",
@@ -283,8 +283,8 @@ export const characters = [
         featuredClassFr: "Libérator",
         image: "/images/personnages/noah.webp",
         description: "Il utilise son arme principale, une faux, avec une lune modifiée et le pouvoir de l'obscurité.\n" +
-            "Il a oublié quil avait perdu son frère aîné à cause l'ordre de Henir.\n" +
-            "Après l'explosion de l'El, ses souvenirs le rattrappent et il est scellé.\n" +
+            "Il a oublié qu'il avait perdu son frère aîné à cause l'ordre de Henir.\n" +
+            "Après l'explosion de l'El, ses souvenirs le rattrapent et il est scellé.\n" +
             "Grâce à la restauration d'Élyanod, lui et les ruines s'éveillent après un long sommeil.",
         lore: "Avec des mouvements légers et rapides, il brandit sa faux et attaque les points faibles\n" +
             "de ses adversaires pour les terrasser grâce au pouvoir de l'obscurité.",
