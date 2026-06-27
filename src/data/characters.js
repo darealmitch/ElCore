@@ -11,8 +11,10 @@ export const characters = [
         featuredClass: "Genesis",
         featuredClassFr: "Séphiroth",
         image: "/images/personnages/elsword.webp",
-        description: "Jeune épéiste courageux et impulsif, Elsword combat en première ligne avec une grande épée. " +
-            "Sa particularité repose sur la Voie de l'épée, une jauge unique qui alterne entre vitalité et destruction selon les attaques utilisées.",
+        description: "Jeune épéiste courageux et impulsif, Elsword manie une grande épée avec une agilité étonnante et suit les traces de sa sœur ainée Elesis." +
+            "pour prouver sa valeur au sein du groupe de recherche." +
+            "Sa particularité repose sur la Voie de l'épée, une jauge unique qui alterne entre vitalité qui accélère ses mouvements et sa rénégération de mana" +
+            "et destruction qui décuple ses dégats.",
         lore: "Petit frère d'Elesis, la Première Capitaine des Chevaliers Rouges de Belder, Elsword s'est entraîné dès son plus jeune âge pour être aussi fort que sa sœur, apprenant ses techniques au sabre auprès d'un chevalier de Belder." +
             " Il a débuté son aventure en recevant la mission de restaurer l'El en tant que membre des Chercheurs de l'Eldrit.",
         classes: ["Knight Emperor", "Rune Master", "Immortal", "Genesis"],
@@ -159,7 +161,8 @@ export const characters = [
         featuredClass: "Doom Bringer",
         featuredClassFr: "Calamité",
         image: "/images/personnages/add.webp",
-        description: "Un génie obsédé par la technologie Nasod, capable de manipuler énergie, espace et temps.",
+        description: "Un génie déchu d'une lignée de chercheurs Nasods, Add à broyé des décennies dans une faille spatio-temporelle avant de resurgir avec un savoir interdit et une seule obsession: " +
+            "Réecrire son passé, quitte à plier les lois de la physique.",
         lore: "Descendant d'une éminente famille de chercheurs Nasod persécutée pour avoir étudié des savoirs interdits visant à rendre les Nasods plus 'humains'. " +
             "En fuyant, Add tombe dans les failles du temps et de l'espace, y acquérant d'immenses connaissances. " +
             "Il parvient finalement à s'en échapper et entame un voyage pour rejoindre sa propre ligne temporelle.",

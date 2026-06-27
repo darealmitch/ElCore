@@ -36,30 +36,28 @@ function CharacterMechanicCard({ characterMechanic }) {
     const details = characterMechanic.details || characterMechanic.notes || [];
 
     return (
-        <aside className="character-mechanic-card">
-            <span>Particularité</span>
-            <h3>{characterMechanic.title}</h3>
+        <aside className="cd-mech">
+            <span className="cd-mech-label">Particularité</span>
+            <h3 className="cd-mech-title">{characterMechanic.title}</h3>
 
-            {characterMechanic.subtitle && <strong>{characterMechanic.subtitle}</strong>}
+            {characterMechanic.subtitle && <strong className="cd-mech-sub">{characterMechanic.subtitle}</strong>}
 
-            {mainText && <p>{renderAuraText(mainText)}</p>}
+            {mainText && <p className="cd-mech-text">{renderAuraText(mainText)}</p>}
 
             {characterMechanic.note && (
-                <p className="character-mechanic-note">
-                    {renderAuraText(characterMechanic.note)}
-                </p>
+                <p className="cd-mech-note">{renderAuraText(characterMechanic.note)}</p>
             )}
 
             {details.length > 0 && (
-                <ul className="character-mechanic-details">
+                <ul className="cd-mech-details">
                     {details.map((detail) => <li key={detail}>{renderAuraText(detail)}</li>)}
                 </ul>
             )}
 
             {characterMechanic.auras?.length > 0 && (
-                <div className="character-aura-list">
+                <div className="cd-aura-list">
                     {characterMechanic.auras.map((aura) => (
-                        <article className={`character-aura-card character-aura-card-${aura.color}`} key={aura.id}>
+                        <article className={`cd-aura cd-aura-${aura.color}`} key={aura.id}>
                             <h4>{aura.title}</h4>
                             <p>{renderAuraText(aura.description)}</p>
 
@@ -162,55 +160,27 @@ function CharacterDetailPage() {
             </section>
 
             <section className="detail-section">
-                <section className="detail-grid">
-                    <article className="detail-card detail-card-role">
-                        <h2>Rôle général</h2>
+                <section className="cd-overview">
+                    <article className="cd-panel">
+                        <span className="cd-panel-label">Rôle général</span>
                         <p>{character.description}</p>
                     </article>
 
-                    <article className="detail-card detail-card-featured">
-                        <h2>Classe mise en avant</h2>
-                        <p><strong>{character.featuredClass}</strong> est actuellement mise en avant sur ElCore pour ce personnage.</p>
-                    </article>
-
-                    <article className="detail-card detail-card-classes">
-                        <h2>Classes disponibles</h2>
-                        <div className="class-list">
-                            {character.classes.map((className) => (
-                                <span key={className} className="class-badge" style={{ borderColor: theme.primary, color: theme.primary }}>
-                                    {className}
-                                </span>
-                            ))}
-                        </div>
-                    </article>
-
-                    <article className="detail-card detail-card-info">
-                        <h2>Informations</h2>
-                        <div className="detail-stats">
-                            <div>
-                                <span>Âge</span>
-                                <strong>{character.age}</strong>
-                            </div>
-                            <div>
-                                <span>Genre</span>
-                                <strong>{character.gender}</strong>
-                            </div>
-                            <div>
-                                <span>Type</span>
-                                <strong>{character.type}</strong>
-                            </div>
-                            <div>
-                                <span>Arme</span>
-                                <strong>{character.weapon}</strong>
-                            </div>
+                    <article className="cd-panel">
+                        <span className="cd-panel-label">Identité</span>
+                        <div className="cd-idgrid">
+                            <div><span className="k">Âge</span><span className="v">{character.age}</span></div>
+                            <div><span className="k">Genre</span><span className="v">{character.gender}</span></div>
+                            <div><span className="k">Type</span><span className="v">{character.type}</span></div>
+                            <div><span className="k">Arme</span><span className="v">{character.weapon}</span></div>
                         </div>
                     </article>
                 </section>
 
                 {(baseSkillTree || characterMechanic) && (
-                    <section className="detail-section character-base-skills-section">
-                        <article className="detail-card wide skills-card character-skills-card">
-                            <div className="character-skills-layout">
+                    <section className="detail-section cd-skills">
+                        <div className="cd-skills-layout">
+                            <div className="cd-skills-tree">
                                 {baseSkillTree ? (
                                     <SkillTree data={baseSkillTree} />
                                 ) : (
@@ -219,10 +189,10 @@ function CharacterDetailPage() {
                                         <p>Les compétences de base de ce personnage seront ajoutées plus tard.</p>
                                     </div>
                                 )}
-
-                                <CharacterMechanicCard characterMechanic={characterMechanic} />
                             </div>
-                        </article>
+
+                            <CharacterMechanicCard characterMechanic={characterMechanic} />
+                        </div>
                     </section>
                 )}
 

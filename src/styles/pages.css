@@ -176,22 +176,6 @@
     box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 22px var(--theme-glow, rgba(255, 255, 255, 0.28));
 }
 
-/* Mécanique : thémée au lieu du bleu codé en dur */
-.character-detail .character-mechanic-card {
-    border-color: color-mix(in srgb, var(--theme-primary, #f5f5f5) 22%, transparent);
-    background:
-        radial-gradient(circle at top right, color-mix(in srgb, var(--theme-primary, #f5f5f5) 12%, transparent), transparent 16rem),
-        rgba(17, 17, 17, 0.34);
-}
-
-.character-detail .character-mechanic-card span {
-    color: var(--theme-primary, var(--accent-blue));
-}
-
-.character-detail .character-mechanic-card::-webkit-scrollbar-thumb {
-    background: color-mix(in srgb, var(--theme-primary, #f5f5f5) 55%, transparent);
-}
-
 .pill-list {
     display: flex;
     flex-wrap: wrap;

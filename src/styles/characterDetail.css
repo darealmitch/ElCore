@@ -196,3 +196,241 @@
 @media (prefers-reduced-motion: reduce) {
     .cd-cta:hover { transform: none; }
 }
+
+/* ---------- Aperçu sous le hero (Rôle général + Identité) ---------- */
+.cd-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.cd-panel {
+    --ink: #eef0f8;
+    --mut: #8b91a8;
+    --line: rgba(255, 255, 255, 0.09);
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem 1.6rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: linear-gradient(180deg, #12151f, #0b0d15);
+    font-family: 'Inter', sans-serif;
+}
+.cd-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--theme-primary), transparent);
+    opacity: 0.8;
+}
+.cd-panel-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mut);
+}
+.cd-panel-label::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--theme-primary);
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px var(--theme-glow);
+}
+.cd-panel p {
+    margin: 1rem 0 0;
+    color: #c3c8db;
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+.cd-idgrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.4rem;
+    margin-top: 1.2rem;
+}
+.cd-idgrid .k {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mut);
+}
+.cd-idgrid .v {
+    display: block;
+    margin-top: 0.3rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--ink);
+}
+@media (max-width: 900px) {
+    .cd-overview { grid-template-columns: 1fr; }
+}
+
+/* ---------- Compétences de base + particularité ---------- */
+.cd-skills-layout {
+    display: grid;
+    grid-template-columns: minmax(0, auto) minmax(20rem, 1fr);
+    align-items: start;
+    gap: 1rem;
+}
+.cd-skills-tree { min-width: 0; }
+
+.cd-mech {
+    --ink: #eef0f8;
+    --mut: #8b91a8;
+    --line: rgba(255, 255, 255, 0.09);
+    position: relative;
+    align-self: stretch;
+    overflow: hidden;
+    padding: 1.5rem 1.6rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background:
+        radial-gradient(80% 60% at 90% 6%, color-mix(in srgb, var(--theme-primary) 14%, transparent), transparent 60%),
+        linear-gradient(180deg, #12151f, #0b0d15);
+    font-family: 'Inter', sans-serif;
+}
+.cd-mech-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mut);
+}
+.cd-mech-label::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--theme-primary);
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px var(--theme-glow);
+}
+.cd-mech-title {
+    margin: 0.7rem 0 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
+.cd-mech-sub {
+    display: block;
+    margin-top: 0.4rem;
+    color: color-mix(in srgb, var(--theme-primary) 70%, #ffffff);
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+}
+.cd-mech-text {
+    margin: 1.1rem 0 0;
+    color: #c3c8db;
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+.cd-mech-note {
+    margin: 1.1rem 0 0;
+    padding: 0.85rem 1rem;
+    border-left: 3px solid var(--theme-primary);
+    border-radius: 0 8px 8px 0;
+    background: color-mix(in srgb, var(--theme-primary) 8%, transparent);
+    color: #c3c8db;
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+.cd-mech-details {
+    display: grid;
+    gap: 0.55rem;
+    margin: 1.1rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+.cd-mech-details li {
+    position: relative;
+    padding: 0.7rem 0.85rem 0.7rem 2.1rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    color: #c3c8db;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+.cd-mech-details li::before {
+    content: "";
+    position: absolute;
+    top: 1.05rem;
+    left: 0.9rem;
+    width: 7px;
+    height: 7px;
+    background: var(--theme-primary);
+    transform: rotate(45deg);
+    box-shadow: 0 0 8px var(--theme-glow);
+}
+
+/* Auras — vitalité = bleu, destruction = rouge (cf. ELSWORD_AURA_COLORS) */
+.cd-aura-list {
+    display: grid;
+    gap: 0.7rem;
+    margin-top: 1.1rem;
+}
+.cd-aura {
+    padding: 0.95rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+}
+.cd-aura h4 {
+    margin: 0 0 0.5rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fff;
+}
+.cd-aura p { margin: 0; color: #c3c8db; font-size: 0.9rem; line-height: 1.6; }
+.cd-aura ul {
+    display: grid;
+    gap: 0.4rem;
+    margin: 0.7rem 0 0;
+    padding-left: 1.1rem;
+    color: #c3c8db;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+.cd-aura-vitality {
+    border-color: rgba(96, 165, 250, 0.42);
+    background: radial-gradient(80% 70% at 90% 6%, rgba(96, 165, 250, 0.12), transparent 60%), rgba(255, 255, 255, 0.02);
+}
+.cd-aura-vitality h4 { color: #bcd6ff; }
+.cd-aura-vitality li::marker { color: #60a5fa; }
+.cd-aura-destruction {
+    border-color: rgba(239, 68, 68, 0.42);
+    background: radial-gradient(80% 70% at 90% 6%, rgba(239, 68, 68, 0.12), transparent 60%), rgba(255, 255, 255, 0.02);
+}
+.cd-aura-destruction h4 { color: #ff9a9a; }
+.cd-aura-destruction li::marker { color: #ef4444; }
+
+/* Mots d'aura dans le texte (scopé pour primer sur skillTree.css) */
+.character-detail .elsword-aura-word { font-weight: 700; }
+.character-detail .elsword-aura-word.vitality { color: #60a5fa; }
+.character-detail .elsword-aura-word.destruction { color: #ef4444; }
+
+@media (max-width: 1024px) {
+    .cd-skills-layout { grid-template-columns: 1fr; }
+}
