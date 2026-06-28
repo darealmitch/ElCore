@@ -9,30 +9,22 @@ import Portrait from "../components/ui/Portrait";
 // caler la hauteur. Les autres gardent la normalisation en hauteur.
 const WIDE_PRESENTATION = new Set(["eve", "chung", "luciel"]);
 
-const roleCategories = [
-    ...new Set(characters.map((character) => character.role.split("/")[0].trim())),
-];
-
-const primaryRole = (character) => character.role.split("/")[0].trim();
-
 function CharactersPage() {
     const [query, setQuery] = useState("");
-    const [activeRole, setActiveRole] = useState("all");
     const [activeId, setActiveId] = useState(characters[0].id);
     const [fadeKey, setFadeKey] = useState(characters[0].id);
 
     const filteredCharacters = useMemo(() => {
         const value = query.trim().toLowerCase();
+
         return characters.filter((character) => {
-            const matchesRole = activeRole === "all" || primaryRole(character) === activeRole;
-            const matchesQuery =
+            return (
                 !value ||
                 character.name.toLowerCase().includes(value) ||
-                character.fullName?.toLowerCase().includes(value) ||
-                character.role.toLowerCase().includes(value);
-            return matchesRole && matchesQuery;
+                character.fullName?.toLowerCase().includes(value)
+            );
         });
-    }, [query, activeRole]);
+    }, [query]);
 
     // vedette dérivée : l'id survolé s'il reste dans la liste filtrée,
     // sinon on retombe sur le premier résultat (aucun setState en cascade).
@@ -57,7 +49,7 @@ function CharactersPage() {
     return (
         <main className="page roster-page" style={pageStyle}>
             <header className="roster-head">
-                <span className="roster-kicker">Personnages · {characters.length} héros</span>
+                <span className="roster-kicker">Personnages · {characters.length} personnages</span>
                 <h1 className="roster-title">Choisis ton héros</h1>
                 <p>
                     Survole un personnage pour le mettre en avant, puis ouvre sa fiche pour
@@ -76,8 +68,7 @@ function CharactersPage() {
                             <span className="roster-feature-fr">{active.type}</span>
                             <div className="roster-feature-meta">
                                 <div>
-                                    <div className="k">Rôle</div>
-                                    <div className="v">{active.role}</div>
+
                                 </div>
                                 <div>
                                     <div className="k">Arme</div>
@@ -125,23 +116,6 @@ function CharactersPage() {
                                 aria-label="Rechercher un personnage"
                             />
                         </div>
-                        <div className="roster-filters" aria-label="Filtrer par rôle">
-                            <button
-                                className={activeRole === "all" ? "roster-chip active" : "roster-chip"}
-                                onClick={() => setActiveRole("all")}
-                            >
-                                Tous
-                            </button>
-                            {roleCategories.map((role) => (
-                                <button
-                                    key={role}
-                                    className={activeRole === role ? "roster-chip active" : "roster-chip"}
-                                    onClick={() => setActiveRole(role)}
-                                >
-                                    {role}
-                                </button>
-                            ))}
-                        </div>
                     </div>
 
                     {filteredCharacters.length > 0 ? (
@@ -164,7 +138,7 @@ function CharactersPage() {
                                         </div>
                                         <div className="roster-tile-foot">
                                             <span className="roster-tile-name">{character.name}</span>
-                                            <span className="roster-tile-role">{primaryRole(character)}</span>
+                                            <span className="roster-tile-role">{character.type}</span>
                                         </div>
                                     </Link>
                                 );

@@ -77,8 +77,6 @@
 
 /*Panneau vedette (sticky)*/
 .roster-feature {
-    position: sticky;
-    top: 6rem;
     overflow: hidden;
     border-radius: 18px;
     border: 1px solid color-mix(in srgb, var(--c) 34%, transparent);
@@ -87,8 +85,6 @@
         linear-gradient(180deg, #14161f, #090a10);
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 42px color-mix(in srgb, var(--c) 16%, transparent);
     min-height: 31rem;
-    height: 31rem;
-    position: relative;
     transition: border-color 0.5s ease, box-shadow 0.5s ease;
 }
 .roster-feature-inner {
@@ -200,27 +196,19 @@
 .portrait-frame {
     position: absolute;
     inset: 0;
-    display: block;
-    overflow: hidden;
 }
+
 .portrait-img {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: auto;
-    transform-origin: 0 0;
-    will-change: transform;
-    filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.55));
-    animation: rp-fade-op 0.4s ease;
+    filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.55))
 }
 @keyframes rp-fade-op {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 .roster-feature-visual {
-    position: relative;
-    align-self: end;
+    position: sticky !important;
     height: 24rem;
 }
 /* crossfade du texte vedette */
@@ -275,11 +263,6 @@
     outline: none;
     border-color: color-mix(in srgb, var(--c) 55%, transparent);
     background: rgba(255, 255, 255, 0.04);
-}
-.roster-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
 }
 .roster-chip {
     padding: 0.5rem 0.9rem;

@@ -138,7 +138,6 @@ function CharacterDetailPage() {
                         <div><div className="k">Genre</div><div className="v">{character.gender}</div></div>
                         <div><div className="k">Arme</div><div className="v">{character.weapon}</div></div>
                         <div><div className="k">Type</div><div className="v">{character.type}</div></div>
-                        <div><div className="k">Rôle</div><div className="v">{character.role}</div></div>
                     </div>
 
                     <div className="cd-classes">
@@ -167,15 +166,13 @@ function CharacterDetailPage() {
             <section className="detail-section">
                 <section className="cd-overview">
                     <article className="cd-panel">
-                        <span className="cd-panel-label">Rôle général</span>
+                        <span className="cd-panel-label">Présentation</span>
                         <p>{character.description}</p>
                     </article>
 
                     <article className="cd-panel">
                         <span className="cd-panel-label">Statistiques</span>
-
                         <div className="cd-stats">
-
                             {/* Gauche */}
                             <div className="cd-stats-left">
                                 <div className="row">
@@ -207,7 +204,6 @@ function CharacterDetailPage() {
                                 <span className="attack-value">{stats?.attackType}</span>
                                 <span className="attack-label">Type d'attaque</span>
                             </div>
-
                         </div>
                     </article>
                 </section>
