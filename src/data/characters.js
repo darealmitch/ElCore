@@ -23,7 +23,7 @@ export const characters = [
             range: "Courte",
             difficulty: "Facile",
             pictureType: "/images/combat/Physical_Class.png",
-            attackType: "Physique",
+            attackType: "Attaque Physique",
         }
     },
     {
@@ -50,7 +50,7 @@ export const characters = [
             range: "Moyenne",
             difficulty: "Difficile",
             pictureType: "/images/combat/Magical_Class.png",
-            attackType: "Magique",
+            attackType: "Attaque Magique",
         }
     },
     {
@@ -77,7 +77,7 @@ export const characters = [
             range: "Longue",
             difficulty: "Facile",
             pictureType: "/images/combat/Magical_Class.png",
-            attackType: "Magique",
+            attackType: "Attaque Magique",
         }
     },
     {
@@ -105,7 +105,7 @@ export const characters = [
             range: "Courte",
             difficulty: "Moyenne",
             pictureType: "/images/combat/Physical_Class.png",
-            attackType: "Physique",
+            attackType: "Attaque Physique",
         }
     },
     {
@@ -134,7 +134,7 @@ export const characters = [
             range: "Moyenne",
             difficulty: "Moyenne",
             pictureType: "/images/combat/Magical_Class.png",
-            attackType: "Magique",
+            attackType: "Attaque Magique",
         }
     },
     {
@@ -163,7 +163,7 @@ export const characters = [
             range: "Moyenne",
             difficulty: "Facile",
             pictureType: "/images/combat/Magical_Class.png",
-            attackType: "Magique",
+            attackType: "Attaque Magique",
         }
     },
     {
@@ -191,7 +191,7 @@ export const characters = [
             range: "Courte",
             difficulty: "Moyenne",
             pictureType: "/images/combat/Physical_Class.png",
-            attackType: "Physique",
+            attackType: "Attaque Physique",
         }
     },
     {
@@ -220,7 +220,7 @@ export const characters = [
             range: "Courte",
             difficulty: "Moyenne",
             pictureType: "/images/combat/Physical_Class.png",
-            attackType: "Physique",
+            attackType: "Attaque Physique",
         }
     },
     {
@@ -249,7 +249,7 @@ export const characters = [
             range: "Longue",
             difficulty: "Moyenne",
             pictureType: "/images/combat/Magical_Class.png",
-            attackType: "Magique",
+            attackType: "Attaque Magique",
         }
     },
     {
@@ -277,7 +277,7 @@ export const characters = [
             range: "Longue",
             difficulty: "Moyenne",
             pictureType: "/images/combat/Physical_Class.png",
-            attackType: "Physique",
+            attackType: "Attaque Physique",
         }
     },
     {
@@ -305,7 +305,7 @@ export const characters = [
             range: "Longue",
             difficulty: "Moyenne",
             pictureType: "/images/combat/Physical_Class.png",
-            attackType: "Physique",
+            attackType: "Attaque Physique",
         }
     },
     {
@@ -330,7 +330,7 @@ export const characters = [
             range: "Moyenne",
             difficulty: "Moyenne",
             pictureType: "/images/combat/Magical_Class.png",
-            attackType: "Magique",
+            attackType: "Attaque Magique",
         }
     },
     {
@@ -358,7 +358,7 @@ export const characters = [
             range: "Moyenne",
             difficulty: "Facile",
             pictureType: "/images/combat/Physical_Class.png",
-            attackType: "Physique",
+            attackType: "Attaque Physique",
         }
     },
     {
@@ -385,7 +385,7 @@ export const characters = [
             speed: "Rapide",
             range: "Proche",
             difficulty: "Facile",
-            attackType: "Physique",
+            attackType: "Attaque Physique",
             pictureType: "/images/combat/Physical_Class.png",
         }
     },
@@ -417,7 +417,7 @@ export const characters = [
             range: "Courte",
             difficulty: "Moyenne",
             pictureType: "/images/combat/Physical_Class.png",
-            attackType: "Physique",
+            attackType: "Attaque Physique",
         }
     },
 ];

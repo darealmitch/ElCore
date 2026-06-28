@@ -132,7 +132,7 @@ function ClassDetailPage() {
 
         return sameCharacter && samePath;
     });
-
+    const stats = description?.stats;
     const currentClassIndex = classImages.findIndex((item) =>
         item.characterId === classItem.characterId &&
         item.className === classItem.className &&
@@ -195,6 +195,41 @@ function ClassDetailPage() {
                             <strong>{classItem.classNameFr || classItem.className}</strong>
                         </div>
                     </div>
+                    {stats && (
+                        <div className="cd-stats">
+
+                            <div className="cd-stats-left">
+                                <div className="row">
+                                    <span className="k">Vitesse</span>
+                                    <span className="v">{stats.speed}</span>
+                                </div>
+
+                                <div className="row">
+                                    <span className="k">Portée</span>
+                                    <span className="v">{stats.range}</span>
+                                </div>
+
+                                <div className="row">
+                                    <span className="k">Difficulté</span>
+                                    <span className="v">{stats.difficulty}</span>
+                                </div>
+                            </div>
+
+                            <div className="cd-stats-right">
+                                {stats.pictureType && (
+                                    <img
+                                        className="attack-icon"
+                                        src={stats.pictureType}
+                                        alt={stats.attackType}
+                                    />
+                                )}
+
+                                <span className="attack-value">{stats.attackType}</span>
+                                <span className="attack-label">Type d'attaque</span>
+                            </div>
+
+                        </div>
+                    )}
                 </article>
 
                 <article className="detail-card progression-card">

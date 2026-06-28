@@ -176,7 +176,7 @@ function CharacterDetailPage() {
 
                         <div className="cd-stats">
 
-                            {/* LEFT */}
+                            {/* Gauche */}
                             <div className="cd-stats-left">
                                 <div className="row">
                                     <span className="k">Vitesse</span>
@@ -194,7 +194,7 @@ function CharacterDetailPage() {
                                 </div>
                             </div>
 
-                            {/* RIGHT */}
+                            {/* Droite */}
                             <div className="cd-stats-right">
                                 {stats?.pictureType && (
                                     <img
