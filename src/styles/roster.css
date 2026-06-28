@@ -77,6 +77,8 @@
 
 /*Panneau vedette (sticky)*/
 .roster-feature {
+    position: sticky !important;
+    top: 6rem;
     overflow: hidden;
     border-radius: 18px;
     border: 1px solid color-mix(in srgb, var(--c) 34%, transparent);
