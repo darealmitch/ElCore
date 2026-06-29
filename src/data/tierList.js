@@ -285,7 +285,7 @@ export const tierList = [
                     {
                         characterId: "laby",
                         characterName: "Laby",
-                        classNameFr: "Nom français à compléter",
+                        classNameFr: "Championne Éonienne",
                         classNameInternational: "Eternity Winner",
                         chibiImage: null,
                         role: "DPS accessible",

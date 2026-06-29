@@ -549,7 +549,11 @@
     color: var(--text-soft);
     line-height: 1.55;
 }
-
+.skill-description-title {
+    display: block;
+    margin: 0.8rem 0 0.3rem;
+    font-weight: 700;
+}
 /*Skill Tree — compétences de force*/
 .skill-system-guide-skills {
     display: flex;

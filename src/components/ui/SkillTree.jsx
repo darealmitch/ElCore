@@ -77,15 +77,51 @@ function getSectionPosition(section, levels) {
 }
 
 function renderSkillDescription(description) {
-    if (!description) return <p>La description de cette compétence sera ajoutée plus tard.</p>;
-    if (typeof description === "string") return <p>{description}</p>;
+    if (!description) {
+        return <p>La description de cette compétence sera ajoutée plus tard.</p>;
+    }
 
-    return (
-        <div className="skill-description-block">
-            {description.title && <strong>{description.title}</strong>}
-            {description.lines?.map((line) => <p key={line}>{line}</p>)}
-        </div>
-    );
+    if (typeof description === "string") {
+        return <p>{description}</p>;
+    }
+
+    // ancien format { title, lines }
+    if (description.lines) {
+        return (
+            <div className="skill-description-block">
+                {description.title && (
+                    <strong className="skill-description-title">
+                        {description.title}
+                    </strong>
+                )}
+
+                {description.lines.map((line, index) => (
+                    <p key={index}>{line}</p>
+                ))}
+            </div>
+        );
+    }
+    // nouveau format blocs
+    if (Array.isArray(description)) {
+        return (
+            <div className="skill-description-block">
+                {description.map((block, index) => {
+                    if (typeof block === "string") {
+                        return <p key={index}>{block}</p>;
+                    }
+                    if (block.type === "title") {
+                        return (
+                            <strong key={index} className="skill-description-title">
+                                {block.text}
+                            </strong>
+                        );
+                    }
+                    return null;
+                })}
+            </div>
+        );
+    }
+    return <p>{String(description)}</p>;
 }
 
 function SkillButton({ skill, isActive, tooltipDirection = "", className, onClick, style = {} }) {
