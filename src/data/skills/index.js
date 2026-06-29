@@ -12,6 +12,8 @@ import {aishaClassSkills} from "../classSkills/aishaClassSkills.js";
 import {aishaSkills} from "./aishaSkills.js";
 import {eveSkills} from "./eveSkills.js";
 import {eveClassSkills} from "../classSkills/eveClassSkills.js";
+import {araSkills} from "./araSkills.js";
+import {araClassSkills} from "../classSkills/araClassSkills.js";
 
 export const skills = [
 
@@ -21,7 +23,8 @@ export const skills = [
     ...chungSkills,
     ...renaSkills,
     ...aishaSkills,
-    ...eveSkills
+    ...eveSkills,
+    ...araSkills,
 
 ];
 export const classSkills = [
@@ -31,5 +34,7 @@ export const classSkills = [
     ...chungClassSkills,
     ...renaClassSkills,
     ...aishaClassSkills,
-    ...eveClassSkills
+    ...eveClassSkills,
+    ...araClassSkills,
+
 ];
