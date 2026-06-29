@@ -91,8 +91,8 @@ export const araSkills = [
     },
     {
         id: "ara-skill-7",
-        name: "",
-        nameFr: "",
+        name: "Steel Body",
+        nameFr: "Coup d'épaule",
         image: "/images/skills/ara/base/BodyofSteel.png",
         type: SKILL_TYPES.BRAVERY,
         level: 20,

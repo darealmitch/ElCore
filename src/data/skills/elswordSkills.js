@@ -8,7 +8,7 @@ export const elswordSkills = [
         image: "/images/skills/el/base/skill1.webp",
         type: SKILL_TYPES.TENACITY,
         level: 1,
-        auraType:"destruction",
+        auraType: "destruction",
         description: "Elsword assène un violent coup d'épée.",
     },
     {

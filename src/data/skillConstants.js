@@ -4,7 +4,7 @@ export const SKILL_TYPES = {
     MASTER: "master",
     TENACITY: "tenacite",
     STRENGTH: "force",
-    BRAVERY: "bravoure",
+    BRAVERY: "transcendance",
     HYPER_ACTIVE: "hyperActive",
     HYPER_ACTIVE_2: "hyperActive2",
 };
@@ -23,10 +23,12 @@ export const SKILL_TYPE_COLORS = {
 export const ELSWORD_AURA_COLORS = {
     vitalite: "#60a5fa",
     destruction: "#ef4444",
+    tempete: "#60a5fa",
 };
 export const ELSWORD_AURA_LABELS = {
     vitalite: "l'aura de vitalité",
     destruction: "l'aura de destruction",
+    tempete: "l'aura de tempête",
 };
 export const SKILL_BADGES = {
     HYPER_ACTIVE: "hyperActive",

@@ -14,6 +14,14 @@ import {eveSkills} from "./eveSkills.js";
 import {eveClassSkills} from "../classSkills/eveClassSkills.js";
 import {araSkills} from "./araSkills.js";
 import {araClassSkills} from "../classSkills/araClassSkills.js";
+import {elesisSkills} from "./elesisSkills.js";
+import {elesisClassSkills} from "../classSkills/elesisClassSkills.js";
+import {luSkills} from "./luSkills.js";
+import {luClassSkills} from "../classSkills/luClassSkills.js";
+import {roseSkills} from "./roseSkills.js";
+import {roseClassSkills} from "../classSkills/roseClassSkills.js";
+import {ainSkills} from "./ainSkills.js";
+import {ainClassSkills} from "../classSkills/ainClassSkills.js";
 
 export const skills = [
 
@@ -25,6 +33,10 @@ export const skills = [
     ...aishaSkills,
     ...eveSkills,
     ...araSkills,
+    ...elesisSkills,
+    ...luSkills,
+    ...roseSkills,
+    ...ainSkills,
 
 ];
 export const classSkills = [
@@ -36,5 +48,8 @@ export const classSkills = [
     ...aishaClassSkills,
     ...eveClassSkills,
     ...araClassSkills,
-
+    ...elesisClassSkills,
+    ...luClassSkills,
+    ...roseClassSkills,
+    ...ainClassSkills,
 ];
