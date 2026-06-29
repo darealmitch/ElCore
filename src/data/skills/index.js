@@ -22,6 +22,10 @@ import {roseSkills} from "./roseSkills.js";
 import {roseClassSkills} from "../classSkills/roseClassSkills.js";
 import {ainSkills} from "./ainSkills.js";
 import {ainClassSkills} from "../classSkills/ainClassSkills.js";
+import {labyClassSkills} from "../classSkills/labyClassSkills.js";
+import {labySkills} from "./labySkills.js";
+import {noahSkills} from "./noahSkills.js";
+import {noahClassSkills} from "../classSkills/noahClassSkills.js";
 
 export const skills = [
 
@@ -37,7 +41,8 @@ export const skills = [
     ...luSkills,
     ...roseSkills,
     ...ainSkills,
-
+    ...labySkills,
+    ...noahSkills,
 ];
 export const classSkills = [
     ...elswordClassSkills,
@@ -52,4 +57,6 @@ export const classSkills = [
     ...luClassSkills,
     ...roseClassSkills,
     ...ainClassSkills,
+    ...labyClassSkills,
+    ...noahClassSkills,
 ];

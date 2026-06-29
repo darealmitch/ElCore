@@ -15,7 +15,7 @@ export const SKILL_TYPE_COLORS = {
     master: "#22c55e",
     tenacite: "#06b6d4",
     force: "#a855f7",
-    bravoure: "#ef4444",
+    transcendance: "#ef4444",
     hyperActive: "#f97316",
     hyperActive2: "#fb7185",
 };

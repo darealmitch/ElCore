@@ -47,7 +47,7 @@ export const ravenSkills = [
         type: SKILL_TYPES.ACTIVE,
         level: 15,
         description: "Le Bras Nasod libère instantanément de l’énergie pour permettre à Raven de s'échapper lorsqu’il est attaqué.\n" +
-            "Peut être utilisé pendant une attaque subie. " +
+            "S'active pendant une attaque subie. " +
             "Maintenez une touche directionnelle pour effectuer une esquive dans la direction souhaitée."
     },
     {
@@ -66,7 +66,7 @@ export const ravenSkills = [
         image: "/images/skills/raven/base/FlameSword.png",
         type: SKILL_TYPES.ACTIVE,
         level: 20,
-        description: "Raven attaques en enflammant ton épée. " +
+        description: "Raven attaque en enflammant ton épée. " +
             "Les adversaires touchés subissent des brûlures pendant un court instant et laissent des flammes derrière eux."
     }
 ]

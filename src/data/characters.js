@@ -330,7 +330,7 @@ export const characters = [
         type: "Être mystérieux",
         weapon: " Miroir",
         featuredClass: "Eternity Winner",
-        featuredClassFr: "",
+        featuredClassFr: "Championne Éonienne",
         image: "/images/personnages/laby.webp",
         description: "Au plus profond du Bosquet des ténèbres se trouvait la source du mal.\n" +
             "Laby y était enfermée, seule. Un éclat bleu lui avait permis de sortir du Bosquet des ténèbres.\n" +
