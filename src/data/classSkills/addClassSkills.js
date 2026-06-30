@@ -110,6 +110,7 @@ export const addClassSkills = [
         minLevel: 15,
         levels: [15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 95, 99],
         sections: [
+            {id: "transcendence", label: "Transcendence", level: 65,},
             {id: "forceSkills", label: "Compétences de force"}
         ],
         skillIds: [
@@ -134,6 +135,7 @@ export const addClassSkills = [
         ],
         levels: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 95, 99, "master"],
         sections: [
+            {id: "transcendence", label: "Transcendence", level: 65,},
             { id: "masterClass", label: "Classe Maître" },
             { id: "forceSkills", label: "Compétences de force" },
         ],

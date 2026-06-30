@@ -332,7 +332,6 @@ export const elswordSkills = [
         image: "/images/skills/el/lk/TransShared.webp",
         type: SKILL_TYPES.PASSIVE,
         level: 80,
-        auraType: "",
         description: "Cette compétence améliore les capacités physiques "
     },
     {
