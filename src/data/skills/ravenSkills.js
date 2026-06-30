@@ -339,6 +339,7 @@ export const ravenSkills = [
         nameFr: "Lame Ultime",
         image: "/images/skills/raven/job1/FinalBlade.png",
         type: SKILL_TYPES.HYPER_ACTIVE_2,
+        badge: SKILL_BADGES.HYPER_ACTIVE_2,
         level: 99,
         description: "Raven utilise son bras nasod pour effectuer une figure rapide avec l'épée. " +
             "Son entourage baigne alors dans l'énergie de son arme."

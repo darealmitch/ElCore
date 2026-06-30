@@ -625,4 +625,515 @@ export const addSkills = [
             ],
         },
     },
+    /*Maître de l'IA*/
+    {
+        id: "add-at-skill1",
+        name: "Dynamo Configuration - Rushing Drones",
+        nameFr: "Configuration : Drone explosif",
+        image: "/images/skills/add/job2/ArcTracerSkill1.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 15,
+        description: [
+            "Add lance un drone explosif.",
+            {
+                type: "title",
+                text: "Influencé par le Marquage"
+            },
+            "Vise automatiquement la cible marquée et inflige 20% de dégâts supplémentaires."
+        ]
+    },
+    {
+        id: "add-at-skill2",
+        name: "Panzer Buster",
+        nameFr: "Booster déferlant",
+        image: "/images/skills/add/job2/ArcTracerSkill2.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 15,
+        description: "Add ires une grenade de particules assourdissante. " +
+            "Maintiens la touche de compétence enfoncée pour retarder le tir et ajuster l'angle avec les touches directionnelles."
+    },
+    {
+        id: "add-at-skill3",
+        name: "Nasod Armor Mode: Battle Gear",
+        nameFr: "Armure nasod - Combinaison de combat",
+        image: "/images/skills/add/tp/AddSharedPassive1.webp",
+        type: SKILL_TYPES.PASSIVE,
+        level: 15,
+        description: {
+            title: "Armure nasod",
+            lines: [
+                "Add peut utiliser l’armure nasod.",
+                "En mode dynamo, certaines compétences et certains combos permettent d’enchaîner avec une attaque d’armure nasod.",
+                "Après une compétence, cette possibilité est indiquée directement dans la description de la compétence.",
+                "Après un combo, elle dépend des enchaînements disponibles dans la liste des commandes.",
+                "En mode dynamo, la consommation de PDY diminue.",
+                "Les combos d’armure nasod infligent davantage de dégâts, peuvent interrompre l’attaque de l’ennemi pendant leur exécution, puis permettent à Add d’enchaîner à nouveau.",
+                "Ils peuvent aussi générer des points de conversion de dynamo avec une certaine probabilité.",
+            ],
+        }
+    },
+    {
+        id: "add-at-skill4",
+        name: "Install - Drone Activator",
+        nameFr: "Installation - Marquage",
+        image: "/images/skills/add/job2/ArcTracerSkill3.png",
+        type: SKILL_TYPES.TENACITY,
+        level: 25,
+        description: "places un drone qui tire un missile. " +
+            "Celui-ci explose et laisse pendant un court instant un marquage sur l'adversaire, ce qui diminue sa défense et sa résistance à la magie." +
+            " De plus, pendant ce temps, la consommation de PM sera réduite de 50% tandis que toutes les compétences de Configuration (sauf le Pylône) seront automatiquement tirées sur cet adversaire et provoqueront 20% de dégâts supplémentaires."
+    },
+    {
+        id: "add-at-skill4",
+        name: "Install - Drone Activator",
+        nameFr: "Installation - Marquage",
+        image: "/images/skills/add/job2/ArcTracerSkill3.png",
+        type: SKILL_TYPES.TENACITY,
+        level: 25,
+        description: "Add places un drone qui tire un missile. " +
+            "Celui-ci explose et laisse pendant un court instant un marquage sur l'adversaire, ce qui diminue sa défense et sa résistance à la magie." +
+            " De plus, pendant ce temps, la consommation de PM sera réduite de 50% tandis que toutes les compétences de Configuration (sauf le Pylône) seront automatiquement tirées sur cet adversaire et provoqueront 20% de dégâts supplémentaires."
+    },
+    {
+        id: "add-at-skill5",
+        name: "Hypernova",
+        nameFr: "Hypernova",
+        image: "/images/skills/add/job2/ArcTracerSkill4.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 30,
+        description: "Add tire un puissant rayon laser depuis son Dynamo. " +
+            "(Peut également être utilisée en plein saut.)"
+    },
+    {
+        id: "add-at-skill6",
+        name: "Dynamo Configuration - Fusion Blast",
+        nameFr: "Configuration : Grenade à fragmentation",
+        image: "/images/skills/add/job2/ArcTracerSkill5.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 30,
+        description: [
+            "Add tires une grosse grenade qui explose sur l'adversaire. " +
+            "Si aucun adversaire n'est touché, elle se divise en quatre petites grenades qui se déploient en X.",
+            {
+                type: "title",
+                text: "Influencé par le Marquage"
+            },
+            "Vise automatiquement la cible marquée et inflige 20% de dégâts supplémentaires."
+        ]
+    },
+    {
+        id: "add-at-skill7",
+        name: "Psionic Generator",
+        nameFr: "Générateur psionique",
+        image: "/images/skills/add/job2/ArcTracerSkill6.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 35,
+        description: "Add installes un générateur qui est chargé grâce à l'énergie psychique des amis et adversaires aux alentours, puis explose. " +
+            "Plus il y a de personnages à proximité (max. 10), plus l'explosion est grande et puissante."
+    },
+    {
+        id: "add-at-skill8",
+        name: "Hidden Records",
+        nameFr: "Inscriptions secrètes",
+        image: "/images/skills/add/job2/ArcTracerPassive2.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 40,
+        description: "Augmente ton maximum de PM et la durée des compétences de Configuration (Drone explosif, Pylône, Grenade à fragmentation, Disque, Explosion retardée).\n" +
+            "Réduit la valeur de K.O. de tes attaques et augmente la régénération de PM en mode dynamo."
+    },
+    /*Machiavel*/
+    {
+        id: "add-md-skill1",
+        name: "Dynamo Configuration - Pylon",
+        nameFr: "Configuration : pylône",
+        image: "/images/skills/add/lp/AddSharedSkill1.webp",
+        type: SKILL_TYPES.ACTIVE,
+        level: 35,
+        description: {
+            lines: [
+                "Add crée une sphère d’énergie stationnaire pendant 20 secondes.",
+                "La sphère inflige des dégâts aux ennemis proches et augmente la régénération de PM des alliés.",
+                "Si d’autres sphères sont créées dans un rayon de 10 mètres, elles sont reliées par des arcs électriques qui infligent des dégâts continus aux ennemis, sans les maintenir en place.",
+                "Cette compétence peut aussi être utilisée en plein saut.",
+                "Utilisation multiple : Add peut créer jusqu’à 3 pylônes dans un court intervalle de temps.",
+                "Synergie avec Voyageur temporel : en mode dynamo, la compétence consomme des PDY au lieu des PM.",
+            ],
+        }
+    },
+    {
+        id: "add-md-skill2",
+        name: "Phantom Seeker",
+        nameFr: "Fantôme traqueur",
+        image: "/images/skills/add/job2/MastermindSkill1.png",
+        type: SKILL_TYPES.BRAVERY,
+        level: 35,
+        description: "Add crées deux drones qui poursuivent l'adversaire et changent de cible à chaque touche."
+    },
+    {
+        id: "add-md-skill3",
+        name: "Dynamo Factory - Enhanced Transformation",
+        nameFr: "Amélioration d'usine dynamo",
+        image: "/images/skills/add/job2/MastermindPassive1.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 35,
+        description: "Réduit le coût en PM de toutes les compétences d'Installation (Marquage, Chute d'étoiles, Rage ultime, Laser téléguidé).\n" +
+            "Rallonge la durée des drones de l'usine dynamo.\n" +
+            "Lors de la modification de l'Installation, les temps de rechargement de toutes les autres Installations sont réduits."
+    },
+    {
+        id: "add-md-skill4",
+        name: "Aero Mine",
+        nameFr: "Fantôme traqueur",
+        image: "/images/skills/add/job2/MastermindSkill2.png",
+        type: SKILL_TYPES.TENACITY,
+        level: 40,
+        description: [
+            "Add déploie une Mine Aérienne qui explose après un certain temps. " +
+            "Une seconde après son installation, elle détecte les ennemis à portée, explose et les projette dans les airs.\n" +
+            "\n" +
+            "La Mine Aérienne est indestructible. " +
+            "Elle devient invisible 1 seconde après son déploiement et se désactive automatiquement au bout de 10 secondes.",
+            {
+                type: "title",
+                text: "Influencé par le Marquage"
+            },
+            "Vise automatiquement la cible marquée et inflige 20% de dégâts supplémentaires."
+        ]
+    },
+    {
+        id: "add-md-skill5",
+        name: "Install - Starfall",
+        nameFr: "Installation - Chute d'étoiles\n",
+        image: "/images/skills/add/job2/MastermindSkill3.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 45,
+        description: "Tu installes un drone fixe qui fait pleuvoir des grenades lasers sur les adversaires aux alentours pendant 7 sec. " +
+            "Plus il y a d'adversaires à portée, plus la visée est rapide."
+    },
+    {
+        id: "add-md-skill6",
+        name: "Install - Ultimate Fury",
+        nameFr: "Installation - Rage ultime",
+        image: "/images/skills/add/job2/MastermindSkill4.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 45,
+        description: "Add installes trois drones qui te suivent pendant 6 sec. et tirent des rayons de particules jusqu'à 3 sec. sur un adversaire. " +
+            "Pendant ce temps, tu peux te déplacer librement."
+    },
+    {
+        id: "add-md-skill7",
+        name: "Dynamo Configuration - Delayed Explosion",
+        nameFr: "Configuration : explosion retardée",
+        image: "/images/skills/add/job2/MastermindSkill5.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 50,
+        description: [
+            "Add lances un drone qui se fixe sur un adversaire et explose au bout de 3 sec. " +
+            "(Peut être enlevé en appuyant rapidement sur les touches de gauche et de droite).",
+            {
+                type: "title",
+                text: "Influencé par le Marquage"
+            },
+            "Vise automatiquement la cible marquée et inflige 20% de dégâts supplémentaires."
+        ]
+    },
+    {
+        id: "add-md-skill8",
+        name: "Install - Zero Kelvin Generator",
+        nameFr: "Installation - Générateur Zéro Kelvin ",
+        image: "/images/skills/add/job2/MastermindSkill6.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 50,
+        description: [
+            "Le Dynamo passe en mode Générateur Zéro Kelvin.\n" +
+            "Une fois activé, Add déploie un drone qui émet une aura infligeant des gelures aux ennemis. " +
+            "Après son installation, Add peut se déplacer librement.\n" +
+            "Le drone génère une onde de choc toutes les 3 secondes pour infliger des dégâts. " +
+            "Chaque onde de choc restaure des DP en fonction du nombre d’ennemis à proximité. " +
+            "Les ennemis touchés subissent davantage de dégâts physiques et magiques pendant une durée déterminée.",
+            {
+                type: "title",
+                text: "Influencé par le Marquage"
+            },
+            "Vise automatiquement la cible marquée et inflige 20% de dégâts supplémentaires."
+        ]
+    },
+    {
+        id: "add-md-skill9",
+        name: "Install - shooting Chaser",
+        nameFr: "Installation - Laser téléguidé",
+        image: "/images/skills/add/job2/MastermindSkill7.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 55,
+        description: "Add installes un drone qui se démultiplie lors de l'activation et tire un laser sur les adversaires, leur infligeant des dégâts continus. " +
+            "La première touche paralyse."
+    },
+    {
+        id: "add-md-skill10",
+        name: "New Update!",
+        nameFr: "Mise à jour !",
+        image: "/images/skills/add/job2/MastermindPassive2.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 60,
+        description: "Lors de l'activation ou la modification du mode usine dynamo, tu obtiens un bonus qui augmente ta régénération de PM pendant 15 secondes (cumulables 3 fois max.)."
+    },
+    {
+        id: "add-md-skill11",
+        name: "Transformation: Offensive Mode",
+        nameFr: "Mode offensif",
+        image: "/images/skills/add/job2/MastermindPassive3.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 60,
+        description: "Augmente les dégâts de toutes les compétences d'Installation (Marquage, Chute d'étoiles, Rage ultime, Laser téléguidé)."
+    },
+    {
+        id: "add-md-skill12",
+        name: "Apocalypse",
+        nameFr: "Apocalypse",
+        image: "/images/skills/add/job2/MastermindHyperActive.png",
+        type: SKILL_TYPES.HYPER_ACTIVE,
+        badge: SKILL_BADGES.HYPER_ACTIVE,
+        level: 65,
+        description: "Add fabrique des cubes nasods qui le suivent et attaquent les adversaires aux alentours. Lorsque les PV des cubes atteignent 0 ou qu’il réactive la compétence, toute leur énergie restante est libérée dans une ultime attaque.\n" +
+            "\n" +
+            "Les caractéristiques des cubes sont identiques à celles d’Add."
+    },
+    {
+        id: "add-md-skill13",
+        name: "Install - Charged Impulser",
+        nameFr: "Installation: Impulseur chargé",
+        image: "/images/skills/add/job2/MastermindSkill8.png",
+        type: SKILL_TYPES.TENACITY,
+        level: 70,
+        description: [
+            "Le Dynamo passe en mode Usine Dynamo [Impulseur chargé].\n" +
+            "Une fois activé, Add déploie un drone qui génère périodiquement un trou noir. " +
+            "Le drone explose lorsque sa durée d’activité prend fin ou lorsque ses PV tombent à zéro. " +
+            "À son explosion, les dégâts infligés et le rayon d’effet augmentent en fonction du temps pendant lequel le drone est resté actif.",
+            {
+                type: "title",
+                text: "Influencé par le Marquage"
+            },
+            "Vise automatiquement la cible marquée et inflige 20% de dégâts supplémentaires."
+        ]
+    },
+    {
+        id: "add-md-skill14",
+        name: "Awakened Will: Mastermind",
+        nameFr: "Volonté déchaînée : Machiavel",
+        image: "/images/skills/add/job2/MastermindPassive4.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 70,
+        description: "Le passage en mode Usine Dynamo confère une certaine chance d’obtenir un Point de Mutation (PDY) supplémentaire. " +
+            "De plus, l’utilisation des compétences actives spéciales déclenche l’état Overflow."
+    },
+    {
+        id: "add-md-skill15",
+        name: "Dynamo Configuration - Flick Disc",
+        nameFr: "Configuration : disque",
+        image: "/images/skills/add/job2/MastermindSkill9.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 80,
+        description: [
+            "Tu tires un disque d'énergie téléguidé qui passe jusqu'à 6 fois d'un adversaire à l'autre.",
+            {
+                type: "title",
+                text: "Influencé par le Marquage"
+            },
+            "Vise automatiquement la cible marquée et inflige 20% de dégâts supplémentaires."
+        ]
+    },
+    {
+        id: "add-md-skill16",
+        name: "Awakened One",
+        nameFr: "Spécialisation",
+        image: "/images/skills/el/lk/TransShared.webp",
+        type: SKILL_TYPES.PASSIVE,
+        level: 80,
+        description: "Cette compétence améliore les capacités physiques."
+    },
+    {
+        id: "add-md-skill17",
+        name: "Force Field",
+        nameFr: "Champ de force",
+        image: "/images/skills/add/job2/MastermindSkill10.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 90,
+        description: [
+            "Add génère un champ magnétique spécial qui amplifie temporairement la puissance de la technologie nasod à l’aide d’une réplique de son Dynamo.\n" +
+            "Tant qu’il se trouve dans ce champ, Add et ses alliés bénéficient d’une augmentation des attaques physiques et magiques, ainsi que d’une réduction des dégâts subis. " +
+            "Le coût en PM et le temps de recharge des compétences de Configuration Dynamo sont également réduits.",
+            {
+                type: "title",
+                text: "Influencé par le Marquage"
+            },
+            "Vise automatiquement la cible marquée et inflige 20% de dégâts supplémentaires."
+        ]
+    },
+    {
+        id: "add-md-skill18",
+        name: "A.I. Upgrade",
+        nameFr: "I.A renforcé",
+        image: "/images/skills/add/job2/MastermindPassive5.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 90,
+        description: "La maîtrise de la technologie nasod par Add améliore davantage l’intelligence artificielle du [Installation - Marquage] ainsi que celle de ses autres compétences à tête chercheuse."
+    },
+    {
+        id: "add-md-skill19",
+        name: "Extreme Chaser",
+        nameFr: "Champ de force",
+        image: "/images/skills/add/job2/MastermindSkill11.png",
+        type: SKILL_TYPES.BRAVERY,
+        level: 95,
+        description: [
+            "Add déploie des ondes de choc qui poursuivent rapidement leurs cibles. " +
+            "À l’impact, elles provoquent une explosion d’énergie et attaquent férocement les ennemis.",
+            {
+                type: "title",
+                text: "Influencé par le Marquage"
+            },
+            "Vise automatiquement la cible marquée et inflige 20% de dégâts supplémentaires."
+        ]
+    },
+    /*Dominateur*/
+    {
+        id: "add-dm-skill1",
+        name: "Distortion Zone",
+        nameFr: "Zone de distorsion",
+        image: "/images/skills/add/job2/DominatorHyperActive.png",
+        type: SKILL_TYPES.HYPER_ACTIVE_2,
+        badge: SKILL_BADGES.HYPER_ACTIVE_2,
+        level: 99,
+        description: "Add active un dispositif de calcul dynamo spécifique qui lui permet de délimiter une zone spéciale. " +
+            "Les adversaires voient leur vitesse diminuer fortement et reçoivent des dégâts supplémentaires."
+    },
+    {
+        id: "add-dm-skill2",
+        name: "Energy Flow",
+        nameFr: "Flots énergétiques",
+        image: "/images/skills/add/job2/DominatorPassive1.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 99,
+        description: "Add contrôle parfaitement le flux d'énergie. " +
+            "Si vous ne possédez aucun PCD, la régénération de PDY augmente. " +
+            "Si vous possédez 1 ou plusieurs PCD, la consommation de PDY diminue en fonction du nombre de PCD que vous possédez. " +
+            "La vitesse d'exécution des compétences d'installation augmente."
+    },
+    {
+        id: "add-dm-skill3",
+        name: "Control Tower",
+        nameFr: "Tour de contrôle",
+        image: "/images/skills/add/job2/DominatorPassive2.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 99,
+        description: ["Add se bat de manière plus efficace grâce à la transformation du système de contrôle de ses dynamos.\n" +
+        "Le temps de rechargement des compétences diminue quand vous dépensez des points de conversion de dynamo (sauf hyper compétence et compétence de relation).\n" +
+        "Certaines compétences gagnent en efficacité.",
+            {
+                type: "title",
+                text: "Accélération"
+            },
+            "Le temps de rechargement des compétences diminue de 1 seconde par PCD consommé.\n" +
+            "Ceci est valable pour les compétences suivantes : " +
+            "Booster déferlant, Fantôme traqueur, Installation - Rage ultime, Installation - Chute d'étoiles, Installation : impulseur chargé, Champ de force et Poursuivant extrême."
+        ]
+    },
+    /*Dominateur Classe Master*/
+    {
+        id: "add-dm-master1",
+        name: "Dynamo Factory Add-on - Flotilla/Stage 1",
+        nameFr: "Extension d'usine dynamo - Flotille Niveau 1",
+        image: "/images/skills/add/job2/DominatorMaster1.png",
+        type: SKILL_TYPES.MASTER,
+        badge: SKILL_BADGES.MASTER_SKILL,
+        level: "master",
+        description: [
+            "Add invoque Flotille, qui le suit pendant une certaine durée et l’assiste au combat.",
+            {
+                type: "title",
+                text: "Flotille"
+            },
+            "Renforcement de puissance : augmente les dégâts de toutes les compétences.",
+            {
+                type: "title",
+                text: "Étape 1"
+            },
+            "Cette première étape est automatiquement débloquée lors du passage en Classe Maître"
+        ]
+    },
+    {
+        id: "add-dm-master2",
+        name: "Dynamo Factory Add-on - Flotilla/Stage 2",
+        nameFr: "Extension d'usine dynamo - Flotille Niveau 2",
+        image: "/images/skills/add/job2/DominatorMaster2.png",
+        type: SKILL_TYPES.MASTER,
+        badge: SKILL_BADGES.MASTER_SKILL,
+        level: "master",
+        description: [
+            "Add invoque Flotille, qui le suit pendant une certaine durée et lui apporte son soutien au combat.",
+            {
+                type: "title",
+                text: "Flotille"
+            },
+            "Renforcement de puissance : augmente les dégâts de toutes les compétences.",
+            "Mutation amplifiée : toutes les compétences d’installation bénéficient en permanence des effets du PDY.",
+            {
+                type: "title",
+                text: "Étape 2"
+            },
+            "Cette deuxième étape se débloque grâce à une quête de compétence."
+        ]
+    },
+    {
+        id: "add-dm-master3",
+        name: "Dynamo Factory Add-on - Flotilla/Stage 3",
+        nameFr: "Extension d'usine dynamo - Flotille Niveau 3",
+        image: "/images/skills/add/job2/DominatorMaster3.png",
+        type: SKILL_TYPES.MASTER,
+        badge: SKILL_BADGES.MASTER_SKILL,
+        level: "master",
+        description: [
+            "Add invoque Flotille, qui le suit pendant une certaine durée et lui apporte son soutien au combat.",
+            {
+                type: "title",
+                text: "Flotille"
+            },
+            "Renforcement de puissance : augmente les dégâts de toutes les compétences.",
+            "Mutation amplifiée : toutes les compétences d’installation bénéficient en permanence des effets du PDY.",
+            {
+                type: "title",
+                text: "Étape 3"
+            },
+            "Cette troisième étape se débloque grâce à une quête de compétence."
+        ]
+    },
+    /*Dominateur Classe maître*/
+    {
+        id: "add-dm-master4",
+        name: "Dynamo Factory Add-on - Flotilla/Stage 4",
+        nameFr: "Extension d'usine dynamo - Flotille Niveau 4",
+        image: "/images/skills/add/job2/DominatorMaster4.png",
+        type: SKILL_TYPES.MASTER,
+        badge: SKILL_BADGES.MASTER_SKILL,
+        level: "master",
+        description: [
+            "Add invoque Flotille, qui le suit pendant une certaine durée et lui apporte son soutien au combat. " +
+            "Flotille augmente les dégâts de toutes les compétences et améliore l’efficacité des compétences d’installation.",
+            {
+                type: "title",
+                text: "Flotille"
+            },
+            "Renforcement de puissance : augmente les dégâts de toutes les compétences.",
+            "Mutation amplifiée : toutes les compétences d’installation bénéficient en permanence des effets du PDY.\n",
+            "Une fois toutes les utilisations de l’Usine de Fusion consommées, " +
+            "le temps de recharge de toutes les compétences d’Add est réinitialisé, à l’exception de la compétence Quantification, " +
+            "des Hyper compétences et des Compétences de lien.",
+            {
+                type: "title",
+                text: "Étape 4"
+            },
+            "Cette quatrième étape se débloque grâce à une quête de compétence."
+        ]
+    }
 ]

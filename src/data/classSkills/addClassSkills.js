@@ -119,6 +119,7 @@ export const addClassSkills = [
             "add-db-skill3",
         ],
     },
+    /*Calamité Master*/
     {
         id: "add-db-master",
         characterId: "add",
@@ -145,5 +146,131 @@ export const addClassSkills = [
             "add-db-master3",
             "add-db-master4",
         ],
+    },
+    /*Maître de l'IA*/
+    {
+        id: "add-at-skills",
+        characterId: "add",
+        className: "Arc Tracer",
+        classNameFr: "Maître de l'IA",
+        jobStage: "job1",
+        title: "Compétences - Maître de l'IA",
+        layout: "rows",
+        extends: ["add-base"],
+        columns: [
+            { id: "active", label: "Skills", type: "active" },
+            { id: "passive", label: "Passives", type: "passive" },
+        ],
+        minLevel: 15,
+        levels: [15, 20, 25, 30, 35, 40],
+        skillIds: [
+            "add-at-skill1",
+            "add-at-skill2",
+            "add-at-skill3",
+            "add-at-skill4",
+            "add-at-skill5",
+            "add-at-skill6",
+            "add-at-skill7",
+            "add-at-skill8",
+        ]
+    },
+    /*Machiavel*/
+    {
+        id: "add-md-skills",
+        characterId: "add",
+        className: "Mastermind",
+        classNameFr: "Machiavel",
+        jobStage: "job2",
+        title: "Compétences - Machiavel",
+        layout: "rows",
+        extends: ["add-at-skills"],
+        columns: [
+            { id: "active", label: "Skills", type: "active" },
+            { id: "passive", label: "Passives", type: "passive" },
+        ],
+        minLevel: 15,
+        levels: [15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 95 ],
+        sections: [
+            {
+                id: "transcendence",
+                label: "Transcendence",
+                level: 65,
+            }
+        ],
+        skillIds: [
+            "add-md-skill1",
+            "add-md-skill2",
+            "add-md-skill3",
+            "add-md-skill4",
+            "add-md-skill5",
+            "add-md-skill6",
+            "add-md-skill7",
+            "add-md-skill8",
+            "add-md-skill9",
+            "add-md-skill10",
+            "add-md-skill11",
+            "add-md-skill12",
+            "add-md-skill13",
+            "add-md-skill14",
+            "add-md-skill15",
+            "add-md-skill16",
+            "add-md-skill17",
+            "add-md-skill18",
+            "add-md-skill19",
+        ]
+    },
+    /*Dominateur*/
+    {
+        id: "add-dm-skills",
+        characterId: "add",
+        className: "Dominator",
+        classNameFr: "Dominateur",
+        jobStage: "job3",
+        title: "Compétences - Dominateur",
+        layout: "rows",
+        extends: ["add-md-skills"],
+        columns: [
+            { id: "active", label: "Skills", type: "active" },
+            { id: "passive", label: "Passives", type: "passive" },
+        ],
+        minLevel: 15,
+        levels: [15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 95, 99],
+        sections: [
+            {id: "transcendence", label: "Transcendence", level: 65,},
+            {id: "forceSkills", label: "Compétences de force"}
+        ],
+        skillIds: [
+            "add-dm-skill1",
+            "add-dm-skill2",
+            "add-dm-skill3",
+        ]
+    },
+    /*Dominateur Master*/
+    {
+        id: "add-dm-master",
+        characterId: "add",
+        className: "Dominator",
+        classNameFr: "Dominateur",
+        jobStage: "master",
+        title: "Compétences — Calamité Classe maître",
+        layout: "rows",
+        extends: ["add-dm-skills"],
+        columns: [
+            { id: "active", label: "Skills", type: "active" },
+            { id: "passive", label: "Passives", type: "passive" },
+        ],
+        minLevel: 1,
+        levels: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 95, 99, "master"],
+        sections: [
+            {id: "transcendence", label: "Transcendence", level: 65,},
+            { id: "masterClass", label: "Classe Maître" },
+            { id: "forceSkills", label: "Compétences de force" },
+        ],
+        skillIds: [
+            "add-dm-master1",
+            "add-dm-master2",
+            "add-dm-master3",
+            "add-dm-master4",
+        ]
     }
 ]
