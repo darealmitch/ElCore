@@ -69,6 +69,7 @@ export const ravenSkills = [
         description: "Raven attaque en enflammant ton épée. " +
             "Les adversaires touchés subissent des brûlures pendant un court instant et laissent des flammes derrière eux."
     },
+    //Porteur de l'épée
     {
         id: "raven-st-skill-1",
         name: "Finishing Slash",
@@ -146,6 +147,7 @@ export const ravenSkills = [
         level: 40,
         description: "Diminue la valeur de K.O. et augmente l'attaque si tu possèdes un certain nombre de PV."
     },
+    /*Maître de l'épée*/
     {
         id: "raven-bm-skill1",
         name: "Bloody Accel",
@@ -330,6 +332,7 @@ export const ravenSkills = [
         level: 95,
         description: "Raven exécute une immense entaille qui inflige d’importants dégâts aux ennemis et leur applique l’effet de Blessure."
     },
+    /*Lame furieuse*/
     {
         id: "raven-fb-skill1",
         name: "Final Blade",
@@ -373,6 +376,7 @@ export const ravenSkills = [
         level: 99,
         description: "Les capacités au combat de Raven se sont encore améliorées, ce qui renforcent certaines de ses compétences."
     },
+    /*Lame furieuse Classe maître*/
     {
         id: "raven-fb-master1",
         name: "Atomic Cutting/Stage 1",
