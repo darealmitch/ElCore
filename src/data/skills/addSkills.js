@@ -1108,7 +1108,6 @@ export const addSkills = [
             "Cette troisième étape se débloque grâce à une quête de compétence."
         ]
     },
-    /*Dominateur Classe maître*/
     {
         id: "add-dm-master4",
         name: "Dynamo Factory Add-on - Flotilla/Stage 4",
@@ -1135,5 +1134,417 @@ export const addSkills = [
             },
             "Cette quatrième étape se débloque grâce à une quête de compétence."
         ]
-    }
+    },
+    /*Voyageur Temporel*/
+    {
+        id: "add-tt-skill1",
+        name: "Dynamo Configuration - Space Breach",
+        nameFr: "Configuration : déchirure spatiale",
+        image: "/images/skills/add/job3/TimeTracerSkill1.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 15,
+        description: "Tu ouvres une faille spatiale qui inflige des dégâts multiples aux adversaires.\n" +
+            "En maintenant la touche de compétence enfoncée, tu tires en mouvement vers l'avant et inflige des dégâts supplémentaires.\n" +
+            "Cela te coûte des PM supplémentaires (ou PDY en mode dynamo)"
+    },
+    {
+        id: "add-tt-skill2",
+        name: "Gravity Buster",
+        nameFr: "Buster de gravité",
+        image: "/images/skills/add/job3/TimeTracerSkill2.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 15,
+        description: "Add écrases une zone précise avec un champ de gravitation.(Peut également être utilisé pendant un saut)."
+    },
+    {
+        id: "add-tt-skill3",
+        name: "Nasod Armor Mode - Overlimit",
+        nameFr: "Armure nasod - Synergie",
+        image: "/images/skills/add/job3/TimeTracerPassive1.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 15,
+        description: "Tu peux utiliser le combo d'armure nasod. En mode dynamo, il permet de placer des attaques supplémentaires après certaines compétences et à la fin d'un combo en appuyant sur W ou X.\n" +
+            "Compétence : voir la description de la compétence.\n" +
+            "Combo : WWW[W], WWW[X], WWX[X], XXW[W~W], XXX[W], XX[X], >>WW[W], >>XX[X], >>^X[X]\n" +
+            "Si tu es touché pendant un combo d'armure nasod, les dégâts sont annulés et tu peux continuer le combo.\n" +
+            "Les dégâts des combos nasod augmentent et tu obtiens les aptitudes spéciales 'synergie' et 'téléportation'."
+    },
+    {
+        id: "add-tt-skill4",
+        name: "Reverse Circle",
+        nameFr: "Cercle inversé",
+        image: "/images/skills/add/job3/TimeTracerSkill3.png",
+        type: SKILL_TYPES.TENACITY,
+        level: 25,
+        description: "Après avoir ouvert un seuil dimensionnel, Add sautes sur une certaine distance, transperces tous les adversaires et tires une sphère d'énergie qui explose.\n" +
+            "(Peut également être utilisé pendant un saut)"
+    },
+    {
+        id: "add-tt-skill5",
+        name: "Dark Matter Explosion",
+        nameFr: "Explosion de matière noire",
+        image: "/images/skills/add/job3/TimeTracerSkill4.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 30,
+        description: "Add ouvre une porte dimensionnelle afin d’invoquer de la matière noire, provoquant une puissante explosion."
+    },
+    {
+        id: "add-tt-skill6",
+        name: "Seal of Time",
+        nameFr: "Sceau temporel",
+        image: "/images/skills/add/job3/TimeTracerSkill5.png",
+        level: 30,
+        description: [
+            "Lors de l'activation, le temps de rechargement des compétences diminue et tant que le bonus est actif, tu as la capacité de défier le temps.",
+            {
+                type: "title",
+                text: "Défier le temps"
+            },
+            "Les PV, PM, PDY, voie de l'épée, force de la nature, obus, énergie spirituelle et PCD actuels sont comptabilisés.\n",
+            "Si tu meurs pendant la durée de cette compétence, tu seras ressuscité au moment où ils ont été sauvegardés.\n",
+            "S'applique avant toutes les autres aptitudes de résurrection.\n",
+            "En JcJ, seuls 50% de tes PV max. seront comptabilisés.\n",
+            "Si tu ressuscites grâce à [Défier le temps], alors tu subis le malus [Retour dans le temps] pendant 120 sec.\n",
+            "(La réduction du temps de rechargement ne s'applique pas aux hyper compétences, compétences de partenaire et sceau temporel)"
+        ]
+    },
+    {
+        id: "add-tt-skill6",
+        name: "Stardust Shower",
+        nameFr: "Grêle étoilée",
+        image: "/images/skills/add/job3/TimeTracerSkill6.png",
+        type: SKILL_TYPES.BRAVERY,
+        level: 35,
+        description: "Add ouvres un seuil dimensionnel dans le ciel et fais pleuvoir des sphères de gravité."
+    },
+    {
+        id: "add-tt-skill7",
+        name: "Time Control",
+        nameFr: "Contrôle temporel",
+        image: "/images/skills/add/job3/TimeTracerSkill6.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 40,
+        description: "Augmente ta rapidité.\n" +
+            "Lors de l'utilisation d'une compétence spéciale active, le temps de rechargement de toutes les compétences spéciales actives a une chance d'être diminué (sauf Sceau temporel, Amour divin et hyper compétences).\n" +
+            "Diminue la valeur de K.O. de tes attaques et augmente la régénération de PM en mode dynamo."
+    },
+    /*Seigneur du temps*/
+    {
+        id: "add-de-skill1",
+        name: "Dynamo Configuration: Pylon",
+        nameFr: "Configuration dynamo : Pylône",
+        image: "/images/skills/add/lp/AddSharedSkill1.webp",
+        type: SKILL_TYPES.ACTIVE,
+        level: 35,
+        description: {
+            lines: [
+                "Add crée une sphère d’énergie stationnaire pendant 20 secondes.",
+                "La sphère inflige des dégâts aux ennemis proches et augmente la régénération de PM des alliés.",
+                "Si d’autres sphères sont créées dans un rayon de 10 mètres, elles sont reliées par des arcs électriques qui infligent des dégâts continus aux ennemis, sans les maintenir en place.",
+                "Cette compétence peut aussi être utilisée en plein saut.",
+                "Utilisation multiple : Add peut créer jusqu’à 3 pylônes dans un court intervalle de temps.",
+                "Synergie avec Voyageur temporel : en mode dynamo, la compétence consomme des PDY au lieu des PM.",
+            ],
+        },
+    },
+    {
+        id: "add-de-skill2",
+        name: "Maximum Strike",
+        nameFr: "Coup maximum",
+        image: "/images/skills/add/job3/DiabolicEsperSkill1.png",
+        type: SKILL_TYPES.BRAVERY,
+        level: 35,
+        description: [
+            "Add déclenches une puissante onde et crées six sphères d'espace-temps qui restent pendant 60 secondes et peuvent être tirées toutes les 0,5 sec.",
+            {
+                type: "title",
+                text: "Sphères d'espace-temps",
+            },
+            "Appuie sur la touche de compétence pour tirer 1 sphère sur le dernier adversaire touché.\n" +
+            "Si tu tu n'attaques pas l'adversaire pendant 2 sec., la sphère sera tirée vers l'avant et pas sur lui.\n" +
+            "Plus la distance est élevée, plus l'attaque diminue.\n" +
+            "Les sphères traversent tous les obstacles et explosent lors de l'impact.\n" +
+            "Une fois les 60 sec. écoulées, tu récupères 25 PM (ou PDY en booster) par sphère restante."
+        ]
+    },
+    {
+        id: "add-de-skill3",
+        name: "Mind Control",
+        nameFr: "Contrôle mental",
+        image: "/images/skills/add/job3/DiabolicEsperPassive1.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 35,
+        description: "En fonction du mode d'armure nasod, tu récupères une partie des coûts d'une compétence utilisée et renforces ta résistance aux malus.\n" +
+            "Bonus de résistance : étourdissement, confusion, silence, panique, peur, oppression.\n"
+    },
+    {
+        id: "add-de-skill4",
+        name: "Psionic Shock",
+        nameFr: "Contrôle mental",
+        image: "/images/skills/add/job3/DiabolicEsperSkill2.png",
+        type: SKILL_TYPES.TENACITY,
+        level: 40,
+        description: "Add concentre son énergie mentale pour libérer une puissante onde psychique. " +
+            "Si le dernier coup ne touche qu’un seul ennemi, celui-ci est plongé dans un état de confusion."
+    },
+    {
+        id: "add-de-skill5",
+        name: "Void Field",
+        nameFr: "Champ du néant",
+        image: "/images/skills/add/job3/DiabolicEsperSkill3.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 45,
+        description: "Add crées un champ d'hyperespace autour de toi. " +
+            "Les adversaires à l'intérieur du champ sont immobilisés et subissent des dégâts continus."
+    },
+    {
+        id: "add-de-skill6",
+        name: "Moonlight Rhapsody",
+        nameFr: "Sérénade luna",
+        image: "/images/skills/add/job3/DiabolicEsperSkill4.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 45,
+        description: "Add utilises une force qui fait perdre la raison à l'adversaire."
+    },
+    {
+        id: "add-de-skill7",
+        name: "Force Finger",
+        nameFr: "Contact de la force",
+        image: "/images/skills/add/job3/DiabolicEsperSkill5.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 50,
+        description: "Add infliges des dégâts aux adversaires dans le rayon d'action et brûlent leurs PM. " +
+            "En même temps, il régénères ses PM (PDY en mode dynamo)."
+    },
+    {
+        id: "add-de-skill8",
+        name: "Gravity Field",
+        nameFr: "Champ de gravitation",
+        image: "/images/skills/add/job3/DiabolicEsperSkill6.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 50,
+        description: "Add contrôle la gravité sur une vaste zone. " +
+            "Il immobilise ses ennemis sous une gravité extrême, puis inverse instantanément le champ en antigravité afin de déclencher une onde gravitationnelle.\n" +
+            "Tous les ennemis présents dans le champ d’ultra-gravité voient leur vitesse de déplacement, leur vitesse d’action et leur vitesse de saut réduites."
+    },
+    {
+        id: "add-de-skill9",
+        name: "Reverse Stigma",
+        nameFr: "Stigmates inversés",
+        image: "/images/skills/add/job3/DiabolicEsperSkill7.png",
+        type: SKILL_TYPES.TENACITY,
+        level: 55,
+        description: "Tu marques l'adversaire le plus proche et sa position est sauvegardée.\n" +
+            "Si la compétence est à nouveau utilisée pendant sa durée de l'effet, l'adversaire marqué est déplacé vers l'endroit sauvegardé.\n" +
+            "Les adversaires et monstres invincibles ne peuvent pas être déplacés.\n" +
+            "Lorsque l'adversaire est déplacé, tu consommes 20 PM (ou PDY en mode dynamo)."
+    },
+    {
+        id: "add-de-skill10",
+        name: "Mind Circle",
+        nameFr: "Focalisation de la pensée",
+        image: "/images/skills/add/job3/DiabolicEsperPassive2.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 60,
+        description: "En fonction de la consommation de PCD et du mode d'armure nasod, des PM et des PDY sont régénérés.\n"
+    },
+    {
+        id: "add-de-skill11",
+        name: "ESP",
+        nameFr: "Perception extrasensorielle",
+        image: "/images/skills/add/job3/DiabolicEsperPassive3.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 60,
+        description: "Le Psycho-annihilateur peut être utilisé contre plusieurs adversaires et la Substitution déclenchée pendant un saut. " +
+            "Lorsque la Perception extrasensorielle est activée et que tu es touché, tu as une chance de diminuer les dégâts."
+    },
+    {
+        id: "add-de-skill12",
+        name: "Paranoia",
+        nameFr: "Paranoïa",
+        image: "/images/skills/add/job3/DiabolicEsperHyperActive.png",
+        type: SKILL_TYPES.HYPER_ACTIVE,
+        badge: SKILL_BADGES.HYPER_ACTIVE,
+        level: 65,
+        description: [
+            "Add concentre la puissance de l'espace-temps avant de la faire exploser. L'explosion crée une faille spatio-temporelle qui plonge plusieurs ennemis dans un état d'hallucination.",
+
+            {
+                type: "title",
+                text: "Hallucination"
+            },
+
+            "Hallucination de feu : inflige une brûlure pendant 10 secondes.",
+            "Hallucination d'eau : pendant 10 secondes, les dégâts infligés sont réduits, la vitesse d'action et la vitesse de déplacement diminuent, tandis que la capacité de saut augmente.",
+            "Hallucination de poison : pendant 10 secondes, inflige des dégâts de poison et réduit la vitesse de déplacement ainsi que la capacité de saut."
+        ]
+    },
+    {
+        id: "add-de-skill13",
+        name: "Void Impact",
+        nameFr: "Impact du néant",
+        image: "/images/skills/add/job3/DiabolicEsperSkill8.png",
+        type: SKILL_TYPES.TENACITY,
+        level: 70,
+        description: "Add crée un hyperespace temporaire qui inflige des dégâts à l’ennemi le plus proche."
+    },
+    {
+        id: "add-de-skill14",
+        name: "Awakened Will: Diabolic Esper",
+        nameFr: "Volonté déchaînée : Seigneur du temps",
+        image: "/images/skills/add/job3/DiabolicEsperPassive4.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 70,
+        description: "Add perturbe l’espace-temps afin d’améliorer directement et indirectement ses capacités physiques ainsi que ses compétences de Synergie"
+    },
+    {
+        id: "add-de-skill15",
+        name: "Mind Break",
+        nameFr: "Psycho-annihilateur",
+        image: "/images/skills/add/job3/DiabolicEsperSkill9.png",
+        type: SKILL_TYPES.ACTIVE,
+        level: 80,
+        description: "Add utilise ses Dynamos pour créer un champ d’énergie autour de la tête de l’ennemi le plus proche à portée. " +
+            "Celui-ci subit des dégâts et voit son attaque magique réduite. " +
+            "Les ennemis situés à proximité subissent également des dégâts."
+    },
+    {
+        id: "add-de-skill16",
+        name: "Awakened One",
+        nameFr: "Spécialisation",
+        image: "/images/skills/el/lk/TransShared.webp",
+        type: SKILL_TYPES.PASSIVE,
+        level: 80,
+        description: "Cette compétence améliore les capacités physiques d’Add.",
+    },
+    {
+        id: "add-de-skill17",
+        name: "Moonlight Breaker",
+        nameFr: "Briseur de clair de lune",
+        image: "/images/skills/add/job3/DiabolicEsperSkill10.png",
+        type: SKILL_TYPES.STRENGTH,
+        level: 90,
+        description: "Add verrouille les coordonnées de l’espace-temps afin de provoquer une déchirure spatiale. " +
+            "Il peut maintenir la touche de compétence enfoncée pour retarder le tir et ajuster son angle grâce aux touches directionnelles."
+    },
+    {
+        id: "add-de-skill18",
+        name: "Time Interference",
+        nameFr: "Perturbation temporelle",
+        image: "/images/skills/add/job3/DiabolicEsperPassive5.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 90,
+        description: "Les compétences d’Add qui manipulent directement l’espace et le temps sont considérablement renforcées.",
+    },
+    {
+        id: "add-de-skill19",
+        name: "Dimension Breaker",
+        nameFr: "Destructeur dimensionnel",
+        image: "/images/skills/add/job3/DiabolicEsperSkill11.png",
+        type: SKILL_TYPES.BRAVERY,
+        level: 95,
+        description: "Add crée une faille spatio-temporelle qui attire les ennemis à proximité. " +
+            "La faille les comprime rapidement avant de les relâcher violemment au point d’explosion, leur infligeant d’importants dégâts. " +
+            "Les ennemis touchés par l’explosion sont plongés dans un état de confusion.\n" +
+            "(Cette compétence peut également être utilisée en plein saut.)"
+    },
+    /*Paradoxe*/
+    {
+        id: "add-para-skill1",
+        name: "Longing",
+        nameFr: "Nostalgie",
+        image: "/images/skills/add/job3/MadParadoxHyperActive.png",
+        type: SKILL_TYPES.HYPER_ACTIVE_2,
+        badge: SKILL_BADGES.HYPER_ACTIVE_2,
+        level: 99,
+        description: "Le Paradoxe a erré à travers l’espace-temps, laissant libre cours à sa rage destructrice incontrôlable, " +
+            "jusqu’à ce qu’il retrouve par hasard un fragment de ses souvenirs, égaré dans les méandres de l’espace-temps.",
+    },
+    {
+        id: "add-para-skill2",
+        name: "Side Effect",
+        nameFr: "Effet secondaire",
+        image: "/images/skills/add/job3/MadParadoxPassive1.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 99,
+        description: [
+            "En cas de touche avec une compétence spéciale active, les adversaires reçoivent un malus augmentant les dégâts qu'ils subissent des compétences du Paradoxe. La régénération de PDY augmente en fonction du nombre d'ennemis autour d'Add affectés par ce malus.",
+
+            {
+                type: "title",
+                text: "Effet secondaire"
+            },
+
+            "À chaque utilisation d'une compétence spéciale active, l'ennemi subit le malus [Effet secondaire], cumulable jusqu'à 5 fois.",
+            "Plus le cumul de [Effet secondaire] est élevé, plus les dégâts infligés par le Paradoxe augmentent."
+        ]
+    },
+    {
+        id: "add-para-skill3",
+        name: "Side Effect",
+        nameFr: "Éveil des sens",
+        image: "/images/skills/add/job3/MadParadoxPassive2.png",
+        type: SKILL_TYPES.PASSIVE,
+        level: 99,
+        description: [
+            "Les PM max augmentent et les objets de régénération de PM régénèrent également les PDY.",
+            {
+                type: "title",
+                text: "Éveil des sens"
+            },
+            "Les PM maximums augmentent.",
+            "Lors de l'utilisation d'objets de régénération de PM, une partie des PDY est également restaurée.",
+            {
+                type: "title",
+                text: "Être ténébreux de l'espace-temps"
+            },
+            "En état de booster, il existe une chance qu'Add atteigne sa forme véritable. Sa force d'attaque, ses coups critiques et sa régénération de PM par seconde augmentent considérablement."
+        ]
+    },
+    /*Paradoxe Master*/
+    {
+        id: "add-para-master1",
+        name: "Event Horizon - Stage 1",
+        nameFr: "Horizon d'évènements - Niveau 1",
+        image: "/images/skills/add/job3/MadParadoxMaster1.png",
+        type: SKILL_TYPES.MASTER,
+        badge: SKILL_BADGES.MASTER_SKILL,
+        level: "master",
+        description: "Add forme deux particules à haute énergie qui se déplacent lentement l’une vers l’autre. " +
+            "Lorsque la distance entre elles devient suffisamment faible, elles entrent en collision et provoquent une explosion."
+    },
+    {
+        id: "add-para-master2",
+        name: "Event Horizon - Stage 2",
+        nameFr: "Horizon d'évènements - Niveau 2",
+        image: "/images/skills/add/job3/MadParadoxMaster2.png",
+        type: SKILL_TYPES.MASTER,
+        badge: SKILL_BADGES.MASTER_SKILL,
+        level: "master",
+        description: "Add forme deux particules à haute énergie qui se déplacent lentement l’une vers l’autre. " +
+            "Les deux particules finissent par converger et explosent au contact."
+    },
+    {
+        id: "add-para-master3",
+        name: "Event Horizon - Stage 3",
+        nameFr: "Horizon d'évènements - Niveau 3",
+        image: "/images/skills/add/job3/MadParadoxMaster3.png",
+        type: SKILL_TYPES.MASTER,
+        badge: SKILL_BADGES.MASTER_SKILL,
+        level: "master",
+        description: "Add fusionne deux particules à haute énergie et crée artificiellement un horizon des événements. " +
+            "À l’intérieur de cet horizon, les attaques de Mad Paradox se reproduisent dans toutes les zones du champ."
+    },
+    {
+        id: "add-para-master4",
+        name: "Event Horizon - Stage 4",
+        nameFr: "Horizon d'évènements - Niveau 4",
+        image: "/images/skills/add/job3/MadParadoxMaster4.png",
+        type: SKILL_TYPES.MASTER,
+        badge: SKILL_BADGES.MASTER_SKILL,
+        level: "master",
+        description: "Add fusionne deux particules à haute énergie et crée artificiellement un horizon des événements. " +
+            "À l’intérieur de cet horizon, les attaques de Mad Paradox se reproduisent dans toutes les zones du champ.\n" +
+            "Après une certaine durée, la structure devient instable et ne peut plus maintenir sa forme, provoquant une explosion."
+    },
 ]

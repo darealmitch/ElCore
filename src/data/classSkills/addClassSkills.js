@@ -272,5 +272,131 @@ export const addClassSkills = [
             "add-dm-master3",
             "add-dm-master4",
         ]
-    }
+    },
+    /*Voyageur temporel*/
+    {
+        id: "add-tt-skills",
+        characterId: "add",
+        className: "Time Tracer",
+        classNameFr: "Voyageur Temporel",
+        jobStage: "job1",
+        title: "Compétences - Voyageur Temporel",
+        layout: "rows",
+        extends: ["add-base"],
+        columns: [
+            { id: "active", label: "Skills", type: "active" },
+            { id: "passive", label: "Passives", type: "passive" },
+        ],
+        minLevel: 15,
+        levels: [15, 20, 25, 30, 35, 40],
+        skillIds: [
+            "add-tt-skill1",
+            "add-tt-skill2",
+            "add-tt-skill3",
+            "add-tt-skill4",
+            "add-tt-skill5",
+            "add-tt-skill6",
+            "add-tt-skill7",
+            "add-tt-skill8",
+        ]
+    },
+    /*Seigneur du Temps*/
+    {
+        id: "add-de-skills",
+        characterId: "add",
+        className: "Diabolic Esper",
+        classNameFr: "Seigneur du Temps",
+        jobStage: "job2",
+        title: "Compétences - Seigneur du Temps",
+        layout: "rows",
+        extends: ["add-tt-skills"],
+        columns: [
+            { id: "active", label: "Skills", type: "active" },
+            { id: "passive", label: "Passives", type: "passive" },
+        ],
+        minLevel: 15,
+        levels: [15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 95 ],
+        sections: [
+            {
+                id: "transcendence",
+                label: "Transcendence",
+                level: 65,
+            }
+        ],
+        skillIds: [
+            "add-de-skill1",
+            "add-de-skill2",
+            "add-de-skill3",
+            "add-de-skill4",
+            "add-de-skill5",
+            "add-de-skill6",
+            "add-de-skill7",
+            "add-de-skill8",
+            "add-de-skill9",
+            "add-de-skill10",
+            "add-de-skill11",
+            "add-de-skill12",
+            "add-de-skill13",
+            "add-de-skill14",
+            "add-de-skill15",
+            "add-de-skill16",
+            "add-de-skill17",
+            "add-de-skill18",
+            "add-de-skill19",
+        ]
+    },
+    /*Paradoxe*/
+    {
+        id: "add-para-skills",
+        characterId: "add",
+        className: "Paradox",
+        classNameFr: "Paradoxe",
+        jobStage: "job3",
+        title: "Compétences - Paradoxe",
+        layout: "rows",
+        extends: ["add-de-skills"],
+        columns: [
+            { id: "active", label: "Skills", type: "active" },
+            { id: "passive", label: "Passives", type: "passive" },
+        ],
+        minLevel: 15,
+        levels: [15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 95, 99],
+        sections: [
+            {id: "transcendence", label: "Transcendence", level: 65,},
+            {id: "forceSkills", label: "Compétences de force"}
+        ],
+        skillIds: [
+            "add-para-skill1",
+            "add-para-skill2",
+            "add-para-skill3",
+        ]
+    },
+    /*Paradoxe master*/
+    {
+        id: "add-para-master",
+        characterId: "add",
+        className: "Paradox",
+        classNameFr: "Paradoxe",
+        jobStage: "master",
+        title: "Compétences — Paradoxe Classe maître",
+        layout: "rows",
+        extends: ["add-para-skills"],
+        columns: [
+            { id: "active", label: "Skills", type: "active" },
+            { id: "passive", label: "Passives", type: "passive" },
+        ],
+        minLevel: 1,
+        levels: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 95, 99, "master"],
+        sections: [
+            {id: "transcendence", label: "Transcendence", level: 65,},
+            { id: "masterClass", label: "Classe Maître" },
+            { id: "forceSkills", label: "Compétences de force" },
+        ],
+        skillIds: [
+            "add-para-master1",
+            "add-para-master2",
+            "add-para-master3",
+            "add-para-master4",
+        ]
+    },
 ]
