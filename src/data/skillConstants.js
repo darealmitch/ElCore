@@ -1,6 +1,7 @@
 export const SKILL_TYPES = {
     ACTIVE: "active",
     PASSIVE: "passive",
+    BUFF: "buff",
     MASTER: "master",
     TENACITY: "tenacite",
     STRENGTH: "force",
@@ -12,6 +13,7 @@ export const SKILL_TYPES = {
 export const SKILL_TYPE_COLORS = {
     active: "#facc15",
     passive: "#60a5fa",
+    buff: "#d4af37",
     master: "#22c55e",
     tenacite: "#06b6d4",
     force: "#a855f7",

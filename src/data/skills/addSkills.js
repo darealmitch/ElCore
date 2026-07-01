@@ -1209,7 +1209,7 @@ export const addSkills = [
         ]
     },
     {
-        id: "add-tt-skill6",
+        id: "add-tt-skill7",
         name: "Stardust Shower",
         nameFr: "Grêle étoilée",
         image: "/images/skills/add/job3/TimeTracerSkill6.png",
@@ -1218,11 +1218,11 @@ export const addSkills = [
         description: "Add ouvres un seuil dimensionnel dans le ciel et fais pleuvoir des sphères de gravité."
     },
     {
-        id: "add-tt-skill7",
+        id: "add-tt-skill8",
         name: "Time Control",
         nameFr: "Contrôle temporel",
-        image: "/images/skills/add/job3/TimeTracerSkill6.png",
-        type: SKILL_TYPES.PASSIVE,
+        image: "/images/skills/add/job3/TimeTracerPassive2.png",
+        type: SKILL_TYPES.BUFF,
         level: 40,
         description: "Augmente ta rapidité.\n" +
             "Lors de l'utilisation d'une compétence spéciale active, le temps de rechargement de toutes les compétences spéciales actives a une chance d'être diminué (sauf Sceau temporel, Amour divin et hyper compétences).\n" +

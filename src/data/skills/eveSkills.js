@@ -57,7 +57,7 @@ export const eveSkills = [
         name: "Embleme Aura",
         nameFr: "Emblème de la destruction",
         image: "/images/skills/eve/base/SOE.png",
-        type: SKILL_TYPES.ACTIVE,
+        type: SKILL_TYPES.BUFF,
         level: 10,
         description: "L'attaque et les dégâts supplémentaires augmentent."
     },
