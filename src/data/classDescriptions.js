@@ -231,9 +231,9 @@ export const classDescriptions = [
     {
         characterId: "raven",
         pathName: "Furious Blade",
-        pathNameFr: "Lame furieuse\n",
+        pathNameFr: "Lame furieuse",
         className: "Furious Blade",
-        classNameFr: "Lame furieuse\n",
+        classNameFr: "Lame furieuse",
         jobStage: "job3",
         title: "Raven 1er voie : Lame furieuse",
         path: ["Porteur d'épée", "Maître de l'épée","Lame furieuse" ],

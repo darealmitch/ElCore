@@ -95,7 +95,7 @@ export const characters = [
             "Victime d'une machination d'aristocrates jaloux, il perd tout ce qui lui était cher en une seule nuit. Réanimé par les Nasods, il a juré de se venger du Royaume de Belder. " +
             "Désormais, rongé par la culpabilité de ses actes passés, il rejoint la Patrouille de l'El en guise d'expiation.",
         classes: ["Furious Blade", "Rage Hearts", "Nova Imperator", "Revenant"],
-        classesFr: ["Lame furieuse", "Cœur enragé", "Nova Imperator", "Âme fatale"],
+        classesFr: ["Lame furieuse", "Cœur enragé", "Imperator Nova", "Âme fatale"],
         stats: {
             speed: "Moyenne",
             range: "Courte",

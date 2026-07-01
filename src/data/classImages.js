@@ -602,7 +602,7 @@ export const classImages = [
         characterId: "raven",
         character: "Raven",
         pathName: "Nova Imperator",
-        pathNameFr: "Nova Imperator",
+        pathNameFr: "Imperator Nova",
         jobStage: "job1",
         className: "Weapon Taker",
         classNameFr: "Maître de la destinée",
@@ -611,7 +611,7 @@ export const classImages = [
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Imperator Nova",
+        pathName: "Nova Imperator",
         pathNameFr: "Imperator Nova",
         jobStage: "job2",
         className: "Veteran Commander",
@@ -621,7 +621,7 @@ export const classImages = [
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Imperator Nova",
+        pathName: "Nova Imperator",
         pathNameFr: "Imperator Nova",
         jobStage: "job3",
         className: "Nova Imperator",
@@ -631,7 +631,7 @@ export const classImages = [
     createClassImage({
         characterId: "raven",
         character: "Raven",
-        pathName: "Imperator Nova",
+        pathName: "Nova Imperator",
         pathNameFr: "Imperator Nova",
         jobStage: "master",
         className: "Nova Imperator",
