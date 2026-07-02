@@ -351,7 +351,7 @@ export const characters = [
     {
         id: "noah",
         name: "Noah",
-        fullName: "Noah Ebalon",
+        fullName: "Noah Ilunis",
         age: "15 ans",
         gender: "Homme",
         type: "Gardien de la lune",
