@@ -231,9 +231,7 @@
 .character-card-link,
 .build-card-button,
 .hero-button,
-.filter-button,
-.filter-chip,
-.stage-tab {
+.filter-button {
     position: relative;
     overflow: hidden;
     transition:
@@ -248,8 +246,7 @@
 .character-card-link:hover,
 .build-card-button:hover,
 .hero-button:hover,
-.filter-button:hover,
-.filter-chip:hover {
+.filter-button:hover {
     transform: translateY(-1px);
     filter: brightness(1.06);
 }

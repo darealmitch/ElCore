@@ -6,6 +6,7 @@ import { classImages } from "../data/classImages";
 import { characterThemes } from "../data/characterThemes";
 import { masterSymbols } from "../data/masterSymbols";
 import { toClassSlug, getClassUrl } from "../utils/classRoutes";
+import { contrastTextFor } from "../utils/contrast";
 import { classLore } from "../data/classLore";
 import { classDescriptions } from "../data/classDescriptions";
 import SkillTree from "../components/ui/SkillTree";
@@ -18,39 +19,14 @@ const stageLabels = {
     master: "Classe de Maître",
 };
 
-function getMasterLogo(classItem) {
-    if (classItem.jobStage !== "master") return null;
-    return masterSymbols[classItem.characterId] || null;
-}
+const stageShort = {
+    job1: "01",
+    job2: "02",
+    job3: "03",
+    master: "M",
+};
 
-function ClassNavigationCard({ item, direction, disabled = false, theme }) {
-    const label = direction === "previous" ? "Classe précédente" : "Classe suivante";
-    const arrow = direction === "previous" ? "←" : "→";
-
-    if (disabled || !item) {
-        return (
-            <div className={`class-nav-card ${direction} disabled`}>
-                <span className="class-nav-direction">{label}</span>
-                <strong>{direction === "previous" ? "Début du catalogue" : "Fin du catalogue"}</strong>
-                <small>{direction === "previous" ? "Aucune classe avant celle-ci" : "Aucune classe après celle-ci"}</small>
-            </div>
-        );
-    }
-
-    return (
-        <Link className={`class-nav-card ${direction}`} to={getClassUrl(item)} style={{ borderColor: theme.primary }}>
-            <div className="class-nav-copy">
-                <span className="class-nav-direction">{label}</span>
-                <strong>{item.classNameFr || item.className}</strong>
-                <small>{item.character} — {item.pathNameFr || item.pathName}</small>
-            </div>
-            <div className="class-nav-visual">
-                <img src={item.localPath} alt={item.alt} loading="lazy" />
-            </div>
-            <span className="class-nav-arrow" style={{ color: theme.primary }}>{arrow}</span>
-        </Link>
-    );
-}
+const stageOrder = { job1: 0, job2: 1, job3: 2, master: 3 };
 
 function getResolvedSkillIds(skillTree, allSkillTrees) {
     if (!skillTree) return [];
@@ -90,8 +66,12 @@ function ClassDetailPage() {
     }
 
     const theme = characterThemes[classItem.characterId];
-    const masterLogo = getMasterLogo(classItem);
+    const masterLogo = classItem.jobStage === "master" ? masterSymbols[classItem.characterId] : null;
     const baseCharacter = characters.find((character) => character.id === classItem.characterId);
+
+    const lineageStages = classImages
+        .filter((item) => item.characterId === classItem.characterId && item.pathName === classItem.pathName)
+        .sort((a, b) => stageOrder[a.jobStage] - stageOrder[b.jobStage]);
 
     const skillTree = classSkills.find((item) =>
         item.characterId === classItem.characterId &&
@@ -133,168 +113,210 @@ function ClassDetailPage() {
         return sameCharacter && samePath;
     });
     const stats = description?.stats;
-    const currentClassIndex = classImages.findIndex((item) =>
-        item.characterId === classItem.characterId &&
-        item.className === classItem.className &&
-        item.jobStage === classItem.jobStage
+    const allPaths = [...new Map(
+        classImages.map(item => [
+            item.characterId + ":" + item.pathName,
+            { characterId: item.characterId, pathName: item.pathName }
+        ])
+    ).values()];
+
+    const currentPathIndex = allPaths.findIndex(
+        p => p.characterId === classItem.characterId &&
+            p.pathName === classItem.pathName
     );
 
-    const previousClass = currentClassIndex > 0 ? classImages[currentClassIndex - 1] : null;
-    const nextClass = currentClassIndex >= 0 && currentClassIndex < classImages.length - 1 ? classImages[currentClassIndex + 1] : null;
+    const previousPath =
+        allPaths[(currentPathIndex - 1 + allPaths.length) % allPaths.length];
 
+    const nextPath =
+        allPaths[(currentPathIndex + 1) % allPaths.length];
+
+    const previousClass = classImages.find(item =>
+        item.characterId === previousPath.characterId &&
+        item.pathName === previousPath.pathName &&
+        item.jobStage === "master"
+    );
+
+    const nextClass = classImages.find(item =>
+        item.characterId === nextPath.characterId &&
+        item.pathName === nextPath.pathName &&
+        item.jobStage === "job1"
+    );
     return (
-        <main className="page">
-            <section className="class-detail-hero" style={{ borderColor: theme.primary, boxShadow: `0 0 38px ${theme.glow}` }}>
-                <Link className="back-link class-detail-back-link" to="/classes">← Retour aux classes</Link>
+        <main className="page" style={{ "--theme-primary": theme.primary, "--theme-contrast": contrastTextFor(theme.primary) }}>
+            <section className="class-detail-hero">
+                <Link className="class-detail-back" to="/classes">← Retour aux classes</Link>
 
-                <div className="class-detail-content">
-                    <span className="class-stage-label class-detail-stage-label" style={{ backgroundColor: theme.glow, color: theme.primary }}>
-                        {stageLabels[classItem.jobStage] || classItem.jobStage}
-                    </span>
+                <div className="class-detail-main">
+                    <div className="class-detail-content">
+                        <span className="class-detail-kicker">
+                            {stageLabels[classItem.jobStage] || classItem.jobStage}
+                        </span>
 
-                    <h1 style={{ color: theme.primary }}>{classItem.classNameFr || classItem.className}</h1>
-                    <p className="class-detail-subtitle">{classItem.character} — {classItem.pathNameFr || classItem.pathName}</p>
-                    <p>Nom international : <strong>{classItem.className}</strong></p>
-                    <p>Cette fiche sert à détailler le rôle, les compétences, les configurations, les rotations et les conseils de progression de cette spécialisation.</p>
+                        <h1>{classItem.classNameFr || classItem.className}</h1>
+                        <span className="class-detail-accent" style={{ background: theme.primary }} aria-hidden="true" />
+
+                        <p className="class-detail-byline">
+                            {baseCharacter ? (
+                                <Link to={`/personnages/${baseCharacter.id}`}>{classItem.character}</Link>
+                            ) : (
+                                classItem.character
+                            )}
+                            {" / Voie "}
+                            {classItem.pathNameFr || classItem.pathName}
+                        </p>
+
+                        <p className="class-detail-meta">International : {classItem.className}</p>
+
+                        {stats && (
+                            <dl className="class-detail-stats">
+                                <div>
+                                    <dt>Vitesse</dt>
+                                    <dd>{stats.speed}</dd>
+                                </div>
+                                <div>
+                                    <dt>Portée</dt>
+                                    <dd>{stats.range}</dd>
+                                </div>
+                                <div>
+                                    <dt>Difficulté</dt>
+                                    <dd>{stats.difficulty}</dd>
+                                </div>
+                                <div>
+                                    <dt>Type d'attaque</dt>
+                                    <dd>
+                                        {stats.pictureType && <img src={stats.pictureType} alt="" />}
+                                        {stats.attackType}
+                                    </dd>
+                                </div>
+                            </dl>
+                        )}
+
+                        {baseCharacter && (
+                            <Link className="btn-primary class-detail-character-btn" to={`/personnages/${baseCharacter.id}`}>
+                                Voir la fiche de {baseCharacter.name} →
+                            </Link>
+                        )}
+                    </div>
+
+                    <div className="class-detail-visual">
+                        {masterLogo && <img className="class-detail-master-symbol" src={masterLogo.image} alt={masterLogo.alt} />}
+                        <img className="class-detail-image" src={classItem.localPath} alt={classItem.alt} />
+                    </div>
                 </div>
 
-                <div className="class-detail-visual">
-                    {masterLogo && <img className="master-class-logo large" src={masterLogo.image} alt={masterLogo.alt} />}
-                    <img className="class-detail-image" src={classItem.localPath} alt={classItem.alt} />
-                </div>
+                <nav className="class-detail-lineage" aria-label="Progression de la voie">
+                    {lineageStages.map((item) => {
+                        const isCurrent = item.jobStage === classItem.jobStage;
+                        const content = (
+                            <>
+                                <span className="class-detail-lineage-num">{stageShort[item.jobStage]}</span>
+                                <span>{item.classNameFr || item.className}</span>
+                            </>
+                        );
+
+                        if (isCurrent) {
+                            return (
+                                <span className="class-detail-lineage-step current" key={item.jobStage} aria-current="page">
+                                    {content}
+                                </span>
+                            );
+                        }
+
+                        return (
+                            <Link className="class-detail-lineage-step" to={getClassUrl(item)} key={item.jobStage}>
+                                {content}
+                            </Link>
+                        );
+                    })}
+                </nav>
             </section>
 
-            <section className="detail-grid class-detail-layout">
-                <section className="class-detail-navigation">
-                    <ClassNavigationCard item={previousClass} direction="previous" disabled={!previousClass} theme={theme} />
-                    <ClassNavigationCard item={nextClass} direction="next" disabled={!nextClass} theme={theme} />
-                </section>
+            <nav className="class-detail-flip" aria-label="Navigation entre les classes">
+                <Link className="class-flip-link" to={getClassUrl(previousClass)}>
+                    ← {previousClass.classNameFr || previousClass.className}
+                </Link>
 
-                <article className="detail-card identity-card">
-                    <h2>Identité</h2>
-                    {baseCharacter && (
-                        <Link className="identity-character-link" to={`/personnages/${baseCharacter.id}`}>
-                            ← Voir la fiche de base de {baseCharacter.name}
-                        </Link>
-                    )}
-                    <div className="detail-stats">
-                        <div>
-                            <span>Personnage</span>
-                            <strong>{classItem.character}</strong>
-                        </div>
-                        <div>
-                            <span>Chemin</span>
-                            <strong>{classItem.pathNameFr || classItem.pathName}</strong>
-                        </div>
-                        <div>
-                            <span>Étape</span>
-                            <strong>{stageLabels[classItem.jobStage] || classItem.jobStage}</strong>
-                        </div>
-                        <div>
-                            <span>Classe</span>
-                            <strong>{classItem.classNameFr || classItem.className}</strong>
-                        </div>
-                    </div>
-                    {stats && (
-                        <div className="cd-stats">
+                <Link className="class-flip-link" to={getClassUrl(nextClass)}>
+                    {nextClass.classNameFr || nextClass.className} →
+                </Link>
+            </nav>
 
-                            <div className="cd-stats-left">
-                                <div className="row">
-                                    <span className="k">Vitesse</span>
-                                    <span className="v">{stats.speed}</span>
-                                </div>
-
-                                <div className="row">
-                                    <span className="k">Portée</span>
-                                    <span className="v">{stats.range}</span>
-                                </div>
-
-                                <div className="row">
-                                    <span className="k">Difficulté</span>
-                                    <span className="v">{stats.difficulty}</span>
-                                </div>
-                            </div>
-
-                            <div className="cd-stats-right">
-                                {stats.pictureType && (
-                                    <img
-                                        className="attack-icon"
-                                        src={stats.pictureType}
-                                        alt={stats.attackType}
-                                    />
-                                )}
-
-                                <span className="attack-value">{stats.attackType}</span>
-                                <span className="attack-label">Type d'attaque</span>
-                            </div>
-
-                        </div>
-                    )}
-                </article>
-
-                <article className="detail-card progression-card">
-                    <h2>Progression</h2>
-                    <p>Cette fiche appartient au chemin <strong>{classItem.pathNameFr || classItem.pathName}</strong>. Elle sera utilisée pour afficher l’évolution complète du personnage.</p>
-                </article>
-
-                {description && description.presentation && (
-                    <article className="detail-card wide class-description-card">
+            <section className="class-detail-sections">
+                {description?.presentation && (
+                    <article className="class-detail-card">
+                        <span className="class-detail-card-kicker">Présentation</span>
                         {description.title && <h2>{description.title}</h2>}
+
                         {description.path?.length > 0 && (
-                            <div className="class-lore-path">
+                            <p className="class-detail-path">
                                 {description.path.map((step, index) => (
-                                    <span key={step}>{step}{index < description.path.length - 1 ? " → " : ""}</span>
+                                    <span key={step}>
+                                        {step}
+                                        {index < description.path.length - 1 && <span className="sep"> → </span>}
+                                    </span>
                                 ))}
-                            </div>
+                            </p>
                         )}
+
                         <p>{description.presentation}</p>
-                        <div className="detail-stats">
-                            {description.attackType && (
-                                <div>
-                                    <span>Type d'attaque</span>
-                                    <strong>{description.attackType}</strong>
-                                </div>
-                            )}
-                            {description.attackRange && (
-                                <div>
-                                    <span>Portée d'attaque</span>
-                                    <strong>{description.attackRange}</strong>
-                                </div>
-                            )}
-                        </div>
+
+                        {!stats && (description.attackType || description.attackRange) && (
+                            <dl className="class-detail-stats">
+                                {description.attackType && (
+                                    <div>
+                                        <dt>Type d'attaque</dt>
+                                        <dd>{description.attackType}</dd>
+                                    </div>
+                                )}
+                                {description.attackRange && (
+                                    <div>
+                                        <dt>Portée d'attaque</dt>
+                                        <dd>{description.attackRange}</dd>
+                                    </div>
+                                )}
+                            </dl>
+                        )}
                     </article>
                 )}
 
                 {lore && (
-                    <article className="detail-card wide lore-card">
+                    <article className="class-detail-card">
+                        <span className="class-detail-card-kicker">Lore</span>
                         <h2>{lore.title}</h2>
-                        <div className="class-lore-path">
+
+                        <p className="class-detail-path">
                             <span>{lore.fromClassFr || lore.fromClass}</span>
-                            <span>→</span>
+                            <span className="sep"> → </span>
                             <span>{lore.toClassFr || lore.toClass}</span>
-                        </div>
+                        </p>
+
                         {lore.quote && <blockquote className="class-quote">“{lore.quote}”</blockquote>}
                         <p>{lore.text}</p>
+
                         {lore.themes?.length > 0 && (
-                            <div className="class-lore-tags">
-                                {lore.themes.map((theme) => <span key={theme}>{theme}</span>)}
+                            <div className="class-detail-tags">
+                                {lore.themes.map((item) => <span key={item}>{item}</span>)}
                             </div>
                         )}
                     </article>
                 )}
-                <article className="detail-card wide skills-card">
+
+                <article className="class-detail-card">
                     {resolvedSkillTree ? (
                         <SkillTree data={resolvedSkillTree} />
                     ) : (
                         <>
+                            <span className="class-detail-card-kicker">Compétences</span>
                             <h2>Compétences</h2>
                             <p>Les compétences principales seront ajoutées quand les données seront prêtes.</p>
                         </>
                     )}
                 </article>
 
-                <article className="detail-card wide builds-card">
-                    <h2>Configurations liés à cette classe</h2>
+                <article className="class-detail-card">
+                    <span className="class-detail-card-kicker">Builds</span>
+                    <h2>Configurations liées à cette classe</h2>
                     {relatedBuilds.length > 0 ? (
                         <div className="related-builds-grid">
                             {relatedBuilds.map((build) => <BuildCard key={build.id} build={build} />)}
